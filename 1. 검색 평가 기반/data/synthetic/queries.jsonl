@@ -1,0 +1,14 @@
+{"query_id": "q01", "question": "생일 휴가는 누구나 입사 직후부터 사용할 수 있나요?", "answerability": "answerable", "relevance": {"birthday-eligibility": 3, "welfare-birthday": 0}}
+{"query_id": "q02", "question": "생일 휴가를 다음 달로 이월하거나 현금으로 받을 수 있나요?", "answerability": "answerable", "relevance": {"birthday-window": 3, "annual-carry": 0}}
+{"query_id": "q03", "question": "생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.", "answerability": "answerable", "relevance": {"birthday-eligibility": 3, "birthday-window": 3, "birthday-request": 3, "welfare-birthday": 0}}
+{"query_id": "q04", "question": "입사 1년 미만 직원의 연차는 언제 생기나요?", "answerability": "answerable", "relevance": {"annual-accrual": 3}}
+{"query_id": "q05", "question": "연차는 며칠 전에 신청하며 긴급할 때는 어떻게 하나요?", "answerability": "answerable", "relevance": {"annual-request": 3, "birthday-request": 0, "travel-approval": 0}}
+{"query_id": "q06", "question": "미사용 연차는 며칠까지 이월하고 언제까지 써야 하나요?", "answerability": "answerable", "relevance": {"annual-carry": 3, "birthday-window": 0}}
+{"query_id": "q07", "question": "재택근무 자격과 주당 횟수 및 승인 기한을 알려 주세요.", "answerability": "answerable", "relevance": {"remote-eligibility": 3, "remote-days": 3, "remote-security": 1}}
+{"query_id": "q08", "question": "재택할 때 개인 공용 PC를 써도 되나요? VPN은 필요한가요?", "answerability": "answerable", "relevance": {"remote-security": 3}}
+{"query_id": "q09", "question": "생일 포인트를 받으면 생일 휴가도 자동 승인되나요?", "answerability": "answerable", "relevance": {"welfare-birthday": 3, "birthday-request": 2, "birthday-eligibility": 1}}
+{"query_id": "q10", "question": "재택근무일과 휴가일에도 사무실 식대가 나오나요?", "answerability": "answerable", "relevance": {"welfare-meal": 3, "remote-days": 1}}
+{"query_id": "q11", "question": "연차 반차와 생일 휴가의 분할 사용이 가능한가요?", "answerability": "answerable", "relevance": {"annual-halfday": 3}}
+{"query_id": "q12", "question": "배우자 출산 휴가의 일수와 신청 절차는 무엇인가요?", "answerability": "unanswerable", "relevance": {}}
+{"query_id": "q13", "question": "퇴직금 계산식은 어떻게 되나요?", "answerability": "unanswerable", "relevance": {}}
+{"query_id": "q14", "question": "반려동물 병원 동행 휴가가 있나요?", "answerability": "unanswerable", "relevance": {}}
