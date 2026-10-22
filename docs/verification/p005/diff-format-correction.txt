@@ -1,0 +1,3 @@
+Initial git diff --cached --check rejected trailing whitespace in the generated adapter-order-fix.diff evidence: Git header tabs and blank context-line spaces. Product source was not implicated.
+Correction: trim trailing whitespace in this display-only diff evidence; actual source patch unchanged. Re-run cached diff check, contract guard and commit hooks.
+The preceding push sent only the already committed P005 adoption merge, not the uncommitted delivery. Final delivery commit is pushed separately after checks.

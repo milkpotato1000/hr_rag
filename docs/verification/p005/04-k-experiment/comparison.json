@@ -1,0 +1,70 @@
+{
+  "only_top_k_changed": true,
+  "fixed_configuration": [
+    "생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.",
+    "dense",
+    "53d262cb4d11ba73bd08dd559676d6df002fb46ef15afa5f94e01508620abedc",
+    "6bc2e6b6f81c1f4e6e6feb027a94703daad9f0f654f8633fb365238666cd55d3",
+    "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "{\"format\": {\"additionalProperties\": false, \"properties\": {\"answer\": {\"minLength\": 1, \"type\": \"string\"}, \"citations\": {\"items\": {\"additionalProperties\": false, \"properties\": {\"chunk_id\": {\"minLength\": 1, \"type\": \"string\"}, \"quote\": {\"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"chunk_id\", \"quote\"], \"type\": \"object\"}, \"type\": \"array\"}, \"status\": {\"enum\": [\"answered\", \"abstained\"], \"type\": \"string\"}}, \"required\": [\"status\", \"answer\", \"citations\"], \"type\": \"object\"}, \"options\": {\"num_ctx\": 8192, \"num_predict\": 1024, \"seed\": 42, \"temperature\": 0}, \"stream\": false, \"think\": false}",
+    8000
+  ],
+  "runs": [
+    {
+      "k": 1,
+      "context_chars": 247,
+      "required_retrieved": 1,
+      "required_transmitted": 1,
+      "status": "abstained",
+      "reason": "invalid_model_response",
+      "timings_ms": {
+        "retrieval": 1660.7884159893729,
+        "context": 0.4309160285629332,
+        "generation": 15756.934499950148,
+        "total": 17418.747375020757
+      }
+    },
+    {
+      "k": 3,
+      "context_chars": 775,
+      "required_retrieved": 3,
+      "required_transmitted": 3,
+      "status": "answered",
+      "reason": null,
+      "timings_ms": {
+        "retrieval": 1643.8074170146137,
+        "context": 0.6704999832436442,
+        "generation": 26055.367708962876,
+        "total": 27700.576208007988
+      }
+    },
+    {
+      "k": 5,
+      "context_chars": 1274,
+      "required_retrieved": 3,
+      "required_transmitted": 3,
+      "status": "answered",
+      "reason": null,
+      "timings_ms": {
+        "retrieval": 1660.926542012021,
+        "context": 0.2515409723855555,
+        "generation": 27133.934125013184,
+        "total": 28795.48958304804
+      }
+    },
+    {
+      "k": 10,
+      "context_chars": 2540,
+      "required_retrieved": 3,
+      "required_transmitted": 3,
+      "status": "answered",
+      "reason": null,
+      "timings_ms": {
+        "retrieval": 2227.722875017207,
+        "context": 1.5681659569963813,
+        "generation": 32736.77062499337,
+        "total": 34967.17045799596
+      }
+    }
+  ]
+}

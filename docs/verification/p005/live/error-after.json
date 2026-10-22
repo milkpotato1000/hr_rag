@@ -1,0 +1,32 @@
+{
+  "modelInfo": "검색: dense · top-k 5 · 생성 호출 0회모델: 호출하지 않음 또는 실행 전 실패프롬프트: — · —질문 임베딩 — · 검색 — · 생성 모델 로드 —인용 구조: 검사 대상 없음 · 의미 지지: 자동 판정하지 않음",
+  "retryEnabled": true,
+  "runtime": "○ 모델 서비스 정지 · 색인 파일 준비됨",
+  "status": "실행 오류",
+  "trace": {
+    "candidates": [],
+    "contexts": [],
+    "corpus_sha256": "53d262cb4d11ba73bd08dd559676d6df002fb46ef15afa5f94e01508620abedc",
+    "error": {
+      "kind": "provider",
+      "message": "<urlopen error [Errno 61] Connection refused>",
+      "phase": "retrieval"
+    },
+    "excluded": [],
+    "generation_calls": 0,
+    "question": "재택근무일과 휴가일에도 사무실 식대가 나오나요?",
+    "retriever": "dense",
+    "settings": {
+      "max_context_chars": 8000,
+      "timeout_seconds": 120,
+      "top_k": 5
+    },
+    "timings_ms": {
+      "context": 0,
+      "generation": 0,
+      "retrieval": 23.322666995227337,
+      "total": 24.101583985611796
+    },
+    "validation": []
+  }
+}

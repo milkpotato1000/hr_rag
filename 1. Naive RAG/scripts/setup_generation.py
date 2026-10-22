@@ -4,7 +4,7 @@ import json
 import subprocess
 import sys
 from runtime_common import BINARY, VERSION, LocalAPI, env, load_lock
-from generation import MODEL, LOCK, OPTIONS, SCHEMA, metadata, Generator, strict_json
+from generation import MODEL, LOCK, OPTIONS, SCHEMA, metadata, Generator, strict_json, normalized_model
 from evaluate_retrieval import write_atomic
 import runtime
 
@@ -23,7 +23,8 @@ def setup():
     model = metadata(api)
     value = {'schema_version': 1, 'ollama_version': VERSION, 'model': model,
              'request': {'stream': False, 'think': False, 'options': OPTIONS, 'format': SCHEMA}}
-    if previous and previous != value:
+    if previous and ({**previous, 'model': normalized_model(previous['model'])} !=
+                     {**value, 'model': normalized_model(value['model'])}):
         raise ValueError('generation metadata changed; refusing lock overwrite')
     generator = Generator(api=api, lock=value)
     raw, observations = generator.generate([

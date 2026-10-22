@@ -1,6 +1,34 @@
 # 1. Naive RAG
 
-RAG 방식별 큰 구현 단계다. 현재는 P001 검색 평가 기반, P002 BM25, P003 실제 로컬 Dense 검색과 P004 답변·인용·보류를 구현했다. 평가·BM25는 Python 3.9 이상과 표준 라이브러리만 필요하고, Dense는 아래 격리 런타임을 사용한다.
+RAG 방식별 큰 구현 단계다. 현재는 P001 검색 평가 기반, P002 BM25, P003 실제 로컬 Dense 검색과 P004 답변·인용·보류와 P005 한국어 학습 UI를 구현했다. 평가·BM25는 Python 3.9 이상과 표준 라이브러리만 필요하고, Dense는 아래 격리 런타임을 사용한다.
+
+
+## 바로 열기: 학습용 질문 화면
+
+현재 환경에는 실제 모델·의존성·색인까지 준비돼 있다. 이 폴더에서 아래 명령으로 재시작한다.
+
+```sh
+.venv/bin/python scripts/runtime.py start
+.venv/bin/python scripts/serve.py --port 8000
+```
+
+**http://127.0.0.1:8000** 에서 질문·예시·Dense/BM25·top-k·문맥 예산을 선택한다.
+검색 후보 원문/점수/출처, 선택·제외 문맥, 답변/인용/보류와 오류, 모델 digest·프롬프트·시간을 확인할 수 있다.
+설정 하나만 바꾸고 결과 JSON을 저장해 비교한다. [LEARNING_GUIDE.md](LEARNING_GUIDE.md)에 실제 실패 사례·평가·최적화·테스트 순서가 있다.
+UI 종료는 Ctrl+C, 모델 종료는 `.venv/bin/python scripts/runtime.py stop`이다. UI 종료가 Ollama나 다른 프로세스를 종료하지 않는다.
+
+UI/API는 127.0.0.1에만 bind하며 외부 CDN·계정이 필요 없다. API는 P004 `rag.ask()`를 그대로 호출하고 모델/색인 요청을 직렬화한다.
+다른 요청 처리 중에도 정적 화면은 응답한다. 중복 클릭은 비활성화되며 완료·실패 후 다시 실행할 수 있다.
+모든 모델/문서/질문 값은 textContent로 렌더링한다. HTML을 실행하지 않는다.
+
+POST /api/ask 입력은 question, retriever, top_k, max_context_chars다. 입력400, provider502, timeout504, 기타 실행500,
+정상 답변/보류200이다. 로컬 동일 출처만 허용하며 요청64KiB·질문4000자·top-k100·문맥24000자까지 받는다.
+GET /api/status는 lock/색인 파일과 소유 서비스 상태이며 실제 질의에서 정합성을 다시 검증한다.
+웹 UI는 임의 모델/프롬프트 변경을 제공하지 않는다. 고정 모델/옵션의 한계와 실제 실패를 관찰하는 기준선이다.
+
+제품 폴더만 복사해도 코드·데이터·프롬프트·웹 자산·가이드가 독립 동작한다. 다른 컴퓨터 최초 준비는 P003/P004 절 순서로
+setup_runtime → build_dense_index → setup_generation을 실행한다. .runtime/.venv는 Git에 없으며 같은 OS/arch와 uv를 전제로 한다.
+테스트는 `.venv/bin/python -m unittest discover -s tests -v`다. 실제 브라우저와 모델 E2E 증거는 원 저장소 docs/verification/p005/에 있다.
 
 ## 가져온 것과 보존
 
@@ -107,7 +135,7 @@ run.json에는 모델·런타임·환경·index manifest·hash와 분리한 inde
 ## 이번 단계에서 이해하고 실험할 것
 
 구현·오류 수정·회귀 실행은 Codex가 맡고, 사용자는 먼저 결과를 예상한 뒤 근거를 대조한다.
-문서를 검색하는 데 성공한 것과 답변을 생성·검증한 것은 다른 단계다. P004에서 답변·인용·보류를 연결했으며, 화면은 P005 계약으로 이어진다.
+문서를 검색하는 데 성공한 것과 답변을 생성·검증한 것은 다른 단계다. P004에서 답변·인용·보류, P005에서 같은 코어를 사용하는 학습 화면을 연결했다.
 
 1. q03에서 자격·기간·신청의 세 근거를 먼저 예상한다. BM25는 birthday-eligibility를 6위, Dense는 2위에 뒀다. Recall@5가 왜 다른지 직접 청크를 읽어 본다.
 2. q10의 `재택근무일과`와 문서의 `재택근무는`을 비교한다. BM25는 welfare-meal만 찾았고 Dense는 remote-days도 찾았다. 단어 일치와 의미 검색의 역할 차이를 확인한다.

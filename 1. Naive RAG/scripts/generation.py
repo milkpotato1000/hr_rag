@@ -55,6 +55,26 @@ def metadata(api):
             'source_url': 'https://ollama.com/library/qwen3:4b'}
 
 
+def normalized_model(value):
+    """Ollama serializes a Go parameter map in nondeterministic line order.
+
+    Preserve every name/value and duplicate stop entry; ignore only line order
+    and separating whitespace. Keep the original provider text in the lock.
+    """
+    parameters = value.get('parameters')
+    if not isinstance(parameters, str):
+        raise ValueError('invalid generation parameters metadata')
+    pairs = []
+    for line in parameters.splitlines():
+        if not line.strip():
+            continue
+        parts = line.split(None, 1)
+        if len(parts) != 2:
+            raise ValueError('invalid generation parameter line')
+        pairs.append(tuple(parts))
+    return {**value, 'parameters': sorted(pairs)}
+
+
 def load_generation_lock(path=LOCK):
     lock = strict_json(Path(path).read_text())
     if (lock['ollama_version'] != VERSION or lock['model']['name'] != MODEL
@@ -72,7 +92,7 @@ class Generator:
     def check(self):
         if self.api.call('/api/version').get('version') != self.lock['ollama_version']:
             raise ValueError('generation runtime differs from lock')
-        if metadata(self.api) != self.lock['model']:
+        if normalized_model(metadata(self.api)) != normalized_model(self.lock['model']):
             raise ValueError('generation model metadata/digest differs from lock')
 
     def generate(self, messages):

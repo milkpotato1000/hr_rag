@@ -44,7 +44,7 @@ dev에서 `python3 scripts/contract_guard.py install`로 로컬 훅을 설치합
 
 평가 기반·BM25·실제 로컬 Dense 검색은 큰 단계 [1. Naive RAG](<1. Naive RAG/README.md>) 안에 모았습니다.
 P번호마다 새 번호 폴더를 만들지 않습니다. 답변 생성도 같은 큰 단계에서 실행합니다.
-현재 구현 범위는 P001 평가 기반, P002 BM25, P003 로컬 Dense, P004 실제 Qwen 답변·인용·보류입니다. 화면은 P005 계약으로 이어집니다.
+현재 구현 범위는 P001 평가 기반, P002 BM25, P003 로컬 Dense, P004 실제 Qwen 답변·인용·보류입니다. P005 한국어 질문 화면과 학습 가이드까지 연결했습니다.
 
 ```sh
 cd '1. Naive RAG'
@@ -68,3 +68,17 @@ Python 3.9 이상과 표준 라이브러리만 사용합니다. 결과 부모 �
 로컬 Dense 환경·실행/정지와 이번 학습 포인트는 [큰 단계 README](<1. Naive RAG/README.md>)의 P003 절에 있습니다.
 실제 모델·영속 재open·53개 테스트·검색 비교는 [P003 검증 기록](docs/verification/p003/README.md)을 참고합니다.
 전체 순서는 [Naive RAG 구현·학습 로드맵](docs/planning/naive-rag-roadmap.md)을 따릅니다.
+
+
+## 학습 UI 실행
+
+```sh
+cd '1. Naive RAG'
+.venv/bin/python scripts/runtime.py start
+.venv/bin/python scripts/serve.py --port 8000
+```
+
+http://127.0.0.1:8000 에서 검색→문맥→답변·인용·보류를 관찰합니다.
+[학습 가이드](<1. Naive RAG/LEARNING_GUIDE.md>)는 구현 숙제 대신 예상·실패 분류·한 변수 실험·평가 해석을 안내합니다.
+종료는 UI 터미널 Ctrl+C와 `.venv/bin/python scripts/runtime.py stop`입니다.
+실제 답변의 조건 누락/과도보류가 남아 있으며 [P004 의미 검토](docs/verification/p004/final-review.md)와 [P005 검증](docs/verification/p005/README.md)에 공개합니다.
