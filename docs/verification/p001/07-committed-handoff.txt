@@ -1,0 +1,34 @@
+P001 committed completion and P002 adoption verification. P002 remains unstarted.
+
+$ git rev-parse HEAD
+exit=0
+4225bb1d6b9bd017a06e81125c4fce9ed1d7f227
+
+
+$ git diff HEAD -- data/synthetic scripts/evaluate_retrieval.py tests docs/planning/plans/P001.md
+exit=0
+(empty)
+
+
+$ python3 scripts/contract_guard.py check
+exit=0
+PASS: contracts match adopted plan 952015689787
+
+
+$ python3 scripts/work_queue.py --owner all
+exit=0
+dev는 채택한 plan 952015689787 기준. 이후 plan 초안은 자동 채택하지 않음.
+plan 다음 작업: 실행 가능한 승인 작업 없음
+dev 다음 작업: P002
+[완료] P001 합성 HR 문서와 검색 평가 기반 구축 — 6/6 (dev)
+[준비 완료] P002 BM25 검색 기준선과 평가 연결 — 0/7 (dev)
+
+작업서: docs/planning/plans/P002.md
+  [ ] C1: P001 데이터·정답을 보존하고 명시된 토큰화와 BM25 산식을 독립 점수·길이 정규화 fixture로 검증한다.
+  [ ] C2: CLI가 모든 질문의 양수 top-k 순위·점수를 결정적으로 생성하고 동점·OOV·빈 토큰·중복 질문 토큰·짧은 결과를 계약대로 처리한다.
+  [ ] C3: 정답·answerability가 순위에 유입되지 않으며 생성 rankings를 P001 평가기로 재평가한 결과와 metrics가 일치한다.
+  [ ] C4: 결과 네 파일의 스키마·hash·환경·설정·통계·시간 메타데이터와 반복 실행·입력 순서 독립성을 검증한다.
+  [ ] C5: 잘못된 입력·옵션·출력 경로와 평가·쓰기 실패를 거부하고 기존 파일 보존·최종 결과 미생성·임시 결과 정리를 검증한다.
+  [ ] C6: 실제 합성 corpus 기준선·한국어 토큰화 한계·관측 사례와 재현 안내·전체 회귀 및 실패 후 재검증 증거를 커밋한다.
+  [ ] C7: 채택한 plan·P001 선행 완료·계약 검사·큐·모든 최신 PASS와 비어 있지 않은 커밋된 근거가 일치한다.
+조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음
