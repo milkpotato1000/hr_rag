@@ -1,6 +1,7 @@
 # hr_rag
 
-기획과 개발을 분리하는 로컬 Git worktree 하네스입니다. 제품 요구사항과 구현은 아직 없습니다.
+HR 규정 문서에 근거해 질문에 답하고, 근거가 부족하면 담당자에게 연결하는 RAG 에이전트 프로젝트입니다.
+기획·개발은 linked Git worktree로 분리하며 제품 구현은 아직 시작하지 않았습니다.
 
 ## 작업 위치
 
@@ -21,8 +22,9 @@ plan/dev만 게시하며 main의 push와 승격은 별도 명시 요청이 필�
 - 큐 조회: `python3 scripts/work_queue.py --owner all`
 - 개발 계약 확인: `python3 scripts/contract_guard.py check`
 
-현재 제품 목표가 없어 큐는 비어 있습니다. [작업 흐름](docs/process/work-queue.md)과
-[P카드 템플릿](docs/planning/plans/_TEMPLATE.md)을 사용합니다.
+[프로젝트 기획](docs/planning/project-brief.md)과 [아키텍처 방향](docs/architecture/system-design.md)을 확인합니다.
+첫 개발 큐는 [P001 합성 HR 문서와 검색 평가 기반](docs/planning/plans/P001.md)이며 준비 완료·미착수입니다.
+plan 또는 dev 폴더에서 [작업 흐름](docs/process/work-queue.md)을 따릅니다.
 
 ## 계약과 증거
 
