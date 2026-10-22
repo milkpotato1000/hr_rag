@@ -1,0 +1,8 @@
+$ git diff --cached --check (before transcript formatting fix)
+exit=2
+docs/verification/p001/05-contract-and-queue.txt:52: new blank line at EOF.
+
+
+$ git diff --cached --check (after removing transcript trailing blank lines)
+exit=0
+(no whitespace errors)

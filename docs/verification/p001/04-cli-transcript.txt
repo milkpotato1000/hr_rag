@@ -1,0 +1,34 @@
+P001 CLI verification; Python 3.9.6
+Working directory: hr_rag-dev (dev)
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 scripts/evaluate_retrieval.py --chunks data/synthetic/chunks.jsonl --queries data/synthetic/queries.jsonl --rankings data/synthetic/example_rankings.jsonl --k 5 10 20 --output docs/verification/p001/example-result.json
+exit=0
+stdout: (empty)
+stderr: (empty)
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 scripts/evaluate_retrieval.py --chunks data/synthetic/chunks.jsonl --queries data/synthetic/queries.jsonl --rankings data/synthetic/example_rankings.jsonl --k 5 10 20 --output /var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/hr-rag-p001-2k0nwz11/repeat.json
+exit=0
+stdout: (empty)
+stderr: (empty)
+
+Repeated example output byte-identical: True
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 scripts/evaluate_retrieval.py --chunks data/synthetic/chunks.jsonl --queries data/synthetic/queries.jsonl --rankings docs/verification/p001/invalid-rankings.jsonl --k 5 10 20 --output /var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/hr-rag-p001-q8jnue1l/result.json
+exit=2
+stdout: (empty)
+stderr: error: unknown ranking chunk_id: nonexistent-chunk
+
+Existing output bytes preserved: True
+Sentinel SHA-256: b8790b0163995b9df4fee672377f33f9b4e5116b8702bcd13410a2a895d2db05
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 scripts/evaluate_retrieval.py --chunks data/synthetic/chunks.jsonl --queries data/synthetic/queries.jsonl --rankings docs/verification/p001/invalid-rankings.jsonl --k 5 10 20 --output /var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/hr-rag-p001-q8jnue1l/result.json
+exit=2
+stdout: (empty)
+stderr: error: unknown ranking chunk_id: nonexistent-chunk
+
+Absent output stays absent: True
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 scripts/evaluate_retrieval.py --chunks docs/verification/p001/fixture-chunks.jsonl --queries docs/verification/p001/fixture-queries.jsonl --rankings docs/verification/p001/fixture-rankings.jsonl --k 2 5 --output docs/verification/p001/independent-result.json
+exit=0
+stdout: (empty)
+stderr: (empty)

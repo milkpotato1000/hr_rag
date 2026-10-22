@@ -1,0 +1,59 @@
+$ python3 scripts/contract_guard.py check
+exit=0
+PASS: contracts match adopted plan 99ce84f32f5c
+
+
+$ python3 scripts/work_queue.py --owner all --json
+exit=0
+{
+  "branch": "dev",
+  "owner": "all",
+  "notices": [
+    "dev는 채택한 plan 99ce84f32f5c 기준. 이후 plan 초안은 자동 채택하지 않음."
+  ],
+  "next": {
+    "plan": null,
+    "dev": null
+  },
+  "tasks": [
+    {
+      "id": "P001",
+      "title": "합성 HR 문서와 검색 평가 기반 구축",
+      "owner": "dev",
+      "priority": 10,
+      "state": "DONE",
+      "reason": "",
+      "work_order": "docs/planning/plans/P001.md",
+      "checked": 6,
+      "total": 6,
+      "completed_checks": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "acceptance": {
+        "C1": "최소 12개 합성 청크와 10개 질문이 고정 스키마를 만족하고 최소 3개 주제 및 2개 근거 없음 질문을 포함한다.",
+        "C2": "평가 CLI가 Recall·Precision·MRR·nDCG의 K별 query 값과 macro 평균을 독립 기대값과 일치하게 계산한다.",
+        "C3": "빈 검색·짧은 순위·근거 없음 질문의 분리와 분모·null 정책을 검증한다.",
+        "C4": "중복·잘못된 JSON·타입·등급·누락·알 수 없는 참조를 거부하고 실패 시 기존 결과를 보존한다.",
+        "C5": "결과에 데이터 hash·K·평가기 버전·분모를 남기고 반복 실행과 corpus 변경 검증을 통과한다.",
+        "C6": "실행 안내와 실제 테스트·CLI 증거를 커밋하고 계약 검사·큐 상태·모든 최신 PASS 근거가 일치한다."
+      }
+    }
+  ]
+}
+
+
+$ git diff --check
+exit=0
+
+$ python3 scripts/contract_guard.py check --target index
+exit=0
+PASS: contracts match adopted plan 99ce84f32f5c
+
+
+$ git diff --cached --check
+exit=0

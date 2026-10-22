@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "evaluator_version": "1.0.0",
+    "sha256": {
+      "chunks": "c3f1e8452b054dba8391d1e797cba195cfe928bf5b2e59a6eacca8690dea545e",
+      "queries": "89d13c3604015cf1835b67d363c7c7946fe355681d55f24ab6d4bf26859143c4",
+      "rankings": "3d792bf3f8c601eac8550a3bc9702140e727577e9cac327721151726be1f1fb7"
+    },
+    "k": [
+      2,
+      5
+    ],
+    "chunk_count": 3,
+    "query_count": 1,
+    "answerable_count": 1,
+    "unanswerable_count": 0
+  },
+  "per_query": [
+    {
+      "query_id": "q",
+      "answerability": "answerable",
+      "retrieved_count": 3,
+      "metrics": {
+        "2": {
+          "recall": 0.5,
+          "precision": 0.5,
+          "mrr": 0.5,
+          "ndcg": 0.08268058728704288
+        },
+        "5": {
+          "recall": 1.0,
+          "precision": 0.4,
+          "mrr": 0.5,
+          "ndcg": 0.5413402936435214
+        }
+      }
+    }
+  ],
+  "macro": {
+    "2": {
+      "recall": 0.5,
+      "precision": 0.5,
+      "mrr": 0.5,
+      "ndcg": 0.08268058728704288
+    },
+    "5": {
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.5,
+      "ndcg": 0.5413402936435214
+    }
+  },
+  "unanswerable": {
+    "query_count": 0,
+    "with_results_count": 0,
+    "empty_results_count": 0,
+    "with_results_ratio": null,
+    "empty_results_ratio": null
+  }
+}
