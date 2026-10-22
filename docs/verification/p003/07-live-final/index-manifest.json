@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "corpus_sha256": "53d262cb4d11ba73bd08dd559676d6df002fb46ef15afa5f94e01508620abedc",
+  "model_name": "bge-m3:567m",
+  "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+  "dimension": 1024,
+  "runtime_version": "0.40.8",
+  "text_version": "title-lf-text-v1",
+  "truncate": false,
+  "distance": "Cosine",
+  "qdrant_client_version": "1.19.1",
+  "point_count": 15,
+  "id_version": "uuid5-url-hr-v1"
+}

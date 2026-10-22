@@ -1,0 +1,239 @@
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["python3", "scripts/setup_runtime.py"]
+exit=0
+{"status": "ready", "python": "3.12.14", "ollama": "0.40.8", "model": "bge-m3:567m", "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab", "dimension": 1024}
+Python 3.12.14 is already installed
+Resolved 20 packages in 7ms
+Checked 20 packages in 0.37ms
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/runtime.py", "stop"]
+exit=0
+{"state": "stopped", "owned": false, "endpoint": "http://127.0.0.1:11434"}
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/runtime.py", "status"]
+exit=0
+{"state": "stopped", "owned": false, "endpoint": "http://127.0.0.1:11434"}
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/runtime.py", "start"]
+exit=0
+{"state": "running", "owned": true, "pid": 87874, "endpoint": "http://127.0.0.1:11434", "version": "0.40.8"}
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/runtime.py", "start"]
+exit=0
+{"state": "running", "owned": true, "pid": 87874, "endpoint": "http://127.0.0.1:11434", "version": "0.40.8"}
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "-m", "unittest", "discover", "-s", "tests", "-v"]
+exit=0
+
+test_bad_options_cli_and_boolean_library_boundary (test_bm25_baseline.BM25Tests.test_bad_options_cli_and_boolean_library_boundary) ... ok
+test_default_options (test_bm25_baseline.BM25Tests.test_default_options) ... ok
+test_existing_output_file_directory_and_links_are_preserved (test_bm25_baseline.BM25Tests.test_existing_output_file_directory_and_links_are_preserved) ... ok
+test_independent_equal_length_scores_and_repeated_query (test_bm25_baseline.BM25Tests.test_independent_equal_length_scores_and_repeated_query) ... ok
+test_independent_length_normalization (test_bm25_baseline.BM25Tests.test_independent_length_normalization) ... ok
+test_individual_and_all_empty_token_chunks (test_bm25_baseline.BM25Tests.test_individual_and_all_empty_token_chunks) ... ok
+test_injected_evaluation_and_staging_write_failures_cleanup (test_bm25_baseline.BM25Tests.test_injected_evaluation_and_staging_write_failures_cleanup) ... ok
+test_injected_partial_publication_failure_rolls_back (test_bm25_baseline.BM25Tests.test_injected_partial_publication_failure_rolls_back) ... ok
+test_invalid_inputs_reuse_p001_validation_without_publishing (test_bm25_baseline.BM25Tests.test_invalid_inputs_reuse_p001_validation_without_publishing) ... ok
+test_metadata_hashes_schema_and_nonnegative_timings (test_bm25_baseline.BM25Tests.test_metadata_hashes_schema_and_nonnegative_timings) ... ok
+test_missing_input_or_output_parent (test_bm25_baseline.BM25Tests.test_missing_input_or_output_parent) ... ok
+test_normalization_casefold_digits_underscore_and_korean_particles (test_bm25_baseline.BM25Tests.test_normalization_casefold_digits_underscore_and_korean_particles) ... ok
+test_only_title_text_and_question_affect_retrieval (test_bm25_baseline.BM25Tests.test_only_title_text_and_question_affect_retrieval) ... ok
+test_output_created_after_preflight_is_preserved (test_bm25_baseline.BM25Tests.test_output_created_after_preflight_is_preserved) ... ok
+test_qrels_and_answerability_do_not_affect_retrieval (test_bm25_baseline.BM25Tests.test_qrels_and_answerability_do_not_affect_retrieval) ... ok
+test_real_p001_cli_reevaluation_matches_exactly (test_bm25_baseline.BM25Tests.test_real_p001_cli_reevaluation_matches_exactly) ... ok
+test_repeat_determinism_hash_seeds_and_input_order (test_bm25_baseline.BM25Tests.test_repeat_determinism_hash_seeds_and_input_order) ... ok
+test_tie_breaking_top_k_and_fewer_positive_results (test_bm25_baseline.BM25Tests.test_tie_breaking_top_k_and_fewer_positive_results) ... ok
+test_bad_count_dimension_values_zero_and_model (test_dense_runtime.HTTPBoundaryTests.test_bad_count_dimension_values_zero_and_model) ... ok
+test_embed_exact_request_and_count (test_dense_runtime.HTTPBoundaryTests.test_embed_exact_request_and_count) ... ok
+test_http_error_json_error_redirect_timeout_and_no_fallback (test_dense_runtime.HTTPBoundaryTests.test_http_error_json_error_redirect_timeout_and_no_fallback) ... ok
+test_loopback_only_endpoint_and_timeout_validation (test_dense_runtime.HTTPBoundaryTests.test_loopback_only_endpoint_and_timeout_validation) ... ok
+test_tags_missing_duplicate_malformed_digest (test_dense_runtime.HTTPBoundaryTests.test_tags_missing_duplicate_malformed_digest) ... ok
+test_existing_index_and_index_failures_preserve_user_data (test_dense_runtime.PersistentCosineTests.test_existing_index_and_index_failures_preserve_user_data) ... ok
+test_independent_cosine_reopen_and_uuid_payload (test_dense_runtime.PersistentCosineTests.test_independent_cosine_reopen_and_uuid_payload) ... ok
+test_invalid_vectors_no_new_index (test_dense_runtime.PersistentCosineTests.test_invalid_vectors_no_new_index) ... ok
+test_output_failures_and_labels_do_not_enter_embeddings (test_dense_runtime.PersistentCosineTests.test_output_failures_and_labels_do_not_enter_embeddings) ... ok
+test_stale_manifest_changes_rejected_before_open (test_dense_runtime.PersistentCosineTests.test_stale_manifest_changes_rejected_before_open) ... ok
+test_unknown_payload_and_duplicate_chunk_mapping_rejected (test_dense_runtime.PersistentCosineTests.test_unknown_payload_and_duplicate_chunk_mapping_rejected) ... ok
+test_zero_negative_cosine_and_exact_tie_are_retained (test_dense_runtime.PersistentCosineTests.test_zero_negative_cosine_and_exact_tie_are_retained) ... ok
+test_archive_traversal_link_device_rejected (test_dense_runtime.RuntimeSafetyTests.test_archive_traversal_link_device_rejected) ... ok
+test_external_service_never_started_or_stopped (test_dense_runtime.RuntimeSafetyTests.test_external_service_never_started_or_stopped) ... ok
+test_model_digest_and_runtime_mismatch_rejected (test_dense_runtime.RuntimeSafetyTests.test_model_digest_and_runtime_mismatch_rejected) ... ok
+test_start_retries_transient_readiness_timeout (test_dense_runtime.RuntimeSafetyTests.test_start_retries_transient_readiness_timeout) ... ok
+test_all_relevance_grades_and_large_k (test_evaluate_retrieval.RetrievalCLITests.test_all_relevance_grades_and_large_k) ... ok
+test_atomic_write_error_cleans_temporary_file (test_evaluate_retrieval.RetrievalCLITests.test_atomic_write_error_cleans_temporary_file) ... ok
+test_contract_independent_graded_examples_and_macro (test_evaluate_retrieval.RetrievalCLITests.test_contract_independent_graded_examples_and_macro) ... ok
+test_duplicate_record_ids (test_evaluate_retrieval.RetrievalCLITests.test_duplicate_record_ids) ... ok
+test_hashes_version_and_byte_determinism (test_evaluate_retrieval.RetrievalCLITests.test_hashes_version_and_byte_determinism) ... ok
+test_input_read_error_preserves_output (test_evaluate_retrieval.RetrievalCLITests.test_input_read_error_preserves_output) ... ok
+test_invalid_grades_and_unknown_qrel_reference (test_evaluate_retrieval.RetrievalCLITests.test_invalid_grades_and_unknown_qrel_reference) ... ok
+test_k_must_be_positive_unique_integers (test_evaluate_retrieval.RetrievalCLITests.test_k_must_be_positive_unique_integers) ... ok
+test_macro_is_query_mean_and_unanswerable_is_excluded (test_evaluate_retrieval.RetrievalCLITests.test_macro_is_query_mean_and_unanswerable_is_excluded) ... ok
+test_malformed_and_empty_jsonl (test_evaluate_retrieval.RetrievalCLITests.test_malformed_and_empty_jsonl) ... ok
+test_missing_and_invalid_chunk_fields (test_evaluate_retrieval.RetrievalCLITests.test_missing_and_invalid_chunk_fields) ... ok
+test_missing_and_invalid_query_fields (test_evaluate_retrieval.RetrievalCLITests.test_missing_and_invalid_query_fields) ... ok
+test_missing_unknown_duplicate_and_invalid_rankings (test_evaluate_retrieval.RetrievalCLITests.test_missing_unknown_duplicate_and_invalid_rankings) ... ok
+test_no_unanswerable_ratios_are_null (test_evaluate_retrieval.RetrievalCLITests.test_no_unanswerable_ratios_are_null) ... ok
+test_only_unanswerable_has_null_macro (test_evaluate_retrieval.RetrievalCLITests.test_only_unanswerable_has_null_macro) ... ok
+test_output_cannot_alias_input_or_hardlink_or_symlink (test_evaluate_retrieval.RetrievalCLITests.test_output_cannot_alias_input_or_hardlink_or_symlink) ... ok
+test_relevant_first_kth_outside_k_empty_and_short (test_evaluate_retrieval.RetrievalCLITests.test_relevant_first_kth_outside_k_empty_and_short) ... ok
+test_synthetic_corpus_and_curated_example (test_evaluate_retrieval.RetrievalCLITests.test_synthetic_corpus_and_curated_example) ... ok
+test_unanswerable_requires_empty_mapping_even_for_grade_zero (test_evaluate_retrieval.RetrievalCLITests.test_unanswerable_requires_empty_mapping_even_for_grade_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 53 tests in 14.834s
+
+OK
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev
+command: ["python3", "-m", "unittest", "discover", "-s", "tests", "-v"]
+exit=0
+
+test_all_relevance_grades_and_large_k (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_atomic_write_error_cleans_temporary_file (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_contract_independent_graded_examples_and_macro (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_duplicate_record_ids (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_hashes_version_and_byte_determinism (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_input_read_error_preserves_output (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_invalid_grades_and_unknown_qrel_reference (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_k_must_be_positive_unique_integers (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_macro_is_query_mean_and_unanswerable_is_excluded (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_malformed_and_empty_jsonl (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_missing_and_invalid_chunk_fields (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_missing_and_invalid_query_fields (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_missing_unknown_duplicate_and_invalid_rankings (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_no_unanswerable_ratios_are_null (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_only_unanswerable_has_null_macro (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_output_cannot_alias_input_or_hardlink_or_symlink (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_relevant_first_kth_outside_k_empty_and_short (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_synthetic_corpus_and_curated_example (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_unanswerable_requires_empty_mapping_even_for_grade_zero (test_evaluate_retrieval.RetrievalCLITests) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 11.689s
+
+OK
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/run_dense_baseline.py", "--chunks", "data/synthetic/chunks.jsonl", "--queries", "data/synthetic/queries.jsonl", "--index-dir", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.runtime/index-v1", "--top-k", "20", "--k", "5", "10", "20", "--output-dir", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/docs/verification/p003/07-live-final/dense"]
+exit=0
+
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/run_bm25_baseline.py", "--chunks", "data/synthetic/chunks.jsonl", "--queries", "data/synthetic/queries.jsonl", "--top-k", "20", "--k", "5", "10", "20", "--output-dir", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/docs/verification/p003/07-live-final/bm25"]
+exit=0
+
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/evaluate_retrieval.py", "--chunks", "data/synthetic/chunks.jsonl", "--queries", "data/synthetic/queries.jsonl", "--rankings", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/docs/verification/p003/07-live-final/dense/rankings.jsonl", "--k", "5", "10", "20", "--output", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/docs/verification/p003/07-live-final/dense-reevaluated.json"]
+exit=0
+
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/evaluate_retrieval.py", "--chunks", "data/synthetic/chunks.jsonl", "--queries", "data/synthetic/queries.jsonl", "--rankings", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/docs/verification/p003/07-live-final/bm25/rankings.jsonl", "--k", "5", "10", "20", "--output", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/docs/verification/p003/07-live-final/bm25-reevaluated.json"]
+exit=0
+
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "-c", "import sys,json;sys.path.insert(0,\"scripts\");from runtime_common import load_lock;from dense_retrieval import DenseIndex,point_id;import evaluate_retrieval as e;from pathlib import Path;rows,h=e.read_jsonl(Path(\"data/synthetic/chunks.jsonl\"));chunks=e.validate_chunks(rows);\nwith DenseIndex(Path(sys.argv[1]),chunks,h,load_lock()) as i:\n records,_=i.client.scroll(\"hr_chunks\",limit=16,with_payload=True);print(json.dumps([dict(point_id=str(r.id),payload=r.payload) for r in records],ensure_ascii=False))", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.runtime/index-v1"]
+exit=0
+[{"point_id": "021a1828-b9ba-54d7-8d15-e6be55948c9e", "payload": {"chunk_id": "remote-days", "document_id": "fictional-remote", "version": "1", "title": "[가상 규정] 재택근무 횟수", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다. 재택근무는 휴가가 아닌 근무일로 집계한다.", "source": "synthetic://hr/v1/remote#remote-days", "synthetic": true}}, {"point_id": "1c5457fd-80e1-53c9-acac-697016fda650", "payload": {"chunk_id": "remote-security", "document_id": "fictional-remote", "version": "1", "title": "[가상 규정] 재택근무 보안", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 재택근무 시 회사 지급 기기와 회사 VPN을 사용한다. 공용 컴퓨터로 내부 문서에 접근할 수 없다.", "source": "synthetic://hr/v1/remote#remote-security", "synthetic": true}}, {"point_id": "47b5c3c8-5834-5306-93c3-741b785ab108", "payload": {"chunk_id": "annual-halfday", "document_id": "fictional-annual", "version": "1", "title": "[가상 규정] 반차 사용", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 연차는 오전 또는 오후 반차로 나누어 사용할 수 있다. 반차 1회는 연차 0.5일로 차감한다. 생일 특별휴가는 분할할 수 없다.", "source": "synthetic://hr/v1/annual#annual-halfday", "synthetic": true}}, {"point_id": "4a6f8b17-3384-5176-9c1e-fb918f48ad2a", "payload": {"chunk_id": "remote-eligibility", "document_id": "fictional-remote", "version": "1", "title": "[가상 규정] 재택근무 대상", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다. 현장 장비 운영 직무는 재택 대상에서 제외한다.", "source": "synthetic://hr/v1/remote#remote-eligibility", "synthetic": true}}, {"point_id": "4efc3b0b-f5ed-52cb-bbf2-8d502ee2eadb", "payload": {"chunk_id": "birthday-eligibility", "document_id": "fictional-birthday", "version": "1", "title": "[가상 규정] 생일 휴가 적용 대상", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상에서 제외한다.", "source": "synthetic://hr/v1/birthday#birthday-eligibility", "synthetic": true}}, {"point_id": "6019d13a-339a-5629-9aa8-b344d16d84b3", "payload": {"chunk_id": "birthday-request", "document_id": "fictional-birthday", "version": "1", "title": "[가상 규정] 생일 휴가 신청", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.", "source": "synthetic://hr/v1/birthday#birthday-request", "synthetic": true}}, {"point_id": "666f1c08-528d-531f-82c1-64fad9f4b9e3", "payload": {"chunk_id": "annual-accrual", "document_id": "fictional-annual", "version": "1", "title": "[가상 규정] 연차 발생", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 기준으로 별도 산정한다.", "source": "synthetic://hr/v1/annual#annual-accrual", "synthetic": true}}, {"point_id": "67439a56-b754-5b23-a9dd-822da56a3c74", "payload": {"chunk_id": "birthday-window", "document_id": "fictional-birthday", "version": "1", "title": "[가상 규정] 생일 휴가 사용 기간", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않는다.", "source": "synthetic://hr/v1/birthday#birthday-window", "synthetic": true}}, {"point_id": "823ee19b-bd44-5da6-bfac-6eb2212f30f6", "payload": {"chunk_id": "remote-address", "document_id": "fictional-remote", "version": "1", "title": "[가상 규정] 재택 장소 변경", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 재택근무 장소는 등록한 자택으로 제한한다. 주소 변경 시 근무 시작 전에 인사 담당자에게 등록 주소 변경을 요청한다.", "source": "synthetic://hr/v1/remote#remote-address", "synthetic": true}}, {"point_id": "a17208a0-90e4-57ab-be29-48d77a57e900", "payload": {"chunk_id": "welfare-meal", "document_id": "fictional-welfare", "version": "1", "title": "[가상 규정] 식대 지원", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 사무실 출근일에는 식대 1만 원을 지원한다. 재택근무일과 휴가일에는 이 식대를 지원하지 않는다.", "source": "synthetic://hr/v1/welfare#welfare-meal", "synthetic": true}}, {"point_id": "c03044ef-5102-5447-93ca-251744d3f4bd", "payload": {"chunk_id": "annual-request", "document_id": "fictional-annual", "version": "1", "title": "[가상 규정] 연차 신청", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다. 긴급 사유가 있으면 당일 팀장에게 알린 후 신청할 수 있다.", "source": "synthetic://hr/v1/annual#annual-request", "synthetic": true}}, {"point_id": "d3b928c5-2642-5f74-a128-68b7fff61ab9", "payload": {"chunk_id": "training-time", "document_id": "fictional-training", "version": "1", "title": "[가상 규정] 교육 휴가", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다. 생일 특별휴가 및 연차와 별도로 관리한다.", "source": "synthetic://hr/v1/training#training-time", "synthetic": true}}, {"point_id": "d51591fc-2bab-5b95-9224-c2bc81e8c358", "payload": {"chunk_id": "annual-carry", "document_id": "fictional-annual", "version": "1", "title": "[가상 규정] 연차 이월", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 미사용 연차의 이월은 연간 최대 5일이며 다음 해 3월 말까지 사용해야 한다. 생일 특별휴가에는 이 규정을 적용하지 않는다.", "source": "synthetic://hr/v1/annual#annual-carry", "synthetic": true}}, {"point_id": "e1f27139-fe86-5fb4-a250-46c778ececa2", "payload": {"chunk_id": "travel-approval", "document_id": "fictional-travel", "version": "1", "title": "[가상 규정] 출장 사전 승인", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 출장은 출발 5영업일 전에 팀장의 승인을 받는다. 출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.", "source": "synthetic://hr/v1/travel#travel-approval", "synthetic": true}}, {"point_id": "fceb8813-ca07-5c72-b1d3-e4e5cd3de725", "payload": {"chunk_id": "welfare-birthday", "document_id": "fictional-welfare", "version": "1", "title": "[가상 규정] 생일 축하 포인트", "text": "[가상 HR 규정: 실제 회사 정책이 아님] 재직자에게 생일 축하 포인트 3만 점을 지급한다. 이 포인트는 휴가 신청 자격이나 승인 여부와 별개다.", "source": "synthetic://hr/v1/welfare#welfare-birthday", "synthetic": true}}]
+
+
+cwd: /var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p003-standalone-e51x8l_y/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "-m", "unittest", "discover", "-s", "tests", "-v"]
+exit=0
+
+test_bad_options_cli_and_boolean_library_boundary (test_bm25_baseline.BM25Tests.test_bad_options_cli_and_boolean_library_boundary) ... ok
+test_default_options (test_bm25_baseline.BM25Tests.test_default_options) ... ok
+test_existing_output_file_directory_and_links_are_preserved (test_bm25_baseline.BM25Tests.test_existing_output_file_directory_and_links_are_preserved) ... ok
+test_independent_equal_length_scores_and_repeated_query (test_bm25_baseline.BM25Tests.test_independent_equal_length_scores_and_repeated_query) ... ok
+test_independent_length_normalization (test_bm25_baseline.BM25Tests.test_independent_length_normalization) ... ok
+test_individual_and_all_empty_token_chunks (test_bm25_baseline.BM25Tests.test_individual_and_all_empty_token_chunks) ... ok
+test_injected_evaluation_and_staging_write_failures_cleanup (test_bm25_baseline.BM25Tests.test_injected_evaluation_and_staging_write_failures_cleanup) ... ok
+test_injected_partial_publication_failure_rolls_back (test_bm25_baseline.BM25Tests.test_injected_partial_publication_failure_rolls_back) ... ok
+test_invalid_inputs_reuse_p001_validation_without_publishing (test_bm25_baseline.BM25Tests.test_invalid_inputs_reuse_p001_validation_without_publishing) ... ok
+test_metadata_hashes_schema_and_nonnegative_timings (test_bm25_baseline.BM25Tests.test_metadata_hashes_schema_and_nonnegative_timings) ... ok
+test_missing_input_or_output_parent (test_bm25_baseline.BM25Tests.test_missing_input_or_output_parent) ... ok
+test_normalization_casefold_digits_underscore_and_korean_particles (test_bm25_baseline.BM25Tests.test_normalization_casefold_digits_underscore_and_korean_particles) ... ok
+test_only_title_text_and_question_affect_retrieval (test_bm25_baseline.BM25Tests.test_only_title_text_and_question_affect_retrieval) ... ok
+test_output_created_after_preflight_is_preserved (test_bm25_baseline.BM25Tests.test_output_created_after_preflight_is_preserved) ... ok
+test_qrels_and_answerability_do_not_affect_retrieval (test_bm25_baseline.BM25Tests.test_qrels_and_answerability_do_not_affect_retrieval) ... ok
+test_real_p001_cli_reevaluation_matches_exactly (test_bm25_baseline.BM25Tests.test_real_p001_cli_reevaluation_matches_exactly) ... ok
+test_repeat_determinism_hash_seeds_and_input_order (test_bm25_baseline.BM25Tests.test_repeat_determinism_hash_seeds_and_input_order) ... ok
+test_tie_breaking_top_k_and_fewer_positive_results (test_bm25_baseline.BM25Tests.test_tie_breaking_top_k_and_fewer_positive_results) ... ok
+test_bad_count_dimension_values_zero_and_model (test_dense_runtime.HTTPBoundaryTests.test_bad_count_dimension_values_zero_and_model) ... ok
+test_embed_exact_request_and_count (test_dense_runtime.HTTPBoundaryTests.test_embed_exact_request_and_count) ... ok
+test_http_error_json_error_redirect_timeout_and_no_fallback (test_dense_runtime.HTTPBoundaryTests.test_http_error_json_error_redirect_timeout_and_no_fallback) ... ok
+test_loopback_only_endpoint_and_timeout_validation (test_dense_runtime.HTTPBoundaryTests.test_loopback_only_endpoint_and_timeout_validation) ... ok
+test_tags_missing_duplicate_malformed_digest (test_dense_runtime.HTTPBoundaryTests.test_tags_missing_duplicate_malformed_digest) ... ok
+test_existing_index_and_index_failures_preserve_user_data (test_dense_runtime.PersistentCosineTests.test_existing_index_and_index_failures_preserve_user_data) ... ok
+test_independent_cosine_reopen_and_uuid_payload (test_dense_runtime.PersistentCosineTests.test_independent_cosine_reopen_and_uuid_payload) ... ok
+test_invalid_vectors_no_new_index (test_dense_runtime.PersistentCosineTests.test_invalid_vectors_no_new_index) ... ok
+test_output_failures_and_labels_do_not_enter_embeddings (test_dense_runtime.PersistentCosineTests.test_output_failures_and_labels_do_not_enter_embeddings) ... ok
+test_stale_manifest_changes_rejected_before_open (test_dense_runtime.PersistentCosineTests.test_stale_manifest_changes_rejected_before_open) ... ok
+test_unknown_payload_and_duplicate_chunk_mapping_rejected (test_dense_runtime.PersistentCosineTests.test_unknown_payload_and_duplicate_chunk_mapping_rejected) ... ok
+test_zero_negative_cosine_and_exact_tie_are_retained (test_dense_runtime.PersistentCosineTests.test_zero_negative_cosine_and_exact_tie_are_retained) ... ok
+test_archive_traversal_link_device_rejected (test_dense_runtime.RuntimeSafetyTests.test_archive_traversal_link_device_rejected) ... ok
+test_external_service_never_started_or_stopped (test_dense_runtime.RuntimeSafetyTests.test_external_service_never_started_or_stopped) ... ok
+test_model_digest_and_runtime_mismatch_rejected (test_dense_runtime.RuntimeSafetyTests.test_model_digest_and_runtime_mismatch_rejected) ... ok
+test_start_retries_transient_readiness_timeout (test_dense_runtime.RuntimeSafetyTests.test_start_retries_transient_readiness_timeout) ... ok
+test_all_relevance_grades_and_large_k (test_evaluate_retrieval.RetrievalCLITests.test_all_relevance_grades_and_large_k) ... ok
+test_atomic_write_error_cleans_temporary_file (test_evaluate_retrieval.RetrievalCLITests.test_atomic_write_error_cleans_temporary_file) ... ok
+test_contract_independent_graded_examples_and_macro (test_evaluate_retrieval.RetrievalCLITests.test_contract_independent_graded_examples_and_macro) ... ok
+test_duplicate_record_ids (test_evaluate_retrieval.RetrievalCLITests.test_duplicate_record_ids) ... ok
+test_hashes_version_and_byte_determinism (test_evaluate_retrieval.RetrievalCLITests.test_hashes_version_and_byte_determinism) ... ok
+test_input_read_error_preserves_output (test_evaluate_retrieval.RetrievalCLITests.test_input_read_error_preserves_output) ... ok
+test_invalid_grades_and_unknown_qrel_reference (test_evaluate_retrieval.RetrievalCLITests.test_invalid_grades_and_unknown_qrel_reference) ... ok
+test_k_must_be_positive_unique_integers (test_evaluate_retrieval.RetrievalCLITests.test_k_must_be_positive_unique_integers) ... ok
+test_macro_is_query_mean_and_unanswerable_is_excluded (test_evaluate_retrieval.RetrievalCLITests.test_macro_is_query_mean_and_unanswerable_is_excluded) ... ok
+test_malformed_and_empty_jsonl (test_evaluate_retrieval.RetrievalCLITests.test_malformed_and_empty_jsonl) ... ok
+test_missing_and_invalid_chunk_fields (test_evaluate_retrieval.RetrievalCLITests.test_missing_and_invalid_chunk_fields) ... ok
+test_missing_and_invalid_query_fields (test_evaluate_retrieval.RetrievalCLITests.test_missing_and_invalid_query_fields) ... ok
+test_missing_unknown_duplicate_and_invalid_rankings (test_evaluate_retrieval.RetrievalCLITests.test_missing_unknown_duplicate_and_invalid_rankings) ... ok
+test_no_unanswerable_ratios_are_null (test_evaluate_retrieval.RetrievalCLITests.test_no_unanswerable_ratios_are_null) ... ok
+test_only_unanswerable_has_null_macro (test_evaluate_retrieval.RetrievalCLITests.test_only_unanswerable_has_null_macro) ... ok
+test_output_cannot_alias_input_or_hardlink_or_symlink (test_evaluate_retrieval.RetrievalCLITests.test_output_cannot_alias_input_or_hardlink_or_symlink) ... ok
+test_relevant_first_kth_outside_k_empty_and_short (test_evaluate_retrieval.RetrievalCLITests.test_relevant_first_kth_outside_k_empty_and_short) ... ok
+test_synthetic_corpus_and_curated_example (test_evaluate_retrieval.RetrievalCLITests.test_synthetic_corpus_and_curated_example) ... ok
+test_unanswerable_requires_empty_mapping_even_for_grade_zero (test_evaluate_retrieval.RetrievalCLITests.test_unanswerable_requires_empty_mapping_even_for_grade_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 53 tests in 15.221s
+
+OK
+
+cwd: /var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p003-standalone-e51x8l_y/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/run_dense_baseline.py", "--chunks", "data/synthetic/chunks.jsonl", "--queries", "data/synthetic/queries.jsonl", "--index-dir", ".runtime/index-copy", "--top-k", "20", "--k", "5", "10", "20", "--output-dir", "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p003-standalone-e51x8l_y/dense-copy"]
+exit=0
+
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/runtime.py", "status"]
+exit=0
+{"state": "running", "owned": true, "pid": 87874, "endpoint": "http://127.0.0.1:11434", "version": "0.40.8"}
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/runtime.py", "stop"]
+exit=0
+{"state": "stopped", "owned": false, "endpoint": "http://127.0.0.1:11434"}
+
+
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/runtime.py", "status"]
+exit=0
+{"state": "stopped", "owned": false, "endpoint": "http://127.0.0.1:11434"}

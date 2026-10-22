@@ -1,14 +1,14 @@
 # 1. Naive RAG
 
-RAG 방식별 큰 구현 단계다. 현재는 P001 검색 평가 기반과 P002 BM25 검색 기준선만 구현했다.
-Dense 검색·생성 모델·최종 답변 기능은 후속 P카드 범위다. Python 3.9 이상과 표준 라이브러리만 필요하다.
+RAG 방식별 큰 구현 단계다. 현재는 P001 검색 평가 기반, P002 BM25, P003 실제 로컬 Dense 검색까지 구현했다.
+생성 모델·최종 답변은 후속 P카드 범위다. 평가·BM25는 Python 3.9 이상과 표준 라이브러리만 필요하고, Dense는 아래 격리 런타임을 사용한다.
 
 ## 가져온 것과 보존
 
 P001 커밋 `4225bb1d6b9bd017a06e81125c4fce9ed1d7f227`의 평가기·회귀 테스트·합성 데이터 네 파일을 최초 원본 바이트 그대로 확보했다.
 앞선 세부 단계 해석으로 작성한 `1. 검색 평가 기반/`을 이 폴더로 옮겼고 기존 README·manifest는 루트 P002 검증 기록에도 보존했다.
 `stage-manifest.json`의 source_path는 저장소 기준, destination_path는 이 폴더 기준이다.
-`copied_sha256`은 최초 복사 원본 hash이며 이후 현재 코드 hash라고 표시하지 않는다. 이번 P002에서는 가져온 여섯 파일도 수정하지 않았다.
+`copied_sha256`은 최초 복사 원본 hash이며 이후 현재 코드 hash라고 표시하지 않는다. P002·P003에서도 가져온 여섯 파일을 수정하지 않았다.
 
 같은 큰 단계에 `scripts/run_bm25_baseline.py`와 `tests/test_bm25_baseline.py`를 추가했다.
 검색은 질문 본문과 문서 제목·본문만 사용한다. 관련성 정답과 answerability는 기존 평가기에만 전달한다.
@@ -62,3 +62,62 @@ python3 scripts/evaluate_retrieval.py --chunks data/synthetic/chunks.jsonl --que
 
 Git 하네스·기획·완료 상태·실제 결과와 검증 기록은 원래 저장소 루트의 docs/verification/p002/에서 관리한다.
 후속 큰 RAG 단계는 별도 기획 때 확정하며 해당 폴더를 미리 만들지 않는다.
+
+## P003: 실제 로컬 Dense 검색
+
+문서 제목·본문을 BGE-M3로 벡터화해 Qdrant local cosine 색인에 저장하고 질문 원문도 같은 모델로 벡터화해 검색한다.
+BM25와 같은 corpus·질문·정답·P001 평가기를 사용한다. qrels·answerability는 색인·검색에 넣지 않는다.
+Qdrant는 프로세스 안의 로컬 영속 저장소이며 별도 Qdrant 서버나 외부 계정은 필요 없다.
+
+Ollama 0.40.8 공식 macOS tar의 고정 SHA-256을 검증한다. Python 3.12.14·qdrant-client 1.19.1 및 전이 의존성은
+`runtime-lock.json`과 `requirements.lock`에 고정했다. 모델은 실제 `bge-m3:567m`, F16, 1024차원이며 전체 digest도 lock에 있다.
+macOS arm64와 설치된 uv를 전제로 하며 첫 실행은 공식 런타임·Python·패키지·약 1.2GB 모델을 다운로드한다.
+
+이 폴더에서 실행한다. 이미 만든 색인·결과 경로는 재사용해 덮어쓰지 않으므로 새 경로를 사용한다.
+
+```sh
+python3 scripts/setup_runtime.py
+.venv/bin/python scripts/runtime.py start
+.venv/bin/python scripts/build_dense_index.py --chunks data/synthetic/chunks.jsonl --index-dir .runtime/index-v2
+.venv/bin/python scripts/run_dense_baseline.py --chunks data/synthetic/chunks.jsonl --queries data/synthetic/queries.jsonl --index-dir .runtime/index-v2 --top-k 20 --k 5 10 20 --output-dir /tmp/hr-rag-dense-new
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python scripts/runtime.py status
+.venv/bin/python scripts/runtime.py stop
+```
+
+준비가 끝난 현재 환경에는 `.runtime/index-v1`이 있다. 검색할 때 `--index-dir .runtime/index-v1`로 재open할 수 있다.
+setup은 lock이 일치하는 설치·모델을 재사용한다. 위 start도 자체 서비스가 이미 실행 중이면 재사용한다.
+runtime start/status/stop은 PID·실행 경로·프로세스 시작 시각·127.0.0.1:11434 소유를 검사한다.
+다른 서비스가 포트를 사용하거나 PID 소유가 바뀌면 강제 종료하지 않고 오류를 알린다. 서비스 자동 등록·클라우드 로그인은 하지 않는다.
+검증 종료 시 자체 서비스는 정지했다.
+
+모델·실행 파일·Python 다운로드·캐시·PID·로그·색인은 `.runtime/`, Python 패키지는 `.venv/`에 있으며 Git에서 제외한다.
+Ollama의 표준 초기화가 만든 로컬 키는 저장소 밖 `~/.ollama/`에 있으며 키 내용은 기록·커밋하지 않는다.
+서버는 loopback만 사용하고 클라우드는 비활성화한다. 기존 lock의 모델 digest나 corpus·색인 설정이 바뀌면 새 색인을 요구한다.
+색인·출력 생성 실패는 기존 파일을 보존하고 이번 미완성 결과를 성공 결과로 게시하지 않는다.
+
+Dense 결과 네 파일은 BM25와 같은 이름이며 P001 CLI로 직접 재평가할 수 있다.
+run.json에는 모델·런타임·환경·index manifest·hash와 분리한 index open 검증/질문 embedding/벡터 검색 시간이 있다.
+색인 생성 명령은 문서 embedding과 색인 생성·검증 시간을 별도로 출력한다.
+전체 N 후보를 조회해 점수 내림차순·정확한 동점은 ID 순으로 top-k를 고른다. cosine 0·음수도 결과에서 제외하지 않는다.
+
+[Ollama embed API](https://docs.ollama.com/api/embed)의 `truncate=false`를 사용하고 응답 개수·차원·유한 값·0벡터를 검증한다.
+[Qdrant local mode](https://github.com/qdrant/qdrant-client#local-mode)를 사용하며, 실제 모델은 [BGE-M3](https://ollama.com/library/bge-m3:567m)다.
+알 수 없는 payload·중복 point·stale manifest·HTTP/JSON/timeout·출력 실패는 테스트하며 mock을 live 검증으로 부르지 않는다.
+
+## 이번 단계에서 이해하고 실험할 것
+
+구현·오류 수정·회귀 실행은 Codex가 맡고, 사용자는 먼저 결과를 예상한 뒤 근거를 대조한다.
+문서를 검색하는 데 성공한 것과 답변을 생성·검증한 것은 다른 단계다. 현재는 검색까지이며 답변·인용·보류와 화면은 후속 계약이다.
+
+1. q03에서 자격·기간·신청의 세 근거를 먼저 예상한다. BM25는 birthday-eligibility를 6위, Dense는 2위에 뒀다. Recall@5가 왜 다른지 직접 청크를 읽어 본다.
+2. q10의 `재택근무일과`와 문서의 `재택근무는`을 비교한다. BM25는 welfare-meal만 찾았고 Dense는 remote-days도 찾았다. 단어 일치와 의미 검색의 역할 차이를 확인한다.
+3. q13 퇴직금 질문은 corpus에 정답이 없다. BM25는 빈 결과지만 Dense는 연차·복지 문서를 반환한다. 가장 가까운 문서라는 이유로 답을 만들어도 되는지 판단해 본다.
+
+이번 작은 평가에서 Recall@5는 Dense=1.0, BM25=0.8939다. 근거 없음 3질문에도 Dense는 모두 결과를 반환했다.
+이 숫자는 일반 검색 품질이나 답변 정확도·보류 정확도가 아니다. Dense와 BM25의 원점수 크기도 직접 비교하지 않는다.
+
+실험은 한 변수씩 고정 질문 묶음으로 한다. 첫 요청 예시는 “같은 순위·정답으로 K=1/3/5/10을 평가하고 필요한 근거가 언제 다 들어오는지 보여줘”다.
+corpus·질문·모델 digest는 그대로 두고 Recall/MRR/nDCG와 실제 누락 사례를 먼저 본다.
+이후 별도 계약에서 표현 변형·새 질문 묶음, 청크 구성, 문맥량, 답변 프롬프트·보류·인용, cold/warm 지연 순으로 넓힌다.
+이미 높은 14질문 점수에만 맞춰 설정을 조정하지 않는다. 데이터 변경과 Hybrid·reranker·Agentic은 후속 계획으로 분리한다.

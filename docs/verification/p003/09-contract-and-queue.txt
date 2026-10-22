@@ -1,0 +1,125 @@
+$ python3 scripts/contract_guard.py check
+exit=0
+PASS: contracts match adopted plan 8fb517ba4f82
+
+
+$ python3 scripts/work_queue.py --owner all --json
+exit=0
+{
+  "branch": "dev",
+  "owner": "all",
+  "notices": [
+    "dev는 채택한 plan 8fb517ba4f82 기준. 이후 plan 초안은 자동 채택하지 않음."
+  ],
+  "next": {
+    "plan": null,
+    "dev": null
+  },
+  "tasks": [
+    {
+      "id": "P001",
+      "title": "합성 HR 문서와 검색 평가 기반 구축",
+      "owner": "dev",
+      "priority": 10,
+      "state": "DONE",
+      "reason": "",
+      "work_order": "docs/planning/plans/P001.md",
+      "checked": 6,
+      "total": 6,
+      "completed_checks": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "acceptance": {
+        "C1": "최소 12개 합성 청크와 10개 질문이 고정 스키마를 만족하고 최소 3개 주제 및 2개 근거 없음 질문을 포함한다.",
+        "C2": "평가 CLI가 Recall·Precision·MRR·nDCG의 K별 query 값과 macro 평균을 독립 기대값과 일치하게 계산한다.",
+        "C3": "빈 검색·짧은 순위·근거 없음 질문의 분리와 분모·null 정책을 검증한다.",
+        "C4": "중복·잘못된 JSON·타입·등급·누락·알 수 없는 참조를 거부하고 실패 시 기존 결과를 보존한다.",
+        "C5": "결과에 데이터 hash·K·평가기 버전·분모를 남기고 반복 실행과 corpus 변경 검증을 통과한다.",
+        "C6": "실행 안내와 실제 테스트·CLI 증거를 커밋하고 계약 검사·큐 상태·모든 최신 PASS 근거가 일치한다."
+      }
+    },
+    {
+      "id": "P002",
+      "title": "BM25 검색 기준선과 평가 연결",
+      "owner": "dev",
+      "priority": 20,
+      "state": "DONE",
+      "reason": "",
+      "work_order": "docs/planning/plans/P002.md",
+      "checked": 8,
+      "total": 8,
+      "completed_checks": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8"
+      ],
+      "acceptance": {
+        "C1": "P001 데이터·정답을 보존하고 명시된 토큰화와 BM25 산식을 독립 점수·길이 정규화 fixture로 검증한다.",
+        "C2": "CLI가 모든 질문의 양수 top-k 순위·점수를 결정적으로 생성하고 동점·OOV·빈 토큰·중복 질문 토큰·짧은 결과를 계약대로 처리한다.",
+        "C3": "정답·answerability가 순위에 유입되지 않으며 생성 rankings를 P001 평가기로 재평가한 결과와 metrics가 일치한다.",
+        "C4": "결과 네 파일의 스키마·hash·환경·설정·통계·시간 메타데이터와 반복 실행·입력 순서 독립성을 검증한다.",
+        "C5": "잘못된 입력·옵션·출력 경로와 평가·쓰기 실패를 거부하고 기존 파일 보존·최종 결과 미생성·임시 결과 정리를 검증한다.",
+        "C6": "실제 합성 corpus 기준선·한국어 토큰화 한계·관측 사례와 재현 안내·전체 회귀 및 실패 후 재검증 증거를 커밋한다.",
+        "C7": "채택한 plan·P001 선행 완료·계약 검사·큐·모든 최신 PASS와 비어 있지 않은 커밋된 근거가 일치한다.",
+        "C8": "평가 기반·BM25를 1. Naive RAG 안에 모으고 기존 작업·데이터·출처·README·manifest 보존 및 큰 단계 단독 복사 실행과 잘못 나눈 경로의 정리를 검증한다."
+      }
+    },
+    {
+      "id": "P003",
+      "title": "로컬 모델 실행 환경과 Dense 검색 비교",
+      "owner": "dev",
+      "priority": 30,
+      "state": "DONE",
+      "reason": "",
+      "work_order": "docs/planning/plans/P003.md",
+      "checked": 6,
+      "total": 6,
+      "completed_checks": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6"
+      ],
+      "acceptance": {
+        "C1": "指定Ollama・隔離Python/Qdrant依存・実BGE-M3を検証可能なlock付きで準備し、所有を守ったstart/status/stopとGit除外を検証する。",
+        "C2": "実モデルの文書・質問embeddingを検証し、qrelsを使わずpayload・ID・manifestを持つ永続cosine索引を作成・再openする。",
+        "C3": "独立cosine fixture・同点・設定整合・stale索引・ベクトル/HTTP/JSON/timeout/出力失敗を検証して既存データを保全する。",
+        "C4": "実15chunk・14queryのDenseと同条件BM25をP001で評価し、hash・環境・モデルと実際の差・限界を証拠付きで記録する。",
+        "C5": "P001/P002回帰と大段階内の自己完結性、実行・停止案内、失敗履歴・最終PASS証拠をコミットする。",
+        "C6": "正確なplan採択・先行完了・契約/キュー/フックと全チェックの最新PASS・非空のコミット済み根拠が一致する。"
+      }
+    }
+  ]
+}
+
+
+$ git check-ignore '1. Naive RAG/.runtime/models' '1. Naive RAG/.runtime/ollama.log' '1. Naive RAG/.runtime/index-v1' '1. Naive RAG/.venv'
+exit=0
+1. Naive RAG/.runtime/models
+1. Naive RAG/.runtime/ollama.log
+1. Naive RAG/.runtime/index-v1
+1. Naive RAG/.venv
+
+
+$ git diff --check
+exit=0
+
+$ python3 scripts/contract_guard.py check --target index
+exit=0
+PASS: contracts match adopted plan 8fb517ba4f82
+
+
+$ git diff --cached --check
+exit=0

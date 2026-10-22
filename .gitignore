@@ -9,3 +9,6 @@ venv/
 *.pem
 *.p8
 *.key
+
+# Project-local runtimes, managed Python, models, indexes, processes and caches
+.runtime/

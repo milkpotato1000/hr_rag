@@ -1,0 +1,43 @@
+command: ["python3", "scripts/setup_runtime.py"]
+exit: 0
+{"status": "ready", "python": "3.12.14", "ollama": "0.40.8", "model": "bge-m3:567m", "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab", "dimension": 1024}
+Python 3.12.14 is already installed
+Resolved 20 packages in 90ms
+Checked 20 packages in 0.40ms
+
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/runtime.py", "status"]
+exit: 0
+{"state": "running", "owned": true, "pid": 85685, "endpoint": "http://127.0.0.1:11434", "version": "0.40.8"}
+
+
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/build_dense_index.py", "--chunks", "data/synthetic/chunks.jsonl", "--index-dir", ".runtime/index-v1"]
+exit: 0
+{
+  "index_manifest": {
+    "schema_version": 1,
+    "corpus_sha256": "53d262cb4d11ba73bd08dd559676d6df002fb46ef15afa5f94e01508620abedc",
+    "model_name": "bge-m3:567m",
+    "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+    "dimension": 1024,
+    "runtime_version": "0.40.8",
+    "text_version": "title-lf-text-v1",
+    "truncate": false,
+    "distance": "Cosine",
+    "qdrant_client_version": "1.19.1",
+    "point_count": 15,
+    "id_version": "uuid5-url-hr-v1"
+  },
+  "observations": {
+    "document_embedding_ms": 866.6441250243224,
+    "index_build_verify_ms": 46.506999991834164
+  }
+}
+
+
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/run_dense_baseline.py", "--chunks", "data/synthetic/chunks.jsonl", "--queries", "data/synthetic/queries.jsonl", "--index-dir", ".runtime/index-v1", "--top-k", "20", "--k", "5", "10", "20", "--output-dir", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/docs/verification/p003/03-live/dense"]
+exit: 0
+
+
+
+command: ["/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python", "scripts/run_bm25_baseline.py", "--chunks", "data/synthetic/chunks.jsonl", "--queries", "data/synthetic/queries.jsonl", "--top-k", "20", "--k", "5", "10", "20", "--output-dir", "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/docs/verification/p003/03-live/bm25"]
+exit: 0

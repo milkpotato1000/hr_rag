@@ -1,0 +1,108 @@
+{
+  "source": "07-live-final; same Python3.12.14, corpus, queries, top-k20, K5/10/20; raw scores are not comparable",
+  "macro": {
+    "dense": {
+      "5": {
+        "recall": 1.0,
+        "precision": 0.32727272727272727,
+        "mrr": 1.0,
+        "ndcg": 0.9994711428097223
+      },
+      "10": {
+        "recall": 1.0,
+        "precision": 0.16363636363636364,
+        "mrr": 1.0,
+        "ndcg": 0.9994711428097223
+      },
+      "20": {
+        "recall": 1.0,
+        "precision": 0.08181818181818182,
+        "mrr": 1.0,
+        "ndcg": 0.9994711428097223
+      }
+    },
+    "bm25": {
+      "5": {
+        "recall": 0.893939393939394,
+        "precision": 0.2727272727272727,
+        "mrr": 0.8030303030303031,
+        "ndcg": 0.7758284616155191
+      },
+      "10": {
+        "recall": 0.9545454545454546,
+        "precision": 0.15454545454545454,
+        "mrr": 0.8030303030303031,
+        "ndcg": 0.8088254846480354
+      },
+      "20": {
+        "recall": 0.9545454545454546,
+        "precision": 0.07727272727272727,
+        "mrr": 0.8030303030303031,
+        "ndcg": 0.8088254846480354
+      }
+    }
+  },
+  "unanswerable": {
+    "dense": {
+      "query_count": 3,
+      "with_results_count": 3,
+      "empty_results_count": 0,
+      "with_results_ratio": 1.0,
+      "empty_results_ratio": 0.0
+    },
+    "bm25": {
+      "query_count": 3,
+      "with_results_count": 2,
+      "empty_results_count": 1,
+      "with_results_ratio": 0.6666666666666666,
+      "empty_results_ratio": 0.3333333333333333
+    }
+  },
+  "cases": {
+    "q03": {
+      "dense": [
+        "birthday-request",
+        "birthday-eligibility",
+        "birthday-window",
+        "training-time",
+        "annual-request"
+      ],
+      "bm25": [
+        "birthday-request",
+        "annual-request",
+        "welfare-birthday",
+        "birthday-window",
+        "annual-halfday"
+      ]
+    },
+    "q10": {
+      "dense": [
+        "welfare-meal",
+        "remote-days",
+        "remote-security",
+        "remote-eligibility",
+        "travel-approval"
+      ],
+      "bm25": [
+        "welfare-meal"
+      ]
+    },
+    "q13": {
+      "dense": [
+        "annual-accrual",
+        "annual-halfday",
+        "welfare-birthday",
+        "welfare-meal",
+        "birthday-eligibility"
+      ],
+      "bm25": []
+    }
+  },
+  "limits": [
+    "15 synthetic chunks, 14 fixed questions; not general Korean search quality",
+    "Retrieval metrics exclude 3 unanswerable questions",
+    "Dense nearest-neighbor results do not imply sufficient evidence",
+    "Runtime restarted before final run; first query can include model load; subsequent queries can be warm",
+    "Known-vector fault tests and actual BGE-M3 execution are recorded separately"
+  ]
+}

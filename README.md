@@ -42,9 +42,9 @@ dev에서 `python3 scripts/contract_guard.py install`로 로컬 훅을 설치합
 
 ## 현재 제품 실행 위치
 
-평가 기반과 BM25 검색 기준선은 큰 단계 [1. Naive RAG](<1. Naive RAG/README.md>) 안에 모았습니다.
-P번호마다 새 번호 폴더를 만들지 않습니다. 이후 Dense·기본 답변 생성은 별도 계약으로 같은 큰 단계에서 이어갑니다.
-현재 구현 범위는 P001 평가 기반과 P002 BM25까지입니다.
+평가 기반·BM25·실제 로컬 Dense 검색은 큰 단계 [1. Naive RAG](<1. Naive RAG/README.md>) 안에 모았습니다.
+P번호마다 새 번호 폴더를 만들지 않습니다. 이후 기본 답변 생성은 별도 계약으로 같은 큰 단계에서 이어갑니다.
+현재 구현 범위는 P001 평가 기반, P002 BM25, P003 로컬 모델·Dense 비교까지입니다. 답변·인용·보류와 화면은 후속 계약입니다.
 
 ```sh
 cd '1. Naive RAG'
@@ -64,3 +64,7 @@ Python 3.9 이상과 표준 라이브러리만 사용합니다. 결과 부모 �
 루트에서 `python3 -m unittest discover -s tests -v`로 과거 회귀를 실행할 수 있습니다.
 새 기능은 큰 단계 폴더에서 개발합니다. 기존 [P001 검증 기록](docs/verification/p001/README.md)은 원래 실행 위치·이력 그대로 유지합니다.
 계약 검사와 큐 조회는 저장소 루트에서 실행합니다.
+
+로컬 Dense 환경·실행/정지와 이번 학습 포인트는 [큰 단계 README](<1. Naive RAG/README.md>)의 P003 절에 있습니다.
+실제 모델·영속 재open·53개 테스트·검색 비교는 [P003 검증 기록](docs/verification/p003/README.md)을 참고합니다.
+전체 순서는 [Naive RAG 구현·학습 로드맵](docs/planning/naive-rag-roadmap.md)을 따릅니다.

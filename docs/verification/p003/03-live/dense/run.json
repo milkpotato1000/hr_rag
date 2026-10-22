@@ -1,0 +1,142 @@
+{
+  "retriever_version": "dense-cosine-v1",
+  "endpoint": "http://127.0.0.1:11434",
+  "model": {
+    "name": "bge-m3:567m",
+    "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+    "dimension": 1024,
+    "quantization": "F16",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "bert",
+      "families": [
+        "bert"
+      ],
+      "parameter_size": "566.70M",
+      "quantization_level": "F16"
+    },
+    "model_info": {
+      "bert.attention.causal": false,
+      "bert.attention.head_count": 16,
+      "bert.attention.layer_norm_epsilon": 1e-05,
+      "bert.block_count": 24,
+      "bert.context_length": 8192,
+      "bert.embedding_length": 1024,
+      "bert.feed_forward_length": 4096,
+      "bert.pooling_type": 2,
+      "general.architecture": "bert",
+      "general.file_type": 1,
+      "general.license": "mit",
+      "general.parameter_count": 566703104,
+      "general.quantization_version": 2,
+      "general.size_label": "567M",
+      "general.tags": [
+        "sentence-transformers",
+        "feature-extraction",
+        "sentence-similarity",
+        "sentence-similarity"
+      ],
+      "general.type": "model",
+      "tokenizer.ggml.add_bos_token": true,
+      "tokenizer.ggml.add_eos_token": true,
+      "tokenizer.ggml.add_space_prefix": true,
+      "tokenizer.ggml.bos_token_id": 0,
+      "tokenizer.ggml.cls_token_id": 0,
+      "tokenizer.ggml.eos_token_id": 2,
+      "tokenizer.ggml.mask_token_id": 250001,
+      "tokenizer.ggml.model": "t5",
+      "tokenizer.ggml.padding_token_id": 1,
+      "tokenizer.ggml.pre": "default",
+      "tokenizer.ggml.precompiled_charsmap": [],
+      "tokenizer.ggml.remove_extra_whitespaces": true,
+      "tokenizer.ggml.scores": [],
+      "tokenizer.ggml.seperator_token_id": 2,
+      "tokenizer.ggml.token_type": [],
+      "tokenizer.ggml.token_type_count": 1,
+      "tokenizer.ggml.tokens": [],
+      "tokenizer.ggml.unknown_token_id": 3
+    },
+    "license": "MIT",
+    "license_text_sha256": "a406579cd136771c705c521db86ca7d60a6f3de7c9b5460e6193a2df27861bde",
+    "source_url": "https://ollama.com/library/bge-m3:567m",
+    "base_model": "https://huggingface.co/BAAI/bge-m3"
+  },
+  "ollama": {
+    "version": "0.40.8",
+    "url": "https://github.com/ollama/ollama/releases/download/v0.40.8/ollama-darwin.tgz",
+    "archive_sha256": "29fce20c736f62aa8885b1e83552c5fd8dcc63edc5ffc1b47f2de591a06cde44",
+    "binary_sha256": "e5c7c0ffa50d23d0f0e59cbf325f689b0010ee5563be89b73b05f08844e19e6b",
+    "license": "MIT",
+    "license_url": "https://github.com/ollama/ollama/blob/v0.40.8/LICENSE"
+  },
+  "index_manifest": {
+    "schema_version": 1,
+    "corpus_sha256": "53d262cb4d11ba73bd08dd559676d6df002fb46ef15afa5f94e01508620abedc",
+    "model_name": "bge-m3:567m",
+    "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+    "dimension": 1024,
+    "runtime_version": "0.40.8",
+    "text_version": "title-lf-text-v1",
+    "truncate": false,
+    "distance": "Cosine",
+    "qdrant_client_version": "1.19.1",
+    "point_count": 15,
+    "id_version": "uuid5-url-hr-v1"
+  },
+  "sha256": {
+    "chunks": "53d262cb4d11ba73bd08dd559676d6df002fb46ef15afa5f94e01508620abedc",
+    "queries": "f602de0d04af57fe1d6342d4d89aabd4237aee7df12411464654125c9e3d5dee",
+    "rankings": "fa9d6ba8ff05dc08098b822e547b6c0529912f9abfcb87cbc60f8433ea6541bd"
+  },
+  "parameters": {
+    "top_k": 20,
+    "k": [
+      5,
+      10,
+      20
+    ],
+    "distance": "Cosine",
+    "truncate": false
+  },
+  "environment": {
+    "python_version": "3.12.14",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "qdrant_client_version": "1.19.1"
+  },
+  "observations": {
+    "index_open_verify_ms": 9.139334026258439,
+    "query_embedding_ms": {
+      "q01": 95.40649998234585,
+      "q02": 38.82266697473824,
+      "q03": 40.616749960463494,
+      "q04": 37.870333006139845,
+      "q05": 39.15245895041153,
+      "q06": 34.902416984550655,
+      "q07": 34.96000001905486,
+      "q08": 35.18341603921726,
+      "q09": 37.64125000452623,
+      "q10": 38.50612504174933,
+      "q11": 38.73545798705891,
+      "q12": 39.62825000053272,
+      "q13": 35.02499999012798,
+      "q14": 35.630624974146485
+    },
+    "vector_search_ms": {
+      "q01": 1.7125829472206533,
+      "q02": 1.251292007509619,
+      "q03": 1.1583330342546105,
+      "q04": 1.1464160052128136,
+      "q05": 1.1832909658551216,
+      "q06": 1.1171670048497617,
+      "q07": 1.1237500002607703,
+      "q08": 1.1532920179888606,
+      "q09": 1.1460420209914446,
+      "q10": 1.132874982431531,
+      "q11": 1.154333003796637,
+      "q12": 1.1493750498630106,
+      "q13": 1.1404170072637498,
+      "q14": 1.155334000941366
+    }
+  }
+}
