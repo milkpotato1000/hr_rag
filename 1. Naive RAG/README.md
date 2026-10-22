@@ -1,7 +1,6 @@
 # 1. Naive RAG
 
-RAG 방식별 큰 구현 단계다. 현재는 P001 검색 평가 기반, P002 BM25, P003 실제 로컬 Dense 검색까지 구현했다.
-생성 모델·최종 답변은 후속 P카드 범위다. 평가·BM25는 Python 3.9 이상과 표준 라이브러리만 필요하고, Dense는 아래 격리 런타임을 사용한다.
+RAG 방식별 큰 구현 단계다. 현재는 P001 검색 평가 기반, P002 BM25, P003 실제 로컬 Dense 검색과 P004 답변·인용·보류를 구현했다. 평가·BM25는 Python 3.9 이상과 표준 라이브러리만 필요하고, Dense는 아래 격리 런타임을 사용한다.
 
 ## 가져온 것과 보존
 
@@ -108,7 +107,7 @@ run.json에는 모델·런타임·환경·index manifest·hash와 분리한 inde
 ## 이번 단계에서 이해하고 실험할 것
 
 구현·오류 수정·회귀 실행은 Codex가 맡고, 사용자는 먼저 결과를 예상한 뒤 근거를 대조한다.
-문서를 검색하는 데 성공한 것과 답변을 생성·검증한 것은 다른 단계다. 현재는 검색까지이며 답변·인용·보류와 화면은 후속 계약이다.
+문서를 검색하는 데 성공한 것과 답변을 생성·검증한 것은 다른 단계다. P004에서 답변·인용·보류를 연결했으며, 화면은 P005 계약으로 이어진다.
 
 1. q03에서 자격·기간·신청의 세 근거를 먼저 예상한다. BM25는 birthday-eligibility를 6위, Dense는 2위에 뒀다. Recall@5가 왜 다른지 직접 청크를 읽어 본다.
 2. q10의 `재택근무일과`와 문서의 `재택근무는`을 비교한다. BM25는 welfare-meal만 찾았고 Dense는 remote-days도 찾았다. 단어 일치와 의미 검색의 역할 차이를 확인한다.
@@ -121,3 +120,49 @@ run.json에는 모델·런타임·환경·index manifest·hash와 분리한 inde
 corpus·질문·모델 digest는 그대로 두고 Recall/MRR/nDCG와 실제 누락 사례를 먼저 본다.
 이후 별도 계약에서 표현 변형·새 질문 묶음, 청크 구성, 문맥량, 답변 프롬프트·보류·인용, cold/warm 지연 순으로 넓힌다.
 이미 높은 14질문 점수에만 맞춰 설정을 조정하지 않는다. 데이터 변경과 Hybrid·reranker·Agentic은 후속 계획으로 분리한다.
+
+## P004: 질문 → 답변·원문 인용·보류
+
+`rag.ask()`가 검색 한 번 → 전체 청크 문맥 선택 → 생성 한 번 → 인용 검증을 수행한다.
+기본 Dense를 BM25로 바꿔 비교할 수 있다. query_id·answerability·relevance·평가 rubric은 운영 경로에 전달하지 않는다.
+
+```sh
+.venv/bin/python scripts/setup_generation.py
+.venv/bin/python scripts/ask.py --question "생일 휴가는 누구나 입사 직후부터 사용할 수 있나요?"
+.venv/bin/python scripts/ask.py --question "퇴직금 계산식은 어떻게 되나요?" --retriever bm25
+.venv/bin/python scripts/runtime.py stop
+```
+
+P003 환경과 `.runtime/index-v1`을 이미 준비했다. 재시작은 `scripts/runtime.py start`로 한다.
+처음 다른 위치에서 재현하려면 앞 절의 setup_runtime·build_dense_index와 위 setup_generation 순으로 준비한다.
+추가 생성 모델은 약 2.5GB `qwen3:4b` Q4_K_M이다. 실제 digest·양자화·template·parameters·라이선스 hash는
+`generation-lock.json`에 별도 고정했다. 기존 `runtime-lock.json`과 임베딩 색인은 변경하지 않는다.
+[공식 chat API](https://docs.ollama.com/api/chat)의 stream=false·think=false·JSON schema와
+ temperature=0·seed=42·num_ctx=8192·num_predict=1024를 실제 모델로 검증했다. 고정 seed가 바이트 재현성을 보장하지는 않는다.
+
+CLI 기본값: `--retriever dense --top-k 5 --index-dir .runtime/index-v1 --max-context-chars 8000 --timeout-seconds 120`.
+stdout은 결과 JSON 하나, 실행 오류는 status=error 및 exit2, 진단은 stderr다. timeout은 각 HTTP 요청의 제한이며 전체 파이프라인 deadline은 아니다.
+정상 답변과 보류는 exit0이다. 응답 JSON의 trace에서 원래 후보·점수·원문, 실제 전달 문맥, 제외 사유,
+prompt 버전/hash·실제 messages, corpus/index manifest hash·모델 digest·요청 설정·구간별 시간을 확인한다.
+Dense의 index hash는 검증한 manifest hash이며 저장소 파일 전체의 byte hash가 아니다.
+
+문맥 예산은 JSON으로 직렬화한 각 청크 객체의 Unicode 문자 수 합계다. ID·본문·출처 등 메타데이터도 포함한다.
+전체 프롬프트의 토큰 제한은 아니다. top-k 순서대로 청크 전체가 남은 예산에 들어가면 선택하고 초과하면 건너뛴다.
+문장 중간에서 자르지 않으므로 “수습 제외” 같은 조건을 잘라 잃지 않는다. 예산이 너무 작으면 no_context로 생성 호출을 생략한다.
+현재 합성 문서는 작지만 임의의 큰 질문은 모델 context 한계에 영향을 줄 수 있다.
+
+- answered: 인용이 하나 이상이고, 모든 인용 ID가 실제 전달한 문맥에 있으며 quote가 그 청크 text의 정확한 부분문자열이다.
+- abstained / model_abstained: 모델이 보류했다. 최종 문구는 인사 담당자 확인을 안내하며 최종 인용은 비운다.
+- abstained / invalid_model_response: 모델 content의 JSON·상태·본문·인용 검증에 실패했다. 원응답과 사유를 trace에 남긴다.
+- abstained / no_context: 전달 가능한 문맥이 없어 LLM을 호출하지 않았다.
+- error / input·provider·timeout·execution: 입력·HTTP/연결·timeout·색인/lock 등의 실행 오류. 문서에 근거가 없다는 뜻이 아니다.
+
+인용의 source·title·version·document_id는 모델이 만든 값 대신 corpus에서 보강한다. 모델이 이 필드를 조작해 보내면 검증에 실패한다.
+인용 구조 검증은 문장이 답변을 의미상 지지하는지 자동으로 증명하지 않는다. 의미 검토는 별도 rubric과 원문을 읽어 수행한다.
+내부 thinking 전문은 수집하지 않는다. 재검색·답변 수리 생성·무한 재시도는 없다.
+
+단위 테스트의 fake provider와 실제 모델 검증은 구분한다. 루트 `docs/verification/p004/`에는 실제 생성 전에 작성한 rubric,
+실제14질문 출력과 명령·trace·Codex 원문 대조 검토·회귀·단독 복사 증거를 보관한다. 사용자나 사람이 검토했다고 표기하지 않는다.
+
+현재 system-v2 실제14질문 원문 대조 결과(Codex 검토): 답 가능11개 중 정확5/부분2/과도보류4, 근거 없음3개 적정보류3.
+q01/08/09 과도 보류, q03/07 조건 누락, q11 잘못된 인용 차단 사례가 남아 있다. 프롬프트 개선이 정확도를 높였다고 주장하지 않는다.

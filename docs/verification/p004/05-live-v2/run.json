@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-10-22T16:06:04.931068+09:00",
+  "rubric_sha256_before_run": "39c9fd26edc4cf3fe183a3163b4d74776d8957414fcb35daba5a35dca5c40607",
+  "provider": "actual local Ollama Qwen3:4b; not a fixture",
+  "settings": {
+    "retriever": "dense",
+    "top_k": 5,
+    "max_context_chars": 8000,
+    "timeout_seconds": 120
+  },
+  "finished_at": "2026-10-22T16:09:34.219225+09:00"
+}

@@ -1,0 +1,130 @@
+{
+  "reviewer": "Codex 원문 대조; 사람 검토 아님",
+  "method": "manual semantic reading by Codex against prewritten rubric, not automated keyword scoring or generator self-grading",
+  "answerable": {
+    "정확": 5,
+    "부분": 2,
+    "오답": 0,
+    "과도보류": 4,
+    "장애": 0
+  },
+  "unanswerable": {
+    "적정보류": 3,
+    "허구답변": 0,
+    "장애": 0
+  },
+  "questions": [
+    {
+      "query_id": "q01",
+      "category": "과도보류",
+      "status": "abstained",
+      "reason": "model_abstained",
+      "structure_valid": true,
+      "evidence": "05-live-v2/q01.json"
+    },
+    {
+      "query_id": "q02",
+      "category": "정확",
+      "status": "answered",
+      "reason": null,
+      "structure_valid": true,
+      "evidence": "05-live-v2/q02.json"
+    },
+    {
+      "query_id": "q03",
+      "category": "부분",
+      "status": "answered",
+      "reason": null,
+      "structure_valid": true,
+      "evidence": "05-live-v2/q03.json"
+    },
+    {
+      "query_id": "q04",
+      "category": "정확",
+      "status": "answered",
+      "reason": null,
+      "structure_valid": true,
+      "evidence": "05-live-v2/q04.json"
+    },
+    {
+      "query_id": "q05",
+      "category": "정확",
+      "status": "answered",
+      "reason": null,
+      "structure_valid": true,
+      "evidence": "05-live-v2/q05.json"
+    },
+    {
+      "query_id": "q06",
+      "category": "정확",
+      "status": "answered",
+      "reason": null,
+      "structure_valid": true,
+      "evidence": "05-live-v2/q06.json"
+    },
+    {
+      "query_id": "q07",
+      "category": "부분",
+      "status": "answered",
+      "reason": null,
+      "structure_valid": true,
+      "evidence": "05-live-v2/q07.json"
+    },
+    {
+      "query_id": "q08",
+      "category": "과도보류",
+      "status": "abstained",
+      "reason": "model_abstained",
+      "structure_valid": true,
+      "evidence": "05-live-v2/q08.json"
+    },
+    {
+      "query_id": "q09",
+      "category": "과도보류",
+      "status": "abstained",
+      "reason": "model_abstained",
+      "structure_valid": true,
+      "evidence": "05-live-v2/q09.json"
+    },
+    {
+      "query_id": "q10",
+      "category": "정확",
+      "status": "answered",
+      "reason": null,
+      "structure_valid": true,
+      "evidence": "05-live-v2/q10.json"
+    },
+    {
+      "query_id": "q11",
+      "category": "과도보류",
+      "status": "abstained",
+      "reason": "invalid_model_response",
+      "structure_valid": false,
+      "evidence": "05-live-v2/q11.json"
+    },
+    {
+      "query_id": "q12",
+      "category": "적정보류",
+      "status": "abstained",
+      "reason": "model_abstained",
+      "structure_valid": true,
+      "evidence": "05-live-v2/q12.json"
+    },
+    {
+      "query_id": "q13",
+      "category": "적정보류",
+      "status": "abstained",
+      "reason": "model_abstained",
+      "structure_valid": true,
+      "evidence": "05-live-v2/q13.json"
+    },
+    {
+      "query_id": "q14",
+      "category": "적정보류",
+      "status": "abstained",
+      "reason": "model_abstained",
+      "structure_valid": true,
+      "evidence": "05-live-v2/q14.json"
+    }
+  ]
+}

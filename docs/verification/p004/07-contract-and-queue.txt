@@ -1,0 +1,21 @@
+Final P004 verification
+command: python3 scripts/contract_guard.py check
+PASS: contracts match adopted plan a043f1a3527d
+exit=0
+command: python3 scripts/work_queue.py --owner all
+dev는 채택한 plan a043f1a3527d 기준. 이후 plan 초안은 자동 채택하지 않음.
+plan 다음 작업: 실행 가능한 승인 작업 없음
+dev 다음 작업: 실행 가능한 승인 작업 없음
+[완료] P001 합성 HR 문서와 검색 평가 기반 구축 — 6/6 (dev)
+[완료] P002 BM25 검색 기준선과 평가 연결 — 8/8 (dev)
+[완료] P003 로컬 모델 실행 환경과 Dense 검색 비교 — 6/6 (dev)
+[완료] P004 Naive RAG 답변·인용·보류 연결 — 6/6 (dev)
+조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음
+exit=0
+command: git diff --check
+exit=0
+command: git check-ignore 1. Naive RAG/.runtime/models 1. Naive RAG/.venv
+1. Naive RAG/.runtime/models
+1. Naive RAG/.venv
+exit=0
+PASS: contracts match adopted plan a043f1a3527d
