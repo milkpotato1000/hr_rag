@@ -1,0 +1,38 @@
+{
+  "files": [
+    {
+      "file": "scripts/evaluate_retrieval.py",
+      "sha256": "6b863f2c7557a54113ceb5883e0ba60594a0161d5a706c4a58e26c9a47cb0b11",
+      "original_stage_root_match": true
+    },
+    {
+      "file": "tests/test_evaluate_retrieval.py",
+      "sha256": "15bf716fd25eaf524f041b43027c96d4851ff22106daa608c739e9712a167555",
+      "original_stage_root_match": true
+    },
+    {
+      "file": "data/synthetic/README.md",
+      "sha256": "c14998fe52af29a9df5264a89d4ec7c03eda3287d7b81e2b2dca51f04e3a12a8",
+      "original_stage_root_match": true
+    },
+    {
+      "file": "data/synthetic/chunks.jsonl",
+      "sha256": "53d262cb4d11ba73bd08dd559676d6df002fb46ef15afa5f94e01508620abedc",
+      "original_stage_root_match": true
+    },
+    {
+      "file": "data/synthetic/queries.jsonl",
+      "sha256": "f602de0d04af57fe1d6342d4d89aabd4237aee7df12411464654125c9e3d5dee",
+      "original_stage_root_match": true
+    },
+    {
+      "file": "data/synthetic/example_rankings.jsonl",
+      "sha256": "6492992bd1bc0062c6aa5224c4aef434a640358d7c350106c08fa732692cc586",
+      "original_stage_root_match": true
+    }
+  ],
+  "P001_card_and_evidence_unchanged": true,
+  "previous_stage_metadata_and_logs_preserved": true,
+  "old_paths_removed": true,
+  "symlinks": false
+}

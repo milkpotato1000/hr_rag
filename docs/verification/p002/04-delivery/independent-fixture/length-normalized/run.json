@@ -1,0 +1,41 @@
+{
+  "retriever_version": "1.0.0",
+  "tokenizer": {
+    "id": "unicode-word-v1",
+    "steps": [
+      "NFKC",
+      "casefold",
+      "re.findall"
+    ],
+    "pattern": "[^\\W_]+"
+  },
+  "parameters": {
+    "k1": 1.2,
+    "b": 0.75,
+    "top_k": 2,
+    "k": [
+      1,
+      2
+    ]
+  },
+  "environment": {
+    "python_version": "3.9.6",
+    "unicode_version": "13.0.0",
+    "platform": "macOS-26.6.1-arm64-arm-64bit"
+  },
+  "sha256": {
+    "chunks": "12462dfaf5c931da282fef5b144e0c8e580465b069309fac7be124979d62338a",
+    "queries": "70e4c3d8ac4c8591c9628d15a950d9de1c78a308261227026c6f9abe41ef436a",
+    "rankings": "51c4a5c241c2cab77bcd05eefb70dc4e78afb0b493f507d9f853d461b58fe64b"
+  },
+  "statistics": {
+    "N": 3,
+    "avgdl": 2.6666666666666665
+  },
+  "observations": {
+    "index_build_ms": 0.07104099999999738,
+    "query_search_ms": {
+      "q": 0.008499999999998092
+    }
+  }
+}

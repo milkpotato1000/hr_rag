@@ -1,0 +1,45 @@
+cwd: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG
+command: python3 -m unittest discover -s tests -v
+exit: 0
+test_bad_options_cli_and_boolean_library_boundary (test_bm25_baseline.BM25Tests) ... ok
+test_default_options (test_bm25_baseline.BM25Tests) ... ok
+test_existing_output_file_directory_and_links_are_preserved (test_bm25_baseline.BM25Tests) ... ok
+test_independent_equal_length_scores_and_repeated_query (test_bm25_baseline.BM25Tests) ... ok
+test_independent_length_normalization (test_bm25_baseline.BM25Tests) ... ok
+test_individual_and_all_empty_token_chunks (test_bm25_baseline.BM25Tests) ... ok
+test_injected_evaluation_and_staging_write_failures_cleanup (test_bm25_baseline.BM25Tests) ... ok
+test_injected_partial_publication_failure_rolls_back (test_bm25_baseline.BM25Tests) ... ok
+test_invalid_inputs_reuse_p001_validation_without_publishing (test_bm25_baseline.BM25Tests) ... ok
+test_metadata_hashes_schema_and_nonnegative_timings (test_bm25_baseline.BM25Tests) ... ok
+test_missing_input_or_output_parent (test_bm25_baseline.BM25Tests) ... ok
+test_normalization_casefold_digits_underscore_and_korean_particles (test_bm25_baseline.BM25Tests) ... ok
+test_only_title_text_and_question_affect_retrieval (test_bm25_baseline.BM25Tests) ... ok
+test_output_created_after_preflight_is_preserved (test_bm25_baseline.BM25Tests) ... ok
+test_qrels_and_answerability_do_not_affect_retrieval (test_bm25_baseline.BM25Tests) ... ok
+test_real_p001_cli_reevaluation_matches_exactly (test_bm25_baseline.BM25Tests) ... ok
+test_repeat_determinism_hash_seeds_and_input_order (test_bm25_baseline.BM25Tests) ... ok
+test_tie_breaking_top_k_and_fewer_positive_results (test_bm25_baseline.BM25Tests) ... ok
+test_all_relevance_grades_and_large_k (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_atomic_write_error_cleans_temporary_file (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_contract_independent_graded_examples_and_macro (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_duplicate_record_ids (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_hashes_version_and_byte_determinism (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_input_read_error_preserves_output (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_invalid_grades_and_unknown_qrel_reference (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_k_must_be_positive_unique_integers (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_macro_is_query_mean_and_unanswerable_is_excluded (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_malformed_and_empty_jsonl (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_missing_and_invalid_chunk_fields (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_missing_and_invalid_query_fields (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_missing_unknown_duplicate_and_invalid_rankings (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_no_unanswerable_ratios_are_null (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_only_unanswerable_has_null_macro (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_output_cannot_alias_input_or_hardlink_or_symlink (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_relevant_first_kth_outside_k_empty_and_short (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_synthetic_corpus_and_curated_example (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_unanswerable_requires_empty_mapping_even_for_grade_zero (test_evaluate_retrieval.RetrievalCLITests) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 13.843s
+
+OK

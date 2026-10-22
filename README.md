@@ -40,43 +40,27 @@ dev에서 `python3 scripts/contract_guard.py install`로 로컬 훅을 설치합
 
 공개 저장소에 비밀키·토큰·개인 인사 데이터·비공개 문서를 커밋하지 않습니다.
 
-## 로컬 검색 평가 실행
+## 현재 제품 실행 위치
 
-Python 3.9 이상과 표준 라이브러리만 사용합니다. 네트워크, 패키지 설치, 모델 다운로드가 필요 없습니다.
-아래 명령은 dev worktree 루트에서 실행합니다.
+평가 기반과 BM25 검색 기준선은 큰 단계 [1. Naive RAG](<1. Naive RAG/README.md>) 안에 모았습니다.
+P번호마다 새 번호 폴더를 만들지 않습니다. 이후 Dense·기본 답변 생성은 별도 계약으로 같은 큰 단계에서 이어갑니다.
+현재 구현 범위는 P001 평가 기반과 P002 BM25까지입니다.
 
 ```sh
+cd '1. Naive RAG'
 python3 -m unittest discover -s tests -v
-python3 scripts/evaluate_retrieval.py \
+python3 scripts/run_bm25_baseline.py \
   --chunks data/synthetic/chunks.jsonl \
   --queries data/synthetic/queries.jsonl \
-  --rankings data/synthetic/example_rankings.jsonl \
-  --k 5 10 20 \
-  --output /tmp/hr-rag-evaluation.json
+  --top-k 20 --k 5 10 20 \
+  --output-dir /tmp/hr-rag-bm25-new
 ```
 
-`example_rankings.jsonl`은 의도적으로 불완전한 수기 순위입니다. 실제 검색 엔진 성능을 의미하지 않습니다.
-자체 순위 파일은 질문마다 `{"query_id":"q01","chunk_ids":["birthday-eligibility"]}` 같은 JSON 객체를 한 줄씩 기록합니다.
-모든 질문이 정확히 한 번 포함되어야 하며, 검색 결과가 없으면 `chunk_ids: []`를 사용합니다.
-데이터의 필수 필드와 등급 기준은 [합성 데이터 설명](data/synthetic/README.md)을 참고합니다.
+Python 3.9 이상과 표준 라이브러리만 사용합니다. 결과 부모 폴더는 존재해야 하고 결과 경로는 새 경로여야 합니다.
+데이터 스키마·지표·실패 정책과 독립 실행 방법은 단계 README를 따릅니다.
+실제 기준선·출처·단독 복사 실행·회귀 결과는 [P002 검증 기록](docs/verification/p002/README.md)에 있습니다.
 
-평가기는 검증을 마친 뒤 JSON 결과 파일을 원자적으로 교체합니다. 출력 부모 폴더는 미리 존재해야 합니다.
-입력 오류는 stderr와 종료 코드 2로 알리며 기존 결과를 보존하거나 새 결과를 만들지 않습니다.
-출력 경로로 입력 파일 자체나 그 심볼릭 링크·하드 링크를 지정할 수 없습니다.
-
-결과에는 `metadata`(평가기 버전, 세 입력의 SHA-256, K, 청크·질문 수와 answerable/unanswerable 분모),
-`per_query`(질문별 검색 수 및 K별 지표), `macro`(answerable 질문의 단순 평균), `unanswerable`(검색 결과 유무 집계)이 포함됩니다.
-같은 바이트 입력과 K에는 전체 결과 JSON도 동일합니다. 파일의 줄바꿈·공백 변경 역시 hash를 바꿉니다.
-
-| 지표 | 계산 |
-| --- | --- |
-| Recall@K | top K의 등급 1 이상 청크 수 / 전체 등급 1 이상 청크 수 |
-| Precision@K | top K의 등급 1 이상 청크 수 / K. 짧은 결과도 분모 K 유지 |
-| MRR@K | top K 첫 relevant의 1-based 순위 역수. 없으면 0 |
-| nDCG@K | gain `2**rel-1`, discount `log2(rank+1)`. 전체 qrels의 이상 순위 top K로 정규화 |
-
-K는 양의 고유 정수입니다. 근거 없는 질문의 네 검색 지표는 null이고 macro에서 제외합니다.
-answerable이 0개이면 macro도 null입니다. `unanswerable`은 질문 수, 검색 결과가 있는/빈 질문 수와 비율을 별도로 기록하고
-해당 질문이 0개이면 비율은 null입니다. 이 비율은 답변 보류 정확도가 아닙니다.
-
-실제 검증 출력·실패 이력·예시 결과는 [P001 검증 기록](docs/verification/p001/README.md)에 있습니다.
+원래 루트 scripts/evaluate_retrieval.py, tests와 data/synthetic은 과거 P001 계약 재현용으로 보존합니다.
+루트에서 `python3 -m unittest discover -s tests -v`로 과거 회귀를 실행할 수 있습니다.
+새 기능은 큰 단계 폴더에서 개발합니다. 기존 [P001 검증 기록](docs/verification/p001/README.md)은 원래 실행 위치·이력 그대로 유지합니다.
+계약 검사와 큐 조회는 저장소 루트에서 실행합니다.

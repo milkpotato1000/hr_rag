@@ -1,0 +1,9 @@
+{
+  "standalone_tests": "37 PASS",
+  "legacy_root_tests": "19 PASS",
+  "ranking_score_metric_repeat_bytes_equal": true,
+  "run_except_observations_equal": true,
+  "reevaluated_metric_bytes_equal": true,
+  "legacy_example_bytes_equal": true,
+  "actual_error_cases_preserved_existing_and_no_new_output": true
+}
