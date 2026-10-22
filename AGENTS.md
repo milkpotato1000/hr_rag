@@ -4,7 +4,8 @@
 
 하나의 Git 저장소에 `main`(hr_rag), `plan`(hr_rag-plan), `dev`(hr_rag-dev) linked worktree를 사용한다.
 실행 전 현재 브랜치, 변경 상태, 채택한 계획과 관련 계약, dev 피드백을 확인하고 기존 작업을 보존한다.
-이번 요청은 하네스 구성이다. 제품 목표와 구현 범위는 아직 정해지지 않았다.
+프로젝트 목표와 단계는 `docs/planning/project-brief.md`, 설계 방향은 `docs/architecture/system-design.md`를 따른다.
+사용자가 지정한 HR RAG 기획 대화를 근거로 P카드별 구현 범위를 준비한다.
 
 plan은 `docs/planning/`, `docs/architecture/`, `config/semantics/` 및 보호된 하네스 규칙을 소유한다.
 새 과제는 `docs/planning/plans/P*.md`의 한 P번호를 기획부터 완료까지 사용한다.
