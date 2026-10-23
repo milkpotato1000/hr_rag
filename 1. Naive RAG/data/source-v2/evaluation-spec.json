@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "created_before_live_generation": true,
+  "facts": [
+    {
+      "fact_id": "f01",
+      "meaning": "생일 휴가 자격과 연 1일, 수습 제외",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-birthday",
+          "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다."
+        },
+        {
+          "document_id": "hr-v2-birthday",
+          "quote": "수습 중인 직원은 대상에서 제외한다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f02",
+      "meaning": "생일 달 근무일 사용, 이월·현금 지급 불가",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-birthday",
+          "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다."
+        },
+        {
+          "document_id": "hr-v2-birthday",
+          "quote": "해당 월을 넘겨 이월하거나 현금으로 지급하지 않는다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f03",
+      "meaning": "신청 기한·경로·승인 주체",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-birthday",
+          "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f04",
+      "meaning": "1년 미만은 한 달 개근 시 1일",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-annual",
+          "quote": "1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f05",
+      "meaning": "통상 연차 신청 및 긴급 예외",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-annual",
+          "quote": "연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다."
+        },
+        {
+          "document_id": "hr-v2-annual",
+          "quote": "긴급 사유가 있으면 당일 팀장에게 알린 후 신청할 수 있다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f06",
+      "meaning": "이월 한도와 다음 해 사용 기한, 생일 휴가 제외",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-annual",
+          "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다."
+        },
+        {
+          "document_id": "hr-v2-annual",
+          "quote": "이월한 연차의 사용 기한은 다음 해 3월 31일이다."
+        },
+        {
+          "document_id": "hr-v2-annual",
+          "quote": "생일 특별휴가에는 이 규정을 적용하지 않는다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f07",
+      "meaning": "연차 반차 가능·차감량, 생일 휴가 분할 불가",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-annual",
+          "quote": "연차는 오전 또는 오후 반차로 나누어 사용할 수 있다."
+        },
+        {
+          "document_id": "hr-v2-annual",
+          "quote": "반차 1회는 연차 0.5일로 차감한다."
+        },
+        {
+          "document_id": "hr-v2-annual",
+          "quote": "생일 특별휴가는 분할할 수 없다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f08",
+      "meaning": "재택 자격과 직무 제외",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-remote",
+          "quote": "입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다."
+        },
+        {
+          "document_id": "hr-v2-remote",
+          "quote": "현장 장비 운영 직무는 재택 대상에서 제외한다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f09",
+      "meaning": "주 2일 한도·전주 금요일 팀장 승인",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-remote",
+          "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f10",
+      "meaning": "회사 기기·VPN, 공용 컴퓨터 금지",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-remote",
+          "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다."
+        },
+        {
+          "document_id": "hr-v2-remote",
+          "quote": "공용 컴퓨터로 내부 문서에 접근할 수 없다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f11",
+      "meaning": "포인트 3만 점과 휴가 자격·승인 분리",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-welfare",
+          "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다."
+        },
+        {
+          "document_id": "hr-v2-welfare",
+          "quote": "이 포인트는 휴가 신청 자격이나 승인 여부와 별개다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f12",
+      "meaning": "사무실 출근일 식대 1만 원, 재택·휴가 미지원",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-welfare",
+          "quote": "사무실 출근일에는 식대 1만 원을 지원한다."
+        },
+        {
+          "document_id": "hr-v2-welfare",
+          "quote": "재택근무일과 휴가일에는 이 식대를 지원하지 않는다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f13",
+      "meaning": "자격시험 연 1일 교육 휴가, 별도 관리",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-training",
+          "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다."
+        },
+        {
+          "document_id": "hr-v2-training",
+          "quote": "생일 특별휴가 및 연차와 별도로 관리한다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f14",
+      "meaning": "출장 5영업일 전 팀장 승인, 다른 제도 자동 승인 아님",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-travel",
+          "quote": "출장은 출발 5영업일 전에 팀장의 승인을 받는다."
+        },
+        {
+          "document_id": "hr-v2-travel",
+          "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다."
+        }
+      ]
+    },
+    {
+      "fact_id": "f15",
+      "meaning": "등록 자택 제한과 사전 주소 변경 요청",
+      "required_spans": [
+        {
+          "document_id": "hr-v2-remote",
+          "quote": "재택근무 장소는 등록한 자택으로 제한한다."
+        },
+        {
+          "document_id": "hr-v2-remote",
+          "quote": "주소 변경 시 근무 시작 전에 인사 담당자에게 등록 주소 변경을 요청한다."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "query_id": "q01",
+      "question": "생일 휴가는 누구나 입사 직후부터 사용할 수 있나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f01"
+      ],
+      "semantic_rubric": "입사 후 3개월 경과와 수습 제외를 설명. 입사 직후 누구나 가능하다고 답하면 오류."
+    },
+    {
+      "query_id": "q02",
+      "question": "생일 휴가를 다음 달로 이월하거나 현금으로 받을 수 있나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f02"
+      ],
+      "semantic_rubric": "생일 달 근무일 사용이며 이월과 현금 지급 불가. 연차 이월을 적용하지 않음."
+    },
+    {
+      "query_id": "q03",
+      "question": "생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f01",
+        "f02",
+        "f03"
+      ],
+      "semantic_rubric": "재직 기간, 수습 제외, 연 1일, 생일 달 근무일, 이월/현금 금지, 3영업일 전 시스템 신청 및 팀장 승인을 빠짐없이 설명."
+    },
+    {
+      "query_id": "q04",
+      "question": "입사 1년 미만 직원의 연차는 언제 생기나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f04"
+      ],
+      "semantic_rubric": "1년 미만 직원은 한 달 개근 시 연차 1일 발생. 입사 즉시 15일로 바꾸면 오류."
+    },
+    {
+      "query_id": "q05",
+      "question": "연차는 며칠 전에 신청하며 긴급할 때는 어떻게 하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f05"
+      ],
+      "semantic_rubric": "사용 2영업일 전 시스템 신청과 긴급 사유 시 당일 팀장에게 알린 후 신청을 함께 설명."
+    },
+    {
+      "query_id": "q06",
+      "question": "미사용 연차는 며칠까지 이월하고 언제까지 써야 하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f06"
+      ],
+      "semantic_rubric": "최대 5일분을 다음 해로 이월하고 다음 해 3월 31일까지 사용. 1월 5일 기한이나 무기한 이월로 바꾸면 오류."
+    },
+    {
+      "query_id": "q07",
+      "question": "재택근무 자격과 주당 횟수 및 승인 기한을 알려 주세요.",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f08",
+        "f09"
+      ],
+      "semantic_rubric": "입사 후 1개월·보안 교육·현장 장비 직무 제외·주 최대 2일·전주 금요일까지 팀장 승인."
+    },
+    {
+      "query_id": "q08",
+      "question": "재택할 때 개인 공용 PC를 써도 되나요? VPN은 필요한가요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f10"
+      ],
+      "semantic_rubric": "회사 지급 기기와 회사 VPN을 사용. 공용 컴퓨터 내부 문서 접근 불가."
+    },
+    {
+      "query_id": "q09",
+      "question": "생일 포인트를 받으면 생일 휴가도 자동 승인되나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f11",
+        "f03"
+      ],
+      "semantic_rubric": "포인트와 휴가 자격/승인은 별개이며 자동 승인 아님. 휴가 신청과 팀장 승인이 필요."
+    },
+    {
+      "query_id": "q10",
+      "question": "재택근무일과 휴가일에도 사무실 식대가 나오나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f12"
+      ],
+      "semantic_rubric": "사무실 출근일 1만 원, 재택근무일과 휴가일에는 미지원. 근무일이라는 이유로 지원한다고 답하면 오류."
+    },
+    {
+      "query_id": "q11",
+      "question": "연차 반차와 생일 휴가의 분할 사용이 가능한가요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f07"
+      ],
+      "semantic_rubric": "연차 오전/오후 반차 가능, 1회 0.5일 차감, 생일 특별휴가 분할 불가."
+    },
+    {
+      "query_id": "q12",
+      "question": "배우자 출산 휴가의 일수와 신청 절차는 무엇인가요?",
+      "answerability": "unanswerable",
+      "required_fact_ids": [],
+      "semantic_rubric": "제공 자료로 배우자 출산 휴가 일수·절차 확인 불가. 보류하고 인사 담당자 확인 안내. 제도 없음 단정 또는 외부 규정 제시 금지."
+    },
+    {
+      "query_id": "q13",
+      "question": "퇴직금 계산식은 어떻게 되나요?",
+      "answerability": "unanswerable",
+      "required_fact_ids": [],
+      "semantic_rubric": "제공 자료로 퇴직금 공식 확인 불가. 보류하고 인사 담당자 확인 안내. 외부 공식·제도 없음 단정 금지."
+    },
+    {
+      "query_id": "q14",
+      "question": "반려동물 병원 동행 휴가가 있나요?",
+      "answerability": "unanswerable",
+      "required_fact_ids": [],
+      "semantic_rubric": "제공 자료로 반려동물 동행 휴가 확인 불가. 보류하고 인사 담당자 확인 안내. 제도 없음 단정 금지."
+    }
+  ]
+}

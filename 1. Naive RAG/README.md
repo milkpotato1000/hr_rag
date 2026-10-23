@@ -1,6 +1,6 @@
 # 1. Naive RAG
 
-RAG 방식별 큰 구현 단계다. 현재는 P001 검색 평가 기반, P002 BM25, P003 실제 로컬 Dense 검색과 P004 답변·인용·보류와 P005 한국어 학습 UI를 구현했다. 평가·BM25는 Python 3.9 이상과 표준 라이브러리만 필요하고, Dense는 아래 격리 런타임을 사용한다.
+RAG 방식별 큰 구현 단계다. 현재는 P001 검색 평가 기반, P002 BM25, P003 실제 로컬 Dense 검색과 P004 답변·인용·보류와 P005 한국어 학습 UI, P006 새 원문 PDF/Markdown 추출·fixed 문자 청킹을 구현했다. 평가·BM25는 Python 3.9 이상과 표준 라이브러리만 필요하고, Dense는 아래 격리 런타임을 사용한다.
 
 
 ## 바로 열기: 학습용 질문 화면
@@ -194,3 +194,44 @@ Dense의 index hash는 검증한 manifest hash이며 저장소 파일 전체의 
 
 현재 system-v2 실제14질문 원문 대조 결과(Codex 검토): 답 가능11개 중 정확5/부분2/과도보류4, 근거 없음3개 적정보류3.
 q01/08/09 과도 보류, q03/07 조건 누락, q11 잘못된 인용 차단 사례가 남아 있다. 프롬프트 개선이 정확도를 높였다고 주장하지 않는다.
+
+## P006: 새 원문부터 실행하기
+
+[원문과 모의 Drive snapshot 설명](data/source-v2/README.md)을 먼저 참고한다. `data/source-v2/authoring/`에 새로 작성한 가상 Markdown 6개, `data/source-v2/output/pdf/`에 그중 2개의 다중 페이지 PDF가 있다. 실제 Drive에 연결하지 않았다. 현재 UI 기본값은 여전히 기존 15개 청크이며, 새 corpus 선택은 CLI/Python의 명시 인자로 제공한다.
+
+이미 설치된 환경에서는 다음 명령으로 새 PDF corpus에 질문한다.
+
+```sh
+.venv/bin/python scripts/ask.py \
+  --chunks data/source-v2/fixed-400-80/chunks.jsonl \
+  --index-dir .runtime/index-source-v2-fixed-400-80 \
+  --question '입사 1년 미만 직원의 연차는 어떻게 발생하나요?'
+```
+
+`rag.ask(..., chunks_path=Path(...), index_dir=Path(...))`도 같은 코어를 사용한다. 기존 rag.ask에는 이미 chunks_path 경계가 있었고 P006에서는 CLI에 `--chunks`를 노출했다. 기본 경로/프롬프트/모델/인용 검증은 변경하지 않았다. 새 chunks와 기존 index-v1을 섞으면 stale index로 거부한다. BM25도 `--chunks ... --retriever bm25`로 동일 corpus를 읽는다. 과거 15청크 qrels를 새 corpus에 넣지 않는다.
+
+처음부터 재현할 때는 이 큰 단계 폴더 안에서 아래를 실행한다. 이미 존재하는 출력 경로는 거부하므로 다음 실험은 새로운 이름을 쓴다.
+
+```sh
+uv pip install --python .venv/bin/python --require-hashes --no-deps -r ingestion-requirements.lock
+.venv/bin/python scripts/snapshot_drive_fixture.py \
+  --catalog data/source-v2/drive-fixture-catalog.json --output-dir .runtime/lesson-snapshot
+.venv/bin/python scripts/ingest_documents.py \
+  --manifest .runtime/lesson-snapshot/manifest.json --output-dir .runtime/lesson-documents
+.venv/bin/python scripts/chunk_documents.py \
+  --documents .runtime/lesson-documents/manifest.json \
+  --method fixed --size-chars 400 --overlap-chars 80 --output-dir .runtime/lesson-chunks
+.venv/bin/python scripts/prepare_source_evaluation.py \
+  --documents .runtime/lesson-documents/manifest.json --spec data/source-v2/evaluation-spec.json \
+  --output-dir .runtime/lesson-evaluation
+.venv/bin/python scripts/runtime.py start
+.venv/bin/python scripts/build_dense_index.py \
+  --chunks .runtime/lesson-chunks/chunks.jsonl --index-dir .runtime/lesson-index
+.venv/bin/python scripts/ask.py \
+  --chunks .runtime/lesson-chunks/chunks.jsonl --index-dir .runtime/lesson-index \
+  --question '퇴직금 계산식은 어떻게 되나요?'
+```
+
+pypdf는 `ingestion-requirements.lock`의 wheel SHA-256과 `ingestion-lock.json`의 버전/설정으로 별도 잠갔다. 기존 모델 런타임 requirements/runtime/generation lock은 보존했다. PDF는 이미 포함되므로 정상 수집/추출에는 reportlab이나 작성용 글꼴이 필요 없다. PDF 재작성 도구 `create_source_pdfs.py`는 별도 authoring 도구이며 reportlab 4.4.9와 지정한 한국어 TTF가 필요하다.
+
+96개 stage 테스트에는 실제 pypdf·이미지/빈 페이지·손상/암호화·timeout·독립 청킹 경계·Drive 모의 파일 변경·출처 역추적 검증이 포함된다. 실제 모델과 단독 복사 재현 증거는 저장소의 `docs/verification/p006/`에 있다.

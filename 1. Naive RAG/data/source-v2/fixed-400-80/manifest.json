@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "algorithm_version": "fixed-char-v1",
+  "settings": {
+    "method": "fixed",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "ingestion_run_id": "f6c43700d5d1bca90f2e07f558407dbad0dcbbddc20314b7bf781ed9789f0715",
+  "normalization_version": "nfc-lf-v1",
+  "ingestion_lock_sha256": "cbff277a316842fd0ff4815092ad6193ecdb4ad9e3214aced713cf2f5afe8814",
+  "originals": [
+    {
+      "document_id": "hr-v2-birthday",
+      "original_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a",
+      "canonical_sha256": "12fde5e7fbb62369e8ace4341efd78194e04a9de4ba9dcf0196db98efe4c1d28",
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      }
+    },
+    {
+      "document_id": "hr-v2-annual",
+      "original_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc",
+      "canonical_sha256": "f387c1e1194d0e19565a50235d960605ff18dc28636547929aecc09887ca0f75",
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      }
+    },
+    {
+      "document_id": "hr-v2-remote",
+      "original_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "canonical_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "parser": {
+        "name": "python-utf8",
+        "version": "3.12.14"
+      }
+    },
+    {
+      "document_id": "hr-v2-welfare",
+      "original_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+      "canonical_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+      "parser": {
+        "name": "python-utf8",
+        "version": "3.12.14"
+      }
+    },
+    {
+      "document_id": "hr-v2-training",
+      "original_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+      "canonical_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+      "parser": {
+        "name": "python-utf8",
+        "version": "3.12.14"
+      }
+    },
+    {
+      "document_id": "hr-v2-travel",
+      "original_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+      "canonical_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+      "parser": {
+        "name": "python-utf8",
+        "version": "3.12.14"
+      }
+    }
+  ],
+  "chunks_sha256": "a8bbaa364c145e4e6ca0325adeef57d6225f73f5c371b4ace09753329c500ec9",
+  "source_map_sha256": "85d74975965e1ee1be5750818ea6bb9c3d92a9b8e4ee638f67e5e9243014b62c",
+  "run_id": "ac858df16074cefd84eb03f1b6a3ed61ee0e00fa287bdcac2b7f59e01931faa0",
+  "status": "complete",
+  "documents_manifest_sha256": "8b51b9ef2702525c7c8b1dcf097900bda847eaea46516f828579e8daa2836081",
+  "identity_note": "Run identity excludes observational timings and the ingestion manifest hash containing them.",
+  "statistics": {
+    "chunk_count": 20,
+    "length_chars": {
+      "min": 85,
+      "max": 400,
+      "mean": 339.45,
+      "median": 400.0,
+      "values": [
+        400,
+        400,
+        400,
+        400,
+        400,
+        216,
+        400,
+        400,
+        400,
+        400,
+        307,
+        400,
+        400,
+        85,
+        400,
+        255,
+        400,
+        155,
+        400,
+        171
+      ]
+    },
+    "emitted_chars": 6789,
+    "covered_unique_chars": 5669,
+    "overlap_chars": 1120,
+    "overlap_ratio": 0.16497275003682427,
+    "overlap_definition": "(sum emitted chunk lengths - union of emitted intervals per document) / sum emitted lengths",
+    "skipped_whitespace_windows": 0,
+    "per_document": [
+      {
+        "document_id": "hr-v2-birthday",
+        "canonical_chars": 1816,
+        "chunk_count": 6,
+        "emitted_chars": 2216,
+        "covered_unique_chars": 1816
+      },
+      {
+        "document_id": "hr-v2-annual",
+        "canonical_chars": 1587,
+        "chunk_count": 5,
+        "emitted_chars": 1907,
+        "covered_unique_chars": 1587
+      },
+      {
+        "document_id": "hr-v2-remote",
+        "canonical_chars": 725,
+        "chunk_count": 3,
+        "emitted_chars": 885,
+        "covered_unique_chars": 725
+      },
+      {
+        "document_id": "hr-v2-welfare",
+        "canonical_chars": 575,
+        "chunk_count": 2,
+        "emitted_chars": 655,
+        "covered_unique_chars": 575
+      },
+      {
+        "document_id": "hr-v2-training",
+        "canonical_chars": 475,
+        "chunk_count": 2,
+        "emitted_chars": 555,
+        "covered_unique_chars": 475
+      },
+      {
+        "document_id": "hr-v2-travel",
+        "canonical_chars": 491,
+        "chunk_count": 2,
+        "emitted_chars": 571,
+        "covered_unique_chars": 491
+      }
+    ]
+  },
+  "elapsed_ms": 4.991833004169166
+}

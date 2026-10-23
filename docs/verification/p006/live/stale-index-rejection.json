@@ -1,0 +1,32 @@
+{
+  "status": "error",
+  "answer": "실행 중 오류가 발생했습니다. trace의 오류를 확인하고 다시 시도하세요.",
+  "citations": [],
+  "reason": "execution",
+  "trace": {
+    "question": "미사용 연차 이월",
+    "retriever": "dense",
+    "settings": {
+      "top_k": 5,
+      "max_context_chars": 8000,
+      "timeout_seconds": 120
+    },
+    "candidates": [],
+    "contexts": [],
+    "excluded": [],
+    "validation": [],
+    "generation_calls": 0,
+    "timings_ms": {
+      "retrieval": 375.99237501854077,
+      "context": 0,
+      "generation": 0,
+      "total": 376.4414169709198
+    },
+    "corpus_sha256": "a8bbaa364c145e4e6ca0325adeef57d6225f73f5c371b4ace09753329c500ec9",
+    "error": {
+      "kind": "execution",
+      "phase": "retrieval",
+      "message": "stale index manifest; build a new index path"
+    }
+  }
+}

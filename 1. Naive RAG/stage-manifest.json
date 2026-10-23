@@ -6,7 +6,8 @@
     "P002",
     "P003",
     "P004",
-    "P005"
+    "P005",
+    "P006"
   ],
   "source_path_basis": "repository-relative",
   "destination_path_basis": "stage-relative",
@@ -58,5 +59,16 @@
     "previous_location": "1. 검색 평가 기반",
     "preserved_at_commit": "413c82eecbdbb01393420ab371e9ba3c6f87af18",
     "reason": "사용자 정정: RAG 방식별 큰 단위; P001/P002는 같은 큰 단계의 세부 작업"
+  },
+  "source_v2": {
+    "newly_authored": true,
+    "source_provider": "google_drive",
+    "source_mode": "fixture",
+    "catalog": "data/source-v2/drive-fixture-catalog.json",
+    "snapshot_manifest": "data/source-v2/snapshot/manifest.json",
+    "extraction_manifest": "data/source-v2/extracted/manifest.json",
+    "chunk_manifest": "data/source-v2/fixed-400-80/manifest.json",
+    "evaluation": "data/source-v2/evaluation/source-evaluation.json",
+    "note": "New fictional originals; existing synthetic corpus and migration history preserved."
   }
 }

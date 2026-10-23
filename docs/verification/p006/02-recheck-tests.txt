@@ -1,0 +1,132 @@
+test_bad_options_cli_and_boolean_library_boundary (test_bm25_baseline.BM25Tests.test_bad_options_cli_and_boolean_library_boundary) ... ok
+test_default_options (test_bm25_baseline.BM25Tests.test_default_options) ... ok
+test_existing_output_file_directory_and_links_are_preserved (test_bm25_baseline.BM25Tests.test_existing_output_file_directory_and_links_are_preserved) ... ok
+test_independent_equal_length_scores_and_repeated_query (test_bm25_baseline.BM25Tests.test_independent_equal_length_scores_and_repeated_query) ... ok
+test_independent_length_normalization (test_bm25_baseline.BM25Tests.test_independent_length_normalization) ... ok
+test_individual_and_all_empty_token_chunks (test_bm25_baseline.BM25Tests.test_individual_and_all_empty_token_chunks) ... ok
+test_injected_evaluation_and_staging_write_failures_cleanup (test_bm25_baseline.BM25Tests.test_injected_evaluation_and_staging_write_failures_cleanup) ... ok
+test_injected_partial_publication_failure_rolls_back (test_bm25_baseline.BM25Tests.test_injected_partial_publication_failure_rolls_back) ... ok
+test_invalid_inputs_reuse_p001_validation_without_publishing (test_bm25_baseline.BM25Tests.test_invalid_inputs_reuse_p001_validation_without_publishing) ... ok
+test_metadata_hashes_schema_and_nonnegative_timings (test_bm25_baseline.BM25Tests.test_metadata_hashes_schema_and_nonnegative_timings) ... ok
+test_missing_input_or_output_parent (test_bm25_baseline.BM25Tests.test_missing_input_or_output_parent) ... ok
+test_normalization_casefold_digits_underscore_and_korean_particles (test_bm25_baseline.BM25Tests.test_normalization_casefold_digits_underscore_and_korean_particles) ... ok
+test_only_title_text_and_question_affect_retrieval (test_bm25_baseline.BM25Tests.test_only_title_text_and_question_affect_retrieval) ... ok
+test_output_created_after_preflight_is_preserved (test_bm25_baseline.BM25Tests.test_output_created_after_preflight_is_preserved) ... ok
+test_qrels_and_answerability_do_not_affect_retrieval (test_bm25_baseline.BM25Tests.test_qrels_and_answerability_do_not_affect_retrieval) ... ok
+test_real_p001_cli_reevaluation_matches_exactly (test_bm25_baseline.BM25Tests.test_real_p001_cli_reevaluation_matches_exactly) ... ok
+test_repeat_determinism_hash_seeds_and_input_order (test_bm25_baseline.BM25Tests.test_repeat_determinism_hash_seeds_and_input_order) ... ok
+test_tie_breaking_top_k_and_fewer_positive_results (test_bm25_baseline.BM25Tests.test_tie_breaking_top_k_and_fewer_positive_results) ... ok
+test_bad_count_dimension_values_zero_and_model (test_dense_runtime.HTTPBoundaryTests.test_bad_count_dimension_values_zero_and_model) ... ok
+test_embed_exact_request_and_count (test_dense_runtime.HTTPBoundaryTests.test_embed_exact_request_and_count) ... ok
+test_http_error_json_error_redirect_timeout_and_no_fallback (test_dense_runtime.HTTPBoundaryTests.test_http_error_json_error_redirect_timeout_and_no_fallback) ... ok
+test_loopback_only_endpoint_and_timeout_validation (test_dense_runtime.HTTPBoundaryTests.test_loopback_only_endpoint_and_timeout_validation) ... ok
+test_tags_missing_duplicate_malformed_digest (test_dense_runtime.HTTPBoundaryTests.test_tags_missing_duplicate_malformed_digest) ... ok
+test_existing_index_and_index_failures_preserve_user_data (test_dense_runtime.PersistentCosineTests.test_existing_index_and_index_failures_preserve_user_data) ... ok
+test_independent_cosine_reopen_and_uuid_payload (test_dense_runtime.PersistentCosineTests.test_independent_cosine_reopen_and_uuid_payload) ... ok
+test_invalid_vectors_no_new_index (test_dense_runtime.PersistentCosineTests.test_invalid_vectors_no_new_index) ... ok
+test_output_failures_and_labels_do_not_enter_embeddings (test_dense_runtime.PersistentCosineTests.test_output_failures_and_labels_do_not_enter_embeddings) ... ok
+test_stale_manifest_changes_rejected_before_open (test_dense_runtime.PersistentCosineTests.test_stale_manifest_changes_rejected_before_open) ... ok
+test_unknown_payload_and_duplicate_chunk_mapping_rejected (test_dense_runtime.PersistentCosineTests.test_unknown_payload_and_duplicate_chunk_mapping_rejected) ... ok
+test_zero_negative_cosine_and_exact_tie_are_retained (test_dense_runtime.PersistentCosineTests.test_zero_negative_cosine_and_exact_tie_are_retained) ... ok
+test_archive_traversal_link_device_rejected (test_dense_runtime.RuntimeSafetyTests.test_archive_traversal_link_device_rejected) ... ok
+test_external_service_never_started_or_stopped (test_dense_runtime.RuntimeSafetyTests.test_external_service_never_started_or_stopped) ... ok
+test_model_digest_and_runtime_mismatch_rejected (test_dense_runtime.RuntimeSafetyTests.test_model_digest_and_runtime_mismatch_rejected) ... ok
+test_start_retries_transient_readiness_timeout (test_dense_runtime.RuntimeSafetyTests.test_start_retries_transient_readiness_timeout) ... ok
+test_atomic_visibility_exception_existing_and_racing_destination (test_documents.SourceTests.test_atomic_visibility_exception_existing_and_racing_destination) ... ok
+test_blank_and_image_pages_are_review_only_not_complete (test_documents.SourceTests.test_blank_and_image_pages_are_review_only_not_complete) ... ok
+test_damaged_and_encrypted_pdf_are_explicit_errors (test_documents.SourceTests.test_damaged_and_encrypted_pdf_are_explicit_errors) ... ok
+test_empty_markdown_requires_review (test_documents.SourceTests.test_empty_markdown_requires_review) ... ok
+test_explicit_cli_corpus_and_runtime_no_evaluation_files (test_documents.SourceTests.test_explicit_cli_corpus_and_runtime_no_evaluation_files) ... ok
+test_independent_windows_boundaries_overlap_and_no_duplicate_tail (test_documents.SourceTests.test_independent_windows_boundaries_overlap_and_no_duplicate_tail) ... ok
+test_limits_unsupported_formats_and_missing_pages (test_documents.SourceTests.test_limits_unsupported_formats_and_missing_pages) ... ok
+test_offset_and_extraction_corruption_rejected (test_documents.SourceTests.test_offset_and_extraction_corruption_rejected) ... ok
+test_prepared_original_spans_no_chunk_id_qrels_and_exact_pages (test_documents.SourceTests.test_prepared_original_spans_no_chunk_id_qrels_and_exact_pages) ... ok
+test_real_pypdf_page_count_and_boundary_mapping (test_documents.SourceTests.test_real_pypdf_page_count_and_boundary_mapping) ... ok
+test_repeat_pipeline_stable_ids_hashes_run_id_and_configuration_change (test_documents.SourceTests.test_repeat_pipeline_stable_ids_hashes_run_id_and_configuration_change) ... ok
+test_snapshot_byte_preservation_and_identity_changes (test_documents.SourceTests.test_snapshot_byte_preservation_and_identity_changes) ... ok
+test_snapshot_rejects_escape_duplicates_bad_hash_and_nonfixture (test_documents.SourceTests.test_snapshot_rejects_escape_duplicates_bad_hash_and_nonfixture) ... ok
+test_source_quote_location_requires_unique_exact_nonwhitespace_content (test_documents.SourceTests.test_source_quote_location_requires_unique_exact_nonwhitespace_content) ... ok
+test_tampered_cache_and_invalid_utf8_fail_without_output (test_documents.SourceTests.test_tampered_cache_and_invalid_utf8_fail_without_output) ... ok
+test_timeout_worker_is_killed_and_does_not_publish (test_documents.SourceTests.test_timeout_worker_is_killed_and_does_not_publish) ... ok
+test_utf8_nfc_lf_and_exact_canonical_page_mapping (test_documents.SourceTests.test_utf8_nfc_lf_and_exact_canonical_page_mapping) ... ok
+test_whitespace_skips_recorded_and_union_statistics_independent (test_documents.SourceTests.test_whitespace_skips_recorded_and_union_statistics_independent) ... ok
+test_all_relevance_grades_and_large_k (test_evaluate_retrieval.RetrievalCLITests.test_all_relevance_grades_and_large_k) ... ok
+test_atomic_write_error_cleans_temporary_file (test_evaluate_retrieval.RetrievalCLITests.test_atomic_write_error_cleans_temporary_file) ... ok
+test_contract_independent_graded_examples_and_macro (test_evaluate_retrieval.RetrievalCLITests.test_contract_independent_graded_examples_and_macro) ... ok
+test_duplicate_record_ids (test_evaluate_retrieval.RetrievalCLITests.test_duplicate_record_ids) ... ok
+test_hashes_version_and_byte_determinism (test_evaluate_retrieval.RetrievalCLITests.test_hashes_version_and_byte_determinism) ... ok
+test_input_read_error_preserves_output (test_evaluate_retrieval.RetrievalCLITests.test_input_read_error_preserves_output) ... ok
+test_invalid_grades_and_unknown_qrel_reference (test_evaluate_retrieval.RetrievalCLITests.test_invalid_grades_and_unknown_qrel_reference) ... ok
+test_k_must_be_positive_unique_integers (test_evaluate_retrieval.RetrievalCLITests.test_k_must_be_positive_unique_integers) ... ok
+test_macro_is_query_mean_and_unanswerable_is_excluded (test_evaluate_retrieval.RetrievalCLITests.test_macro_is_query_mean_and_unanswerable_is_excluded) ... ok
+test_malformed_and_empty_jsonl (test_evaluate_retrieval.RetrievalCLITests.test_malformed_and_empty_jsonl) ... ok
+test_missing_and_invalid_chunk_fields (test_evaluate_retrieval.RetrievalCLITests.test_missing_and_invalid_chunk_fields) ... ok
+test_missing_and_invalid_query_fields (test_evaluate_retrieval.RetrievalCLITests.test_missing_and_invalid_query_fields) ... ok
+test_missing_unknown_duplicate_and_invalid_rankings (test_evaluate_retrieval.RetrievalCLITests.test_missing_unknown_duplicate_and_invalid_rankings) ... ok
+test_no_unanswerable_ratios_are_null (test_evaluate_retrieval.RetrievalCLITests.test_no_unanswerable_ratios_are_null) ... ok
+test_only_unanswerable_has_null_macro (test_evaluate_retrieval.RetrievalCLITests.test_only_unanswerable_has_null_macro) ... ok
+test_output_cannot_alias_input_or_hardlink_or_symlink (test_evaluate_retrieval.RetrievalCLITests.test_output_cannot_alias_input_or_hardlink_or_symlink) ... ok
+test_relevant_first_kth_outside_k_empty_and_short (test_evaluate_retrieval.RetrievalCLITests.test_relevant_first_kth_outside_k_empty_and_short) ... ok
+test_synthetic_corpus_and_curated_example (test_evaluate_retrieval.RetrievalCLITests.test_synthetic_corpus_and_curated_example) ... ok
+test_unanswerable_requires_empty_mapping_even_for_grade_zero (test_evaluate_retrieval.RetrievalCLITests.test_unanswerable_requires_empty_mapping_even_for_grade_zero) ... ok
+test_order_only_change_accepted_without_lock_mutation (test_generation_metadata.MetadataTests.test_order_only_change_accepted_without_lock_mutation) ... ok
+test_value_digest_template_and_duplicate_changes_rejected (test_generation_metadata.MetadataTests.test_value_digest_template_and_duplicate_changes_rejected) ... ok
+test_envelope_and_thinking_rejected (test_rag.GenerationBoundaryTests.test_envelope_and_thinking_rejected) ... ok
+test_request_exact_settings_and_only_content_retained (test_rag.GenerationBoundaryTests.test_request_exact_settings_and_only_content_retained) ... ok
+test_bad_quotes_and_model_source_never_trusted (test_rag.PipelineTests.test_bad_quotes_and_model_source_never_trusted) ... ok
+test_cli_input_errors_are_json_and_nonzero (test_rag.PipelineTests.test_cli_input_errors_are_json_and_nonzero) ... ok
+test_invalid_input_before_search (test_rag.PipelineTests.test_invalid_input_before_search) ... ok
+test_invalid_response_types_and_duplicate_keys (test_rag.PipelineTests.test_invalid_response_types_and_duplicate_keys) ... ok
+test_model_abstention_fixed_message_clear_citations (test_rag.PipelineTests.test_model_abstention_fixed_message_clear_citations) ... ok
+test_no_context_does_not_construct_or_call_generator (test_rag.PipelineTests.test_no_context_does_not_construct_or_call_generator) ... ok
+test_one_retrieval_generation_exact_question_no_labels (test_rag.PipelineTests.test_one_retrieval_generation_exact_question_no_labels) ... ok
+test_prompt_is_data_json_not_interpolated_commands (test_rag.PipelineTests.test_prompt_is_data_json_not_interpolated_commands) ... ok
+test_provider_errors_are_errors_no_retry (test_rag.PipelineTests.test_provider_errors_are_errors_no_retry) ... ok
+test_stale_index_is_execution_error_no_generation (test_rag.PipelineTests.test_stale_index_is_execution_error_no_generation) ... ok
+test_unknown_and_retrieved_but_not_sent_citations (test_rag.PipelineTests.test_unknown_and_retrieved_but_not_sent_citations) ... ok
+test_valid_citation_is_not_semantic_truth_certificate (test_rag.PipelineTests.test_valid_citation_is_not_semantic_truth_certificate) ... ok
+test_whole_chunk_budget_exact_boundary_and_skip (test_rag.PipelineTests.test_whole_chunk_budget_exact_boundary_and_skip) ... ok
+test_answer_and_abstain_use_same_pipeline_kwargs (test_server.HTTPTests.test_answer_and_abstain_use_same_pipeline_kwargs) ... 127.0.0.1 - - [23/Oct/2026 09:15:15] "POST /api/ask HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2026 09:15:15] "POST /api/ask HTTP/1.1" 200 -
+ok
+test_http_error_mapping (test_server.HTTPTests.test_http_error_mapping) ... 127.0.0.1 - - [23/Oct/2026 09:15:15] "POST /api/ask HTTP/1.1" 502 -
+127.0.0.1 - - [23/Oct/2026 09:15:15] "POST /api/ask HTTP/1.1" 504 -
+127.0.0.1 - - [23/Oct/2026 09:15:15] "POST /api/ask HTTP/1.1" 500 -
+127.0.0.1 - - [23/Oct/2026 09:15:15] "POST /api/ask HTTP/1.1" 400 -
+ok
+test_invalid_json_types_ranges_labels_rejected (test_server.HTTPTests.test_invalid_json_types_ranges_labels_rejected) ... 127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+ok
+test_routes_types_origin_and_payload_limit (test_server.HTTPTests.test_routes_types_origin_and_payload_limit) ... 127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /unknown HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "GET /../generation-lock.json HTTP/1.1" 404 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 400 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 403 -
+127.0.0.1 - - [23/Oct/2026 09:15:16] "POST /api/ask HTTP/1.1" 403 -
+ok
+test_serializes_pipeline_but_get_stays_responsive (test_server.HTTPTests.test_serializes_pipeline_but_get_stays_responsive) ... 127.0.0.1 - - [23/Oct/2026 09:15:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2026 09:15:17] "POST /api/ask HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2026 09:15:17] "POST /api/ask HTTP/1.1" 200 -
+ok
+test_static_assets_render_data_as_text (test_server.HTTPTests.test_static_assets_render_data_as_text) ... 127.0.0.1 - - [23/Oct/2026 09:15:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2026 09:15:17] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2026 09:15:17] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2026 09:15:17] "GET /guide HTTP/1.1" 200 -
+127.0.0.1 - - [23/Oct/2026 09:15:17] "POST /api/ask HTTP/1.1" 200 -
+ok
+
+----------------------------------------------------------------------
+Ran 94 tests in 19.234s
+
+OK

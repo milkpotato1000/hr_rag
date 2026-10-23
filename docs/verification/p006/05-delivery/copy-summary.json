@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "same_canonical_chunk_and_source_map_bytes": true,
+  "same_run_id": "ac858df16074cefd84eb03f1b6a3ed61ee0e00fa287bdcac2b7f59e01931faa0",
+  "same_evaluation_bytes": true,
+  "smoke": [
+    {
+      "question": "입사 1년 미만 직원의 연차는 언제 생기나요?",
+      "status": "answered",
+      "reason": null,
+      "answer": "입사 1년 미만 직원의 연차는 한 달 개근 시 1일이 발생합니다. 1년 미만 재직자의 경우, 한 달 개근 조건을 만족해야 연차가 발생합니다."
+    },
+    {
+      "question": "퇴직금 계산식은 어떻게 되나요?",
+      "status": "abstained",
+      "reason": "model_abstained",
+      "answer": "제공된 문서만으로 확인할 수 없어 답변을 보류합니다. 인사 담당자 확인이 필요합니다."
+    }
+  ],
+  "runtime_note": "Source-only copy used the already installed locked interpreter and the owned loopback Ollama models. No model or venv copied; new index built from copied sources."
+}

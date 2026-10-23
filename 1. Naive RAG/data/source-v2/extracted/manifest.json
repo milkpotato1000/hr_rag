@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "snapshot_manifest_sha256": "80bdb5d561d1fdc06fc61e4ed90db17ab2323d4c43bb77488748b60a1d875fba",
+  "normalization_version": "nfc-lf-v1",
+  "page_separator": "\n\n",
+  "ingestion_lock_sha256": "cbff277a316842fd0ff4815092ad6193ecdb4ad9e3214aced713cf2f5afe8814",
+  "documents": [
+    {
+      "document_id": "hr-v2-birthday",
+      "version": "2",
+      "title": "[가상 규정 v2] 생일 특별휴가 안내",
+      "synthetic": true,
+      "original_path": "cache/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a.pdf",
+      "original_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a",
+      "format": "pdf",
+      "authored_by": "Codex; newly written fictional learning source on 2026-10-23, not a pre-existing company original",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-birthday",
+        "name": "birthday.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a.pdf",
+        "downloaded_content_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a"
+      },
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      },
+      "canonical_path": "canonical/hr-v2-birthday.txt",
+      "canonical_sha256": "12fde5e7fbb62369e8ace4341efd78194e04a9de4ba9dcf0196db98efe4c1d28",
+      "canonical_chars": 1816,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 1151,
+          "raw_text_path": "pages/hr-v2-birthday-p1.raw.txt",
+          "raw_text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f",
+          "text_path": "pages/hr-v2-birthday-p1.txt",
+          "text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f",
+          "classification": "text",
+          "image_count": 0
+        },
+        {
+          "page_number": 2,
+          "start": 1153,
+          "end": 1816,
+          "raw_text_path": "pages/hr-v2-birthday-p2.raw.txt",
+          "raw_text_sha256": "d5d346787b13d98ae9540ce45abb3e2753657183862529562c810b4afc350fe3",
+          "text_path": "pages/hr-v2-birthday-p2.txt",
+          "text_sha256": "d5d346787b13d98ae9540ce45abb3e2753657183862529562c810b4afc350fe3",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v2-annual",
+      "version": "2",
+      "title": "[가상 규정 v2] 연차 사용 안내",
+      "synthetic": true,
+      "original_path": "cache/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc.pdf",
+      "original_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc",
+      "format": "pdf",
+      "authored_by": "Codex; newly written fictional learning source on 2026-10-23, not a pre-existing company original",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-annual",
+        "name": "annual.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc.pdf",
+        "downloaded_content_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc"
+      },
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      },
+      "canonical_path": "canonical/hr-v2-annual.txt",
+      "canonical_sha256": "f387c1e1194d0e19565a50235d960605ff18dc28636547929aecc09887ca0f75",
+      "canonical_chars": 1587,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 1028,
+          "raw_text_path": "pages/hr-v2-annual-p1.raw.txt",
+          "raw_text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16",
+          "text_path": "pages/hr-v2-annual-p1.txt",
+          "text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16",
+          "classification": "text",
+          "image_count": 0
+        },
+        {
+          "page_number": 2,
+          "start": 1030,
+          "end": 1587,
+          "raw_text_path": "pages/hr-v2-annual-p2.raw.txt",
+          "raw_text_sha256": "59f9737710bda0d7f4d9948a90e74c516cb30c273453630df7ca37010c842065",
+          "text_path": "pages/hr-v2-annual-p2.txt",
+          "text_sha256": "59f9737710bda0d7f4d9948a90e74c516cb30c273453630df7ca37010c842065",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v2-remote",
+      "version": "2",
+      "title": "[가상 규정 v2] 재택근무 안내",
+      "synthetic": true,
+      "original_path": "cache/ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4.md",
+      "original_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "format": "md",
+      "authored_by": "Codex; newly written fictional learning source on 2026-10-23, not a pre-existing company original",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-remote",
+        "name": "remote.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4.md",
+        "downloaded_content_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4"
+      },
+      "parser": {
+        "name": "python-utf8",
+        "version": "3.12.14"
+      },
+      "canonical_path": "canonical/hr-v2-remote.txt",
+      "canonical_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "canonical_chars": 725,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 725,
+          "raw_text_path": "pages/hr-v2-remote-p1.raw.txt",
+          "raw_text_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+          "text_path": "pages/hr-v2-remote-p1.txt",
+          "text_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v2-welfare",
+      "version": "2",
+      "title": "[가상 규정 v2] 복지 지원 안내",
+      "synthetic": true,
+      "original_path": "cache/50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442.md",
+      "original_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+      "format": "md",
+      "authored_by": "Codex; newly written fictional learning source on 2026-10-23, not a pre-existing company original",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-welfare",
+        "name": "welfare.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442.md",
+        "downloaded_content_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442"
+      },
+      "parser": {
+        "name": "python-utf8",
+        "version": "3.12.14"
+      },
+      "canonical_path": "canonical/hr-v2-welfare.txt",
+      "canonical_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+      "canonical_chars": 575,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 575,
+          "raw_text_path": "pages/hr-v2-welfare-p1.raw.txt",
+          "raw_text_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+          "text_path": "pages/hr-v2-welfare-p1.txt",
+          "text_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v2-training",
+      "version": "2",
+      "title": "[가상 규정 v2] 교육 휴가 안내",
+      "synthetic": true,
+      "original_path": "cache/c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22.md",
+      "original_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+      "format": "md",
+      "authored_by": "Codex; newly written fictional learning source on 2026-10-23, not a pre-existing company original",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-training",
+        "name": "training.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22.md",
+        "downloaded_content_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22"
+      },
+      "parser": {
+        "name": "python-utf8",
+        "version": "3.12.14"
+      },
+      "canonical_path": "canonical/hr-v2-training.txt",
+      "canonical_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+      "canonical_chars": 475,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 475,
+          "raw_text_path": "pages/hr-v2-training-p1.raw.txt",
+          "raw_text_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+          "text_path": "pages/hr-v2-training-p1.txt",
+          "text_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v2-travel",
+      "version": "2",
+      "title": "[가상 규정 v2] 출장 사전 승인 안내",
+      "synthetic": true,
+      "original_path": "cache/944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5.md",
+      "original_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+      "format": "md",
+      "authored_by": "Codex; newly written fictional learning source on 2026-10-23, not a pre-existing company original",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-travel",
+        "name": "travel.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5.md",
+        "downloaded_content_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5"
+      },
+      "parser": {
+        "name": "python-utf8",
+        "version": "3.12.14"
+      },
+      "canonical_path": "canonical/hr-v2-travel.txt",
+      "canonical_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+      "canonical_chars": 491,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 491,
+          "raw_text_path": "pages/hr-v2-travel-p1.raw.txt",
+          "raw_text_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+          "text_path": "pages/hr-v2-travel-p1.txt",
+          "text_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    }
+  ],
+  "run_id": "f6c43700d5d1bca90f2e07f558407dbad0dcbbddc20314b7bf781ed9789f0715",
+  "status": "complete",
+  "review_pages": [],
+  "offset_unit": "Unicode code point [start,end) in canonical text, not PDF bytes",
+  "limits": {
+    "file_bytes": 20971520,
+    "pdf_pages": 100,
+    "canonical_chars": 1000000,
+    "pdf_timeout_seconds": 30
+  },
+  "limitations": [
+    "No OCR. Blank/image classifications are heuristic; vector-drawn text may look blank.",
+    "PDF reading order/table/column recovery is not guaranteed.",
+    "Limits/timeouts are not a comprehensive memory/resource sandbox."
+  ],
+  "elapsed_ms": 367.34583298675716
+}

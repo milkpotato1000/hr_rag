@@ -1,0 +1,147 @@
+[
+  {
+    "name": "stage-tests",
+    "command": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG",
+    "returncode": 0
+  },
+  {
+    "name": "root-tests",
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev",
+    "returncode": 0
+  },
+  {
+    "name": "copy-tests",
+    "command": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p006-standalone-ixb9jfmf/Naive RAG",
+    "returncode": 0
+  },
+  {
+    "name": "copy-snapshot",
+    "command": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python",
+      "scripts/snapshot_drive_fixture.py",
+      "--catalog",
+      "data/source-v2/drive-fixture-catalog.json",
+      "--output-dir",
+      ".runtime/snapshot"
+    ],
+    "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p006-standalone-ixb9jfmf/Naive RAG",
+    "returncode": 0
+  },
+  {
+    "name": "copy-ingest",
+    "command": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python",
+      "scripts/ingest_documents.py",
+      "--manifest",
+      ".runtime/snapshot/manifest.json",
+      "--output-dir",
+      ".runtime/documents"
+    ],
+    "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p006-standalone-ixb9jfmf/Naive RAG",
+    "returncode": 0
+  },
+  {
+    "name": "copy-chunk",
+    "command": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python",
+      "scripts/chunk_documents.py",
+      "--documents",
+      ".runtime/documents/manifest.json",
+      "--method",
+      "fixed",
+      "--size-chars",
+      "400",
+      "--overlap-chars",
+      "80",
+      "--output-dir",
+      ".runtime/chunks"
+    ],
+    "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p006-standalone-ixb9jfmf/Naive RAG",
+    "returncode": 0
+  },
+  {
+    "name": "copy-evaluation",
+    "command": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python",
+      "scripts/prepare_source_evaluation.py",
+      "--documents",
+      ".runtime/documents/manifest.json",
+      "--spec",
+      "data/source-v2/evaluation-spec.json",
+      "--output-dir",
+      ".runtime/evaluation"
+    ],
+    "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p006-standalone-ixb9jfmf/Naive RAG",
+    "returncode": 0
+  },
+  {
+    "name": "copy-index",
+    "command": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python",
+      "scripts/build_dense_index.py",
+      "--chunks",
+      ".runtime/chunks/chunks.jsonl",
+      "--index-dir",
+      ".runtime/index"
+    ],
+    "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p006-standalone-ixb9jfmf/Naive RAG",
+    "returncode": 0
+  },
+  {
+    "name": "copy-q04",
+    "command": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python",
+      "scripts/ask.py",
+      "--chunks",
+      ".runtime/chunks/chunks.jsonl",
+      "--index-dir",
+      ".runtime/index",
+      "--question",
+      "입사 1년 미만 직원의 연차는 언제 생기나요?"
+    ],
+    "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p006-standalone-ixb9jfmf/Naive RAG",
+    "returncode": 0
+  },
+  {
+    "name": "copy-q13",
+    "command": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag-dev/1. Naive RAG/.venv/bin/python",
+      "scripts/ask.py",
+      "--chunks",
+      ".runtime/chunks/chunks.jsonl",
+      "--index-dir",
+      ".runtime/index",
+      "--question",
+      "퇴직금 계산식은 어떻게 되나요?"
+    ],
+    "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p006-standalone-ixb9jfmf/Naive RAG",
+    "returncode": 0
+  }
+]

@@ -1,0 +1,31 @@
+Final contract/queue/whitespace verification; completion commit includes the evidence.
+
+COMMAND ['python3', 'scripts/contract_guard.py', 'check']
+EXIT 0
+PASS: contracts match adopted plan 954245576a55
+
+COMMAND ['python3', 'scripts/work_queue.py', '--owner', 'all']
+EXIT 0
+dev는 채택한 plan 954245576a55 기준. 이후 plan 초안은 자동 채택하지 않음.
+plan 다음 작업: P007
+dev 다음 작업: 실행 가능한 승인 작업 없음
+[완료] P001 합성 HR 문서와 검색 평가 기반 구축 — 6/6 (dev)
+[완료] P002 BM25 검색 기준선과 평가 연결 — 8/8 (dev)
+[완료] P003 로컬 모델 실행 환경과 Dense 검색 비교 — 6/6 (dev)
+[완료] P004 Naive RAG 답변·인용·보류 연결 — 6/6 (dev)
+[완료] P005 Naive RAG 실행 화면·E2E 검증·학습 가이드 — 6/6 (dev)
+[완료] P006 원문 PDF·Markdown 추출과 자동 청킹 기준선 — 6/6 (dev)
+[기획 중] P007 청킹 방식·크기·겹침과 검색 품질 실험 — 0/5 (plan)
+[기획 중] P008 청킹 실험 화면과 최종 답변 품질 비교 — 0/5 (plan)
+  선행 작업: P007
+
+작업서: docs/planning/plans/P007.md
+  [ ] C1: 고정/재귀/구조/의미 기반 청킹을 고정된 재현 계약과 원문 위치 매핑으로 구현한다.
+  [ ] C2: source fact/span 정답과 중복 제거·경계 결합 평가 산식을 독립 fixture로 검증한다.
+  [ ] C3: 고정 조건의 실제 검색 실험과 K/분량 예산 비교·실패사례·비용·분모를 기록한다.
+  [ ] C4: tuning/holdout 구분·학습 가이드·회귀·기준선 보존·실행 증거를 커밋한다.
+  [ ] C5: 준비 검토·정확한 plan 채택·선행 완료·계약/큐/훅·최신 PASS 증거가 일치한다.
+조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음
+
+COMMAND ['git', 'diff', '--cached', '--check']
+EXIT 0

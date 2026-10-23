@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from rag import ask, INDEX
+from rag import ask, INDEX, CHUNKS
 
 
 class Parser(argparse.ArgumentParser):
@@ -18,6 +18,8 @@ def main(argv=None):
     p.add_argument('--retriever', default='dense')
     p.add_argument('--top-k', type=int, default=5)
     p.add_argument('--index-dir', type=Path, default=INDEX)
+    p.add_argument('--chunks', dest='chunks_path', type=Path, default=CHUNKS,
+                   help='explicit corpus; defaults to the preserved 15 hand-authored chunks')
     p.add_argument('--max-context-chars', type=int, default=8000)
     p.add_argument('--timeout-seconds', type=float, default=120)
     try:

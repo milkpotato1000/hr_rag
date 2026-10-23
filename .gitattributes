@@ -1,0 +1,3 @@
+# Parser output is data: preserve exact bytes/offsets, including PDF trailing spaces.
+# Keep diff and all other whitespace checks enabled; do not apply this to code or prose.
+"1. Naive RAG/data/source-v2/extracted/**/*.txt" -text whitespace=-blank-at-eol
