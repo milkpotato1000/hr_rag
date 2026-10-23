@@ -2,7 +2,13 @@
 
 ## 기획·개발 흐름
 
-하나의 Git 저장소에 `main`(hr_rag), `plan`(hr_rag-plan), `dev`(hr_rag-dev) linked worktree를 사용한다.
+코덱스 프로젝트는 상위 `hr_rag/` 폴더 하나로 연다. 이 폴더는 Git 저장소가 아닌 작업공간 컨테이너다.
+그 안의 `hr_rag_plan/`(`plan`), `hr_rag_dev/`(`dev`), `hr_rag_main/`(`main`)이 하나의 Git 저장소를 공유한다.
+기획 요청은 `hr_rag_plan/`, 구현·수정·검증·다음 큐 진행은 `hr_rag_dev/`에서 해당 AGENTS.md를 읽고 실행한다.
+양쪽 역할을 포함한 요청은 plan → dev 순서로 준비 검토·통합·정확한 채택을 거친다.
+컨테이너에서 Git을 실행하거나 초기화하지 않는다. 각 명령의 작업 디렉터리를 명시한다.
+하위 작업폴더 기준 형제 경로는 `../hr_rag_plan/`, `../hr_rag_dev/`, `../hr_rag_main/`이다.
+상위 진입 규칙은 `docs/process/workspace-AGENTS.md`의 로컬 사본이다. 새 컴퓨터에서도 같은 구조로 복원한다.
 실행 전 현재 브랜치, 변경 상태, 채택한 계획과 관련 계약, dev 피드백을 확인하고 기존 작업을 보존한다.
 프로젝트 목표와 단계는 `docs/planning/project-brief.md`, 설계 방향은 `docs/architecture/system-design.md`를 따른다.
 사용자가 지정한 HR RAG 기획 대화를 근거로 P카드별 구현 범위를 준비한다.
