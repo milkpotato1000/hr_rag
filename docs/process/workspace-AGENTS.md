@@ -17,6 +17,14 @@ If a missing business decision changes the scope, ask before dependent work.
 Do not choose a role from the workspace root's name or run Git at this level.
 Use explicit working directories; do not assume a previous shell's `cd` persists.
 
+A chat initialized by the user as plan or dev keeps that assigned role across
+turns. In a plan chat, “다음 작업” means planning in `hr_rag_plan/`; in a dev
+chat it means the development queue in `hr_rag_dev/`. Do not silently switch
+roles because both children are visible. The initial role instruction and later
+explicit user requests determine scope; a title is only a navigation label.
+Creating or bootstrapping role chats reads status/rules/queues and then waits;
+it does not authorize new product work or messaging another chat.
+
 All three directories share one Git repository through linked worktrees.
 Preserve existing work, P-card requirements, dev execution logs and adoption rules.
 Inspect status and the current branch before changes. Never merge dev into plan
