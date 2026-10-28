@@ -1,0 +1,16 @@
+[
+  {
+    "index": "index-v1",
+    "point_count": 15,
+    "export_sha256": "d1092ca4f6ad3e24166e6294e02c7b260d23f539fab949abd19b2ddfedaafd11",
+    "exact_copy": true,
+    "method": "exclusive Qdrant lock held during quiescent file snapshot; release then sequential logical exports"
+  },
+  {
+    "index": "index-source-v2-fixed-400-80",
+    "point_count": 20,
+    "export_sha256": "cdb7a81fdf498fc985cb306e43b064596885fd9afb911c0445cbb06d2cf4ae4a",
+    "exact_copy": true,
+    "method": "exclusive Qdrant lock held during quiescent file snapshot; release then sequential logical exports"
+  }
+]

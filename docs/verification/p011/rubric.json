@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "reviewer": "Codex source/answer comparison, not generation-model judge",
+  "unit": "answer text; full source quotes do not fill answer omissions",
+  "facts": {
+    "q01": [
+      "입사 후 3개월 경과",
+      "수습 제외",
+      "입사 직후 사용 불가"
+    ],
+    "q02": [
+      "생일 달 근무일 사용",
+      "다음 달 이월 불가",
+      "현금 지급 불가"
+    ],
+    "q03": [
+      "입사 후 3개월 경과",
+      "수습 제외",
+      "매년 1일",
+      "생일 달 근무일 사용",
+      "이월 불가",
+      "현금 지급 불가",
+      "사용 3영업일 전 신청",
+      "휴가 시스템 신청",
+      "팀장 승인"
+    ],
+    "q04": [
+      "1년 미만 대상",
+      "한 달 개근 시",
+      "연차 1일 발생"
+    ],
+    "q05": [
+      "사용 2영업일 전",
+      "휴가 시스템 신청",
+      "긴급 시 당일 가능",
+      "팀장에게 먼저 알림"
+    ],
+    "q06": [
+      "미사용 연차 최대 5일 다음해 이월",
+      "다음 해 3월 31일까지 사용",
+      "생일 휴가 적용 제외"
+    ],
+    "q07": [
+      "입사 1개월 경과",
+      "보안 교육 이수",
+      "현장 장비 운영 직무 제외",
+      "주 최대 2일",
+      "전주 금요일까지",
+      "팀장 승인"
+    ],
+    "q08": [
+      "회사 지급 기기 사용",
+      "회사 VPN 사용",
+      "공용 컴퓨터 내부 문서 접근 금지"
+    ],
+    "q09": [
+      "생일 포인트와 휴가 자격/승인 별개",
+      "자동 승인 아님",
+      "휴가 별도 신청 필요",
+      "팀장 승인 필요"
+    ],
+    "q10": [
+      "사무실 출근일 식대 1만원",
+      "재택근무일 미지원",
+      "휴가일 미지원"
+    ],
+    "q11": [
+      "연차 오전/오후 반차 가능",
+      "반차 1회 0.5일 차감",
+      "생일 휴가 분할 불가"
+    ],
+    "c01": [
+      "직무 관련 자격시험 응시자",
+      "연 1일",
+      "연차와 별도 관리",
+      "생일 휴가와 별도 관리"
+    ],
+    "c02": [
+      "등록 자택으로 제한",
+      "근무 시작 전",
+      "인사 담당자에게",
+      "등록 주소 변경 요청"
+    ],
+    "c03": [
+      "출발 5영업일 전",
+      "팀장 승인",
+      "휴가 자동승인 아님",
+      "재택 자동승인 아님"
+    ],
+    "meal-bm25": [
+      "사무실 출근일 식대 1만원",
+      "재택근무일 미지원",
+      "휴가일 미지원"
+    ],
+    "pdf-q06": [
+      "미사용 연차 최대 5일 다음해 이월",
+      "다음 해 3월 31일까지 사용",
+      "생일 휴가 적용 제외"
+    ]
+  },
+  "unanswerable": [
+    "q12",
+    "q13",
+    "q14",
+    "c04"
+  ],
+  "forbidden": [
+    "unsupported policy amounts/dates/eligibility",
+    "treat birthday points as leave eligibility",
+    "assert absent policy does not exist",
+    "citation outside transmitted context"
+  ],
+  "metrics": [
+    "facts_met/total",
+    "complete_answer",
+    "supported_claims/claims",
+    "appropriate_abstention",
+    "over_abstention",
+    "errors",
+    "contradictions",
+    "fabrications"
+  ],
+  "context_rule": "Record missing evidence separately; never demand guessing an absent fact",
+  "ambiguous": "mark unresolved, cannot pass adoption",
+  "gate": "every case, aggregate 3 repeats: B facts rate/complete/support/appropriate abstention >= A; overabstention/errors/contradictions/fabrications <= A; zero new hallucinated unanswerable or outside citations"
+}
