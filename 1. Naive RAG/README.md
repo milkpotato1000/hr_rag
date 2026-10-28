@@ -149,7 +149,7 @@ corpus·질문·모델 digest는 그대로 두고 Recall/MRR/nDCG와 실제 누�
 이후 별도 계약에서 표현 변형·새 질문 묶음, 청크 구성, 문맥량, 답변 프롬프트·보류·인용, cold/warm 지연 순으로 넓힌다.
 이미 높은 14질문 점수에만 맞춰 설정을 조정하지 않는다. 데이터 변경과 Hybrid·reranker·Agentic은 후속 계획으로 분리한다.
 
-## P004: 질문 → 답변·원문 인용·보류
+## P004 → P009: 질문 → 답변·원문 인용·보류
 
 `rag.ask()`가 검색 한 번 → 전체 청크 문맥 선택 → 생성 한 번 → 인용 검증을 수행한다.
 기본 Dense를 BM25로 바꿔 비교할 수 있다. query_id·answerability·relevance·평가 rubric은 운영 경로에 전달하지 않는다.
@@ -179,21 +179,23 @@ Dense의 index hash는 검증한 manifest hash이며 저장소 파일 전체의 
 문장 중간에서 자르지 않으므로 “수습 제외” 같은 조건을 잘라 잃지 않는다. 예산이 너무 작으면 no_context로 생성 호출을 생략한다.
 현재 합성 문서는 작지만 임의의 큰 질문은 모델 context 한계에 영향을 줄 수 있다.
 
-- answered: 인용이 하나 이상이고, 모든 인용 ID가 실제 전달한 문맥에 있으며 quote가 그 청크 text의 정확한 부분문자열이다.
+- answered: 인용이 하나 이상이고, 모든 인용 ID가 실제 전달한 문맥에 있으며 코드가 조립한 quote가 해당 요청에서 전달한 청크 text 전체와 정확히 같다.
 - abstained / model_abstained: 모델이 보류했다. 최종 문구는 인사 담당자 확인을 안내하며 최종 인용은 비운다.
 - abstained / invalid_model_response: 모델 content의 JSON·상태·본문·인용 검증에 실패했다. 원응답과 사유를 trace에 남긴다.
 - abstained / no_context: 전달 가능한 문맥이 없어 LLM을 호출하지 않았다.
 - error / input·provider·timeout·execution: 입력·HTTP/연결·timeout·색인/lock 등의 실행 오류. 문서에 근거가 없다는 뜻이 아니다.
 
-인용의 source·title·version·document_id는 모델이 만든 값 대신 corpus에서 보강한다. 모델이 이 필드를 조작해 보내면 검증에 실패한다.
+P009부터 모델은 citations에 `{"chunk_id":"..."}`만 반환한다. 요청마다 전달 ID만 허용하는 schema enum을 만들고 코드에서도 다시 검증한다. 중복/미전달 ID, 추가 quote/출처 필드, 보류 응답의 비어 있지 않은 citations는 거부한다.
+인용의 quote·source·title·version·document_id는 해당 요청의 불변 문맥 snapshot에서 조립한다. quote는 청크 전체이며 앞뒤 공백과 PDF 줄바꿈도 보존한다. 응답 시점에 원문 파일을 다시 읽지 않는다.
+현재 프롬프트는 system-v3, 응답 계약은 id_only_v2, lock schema_version은 2다. trace에는 실제 전송 schema와 hash·허용 ID·원응답·조립 원문 hash를 남긴다. 생성 전 모델 확인에 실패하면 request=null/request_dispatched=false이며 no_context에는 전송 기록이 없다.
 인용 구조 검증은 문장이 답변을 의미상 지지하는지 자동으로 증명하지 않는다. 의미 검토는 별도 rubric과 원문을 읽어 수행한다.
 내부 thinking 전문은 수집하지 않는다. 재검색·답변 수리 생성·무한 재시도는 없다.
 
 단위 테스트의 fake provider와 실제 모델 검증은 구분한다. 루트 `docs/verification/p004/`에는 실제 생성 전에 작성한 rubric,
 실제14질문 출력과 명령·trace·Codex 원문 대조 검토·회귀·단독 복사 증거를 보관한다. 사용자나 사람이 검토했다고 표기하지 않는다.
 
-현재 system-v2 실제14질문 원문 대조 결과(Codex 검토): 답 가능11개 중 정확5/부분2/과도보류4, 근거 없음3개 적정보류3.
-q01/08/09 과도 보류, q03/07 조건 누락, q11 잘못된 인용 차단 사례가 남아 있다. 프롬프트 개선이 정확도를 높였다고 주장하지 않는다.
+P004 당시 system-v2 실제14질문 원문 대조 결과(Codex 검토): 답 가능11개 중 정확5/부분2/과도보류4, 근거 없음3개 적정보류3.
+당시 q01/08/09 과도 보류, q03/07 조건 누락, q11 잘못된 인용 차단 사례가 있었다. P009의 실제 결과와 의미 검토는 루트 `docs/verification/p009/README.md`에서 별도로 확인한다. 프롬프트 개선이 정확도를 높였다고 주장하지 않는다.
 
 ## P006: 새 원문부터 실행하기
 
@@ -208,7 +210,7 @@ q01/08/09 과도 보류, q03/07 조건 누락, q11 잘못된 인용 차단 사�
   --question '입사 1년 미만 직원의 연차는 어떻게 발생하나요?'
 ```
 
-`rag.ask(..., chunks_path=Path(...), index_dir=Path(...))`도 같은 코어를 사용한다. 기존 rag.ask에는 이미 chunks_path 경계가 있었고 P006에서는 CLI에 `--chunks`를 노출했다. 기본 경로/프롬프트/모델/인용 검증은 변경하지 않았다. 새 chunks와 기존 index-v1을 섞으면 stale index로 거부한다. BM25도 `--chunks ... --retriever bm25`로 동일 corpus를 읽는다. 과거 15청크 qrels를 새 corpus에 넣지 않는다.
+`rag.ask(..., chunks_path=Path(...), index_dir=Path(...))`도 같은 코어를 사용한다. 기존 rag.ask에는 이미 chunks_path 경계가 있었고 P006에서는 CLI에 `--chunks`를 노출했다. P006 당시 기본 경로/프롬프트/모델/인용 검증은 변경하지 않았다. 이후 P009의 ID-only 인용 계약은 기본 corpus와 명시 source-v2 corpus에 함께 적용된다. 새 chunks와 기존 index-v1을 섞으면 stale index로 거부한다. BM25도 `--chunks ... --retriever bm25`로 동일 corpus를 읽는다. 과거 15청크 qrels를 새 corpus에 넣지 않는다.
 
 처음부터 재현할 때는 이 큰 단계 폴더 안에서 아래를 실행한다. 이미 존재하는 출력 경로는 거부하므로 다음 실험은 새로운 이름을 쓴다.
 

@@ -8,12 +8,17 @@
 
 | 주제 | 새로 작성한 편집 원문 | 모의 Drive의 대표 입력 |
 | --- | --- | --- |
-| 생일 특별휴가 | authoring/birthday.md | output/pdf/birthday.pdf (2페이지) |
-| 연차 | authoring/annual.md | output/pdf/annual.pdf (2페이지) |
-| 재택근무 | authoring/remote.md | 같은 Markdown |
-| 복지 | authoring/welfare.md | 같은 Markdown |
-| 교육 휴가 | authoring/training.md | 같은 Markdown |
-| 출장 | authoring/travel.md | 같은 Markdown |
+| 생일 특별휴가 | [birthday.md](authoring/birthday.md) | [birthday.pdf](output/pdf/birthday.pdf) (2페이지) |
+| 연차 | [annual.md](authoring/annual.md) | [annual.pdf](output/pdf/annual.pdf) (2페이지) |
+| 재택근무 | [remote.md](authoring/remote.md) | 같은 Markdown |
+| 복지 | [welfare.md](authoring/welfare.md) | 같은 Markdown |
+| 교육 휴가 | [training.md](authoring/training.md) | 같은 Markdown |
+| 출장 | [travel.md](authoring/travel.md) | 같은 Markdown |
+
+상위 작업공간에서 이 문서의 위치는 `hr_rag_dev/1. Naive RAG/data/source-v2/README.md`다.
+연차 문서를 따라가려면 위 편집 원문·PDF에서 [추출한 문서 텍스트](extracted/canonical/hr-v2-annual.txt),
+[분할된 청크](fixed-400-80/chunks.jsonl), [청크별 원문 위치](fixed-400-80/source-map.json) 순서로 확인한다.
+현재 UI 기본 입력인 [기존 수작성 청크](../synthetic/chunks.jsonl)와는 별도 데이터다.
 
 `drive-fixture-catalog.json`이 명시한 여섯 파일만 수집한다. 앞의 두 문서는 PDF를 선택하므로 대응 Markdown을 같은 corpus에 중복 수록하지 않는다. 임의 폴더 재귀 수집은 없다. PDF의 `<!-- pagebreak -->`는 작성용 구분자이며 PDF 본문에는 출력하지 않는다. PDF 생성 환경은 `pdf-authoring.json`에 기록했고, 한국어 글꼴 파일은 저장소에 복사하지 않았다.
 

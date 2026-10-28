@@ -1,5 +1,6 @@
 """Locked local generation boundary. No retrieval or evaluation labels."""
 import hashlib
+from copy import deepcopy
 import json
 from pathlib import Path
 from runtime_common import STAGE, VERSION, LocalAPI
@@ -8,15 +9,32 @@ import evaluate_retrieval as evaluation
 MODEL = 'qwen3:4b'
 LOCK = STAGE / 'generation-lock.json'
 OPTIONS = {'temperature': 0, 'seed': 42, 'num_ctx': 8192, 'num_predict': 1024}
+SCHEMA_VERSION = 2
+RESPONSE_CONTRACT = 'id_only_v2'
+CITATION_MODE = 'full_chunk_from_transmitted_context'
+DYNAMIC_RULE = 'chunk_id.enum=transmitted_context_ids; empty_contexts=citations.maxItems:0'
 SCHEMA = {'type': 'object', 'additionalProperties': False,
           'required': ['status', 'answer', 'citations'],
           'properties': {'status': {'type': 'string', 'enum': ['answered', 'abstained']},
                          'answer': {'type': 'string', 'minLength': 1},
                          'citations': {'type': 'array', 'items': {
                              'type': 'object', 'additionalProperties': False,
-                             'required': ['chunk_id', 'quote'], 'properties': {
-                                 'chunk_id': {'type': 'string', 'minLength': 1},
-                                 'quote': {'type': 'string', 'minLength': 1}}}}}}
+                             'required': ['chunk_id'], 'properties': {
+                                 'chunk_id': {'type': 'string', 'minLength': 1}}}}}}
+
+
+def request_for_ids(lock, allowed_ids):
+    """Fresh request; neither the lock nor its schema template is mutated."""
+    ids = list(allowed_ids)
+    if any(not isinstance(cid, str) or not cid.strip() for cid in ids) or len(set(ids)) != len(ids):
+        raise ValueError('invalid or duplicate transmitted context IDs')
+    request = deepcopy(lock['request'])
+    citations = request['format']['properties']['citations']
+    if ids:
+        citations['items']['properties']['chunk_id']['enum'] = ids
+    else:
+        citations['maxItems'] = 0
+    return request
 
 
 def digest_text(value):
@@ -77,10 +95,12 @@ def normalized_model(value):
 
 def load_generation_lock(path=LOCK):
     lock = strict_json(Path(path).read_text())
-    if (lock['ollama_version'] != VERSION or lock['model']['name'] != MODEL
+    if (lock.get('schema_version') != SCHEMA_VERSION or lock.get('response_contract') != RESPONSE_CONTRACT
+            or lock.get('dynamic_schema_rule') != DYNAMIC_RULE
+            or lock['ollama_version'] != VERSION or lock['model']['name'] != MODEL
             or lock['model']['details']['quantization_level'] != 'Q4_K_M'
             or lock['request'] != {'stream': False, 'think': False, 'options': OPTIONS, 'format': SCHEMA}):
-        raise ValueError('generation lock differs from P004 contract')
+        raise ValueError('generation lock differs from P009 contract')
     return lock
 
 
@@ -95,10 +115,13 @@ class Generator:
         if normalized_model(metadata(self.api)) != normalized_model(self.lock['model']):
             raise ValueError('generation model metadata/digest differs from lock')
 
-    def generate(self, messages):
+    def generate(self, messages, allowed_ids, *, on_send=None):
+        request = request_for_ids(self.lock, allowed_ids)
         self.check()
+        if on_send is not None:
+            on_send(deepcopy(request))
         result = self.api.call('/api/chat', {'model': MODEL, 'messages': messages,
-                                           **self.lock['request']})
+                                           **request})
         message = result.get('message')
         if (result.get('model') != MODEL or result.get('done') is not True
                 or not isinstance(message, dict) or message.get('role') != 'assistant'

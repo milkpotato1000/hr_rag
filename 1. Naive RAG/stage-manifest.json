@@ -7,7 +7,8 @@
     "P003",
     "P004",
     "P005",
-    "P006"
+    "P006",
+    "P009"
   ],
   "source_path_basis": "repository-relative",
   "destination_path_basis": "stage-relative",
@@ -70,5 +71,12 @@
     "chunk_manifest": "data/source-v2/fixed-400-80/manifest.json",
     "evaluation": "data/source-v2/evaluation/source-evaluation.json",
     "note": "New fictional originals; existing synthetic corpus and migration history preserved."
+  },
+  "generation_contract": {
+    "plan_id": "P009",
+    "response_contract": "id_only_v2",
+    "citation_mode": "full_chunk_from_transmitted_context",
+    "prompt": "prompts/system-v3.txt",
+    "lock": "generation-lock.json"
   }
 }

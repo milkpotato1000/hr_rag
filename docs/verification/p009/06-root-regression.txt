@@ -1,0 +1,24 @@
+test_all_relevance_grades_and_large_k (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_atomic_write_error_cleans_temporary_file (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_contract_independent_graded_examples_and_macro (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_duplicate_record_ids (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_hashes_version_and_byte_determinism (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_input_read_error_preserves_output (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_invalid_grades_and_unknown_qrel_reference (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_k_must_be_positive_unique_integers (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_macro_is_query_mean_and_unanswerable_is_excluded (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_malformed_and_empty_jsonl (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_missing_and_invalid_chunk_fields (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_missing_and_invalid_query_fields (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_missing_unknown_duplicate_and_invalid_rankings (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_no_unanswerable_ratios_are_null (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_only_unanswerable_has_null_macro (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_output_cannot_alias_input_or_hardlink_or_symlink (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_relevant_first_kth_outside_k_empty_and_short (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_synthetic_corpus_and_curated_example (test_evaluate_retrieval.RetrievalCLITests) ... ok
+test_unanswerable_requires_empty_mapping_even_for_grade_zero (test_evaluate_retrieval.RetrievalCLITests) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 12.783s
+
+OK

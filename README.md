@@ -63,9 +63,13 @@ dev에서 `python3 scripts/contract_guard.py install`로 로컬 훅을 설치합
 
 ## 현재 제품 실행 위치
 
+원문 파일 위치는 [원문 Markdown·PDF 안내](<1. Naive RAG/data/source-v2/README.md>)에서 확인합니다.
+현재 화면의 기본 입력은 [기존 수작성 청크 15개](<1. Naive RAG/data/synthetic/chunks.jsonl>)이며,
+원문 v2에서 추출·분할한 [청크 20개](<1. Naive RAG/data/source-v2/fixed-400-80/chunks.jsonl>)는 별도 데이터입니다.
+
 평가 기반·BM25·실제 로컬 Dense 검색은 큰 단계 [1. Naive RAG](<1. Naive RAG/README.md>) 안에 모았습니다.
 P번호마다 새 번호 폴더를 만들지 않습니다. 답변 생성도 같은 큰 단계에서 실행합니다.
-현재 구현 범위는 P001 평가 기반, P002 BM25, P003 로컬 Dense, P004 실제 Qwen 답변·인용·보류입니다. P005 한국어 질문 화면과 학습 가이드까지 연결했습니다.
+현재 구현 범위는 P001 평가 기반, P002 BM25, P003 로컬 Dense, P004 실제 Qwen 답변·인용·보류입니다. P005 한국어 질문 화면·학습 가이드, P006 원문 추출·청킹, P009 근거 ID 선택·코드 원문 인용까지 연결했습니다.
 
 ```sh
 cd '1. Naive RAG'

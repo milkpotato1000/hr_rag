@@ -1,0 +1,11 @@
+{
+  "answer": "재택근무일과 휴가일에는 식대 지원이 되지 않습니다.",
+  "citations": [
+    {
+      "text": "[가상 HR 규정: 실제 회사 정책이 아님] 사무실 출근일에는 식대 1만 원을 지원한다. 재택근무일과 휴가일에는 이 식대를 지원하지 않는다.",
+      "whiteSpace": "pre-wrap"
+    }
+  ],
+  "explanation": "모델이 근거 ID를 선택하고, 코드는 전달된 청크 원문 전체를 인용합니다.답변의 의미·조건 누락은 원문과 별도로 대조하세요.",
+  "metadata": "검색: bm25 · top-k 5 · 생성 호출 1회모델: qwen3:4b · digest 359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7프롬프트: system-v3 · 4115c9cda0a2594c9d079d96579cd05c0ab6b5db6d6563305ccffb07c6d12eda설정: {\"temperature\":0,\"seed\":42,\"num_ctx\":8192,\"num_predict\":1024} · think=false · stream=false질문 임베딩 0.000 s · 검색 0.001 s · 생성 모델 로드 0.001 s인용 구조: 통과 · 의미 지지: 자동 판정하지 않음"
+}

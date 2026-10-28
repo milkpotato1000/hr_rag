@@ -1,0 +1,35 @@
+--- generation-lock-before.json
++++ generation-lock.json
+@@ -1,5 +1,5 @@
+ {
+-  "schema_version": 1,
++  "schema_version": 2,
+   "ollama_version": "0.40.8",
+   "model": {
+     "name": "qwen3:4b",
+@@ -95,15 +95,10 @@
+             "type": "object",
+             "additionalProperties": false,
+             "required": [
+-              "chunk_id",
+-              "quote"
++              "chunk_id"
+             ],
+             "properties": {
+               "chunk_id": {
+-                "type": "string",
+-                "minLength": 1
+-              },
+-              "quote": {
+                 "type": "string",
+                 "minLength": 1
+               }
+@@ -112,5 +107,7 @@
+         }
+       }
+     }
+-  }
++  },
++  "response_contract": "id_only_v2",
++  "dynamic_schema_rule": "chunk_id.enum=transmitted_context_ids; empty_contexts=citations.maxItems:0"
+ }

@@ -16,7 +16,7 @@ from runtime_common import STAGE
 CHUNKS = rag.evaluation.validate_chunks(rag.evaluation.read_jsonl(rag.CHUNKS)[0])
 CID = 'birthday-eligibility'
 ANSWER = {'status': 'answered', 'answer': '입사 후 3개월이 지나야 하며 수습 중이면 제외됩니다.',
-          'citations': [{'chunk_id': CID, 'quote': '수습 중인 직원은 대상에서 제외한다.'}]}
+          'citations': [{'chunk_id': CID}]}
 
 
 class FakeGenerator:
@@ -26,7 +26,8 @@ class FakeGenerator:
         self.lock = {'model': {'name': 'fixture-only', 'digest': 'test-only'}, 'ollama_version': 'test',
                      'request': {'stream': False, 'think': False, 'options': generation.OPTIONS, 'format': generation.SCHEMA}}
 
-    def generate(self, messages):
+    def generate(self, messages, allowed_ids, *, on_send=None):
+        if on_send: on_send(generation.request_for_ids(self.lock, allowed_ids))
         self.calls += 1
         self.messages = copy.deepcopy(messages)
         if self.exception:
@@ -89,7 +90,6 @@ class PipelineTests(unittest.TestCase):
         for cid in ['unknown', 'birthday-window']:
             value = copy.deepcopy(ANSWER)
             value['citations'][0]['chunk_id'] = cid
-            value['citations'][0]['quote'] = CHUNKS.get(cid, {}).get('text', 'unknown')
             result, _ = self.call(value, top_k=1)
             self.assertEqual(result['reason'], 'invalid_model_response')
             self.assertEqual(result['citations'], [])
@@ -120,7 +120,7 @@ class PipelineTests(unittest.TestCase):
                 self.assertIn('raw_content', result['trace'])
 
     def test_model_abstention_fixed_message_clear_citations(self):
-        result, _ = self.call({**ANSWER, 'status': 'abstained', 'answer': '문서에 없으니 제도 없음'})
+        result, _ = self.call({**ANSWER, 'status': 'abstained', 'answer': '문서에 없으니 제도 없음', 'citations': []})
         self.assertEqual(result['answer'], rag.ABSTENTION)
         self.assertEqual(result['citations'], [])
         self.assertEqual(result['reason'], 'model_abstained')
@@ -190,12 +190,12 @@ class GenerationBoundaryTests(unittest.TestCase):
         response = {'model': generation.MODEL, 'done': True, 'message': {'role': 'assistant', 'content': '{}'},
                     'eval_count': 5, 'unknown': 'not saved'}
         g, api = self.generator(response)
-        raw, obs = g.generate([{'role': 'user', 'content': 'q'}])
+        raw, obs = g.generate([{'role': 'user', 'content': 'q'}], ['context-a'])
         body = api.call.call_args.args[1]
         self.assertFalse(body['stream'])
         self.assertFalse(body['think'])
         self.assertEqual(body['options'], {'temperature': 0, 'seed': 42, 'num_ctx': 8192, 'num_predict': 1024})
-        self.assertEqual(body['format'], generation.SCHEMA)
+        self.assertEqual(body['format']['properties']['citations']['items']['properties']['chunk_id']['enum'], ['context-a'])
         self.assertEqual((raw, obs), ('{}', {'eval_count': 5}))
         self.assertEqual(api.call.call_count, 1)
 
@@ -208,7 +208,7 @@ class GenerationBoundaryTests(unittest.TestCase):
         for response in responses:
             g, _ = self.generator(response)
             with self.assertRaises(ValueError):
-                g.generate([])
+                g.generate([], [])
 
 
 if __name__ == '__main__':

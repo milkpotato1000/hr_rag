@@ -7,7 +7,7 @@ from pathlib import Path
 import sys
 import threading
 
-from generation import load_generation_lock, strict_json
+from generation import load_generation_lock, strict_json, CITATION_MODE, RESPONSE_CONTRACT
 from rag import ask, INDEX, validate_input, PROMPTS
 from runtime_common import STAGE, sha256
 import runtime
@@ -70,7 +70,8 @@ class Handler(BaseHTTPRequestHandler):
                 lock = load_generation_lock()
                 self.send(200, {'runtime': runtime.status(), 'model': lock['model']['name'],
                     'digest': lock['model']['digest'], 'options': lock['request']['options'],
-                    'prompt_version': 'system-v2', 'prompt_sha256': sha256(PROMPTS / 'system-v2.txt'),
+                    'prompt_version': 'system-v3', 'prompt_sha256': sha256(PROMPTS / 'system-v3.txt'),
+                    'citation_mode': CITATION_MODE, 'response_contract': RESPONSE_CONTRACT,
                     'index_files_present': (INDEX / 'index-manifest.json').is_file(),
                     'note': 'lock/파일 상태이며 실제 질의 시 모델·색인 정합성을 다시 검사합니다.'})
             except (OSError, ValueError, KeyError, RuntimeError) as exc:

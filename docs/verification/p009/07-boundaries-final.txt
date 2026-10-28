@@ -1,0 +1,16 @@
+test_bad_context_is_execution_error_before_provider (test_id_citations.IDContractTests.test_bad_context_is_execution_error_before_provider) ... ok
+test_empty_schema_and_reject_bad_allowlists (test_id_citations.IDContractTests.test_empty_schema_and_reject_bad_allowlists) ... ok
+test_enum_excludes_retrieved_not_transmitted (test_id_citations.IDContractTests.test_enum_excludes_retrieved_not_transmitted) ... ok
+test_full_original_bytes_and_selected_order (test_id_citations.IDContractTests.test_full_original_bytes_and_selected_order) ... ok
+test_lock_version_and_rules_are_enforced (test_id_citations.IDContractTests.test_lock_version_and_rules_are_enforced) ... ok
+test_no_context_does_not_claim_schema_was_sent (test_id_citations.IDContractTests.test_no_context_does_not_claim_schema_was_sent) ... ok
+test_preflight_failure_does_not_claim_dispatch (test_id_citations.IDContractTests.test_preflight_failure_does_not_claim_dispatch) ... ok
+test_provider_spy_schema_trace_and_concurrent_isolation (test_id_citations.IDContractTests.test_provider_spy_schema_trace_and_concurrent_isolation) ... ok
+test_reject_ids_duplicates_extra_fields_and_abstention_citations (test_id_citations.IDContractTests.test_reject_ids_duplicates_extra_fields_and_abstention_citations) ... ok
+test_setup_reuses_bytes_probes_empty_context_and_refuses_metadata_change (test_id_citations.IDContractTests.test_setup_reuses_bytes_probes_empty_context_and_refuses_metadata_change) ... ok
+test_snapshot_survives_file_and_selected_list_mutation (test_id_citations.IDContractTests.test_snapshot_survives_file_and_selected_list_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.015s
+
+OK

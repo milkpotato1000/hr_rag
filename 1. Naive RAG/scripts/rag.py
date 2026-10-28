@@ -4,11 +4,12 @@ import math
 import socket
 from pathlib import Path
 from time import perf_counter
+from types import MappingProxyType
 from urllib.error import URLError
 
 import evaluate_retrieval as evaluation
 from runtime_common import STAGE, RUNTIME, LocalAPI, load_lock, sha256
-from generation import Generator, digest_text, strict_json
+from generation import Generator, digest_text, strict_json, CITATION_MODE, RESPONSE_CONTRACT
 from run_bm25_baseline import BM25Index
 
 ABSTENTION = '제공된 문서만으로 확인할 수 없어 답변을 보류합니다. 인사 담당자 확인이 필요합니다.'
@@ -86,7 +87,21 @@ def select_context(candidates, chunks, top_k, budget):
     return selected, excluded, used
 
 
+def context_snapshot(contexts):
+    """Keep private immutable values from exactly this request's selected context."""
+    seen, snapshot = set(), []
+    for chunk in contexts:
+        if any(not isinstance(chunk.get(key), str) or not chunk[key].strip() for key in FIELDS):
+            raise ValueError('invalid transmitted context field/text')
+        if chunk['chunk_id'] in seen:
+            raise ValueError('duplicate transmitted context ID')
+        seen.add(chunk['chunk_id'])
+        snapshot.append(MappingProxyType({key: chunk[key] for key in FIELDS}))
+    return tuple(snapshot)
+
+
 def validate_answer(raw, contexts):
+    source = {chunk['chunk_id']: chunk for chunk in context_snapshot(contexts)}
     try:
         value = strict_json(raw)
     except (ValueError, TypeError) as exc:
@@ -103,19 +118,21 @@ def validate_answer(raw, contexts):
         return None, errors + ['citations must be an array']
     if value['status'] == 'answered' and not citations:
         errors.append('answered requires at least one citation')
-    source = {chunk['chunk_id']: chunk for chunk in contexts}
-    enriched = []
+    if value['status'] == 'abstained' and citations:
+        errors.append('abstained requires empty citations')
+    enriched, seen = [], set()
     for citation in citations:
-        if not isinstance(citation, dict) or set(citation) != {'chunk_id', 'quote'}:
-            errors.append('citation must contain exactly chunk_id and quote; model metadata is forbidden')
+        if not isinstance(citation, dict) or set(citation) != {'chunk_id'}:
+            errors.append('citation must contain exactly chunk_id; model quote/metadata is forbidden')
             continue
-        cid, quote = citation['chunk_id'], citation['quote']
+        cid = citation['chunk_id']
         if not isinstance(cid, str) or cid not in source:
             errors.append('citation is outside transmitted contexts')
-        elif not isinstance(quote, str) or not quote.strip() or quote not in source[cid]['text']:
-            errors.append('quote is not a nonempty exact substring of source text')
+        elif cid in seen:
+            errors.append('duplicate citation ID')
         else:
-            enriched.append({**citation, **{key: source[cid][key] for key in
+            seen.add(cid)
+            enriched.append({'chunk_id': cid, 'quote': source[cid]['text'], **{key: source[cid][key] for key in
                                            ('source', 'title', 'version', 'document_id')}})
     if errors:
         return None, errors
@@ -131,6 +148,8 @@ def ask(question, retriever='dense', top_k=5, index_dir=INDEX, max_context_chars
     trace = {'question': question, 'retriever': retriever,
              'settings': {'top_k': top_k, 'max_context_chars': max_context_chars, 'timeout_seconds': timeout_seconds},
              'candidates': [], 'contexts': [], 'excluded': [], 'validation': [],
+             'citation_mode': CITATION_MODE, 'response_contract': RESPONSE_CONTRACT,
+             'semantic_support': 'not_automatically_evaluated',
              'generation_calls': 0, 'timings_ms': {'retrieval': 0, 'context': 0, 'generation': 0}}
     phase, phase_start = 'input', started
     try:
@@ -148,15 +167,17 @@ def ask(question, retriever='dense', top_k=5, index_dir=INDEX, max_context_chars
                                for row in candidates]
         phase, phase_start = 'context', perf_counter()
         contexts, excluded, used = select_context(candidates, chunks, top_k, max_context_chars)
+        snapshot = context_snapshot(contexts)
+        contexts = [dict(chunk) for chunk in snapshot]
         trace.update(contexts=contexts, excluded=excluded, context_chars=used)
-        system = (PROMPTS / 'system-v2.txt').read_text()
+        system = (PROMPTS / 'system-v3.txt').read_text()
         template = strict_json((PROMPTS / 'context-v1.json').read_text())
         if tuple(template['fields']) != FIELDS:
             raise ValueError('unsupported context template fields')
         messages = [{'role': 'system', 'content': system},
                     {'role': 'user', 'content': json.dumps({'question': question, 'contexts': contexts},
                                                           ensure_ascii=False, separators=(',', ':'))}]
-        trace['prompt'] = {'system_version': 'system-v2', 'context_version': template['version'],
+        trace['prompt'] = {'system_version': 'system-v3', 'context_version': template['version'],
                            'system_sha256': digest_text(system),
                            'context_template_sha256': sha256(PROMPTS / 'context-v1.json'),
                            'messages': messages, 'messages_sha256': digest_text(json.dumps(messages, ensure_ascii=False))}
@@ -167,22 +188,28 @@ def ask(question, retriever='dense', top_k=5, index_dir=INDEX, max_context_chars
             phase, phase_start = 'generation', perf_counter()
             provider = generator if generator is not None else Generator(timeout=timeout_seconds)
             trace['generation'] = {'model': provider.lock['model']['name'], 'digest': provider.lock['model']['digest'],
-                                   'ollama_version': provider.lock['ollama_version'], 'request': provider.lock['request']}
+                                   'ollama_version': provider.lock['ollama_version'], 'request': None,
+                                   'request_dispatched': False, 'allowed_ids': [c['chunk_id'] for c in snapshot]}
+            def record_request(request):
+                trace['generation'].update(request=request, request_dispatched=True,
+                    schema_sha256=digest_text(json.dumps(request['format'], ensure_ascii=False, sort_keys=True)))
             trace['generation_calls'] = 1
             try:
-                raw, observations = provider.generate(messages)
+                raw, observations = provider.generate(messages, [c['chunk_id'] for c in snapshot], on_send=record_request)
             except (OSError, ValueError, KeyError) as exc:
                 raise ProviderError(exc) from exc
             trace['timings_ms']['generation'] = (perf_counter() - phase_start) * 1000
             trace['raw_content'] = raw
             trace['generation']['observations'] = observations
             phase = 'validation'
-            result, errors = validate_answer(raw, contexts)
+            result, errors = validate_answer(raw, snapshot)
             trace['validation'] = errors
             trace['citation_structure_valid'] = not errors
             trace['semantic_support'] = 'not_automatically_evaluated'
             if errors:
                 result = {'status': 'abstained', 'answer': ABSTENTION, 'citations': [], 'reason': 'invalid_model_response'}
+            trace['citation_assembly'] = [{'chunk_id': c['chunk_id'], 'origin': 'request_context_snapshot',
+                'text_sha256': digest_text(c['quote'])} for c in result['citations']]
     except (OSError, ValueError, KeyError, TypeError, RuntimeError, ImportError, ProviderError) as exc:
         if phase in trace['timings_ms']:
             trace['timings_ms'][phase] = (perf_counter() - phase_start) * 1000

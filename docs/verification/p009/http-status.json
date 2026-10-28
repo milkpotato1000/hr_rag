@@ -1,0 +1,23 @@
+{
+  "runtime": {
+    "state": "running",
+    "owned": true,
+    "pid": 52978,
+    "endpoint": "http://127.0.0.1:11434",
+    "version": "0.40.8"
+  },
+  "model": "qwen3:4b",
+  "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 1024
+  },
+  "prompt_version": "system-v3",
+  "prompt_sha256": "4115c9cda0a2594c9d079d96579cd05c0ab6b5db6d6563305ccffb07c6d12eda",
+  "citation_mode": "full_chunk_from_transmitted_context",
+  "response_contract": "id_only_v2",
+  "index_files_present": true,
+  "note": "lock/파일 상태이며 실제 질의 시 모델·색인 정합성을 다시 검사합니다."
+}
