@@ -1,0 +1,20 @@
+{
+  "reportlab_version": "4.4.9",
+  "font_name": "AppleGothic.ttf",
+  "font_sha256": "def69dc2b5e12746049a5dcb189f95341ec460589f47587938567313af3020b1",
+  "font_note": "Local authoring font; embedded subset in PDF, font file not distributed.",
+  "created_on": "2026-10-23",
+  "source_history": "New fictional authoring, not recovered historical originals.",
+  "pdfs": [
+    {
+      "path": "output/pdf/birthday.pdf",
+      "pages": 2,
+      "sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a"
+    },
+    {
+      "path": "output/pdf/annual.pdf",
+      "pages": 2,
+      "sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc"
+    }
+  ]
+}

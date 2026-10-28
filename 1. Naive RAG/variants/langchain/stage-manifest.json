@@ -1,0 +1,82 @@
+{
+  "stage_number": 1,
+  "title": "Naive RAG",
+  "plan_ids": [
+    "P001",
+    "P002",
+    "P003",
+    "P004",
+    "P005",
+    "P006",
+    "P009"
+  ],
+  "source_path_basis": "repository-relative",
+  "destination_path_basis": "stage-relative",
+  "files": [
+    {
+      "source_stage": "legacy-root",
+      "source_commit": "4225bb1d6b9bd017a06e81125c4fce9ed1d7f227",
+      "source_path": "scripts/evaluate_retrieval.py",
+      "destination_path": "scripts/evaluate_retrieval.py",
+      "copied_sha256": "6b863f2c7557a54113ceb5883e0ba60594a0161d5a706c4a58e26c9a47cb0b11"
+    },
+    {
+      "source_stage": "legacy-root",
+      "source_commit": "4225bb1d6b9bd017a06e81125c4fce9ed1d7f227",
+      "source_path": "tests/test_evaluate_retrieval.py",
+      "destination_path": "tests/test_evaluate_retrieval.py",
+      "copied_sha256": "15bf716fd25eaf524f041b43027c96d4851ff22106daa608c739e9712a167555"
+    },
+    {
+      "source_stage": "legacy-root",
+      "source_commit": "4225bb1d6b9bd017a06e81125c4fce9ed1d7f227",
+      "source_path": "data/synthetic/README.md",
+      "destination_path": "data/synthetic/README.md",
+      "copied_sha256": "c14998fe52af29a9df5264a89d4ec7c03eda3287d7b81e2b2dca51f04e3a12a8"
+    },
+    {
+      "source_stage": "legacy-root",
+      "source_commit": "4225bb1d6b9bd017a06e81125c4fce9ed1d7f227",
+      "source_path": "data/synthetic/chunks.jsonl",
+      "destination_path": "data/synthetic/chunks.jsonl",
+      "copied_sha256": "53d262cb4d11ba73bd08dd559676d6df002fb46ef15afa5f94e01508620abedc"
+    },
+    {
+      "source_stage": "legacy-root",
+      "source_commit": "4225bb1d6b9bd017a06e81125c4fce9ed1d7f227",
+      "source_path": "data/synthetic/queries.jsonl",
+      "destination_path": "data/synthetic/queries.jsonl",
+      "copied_sha256": "f602de0d04af57fe1d6342d4d89aabd4237aee7df12411464654125c9e3d5dee"
+    },
+    {
+      "source_stage": "legacy-root",
+      "source_commit": "4225bb1d6b9bd017a06e81125c4fce9ed1d7f227",
+      "source_path": "data/synthetic/example_rankings.jsonl",
+      "destination_path": "data/synthetic/example_rankings.jsonl",
+      "copied_sha256": "6492992bd1bc0062c6aa5224c4aef434a640358d7c350106c08fa732692cc586"
+    }
+  ],
+  "migration": {
+    "previous_location": "1. 검색 평가 기반",
+    "preserved_at_commit": "413c82eecbdbb01393420ab371e9ba3c6f87af18",
+    "reason": "사용자 정정: RAG 방식별 큰 단위; P001/P002는 같은 큰 단계의 세부 작업"
+  },
+  "source_v2": {
+    "newly_authored": true,
+    "source_provider": "google_drive",
+    "source_mode": "fixture",
+    "catalog": "data/source-v2/drive-fixture-catalog.json",
+    "snapshot_manifest": "data/source-v2/snapshot/manifest.json",
+    "extraction_manifest": "data/source-v2/extracted/manifest.json",
+    "chunk_manifest": "data/source-v2/fixed-400-80/manifest.json",
+    "evaluation": "data/source-v2/evaluation/source-evaluation.json",
+    "note": "New fictional originals; existing synthetic corpus and migration history preserved."
+  },
+  "generation_contract": {
+    "plan_id": "P009",
+    "response_contract": "id_only_v2",
+    "citation_mode": "full_chunk_from_transmitted_context",
+    "prompt": "prompts/system-v3.txt",
+    "lock": "generation-lock.json"
+  }
+}

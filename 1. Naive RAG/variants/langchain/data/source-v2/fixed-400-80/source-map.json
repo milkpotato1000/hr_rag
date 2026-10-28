@@ -1,0 +1,916 @@
+{
+  "schema_version": 1,
+  "offset_unit": "Unicode code point [start,end)",
+  "page_separator": "\n\n",
+  "separator_note": "Page separators belong to canonical text, not either PDF page.",
+  "chunks": [
+    {
+      "chunk_id": "fixed-797b7328ebbda73ffdf20adf3f00d837f6102861b1b27660b9e4d62c05b30908",
+      "document_id": "hr-v2-birthday",
+      "document_version": "2",
+      "original_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a",
+      "canonical_sha256": "12fde5e7fbb62369e8ace4341efd78194e04a9de4ba9dcf0196db98efe4c1d28",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 0,
+      "end": 400,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-birthday",
+        "name": "birthday.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a.pdf",
+        "downloaded_content_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-birthday/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a?pages=1&chars=0-400",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 0,
+          "canonical_end": 400,
+          "page_start": 0,
+          "page_end": 400,
+          "page_text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f",
+          "raw_text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f"
+        }
+      ],
+      "text_sha256": "e3c40ebe08cc2f3e7d221d8a5aa4e5d50bda763aac44ac77821e7db28059c2ba"
+    },
+    {
+      "chunk_id": "fixed-04fa13ffc75fede3a00f10fd0e2e4b105f3cbc1bdc717828b86d0aa410e32309",
+      "document_id": "hr-v2-birthday",
+      "document_version": "2",
+      "original_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a",
+      "canonical_sha256": "12fde5e7fbb62369e8ace4341efd78194e04a9de4ba9dcf0196db98efe4c1d28",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 320,
+      "end": 720,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-birthday",
+        "name": "birthday.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a.pdf",
+        "downloaded_content_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-birthday/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a?pages=1&chars=320-720",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 320,
+          "canonical_end": 720,
+          "page_start": 320,
+          "page_end": 720,
+          "page_text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f",
+          "raw_text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f"
+        }
+      ],
+      "text_sha256": "5b52a4090eb5e75b48656d79c372672687d2aff32dd2f659761eed34204685a1"
+    },
+    {
+      "chunk_id": "fixed-cea44c52b0443bff1ef7a039fab767c5748f1bdfabd16b5f58a8df3ad9adfba0",
+      "document_id": "hr-v2-birthday",
+      "document_version": "2",
+      "original_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a",
+      "canonical_sha256": "12fde5e7fbb62369e8ace4341efd78194e04a9de4ba9dcf0196db98efe4c1d28",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 640,
+      "end": 1040,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-birthday",
+        "name": "birthday.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a.pdf",
+        "downloaded_content_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-birthday/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a?pages=1&chars=640-1040",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 640,
+          "canonical_end": 1040,
+          "page_start": 640,
+          "page_end": 1040,
+          "page_text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f",
+          "raw_text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f"
+        }
+      ],
+      "text_sha256": "fba6263b49bc4d66a460c13128431dd7e5b3c729154bee0014f61b8f5922e228"
+    },
+    {
+      "chunk_id": "fixed-28bc577633f449922a286e898a98d801b7545d486c676c693519342eca41b261",
+      "document_id": "hr-v2-birthday",
+      "document_version": "2",
+      "original_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a",
+      "canonical_sha256": "12fde5e7fbb62369e8ace4341efd78194e04a9de4ba9dcf0196db98efe4c1d28",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 960,
+      "end": 1360,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-birthday",
+        "name": "birthday.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a.pdf",
+        "downloaded_content_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-birthday/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a?pages=1,2&chars=960-1360",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 960,
+          "canonical_end": 1151,
+          "page_start": 960,
+          "page_end": 1151,
+          "page_text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f",
+          "raw_text_sha256": "6d597c644f49f423c294861f9c71121720a3505b753b885314519cfd0a11ac9f"
+        },
+        {
+          "page_number": 2,
+          "canonical_start": 1153,
+          "canonical_end": 1360,
+          "page_start": 0,
+          "page_end": 207,
+          "page_text_sha256": "d5d346787b13d98ae9540ce45abb3e2753657183862529562c810b4afc350fe3",
+          "raw_text_sha256": "d5d346787b13d98ae9540ce45abb3e2753657183862529562c810b4afc350fe3"
+        }
+      ],
+      "text_sha256": "c2a1c668495cd3c962115aca2a97a701849a7391ad859e3faedef0a505ea4c40"
+    },
+    {
+      "chunk_id": "fixed-8296dade92894f3c9e1cb6f7ebc7a698710e3608db5c8f6edb43373463a93f2f",
+      "document_id": "hr-v2-birthday",
+      "document_version": "2",
+      "original_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a",
+      "canonical_sha256": "12fde5e7fbb62369e8ace4341efd78194e04a9de4ba9dcf0196db98efe4c1d28",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 1280,
+      "end": 1680,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-birthday",
+        "name": "birthday.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a.pdf",
+        "downloaded_content_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-birthday/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a?pages=2&chars=1280-1680",
+      "pages": [
+        {
+          "page_number": 2,
+          "canonical_start": 1280,
+          "canonical_end": 1680,
+          "page_start": 127,
+          "page_end": 527,
+          "page_text_sha256": "d5d346787b13d98ae9540ce45abb3e2753657183862529562c810b4afc350fe3",
+          "raw_text_sha256": "d5d346787b13d98ae9540ce45abb3e2753657183862529562c810b4afc350fe3"
+        }
+      ],
+      "text_sha256": "08bdd077bd1d51fa20de2c4e2dd8baab54481a18a0b6ae88d1d735d639d9b344"
+    },
+    {
+      "chunk_id": "fixed-d199e55b7801c08f7ff2b5af0cb0a65614e6e813ec39d2ef2ed23a0610989063",
+      "document_id": "hr-v2-birthday",
+      "document_version": "2",
+      "original_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a",
+      "canonical_sha256": "12fde5e7fbb62369e8ace4341efd78194e04a9de4ba9dcf0196db98efe4c1d28",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 1600,
+      "end": 1816,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-birthday",
+        "name": "birthday.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a.pdf",
+        "downloaded_content_sha256": "92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-birthday/92fd989174208329efc1c7b4cd0a484b56a0ba82d2efb5d78a9f1dbcff07225a?pages=2&chars=1600-1816",
+      "pages": [
+        {
+          "page_number": 2,
+          "canonical_start": 1600,
+          "canonical_end": 1816,
+          "page_start": 447,
+          "page_end": 663,
+          "page_text_sha256": "d5d346787b13d98ae9540ce45abb3e2753657183862529562c810b4afc350fe3",
+          "raw_text_sha256": "d5d346787b13d98ae9540ce45abb3e2753657183862529562c810b4afc350fe3"
+        }
+      ],
+      "text_sha256": "a27ac48e83e047cb0cb04cd259a1ef89a055b12a8a9892be93c3a14cbdebc9ac"
+    },
+    {
+      "chunk_id": "fixed-7ea20a3388ea6c91371beb9d63afd979838f97f57b15e3cac11da3dad78b4505",
+      "document_id": "hr-v2-annual",
+      "document_version": "2",
+      "original_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc",
+      "canonical_sha256": "f387c1e1194d0e19565a50235d960605ff18dc28636547929aecc09887ca0f75",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 0,
+      "end": 400,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-annual",
+        "name": "annual.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc.pdf",
+        "downloaded_content_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-annual/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc?pages=1&chars=0-400",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 0,
+          "canonical_end": 400,
+          "page_start": 0,
+          "page_end": 400,
+          "page_text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16",
+          "raw_text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16"
+        }
+      ],
+      "text_sha256": "704c28f54ca281d81164e40a095fde46cc0978a58f054b90809597782d35737b"
+    },
+    {
+      "chunk_id": "fixed-5e1bd8bdc94592d5a6df80baa836fed1fc4f9e4d55fb905bb4e9a6027763a491",
+      "document_id": "hr-v2-annual",
+      "document_version": "2",
+      "original_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc",
+      "canonical_sha256": "f387c1e1194d0e19565a50235d960605ff18dc28636547929aecc09887ca0f75",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 320,
+      "end": 720,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-annual",
+        "name": "annual.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc.pdf",
+        "downloaded_content_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-annual/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc?pages=1&chars=320-720",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 320,
+          "canonical_end": 720,
+          "page_start": 320,
+          "page_end": 720,
+          "page_text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16",
+          "raw_text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16"
+        }
+      ],
+      "text_sha256": "0227b6bc4e342e555e9c319d9d62fa3b7b7f1281958c4e8389c90b6f5b5b22bb"
+    },
+    {
+      "chunk_id": "fixed-84eb369d0c0e0463dd4499b96ae6ec40904ea153c41ebb4b69d6c585eceeefc1",
+      "document_id": "hr-v2-annual",
+      "document_version": "2",
+      "original_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc",
+      "canonical_sha256": "f387c1e1194d0e19565a50235d960605ff18dc28636547929aecc09887ca0f75",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 640,
+      "end": 1040,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-annual",
+        "name": "annual.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc.pdf",
+        "downloaded_content_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-annual/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc?pages=1,2&chars=640-1040",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 640,
+          "canonical_end": 1028,
+          "page_start": 640,
+          "page_end": 1028,
+          "page_text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16",
+          "raw_text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16"
+        },
+        {
+          "page_number": 2,
+          "canonical_start": 1030,
+          "canonical_end": 1040,
+          "page_start": 0,
+          "page_end": 10,
+          "page_text_sha256": "59f9737710bda0d7f4d9948a90e74c516cb30c273453630df7ca37010c842065",
+          "raw_text_sha256": "59f9737710bda0d7f4d9948a90e74c516cb30c273453630df7ca37010c842065"
+        }
+      ],
+      "text_sha256": "fa5087dc8ba50d7415d7c224ec57e5beb63b1702ad493b62e0e6dec392f73092"
+    },
+    {
+      "chunk_id": "fixed-fd66cca7486e20b14ce808fc66639a79af88770dfbd8299576e5ef19c0d1bf1b",
+      "document_id": "hr-v2-annual",
+      "document_version": "2",
+      "original_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc",
+      "canonical_sha256": "f387c1e1194d0e19565a50235d960605ff18dc28636547929aecc09887ca0f75",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 960,
+      "end": 1360,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-annual",
+        "name": "annual.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc.pdf",
+        "downloaded_content_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-annual/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc?pages=1,2&chars=960-1360",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 960,
+          "canonical_end": 1028,
+          "page_start": 960,
+          "page_end": 1028,
+          "page_text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16",
+          "raw_text_sha256": "09d3861421aee3cad2fe8980bc83c99c10704dbf9df91161e6959c3c58c15f16"
+        },
+        {
+          "page_number": 2,
+          "canonical_start": 1030,
+          "canonical_end": 1360,
+          "page_start": 0,
+          "page_end": 330,
+          "page_text_sha256": "59f9737710bda0d7f4d9948a90e74c516cb30c273453630df7ca37010c842065",
+          "raw_text_sha256": "59f9737710bda0d7f4d9948a90e74c516cb30c273453630df7ca37010c842065"
+        }
+      ],
+      "text_sha256": "ec13b7419ea7862fb121216469382d1e03c004ad6dc862ed3850100e0501ec04"
+    },
+    {
+      "chunk_id": "fixed-0168e916e4a3d93292bdcd3ea1c7c61dcfdd645748686b002197902e85d65aae",
+      "document_id": "hr-v2-annual",
+      "document_version": "2",
+      "original_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc",
+      "canonical_sha256": "f387c1e1194d0e19565a50235d960605ff18dc28636547929aecc09887ca0f75",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 1280,
+      "end": 1587,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-annual",
+        "name": "annual.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc.pdf",
+        "downloaded_content_sha256": "259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-annual/259922231a9f6f924a194e43a606e48244fca48fba7897378db9c5961159effc?pages=2&chars=1280-1587",
+      "pages": [
+        {
+          "page_number": 2,
+          "canonical_start": 1280,
+          "canonical_end": 1587,
+          "page_start": 250,
+          "page_end": 557,
+          "page_text_sha256": "59f9737710bda0d7f4d9948a90e74c516cb30c273453630df7ca37010c842065",
+          "raw_text_sha256": "59f9737710bda0d7f4d9948a90e74c516cb30c273453630df7ca37010c842065"
+        }
+      ],
+      "text_sha256": "d418226c625750aa3edc3be53697d7e7484b06bde5b6a4cc0f30af48ee3c2f1a"
+    },
+    {
+      "chunk_id": "fixed-9e1e9a43e9e0006efd3944c1f7b700a48dfab7c69eb623228fc7a465f159b2ed",
+      "document_id": "hr-v2-remote",
+      "document_version": "2",
+      "original_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "canonical_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 0,
+      "end": 400,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-remote",
+        "name": "remote.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4.md",
+        "downloaded_content_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-remote/ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4?pages=1&chars=0-400",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 0,
+          "canonical_end": 400,
+          "page_start": 0,
+          "page_end": 400,
+          "page_text_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+          "raw_text_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4"
+        }
+      ],
+      "text_sha256": "62865ee13f90011f28c49665e07120e4a22b75fb31dce98eaab64a168315727e"
+    },
+    {
+      "chunk_id": "fixed-c47a3e2ff1685a5a2c97471a5922f62e28ad06d0c724d6d8154e1de844adaa4f",
+      "document_id": "hr-v2-remote",
+      "document_version": "2",
+      "original_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "canonical_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 320,
+      "end": 720,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-remote",
+        "name": "remote.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4.md",
+        "downloaded_content_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-remote/ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4?pages=1&chars=320-720",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 320,
+          "canonical_end": 720,
+          "page_start": 320,
+          "page_end": 720,
+          "page_text_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+          "raw_text_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4"
+        }
+      ],
+      "text_sha256": "d6a197fd914e29afa035192f7ff36edc3a1227a790538a14ca5735f8d1bfa39e"
+    },
+    {
+      "chunk_id": "fixed-da02e7b2723e6d8c1f70e4d5afdad491da87af48a272d6dc8e715216c9387299",
+      "document_id": "hr-v2-remote",
+      "document_version": "2",
+      "original_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "canonical_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 640,
+      "end": 725,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-remote",
+        "name": "remote.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4.md",
+        "downloaded_content_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-remote/ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4?pages=1&chars=640-725",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 640,
+          "canonical_end": 725,
+          "page_start": 640,
+          "page_end": 725,
+          "page_text_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+          "raw_text_sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4"
+        }
+      ],
+      "text_sha256": "f621af39b9ca3c71d73841a40fd1e9c5e049150f90c1a5411804ccb457b2dc4f"
+    },
+    {
+      "chunk_id": "fixed-62e36db47a814fc43b02b9ee63280a3079cc8a1ad81032c8bf7dc150d68a46cb",
+      "document_id": "hr-v2-welfare",
+      "document_version": "2",
+      "original_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+      "canonical_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 0,
+      "end": 400,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-welfare",
+        "name": "welfare.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442.md",
+        "downloaded_content_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-welfare/50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442?pages=1&chars=0-400",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 0,
+          "canonical_end": 400,
+          "page_start": 0,
+          "page_end": 400,
+          "page_text_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+          "raw_text_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442"
+        }
+      ],
+      "text_sha256": "8d7bec8994b93ee182d825457ecd2272ace1f0d6866ac301bb973d4380e1b13d"
+    },
+    {
+      "chunk_id": "fixed-f640d75f28109b4e5ec7d66d48eff17228afed9508af5c109b03831a3f0373e5",
+      "document_id": "hr-v2-welfare",
+      "document_version": "2",
+      "original_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+      "canonical_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 320,
+      "end": 575,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-welfare",
+        "name": "welfare.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442.md",
+        "downloaded_content_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-welfare/50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442?pages=1&chars=320-575",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 320,
+          "canonical_end": 575,
+          "page_start": 320,
+          "page_end": 575,
+          "page_text_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+          "raw_text_sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442"
+        }
+      ],
+      "text_sha256": "439bfbaeea5cc9db7ac18e79179066e48c83f03f4e0dd0ae827a56c589e782db"
+    },
+    {
+      "chunk_id": "fixed-d1cbc11a454b9581b8dbdfae851632686551580b3e7a0636f8ca3977a85dd81e",
+      "document_id": "hr-v2-training",
+      "document_version": "2",
+      "original_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+      "canonical_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 0,
+      "end": 400,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-training",
+        "name": "training.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22.md",
+        "downloaded_content_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-training/c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22?pages=1&chars=0-400",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 0,
+          "canonical_end": 400,
+          "page_start": 0,
+          "page_end": 400,
+          "page_text_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+          "raw_text_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22"
+        }
+      ],
+      "text_sha256": "c57c495202c6f797ae0d49837ec1be1836b5945d732ec476679402addb1c0372"
+    },
+    {
+      "chunk_id": "fixed-291fd428221dab56d2dcc1f4dfafb3f0a5646ab7d1575a45d11dc1bbaff9ef03",
+      "document_id": "hr-v2-training",
+      "document_version": "2",
+      "original_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+      "canonical_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 320,
+      "end": 475,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-training",
+        "name": "training.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22.md",
+        "downloaded_content_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-training/c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22?pages=1&chars=320-475",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 320,
+          "canonical_end": 475,
+          "page_start": 320,
+          "page_end": 475,
+          "page_text_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+          "raw_text_sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22"
+        }
+      ],
+      "text_sha256": "f462fecad1fca37bc33f029471b49d1034b3bbcaa49b7243a7a3cda066d67734"
+    },
+    {
+      "chunk_id": "fixed-8d33c59bb5c72d520f7515ae91fc7754ea44d610a91bff96040d08e26c876d30",
+      "document_id": "hr-v2-travel",
+      "document_version": "2",
+      "original_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+      "canonical_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 0,
+      "end": 400,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-travel",
+        "name": "travel.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5.md",
+        "downloaded_content_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-travel/944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5?pages=1&chars=0-400",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 0,
+          "canonical_end": 400,
+          "page_start": 0,
+          "page_end": 400,
+          "page_text_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+          "raw_text_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5"
+        }
+      ],
+      "text_sha256": "116756eb7c10fe17aaafeb876fe47d8654c4a954e556091481778863a18b8f90"
+    },
+    {
+      "chunk_id": "fixed-1a64bf830eab7e569a71d32fd0a39aafd92d299dee44e50fce667aec5318fd8b",
+      "document_id": "hr-v2-travel",
+      "document_version": "2",
+      "original_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+      "canonical_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+      "normalization_version": "nfc-lf-v1",
+      "algorithm_version": "fixed-char-v1",
+      "settings": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "start": 320,
+      "end": 491,
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:98a75dc926e3e680e08df90943f28683d229afa55869a4a75e442198b45c289d",
+        "folder_id": "fixture:hr-regulations",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-travel",
+        "name": "travel.md",
+        "mime_type": "text/markdown",
+        "source_modified_time": "2026-10-23T00:00:00Z",
+        "source_version": "fixture-revision-1",
+        "source_url": null,
+        "local_path": "cache/944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5.md",
+        "downloaded_content_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5"
+      },
+      "source": "synthetic://hr/source-v2/hr-v2-travel/944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5?pages=1&chars=320-491",
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 320,
+          "canonical_end": 491,
+          "page_start": 320,
+          "page_end": 491,
+          "page_text_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+          "raw_text_sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5"
+        }
+      ],
+      "text_sha256": "b034f4c3aa1ed9941460e2a0c21be29dc078ea21a6199d56d29932016c89fa36"
+    }
+  ],
+  "skipped_windows": []
+}
