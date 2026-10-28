@@ -8,6 +8,7 @@ import subprocess
 import sys
 
 import plan_cards
+import plan_intake
 
 
 def git(*args, check=True):
@@ -94,6 +95,26 @@ def check_contracts(target, config):
     changed = blocked
     if changed:
         raise ValueError("Protected files differ from adopted plan " + sha[:12] + ":\n  " + "\n  ".join(changed))
+    # Captured requests are immutable facts. Corrections are new request records.
+    previous = 'HEAD' if target in ('worktree', 'index') else target + '^'
+    if git('rev-parse', '--verify', previous, check=False).returncode == 0:
+        prior = git('ls-tree', '-r', '--name-only', previous, '--', plan_intake.REQUESTS).stdout.splitlines()
+        for path in prior:
+            if path.endswith('.json') and read_at(path, previous) != read_at(path, target):
+                raise ValueError('Dev intake request is immutable; add a follow-up request: ' + path)
+    # Validate the target snapshot, including staged/committed request files.
+    from work_queue import Source
+    class Snapshot(Source):
+        def read(self, path):
+            return read_at(path, target)
+        def records(self, directory):
+            if target == 'worktree':
+                return Source(pathlib.Path.cwd()).records(directory)
+            command = ('ls-files', '--', directory) if target == 'index' else ('ls-tree', '-r', '--name-only', target, '--', directory)
+            names = git(*command).stdout.splitlines()
+            return {pathlib.Path(p).stem: json.loads(self.read(p)) for p in names if p.endswith('.json')}
+    snapshot = Snapshot(pathlib.Path.cwd())
+    plan_intake.collect(snapshot, snapshot)
     print("PASS: contracts match adopted plan " + sha[:12])
 
 
