@@ -68,3 +68,15 @@ dev의 채택 큐가 비어 있으면 최신 이용 가능한 plan에서 준비 
 충돌 시 요구사항과 dev 로그를 함께 보존한다. plan으로 dev 전체 이력을 되가져올 필요는 없다.
 공유할 두 브랜치는 각각 push해야 한다. 한 브랜치 push가 다른 원격 브랜치를 움직이지 않는다.
 기존 push 권한을 적용하고 release 승격은 명시 요청 시에만 수행한다.
+
+## dev 새 요구 접수
+
+plan은 매 작업 시작 시 `python3 scripts/work_queue.py --owner all`의 새 요구 대기열을 먼저 확인한다.
+`plan_requests` JSON 항목에는 요청 ID·본문 경로·hash·검토 상태·연결 P번호가 포함된다.
+새 요구 대기열은 실행 큐와 별개이며 P번호의 우선순위를 자동으로 바꾸지 않는다.
+`--brief`에서도 미검토 요청을 표시하고, `--open --owner plan/all`은 미검토 요청이 있으면 exit 1이다.
+조회는 항상 읽기 전용이다. plan은 커밋된 dev 요청, dev는 로컬 요청과 채택한 plan의 검토 결과를 본다.
+plan의 검토를 아직 채택하지 않았다면 dev에는 대기가 남을 수 있다.
+
+[요청 접수 규칙](plan-intake.md)에 따라 dev 기록 → plan 판단 → P카드 준비 검토 → 정확한 채택을 거친다.
+요청의 LINKED/COVERED 상태는 검토/연결 표시이며 구현 준비 완료를 뜻하지 않는다.

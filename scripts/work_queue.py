@@ -10,6 +10,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import plan_cards
+import plan_intake
 
 QUEUE = 'docs/planning/work-queue.json'
 PROGRESS = {'plan': 'docs/planning/queue-progress', 'dev': 'docs/progress/queue'}
@@ -201,6 +202,8 @@ def main():
         ref = dev_ref(root, config['development_branch'])
         dev_source = Source(root, ref) if ref else None
         notices.append('plan은 작업 트리의 기획 + ' + (ref or '미연결 dev') + ' 커밋의 진척을 표시. dev 미커밋 기록은 표시하지 않음.')
+    intake = plan_intake.collect(local, dev_source)
+    pending_intake = [r for r in intake if r['state'] in ('PENDING', 'CHANGED')]
     sources = {'plan': local, 'dev': dev_source}
     records = {o: s.records(PROGRESS[o]) if s else {} for o, s in sources.items()}
     document = json.loads(local.read(QUEUE)) if (root / QUEUE).exists() else {'schema_version': 1, 'tasks': []}
@@ -224,13 +227,17 @@ def main():
                             (o == 'plan' and r['id'] in replacements and r['state'] == 'DRAFT'))), None)
                   for o in PROGRESS if owner in ('all', o)}
     output = {'branch': branch, 'owner': owner, 'notices': notices, 'next': next_tasks,
-              'tasks': [r for r in selected if not args.open or r['state'] != 'DONE']}
+              'tasks': [r for r in selected if not args.open or r['state'] != 'DONE'],
+              'plan_requests': intake}
     if args.json:
         print(json.dumps(output, ensure_ascii=False, indent=2))
     else:
         print('\n'.join(notices))
         for o, ident in next_tasks.items():
             print(f'{o} 다음 작업: {ident or "실행 가능한 승인 작업 없음"}')
+        print(f'plan 새 요구 검토 대기: {len(pending_intake)}건 (구현 승인과 별개)')
+        for item in pending_intake:
+            print(f"  [{item['state']}] {item['id']} {item['title']} — {item['path']}")
         if not args.brief:
             for row in output['tasks']:
                 label = {'DRAFT': '기획 중', 'READY': '준비 완료', 'WAITING': '선행 대기', 'IN_PROGRESS': '개발 중', 'BLOCKED': '차단', 'DONE': '완료'}[row['state']]
@@ -244,7 +251,8 @@ def main():
                     mark = 'x' if key in task.get('completed_checks', []) else ' '
                     print(f'  [{mark}] {key}: {value}')
         print('조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음')
-    return 1 if args.open and any(r['state'] != 'DONE' for r in selected) else 0
+    return 1 if args.open and (any(r['state'] != 'DONE' for r in selected)
+                              or (owner in ('plan', 'all') and pending_intake)) else 0
 
 
 if __name__ == '__main__':

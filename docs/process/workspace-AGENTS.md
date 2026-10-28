@@ -25,6 +25,16 @@ explicit user requests determine scope; a title is only a navigation label.
 Creating or bootstrapping role chats reads status/rules/queues and then waits;
 it does not authorize new product work or messaging another chat.
 
+New requirements raised in a dev chat must pass through plan before implementation.
+Dev captures the request in `docs/feedback/dev/requests/` using `scripts/plan_intake.py`,
+commits it, and retains its dev role. Do not enter the plan worktree to author or approve
+new scope unless the user explicitly requests a role change or both-role work.
+Plan triages the committed request, links a P-card, reviews readiness, and commits it;
+dev then integrates and adopts the exact plan before implementing that scope.
+Fixes within an adopted contract may continue with a P-card reference and verification.
+Read the child's `docs/process/plan-intake.md`; queue queries show pending requests.
+File-based intake does not authorize messaging another chat or automatic execution.
+
 All three directories share one Git repository through linked worktrees.
 Preserve existing work, P-card requirements, dev execution logs and adoption rules.
 Inspect status and the current branch before changes. Never merge dev into plan

@@ -13,7 +13,9 @@
     "scripts/plan_cards.py",
     "scripts/work_queue.py",
     "docs/planning/plans",
-    ".githooks"
+    ".githooks",
+    "scripts/plan_intake.py",
+    "tests/harness"
   ],
   "baseline_file": ".harness/adopted-plan.json",
   "p_card_execution": true
