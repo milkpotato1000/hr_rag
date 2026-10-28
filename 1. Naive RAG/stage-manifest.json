@@ -78,5 +78,15 @@
     "citation_mode": "full_chunk_from_transmitted_context",
     "prompt": "prompts/system-v3.txt",
     "lock": "generation-lock.json"
-  }
+  },
+  "comparison_variants": [
+    {
+      "plan_id": "P011",
+      "path": "variants/langchain",
+      "baseline_commit": "58e8eb793b95c524c256c0206e37aa15ff99c6ff",
+      "manifest": "variants/langchain/copy-manifest.json",
+      "decision": "variants/langchain/adoption-decision.json",
+      "original_default": "direct"
+    }
+  ]
 }

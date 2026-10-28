@@ -1,0 +1,182 @@
+..................EEEEE..............................................................................EEEEEE
+======================================================================
+ERROR: test_bad_count_dimension_values_zero_and_model (test_dense_runtime.HTTPBoundaryTests.test_bad_count_dimension_values_zero_and_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_dense_runtime.py", line 58, in setUp
+    self.server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_embed_exact_request_and_count (test_dense_runtime.HTTPBoundaryTests.test_embed_exact_request_and_count)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_dense_runtime.py", line 58, in setUp
+    self.server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_http_error_json_error_redirect_timeout_and_no_fallback (test_dense_runtime.HTTPBoundaryTests.test_http_error_json_error_redirect_timeout_and_no_fallback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_dense_runtime.py", line 58, in setUp
+    self.server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_loopback_only_endpoint_and_timeout_validation (test_dense_runtime.HTTPBoundaryTests.test_loopback_only_endpoint_and_timeout_validation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_dense_runtime.py", line 58, in setUp
+    self.server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_tags_missing_duplicate_malformed_digest (test_dense_runtime.HTTPBoundaryTests.test_tags_missing_duplicate_malformed_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_dense_runtime.py", line 58, in setUp
+    self.server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_answer_and_abstain_use_same_pipeline_kwargs (test_server.HTTPTests.test_answer_and_abstain_use_same_pipeline_kwargs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_server.py", line 24, in setUp
+    self.server=LearningServer(0, fake)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/scripts/serve.py", line 28, in __init__
+    super().__init__(('127.0.0.1', port), Handler)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_http_error_mapping (test_server.HTTPTests.test_http_error_mapping)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_server.py", line 24, in setUp
+    self.server=LearningServer(0, fake)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/scripts/serve.py", line 28, in __init__
+    super().__init__(('127.0.0.1', port), Handler)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_invalid_json_types_ranges_labels_rejected (test_server.HTTPTests.test_invalid_json_types_ranges_labels_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_server.py", line 24, in setUp
+    self.server=LearningServer(0, fake)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/scripts/serve.py", line 28, in __init__
+    super().__init__(('127.0.0.1', port), Handler)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_routes_types_origin_and_payload_limit (test_server.HTTPTests.test_routes_types_origin_and_payload_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_server.py", line 24, in setUp
+    self.server=LearningServer(0, fake)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/scripts/serve.py", line 28, in __init__
+    super().__init__(('127.0.0.1', port), Handler)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_serializes_pipeline_but_get_stays_responsive (test_server.HTTPTests.test_serializes_pipeline_but_get_stays_responsive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_server.py", line 24, in setUp
+    self.server=LearningServer(0, fake)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/scripts/serve.py", line 28, in __init__
+    super().__init__(('127.0.0.1', port), Handler)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_static_assets_render_data_as_text (test_server.HTTPTests.test_static_assets_render_data_as_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/tests/test_server.py", line 24, in setUp
+    self.server=LearningServer(0, fake)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/scripts/serve.py", line 28, in __init__
+    super().__init__(('127.0.0.1', port), Handler)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+----------------------------------------------------------------------
+Ran 107 tests in 13.000s
+
+FAILED (errors=11)

@@ -1,0 +1,8 @@
+# Preserved P011 failures and repairs
+
+- Initial commit hook rejected an uncommitted STATE log with an evidence path. STATE requires NOTE and `-`; corrected before adoption commit14ee1a9. No hook bypass.
+- Initial installer inside sandbox could not resolve PyPI DNS. Retried through approved escalation, preserving existing dependency pins; install-report.json records resolved distributions.
+- Initial local construction used an unavailable tracing_context import in langchain_core; corrected to the installed langsmith context manager before any A/B model execution. Also corrected generated local variable tuple arity before live execution. No model result was replaced.
+- baseline-tests.log:107 tests,11 socket binding errors under sandbox. candidate-tests-initial.log:88 discovered tests,12 errors including missing fixed pypdf and socket binding. Installed existing ingestion pin6.21.2 and reran with loopback access; baseline/candidate-tests-pass.log each107 PASS. The missing module was restored, not excluded.
+- Standalone copy attempt1, directory p011-standalone-8hm4u1_f: copy_indexes.py used QdrantClient as a context manager, which this pinned version does not support. Raised TypeError before logical comparison and before tests/live execution; no source overwritten. Changed to explicit try/finally close and reran in a new directory. attempt1 installation/output retained.
+- Browser read-only DOM measurement could not access iframe contentDocument through the tool's restricted DOM scope. The390px srcdoc viewport was instead inspected through actual accessibility state and screenshot; no numeric overflow measurement is claimed.

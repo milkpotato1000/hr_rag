@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "cases": 326,
+  "differences": 0,
+  "scope": "original direct interpreter/index vs independent candidate interpreter/index, fixed vectors and real BM25, fake provider requests; actual embedding verified separately"
+}
