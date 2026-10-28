@@ -39,3 +39,7 @@ P006은 실제 Drive 연결 없이 명시 가상 fixture snapshot으로 이 경�
 ## Naive RAG 인용 책임 변경 — P009
 
 P009 채택 이후 모델은 답변과 실제 전달 문맥의 chunk_id만 반환한다. 요청별 enum과 코드 검증을 통과한 ID에 대해 코드가 동일 문맥 snapshot의 text 전체 및 source/title/version/document_id를 조립한다. 모델 quote/출처 메타데이터는 허용하지 않는다. 현재 API의 citations.quote는 유지하되 값의 작성 주체가 코드로 바뀐다. 잘못된 ID는 보류하며, 원문 일치가 답변 의미 지지까지 보장하지는 않는다. 상세·검증·이전 계약 보존은 [P009](../planning/plans/P009.md)를 따른다.
+
+## 같은 Naive 방식의 실행 구성 비교 — P011
+
+현재 직접 Python 파이프라인은 보존하고 LangChain Core의 명시 단계 조합을 후보로 비교한다. 검색·문맥·Generator·인용 검증 경계의 의미와 실제 전송 payload를 유지하는 어댑터 방식이며 새 검색/에이전트 동작은 도입하지 않는다. [비교·채택 계약](langchain-naive-comparison.md)에 따라 품질 유지·실행 안정성 검증 후에만 LangChain을 후속 기반으로 선택한다. 비교가 끝나기 전에는 LangChain이 현재 기본 구현이라고 표시하지 않는다.
