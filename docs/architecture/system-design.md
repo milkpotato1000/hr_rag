@@ -35,3 +35,7 @@ HR 담당자의 Google Drive 지정 폴더가 원문 저장소다. PDF 업로드
 문서 출처는 file_id와 snapshot/내용 hash를 기준으로 관리하며 파일명·폴더명은 표시용 메타데이터다. 추출 페이지·정규화 offset·청크에서 해당 snapshot과 원본으로 역추적한다. 실험은 한 snapshot을 고정해 문서 개정과 청킹 설정 효과가 섞이지 않게 한다.
 
 P006은 실제 Drive 연결 없이 명시 가상 fixture snapshot으로 이 경계를 구현한다. 실제 폴더 지정 이후 읽기/다운로드 또는 네이티브 문서 export 어댑터를 연결한다. 그때 추가/변경/삭제·권한 회수·개정본의 유효성·활성 색인 교체를 별도 확정한다. fixture의 synthetic 출처와 실제 Drive 링크를 혼용하지 않는다.
+
+## Naive RAG 인용 책임 변경 — P009
+
+P009 채택 이후 모델은 답변과 실제 전달 문맥의 chunk_id만 반환한다. 요청별 enum과 코드 검증을 통과한 ID에 대해 코드가 동일 문맥 snapshot의 text 전체 및 source/title/version/document_id를 조립한다. 모델 quote/출처 메타데이터는 허용하지 않는다. 현재 API의 citations.quote는 유지하되 값의 작성 주체가 코드로 바뀐다. 잘못된 ID는 보류하며, 원문 일치가 답변 의미 지지까지 보장하지는 않는다. 상세·검증·이전 계약 보존은 [P009](../planning/plans/P009.md)를 따른다.
