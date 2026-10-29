@@ -12,6 +12,7 @@ qs=[c for c in protocol['cases'] if c['id'] not in ('meal-bm25','pdf-q06')];pdf=
 for case in qs+[pdf]:
  pdfcase=case['id']=='pdf-q06';chunks_path=stage/('data/source-v2/fixed-400-80/chunks.jsonl' if pdfcase else 'data/synthetic/chunks.jsonl');idx=stage/'.runtime'/('index-source-v2-fixed-400-80' if pdfcase else 'index-v1')
  rows,h=rag.evaluation.read_jsonl(chunks_path);chunks=rag.evaluation.validate_chunks(rows);rng=random.Random(hashlib.sha256(case['question'].encode()).hexdigest());vector=[rng.uniform(-1,1) for _ in range(1024)]
+ if len(sys.argv)>4:vector=json.loads(Path(sys.argv[4]).read_text())['q06' if pdfcase else case['id']]['vector']
  with DenseIndex(idx,chunks,h,load_lock()) as db:ranking=db.search(vector,100)
  for ret in ['bm25','dense']:
   for k in ([5] if pdfcase else [1,5,100]):

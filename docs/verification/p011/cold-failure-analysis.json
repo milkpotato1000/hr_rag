@@ -1,0 +1,51 @@
+{
+  "failure_count": 4,
+  "reason": "Ollama model-load timeout during observed OS sleep; no differing payload or extra retry",
+  "failures": [
+    {
+      "slot": "cold-01-meal-bm25-langchain",
+      "error": {
+        "kind": "provider",
+        "phase": "generation",
+        "message": "HTTP Error 500: Internal Server Error"
+      },
+      "same_successful_baseline_payload": true,
+      "generation_calls": 1,
+      "dispatch_count": 1
+    },
+    {
+      "slot": "cold-02-pdf-q06-langchain",
+      "error": {
+        "kind": "provider",
+        "phase": "generation",
+        "message": "HTTP Error 500: Internal Server Error"
+      },
+      "same_successful_baseline_payload": true,
+      "generation_calls": 1,
+      "dispatch_count": 1
+    },
+    {
+      "slot": "cold-03-pdf-q06-langchain",
+      "error": {
+        "kind": "provider",
+        "phase": "generation",
+        "message": "HTTP Error 500: Internal Server Error"
+      },
+      "same_successful_baseline_payload": true,
+      "generation_calls": 1,
+      "dispatch_count": 1
+    },
+    {
+      "slot": "cold-03-q03-langchain",
+      "error": {
+        "kind": "provider",
+        "phase": "generation",
+        "message": "HTTP Error 500: Internal Server Error"
+      },
+      "same_successful_baseline_payload": true,
+      "generation_calls": 1,
+      "dispatch_count": 1
+    }
+  ],
+  "repair": "repair-plan.json"
+}

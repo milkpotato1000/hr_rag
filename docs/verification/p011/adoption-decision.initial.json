@@ -1,0 +1,27 @@
+{
+  "decision": "KEEP_DIRECT",
+  "stage": "initial observed result, pending preregistered environmental repair",
+  "protocol_version": 1,
+  "protocol_sha256": "74fe909f2f53a798f6da36ddd02a02625bf60678baa4258f71c01165afa423a5",
+  "baseline_commit": "58e8eb793b95c524c256c0206e37aa15ff99c6ff",
+  "candidate_code_commit": "f008d32",
+  "gates": {
+    "contract": "PASS",
+    "warm_quality": "PASS",
+    "cold_stability": "FAIL",
+    "controlled_latency": "FAIL"
+  },
+  "cold_error_counts": {
+    "direct": 0,
+    "langchain": 4
+  },
+  "selected_implementation": "direct",
+  "source_path": "1. Naive RAG",
+  "evidence": [
+    "live-parity.json",
+    "quality-review.json",
+    "latency-report.json",
+    "repair-plan.json"
+  ],
+  "completion": false
+}
