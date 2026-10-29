@@ -78,5 +78,16 @@
     "citation_mode": "full_chunk_from_transmitted_context",
     "prompt": "prompts/system-v3.txt",
     "lock": "generation-lock.json"
+  },
+  "comparison_variant": {
+    "plan_id": "P011",
+    "implementation": "langchain-core Runnable stages",
+    "source_commit": "58e8eb793b95c524c256c0206e37aa15ff99c6ff",
+    "source_path": "1. Naive RAG",
+    "copy_manifest": "copy-manifest.json",
+    "decision": "adoption-decision.json",
+    "direct_entry": "scripts/rag.py",
+    "candidate_entry": "scripts/rag_langchain.py",
+    "ui": "scripts/serve_compare.py"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "original_changed_allowed_docs": [
+    "README.md",
+    "LEARNING_GUIDE.md",
+    "stage-manifest.json"
+  ],
+  "all_original_product_bytes_equal": true,
+  "candidate_direct_rag_equal": true,
+  "candidate_changed_copies": [
+    "LEARNING_GUIDE.md",
+    "README.md",
+    "stage-manifest.json"
+  ],
+  "baseline_commit": "58e8eb793b95c524c256c0206e37aa15ff99c6ff",
+  "files": 93
+}

@@ -39,7 +39,7 @@ python3.12 -m venv .venv
 .venv/bin/python scripts/copy_indexes.py --source-runtime '/absolute/path/to/original/.runtime'
 ```
 
-모델 서비스까지 없는 새 컴퓨터에서는 복사된 `scripts/setup_runtime.py`, `scripts/setup_generation.py`의 고정 설치 절차를 사용한다. 새로운 임베딩으로 구축한 색인은 이번 동일벡터 비교의 재현과 구분한다. 모델 이름만 같아도 충분하지 않으며 digest/runtime/template/options가 lock과 맞아야 한다.
+모델 서비스까지 없는 새 컴퓨터에서는 먼저 복사된 `scripts/setup_runtime.py`, `scripts/setup_generation.py`의 고정 설치 절차를 수행한 뒤 위 LangChain/ingestion lock을 추가 설치한다. 원래 setup_runtime은 `uv pip sync requirements.lock`을 수행하므로 LangChain 설치 뒤 실행하면 추가 패키지가 제거된다. 이 경우 후보 lock을 다시 설치하고 환경을 검증해야 한다. 새로운 임베딩으로 구축한 색인은 이번 동일벡터 비교의 재현과 구분한다. 모델 이름만 같아도 충분하지 않으며 digest/runtime/template/options가 lock과 맞아야 한다.
 
 ## 검증과 관찰
 
