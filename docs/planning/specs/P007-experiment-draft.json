@@ -9,7 +9,10 @@
     "section_map_sha256": null,
     "required_source_version": "source-v4",
     "required_card": "P016",
-    "p016_completion_commit": null
+    "p016_completion_commit": null,
+    "expected_document_count": 1,
+    "expected_document_id": "hr-v4-handbook",
+    "topic_chapter_count": 6
   },
   "dataset": {
     "sha256": null,
