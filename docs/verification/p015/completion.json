@@ -1,0 +1,51 @@
+{
+  "recorded_at": "2026-10-29T14:37:04.995916+09:00",
+  "implementation_and_evidence_commit": "bc1b61c44583630fac56c452c7452fbc62934675",
+  "adopted_plan": "ae8486d360a3963a3d21565266d9ef41c54568f2",
+  "contract_check_before_completion": "PASS: contracts match adopted plan ae8486d360a3",
+  "committed_evidence": [
+    "docs/verification/p015/policy-preservation-audit.json",
+    "docs/verification/p015/visual-review.json",
+    "docs/verification/p015/final-source-validation.json",
+    "docs/verification/p015/reproducibility.json",
+    "docs/verification/p015/regression-retry.json",
+    "2. Document Chunking/data/source-v3/handoff-manifest.json"
+  ],
+  "source_tests": 15,
+  "original_regression_tests": 107,
+  "langchain_regression_tests": 107,
+  "total_tests": 229,
+  "original_tracked_files_preserved": 203,
+  "pdfs": 6,
+  "pages_visually_reviewed": 6,
+  "policy_sentences": 31,
+  "source_v2_blocks": 51,
+  "section_candidates": 19,
+  "legacy_facts": 15,
+  "observed_tuning_questions": 14,
+  "model_calls": 0,
+  "new_downloads": 0,
+  "scope": "P015 only; P007 DRAFT and unstarted; no UI/default corpus changes, no release promotion",
+  "state": "All P015 acceptance criteria verified; completion record follows committed implementation evidence.",
+  "queue": {
+    "next": {
+      "plan": "P007",
+      "dev": null
+    },
+    "completed": [
+      "P001",
+      "P002",
+      "P003",
+      "P004",
+      "P005",
+      "P006",
+      "P009",
+      "P011",
+      "P012",
+      "P015"
+    ],
+    "P015": "DONE",
+    "P007": "DRAFT"
+  },
+  "contract_check_after_completion": "PASS: contracts match adopted plan ae8486d360a3"
+}
