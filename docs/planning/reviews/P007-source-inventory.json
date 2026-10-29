@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "source_commit": "d3d16fe29fe4fa384b75a700940d11e33007ea51",
+  "purpose": "read_only_planning_inventory_not_final_copy_manifest",
+  "files": [
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/chunk_documents.py",
+      "sha256": "9677e363665f3e4649e04626c101851a1daca0dca67e21c01e9a98a23c0b8bdb",
+      "bytes": 10978
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/document_common.py",
+      "sha256": "1c2fe05df33cfcc066964397fc035a58b2311c6bea4d40c5da502a8ecc08ea2b",
+      "bytes": 7891
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/run_bm25_baseline.py",
+      "sha256": "bdbe19867eaaadff6223089d4ee09ea6d152de9bfde63bfa7ada41e4a0967711",
+      "bytes": 7685
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py",
+      "sha256": "6b863f2c7557a54113ceb5883e0ba60594a0161d5a706c4a58e26c9a47cb0b11",
+      "bytes": 9766
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/build_dense_index.py",
+      "sha256": "6f17279b6e78e92c744397b0b55e5287fade851ceb9b814c868cecf41728ebfa",
+      "bytes": 1734
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/dense_retrieval.py",
+      "sha256": "06e5ad23123f4b29f19dff91cc2827666b30ec33ffa5d7ed32d06a5cb675a7aa",
+      "bytes": 6413
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/runtime_common.py",
+      "sha256": "a1884eedc1b5c00caa2c0146d7d0b6e21d49434d5e10d83ea4f763e1237d463b",
+      "bytes": 7138
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/generation.py",
+      "sha256": "8961d1e20de5005e35c326271adcf4b030bfaf51ff8c9562c60e9c36ce48c8e3",
+      "bytes": 6792
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/serve_compare.py",
+      "sha256": "71b5f1934e81e873de6e6df55b4d3ae229d493e4724b16c38f95e9c4204085be",
+      "bytes": 8355
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/runtime-lock.json",
+      "sha256": "80733dae580bf02e5000f76971ed17013e415d8540426225915f339b6c6e7357",
+      "bytes": 2719
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/generation-lock.json",
+      "sha256": "7b6dfda231be7840f56956d326386d45e6fd78503b74aff0ad7bc5d63c2f2ce1",
+      "bytes": 4964
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/ingestion-lock.json",
+      "sha256": "cbff277a316842fd0ff4815092ad6193ecdb4ad9e3214aced713cf2f5afe8814",
+      "bytes": 639
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/requirements.lock",
+      "sha256": "642638148f4bf810df637b6fc52f10e06e5ca402846a864628a272ed84fe1daf",
+      "bytes": 342
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/requirements-langchain.lock",
+      "sha256": "4194d226dcef4ffaf7ff37023119edd8b5a4949c97e75dce056974c7e0ef1a79",
+      "bytes": 3960
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/ingestion-requirements.lock",
+      "sha256": "c3f793c919ec790734762729cc0d68915b451d4da24c3d78edfd3fe1ac2b067f",
+      "bytes": 93
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/web_compare/index.html",
+      "sha256": "d180d3a2b039165390d9d48eef81cba3b65019729c4394f6adb33a4751a8b0b5",
+      "bytes": 7059
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/web_compare/app.js",
+      "sha256": "8bba70330c7eb25e705ed530f24c8e1310154641e5603e60a47d5ce8f72dd708",
+      "bytes": 10069
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/web_compare/style.css",
+      "sha256": "d27c0b34955f0333c8ccbd69ce81747e091a8e82ab982d1d188e149288b22981",
+      "bytes": 10274
+    }
+  ],
+  "notes": [
+    "P015 output does not yet exist",
+    "Import closure and P015 merge conflicts must be reviewed before READY",
+    "No product files copied or model processes started"
+  ]
+}
