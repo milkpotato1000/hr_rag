@@ -1,0 +1,1745 @@
+{
+  "schema_version": 2,
+  "status": "SOURCE_AUDITED_RETRIEVAL_SET",
+  "p016_completion_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+  "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "reviewer_kind": "Codex_source_audit_not_human_approval",
+  "evidence_semantics": "AND required facts; OR evidence_sets per fact; AND spans within each evidence set",
+  "freeze_policy": "No retrieval used to choose questions; holdout excluded from tuning/default UI until configs frozen. After first holdout reveal treat as observed. Same author/source, not independent human evaluation.",
+  "scope_note": "Source-span coverage of enumerated evidence, not exhaustive semantic relevance; paraphrased equivalent passages may remain unannotated.",
+  "facts": [
+    {
+      "fact_id": "f01",
+      "meaning": "생일 휴가 자격과 연 1일, 수습 제외",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 272,
+            "end": 314,
+            "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다.",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-01-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 315,
+            "end": 336,
+            "quote": "수습 중인 직원은 대상\n에서 제외한다.",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-01-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f02",
+      "meaning": "생일 달 근무일 사용, 이월·현금 지급 불가",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 483,
+            "end": 512,
+            "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다.",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-02-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 513,
+            "end": 543,
+            "quote": "해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다.",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-02-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f03",
+      "meaning": "신청 기한·경로·승인 주체",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 684,
+            "end": 734,
+            "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-03-P01-S01"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f04",
+      "meaning": "1년 미만은 한 달 개근 시 1일",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 3848,
+            "end": 3880,
+            "quote": "1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다.",
+            "pages": [
+              3
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-01-P01-S01"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f05",
+      "meaning": "통상 연차 신청 및 긴급 예외",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 5753,
+            "end": 5783,
+            "quote": "연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다.",
+            "pages": [
+              4
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-04-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 5784,
+            "end": 5818,
+            "quote": "긴급 사유가 있으면 당일 팀장에게 알린 \n후 신청할 수 있다.",
+            "pages": [
+              4
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-04-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f06",
+      "meaning": "이월 한도와 다음 해 사용 기한, 생일 휴가 제외",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 8464,
+            "end": 8507,
+            "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다.",
+            "pages": [
+              6
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-07-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 8508,
+            "end": 8538,
+            "quote": "이월한 연차의 사용 \n기한은 다음 해 3월 31일이다.",
+            "pages": [
+              6
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-07-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 8539,
+            "end": 8564,
+            "quote": "생일 특별휴가에는 이 규정을 적용하지 않는다.",
+            "pages": [
+              6
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-07-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f07",
+      "meaning": "연차 반차 가능·차감량, 생일 휴가 분할 불가",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 5528,
+            "end": 5558,
+            "quote": "연차는 오전 또는 오후 반차로 나누어 사용할 수 있다.",
+            "pages": [
+              4
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-03-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 5559,
+            "end": 5580,
+            "quote": "반차 1회는 연차 0.5일로 차감한다.",
+            "pages": [
+              4
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-03-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 544,
+            "end": 562,
+            "quote": "생일 특별휴가는 분할할 수 없다.",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-02-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f08",
+      "meaning": "재택 자격과 직무 제외",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 11922,
+            "end": 11966,
+            "quote": "입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다.",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-01-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 11967,
+            "end": 11994,
+            "quote": "현장 장비 운영 \n직무는 재택 대상에서 제외한다.",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-01-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f09",
+      "meaning": "주 2일 한도·전주 금요일 팀장 승인",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 12132,
+            "end": 12169,
+            "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다.",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-02-P01-S01"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f10",
+      "meaning": "회사 기기·VPN, 공용 컴퓨터 금지",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 12328,
+            "end": 12358,
+            "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다.",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-03-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 12359,
+            "end": 12383,
+            "quote": "공용 컴퓨터로 내부 문서에 접근할 수 없다.",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-03-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f11",
+      "meaning": "포인트 3만 점과 휴가 자격·승인 분리",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 19264,
+            "end": 19291,
+            "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다.",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-02-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 19292,
+            "end": 19322,
+            "quote": "이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-02-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f12",
+      "meaning": "사무실 출근일 식대 1만 원, 재택·휴가 미지원",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 19080,
+            "end": 19104,
+            "quote": "사무실 출근일에는 식대 1만 원을 지원한다.",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-01-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 19105,
+            "end": 19134,
+            "quote": "재택근무일과 휴가일에는 이 식대를 지원하지 \n않는다.",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-01-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f13",
+      "meaning": "자격시험 연 1일 교육 휴가, 별도 관리",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 24748,
+            "end": 24785,
+            "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.",
+            "pages": [
+              15
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-01-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 24935,
+            "end": 24958,
+            "quote": "생일 특별휴가 및 연차와 별도로 관리한다.",
+            "pages": [
+              15
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-02-P01-S01"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f14",
+      "meaning": "출장 5영업일 전 팀장 승인, 다른 제도 자동 승인 아님",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 30749,
+            "end": 30776,
+            "quote": "출장은 출발 5영업일 전에 팀장의 승인을 받는다.",
+            "pages": [
+              19
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-01-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 30941,
+            "end": 30972,
+            "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+            "pages": [
+              19
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-02-P01-S01"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "f15",
+      "meaning": "등록 자택 제한과 사전 주소 변경 요청",
+      "origin": "legacy_reaudited_v4",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 14151,
+            "end": 14174,
+            "quote": "재택근무 장소는 등록한 자택으로 제한한다.",
+            "pages": [
+              9
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-05-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 14175,
+            "end": 14217,
+            "quote": "주소 변경 시 근무 시작 전에 인사 담당자에게 등록 \n주소 변경을 요청한다.",
+            "pages": [
+              9
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-05-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t01",
+      "meaning": "생일 특별휴가 접수 시 어떤 정보를 연결하며 이미 등록된 생일·입사 정보를 다시 증명해야 하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 1002,
+            "end": 1072,
+            "quote": "휴가 시스템에서 접수한 생일 특별휴가 신청에는 신청자를 식별하는 정보, 사용 예정일, 신청을 구\n분하는 기록 번호를 연결한다.",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-04-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 1073,
+            "end": 1162,
+            "quote": "이미 입력되어 있는 생일이나 입사 정보를 신청자에게 다시 증명하\n도록 요구하지 않고, 신청 화면과 인사 기록 사이에 차이가 있는 항목만 확인 대상으로 표시한다.",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-04-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t02",
+      "meaning": "생일휴가 시스템 장애로 접수 확인이 안 되면 어떤 임시 기록을 남기며 승인 면제가 되나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 2586,
+            "end": 2708,
+            "quote": "다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가 신청자가 알\n린 시점, 사용 희망일, 장애 상황을 임시 기록으로 남기고 이를 접수 확인용으로 안내한다.",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-05-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 2709,
+            "end": 2782,
+            "quote": "임시 기\n록은 새로운 휴가 자격이나 승인 면제가 아니며, 원래 신청 시점과 이후 복구 입력 시점을 구별하기\n 위한 자료로 사용한다.",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-05-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t03",
+      "meaning": "연차 발생 일수 문의와 잔여 일수 문의는 어떤 기록을 각각 대조하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 4044,
+            "end": 4110,
+            "quote": "연차 발생 내역을 문의받은 담당자는 먼저 문의가 발생 일수에 관한 것인지 사용 후 남은 일수에 관\n한 것인지 확인한다.",
+            "pages": [
+              3
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-02-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 4111,
+            "end": 4193,
+            "quote": "발생 일수 문의에는 적용된 재직 기간과 개근 여부가 어떻게 기록되어 있는지\n 살피고, 잔여 일수 문의에는 발생 내역과 차감 내역을 나누어 대조한다.",
+            "pages": [
+              3
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-02-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t04",
+      "meaning": "연차 신청을 기존 사용 기록과 연결할 때 확인할 정보와 중복된 요청의 처리 방법은 무엇인가요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 6377,
+            "end": 6444,
+            "quote": "담당자는 접수된 연차 신청을 해당 직원의 사용 기록과 연결할 때 기록 번호, 사용 날짜, 사용 단위\n를 차례로 대조한다.",
+            "pages": [
+              5
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-05-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 6506,
+            "end": 6570,
+            "quote": "이미 반영된 신청과 새 요청이 겹치면 중복 제출인지 날짜 변경\n인지 구분하기 위해 신청자에게 현재 의사를 확인한다.",
+            "pages": [
+              5
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-05-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t05",
+      "meaning": "재택근무 신청 날짜가 여러 주에 걸치거나 대상 주와 맞지 않으면 담당자는 어떻게 처리하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 12586,
+            "end": 12639,
+            "quote": "재택근무 신청을 접수하면 담당자는 신청자, 대상 주, 희망 날짜와 원래 제출본을 서로 연결한다.",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-04-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 12641,
+            "end": 12713,
+            "quote": "대상 주와 날짜가 맞지 않거나 날짜가 여러 주에 걸쳐 있으면 표시된 기간을 임의로 하나의 주로 묶\n지 않고 신청 의도를 확인한다.",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-04-P01-S02"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t06",
+      "meaning": "이사한 집에서 재택하려면 언제 누구에게 요청하며 주소 변경 기록에는 무엇을 남기나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 14151,
+            "end": 14174,
+            "quote": "재택근무 장소는 등록한 자택으로 제한한다.",
+            "pages": [
+              9
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-05-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 14175,
+            "end": 14217,
+            "quote": "주소 변경 시 근무 시작 전에 인사 담당자에게 등록 \n주소 변경을 요청한다.",
+            "pages": [
+              9
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-05-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 14218,
+            "end": 14271,
+            "quote": "주소 변경 요청에는 기존 등록 주소를 식별할 수 있는 정보와 변경하려는 주소를 연결하여 남긴다.",
+            "pages": [
+              9
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-05-P02-S01"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t07",
+      "meaning": "복지 내역을 확인할 때 어떤 항목을 대조하며 생일 포인트와 식대를 하나의 합계로 더해도 되나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 20004,
+            "end": 20060,
+            "quote": "담당자는 문의 대상 내역을 찾은 뒤 그 항목의 지급 종류, 대상 날짜, 표시된 단위와 값을 대조한다.",
+            "pages": [
+              13
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-04-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 20137,
+            "end": 20211,
+            "quote": "생일 축하 포인트의 점수와 식대의 원화 금액은 같은 합계\n로 더하지 않으며, 둘을 함께 묻는 문의라도 확인 결과는 항목별로 구분한다.",
+            "pages": [
+              13
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-04-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t08",
+      "meaning": "식대 문의에서 화면마다 근무 형태가 다르면 어떤 순서로 확인하고 어떤 근거 선택을 피해야 하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 21533,
+            "end": 21578,
+            "quote": "식대 문의의 통상 대조 자료는 WF-01@v4의 날짜별 근무 형태와 지급 표시다.",
+            "pages": [
+              13
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-05-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 21579,
+            "end": 21667,
+            "quote": "다만 신청 화면과 \n집계 화면에서 같은 날짜의 근무 형태가 서로 다르면 어느 값이 먼저 등록되었고 어떤 정정이 진행 \n중인지 확인한 뒤 지급 내역과 연결한다.",
+            "pages": [
+              13
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-05-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 21668,
+            "end": 21719,
+            "quote": "담당자는 서로 다른 화면 중 지급액이 기대와 일치하는 \n화면만 골라 근거로 사용하지 않는다.",
+            "pages": [
+              13
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-05-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t09",
+      "meaning": "교육휴가 신청에서 시험 일정과 선택 날짜가 다르거나 여러 시험을 함께 적으면 어떻게 확인하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 25208,
+            "end": 25299,
+            "quote": "시험의 이름과 일정이 함께 적혀 있으면 원래 작성된 내용 그대로 확인하고, 신청자가 설명한\n 일정과 시스템 선택 날짜가 다를 때에는 어느 값이 희망일인지 문의한다.",
+            "pages": [
+              16
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-03-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 25300,
+            "end": 25370,
+            "quote": "여러 시험 일정이 같은 \n설명에 적혀 있으면 각각을 별도 휴가 신청으로 계산하지 않고 문의인지 실제 신청인지 먼저 구분\n한다.",
+            "pages": [
+              16
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-03-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t10",
+      "meaning": "교육휴가 신청의 직무 관련 설명이 부족하면 담당자가 시험 합격 가능성을 평가하거나 미충족으로 기록해도 되나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 25799,
+            "end": 25901,
+            "quote": "설명이 짧거나 시스템의 선택 항목만으로 의미를 알기 \n어려우면 어느 시험 응시를 위한 요청인지 확인하되, 담당자가 시험 자격이나 합격 가능성을 별도\n로 평가하는 절차로 넓히지 않는다.",
+            "pages": [
+              16
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-04-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 25902,
+            "end": 25986,
+            "quote": "직무 관련 여부에 관한 설명이 기록에서 누락되었으면 확인 중\n인 항목으로 표시하고, 확인하지 못한 사실을 임의로 충족 또는 미충족으로 입력하지 않는다.",
+            "pages": [
+              16
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-04-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t11",
+      "meaning": "출장 신청서의 출발일·방문지가 서로 다르면 즉시 취소해야 하나요? 어떤 기록을 남기나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 31871,
+            "end": 31932,
+            "quote": "출발일이나 방문지가 여러 곳에 다르게 적혀 있으면 어떤 항목을 확인해야 하는\n지 특정하여 신청자에게 문의한다.",
+            "pages": [
+              19
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-04-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 31933,
+            "end": 32014,
+            "quote": "담당자가 내용의 차이를 발견했다는 사실만으로 요청을 취소하\n거나 새 신청으로 바꾸지 않으며, 신청자가 정정한 내용과 최초 제출본의 관계를 남긴다.",
+            "pages": [
+              19
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-04-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-t12",
+      "meaning": "새 출장 일정표가 오면 모든 항목을 변경 요청으로 처리하나요? 오입력 정정과 실제 변경은 어떻게 구분하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 33388,
+            "end": 33446,
+            "quote": "신청 후 방문 순서나 이동 일정이 달라지면 담당자는 신청자가 변경하려는 항목을 기존 일정과 대\n응시킨다.",
+            "pages": [
+              20
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-05-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 33447,
+            "end": 33529,
+            "quote": "방문지 표기의 오입력을 바로잡는 것인지 실제 방문 장소를 바꾸는 것인지 구분하고, 변\n경 전후의 날짜와 장소를 같은 기록에서 확인할 수 있게 한다.",
+            "pages": [
+              20
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-05-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 33530,
+            "end": 33605,
+            "quote": "일정표 파일이 새로 전달되었다는 \n이유만으로 그 안의 모든 항목을 변경 요청으로 간주하지 않으며, 신청자가 바꾸려는 부분을 확인\n한다.",
+            "pages": [
+              20
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-05-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h01",
+      "meaning": "생일휴가 날짜를 바꿀지 문의만 했는데 새 신청으로 등록해도 되나요? 실제 변경 요청에서는 무엇을 기록하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 3147,
+            "end": 3211,
+            "quote": "신청자가 사용 날짜를 바꾸려는 경우에는 어느 요청을 어떤 날짜로 바꾸려는지 확인하고 변경 전\n후 값을 함께 남긴다.",
+            "pages": [
+              3
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-06-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 3265,
+            "end": 3341,
+            "quote": "다만 신청자가 문의 과정에서 여러 날짜를 예로 들었을 뿐 변경 의사를 확정하지\n 않은 경우에는 문의 내용을 새 신청으로 등록하지 않는다.",
+            "pages": [
+              3
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "BD-06-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h02",
+      "meaning": "연차 날짜 변경과 오전·오후 반차 변경은 어떻게 구분하며 의사 확인 전 차감량을 바꿔도 되나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 9700,
+            "end": 9757,
+            "quote": "사용 날짜를 바꾸려는 요청에서는 원래 날짜, 변경하려는 날짜, 유지하려는 사용 단위를 서로 구분\n한다.",
+            "pages": [
+              6
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-09-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 9758,
+            "end": 9852,
+            "quote": "반차를 오전에서 오후로 바꾸는 요청은 날짜 변경과 다른 항목으로 표시하고, 동일 날짜의 다\nHR-V4-HANDBOOK / v4\n6\n\n\n른 신청이 이미 있는지도 대조한다.",
+            "pages": [
+              6,
+              7
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-09-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 9853,
+            "end": 9964,
+            "quote": "하루 사용을 반차로 바꾸거나 반차를 하루 사용으로 바꾸려는 \n경우에는 AN-03@v4의 단위에 맞게 현재 신청 내용을 확인하되, 신청자의 의사가 확인되지 않은 \n상태에서 차감량을 먼저 바꾸지 않는다.",
+            "pages": [
+              7
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-09-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h03",
+      "meaning": "연차 신청 중 일부 날짜와 교육휴가 응시 계획을 취소하려는데, 각각 어떤 범위를 확인하고 기록해야 하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 10474,
+            "end": 10534,
+            "quote": "취소 요청을 받으면 대상 신청의 기록 번호와 사용 날짜를 확인하여 신청자가 철회하려는 범위를 \n분명히 한다.",
+            "pages": [
+              7
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-10-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 10535,
+            "end": 10610,
+            "quote": "여러 날짜의 요청 중 일부만 취소하려는 경우에는 유지하는 날짜와 취소하는 날짜를 \n나누어 기록하고, 전체 신청을 일괄 삭제하지 않는다.",
+            "pages": [
+              7
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "AN-10-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 28157,
+            "end": 28206,
+            "quote": "응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다.",
+            "pages": [
+              17
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-06-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 28207,
+            "end": 28284,
+            "quote": "시\n험 접수만 취소한 것인지 휴가 신청도 취소하려는 것인지 구분하고, 신청자가 아직 결정하지 못한 \n문의를 확정된 취소로 기록하지 않는다.",
+            "pages": [
+              17
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-06-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 28285,
+            "end": 28361,
+            "quote": "확인된 취소 의사는 원래 신청과 연결하여 남기며, 다른 시\n험에 관한 요청이나 이미 별도로 관리되는 휴가 기록까지 일괄 삭제하지 않는다.",
+            "pages": [
+              17
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-06-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h04",
+      "meaning": "재택 중 VPN 문제가 생기면 어떤 유형으로 나눠 기록하고 일반 확인으로 해결하지 못하면 어떻게 하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 15962,
+            "end": 16065,
+            "quote": "VPN 사용에 문제가 있다는 연락을 받으면 담당자는 연결이 되지 않는 상황인지, 연결 상태가 화면\n에 잘못 표시되는 상황인지, 접속하려는 문서를 찾지 못하는 상황인지 구분하여 기록한다.",
+            "pages": [
+              10
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-07-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 16144,
+            "end": 16226,
+            "quote": "통상적인 상태 확인으로 문제를 파악할 수 없을 때에는 발생 시점\n과 화면에 나타난 현상을 확인 가능한 범위에서 기록하고 관련 담당 업무로 연결한다.",
+            "pages": [
+              10
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-07-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h05",
+      "meaning": "재택 승인 결과는 있는데 알림이 오지 않았다면 무엇을 확인하고, 알림 장애로 발송 이력이 없을 때는 어떻게 안내하나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 17545,
+            "end": 17626,
+            "quote": "팀장의 결과가 기록되어 있으나 신청자가 알림을 받지 못했다고 문의하면 담당자는 요청의 식별 \n정보, 기록된 결과, 발송된 알림의 대상을 비교한다.",
+            "pages": [
+              11
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-09-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 17627,
+            "end": 17700,
+            "quote": "알림의 수신 여부를 확인하는 과정에서 승인 \n결과 자체를 새로 작성하지 않고, 기존 결과가 어떤 요청에 관한 것인지 먼저 확인한다.",
+            "pages": [
+              11
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-09-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 17701,
+            "end": 17803,
+            "quote": "통상적으로\n는 확인된 기록을 같은 요청에 연결하여 안내하지만 알림 시스템 장애로 발송 이력이 확인되지 않\n는 경우에는 현재 확인할 수 있는 결과와 알림 확인의 한계를 구별해 전달한다.",
+            "pages": [
+              11
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "RM-09-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h06",
+      "meaning": "복지 조회 화면이 열리지 않으면 기억하는 금액을 확정값으로 저장하거나 미지급으로 처리해도 되나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 22897,
+            "end": 22986,
+            "quote": "지급 내역 화면에 접속할 수 없어 WF-03@v4의 대상 정보를 직접 확인할 수 없는 경우에는 문의\n자가 기억하는 항목과 확인하려는 내용을 임시 문의로 남긴다.",
+            "pages": [
+              14
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-07-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 22987,
+            "end": 23036,
+            "quote": "이때 기억에 따른 설명과 실제 화면\n에서 확인한 값을 같은 확정 정보로 저장하지 않는다.",
+            "pages": [
+              14
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-07-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 23037,
+            "end": 23113,
+            "quote": "접속 장애로 내역이 보이지 않는다는 사실을\n 곧바로 미지급의 증거로 취급하지 않고, 화면이 복구되면 실제 내역과 대조할 항목을 정리한다.",
+            "pages": [
+              14
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-07-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h07",
+      "meaning": "복지 담당자의 설명과 표시 내역이 다르면 어떤 항목을 대조하며, 예상 금액과 다르다는 이유로 지급 기준을 바꾸나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 23392,
+            "end": 23458,
+            "quote": "문의자가 받은 설명과 현재 표시되는 내역이 다르다고 알리면 담당자는 어느 안내의 어떤 부분에 \n이견이 있는지 확인한다.",
+            "pages": [
+              14
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-08-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 23459,
+            "end": 23527,
+            "quote": "설명 문구, 대상 날짜, 단위, 확인한 자료의 시점을 각각 대조하여 단순한 \n표현 오류인지 실제 내역의 차이인지 구분한다.",
+            "pages": [
+              14
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-08-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 23528,
+            "end": 23604,
+            "quote": "문의자가 예상한 금액과 다르다는 사정만으로 지\n급 기준을 바꾸지 않으며, 담당자의 이전 설명이 잘못되었다면 그 부분을 명확히 바로잡는다.",
+            "pages": [
+              14
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "WF-08-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h08",
+      "meaning": "교육휴가 뒤 시험 후기를 제출하면 합격 여부가 자격 조건이 되거나 다음 시험 휴가가 자동 신청되나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 29513,
+            "end": 29581,
+            "quote": "신청자가 시험 응시 후 결과나 후기를 자발적으로 전달하면 담당자는 해당 내용이 어떤 교육휴가 \n기록과 관련되는지 확인한다.",
+            "pages": [
+              18
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-08-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 29582,
+            "end": 29654,
+            "quote": "결과 자료를 받았다는 사실과 휴가 사용 기록의 확인을 구분하고, 합\n격 여부를 기존 신청 자격의 새로운 조건으로 추가하지 않는다.",
+            "pages": [
+              18
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-08-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 29655,
+            "end": 29727,
+            "quote": "결과 자료에 새로운 시험 일정이나\n 다음 회차에 관한 설명이 포함되어 있어도 이를 다음 교육휴가의 신청으로 자동 등록하지 않는다.",
+            "pages": [
+              18
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "ED-08-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h09",
+      "meaning": "출장 신청 시스템 장애 시 어떤 임시 정보를 남기고, 이것으로 승인 기한이나 팀장 승인을 생략할 수 있나요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 35009,
+            "end": 35094,
+            "quote": "신청 시스템이 열리지 않거나 제출 직후 오류가 발생하여 접수 여부를 알 수 없는 경우에는 TR-04\n@v4의 통상 기록을 바로 확인하기 어려울 수 있다.",
+            "pages": [
+              21
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-07-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 35095,
+            "end": 35154,
+            "quote": "이때 담당자는 전달받은 출장 목적, 출발 예정\n일, 전달 시점과 접수 확인이 필요한 사유를 임시 기록한다.",
+            "pages": [
+              21
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-07-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 35155,
+            "end": 35227,
+            "quote": "임시 기록은 신청 내용을 보존하기 위\n한 것이며 TR-01@v4의 승인 기한이나 팀장 승인 조건을 없애는 예외로 안내하지 않는다.",
+            "pages": [
+              21
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-07-P01-S03"
+          }
+        ]
+      ]
+    },
+    {
+      "fact_id": "new-h10",
+      "meaning": "출장 비용 자료의 이용 날짜가 일정표와 다르면 잘못된 비용인가요? 먼저 확인할 정보는 무엇인가요?",
+      "origin": "added_procedure_source_audit",
+      "evidence_sets": [
+        [
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 36456,
+            "end": 36511,
+            "quote": "출장과 관련하여 비용 자료가 전달되면 담당자는 어떤 출장 요청에 연결되는 자료인지 먼저 확인\n한다.",
+            "pages": [
+              22
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-09-P01-S01"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 36512,
+            "end": 36589,
+            "quote": "자료에 표시된 이용 날짜, 항목, 원래 단위를 구분하여 기록하고, 일정표의 날짜와 다르다는 \n사실만으로 잘못된 비용이라고 단정하지 않는다.",
+            "pages": [
+              22
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-09-P01-S02"
+          },
+          {
+            "document_id": "hr-v4-handbook",
+            "start": 36590,
+            "end": 36645,
+            "quote": "예약과 실제 이용의 시점이 다를 수 있으므로 어\n떤 사실을 확인하기 위한 자료인지 설명을 연결한다.",
+            "pages": [
+              22
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "inventory_id": "TR-09-P01-S03"
+          }
+        ]
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "query_id": "q01",
+      "question": "생일 휴가는 누구나 입사 직후부터 사용할 수 있나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f01"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q02",
+      "question": "생일 휴가를 다음 달로 이월하거나 현금으로 받을 수 있나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f02"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q03",
+      "question": "생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f01",
+        "f02",
+        "f03"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q04",
+      "question": "입사 1년 미만 직원의 연차는 언제 생기나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f04"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q05",
+      "question": "연차는 며칠 전에 신청하며 긴급할 때는 어떻게 하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f05"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q06",
+      "question": "미사용 연차는 며칠까지 이월하고 언제까지 써야 하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f06"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q07",
+      "question": "재택근무 자격과 주당 횟수 및 승인 기한을 알려 주세요.",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f08",
+        "f09"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q08",
+      "question": "재택할 때 개인 공용 PC를 써도 되나요? VPN은 필요한가요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f10"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q09",
+      "question": "생일 포인트를 받으면 생일 휴가도 자동 승인되나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f11",
+        "f03"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q10",
+      "question": "재택근무일과 휴가일에도 사무실 식대가 나오나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f12"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q11",
+      "question": "연차 반차와 생일 휴가의 분할 사용이 가능한가요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "f07"
+      ],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q12",
+      "question": "배우자 출산 휴가의 일수와 신청 절차는 무엇인가요?",
+      "answerability": "unanswerable",
+      "required_fact_ids": [],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q13",
+      "question": "퇴직금 계산식은 어떻게 되나요?",
+      "answerability": "unanswerable",
+      "required_fact_ids": [],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "q14",
+      "question": "반려동물 병원 동행 휴가가 있나요?",
+      "answerability": "unanswerable",
+      "required_fact_ids": [],
+      "split": "tuning",
+      "origin": "observed_legacy"
+    },
+    {
+      "query_id": "t01",
+      "question": "생일 특별휴가 접수 시 어떤 정보를 연결하며 이미 등록된 생일·입사 정보를 다시 증명해야 하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t01"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "BD-04"
+      ]
+    },
+    {
+      "query_id": "t02",
+      "question": "생일휴가 시스템 장애로 접수 확인이 안 되면 어떤 임시 기록을 남기며 승인 면제가 되나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t02"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "BD-05"
+      ]
+    },
+    {
+      "query_id": "t03",
+      "question": "연차 발생 일수 문의와 잔여 일수 문의는 어떤 기록을 각각 대조하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t03"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "AN-02"
+      ]
+    },
+    {
+      "query_id": "t04",
+      "question": "연차 신청을 기존 사용 기록과 연결할 때 확인할 정보와 중복된 요청의 처리 방법은 무엇인가요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t04"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "AN-05"
+      ]
+    },
+    {
+      "query_id": "t05",
+      "question": "재택근무 신청 날짜가 여러 주에 걸치거나 대상 주와 맞지 않으면 담당자는 어떻게 처리하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t05"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "RM-04"
+      ]
+    },
+    {
+      "query_id": "t06",
+      "question": "이사한 집에서 재택하려면 언제 누구에게 요청하며 주소 변경 기록에는 무엇을 남기나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t06"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "RM-05"
+      ]
+    },
+    {
+      "query_id": "t07",
+      "question": "복지 내역을 확인할 때 어떤 항목을 대조하며 생일 포인트와 식대를 하나의 합계로 더해도 되나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t07"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "WF-04"
+      ]
+    },
+    {
+      "query_id": "t08",
+      "question": "식대 문의에서 화면마다 근무 형태가 다르면 어떤 순서로 확인하고 어떤 근거 선택을 피해야 하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t08"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "WF-05"
+      ]
+    },
+    {
+      "query_id": "t09",
+      "question": "교육휴가 신청에서 시험 일정과 선택 날짜가 다르거나 여러 시험을 함께 적으면 어떻게 확인하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t09"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "ED-03"
+      ]
+    },
+    {
+      "query_id": "t10",
+      "question": "교육휴가 신청의 직무 관련 설명이 부족하면 담당자가 시험 합격 가능성을 평가하거나 미충족으로 기록해도 되나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t10"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "ED-04"
+      ]
+    },
+    {
+      "query_id": "t11",
+      "question": "출장 신청서의 출발일·방문지가 서로 다르면 즉시 취소해야 하나요? 어떤 기록을 남기나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t11"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "TR-04"
+      ]
+    },
+    {
+      "query_id": "t12",
+      "question": "새 출장 일정표가 오면 모든 항목을 변경 요청으로 처리하나요? 오입력 정정과 실제 변경은 어떻게 구분하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-t12"
+      ],
+      "split": "tuning",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "TR-05"
+      ]
+    },
+    {
+      "query_id": "h01",
+      "question": "생일휴가 날짜를 바꿀지 문의만 했는데 새 신청으로 등록해도 되나요? 실제 변경 요청에서는 무엇을 기록하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h01"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "BD-06"
+      ]
+    },
+    {
+      "query_id": "h02",
+      "question": "연차 날짜 변경과 오전·오후 반차 변경은 어떻게 구분하며 의사 확인 전 차감량을 바꿔도 되나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h02"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "AN-09"
+      ]
+    },
+    {
+      "query_id": "h03",
+      "question": "연차 신청 중 일부 날짜와 교육휴가 응시 계획을 취소하려는데, 각각 어떤 범위를 확인하고 기록해야 하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h03"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "AN-10",
+        "ED-06"
+      ]
+    },
+    {
+      "query_id": "h04",
+      "question": "재택 중 VPN 문제가 생기면 어떤 유형으로 나눠 기록하고 일반 확인으로 해결하지 못하면 어떻게 하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h04"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "RM-07"
+      ]
+    },
+    {
+      "query_id": "h05",
+      "question": "재택 승인 결과는 있는데 알림이 오지 않았다면 무엇을 확인하고, 알림 장애로 발송 이력이 없을 때는 어떻게 안내하나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h05"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "RM-09"
+      ]
+    },
+    {
+      "query_id": "h06",
+      "question": "복지 조회 화면이 열리지 않으면 기억하는 금액을 확정값으로 저장하거나 미지급으로 처리해도 되나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h06"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "WF-07"
+      ]
+    },
+    {
+      "query_id": "h07",
+      "question": "복지 담당자의 설명과 표시 내역이 다르면 어떤 항목을 대조하며, 예상 금액과 다르다는 이유로 지급 기준을 바꾸나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h07"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "WF-08"
+      ]
+    },
+    {
+      "query_id": "h08",
+      "question": "교육휴가 뒤 시험 후기를 제출하면 합격 여부가 자격 조건이 되거나 다음 시험 휴가가 자동 신청되나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h08"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "ED-08"
+      ]
+    },
+    {
+      "query_id": "h09",
+      "question": "출장 신청 시스템 장애 시 어떤 임시 정보를 남기고, 이것으로 승인 기한이나 팀장 승인을 생략할 수 있나요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h09"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "TR-07"
+      ]
+    },
+    {
+      "query_id": "h10",
+      "question": "출장 비용 자료의 이용 날짜가 일정표와 다르면 잘못된 비용인가요? 먼저 확인할 정보는 무엇인가요?",
+      "answerability": "answerable",
+      "required_fact_ids": [
+        "new-h10"
+      ],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "article_ids": [
+        "TR-09"
+      ]
+    },
+    {
+      "query_id": "h11",
+      "question": "재택근무 중 전기요금은 월 얼마까지 지원하나요?",
+      "answerability": "unanswerable",
+      "required_fact_ids": [],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "source_audit_reason": "기기/VPN·근무 절차는 있으나 전기요금 지원 금액 규정 없음."
+    },
+    {
+      "query_id": "h12",
+      "question": "개인 차량으로 출장할 때 유류비의 킬로미터당 지급 단가는 얼마인가요?",
+      "answerability": "unanswerable",
+      "required_fact_ids": [],
+      "split": "holdout",
+      "origin": "new_source_v4",
+      "source_audit_reason": "출장 비용 자료의 연결/보완 절차는 있으나 거리당 유류비 지급 단가 없음."
+    }
+  ],
+  "review": {
+    "legacy_reaudited": 14,
+    "new_tuning": 12,
+    "holdout_answerable": 10,
+    "holdout_unanswerable": 2,
+    "new_tuning_holdout_article_overlap": [],
+    "negative_audit": "Original/full authored handbook reviewed via policy inventory and article map; absence is document-bounded, not denial of a real benefit."
+  }
+}

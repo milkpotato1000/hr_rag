@@ -1,0 +1,223 @@
+{
+  "generation": [
+    {
+      "window_id": "w012",
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-10-29T06:48:01.720372Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"end_unit_ids\": [\n    \"u00223\",\n    \"u00224\",\n    \"u00225\",\n    \"u00226\",\n    \"u00227\",\n    \"u00228\",\n    \"u00229\",\n    \"u00230\",\n    \"u00231\",\n    \"u00232\",\n    \"u00233\",\n    \"u00234\",\n    \"u00235\",\n    \"u00236\",\n    \"u00237\",\n    \"u00238\",\n    \"u00239\",\n    \"u00240\",\n    \"u00241\"\n  ]\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 19255092667,
+        "load_duration": 2554899250,
+        "prompt_eval_count": 1578,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 7647399000,
+        "eval_count": 183,
+        "eval_duration": 9039436000
+      },
+      "status": "PASS",
+      "chunk_lengths": [
+        12,
+        66,
+        76,
+        78,
+        59,
+        73,
+        87,
+        70,
+        61,
+        51,
+        66,
+        81,
+        80,
+        80,
+        83,
+        22,
+        24,
+        43,
+        55
+      ],
+      "selected_end_ids": [
+        "u00223",
+        "u00224",
+        "u00225",
+        "u00226",
+        "u00227",
+        "u00228",
+        "u00229",
+        "u00230",
+        "u00231",
+        "u00232",
+        "u00233",
+        "u00234",
+        "u00235",
+        "u00236",
+        "u00237",
+        "u00238",
+        "u00239",
+        "u00240",
+        "u00241"
+      ],
+      "wall_seconds": 19.2636
+    },
+    {
+      "window_id": "w017",
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-10-29T06:48:17.862495Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"end_unit_ids\": [\n    \"u00311\",\n    \"u00312\",\n    \"u00313\",\n    \"u00314\",\n    \"u00315\",\n    \"u00316\",\n    \"u00317\",\n    \"u00318\",\n    \"u00319\",\n    \"u00320\",\n    \"u00321\",\n    \"u00322\",\n    \"u00323\",\n    \"u00324\",\n    \"u00325\",\n    \"u00326\",\n    \"u00327\",\n    \"u00328\",\n    \"u00329\",\n    \"u00330\"\n  ]\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 16137926208,
+        "load_duration": 1013875,
+        "prompt_eval_count": 1492,
+        "prompt_eval_cached_count": 132,
+        "prompt_eval_duration": 6567460000,
+        "eval_count": 192,
+        "eval_duration": 9476334000
+      },
+      "status": "PASS",
+      "chunk_lengths": [
+        55,
+        83,
+        22,
+        25,
+        15,
+        25,
+        30,
+        45,
+        68,
+        16,
+        28,
+        31,
+        36,
+        88,
+        23,
+        60,
+        54,
+        65,
+        68,
+        76
+      ],
+      "selected_end_ids": [
+        "u00311",
+        "u00312",
+        "u00313",
+        "u00314",
+        "u00315",
+        "u00316",
+        "u00317",
+        "u00318",
+        "u00319",
+        "u00320",
+        "u00321",
+        "u00322",
+        "u00323",
+        "u00324",
+        "u00325",
+        "u00326",
+        "u00327",
+        "u00328",
+        "u00329",
+        "u00330"
+      ],
+      "wall_seconds": 16.1389
+    },
+    {
+      "window_id": "w012",
+      "response": {
+        "model": "qwen3:4b",
+        "created_at": "2026-10-29T06:48:27.036898Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"end_unit_ids\": [\n    \"u00223\",\n    \"u00224\",\n    \"u00225\",\n    \"u00226\",\n    \"u00227\",\n    \"u00228\",\n    \"u00229\",\n    \"u00230\",\n    \"u00231\",\n    \"u00232\",\n    \"u00233\",\n    \"u00234\",\n    \"u00235\",\n    \"u00236\",\n    \"u00237\",\n    \"u00238\",\n    \"u00239\",\n    \"u00240\",\n    \"u00241\"\n  ]\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 9173096875,
+        "load_duration": 2146709,
+        "prompt_eval_count": 1578,
+        "prompt_eval_cached_count": 1577,
+        "prompt_eval_duration": 60381000,
+        "eval_count": 183,
+        "eval_duration": 9016419000
+      },
+      "status": "PASS",
+      "chunk_lengths": [
+        12,
+        66,
+        76,
+        78,
+        59,
+        73,
+        87,
+        70,
+        61,
+        51,
+        66,
+        81,
+        80,
+        80,
+        83,
+        22,
+        24,
+        43,
+        55
+      ],
+      "selected_end_ids": [
+        "u00223",
+        "u00224",
+        "u00225",
+        "u00226",
+        "u00227",
+        "u00228",
+        "u00229",
+        "u00230",
+        "u00231",
+        "u00232",
+        "u00233",
+        "u00234",
+        "u00235",
+        "u00236",
+        "u00237",
+        "u00238",
+        "u00239",
+        "u00240",
+        "u00241"
+      ],
+      "wall_seconds": 9.1741
+    }
+  ],
+  "embedding": {
+    "status": "PASS",
+    "response_metadata": {
+      "model": "bge-m3:567m",
+      "total_duration": 1647556583,
+      "load_duration": 1567732291,
+      "prompt_eval_count": 28
+    },
+    "items": 2,
+    "dimension": 1024,
+    "norms": [
+      0.9999997856200242,
+      0.9999999729410902
+    ],
+    "wall_seconds": 1.6496
+  },
+  "limits": {
+    "generation_requests": 3,
+    "embedding_requests": 1,
+    "embedding_items": 2,
+    "generation_timeout_seconds": 90,
+    "total_seconds": 300
+  },
+  "retrieval_runs": 0,
+  "total_wall_seconds": 46.228
+}
