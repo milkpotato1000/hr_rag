@@ -1,0 +1,678 @@
+{
+  "status": "PASS",
+  "profile": {
+    "document_id": "hr-v4-handbook",
+    "body_chars": 35477,
+    "chapters": [
+      {
+        "chapter_id": "BD",
+        "topic": "birthday",
+        "body_chars": 3275,
+        "sections": 2,
+        "articles": 7,
+        "article_lengths": [
+          189,
+          183,
+          250,
+          1500,
+          542,
+          439,
+          172
+        ],
+        "paragraph_lengths": [
+          63,
+          124,
+          78,
+          103,
+          50,
+          198,
+          497,
+          497,
+          502,
+          542,
+          439,
+          172
+        ],
+        "short_articles": [
+          "BD-01",
+          "BD-02",
+          "BD-03",
+          "BD-07"
+        ],
+        "long_articles": [
+          "BD-04"
+        ],
+        "long_paragraphs": [
+          "BD-04-P01",
+          "BD-04-P02",
+          "BD-04-P03",
+          "BD-05-P01",
+          "BD-06-P01"
+        ],
+        "references": 7,
+        "procedure_review": {
+          "flows": [
+            {
+              "article": "BD-04",
+              "base": "BD-03",
+              "condition": "접수된 요청/문의",
+              "purpose": "접수→검토/승인→통지로 상태와 근거를 연결",
+              "evidence": "팀장의 승인 내용이 확인되면"
+            }
+          ],
+          "exceptions": [
+            {
+              "article": "BD-05",
+              "base": "BD-04",
+              "condition": "시스템에 접속할 수 없거나",
+              "purpose": "시스템 장애의 임시 접수",
+              "evidence": "시스템에 접속할 수 없거나"
+            },
+            {
+              "article": "BD-06",
+              "base": "BD-04",
+              "condition": "변경 의사를 확정하지 않은 경우",
+              "purpose": "잠정 문의는 변경 등록에서 제외",
+              "evidence": "변경 의사를 확정하지 않은 경우"
+            }
+          ]
+        },
+        "canonical_chars": 3582,
+        "pages": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "chapter_id": "AN",
+        "topic": "annual",
+        "body_chars": 7515,
+        "sections": 3,
+        "articles": 11,
+        "article_lengths": [
+          174,
+          1421,
+          182,
+          567,
+          1457,
+          510,
+          201,
+          972,
+          716,
+          645,
+          670
+        ],
+        "paragraph_lengths": [
+          69,
+          103,
+          475,
+          473,
+          469,
+          52,
+          128,
+          64,
+          501,
+          482,
+          483,
+          488,
+          510,
+          99,
+          100,
+          483,
+          487,
+          467,
+          247,
+          438,
+          205,
+          451,
+          217
+        ],
+        "short_articles": [
+          "AN-01",
+          "AN-03",
+          "AN-07"
+        ],
+        "long_articles": [
+          "AN-02",
+          "AN-05"
+        ],
+        "long_paragraphs": [
+          "AN-02-P01",
+          "AN-02-P02",
+          "AN-02-P03",
+          "AN-04-P02",
+          "AN-05-P01",
+          "AN-05-P02",
+          "AN-05-P03",
+          "AN-06-P01",
+          "AN-08-P01",
+          "AN-08-P02",
+          "AN-09-P01",
+          "AN-10-P01",
+          "AN-11-P01"
+        ],
+        "references": 9,
+        "procedure_review": {
+          "flows": [
+            {
+              "article": "AN-05",
+              "base": "AN-04",
+              "condition": "접수된 요청/문의",
+              "purpose": "접수→검토/승인→통지로 상태와 근거를 연결",
+              "evidence": "신청 관련 기록이 정리되면"
+            }
+          ],
+          "exceptions": [
+            {
+              "article": "AN-06",
+              "base": "AN-04",
+              "condition": "긴급 사유로 당일 팀장에게 알린 후",
+              "purpose": "일반 기한과 다른 기존 긴급 신청",
+              "evidence": "긴급 사유로 당일 팀장에게 알린 후"
+            },
+            {
+              "article": "AN-11",
+              "base": "AN-04",
+              "condition": "시스템 장애로",
+              "purpose": "정상 시스템 접수 불가 시 임시 기록",
+              "evidence": "시스템 장애로"
+            }
+          ]
+        },
+        "canonical_chars": 8072,
+        "pages": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "chapter_id": "RM",
+        "topic": "remote",
+        "body_chars": 6650,
+        "sections": 3,
+        "articles": 10,
+        "article_lengths": [
+          191,
+          174,
+          214,
+          1493,
+          929,
+          761,
+          779,
+          707,
+          709,
+          693
+        ],
+        "paragraph_lengths": [
+          71,
+          118,
+          61,
+          111,
+          55,
+          157,
+          498,
+          499,
+          492,
+          65,
+          447,
+          413,
+          460,
+          299,
+          509,
+          268,
+          448,
+          257,
+          453,
+          254,
+          449,
+          242
+        ],
+        "short_articles": [
+          "RM-01",
+          "RM-02",
+          "RM-03"
+        ],
+        "long_articles": [
+          "RM-04"
+        ],
+        "long_paragraphs": [
+          "RM-04-P01",
+          "RM-04-P02",
+          "RM-04-P03",
+          "RM-05-P02",
+          "RM-05-P03",
+          "RM-06-P01",
+          "RM-07-P01",
+          "RM-08-P01",
+          "RM-09-P01",
+          "RM-10-P01"
+        ],
+        "references": 10,
+        "procedure_review": {
+          "flows": [
+            {
+              "article": "RM-04",
+              "base": "RM-02",
+              "condition": "접수된 요청/문의",
+              "purpose": "접수→검토/승인→통지로 상태와 근거를 연결",
+              "evidence": "승인 내용이 확인되면"
+            }
+          ],
+          "exceptions": [
+            {
+              "article": "RM-05",
+              "base": "RM-04",
+              "condition": "주소 변경 화면이 열리지 않는 경우",
+              "purpose": "등록 변경 화면 장애",
+              "evidence": "주소 변경 화면이 열리지 않는 경우"
+            },
+            {
+              "article": "RM-09",
+              "base": "RM-08",
+              "condition": "알림 시스템 장애로",
+              "purpose": "결과 알림 장애 시 기록 기반 재통지",
+              "evidence": "알림 시스템 장애로"
+            }
+          ]
+        },
+        "canonical_chars": 7155,
+        "pages": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "chapter_id": "WF",
+        "topic": "welfare",
+        "body_chars": 5237,
+        "sections": 2,
+        "articles": 9,
+        "article_lengths": [
+          165,
+          180,
+          451,
+          1481,
+          780,
+          492,
+          463,
+          469,
+          756
+        ],
+        "paragraph_lengths": [
+          53,
+          110,
+          57,
+          121,
+          451,
+          498,
+          483,
+          496,
+          481,
+          297,
+          492,
+          463,
+          469,
+          519,
+          235
+        ],
+        "short_articles": [
+          "WF-01",
+          "WF-02"
+        ],
+        "long_articles": [
+          "WF-04"
+        ],
+        "long_paragraphs": [
+          "WF-03-P01",
+          "WF-04-P01",
+          "WF-04-P02",
+          "WF-04-P03",
+          "WF-05-P01",
+          "WF-06-P01",
+          "WF-07-P01",
+          "WF-08-P01",
+          "WF-09-P01"
+        ],
+        "references": 7,
+        "procedure_review": {
+          "flows": [
+            {
+              "article": "WF-04",
+              "base": "WF-03",
+              "condition": "접수된 요청/문의",
+              "purpose": "접수→검토/승인→통지로 상태와 근거를 연결",
+              "evidence": "정정이 반영되면"
+            }
+          ],
+          "exceptions": [
+            {
+              "article": "WF-05",
+              "base": "WF-01",
+              "condition": "근무 형태가 서로 다르면",
+              "purpose": "일반 식대 대조 전 불일치 자료 정리",
+              "evidence": "근무 형태가 서로 다르면"
+            },
+            {
+              "article": "WF-07",
+              "base": "WF-03",
+              "condition": "화면에 접속할 수 없어",
+              "purpose": "조회 불가 시 임시 문의",
+              "evidence": "화면에 접속할 수 없어"
+            }
+          ]
+        },
+        "canonical_chars": 5670,
+        "pages": [
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "chapter_id": "ED",
+        "topic": "training",
+        "body_chars": 5515,
+        "sections": 2,
+        "articles": 9,
+        "article_lengths": [
+          165,
+          164,
+          509,
+          1488,
+          835,
+          614,
+          643,
+          571,
+          526
+        ],
+        "paragraph_lengths": [
+          37,
+          126,
+          23,
+          139,
+          509,
+          494,
+          509,
+          481,
+          521,
+          312,
+          614,
+          643,
+          571,
+          526
+        ],
+        "short_articles": [
+          "ED-01",
+          "ED-02"
+        ],
+        "long_articles": [
+          "ED-04"
+        ],
+        "long_paragraphs": [
+          "ED-03-P01",
+          "ED-04-P01",
+          "ED-04-P02",
+          "ED-04-P03",
+          "ED-05-P01",
+          "ED-06-P01",
+          "ED-07-P01",
+          "ED-08-P01",
+          "ED-09-P01"
+        ],
+        "references": 8,
+        "procedure_review": {
+          "flows": [
+            {
+              "article": "ED-04",
+              "base": "ED-03",
+              "condition": "접수된 요청/문의",
+              "purpose": "접수→검토/승인→통지로 상태와 근거를 연결",
+              "evidence": "정보 확인과 기록 반영이 끝나면"
+            }
+          ],
+          "exceptions": [
+            {
+              "article": "ED-05",
+              "base": "ED-03",
+              "condition": "해당 기록이 조회되지 않는 경우",
+              "purpose": "신청 재등록 전 원 기록 탐색",
+              "evidence": "해당 기록이 조회되지 않는 경우"
+            },
+            {
+              "article": "ED-07",
+              "base": "ED-04",
+              "condition": "제출 후 접수 여부가 표시되지 않는 경우",
+              "purpose": "접수 확인 불가 시 임시 기록",
+              "evidence": "제출 후 접수 여부가 표시되지 않는 경우"
+            }
+          ]
+        },
+        "canonical_chars": 5994,
+        "pages": [
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "chapter_id": "TR",
+        "topic": "travel",
+        "body_chars": 7285,
+        "sections": 3,
+        "articles": 11,
+        "article_lengths": [
+          170,
+          151,
+          630,
+          1506,
+          766,
+          727,
+          723,
+          619,
+          812,
+          601,
+          580
+        ],
+        "paragraph_lengths": [
+          27,
+          141,
+          31,
+          118,
+          630,
+          495,
+          505,
+          502,
+          489,
+          275,
+          470,
+          255,
+          503,
+          218,
+          619,
+          448,
+          362,
+          601,
+          580
+        ],
+        "short_articles": [
+          "TR-01",
+          "TR-02"
+        ],
+        "long_articles": [
+          "TR-04"
+        ],
+        "long_paragraphs": [
+          "TR-03-P01",
+          "TR-04-P01",
+          "TR-04-P02",
+          "TR-04-P03",
+          "TR-05-P01",
+          "TR-06-P01",
+          "TR-07-P01",
+          "TR-08-P01",
+          "TR-09-P01",
+          "TR-10-P01",
+          "TR-11-P01"
+        ],
+        "references": 13,
+        "procedure_review": {
+          "flows": [
+            {
+              "article": "TR-04",
+              "base": "TR-01",
+              "condition": "접수된 요청/문의",
+              "purpose": "접수→검토/승인→통지로 상태와 근거를 연결",
+              "evidence": "처리 결과를 신청자에게 안내할 때에는"
+            }
+          ],
+          "exceptions": [
+            {
+              "article": "TR-07",
+              "base": "TR-04",
+              "condition": "신청 시스템이 열리지 않거나",
+              "purpose": "시스템 장애 임시 접수",
+              "evidence": "신청 시스템이 열리지 않거나"
+            },
+            {
+              "article": "TR-10",
+              "base": "TR-09",
+              "condition": "출장을 식별할 수 없는 비용 자료",
+              "purpose": "비용 연결 대상 미확인 시 보완",
+              "evidence": "출장을 식별할 수 없는 비용 자료"
+            }
+          ]
+        },
+        "canonical_chars": 7900,
+        "pages": [
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      }
+    ],
+    "cross_chapter_references": [
+      {
+        "source": "AN-11",
+        "target": "BD-02",
+        "paragraph_id": "AN-11-P02",
+        "start": 12306,
+        "end": 12314,
+        "version": 4
+      },
+      {
+        "source": "WF-02",
+        "target": "BD-03",
+        "paragraph_id": "WF-02-P02",
+        "start": 20374,
+        "end": 20382,
+        "version": 4
+      },
+      {
+        "source": "WF-03",
+        "target": "RM-02",
+        "paragraph_id": "WF-03-P01",
+        "start": 20839,
+        "end": 20847,
+        "version": 4
+      },
+      {
+        "source": "ED-02",
+        "target": "AN-03",
+        "paragraph_id": "ED-02-P02",
+        "start": 26352,
+        "end": 26360,
+        "version": 4
+      },
+      {
+        "source": "TR-02",
+        "target": "RM-02",
+        "paragraph_id": "TR-02-P02",
+        "start": 32567,
+        "end": 32575,
+        "version": 4
+      }
+    ],
+    "canonical_chars": 38582,
+    "pages": 23,
+    "article_count": 57,
+    "paragraph_count": 105,
+    "page_crossing_paragraphs": [
+      "BD-05-P01",
+      "AN-02-P01",
+      "AN-04-P02",
+      "AN-06-P01",
+      "AN-09-P01",
+      "AN-11-P02",
+      "RM-04-P01",
+      "RM-05-P03",
+      "RM-10-P01",
+      "WF-05-P01",
+      "WF-08-P01",
+      "ED-04-P03",
+      "ED-07-P01",
+      "TR-04-P01",
+      "TR-05-P02",
+      "TR-08-P01",
+      "TR-10-P01"
+    ],
+    "page_crossing_articles": [
+      "BD-05",
+      "AN-02",
+      "AN-04",
+      "AN-06",
+      "AN-09",
+      "AN-11",
+      "RM-04",
+      "RM-05",
+      "RM-10",
+      "WF-05",
+      "WF-08",
+      "ED-04",
+      "ED-07",
+      "TR-04",
+      "TR-05",
+      "TR-08",
+      "TR-10"
+    ],
+    "duplicate_paragraphs": [],
+    "near_duplicate_candidates": [
+      {
+        "paragraphs": [
+          "ED-07-P01",
+          "TR-07-P01"
+        ],
+        "bigram_dice": 0.5823
+      }
+    ],
+    "near_duplicate_method": "character bigram Dice >= 0.58; manual full review remains required",
+    "classification_counts": {
+      "preserved": 31,
+      "added_fictional": 481,
+      "explanatory": 14
+    },
+    "authoring_sha256": "e968c42c7f463e8b181581e18d798e837e9cd5ace38f4db707c629e2a1a5a9ce",
+    "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+  },
+  "profile_sha256": "11bbc08d392ad15602919ae7e21d1bc2708221b932bcaa33b92c9a5f61260134",
+  "length_accounting_sha256": "203bf4b6960254da3ac36f8e85e28d40e366003431e0bd813bfc7f40a5d044e4",
+  "one_source_document": true,
+  "toc_distinct_from_actual_headings": true,
+  "global_article_ids_unique": true,
+  "acyclic_references": true,
+  "parent_contains_children": true,
+  "sibling_ranges_nonoverlapping": true,
+  "manual_review": "authoring-review.json / narrative-review.json",
+  "page_review": "visual-review.json"
+}

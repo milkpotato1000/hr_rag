@@ -1,5 +1,53 @@
 # Document Chunking - 원문 준비
 
+현재 장문 실습 입력은 **source-v4 단일 규정집**입니다. 아래 source-v3 설명은 보존된 짧은 기준선입니다.
+
+## P016 단일 장문 규정집
+
+`data/source-v4/authoring/hr-handbook.md` 하나를 작성해
+`data/source-v4/output/pdf/hr-handbook.pdf` 하나로 출력했습니다.
+23페이지, 본문35,477자, 6장·15절·57조항·105문단입니다.
+장별 본문은 생일3,275 / 연차7,515 / 재택6,650 / 복지5,237 / 교육5,515 / 출장7,285자입니다.
+길이는 토큰 수가 아니며 제목·목차·작성 주석을 제외하고 본문 공백을 포함한 NFC/LF Unicode 문자 수입니다.
+`length-accounting.json`에 포함/제외 원문 범위가 있습니다.
+
+기존31개 정책은 보존하고, 추가 가상 처리 절차481문장과 설명14문장을 분류했습니다.
+새 권리/지급액/신청 자격을 만들지 않았고 시행일은 여전히 미정입니다.
+전체가 가상 자료이며 사람 승인 정답이나 실제 회사 규정은 아닙니다.
+
+- `extracted/canonical/hr-v4-handbook.txt`: 한 문서의 연속 텍스트. 페이지 footer도 보존합니다.
+- `extracted/manifest.json`: 원본/페이지 hash, 연속 offset, 고정 pypdf6.21.2.
+- `section-map.json`: 제목→장→절→조항 계층과 본문/정확 인용 위치. 목차 항목은 실제 제목과 분리합니다.
+- `policy-inventory.json`, `policy-map.json`: 모든 본문 문장 분류와 v3의31주장/34본문 출현 대응.
+- `corpus-profile.json`: 분량·짧은/긴 조항·참조·페이지 횡단·중복 후보. 페이지를 넘는 문단17개입니다.
+- `authoring-review.json`: 모든 조항/문단의 직접 서술 검토 및 절차·예외 연결.
+- `handoff-manifest.json`: 파일 hash와 원문 commit, 외부 완료 기록 연결.
+
+수집 대상은 PDF 한 개뿐이며 문서 ID는 `hr-v4-handbook`입니다. 장별 ID는 section ID입니다.
+페이지를 넘는 정확 인용에는 footer가 끼어 있을 수 있습니다. `excluded_footer_spans`는 그 위치를 명시하며
+canonical을 조용히 정리하거나 제목을 각 문단에 복제하지 않습니다.
+
+단계 폴더에서 다음처럼 새 출력 위치를 사용합니다. `runs/`는 먼저 만듭니다.
+
+```sh
+.venv/bin/python scripts/validate_handbook.py --source-root data/source-v4
+.venv/bin/python scripts/snapshot_drive_fixture.py --catalog data/source-v4/drive-fixture-catalog.json --output-dir runs/v4-snapshot-01
+.venv/bin/python scripts/ingest_documents.py --manifest runs/v4-snapshot-01/manifest.json --output-dir runs/v4-extracted-01
+.venv/bin/python scripts/prepare_handbook.py --source-root data/source-v4 --output-dir runs/v4-maps-01
+python3 scripts/create_handbook_pdf.py --font /System/Library/Fonts/Supplemental/AppleGothic.ttf --output-dir runs/v4-pdf-01
+```
+
+작성 도구만 ReportLab/로컬 글꼴이 필요합니다. 수집·추출·검증은 고정 pypdf와 표준 라이브러리만 사용하며
+독립 복사해 실행할 수 있습니다. `prepare_handbook.py`는 전체 원문·추출 결과와 검토 자료에서 지도 파일을 재계산합니다.
+동결 manifest는 원문/도구를 커밋한 뒤 `--freeze-source-commit <full SHA>`로 별도 새 폴더에 만들며
+자기 hash는 외부 완료 증거에 기록합니다. 이미 존재하는 출력은 도구가 덮어쓰지 않습니다.
+
+P007은 이 corpus로 다섯 청킹 방식·overlap·전체 coverage·긴 조항 처리·질문/holdout·실제 window와 비용 예산을
+다시 준비해야 합니다. 과거8window/300요청/440ranking 예산을 승계하지 않습니다.
+기존 UI와8001서버의 기본 corpus는 바꾸지 않았고, 청킹·검색 실험과 모델 호출은 이번 작업에서 실행하지 않았습니다.
+
+## 보존된 P015 기준선
+
 P015에서 준비한 가상 HR 규정 원문입니다. 현재 범위는 PDF 작성, 로컬 수집 fixture,
 텍스트 추출 및 정책 보존 대조까지입니다. 청킹·검색·모델 호출·웹 화면은 아직 구현하지 않았습니다.
 기존 `1. Naive RAG/`와 LangChain 비교 화면의 데이터·동작은 유지됩니다.

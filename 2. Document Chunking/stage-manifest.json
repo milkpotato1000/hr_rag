@@ -1,7 +1,8 @@
 {
   "stage": "Document Chunking",
   "implemented_cards": [
-    "P015"
+    "P015",
+    "P016"
   ],
   "planned_cards": [
     "P007",
@@ -117,5 +118,86 @@
   "new_files": [
     "scripts/prepare_handoff.py",
     "scripts/validate_source.py"
-  ]
+  ],
+  "p016_extensions": {
+    "plan_commit": "96ebe9d612bb4a1aae4f52fa25ee650139b5114f",
+    "baseline_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+    "change_reason": "One long fictional handbook with audited procedures, natural pagination and continuous source maps; all v3 defaults preserved",
+    "source_dependencies": [
+      {
+        "source_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+        "source_path": "2. Document Chunking/scripts/document_common.py",
+        "source_sha256": "87fd8d0a06b5bbbd38125667e279e4c1d5c37778f8c3710121d88edffd6539a1",
+        "reuse": "Imported locally unchanged; no parent-stage import"
+      },
+      {
+        "source_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+        "source_path": "2. Document Chunking/scripts/create_source_pdfs.py",
+        "source_sha256": "4370109b479eaead8e1ddf85ccc87f6d6e49b0c3f925b2767031aeac4c1f17f4",
+        "reuse": "Imported locally unchanged; no parent-stage import"
+      },
+      {
+        "source_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+        "source_path": "2. Document Chunking/scripts/snapshot_drive_fixture.py",
+        "source_sha256": "dabf8e55e7e672c25d77c2126ffa2da4b0304fe2a82994fa4757dbb3c487737b",
+        "reuse": "Imported locally unchanged; no parent-stage import"
+      },
+      {
+        "source_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+        "source_path": "2. Document Chunking/scripts/ingest_documents.py",
+        "source_sha256": "355f432ad1c8bca7734407a48d35bc32dfdee83b26a7ed8fb9733b10c87404d3",
+        "reuse": "Imported locally unchanged; no parent-stage import"
+      },
+      {
+        "source_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+        "source_path": "2. Document Chunking/scripts/pdf_extract_worker.py",
+        "source_sha256": "68396755d4dfc415cb250b87223de1c007d61fd67116756a53ae4ea0e0abcb33",
+        "reuse": "Imported locally unchanged; no parent-stage import"
+      },
+      {
+        "source_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+        "source_path": "2. Document Chunking/authoring-lock.json",
+        "source_sha256": "ac98ee574f3abbf5bdcc5be157d2e70097877bf17baa78e0a40d761fca04ac93",
+        "reuse": "Imported locally unchanged; no parent-stage import"
+      },
+      {
+        "source_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+        "source_path": "2. Document Chunking/ingestion-lock.json",
+        "source_sha256": "cbff277a316842fd0ff4815092ad6193ecdb4ad9e3214aced713cf2f5afe8814",
+        "reuse": "Imported locally unchanged; no parent-stage import"
+      },
+      {
+        "source_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+        "source_path": "2. Document Chunking/ingestion-requirements.lock",
+        "source_sha256": "c3f793c919ec790734762729cc0d68915b451d4da24c3d78edfd3fe1ac2b067f",
+        "reuse": "Imported locally unchanged; no parent-stage import"
+      }
+    ],
+    "new_files": [
+      {
+        "path": "scripts/handbook_model.py",
+        "sha256": "2b6e02c16b49135817f76d5945ecbb04aa3ba5c9c722ddf40916d21c254322c6"
+      },
+      {
+        "path": "scripts/handbook_artifacts.py",
+        "sha256": "eeaec4b947f7b4b5044dd1c25e8ec3f581c5148caa59c3fc2e60fad3ede098e7"
+      },
+      {
+        "path": "scripts/create_handbook_pdf.py",
+        "sha256": "e06947a2ed3129ea0bc95e62ee7ee6a2670a83f96521102ef6c0c4a0c4a0d4eb"
+      },
+      {
+        "path": "scripts/prepare_handbook.py",
+        "sha256": "d4b77d14dc7aece363b6db48590ee938780647f25b6bb4f1cbd653afb62ed4a6"
+      },
+      {
+        "path": "scripts/validate_handbook.py",
+        "sha256": "8e36f36d66eefb9b5d8a51f4749d4918f1cf198d12de505120665b6131b8fee3"
+      }
+    ],
+    "new_test": {
+      "path": "tests/test_handbook.py",
+      "sha256": "725604adf77f920c434708ccc6220f5e86f1c34545ed5f30b604511220fe85cb"
+    }
+  }
 }

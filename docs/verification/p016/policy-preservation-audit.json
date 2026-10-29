@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "review": "Codex direct fictional-source comparison, not human approved ground truth",
+  "baseline_claims": 31,
+  "baseline_body_occurrences": 34,
+  "all_claims_have_targets": true,
+  "all_occurrences_have_targets": true,
+  "classified_sentences": 526,
+  "classifications": {
+    "preserved": 31,
+    "added_fictional": 481,
+    "explanatory": 14
+  },
+  "policy_map_sha256": "ff224208fc12720e6cb7f190e5053e2c1d0edc64c938921208841644c560c6b7",
+  "inventory_sha256": "56b1f63f85471aa68c63be0ff7800a085932c57c54e04b8ac9f5fbe871cee763",
+  "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "source_preservation": "All31 original sentences verbatim. Full authored/PDF nonwhitespace stream identical in order; includes numeric units, negations, exception conditions and clause references.",
+  "manual_scope": "All57 articles and105 paragraphs reviewed; article-specific purposes, nonconflict rationale,12 exception links and6 flows in authoring-review.json. Travel deadline draft error corrected before PDF. No new entitlement, payment, eligibility, approver, penalty or mandatory evidence."
+}

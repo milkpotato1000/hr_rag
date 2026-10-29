@@ -1,0 +1,2680 @@
+{
+  "source_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+  "original_claims": [
+    {
+      "claim_id": "birthday-eligibility-1",
+      "source_v3": {
+        "claim_id": "birthday-eligibility-1",
+        "text": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다.",
+        "chunk_id": "birthday-eligibility",
+        "topic": "birthday",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/birthday.md",
+            "sha256": "ae6bded1cfb08892b5e8d0f243ff20f679881ca414c0e505d040e1c0f6f890e8",
+            "start": 173,
+            "end": 215,
+            "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-birthday",
+            "start": 108,
+            "end": 150,
+            "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다.",
+            "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+            "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 108,
+                "end": 150,
+                "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "BD-01-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 272,
+          "end": 314,
+          "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다.",
+          "pages": [
+            1
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "birthday-eligibility-2",
+      "source_v3": {
+        "claim_id": "birthday-eligibility-2",
+        "text": "수습 중인 직원은 대상에서 제외한다.",
+        "chunk_id": "birthday-eligibility",
+        "topic": "birthday",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/birthday.md",
+            "sha256": "ae6bded1cfb08892b5e8d0f243ff20f679881ca414c0e505d040e1c0f6f890e8",
+            "start": 216,
+            "end": 236,
+            "quote": "수습 중인 직원은 대상에서 제외한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-birthday",
+            "start": 151,
+            "end": 172,
+            "quote": "수습 중인 직원은 대상\n에서 제외한다.",
+            "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+            "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 151,
+                "end": 172,
+                "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "BD-01-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 315,
+          "end": 336,
+          "quote": "수습 중인 직원은 대상\n에서 제외한다.",
+          "pages": [
+            1
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "birthday-window-1",
+      "source_v3": {
+        "claim_id": "birthday-window-1",
+        "text": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다.",
+        "chunk_id": "birthday-window",
+        "topic": "birthday",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/birthday.md",
+            "sha256": "ae6bded1cfb08892b5e8d0f243ff20f679881ca414c0e505d040e1c0f6f890e8",
+            "start": 445,
+            "end": 474,
+            "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-birthday",
+            "start": 183,
+            "end": 212,
+            "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다.",
+            "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+            "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 183,
+                "end": 212,
+                "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "BD-02-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 483,
+          "end": 512,
+          "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다.",
+          "pages": [
+            1
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "birthday-window-2",
+      "source_v3": {
+        "claim_id": "birthday-window-2",
+        "text": "해당 월을 넘겨 이월하거나 현금으로 지급하지 않는다.",
+        "chunk_id": "birthday-window",
+        "topic": "birthday",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/birthday.md",
+            "sha256": "ae6bded1cfb08892b5e8d0f243ff20f679881ca414c0e505d040e1c0f6f890e8",
+            "start": 475,
+            "end": 504,
+            "quote": "해당 월을 넘겨 이월하거나 현금으로 지급하지 않는다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-birthday",
+            "start": 213,
+            "end": 243,
+            "quote": "해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다.",
+            "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+            "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 213,
+                "end": 243,
+                "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "BD-02-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 513,
+          "end": 543,
+          "quote": "해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다.",
+          "pages": [
+            1
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "birthday-request-1",
+      "source_v3": {
+        "claim_id": "birthday-request-1",
+        "text": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+        "chunk_id": "birthday-request",
+        "topic": "birthday",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/birthday.md",
+            "sha256": "ae6bded1cfb08892b5e8d0f243ff20f679881ca414c0e505d040e1c0f6f890e8",
+            "start": 734,
+            "end": 784,
+            "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-birthday",
+            "start": 275,
+            "end": 325,
+            "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+            "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+            "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 275,
+                "end": 325,
+                "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "BD-03-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 684,
+          "end": 734,
+          "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+          "pages": [
+            1
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-accrual-1",
+      "source_v3": {
+        "claim_id": "annual-accrual-1",
+        "text": "1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다.",
+        "chunk_id": "annual-accrual",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 150,
+            "end": 182,
+            "quote": "1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-annual",
+            "start": 96,
+            "end": 128,
+            "quote": "1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 96,
+                "end": 128,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "AN-01-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 3848,
+          "end": 3880,
+          "quote": "1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다.",
+          "pages": [
+            3
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-accrual-2",
+      "source_v3": {
+        "claim_id": "annual-accrual-2",
+        "text": "1년 이상 재직자의 연차는 매년 15일을 기준으로 별도 산정한다.",
+        "chunk_id": "annual-accrual",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 183,
+            "end": 219,
+            "quote": "1년 이상 재직자의 연차는 매년 15일을 기준으로 별도 산정한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-annual",
+            "start": 129,
+            "end": 166,
+            "quote": "1년 이상 재직자의 연차는 매년 15일을 기\n준으로 별도 산정한다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 129,
+                "end": 166,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "AN-01-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 3881,
+          "end": 3918,
+          "quote": "1년 이상 재직자의 연차는 매년 15일을 \n기준으로 별도 산정한다.",
+          "pages": [
+            3
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-request-1",
+      "source_v3": {
+        "claim_id": "annual-request-1",
+        "text": "연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다.",
+        "chunk_id": "annual-request",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 401,
+            "end": 431,
+            "quote": "연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-annual",
+            "start": 260,
+            "end": 290,
+            "quote": "연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 260,
+                "end": 290,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "AN-04-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 5753,
+          "end": 5783,
+          "quote": "연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다.",
+          "pages": [
+            4
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-request-2",
+      "source_v3": {
+        "claim_id": "annual-request-2",
+        "text": "긴급 사유가 있으면 당일 팀장에게 알린 후 신청할 수 있다.",
+        "chunk_id": "annual-request",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 432,
+            "end": 465,
+            "quote": "긴급 사유가 있으면 당일 팀장에게 알린 후 신청할 수 있다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-annual",
+            "start": 291,
+            "end": 325,
+            "quote": "긴급 사유가 있으면 당일 팀장에게 알린 \n후 신청할 수 있다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 291,
+                "end": 325,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "AN-04-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 5784,
+          "end": 5818,
+          "quote": "긴급 사유가 있으면 당일 팀장에게 알린 \n후 신청할 수 있다.",
+          "pages": [
+            4
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-carry-1",
+      "source_v3": {
+        "claim_id": "annual-carry-1",
+        "text": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다.",
+        "chunk_id": "annual-carry",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 663,
+            "end": 706,
+            "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-annual",
+            "start": 340,
+            "end": 383,
+            "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 340,
+                "end": 383,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "AN-07-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 8464,
+          "end": 8507,
+          "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다.",
+          "pages": [
+            6
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-carry-2",
+      "source_v3": {
+        "claim_id": "annual-carry-2",
+        "text": "이월한 연차의 사용 기한은 다음 해 3월 31일이다.",
+        "chunk_id": "annual-carry",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 707,
+            "end": 736,
+            "quote": "이월한 연차의 사용 기한은 다음 해 3월 31일이다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-annual",
+            "start": 384,
+            "end": 414,
+            "quote": "이월한 연차의 사용 \n기한은 다음 해 3월 31일이다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 384,
+                "end": 414,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "AN-07-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 8508,
+          "end": 8538,
+          "quote": "이월한 연차의 사용 \n기한은 다음 해 3월 31일이다.",
+          "pages": [
+            6
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-carry-3",
+      "source_v3": {
+        "claim_id": "annual-carry-3",
+        "text": "생일 특별휴가에는 이 규정을 적용하지 않는다.",
+        "chunk_id": "annual-carry",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 737,
+            "end": 762,
+            "quote": "생일 특별휴가에는 이 규정을 적용하지 않는다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-annual",
+            "start": 415,
+            "end": 440,
+            "quote": "생일 특별휴가에는 이 규정을 적용하지 않는다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 415,
+                "end": 440,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "AN-07-P01-S03",
+          "document_id": "hr-v4-handbook",
+          "start": 8539,
+          "end": 8564,
+          "quote": "생일 특별휴가에는 이 규정을 적용하지 않는다.",
+          "pages": [
+            6
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "remote-eligibility-1",
+      "source_v3": {
+        "claim_id": "remote-eligibility-1",
+        "text": "입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다.",
+        "chunk_id": "remote-eligibility",
+        "topic": "remote",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/remote.md",
+            "sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+            "start": 90,
+            "end": 134,
+            "quote": "입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-remote",
+            "start": 95,
+            "end": 139,
+            "quote": "입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다.",
+            "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+            "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 95,
+                "end": 139,
+                "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "RM-01-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 11922,
+          "end": 11966,
+          "quote": "입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다.",
+          "pages": [
+            8
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "remote-eligibility-2",
+      "source_v3": {
+        "claim_id": "remote-eligibility-2",
+        "text": "현장 장비 운영 직무는 재택 대상에서 제외한다.",
+        "chunk_id": "remote-eligibility",
+        "topic": "remote",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/remote.md",
+            "sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+            "start": 135,
+            "end": 161,
+            "quote": "현장 장비 운영 직무는 재택 대상에서 제외한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-remote",
+            "start": 140,
+            "end": 167,
+            "quote": "현장 장비 운영 직\n무는 재택 대상에서 제외한다.",
+            "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+            "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 140,
+                "end": 167,
+                "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "RM-01-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 11967,
+          "end": 11994,
+          "quote": "현장 장비 운영 \n직무는 재택 대상에서 제외한다.",
+          "pages": [
+            8
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "remote-days-1",
+      "source_v3": {
+        "claim_id": "remote-days-1",
+        "text": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다.",
+        "chunk_id": "remote-days",
+        "topic": "remote",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/remote.md",
+            "sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+            "start": 260,
+            "end": 297,
+            "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-remote",
+            "start": 183,
+            "end": 220,
+            "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다.",
+            "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+            "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 183,
+                "end": 220,
+                "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "RM-02-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 12132,
+          "end": 12169,
+          "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다.",
+          "pages": [
+            8
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "remote-days-2",
+      "source_v3": {
+        "claim_id": "remote-days-2",
+        "text": "재택근무는 휴가가 아닌 근무일로 집계한다.",
+        "chunk_id": "remote-days",
+        "topic": "remote",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/remote.md",
+            "sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+            "start": 298,
+            "end": 321,
+            "quote": "재택근무는 휴가가 아닌 근무일로 집계한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-remote",
+            "start": 221,
+            "end": 245,
+            "quote": "재택근무는 휴가가 아닌 근무\n일로 집계한다.",
+            "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+            "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 221,
+                "end": 245,
+                "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "RM-02-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 12170,
+          "end": 12194,
+          "quote": "재택근무는 휴가가 아닌 근\n무일로 집계한다.",
+          "pages": [
+            8
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "remote-security-1",
+      "source_v3": {
+        "claim_id": "remote-security-1",
+        "text": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다.",
+        "chunk_id": "remote-security",
+        "topic": "remote",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/remote.md",
+            "sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+            "start": 419,
+            "end": 449,
+            "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-remote",
+            "start": 346,
+            "end": 376,
+            "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다.",
+            "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+            "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 346,
+                "end": 376,
+                "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "RM-03-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 12328,
+          "end": 12358,
+          "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다.",
+          "pages": [
+            8
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "remote-security-2",
+      "source_v3": {
+        "claim_id": "remote-security-2",
+        "text": "공용 컴퓨터로 내부 문서에 접근할 수 없다.",
+        "chunk_id": "remote-security",
+        "topic": "remote",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/remote.md",
+            "sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+            "start": 450,
+            "end": 474,
+            "quote": "공용 컴퓨터로 내부 문서에 접근할 수 없다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-remote",
+            "start": 377,
+            "end": 401,
+            "quote": "공용 컴퓨터로 내부 문서에 접근할 수 없다.",
+            "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+            "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 377,
+                "end": 401,
+                "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "RM-03-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 12359,
+          "end": 12383,
+          "quote": "공용 컴퓨터로 내부 문서에 접근할 수 없다.",
+          "pages": [
+            8
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "welfare-birthday-1",
+      "source_v3": {
+        "claim_id": "welfare-birthday-1",
+        "text": "재직자에게 생일 축하 포인트 3만 점을 지급한다.",
+        "chunk_id": "welfare-birthday",
+        "topic": "welfare",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/welfare.md",
+            "sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+            "start": 279,
+            "end": 306,
+            "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-welfare",
+            "start": 165,
+            "end": 192,
+            "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다.",
+            "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+            "original_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 165,
+                "end": 192,
+                "page_text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "WF-02-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 19264,
+          "end": 19291,
+          "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다.",
+          "pages": [
+            12
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "welfare-birthday-2",
+      "source_v3": {
+        "claim_id": "welfare-birthday-2",
+        "text": "이 포인트는 휴가 신청 자격이나 승인 여부와 별개다.",
+        "chunk_id": "welfare-birthday",
+        "topic": "welfare",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/welfare.md",
+            "sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+            "start": 307,
+            "end": 336,
+            "quote": "이 포인트는 휴가 신청 자격이나 승인 여부와 별개다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-welfare",
+            "start": 193,
+            "end": 223,
+            "quote": "이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.",
+            "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+            "original_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 193,
+                "end": 223,
+                "page_text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+              }
+            ]
+          },
+          {
+            "document_id": "hr-v3-birthday",
+            "start": 336,
+            "end": 369,
+            "quote": "생일 축하 포인트는 휴가 신청 자격이나 승인 여부와 별개다.",
+            "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+            "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 336,
+                "end": 369,
+                "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "WF-02-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 19292,
+          "end": 19322,
+          "quote": "이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.",
+          "pages": [
+            12
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "welfare-meal-1",
+      "source_v3": {
+        "claim_id": "welfare-meal-1",
+        "text": "사무실 출근일에는 식대 1만 원을 지원한다.",
+        "chunk_id": "welfare-meal",
+        "topic": "welfare",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/welfare.md",
+            "sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+            "start": 90,
+            "end": 114,
+            "quote": "사무실 출근일에는 식대 1만 원을 지원한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-welfare",
+            "start": 97,
+            "end": 121,
+            "quote": "사무실 출근일에는 식대 1만 원을 지원한다.",
+            "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+            "original_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 97,
+                "end": 121,
+                "page_text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "WF-01-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 19080,
+          "end": 19104,
+          "quote": "사무실 출근일에는 식대 1만 원을 지원한다.",
+          "pages": [
+            12
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "welfare-meal-2",
+      "source_v3": {
+        "claim_id": "welfare-meal-2",
+        "text": "재택근무일과 휴가일에는 이 식대를 지원하지 않는다.",
+        "chunk_id": "welfare-meal",
+        "topic": "welfare",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/welfare.md",
+            "sha256": "50bfc160e755fff7c988320375b1e16d5df2caac1c3251af593c912760695442",
+            "start": 115,
+            "end": 143,
+            "quote": "재택근무일과 휴가일에는 이 식대를 지원하지 않는다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-welfare",
+            "start": 122,
+            "end": 150,
+            "quote": "재택근무일과 휴가일에는 이 식대를 지원하지 않는다.",
+            "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+            "original_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 122,
+                "end": 150,
+                "page_text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "WF-01-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 19105,
+          "end": 19134,
+          "quote": "재택근무일과 휴가일에는 이 식대를 지원하지 \n않는다.",
+          "pages": [
+            12
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "training-time-1",
+      "source_v3": {
+        "claim_id": "training-time-1",
+        "text": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.",
+        "chunk_id": "training-time",
+        "topic": "training",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/training.md",
+            "sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+            "start": 95,
+            "end": 132,
+            "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-training",
+            "start": 103,
+            "end": 140,
+            "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.",
+            "canonical_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+            "original_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 103,
+                "end": 140,
+                "page_text_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "ED-01-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 24748,
+          "end": 24785,
+          "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.",
+          "pages": [
+            15
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "training-time-2",
+      "source_v3": {
+        "claim_id": "training-time-2",
+        "text": "생일 특별휴가 및 연차와 별도로 관리한다.",
+        "chunk_id": "training-time",
+        "topic": "training",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/training.md",
+            "sha256": "c3d75f873f241058ef980178fef874a50a382604f83a53352dedf0d823df2e22",
+            "start": 133,
+            "end": 156,
+            "quote": "생일 특별휴가 및 연차와 별도로 관리한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-training",
+            "start": 156,
+            "end": 179,
+            "quote": "생일 특별휴가 및 연차와 별도로 관리한다.",
+            "canonical_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+            "original_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 156,
+                "end": 179,
+                "page_text_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "ED-02-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 24935,
+          "end": 24958,
+          "quote": "생일 특별휴가 및 연차와 별도로 관리한다.",
+          "pages": [
+            15
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "travel-approval-1",
+      "source_v3": {
+        "claim_id": "travel-approval-1",
+        "text": "출장은 출발 5영업일 전에 팀장의 승인을 받는다.",
+        "chunk_id": "travel-approval",
+        "topic": "travel",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/travel.md",
+            "sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+            "start": 97,
+            "end": 124,
+            "quote": "출장은 출발 5영업일 전에 팀장의 승인을 받는다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-travel",
+            "start": 99,
+            "end": 126,
+            "quote": "출장은 출발 5영업일 전에 팀장의 승인을 받는다.",
+            "canonical_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+            "original_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 99,
+                "end": 126,
+                "page_text_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "TR-01-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 30749,
+          "end": 30776,
+          "quote": "출장은 출발 5영업일 전에 팀장의 승인을 받는다.",
+          "pages": [
+            19
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "travel-approval-2",
+      "source_v3": {
+        "claim_id": "travel-approval-2",
+        "text": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+        "chunk_id": "travel-approval",
+        "topic": "travel",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/travel.md",
+            "sha256": "944813c4075542176b54e73e41d8929e2c7685cf8abd6e7b9b4467fc046591e5",
+            "start": 125,
+            "end": 156,
+            "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-remote",
+            "start": 417,
+            "end": 448,
+            "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+            "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+            "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 417,
+                "end": 448,
+                "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+              }
+            ]
+          },
+          {
+            "document_id": "hr-v3-travel",
+            "start": 140,
+            "end": 171,
+            "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+            "canonical_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+            "original_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 140,
+                "end": 171,
+                "page_text_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "TR-02-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 30941,
+          "end": 30972,
+          "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+          "pages": [
+            19
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "remote-address-1",
+      "source_v3": {
+        "claim_id": "remote-address-1",
+        "text": "재택근무 장소는 등록한 자택으로 제한한다.",
+        "chunk_id": "remote-address",
+        "topic": "remote",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/remote.md",
+            "sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+            "start": 476,
+            "end": 499,
+            "quote": "재택근무 장소는 등록한 자택으로 제한한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-remote",
+            "start": 264,
+            "end": 287,
+            "quote": "재택근무 장소는 등록한 자택으로 제한한다.",
+            "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+            "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 264,
+                "end": 287,
+                "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "RM-05-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 14151,
+          "end": 14174,
+          "quote": "재택근무 장소는 등록한 자택으로 제한한다.",
+          "pages": [
+            9
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "remote-address-2",
+      "source_v3": {
+        "claim_id": "remote-address-2",
+        "text": "주소 변경 시 근무 시작 전에 인사 담당자에게 등록 주소 변경을 요청한다.",
+        "chunk_id": "remote-address",
+        "topic": "remote",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/remote.md",
+            "sha256": "ded166740e42b3cb9cddebd3fb485385ef6e3b2ddb247832dceb396b91bcb1f4",
+            "start": 500,
+            "end": 541,
+            "quote": "주소 변경 시 근무 시작 전에 인사 담당자에게 등록 주소 변경을 요청한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-remote",
+            "start": 288,
+            "end": 330,
+            "quote": "주소 변경 시 근무 시작 전에 인사 담당자에게 등록 주\n소 변경을 요청한다.",
+            "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+            "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 288,
+                "end": 330,
+                "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "RM-05-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 14175,
+          "end": 14217,
+          "quote": "주소 변경 시 근무 시작 전에 인사 담당자에게 등록 \n주소 변경을 요청한다.",
+          "pages": [
+            9
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-halfday-1",
+      "source_v3": {
+        "claim_id": "annual-halfday-1",
+        "text": "연차는 오전 또는 오후 반차로 나누어 사용할 수 있다.",
+        "chunk_id": "annual-halfday",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 1015,
+            "end": 1045,
+            "quote": "연차는 오전 또는 오후 반차로 나누어 사용할 수 있다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-annual",
+            "start": 177,
+            "end": 207,
+            "quote": "연차는 오전 또는 오후 반차로 나누어 사용할 수 있다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 177,
+                "end": 207,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "AN-03-P01-S01",
+          "document_id": "hr-v4-handbook",
+          "start": 5528,
+          "end": 5558,
+          "quote": "연차는 오전 또는 오후 반차로 나누어 사용할 수 있다.",
+          "pages": [
+            4
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-halfday-2",
+      "source_v3": {
+        "claim_id": "annual-halfday-2",
+        "text": "반차 1회는 연차 0.5일로 차감한다.",
+        "chunk_id": "annual-halfday",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 1046,
+            "end": 1067,
+            "quote": "반차 1회는 연차 0.5일로 차감한다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-annual",
+            "start": 208,
+            "end": 229,
+            "quote": "반차 1회는 연차 0.5일로 차감한다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 208,
+                "end": 229,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "AN-03-P01-S02",
+          "document_id": "hr-v4-handbook",
+          "start": 5559,
+          "end": 5580,
+          "quote": "반차 1회는 연차 0.5일로 차감한다.",
+          "pages": [
+            4
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    },
+    {
+      "claim_id": "annual-halfday-3",
+      "source_v3": {
+        "claim_id": "annual-halfday-3",
+        "text": "생일 특별휴가는 분할할 수 없다.",
+        "chunk_id": "annual-halfday",
+        "topic": "annual",
+        "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+        "source_chunk_file_sha256": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "source_chunk_path": "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "source_v2": [
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/birthday.md",
+            "sha256": "ae6bded1cfb08892b5e8d0f243ff20f679881ca414c0e505d040e1c0f6f890e8",
+            "start": 1295,
+            "end": 1313,
+            "quote": "생일 특별휴가는 분할할 수 없다."
+          },
+          {
+            "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+            "sha256": "95dc6b76ffe96adf3e4044d4f3c5fa331402472115454c9bed76e38e4fe12829",
+            "start": 1068,
+            "end": 1086,
+            "quote": "생일 특별휴가는 분할할 수 없다."
+          }
+        ],
+        "targets": [
+          {
+            "document_id": "hr-v3-birthday",
+            "start": 244,
+            "end": 262,
+            "quote": "생일 특별휴가는 분할할 수 없다.",
+            "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+            "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 244,
+                "end": 262,
+                "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+              }
+            ]
+          },
+          {
+            "document_id": "hr-v3-annual",
+            "start": 230,
+            "end": 249,
+            "quote": "생일 특\n별휴가는 분할할 수 없다.",
+            "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+            "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+            "pages": [
+              {
+                "page_number": 1,
+                "start": 230,
+                "end": 249,
+                "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+              }
+            ]
+          }
+        ],
+        "comparison": "PASS: numeric units, eligibility, negation, exceptions, deadlines and approvers preserved"
+      },
+      "targets": [
+        {
+          "id": "BD-02-P01-S03",
+          "document_id": "hr-v4-handbook",
+          "start": 544,
+          "end": 562,
+          "quote": "생일 특별휴가는 분할할 수 없다.",
+          "pages": [
+            1
+          ],
+          "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+        }
+      ]
+    }
+  ],
+  "source_v3_body_occurrences": [
+    {
+      "occurrence": 1,
+      "source_v3": {
+        "section_id": "hr-v3-birthday-s1",
+        "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다.",
+        "policy_ids": [
+          "birthday-eligibility-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "BD-01-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 2,
+      "source_v3": {
+        "section_id": "hr-v3-birthday-s1",
+        "quote": "수습 중인 직원은 대상에서 제외한다.",
+        "policy_ids": [
+          "birthday-eligibility-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "BD-01-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 3,
+      "source_v3": {
+        "section_id": "hr-v3-birthday-s2",
+        "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다.",
+        "policy_ids": [
+          "birthday-window-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "BD-02-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 4,
+      "source_v3": {
+        "section_id": "hr-v3-birthday-s2",
+        "quote": "해당 월을 넘겨 이월하거나 현금으로 지급하지 않는다.",
+        "policy_ids": [
+          "birthday-window-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "BD-02-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 5,
+      "source_v3": {
+        "section_id": "hr-v3-birthday-s2",
+        "quote": "생일 특별휴가는 분할할 수 없다.",
+        "policy_ids": [
+          "annual-halfday-3"
+        ]
+      },
+      "target_inventory_ids": [
+        "BD-02-P01-S03"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 6,
+      "source_v3": {
+        "section_id": "hr-v3-birthday-s3",
+        "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+        "policy_ids": [
+          "birthday-request-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "BD-03-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 7,
+      "source_v3": {
+        "section_id": "hr-v3-birthday-s4",
+        "quote": "생일 축하 포인트는 휴가 신청 자격이나 승인 여부와 별개다.",
+        "policy_ids": [
+          "welfare-birthday-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "WF-02-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 8,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s1",
+        "quote": "1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다.",
+        "policy_ids": [
+          "annual-accrual-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "AN-01-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 9,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s1",
+        "quote": "1년 이상 재직자의 연차는 매년 15일을 기준으로 별도 산정한다.",
+        "policy_ids": [
+          "annual-accrual-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "AN-01-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 10,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s2",
+        "quote": "연차는 오전 또는 오후 반차로 나누어 사용할 수 있다.",
+        "policy_ids": [
+          "annual-halfday-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "AN-03-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 11,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s2",
+        "quote": "반차 1회는 연차 0.5일로 차감한다.",
+        "policy_ids": [
+          "annual-halfday-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "AN-03-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 12,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s2",
+        "quote": "생일 특별휴가는 분할할 수 없다.",
+        "policy_ids": [
+          "annual-halfday-3"
+        ]
+      },
+      "target_inventory_ids": [
+        "BD-02-P01-S03"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 13,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s3",
+        "quote": "연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다.",
+        "policy_ids": [
+          "annual-request-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "AN-04-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 14,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s3",
+        "quote": "긴급 사유가 있으면 당일 팀장에게 알린 후 신청할 수 있다.",
+        "policy_ids": [
+          "annual-request-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "AN-04-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 15,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s4",
+        "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다.",
+        "policy_ids": [
+          "annual-carry-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "AN-07-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 16,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s4",
+        "quote": "이월한 연차의 사용 기한은 다음 해 3월 31일이다.",
+        "policy_ids": [
+          "annual-carry-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "AN-07-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 17,
+      "source_v3": {
+        "section_id": "hr-v3-annual-s4",
+        "quote": "생일 특별휴가에는 이 규정을 적용하지 않는다.",
+        "policy_ids": [
+          "annual-carry-3"
+        ]
+      },
+      "target_inventory_ids": [
+        "AN-07-P01-S03"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 18,
+      "source_v3": {
+        "section_id": "hr-v3-remote-s1",
+        "quote": "입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다.",
+        "policy_ids": [
+          "remote-eligibility-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "RM-01-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 19,
+      "source_v3": {
+        "section_id": "hr-v3-remote-s1",
+        "quote": "현장 장비 운영 직무는 재택 대상에서 제외한다.",
+        "policy_ids": [
+          "remote-eligibility-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "RM-01-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 20,
+      "source_v3": {
+        "section_id": "hr-v3-remote-s2",
+        "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다.",
+        "policy_ids": [
+          "remote-days-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "RM-02-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 21,
+      "source_v3": {
+        "section_id": "hr-v3-remote-s2",
+        "quote": "재택근무는 휴가가 아닌 근무일로 집계한다.",
+        "policy_ids": [
+          "remote-days-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "RM-02-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 22,
+      "source_v3": {
+        "section_id": "hr-v3-remote-s3",
+        "quote": "재택근무 장소는 등록한 자택으로 제한한다.",
+        "policy_ids": [
+          "remote-address-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "RM-05-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 23,
+      "source_v3": {
+        "section_id": "hr-v3-remote-s3",
+        "quote": "주소 변경 시 근무 시작 전에 인사 담당자에게 등록 주소 변경을 요청한다.",
+        "policy_ids": [
+          "remote-address-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "RM-05-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 24,
+      "source_v3": {
+        "section_id": "hr-v3-remote-s4",
+        "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다.",
+        "policy_ids": [
+          "remote-security-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "RM-03-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 25,
+      "source_v3": {
+        "section_id": "hr-v3-remote-s4",
+        "quote": "공용 컴퓨터로 내부 문서에 접근할 수 없다.",
+        "policy_ids": [
+          "remote-security-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "RM-03-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 26,
+      "source_v3": {
+        "section_id": "hr-v3-remote-s5",
+        "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+        "policy_ids": [
+          "travel-approval-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "TR-02-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 27,
+      "source_v3": {
+        "section_id": "hr-v3-welfare-s1",
+        "quote": "사무실 출근일에는 식대 1만 원을 지원한다.",
+        "policy_ids": [
+          "welfare-meal-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "WF-01-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 28,
+      "source_v3": {
+        "section_id": "hr-v3-welfare-s1",
+        "quote": "재택근무일과 휴가일에는 이 식대를 지원하지 않는다.",
+        "policy_ids": [
+          "welfare-meal-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "WF-01-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 29,
+      "source_v3": {
+        "section_id": "hr-v3-welfare-s2",
+        "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다.",
+        "policy_ids": [
+          "welfare-birthday-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "WF-02-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 30,
+      "source_v3": {
+        "section_id": "hr-v3-welfare-s2",
+        "quote": "이 포인트는 휴가 신청 자격이나 승인 여부와 별개다.",
+        "policy_ids": [
+          "welfare-birthday-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "WF-02-P01-S02"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 31,
+      "source_v3": {
+        "section_id": "hr-v3-training-s1",
+        "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.",
+        "policy_ids": [
+          "training-time-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "ED-01-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 32,
+      "source_v3": {
+        "section_id": "hr-v3-training-s2",
+        "quote": "생일 특별휴가 및 연차와 별도로 관리한다.",
+        "policy_ids": [
+          "training-time-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "ED-02-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 33,
+      "source_v3": {
+        "section_id": "hr-v3-travel-s1",
+        "quote": "출장은 출발 5영업일 전에 팀장의 승인을 받는다.",
+        "policy_ids": [
+          "travel-approval-1"
+        ]
+      },
+      "target_inventory_ids": [
+        "TR-01-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    },
+    {
+      "occurrence": 34,
+      "source_v3": {
+        "section_id": "hr-v3-travel-s2",
+        "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+        "policy_ids": [
+          "travel-approval-2"
+        ]
+      },
+      "target_inventory_ids": [
+        "TR-02-P01-S01"
+      ],
+      "method": "Same original policy ID; repeated v3 occurrences consolidated. Birthday-point paraphrase resolves to its original point/leave independence policy."
+    }
+  ],
+  "added_inventory_ids": [
+    "BD-01-P02-S01",
+    "BD-01-P02-S02",
+    "BD-02-P02-S01",
+    "BD-02-P02-S02",
+    "BD-03-P02-S01",
+    "BD-03-P02-S02",
+    "BD-03-P02-S03",
+    "BD-03-P02-S04",
+    "BD-04-P01-S01",
+    "BD-04-P01-S02",
+    "BD-04-P01-S03",
+    "BD-04-P01-S04",
+    "BD-04-P01-S05",
+    "BD-04-P01-S06",
+    "BD-04-P01-S07",
+    "BD-04-P02-S01",
+    "BD-04-P02-S02",
+    "BD-04-P02-S03",
+    "BD-04-P02-S04",
+    "BD-04-P02-S05",
+    "BD-04-P02-S06",
+    "BD-04-P03-S01",
+    "BD-04-P03-S02",
+    "BD-04-P03-S03",
+    "BD-04-P03-S04",
+    "BD-04-P03-S05",
+    "BD-04-P03-S06",
+    "BD-04-P03-S07",
+    "BD-04-P03-S08",
+    "BD-05-P01-S01",
+    "BD-05-P01-S02",
+    "BD-05-P01-S03",
+    "BD-05-P01-S04",
+    "BD-05-P01-S05",
+    "BD-05-P01-S06",
+    "BD-05-P01-S07",
+    "BD-06-P01-S01",
+    "BD-06-P01-S02",
+    "BD-06-P01-S03",
+    "BD-06-P01-S04",
+    "BD-06-P01-S05",
+    "BD-06-P01-S06",
+    "BD-07-P01-S01",
+    "BD-07-P01-S02",
+    "BD-07-P01-S03",
+    "AN-01-P02-S01",
+    "AN-01-P02-S02",
+    "AN-02-P01-S01",
+    "AN-02-P01-S02",
+    "AN-02-P01-S03",
+    "AN-02-P01-S04",
+    "AN-02-P01-S05",
+    "AN-02-P01-S06",
+    "AN-02-P02-S01",
+    "AN-02-P02-S02",
+    "AN-02-P02-S03",
+    "AN-02-P02-S04",
+    "AN-02-P02-S05",
+    "AN-02-P02-S06",
+    "AN-02-P03-S01",
+    "AN-02-P03-S02",
+    "AN-02-P03-S03",
+    "AN-02-P03-S04",
+    "AN-02-P03-S05",
+    "AN-02-P03-S06",
+    "AN-02-P03-S07",
+    "AN-03-P02-S01",
+    "AN-03-P02-S02",
+    "AN-04-P02-S01",
+    "AN-04-P02-S02",
+    "AN-04-P02-S03",
+    "AN-04-P02-S04",
+    "AN-04-P02-S05",
+    "AN-04-P02-S06",
+    "AN-04-P02-S07",
+    "AN-05-P01-S01",
+    "AN-05-P01-S02",
+    "AN-05-P01-S03",
+    "AN-05-P01-S04",
+    "AN-05-P01-S05",
+    "AN-05-P01-S06",
+    "AN-05-P01-S07",
+    "AN-05-P02-S01",
+    "AN-05-P02-S02",
+    "AN-05-P02-S03",
+    "AN-05-P02-S04",
+    "AN-05-P02-S05",
+    "AN-05-P02-S06",
+    "AN-05-P02-S07",
+    "AN-05-P02-S08",
+    "AN-05-P03-S01",
+    "AN-05-P03-S02",
+    "AN-05-P03-S03",
+    "AN-05-P03-S04",
+    "AN-05-P03-S05",
+    "AN-05-P03-S06",
+    "AN-05-P03-S07",
+    "AN-06-P01-S01",
+    "AN-06-P01-S02",
+    "AN-06-P01-S03",
+    "AN-06-P01-S04",
+    "AN-06-P01-S05",
+    "AN-06-P01-S06",
+    "AN-06-P01-S07",
+    "AN-07-P02-S01",
+    "AN-07-P02-S02",
+    "AN-08-P01-S01",
+    "AN-08-P01-S02",
+    "AN-08-P01-S03",
+    "AN-08-P01-S04",
+    "AN-08-P01-S05",
+    "AN-08-P01-S06",
+    "AN-08-P02-S01",
+    "AN-08-P02-S02",
+    "AN-08-P02-S03",
+    "AN-08-P02-S04",
+    "AN-08-P02-S05",
+    "AN-08-P02-S06",
+    "AN-08-P02-S07",
+    "AN-09-P01-S01",
+    "AN-09-P01-S02",
+    "AN-09-P01-S03",
+    "AN-09-P01-S04",
+    "AN-09-P01-S05",
+    "AN-09-P01-S06",
+    "AN-09-P02-S01",
+    "AN-09-P02-S02",
+    "AN-09-P02-S03",
+    "AN-09-P02-S04",
+    "AN-10-P01-S01",
+    "AN-10-P01-S02",
+    "AN-10-P01-S03",
+    "AN-10-P01-S04",
+    "AN-10-P01-S05",
+    "AN-10-P01-S06",
+    "AN-10-P02-S01",
+    "AN-10-P02-S02",
+    "AN-10-P02-S03",
+    "AN-11-P01-S01",
+    "AN-11-P01-S02",
+    "AN-11-P01-S03",
+    "AN-11-P01-S04",
+    "AN-11-P01-S05",
+    "AN-11-P01-S06",
+    "AN-11-P02-S01",
+    "AN-11-P02-S02",
+    "AN-11-P02-S03",
+    "RM-01-P02-S01",
+    "RM-01-P02-S02",
+    "RM-02-P02-S01",
+    "RM-02-P02-S02",
+    "RM-03-P02-S01",
+    "RM-03-P02-S02",
+    "RM-04-P01-S01",
+    "RM-04-P01-S02",
+    "RM-04-P01-S03",
+    "RM-04-P01-S04",
+    "RM-04-P01-S05",
+    "RM-04-P01-S06",
+    "RM-04-P01-S07",
+    "RM-04-P02-S01",
+    "RM-04-P02-S02",
+    "RM-04-P02-S03",
+    "RM-04-P02-S04",
+    "RM-04-P02-S05",
+    "RM-04-P02-S06",
+    "RM-04-P02-S07",
+    "RM-04-P03-S01",
+    "RM-04-P03-S02",
+    "RM-04-P03-S03",
+    "RM-04-P03-S04",
+    "RM-04-P03-S05",
+    "RM-04-P03-S06",
+    "RM-04-P03-S07",
+    "RM-05-P02-S01",
+    "RM-05-P02-S02",
+    "RM-05-P02-S03",
+    "RM-05-P02-S04",
+    "RM-05-P02-S05",
+    "RM-05-P02-S06",
+    "RM-05-P03-S01",
+    "RM-05-P03-S02",
+    "RM-05-P03-S03",
+    "RM-05-P03-S04",
+    "RM-05-P03-S05",
+    "RM-05-P03-S06",
+    "RM-06-P01-S01",
+    "RM-06-P01-S02",
+    "RM-06-P01-S03",
+    "RM-06-P01-S04",
+    "RM-06-P01-S05",
+    "RM-06-P01-S06",
+    "RM-06-P02-S01",
+    "RM-06-P02-S02",
+    "RM-06-P02-S03",
+    "RM-06-P02-S04",
+    "RM-06-P02-S05",
+    "RM-07-P01-S01",
+    "RM-07-P01-S02",
+    "RM-07-P01-S03",
+    "RM-07-P01-S04",
+    "RM-07-P01-S05",
+    "RM-07-P01-S06",
+    "RM-07-P02-S01",
+    "RM-07-P02-S02",
+    "RM-07-P02-S03",
+    "RM-07-P02-S04",
+    "RM-08-P01-S01",
+    "RM-08-P01-S02",
+    "RM-08-P01-S03",
+    "RM-08-P01-S04",
+    "RM-08-P01-S05",
+    "RM-08-P01-S06",
+    "RM-08-P02-S01",
+    "RM-08-P02-S02",
+    "RM-08-P02-S03",
+    "RM-08-P02-S04",
+    "RM-09-P01-S01",
+    "RM-09-P01-S02",
+    "RM-09-P01-S03",
+    "RM-09-P01-S04",
+    "RM-09-P01-S05",
+    "RM-09-P01-S06",
+    "RM-09-P02-S01",
+    "RM-09-P02-S02",
+    "RM-09-P02-S03",
+    "RM-09-P02-S04",
+    "RM-10-P01-S01",
+    "RM-10-P01-S02",
+    "RM-10-P01-S03",
+    "RM-10-P01-S04",
+    "RM-10-P01-S05",
+    "RM-10-P01-S06",
+    "RM-10-P02-S01",
+    "RM-10-P02-S02",
+    "RM-10-P02-S03",
+    "RM-10-P02-S04",
+    "WF-01-P02-S01",
+    "WF-01-P02-S02",
+    "WF-02-P02-S01",
+    "WF-02-P02-S02",
+    "WF-03-P01-S01",
+    "WF-03-P01-S02",
+    "WF-03-P01-S03",
+    "WF-03-P01-S04",
+    "WF-03-P01-S05",
+    "WF-03-P01-S06",
+    "WF-03-P01-S07",
+    "WF-04-P01-S01",
+    "WF-04-P01-S02",
+    "WF-04-P01-S03",
+    "WF-04-P01-S04",
+    "WF-04-P01-S05",
+    "WF-04-P01-S06",
+    "WF-04-P01-S07",
+    "WF-04-P02-S01",
+    "WF-04-P02-S02",
+    "WF-04-P02-S03",
+    "WF-04-P02-S04",
+    "WF-04-P02-S05",
+    "WF-04-P02-S06",
+    "WF-04-P02-S07",
+    "WF-04-P02-S08",
+    "WF-04-P03-S01",
+    "WF-04-P03-S02",
+    "WF-04-P03-S03",
+    "WF-04-P03-S04",
+    "WF-04-P03-S05",
+    "WF-04-P03-S06",
+    "WF-04-P03-S07",
+    "WF-05-P01-S01",
+    "WF-05-P01-S02",
+    "WF-05-P01-S03",
+    "WF-05-P01-S04",
+    "WF-05-P01-S05",
+    "WF-05-P01-S06",
+    "WF-05-P01-S07",
+    "WF-06-P01-S01",
+    "WF-06-P01-S02",
+    "WF-06-P01-S03",
+    "WF-06-P01-S04",
+    "WF-06-P01-S05",
+    "WF-06-P01-S06",
+    "WF-06-P01-S07",
+    "WF-07-P01-S01",
+    "WF-07-P01-S02",
+    "WF-07-P01-S03",
+    "WF-07-P01-S04",
+    "WF-07-P01-S05",
+    "WF-07-P01-S06",
+    "WF-07-P01-S07",
+    "WF-08-P01-S01",
+    "WF-08-P01-S02",
+    "WF-08-P01-S03",
+    "WF-08-P01-S04",
+    "WF-08-P01-S05",
+    "WF-08-P01-S06",
+    "WF-08-P01-S07",
+    "WF-09-P01-S01",
+    "WF-09-P01-S02",
+    "WF-09-P01-S03",
+    "WF-09-P01-S04",
+    "WF-09-P01-S05",
+    "WF-09-P01-S06",
+    "WF-09-P01-S07",
+    "ED-01-P02-S01",
+    "ED-01-P02-S02",
+    "ED-02-P02-S01",
+    "ED-02-P02-S02",
+    "ED-03-P01-S01",
+    "ED-03-P01-S02",
+    "ED-03-P01-S03",
+    "ED-03-P01-S04",
+    "ED-03-P01-S05",
+    "ED-03-P01-S06",
+    "ED-03-P01-S07",
+    "ED-04-P01-S01",
+    "ED-04-P01-S02",
+    "ED-04-P01-S03",
+    "ED-04-P01-S04",
+    "ED-04-P01-S05",
+    "ED-04-P01-S06",
+    "ED-04-P02-S01",
+    "ED-04-P02-S02",
+    "ED-04-P02-S03",
+    "ED-04-P02-S04",
+    "ED-04-P02-S05",
+    "ED-04-P02-S06",
+    "ED-04-P02-S07",
+    "ED-04-P03-S01",
+    "ED-04-P03-S02",
+    "ED-04-P03-S03",
+    "ED-04-P03-S04",
+    "ED-04-P03-S05",
+    "ED-04-P03-S06",
+    "ED-04-P03-S07",
+    "ED-05-P01-S01",
+    "ED-05-P01-S02",
+    "ED-05-P01-S03",
+    "ED-05-P01-S04",
+    "ED-05-P01-S05",
+    "ED-05-P01-S06",
+    "ED-06-P01-S01",
+    "ED-06-P01-S02",
+    "ED-06-P01-S03",
+    "ED-06-P01-S04",
+    "ED-06-P01-S05",
+    "ED-06-P01-S06",
+    "ED-06-P01-S07",
+    "ED-06-P01-S08",
+    "ED-06-P01-S09",
+    "ED-07-P01-S01",
+    "ED-07-P01-S02",
+    "ED-07-P01-S03",
+    "ED-07-P01-S04",
+    "ED-07-P01-S05",
+    "ED-07-P01-S06",
+    "ED-07-P01-S07",
+    "ED-07-P01-S08",
+    "ED-07-P01-S09",
+    "ED-08-P01-S01",
+    "ED-08-P01-S02",
+    "ED-08-P01-S03",
+    "ED-08-P01-S04",
+    "ED-08-P01-S05",
+    "ED-08-P01-S06",
+    "ED-08-P01-S07",
+    "ED-08-P01-S08",
+    "ED-09-P01-S01",
+    "ED-09-P01-S02",
+    "ED-09-P01-S03",
+    "ED-09-P01-S04",
+    "ED-09-P01-S05",
+    "ED-09-P01-S06",
+    "ED-09-P01-S07",
+    "ED-09-P01-S08",
+    "TR-01-P02-S01",
+    "TR-01-P02-S02",
+    "TR-01-P02-S03",
+    "TR-02-P02-S01",
+    "TR-02-P02-S02",
+    "TR-03-P01-S01",
+    "TR-03-P01-S02",
+    "TR-03-P01-S03",
+    "TR-03-P01-S04",
+    "TR-03-P01-S05",
+    "TR-03-P01-S06",
+    "TR-03-P01-S07",
+    "TR-03-P01-S08",
+    "TR-03-P01-S09",
+    "TR-04-P01-S01",
+    "TR-04-P01-S02",
+    "TR-04-P01-S03",
+    "TR-04-P01-S04",
+    "TR-04-P01-S05",
+    "TR-04-P01-S06",
+    "TR-04-P01-S07",
+    "TR-04-P02-S01",
+    "TR-04-P02-S02",
+    "TR-04-P02-S03",
+    "TR-04-P02-S04",
+    "TR-04-P02-S05",
+    "TR-04-P02-S06",
+    "TR-04-P02-S07",
+    "TR-04-P03-S01",
+    "TR-04-P03-S02",
+    "TR-04-P03-S03",
+    "TR-04-P03-S04",
+    "TR-04-P03-S05",
+    "TR-04-P03-S06",
+    "TR-04-P03-S07",
+    "TR-05-P01-S01",
+    "TR-05-P01-S02",
+    "TR-05-P01-S03",
+    "TR-05-P01-S04",
+    "TR-05-P01-S05",
+    "TR-05-P01-S06",
+    "TR-05-P01-S07",
+    "TR-05-P02-S01",
+    "TR-05-P02-S02",
+    "TR-05-P02-S03",
+    "TR-05-P02-S04",
+    "TR-06-P01-S01",
+    "TR-06-P01-S02",
+    "TR-06-P01-S03",
+    "TR-06-P01-S04",
+    "TR-06-P01-S05",
+    "TR-06-P01-S06",
+    "TR-06-P01-S07",
+    "TR-06-P02-S01",
+    "TR-06-P02-S02",
+    "TR-06-P02-S03",
+    "TR-06-P02-S04",
+    "TR-07-P01-S01",
+    "TR-07-P01-S02",
+    "TR-07-P01-S03",
+    "TR-07-P01-S04",
+    "TR-07-P01-S05",
+    "TR-07-P01-S06",
+    "TR-07-P01-S07",
+    "TR-07-P02-S01",
+    "TR-07-P02-S02",
+    "TR-07-P02-S03",
+    "TR-08-P01-S01",
+    "TR-08-P01-S02",
+    "TR-08-P01-S03",
+    "TR-08-P01-S04",
+    "TR-08-P01-S05",
+    "TR-08-P01-S06",
+    "TR-08-P01-S07",
+    "TR-08-P01-S08",
+    "TR-08-P01-S09",
+    "TR-09-P01-S01",
+    "TR-09-P01-S02",
+    "TR-09-P01-S03",
+    "TR-09-P01-S04",
+    "TR-09-P01-S05",
+    "TR-09-P01-S06",
+    "TR-09-P01-S07",
+    "TR-09-P02-S01",
+    "TR-09-P02-S02",
+    "TR-09-P02-S03",
+    "TR-09-P02-S04",
+    "TR-09-P02-S05",
+    "TR-10-P01-S01",
+    "TR-10-P01-S02",
+    "TR-10-P01-S03",
+    "TR-10-P01-S04",
+    "TR-10-P01-S05",
+    "TR-10-P01-S06",
+    "TR-10-P01-S07",
+    "TR-10-P01-S08",
+    "TR-10-P01-S09",
+    "TR-11-P01-S01",
+    "TR-11-P01-S02",
+    "TR-11-P01-S03",
+    "TR-11-P01-S04",
+    "TR-11-P01-S05",
+    "TR-11-P01-S06",
+    "TR-11-P01-S07",
+    "TR-11-P01-S08"
+  ],
+  "explanatory_inventory_ids": [
+    "WF-05-P02-S01",
+    "WF-05-P02-S02",
+    "WF-05-P02-S03",
+    "WF-05-P02-S04",
+    "WF-05-P02-S05",
+    "WF-09-P02-S01",
+    "WF-09-P02-S02",
+    "WF-09-P02-S03",
+    "WF-09-P02-S04",
+    "ED-05-P02-S01",
+    "ED-05-P02-S02",
+    "ED-05-P02-S03",
+    "ED-05-P02-S04",
+    "ED-05-P02-S05"
+  ]
+}

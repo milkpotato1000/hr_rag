@@ -1,0 +1,41 @@
+test_blank_and_image_pages_are_review_only_not_complete (test_documents.SourceTests.test_blank_and_image_pages_are_review_only_not_complete) ... ok
+test_damaged_and_encrypted_pdf_are_explicit_errors (test_documents.SourceTests.test_damaged_and_encrypted_pdf_are_explicit_errors) ... ok
+test_empty_markdown_requires_review (test_documents.SourceTests.test_empty_markdown_requires_review) ... ok
+test_snapshot_byte_preservation_and_identity_changes (test_documents.SourceTests.test_snapshot_byte_preservation_and_identity_changes) ... ok
+test_snapshot_rejects_escape_duplicates_bad_hash_and_nonfixture (test_documents.SourceTests.test_snapshot_rejects_escape_duplicates_bad_hash_and_nonfixture) ... ok
+test_full_single_book_and_independent_original_policy_examples (test_handbook.HandbookTests.test_full_single_book_and_independent_original_policy_examples) ... ok
+test_independent_invalid_hierarchy_classification_ids_and_refs (test_handbook.HandbookTests.test_independent_invalid_hierarchy_classification_ids_and_refs) ... ok
+test_independent_length_profile_rejection (test_handbook.HandbookTests.test_independent_length_profile_rejection) ... ok
+test_independent_toc_and_body_heading_are_separate (test_handbook.HandbookTests.test_independent_toc_and_body_heading_are_separate) ... ok
+test_independent_unicode_halfopen_span_and_page_crossing (test_handbook.HandbookTests.test_independent_unicode_halfopen_span_and_page_crossing) ... ok
+test_maps_reject_tampering_without_relying_on_frozen_hashes (test_handbook.HandbookTests.test_maps_reject_tampering_without_relying_on_frozen_hashes) ... ok
+test_no_overwrite_and_atomic_failure (test_handbook.HandbookTests.test_no_overwrite_and_atomic_failure) ... ok
+test_page_missing_or_bad_offsets_even_after_identity_recalculation (test_handbook.HandbookTests.test_page_missing_or_bad_offsets_even_after_identity_recalculation) ... ok
+test_pdf_and_canonical_hash_tampering (test_handbook.HandbookTests.test_pdf_and_canonical_hash_tampering) ... ok
+test_policy_review_missing_and_unclassified_rejected (test_handbook.HandbookTests.test_policy_review_missing_and_unclassified_rejected) ... ok
+test_single_input_rejects_duplicates_and_wrong_document (test_handbook.HandbookTests.test_single_input_rejects_duplicates_and_wrong_document) ... ok
+test_whole_text_alignment_rejects_silent_omission_and_reordering (test_handbook.HandbookTests.test_whole_text_alignment_rejects_silent_omission_and_reordering) ... FAIL
+test_exact_span_and_page_hash_rejection (test_source_v3.SourceV3Tests.test_exact_span_and_page_hash_rejection) ... ok
+test_frozen_six_docs_full_authoring_roundtrip_and_independent_policy_examples (test_source_v3.SourceV3Tests.test_frozen_six_docs_full_authoring_roundtrip_and_independent_policy_examples) ... ok
+test_handoff_rejects_pdf_canonical_map_and_document_removal (test_source_v3.SourceV3Tests.test_handoff_rejects_pdf_canonical_map_and_document_removal) ... ok
+test_missing_or_reordered_pages_rejected_even_with_updated_manifest (test_source_v3.SourceV3Tests.test_missing_or_reordered_pages_rejected_even_with_updated_manifest) ... ok
+test_notes_policy_references_are_excluded_from_pdf_catalog (test_source_v3.SourceV3Tests.test_notes_policy_references_are_excluded_from_pdf_catalog) ... ok
+test_original_page_separator_nfc_lf_and_multi_page_fixture (test_source_v3.SourceV3Tests.test_original_page_separator_nfc_lf_and_multi_page_fixture) ... ok
+test_pdf_timeout_and_worker_missing_page_result (test_source_v3.SourceV3Tests.test_pdf_timeout_and_worker_missing_page_result) ... ok
+test_snapshot_hash_failure_atomic_output_and_existing_preserved (test_source_v3.SourceV3Tests.test_snapshot_hash_failure_atomic_output_and_existing_preserved) ... ok
+test_strict_json_duplicate_and_nonfinite (test_source_v3.SourceV3Tests.test_strict_json_duplicate_and_nonfinite) ... ok
+test_unique_unicode_span_mapping_not_pdf_bytes (test_source_v3.SourceV3Tests.test_unique_unicode_span_mapping_not_pdf_bytes) ... ok
+
+======================================================================
+FAIL: test_whole_text_alignment_rejects_silent_omission_and_reordering (test_handbook.HandbookTests.test_whole_text_alignment_rejects_silent_omission_and_reordering)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/2. Document Chunking/tests/test_handbook.py", line 107, in test_whole_text_alignment_rejects_silent_omission_and_reordering
+    with self.assertRaises(DocumentError):align(m,bad,doc)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: DocumentError not raised
+
+----------------------------------------------------------------------
+Ran 27 tests in 3.615s
+
+FAILED (failures=1)

@@ -1,0 +1,32 @@
+{
+  "source_provider": "google_drive",
+  "source_mode": "fixture",
+  "timestamps_synthetic": true,
+  "folder_id": "fixture:hr-source-v4",
+  "schema_version": 1,
+  "adapter_version": "drive-fixture-v1",
+  "collected_time": null,
+  "collection_note": "Local fixture copy; no real Drive access or download occurred.",
+  "documents": [
+    {
+      "document_id": "hr-v4-handbook",
+      "version": "4",
+      "title": "가상 HR 운영 규정집",
+      "effective_date": null,
+      "format": "pdf",
+      "path": "cache/1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369.pdf",
+      "sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "synthetic": true,
+      "authored_by": "Codex - fictional source-v4, not company policy",
+      "file_id": "fixture:hr-v4-handbook",
+      "name": "hr-handbook.pdf",
+      "source_modified_time": "2026-10-29T00:00:00Z",
+      "source_version": "fixture-source-v4-1",
+      "source_url": null,
+      "local_path": "cache/1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369.pdf",
+      "mime_type": "application/pdf",
+      "downloaded_content_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369"
+    }
+  ],
+  "snapshot_id": "fixture:b1147a9b43a40e5428da98d6880650ad1307a728c6c203d072cdd392daa2d911"
+}

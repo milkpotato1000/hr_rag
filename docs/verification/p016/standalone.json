@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "temporary_stage": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p016-standalone-uq57dizg/stage",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "base_prefix": "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python",
+    "packages": [
+      [
+        "pip",
+        "25.0.1"
+      ],
+      [
+        "pypdf",
+        "6.21.2"
+      ]
+    ]
+  },
+  "wheel_sha256": "1d44d1a3a200f25062adff0085b02040e4646431ac2ccac22e42679e91466084",
+  "commands": [
+    {
+      "command": [
+        "scripts/validate_handbook.py",
+        "--unfrozen"
+      ],
+      "returncode": 0,
+      "stdout": "{'status': 'PASS', 'documents': 1, 'pages': 23, 'body_chars': 35477, 'articles': 57, 'paragraphs': 105, 'classifications': {'preserved': 31, 'added_fictional': 481, 'explanatory': 14}, 'page_crossing_paragraphs': 17}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "scripts/snapshot_drive_fixture.py",
+        "--catalog",
+        "data/source-v4/drive-fixture-catalog.json",
+        "--output-dir",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p016-standalone-uq57dizg/snapshot"
+      ],
+      "returncode": 0,
+      "stdout": "fixture:b1147a9b43a40e5428da98d6880650ad1307a728c6c203d072cdd392daa2d911\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "scripts/ingest_documents.py",
+        "--manifest",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p016-standalone-uq57dizg/snapshot/manifest.json",
+        "--output-dir",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p016-standalone-uq57dizg/extracted"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"complete\", \"run_id\": \"c5beee192e7d08531e353ffcafa64adbc930427a7bb6be1b751f6f06a9eeddae\", \"review_pages\": []}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "scripts/prepare_handbook.py",
+        "--output-dir",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p016-standalone-uq57dizg/maps"
+      ],
+      "returncode": 0,
+      "stdout": "{'pages': 23}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_blank_and_image_pages_are_review_only_not_complete (test_documents.SourceTests.test_blank_and_image_pages_are_review_only_not_complete) ... ok\ntest_damaged_and_encrypted_pdf_are_explicit_errors (test_documents.SourceTests.test_damaged_and_encrypted_pdf_are_explicit_errors) ... ok\ntest_empty_markdown_requires_review (test_documents.SourceTests.test_empty_markdown_requires_review) ... ok\ntest_snapshot_byte_preservation_and_identity_changes (test_documents.SourceTests.test_snapshot_byte_preservation_and_identity_changes) ... ok\ntest_snapshot_rejects_escape_duplicates_bad_hash_and_nonfixture (test_documents.SourceTests.test_snapshot_rejects_escape_duplicates_bad_hash_and_nonfixture) ... ok\ntest_full_single_book_and_independent_original_policy_examples (test_handbook.HandbookTests.test_full_single_book_and_independent_original_policy_examples) ... ok\ntest_independent_invalid_hierarchy_classification_ids_and_refs (test_handbook.HandbookTests.test_independent_invalid_hierarchy_classification_ids_and_refs) ... ok\ntest_independent_length_profile_rejection (test_handbook.HandbookTests.test_independent_length_profile_rejection) ... ok\ntest_independent_toc_and_body_heading_are_separate (test_handbook.HandbookTests.test_independent_toc_and_body_heading_are_separate) ... ok\ntest_independent_unicode_halfopen_span_and_page_crossing (test_handbook.HandbookTests.test_independent_unicode_halfopen_span_and_page_crossing) ... ok\ntest_maps_reject_tampering_without_relying_on_frozen_hashes (test_handbook.HandbookTests.test_maps_reject_tampering_without_relying_on_frozen_hashes) ... ok\ntest_no_overwrite_and_atomic_failure (test_handbook.HandbookTests.test_no_overwrite_and_atomic_failure) ... ok\ntest_page_missing_or_bad_offsets_even_after_identity_recalculation (test_handbook.HandbookTests.test_page_missing_or_bad_offsets_even_after_identity_recalculation) ... ok\ntest_pdf_and_canonical_hash_tampering (test_handbook.HandbookTests.test_pdf_and_canonical_hash_tampering) ... ok\ntest_policy_review_missing_and_unclassified_rejected (test_handbook.HandbookTests.test_policy_review_missing_and_unclassified_rejected) ... ok\ntest_single_input_rejects_duplicates_and_wrong_document (test_handbook.HandbookTests.test_single_input_rejects_duplicates_and_wrong_document) ... ok\ntest_whole_text_alignment_rejects_silent_omission_and_reordering (test_handbook.HandbookTests.test_whole_text_alignment_rejects_silent_omission_and_reordering) ... ok\ntest_exact_span_and_page_hash_rejection (test_source_v3.SourceV3Tests.test_exact_span_and_page_hash_rejection) ... ok\ntest_frozen_six_docs_full_authoring_roundtrip_and_independent_policy_examples (test_source_v3.SourceV3Tests.test_frozen_six_docs_full_authoring_roundtrip_and_independent_policy_examples) ... ok\ntest_handoff_rejects_pdf_canonical_map_and_document_removal (test_source_v3.SourceV3Tests.test_handoff_rejects_pdf_canonical_map_and_document_removal) ... ok\ntest_missing_or_reordered_pages_rejected_even_with_updated_manifest (test_source_v3.SourceV3Tests.test_missing_or_reordered_pages_rejected_even_with_updated_manifest) ... ok\ntest_notes_policy_references_are_excluded_from_pdf_catalog (test_source_v3.SourceV3Tests.test_notes_policy_references_are_excluded_from_pdf_catalog) ... ok\ntest_original_page_separator_nfc_lf_and_multi_page_fixture (test_source_v3.SourceV3Tests.test_original_page_separator_nfc_lf_and_multi_page_fixture) ... ok\ntest_pdf_timeout_and_worker_missing_page_result (test_source_v3.SourceV3Tests.test_pdf_timeout_and_worker_missing_page_result) ... ok\ntest_snapshot_hash_failure_atomic_output_and_existing_preserved (test_source_v3.SourceV3Tests.test_snapshot_hash_failure_atomic_output_and_existing_preserved) ... ok\ntest_strict_json_duplicate_and_nonfinite (test_source_v3.SourceV3Tests.test_strict_json_duplicate_and_nonfinite) ... ok\ntest_unique_unicode_span_mapping_not_pdf_bytes (test_source_v3.SourceV3Tests.test_unique_unicode_span_mapping_not_pdf_bytes) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 3.551s\n\nOK\n"
+    }
+  ],
+  "canonical_and_pages_identical": true,
+  "run_id_identical": true,
+  "map_hashes": {
+    "policy-map.json": "ff224208fc12720e6cb7f190e5053e2c1d0edc64c938921208841644c560c6b7",
+    "length-accounting.json": "203bf4b6960254da3ac36f8e85e28d40e366003431e0bd813bfc7f40a5d044e4",
+    "policy-inventory.json": "56b1f63f85471aa68c63be0ff7800a085932c57c54e04b8ac9f5fbe871cee763",
+    "corpus-profile.json": "11bbc08d392ad15602919ae7e21d1bc2708221b932bcaa33b92c9a5f61260134",
+    "section-map.json": "4e0b78b6ae482ebdfa5d2f17f42c086c3944c4f75c18efa57545b37d1324b0ed"
+  },
+  "imports": "Copied stage only; fresh external venv; no model runtime or parent-stage imports; offline pypdf install"
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "plan_id": "P016",
+  "source_version": "source-v4",
+  "stage": "2. Document Chunking",
+  "body_length_unit": "NFC_LF_Unicode_codepoints_with_body_whitespace_excluding_markdown_markup_headings_frontmatter_toc",
+  "total_body_chars": [
+    33000,
+    50000
+  ],
+  "whole_corpus": {
+    "min_page_crossing_articles_or_paragraphs": 3,
+    "max_pdf_pages": 48,
+    "min_cross_chapter_references": 3,
+    "min_pdf_pages": 2
+  },
+  "policy_categories": [
+    "preserved",
+    "added_fictional",
+    "explanatory"
+  ],
+  "model_calls_authorized": 0,
+  "retrieval_runs_authorized": 0,
+  "p007_requires_new_readiness": true,
+  "document": {
+    "document_id": "hr-v4-handbook",
+    "authoring_path": "authoring/hr-handbook.md",
+    "pdf_path": "output/pdf/hr-handbook.pdf",
+    "authoring_count": 1,
+    "pdf_count": 1,
+    "canonical_count": 1,
+    "topic_chapter_count": 6,
+    "continuous_offsets": true,
+    "continuous_page_numbers": true,
+    "table_of_contents": true
+  },
+  "topic_chapters": [
+    {
+      "topic": "birthday",
+      "min_body_chars": 3000,
+      "max_body_chars": 5000
+    },
+    {
+      "topic": "annual",
+      "min_body_chars": 7000,
+      "max_body_chars": 10000
+    },
+    {
+      "topic": "remote",
+      "min_body_chars": 6000,
+      "max_body_chars": 9000
+    },
+    {
+      "topic": "welfare",
+      "min_body_chars": 5000,
+      "max_body_chars": 8000
+    },
+    {
+      "topic": "training",
+      "min_body_chars": 5000,
+      "max_body_chars": 8000
+    },
+    {
+      "topic": "travel",
+      "min_body_chars": 7000,
+      "max_body_chars": 10000
+    }
+  ],
+  "per_topic_chapter": {
+    "min_articles": 6,
+    "min_short_articles": 2,
+    "short_article_chars": [
+      80,
+      250
+    ],
+    "min_long_articles": 1,
+    "long_article_chars": [
+      1200,
+      2500
+    ],
+    "min_long_paragraphs": 2,
+    "long_paragraph_chars": [
+      400,
+      900
+    ],
+    "min_procedural_flows": 1,
+    "min_conditional_exception_links": 2,
+    "min_article_references": 2,
+    "min_sections": 2
+  }
+}

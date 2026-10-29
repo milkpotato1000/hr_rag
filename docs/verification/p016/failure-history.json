@@ -1,0 +1,49 @@
+{
+  "events": [
+    {
+      "stage": "preflight execution log commit",
+      "result": "FAIL",
+      "reason": "STATE log evidence field was a path rather than required dash",
+      "correction": "Corrected STATE field to dash before successful 3adddb6 commit; preserved log narrative"
+    },
+    {
+      "stage": "full old-policy comparison before PDF",
+      "result": "FAIL",
+      "reason": "Travel draft incorrectly changed departure-minus-five-business-days approval deadline into submission deadline",
+      "correction": "Restored original exact travel-approval-1 and -2 text; corrected TR-01 title and every deadline reference before PDF generation",
+      "regression": "Require all31 original policy sentences verbatim in classified preserved spans;34 old body occurrences mapped by their policy IDs"
+    },
+    {
+      "stage": "PDF draft01 visual page12",
+      "result": "FAIL",
+      "reason": "Sentence-final period wrapped alone on the next line in WF-01.",
+      "draft_pdf_sha256": "9be4166a87f79a2aaf64f4114be6011cf33999006504fdbddb8d3293b5c0f446",
+      "correction": "V4-only line wrapping carries the preceding word with leading closing punctuation; regenerate all maps and directly inspect every final page."
+    },
+    {
+      "stage": "Poppler rendering draft01",
+      "result": "WARNING",
+      "reason": "Fontconfig default file/cache unavailable in sandbox; renderer exited0 and produced23 valid PNGs.",
+      "correction": "Final rendering uses a task-local fontconfig file/cache and captures stderr."
+    },
+    {
+      "stage": "PDF draft02 width audit",
+      "result": "FAIL",
+      "reason": "Post-wrap punctuation repair made4 lines exceed body width.",
+      "draft_pdf_sha256": "55f31cf8616f71563c61d6a0eb1acc36de04bb422a53e4d9a63c316314851792",
+      "correction": "Move punctuation with its preceding token during greedy wrapping, not after wrapping; assert every rendered line width."
+    },
+    {
+      "stage": "first stage test run",
+      "result": "FAIL",
+      "reason": "One omission-test fixture tried replacing a sentence broken by PDF newlines, so it had not actually changed the text. 26 other tests passed.",
+      "correction": "Mutate an existing substring and assert input changed before checking rejection. This was a test-fixture error, not a preservation pass."
+    },
+    {
+      "stage": "evidence/README writer invocation",
+      "result": "FAIL",
+      "reason": "Default system Python3.9 rejected UTF-8 input in two temporary script invocations; no output files were published by those failed invocations.",
+      "correction": "Read temporary UTF-8 source successfully and rerun evidence writer with bundled Python3.12; write README via UTF-8 file and bundled runtime."
+    }
+  ]
+}

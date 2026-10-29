@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "authoring_sha256": "e968c42c7f463e8b181581e18d798e837e9cd5ace38f4db707c629e2a1a5a9ce",
+  "articles_reviewed": 57,
+  "paragraphs_reviewed": 105,
+  "review_file": "2. Document Chunking/data/source-v4/authoring-review.json",
+  "review_file_sha256": "a7935805667e28f4a595140abaacbcd1a3a88304fcb559904c569f31686bee46",
+  "exact_duplicate_paragraphs": 0,
+  "near_candidates": [
+    {
+      "paragraphs": [
+        "ED-07-P01",
+        "TR-07-P01"
+      ],
+      "bigram_dice": 0.5823
+    }
+  ],
+  "near_candidate_dispositions": [
+    {
+      "paragraphs": [
+        "ED-07-P01",
+        "TR-07-P01"
+      ],
+      "decision": "retain",
+      "reason": "Both describe outage intake/recovery, a shared process relevant to each chapter. Education identifies an exam and desired date with unspecified approval; travel identifies departure/purpose and explicitly preserves the five-business-day team approval. Travel additionally separates approval arriving before record recovery. No verbatim paragraph copy or added entitlement."
+    }
+  ],
+  "limitations": "Operational-record procedures recur across chapters and are more explicit about unknown policy than typical company rules. This is a controlled fictional corpus, not a representative real HR manual; realism is reviewed qualitatively, not scored."
+}

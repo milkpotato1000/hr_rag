@@ -1,3 +1,4 @@
 # Parser output is data; preserve PDF spaces and Unicode offsets exactly.
 # Match the existing P006 policy, scoped only to extracted text.
 data/source-v3/extracted/**/*.txt -text whitespace=-blank-at-eol
+data/source-v4/extracted/**/*.txt -text whitespace=-blank-at-eol

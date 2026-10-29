@@ -1,0 +1,355 @@
+{
+  "pdf_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+  "render_tool": "pdftoppm 92dpi PNG; task-local fontconfig",
+  "render_stderr": "",
+  "reviewer": "Codex direct inspection of every final page using view_image; not a contact sheet or sample",
+  "pages": [
+    {
+      "page": 1,
+      "image": "rendered/page-01.png",
+      "image_sha256": "8755cc9da5e56454bd0db4475b63b9565a8b129b88a13f6a0194de4ff116ed5a",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "통합 목차와 실제 제1장 제목 분리, 세 짧은 조항 읽힘"
+    },
+    {
+      "page": 2,
+      "image": "rendered/page-02.png",
+      "image_sha256": "1baa2d08e92a1348e02217d27438491d11df1d0302deffbf404fb994fc673198",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "BD-04 세 문단, BD-05 다음 페이지 연결"
+    },
+    {
+      "page": 3,
+      "image": "rendered/page-03.png",
+      "image_sha256": "0926e22f7366d93513f9a5a04bb6e6121a91be78d48da437fbd7897c746ae463",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "BD-05 이어짐, 제2장 시작과 AN-02 연결"
+    },
+    {
+      "page": 4,
+      "image": "rendered/page-04.png",
+      "image_sha256": "3cc2bcb4e2250775b8511bf18c68573fd16c4a49b501da1a0a7abe8125fa5775",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "반차0.5일과 긴급신청 읽힘, 제2절 제목 분리"
+    },
+    {
+      "page": 5,
+      "image": "rendered/page-05.png",
+      "image_sha256": "36a7c03b8302a613464cb73b3aa6c0499dbd9a426a1463f762d60712b2a105ac",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "AN-05 접수·검토·통지, AN-06 다음 페이지 연결"
+    },
+    {
+      "page": 6,
+      "image": "rendered/page-06.png",
+      "image_sha256": "7b3f3854c82d1dac13d2ea0297bbb6a67a6e03c01edb5a2e86b52535c0b3575f",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "이월5일/3월31일 명확, AN-09 연결"
+    },
+    {
+      "page": 7,
+      "image": "rendered/page-07.png",
+      "image_sha256": "90d94ad62615c5b0e35bd168a86a0f5ea6fa81c78740ce7f8ee12fba7e8e4171",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "AN-09/10/11과 생일휴가 참조 읽힘"
+    },
+    {
+      "page": 8,
+      "image": "rendered/page-08.png",
+      "image_sha256": "20c8a2a3d9b3deb2220bee399899759356f3970dc33c7a930270afb1272f4932",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "제3장과 짧은 조건 조항, RM-04 연결"
+    },
+    {
+      "page": 9,
+      "image": "rendered/page-09.png",
+      "image_sha256": "bbb5556390eb42f03276802ee64fdc3e36c8dfc99a092674d3006df6f2f1b33c",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "RM-04 통지와 RM-05 주소변경 연결"
+    },
+    {
+      "page": 10,
+      "image": "rendered/page-10.png",
+      "image_sha256": "bbe2ad1dd13a868907ad1eef5a9881a9de418c24ff8d7e2e6df401c0d80d3931",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "기기 정보와 VPN 장애, 제3절 분리"
+    },
+    {
+      "page": 11,
+      "image": "rendered/page-11.png",
+      "image_sha256": "242b65c7d0a1918cde8858a15e8c30a55ee3cac227fce0e6d1a0616392f9f253",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "날짜 변경·알림 누락·근무 기록 이어짐"
+    },
+    {
+      "page": 12,
+      "image": "rendered/page-12.png",
+      "image_sha256": "80e7c855204cdf9378d9cda11dd2ae0a9aaad1e19d9d0f8f55cdbdd9fb9c98ad",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "제4장 시작, WF-01 마침표 단독 줄 문제 수정 확인"
+    },
+    {
+      "page": 13,
+      "image": "rendered/page-13.png",
+      "image_sha256": "4df275ff3a982b10f512a1716ed9ef44700c5a2c0e4b136c0da78eefaff75cc6",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "WF-04 세 문단, WF-05 다음 페이지 연결"
+    },
+    {
+      "page": 14,
+      "image": "rendered/page-14.png",
+      "image_sha256": "d84e2ee7380b22d198c7119d80c3dd1b0021de5425a68c6636fd3070a5e6ac3e",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "WF-05 사례와 WF-06/07/08, 문단 구분"
+    },
+    {
+      "page": 15,
+      "image": "rendered/page-15.png",
+      "image_sha256": "077b2d8328aeb325b1d1d8b994801d01990f7cb58b0235664445f9f2c0d16c04",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "WF-09 단위 사례, 제5장 짧은 조항"
+    },
+    {
+      "page": 16,
+      "image": "rendered/page-16.png",
+      "image_sha256": "7747e24f6776103b25ee6b9fc35ab40733d6434f2566a7ec7743fe6115208e0b",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "ED-03과 ED-04 접수·검토, 통지 문단 이어짐"
+    },
+    {
+      "page": 17,
+      "image": "rendered/page-17.png",
+      "image_sha256": "85e2fb8139da7a20d5bdb826184d788d05a80719121d6cef6f50dafbd336e8d8",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "ED-05 사례·ED-06 취소·ED-07 첫 줄 표시"
+    },
+    {
+      "page": 18,
+      "image": "rendered/page-18.png",
+      "image_sha256": "749664e3610a958b05fa40e3d6417f5fa3b9b8d22130e2f38a9005cea2bdf242",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "ED-07 복구와 결과 기록, 인계 절차"
+    },
+    {
+      "page": 19,
+      "image": "rendered/page-19.png",
+      "image_sha256": "0f7a4b65c5224c824a31745692a602fdb025657098b1fc7a868455b22b7e246f",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "제6장과 정확한5영업일 승인 원문, TR-04 연결"
+    },
+    {
+      "page": 20,
+      "image": "rendered/page-20.png",
+      "image_sha256": "0057deee00e0490de5526d45d27af032c8fdcd5963dd03677c7a82bbb71d5ed9",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "TR-04 검토·통지와 TR-05 일정변경 연결"
+    },
+    {
+      "page": 21,
+      "image": "rendered/page-21.png",
+      "image_sha256": "10d9ee1cc81c066f178d1d588c3d186878529cf2e09ac977b486718099f090a5",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "TR-06 승인 범위와 제3절, 장애·취소 연결"
+    },
+    {
+      "page": 22,
+      "image": "rendered/page-22.png",
+      "image_sha256": "edb4aff904f26aa8aec3b0124f559689a2ca1994c1be8f922eecfce31041c3a0",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "비용 자료의 접수/보완, TR-10 연결"
+    },
+    {
+      "page": 23,
+      "image": "rendered/page-23.png",
+      "image_sha256": "e4fea990b05f27a6ecc769e409407b6e6d9f42f14adc106e51530cab208ac9b7",
+      "result": "PASS",
+      "directly_viewed": true,
+      "checks": [
+        "한글 깨짐 없음",
+        "본문/제목 겹침 없음",
+        "본문 여백/넘침 없음",
+        "페이지 번호 연속",
+        "앞뒤 문단 순서 일치"
+      ],
+      "observation": "TR-10 종료와 TR-11 사후 기록, 자연스러운 마지막 페이지 여백"
+    }
+  ],
+  "status": "PASS",
+  "history": "Draft01 page12 isolated period corrected; draft02 width audit failed and was corrected before all23 final-page reviews. See failure-history.json."
+}
