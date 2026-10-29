@@ -1,0 +1,22 @@
+{
+  "protocol_version": 1,
+  "reason": "Observed OS sleep overlaps with service load failures and three warm elapsed-time gaps; no product, prompt, sampling, rubric or threshold change",
+  "first_decision": "KEEP_DIRECT",
+  "first_stability_gate": "FAIL_PENDING_CONTROLLED_RETEST",
+  "original_cold_provider_errors": 4,
+  "affected_warm_cases": [
+    "q14",
+    "q03",
+    "q06"
+  ],
+  "detected_extra_elapsed_seconds": [
+    82.6,
+    868.8,
+    1963.6
+  ],
+  "scope": "all3 paired repeats for each affected warm case, all18 cold slots, two warmups; preserve every original result",
+  "instrumentation_fix": "add epoch wall start/end and wall minus monotonic delta, scoped idle sleep inhibition for benchmark command",
+  "additional_max_dispatches": 38,
+  "acceptance": "same protocol1; every repaired slot must complete without suspension, original quality gates unchanged",
+  "evidence": "project Ollama log says timed out waiting for llama-server; read-only macOS power log confirmed sleeps. Personal power log not copied into public repository."
+}

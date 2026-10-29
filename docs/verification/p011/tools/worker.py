@@ -1,6 +1,7 @@
 """Symmetric external observer; the baseline product files are never modified."""
 import time
 START=time.perf_counter()
+WALL_START=time.time()
 import json,sys,resource,hashlib
 from pathlib import Path
 stage=Path(sys.argv[1]).resolve();impl=sys.argv[2];args=json.loads(sys.argv[3]);sys.path.insert(0,str(stage/'scripts'))
@@ -29,4 +30,4 @@ def call(self,route,body=None):
 rc.LocalAPI.call=call
 corpus=args.pop('corpus');idx='index-v1' if corpus=='synthetic15' else 'index-source-v2-fixed-400-80';chunks='data/synthetic/chunks.jsonl' if corpus=='synthetic15' else 'data/source-v2/fixed-400-80/chunks.jsonl'
 result=pipeline.ask(**args,index_dir=stage/'.runtime'/idx,chunks_path=stage/chunks)
-print(json.dumps({'implementation':impl,'stage':str(stage),'result':result,'http':http,'wire':wire,'import_ms':IMPORT_MS,'worker_total_ms':(time.perf_counter()-START)*1000,'peak_rss_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss},ensure_ascii=False))
+print(json.dumps({'wall_clock_start':WALL_START,'wall_clock_end':time.time(),'wall_clock_ms':(time.time()-WALL_START)*1000,'implementation':impl,'stage':str(stage),'result':result,'http':http,'wire':wire,'import_ms':IMPORT_MS,'worker_total_ms':(time.perf_counter()-START)*1000,'peak_rss_bytes':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss},ensure_ascii=False))

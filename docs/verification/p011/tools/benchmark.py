@@ -6,11 +6,11 @@ worker=Path(__file__).with_name('worker.py');ledger=ev/'ledger.jsonl'
 def run(cid,impl,kind,round,control=None):
  name=f'{kind}-{round:02}-{cid}-{impl}';dest=out/(name+'.json')
  if dest.exists():raise RuntimeError('Refusing overwrite: '+name)
- c=cases[cid];stage=s if impl=='direct' else b;args={k:c[k] for k in ('question','retriever','corpus')}|protocol['settings'];start=time.perf_counter()
+ c=cases[cid];stage=s if impl=='direct' else b;args={k:c[k] for k in ('question','retriever','corpus')}|protocol['settings'];start=time.perf_counter();wall_start=time.time()
  process=subprocess.run([str(stage/'.venv/bin/python'),str(worker),str(stage),impl,json.dumps(args,ensure_ascii=False)],capture_output=True,text=True)
  try:value=json.loads(process.stdout)
  except Exception:value={'worker_error':True,'stdout':process.stdout}
- value.update(slot=name,case_id=cid,kind=kind,round=round,returncode=process.returncode,stderr=process.stderr,client_wall_ms=(time.perf_counter()-start)*1000,control=control)
+ value.update(slot=name,case_id=cid,kind=kind,round=round,returncode=process.returncode,stderr=process.stderr,client_wall_ms=(time.perf_counter()-start)*1000,wall_clock_start=wall_start,wall_clock_end=time.time(),wall_clock_ms=(time.time()-wall_start)*1000,control=control)
  dest.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n')
  dispatch=sum(x['url'].endswith('/api/chat') for x in value.get('wire',[]));line=dict(slot=name,dispatches=dispatch,result=value.get('result',{}).get('status','worker_error'),path=str(dest.relative_to(root)))
  with ledger.open('a') as f:f.write(json.dumps(line)+'\n')
@@ -28,3 +28,15 @@ elif mode=='cold':
    for impl in (['direct','langchain'] if (r+j)%2 else ['langchain','direct']):
     before=runtime.status();assert before['owned'];stopped=runtime.stop();after=runtime.start();ps=LocalAPI().call('/api/ps');assert ps.get('models')==[]
     run(cid,impl,'cold',r,dict(before=before,stopped=stopped,after=after,ps=ps,os_cache_cleared=False))
+
+elif mode=='repair':
+ for impl in ['direct','langchain']:run('q03',impl,'repair-warmup',0)
+ affected={'q14','q03','q06'}
+ for slot in protocol['slots']:
+  if slot['case_id'] in affected:run(slot['case_id'],slot['implementation'],'repair-warm',slot['round'])
+ sys.path.insert(0,str(s/'scripts'));import runtime;from runtime_common import LocalAPI
+ for r in range(1,4):
+  for j,cid in enumerate(protocol['cold_cases']):
+   for impl in (['direct','langchain'] if (r+j)%2 else ['langchain','direct']):
+    before=runtime.status();assert before['owned'];stopped=runtime.stop();after=runtime.start();ps=LocalAPI().call('/api/ps');assert ps.get('models')==[]
+    run(cid,impl,'repair-cold',r,dict(before=before,stopped=stopped,after=after,ps=ps,os_cache_cleared=False,idle_sleep_assertion='scoped caffeinate -i'))
