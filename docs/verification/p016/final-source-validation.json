@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "documents": 1,
+  "pages": 23,
+  "body_chars": 35477,
+  "articles": 57,
+  "paragraphs": 105,
+  "classifications": {
+    "preserved": 31,
+    "added_fictional": 481,
+    "explanatory": 14
+  },
+  "page_crossing_paragraphs": 17,
+  "source_commit": "ea601a40b2e6f552f161f38e8afe2f63b1605cb8",
+  "handoff_manifest_sha256": "82918298ce6abeab89c033ab055fcba12302069a27ba0bc7f413bd98d783888a",
+  "standalone_frozen_validation": {
+    "returncode": 0,
+    "stdout": "{'status': 'PASS', 'documents': 1, 'pages': 23, 'body_chars': 35477, 'articles': 57, 'paragraphs': 105, 'classifications': {'preserved': 31, 'added_fictional': 481, 'explanatory': 14}, 'page_crossing_paragraphs': 17}\n",
+    "stderr": ""
+  },
+  "frozen_tampering_checks": [
+    {
+      "path": "output/pdf/hr-handbook.pdf",
+      "rejected": true,
+      "kind": "hash_mismatch"
+    },
+    {
+      "path": "extracted/canonical/hr-v4-handbook.txt",
+      "rejected": true,
+      "kind": "hash_mismatch"
+    },
+    {
+      "path": "section-map.json",
+      "rejected": true,
+      "kind": "hash_mismatch"
+    },
+    {
+      "path": "policy-map.json",
+      "rejected": true,
+      "kind": "hash_mismatch"
+    },
+    {
+      "path": "unexpected.pdf",
+      "rejected": true,
+      "kind": "handoff"
+    }
+  ],
+  "observed_metadata_note": "Standalone canonical/pages/run ID/maps identical before restoring delivered elapsed_ms for frozen-package validation. Observed elapsed_ms is not claimed reproducible."
+}
