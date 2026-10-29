@@ -1,0 +1,80 @@
+# P013 기본 답변 평가기 — 상세 준비 초안
+
+상태: DRAFT / 구현 착수 계약 아님. 2026-10-29 사용자 “이어가자”에 따라 plan의 다음 큐를 구체화했다. P007의 채택 계약 `d70336fddda2c98685a5186344b03f8ca8eadf27`는 변경하지 않는다. P007 완료 산출물, 실제 사람 승인 정답, 평가 모델·호출 예산이 고정되기 전 READY로 전환하지 않는다.
+
+## 1. 학습과 개발 순서
+
+1. **입력 고정:** P016 원문과 P007 기준선/선정 후보·검색 설정의 hash 및 완료 commit을 확인한다.
+2. **정답 초안과 검토 묶음:** 원문에서 질문·기준 답변·원자 주장·정확한 근거 위치를 만들고 사람이 검토할 수 있게 묶는다. 검색 결과나 생성 답변으로 정답을 만들지 않는다.
+3. **승인 기록:** 실제 사람이 확인한 항목만 approved로 동결한다. 승인 전에는 합성 fixture로 코드/산식을 검증할 수 있지만 실제 Correctness 평가 완료를 선언하지 않는다.
+4. **생성 결과 export:** 기존 LangChain Naive 생성 흐름을 사용해 고정 source-v4/청크 입력에 대한 답변과 실제 전달 문맥을 저장한다. 기존 Naive 기본 corpus와 학습 서버의 동작은 보존한다.
+5. **독립 평가:** 주장 추출 1회 → 전달 문맥으로 Faithfulness 판정 / 승인 정답과 Correctness 매칭 → Python 집계.
+6. **평가기 검증과 인계:** 사람 기준과 대조하고 오류·반복 일치도·지연·메모리를 기록한다. 동일 답변/주장/문맥/정답 artifact를 P014에 인계한다.
+
+P013 구현 위치는 `evaluation/project_b/`다. P007의 검색 UI는 그대로 사용하며, P013은 CLI와 사람이 읽을 수 있는 검토·결과 보고서부터 제공하는 안으로 준비한다. 통합 답변·평가 UI는 P008에서 구현한다. CLI/보고서의 확정 인터페이스와 독립 복사 목록은 READY 검토 때 고정한다.
+
+## 2. 현재 생성 코드에서 확인한 연결점
+
+읽기 근거: dev `aa24c7f` 기준 `1. Naive RAG/variants/langchain/scripts/rag_langchain.py`의 `ask`.
+
+- 반환값은 status/answer/citations와 trace이며, trace에 candidates/contexts/excluded가 구분된다.
+- trace.prompt.messages와 messages_sha256, generation.request/request_dispatched, 모델 digest와 관측 usage를 제공한다.
+- 문맥은 요청 시 snapshot으로 고정되며 no_context는 생성 호출 없이 abstain한다.
+- 코드의 corpus_sha256은 **청크 JSONL hash**다. 이를 P016 canonical 원문 hash라고 해석하면 안 된다.
+
+P013 export adapter는 새 run ID/schema version/code commit, P016 corpus snapshot/canonical hash, P007 chunk run/index fingerprint, 청크 JSONL hash를 각각 저장해야 한다. 전달 문맥은 실제 dispatch된 요청과 대조하며, trace.contexts와 요청 내 contexts가 불일치하면 평가 입력 오류다. 생성 요청 전 실패/미호출은 유효한 생성 답변으로 포장하지 않는다. 단순히 인용 목록만 복사하거나 현재 색인에서 근거를 다시 조회해 snapshot을 재구성하지 않는다.
+
+## 3. 독립 artifact 경계
+
+| Artifact | 필수 내용 | 허용 소비자 |
+| --- | --- | --- |
+| rag-run | 질문, 최종 답변/status, 실제 전달 messages/contexts, 모델·프롬프트·설정·code/hash, 후보/제외 목록, 비용/오류 | 평가기와 진단 보고서 |
+| reference-dataset | 질문 ID, answerability, 기준 답변/claims, 근거 PDF/페이지/조항/canonical span/hash, 버전·검토 상태 | 정답 검토와 Correctness |
+| approval-record | 실제 승인자, 대상 dataset/항목 hash, 확인 시점·명시 승인 증거, 승인/수정요청 | 정답 유효성 검사 |
+| extracted-claims | 답변 hash, 원자 claim ID/text, 답변 span, 중복/제외 사유, extractor 모델·prompt/설정 hash | 두 평가 경로 공통 |
+| claim-verdicts | claim ID, E/N/C 또는 판정 불능, premise/근거 span, 원응답·실행 메타 | Faithfulness 집계 |
+| claim-matches | 생성/정답 claim ID 대응, 동등/부분/불일치/미확정 구분, 근거, 결정된 매칭 | Correctness 집계 |
+| evaluation-report | 입력 artifact hashes, 지표/분모/status, 오류 종류, 비용, 사람 기준 대조 | 보고서/P014/P008 |
+
+JSON duplicate key/NaN, 알 수 없는 필드·ID, 중복 ID, 변경된 hash/범위 밖 span은 거부한다. 성공과 실패 artifact를 구분하고 기존 실행 결과를 덮어쓰지 않는다. 정답/평가 prompt/사람 라벨은 검색·생성·청킹 입력에서 제외하고 요청 기록을 통해 유출을 검증한다.
+
+## 4. 사람 검토 범위와 데이터 분리
+
+정답 검토 묶음은 질문 → 기준 답변 → 주장별 원문 인용/페이지/조항 → 승인 또는 수정 요청 순서로 읽을 수 있게 만든다. 가상 회사 규정의 원문 일치 여부를 승인하는 것이며 실제 법률/HR 정책 승인으로 표현하지 않는다. 시행일 unknown/null은 임의 날짜로 채우지 않는다.
+
+정답 승인과 **평가기 판정의 정답 라벨**은 별개다. 후자는 답변 주장 추출의 누락/추가, 문맥-주장의 E/N/C, 생성-정답 claim 매칭을 사람이 확인한 것이다. 같은 모델 두 번 호출이나 두 평가기 일치를 사람 라벨로 대체하지 않는다.
+
+초기 질문 수·리뷰어·승인 방법·tuning/holdout 구성은 준비 미결 항목이다. 원문의 모든 주제, 수치/부정/조건·예외, 복수 근거, 보류 적절/부적절 사례를 포함하도록 설계한다. P007의 holdout은 검색 실험에서 열람되면 관찰된 자료로 기록하며 P013의 새 독립 holdout이라고 부르지 않는다. 사람이 승인한 항목이 적으면 검증 범위도 그만큼 제한해 보고한다.
+
+## 5. 산식과 실패 처리 제안
+
+다음은 독립 fixture와 사람 검토를 거쳐 READY 때 확정할 제안이다.
+
+- **주장 단위:** 숫자·대상·조건·예외를 포함해 단독으로 참/거짓 판단이 가능한 원자 주장. 조건을 제거해 서로 다른 주장을 동등하게 만들지 않는다. 동일 의미 반복은 1회 계산하고 원답변의 모든 발생 span은 보존한다. 추출 누락/추가가 확인되면 추출 실패로 분리한다.
+- **Faithfulness:** 평가 가능한 고유 주장 N개 중 E개가 지지되면 E/N. Neutral과 Contradiction은 모두 비지지지만 별도 개수로 보고한다. 어떤 주장이라도 판정 불능이면 전체 점수는 null/incomplete이며 유효 판정 수·coverage와 진단 수치만 표시한다. 실제 전달 문맥 밖의 근거/정답을 추가하지 않는다. 상충 근거는 명시 충돌 상태로 보존하고 유리한 청크만 선택하지 않는다.
+- **Correctness:** 의미 동등 판정된 생성-정답 주장 간 이분 그래프에서 최대 일대일 매칭의 크기를 TP로 한다. 동점은 claim ID 사전순으로 결정하며 선택 결과를 저장한다. FP=고유 생성 수−TP, FN=고유 정답 수−TP. 부분 일치는 TP에 소수 가산하지 않고 분리 기록한다. reference coverage 기준 FP와 사실적 거짓을 동일시하지 않는다.
+- **정답 불완전 의심:** 승인 정답 밖이지만 원문에 근거한 중요한 추가 사실은 데이터셋 누락 의심으로 별도 기록한다. 해당 사례의 최종 Correctness는 review_required로 보류하고 자동 정답 확장/재채점하지 않는다. 새 승인 버전으로 재실행할 때 이전 결과를 보존한다.
+- **0분모:** N=0의 Faithfulness는 null/no_claims. 생성0·정답>0은 P=null, R=0, F1=0. 생성>0·정답0은 P=0, R=null, F1=0. 모두0이면 P/R/F1=null이고 보류 적절성을 별도 판정한다. 일반 F1은 `2TP/(2TP+FP+FN)`으로 계산해 P/R null 전파를 잘못 처리하지 않는다.
+- **집계:** Faithfulness는 유효 답변별 macro와 유효 claim 가중 micro를 둘 다 보고한다. Correctness는 유효 사례별 macro-F1과 합산 TP/FP/FN 기반 micro-F1을 보고한다. 각 지표의 포함/제외 수, 오류/보류/정답미승인 수를 함께 출력한다. 미실행/실패를 0점으로 치환하지 않는다.
+
+독립 산술 예: Faithfulness E2/N1/C1→0.5, 생성3/정답4/TP2→FP1/FN2/P2/3/R1/2/F1=4/7. 중복 생성 주장을 추가해도 TP와 분모가 늘지 않아야 한다. 2개 생성이 같은 정답 하나에 매칭돼도 TP는1이다. 다중 청크가 함께 조건과 예외를 지지하는 경우는 단일 청크 누락과 구분한다.
+
+## 6. 모델·실험 준비 게이트
+
+현재 생성 모델은 유지한다. 평가용 Qwen3-8B는 기존 계획의 검토 후보이며 이 초안은 다운로드나 실행을 승인하지 않는다. 설치된 모델/정확한 digest·양자화/토크나이저·context 한도, 라이선스, 로컬 가용 자원과 호출당 입력/출력·timeout/재시도·전체 호출/시간 상한을 확인해 별도 lock/spec으로 고정한다. P007 모델 작업과 동시 실행해 자원/지연 측정을 오염시키지 않는다.
+
+문맥이 평가 모델 한도를 넘을 때 무음 truncation/근거 선택으로 점수를 계산하지 않는다. 전체 문맥 검증 또는 근거 보존이 검증된 분할 전략의 계약을 먼저 고정하며, 한도 초과 상태는 실패로 남긴다. Structured Outputs 형식 성공은 의미 정확도의 증거가 아니다. 숨은 사고 과정 대신 판정 라벨·짧은 근거 설명·원문 span과 API 실행 메타를 기록한다.
+
+## 7. 다음 준비 작업과 READY 조건
+
+| 항목 | 현재 근거/상태 | 남은 작업 |
+| --- | --- | --- |
+| P016 원문 | 완료 evidence 및 P007 고정 hash 존재 | 입력 manifest 재검산 |
+| P007 결과 | dev가 정확 채택 후 구현 중 | 완료 commit/전체 실험/선정 후보·검색 설정 수령 |
+| 설치형 하네스 | 별도 프로젝트 dev `d2b9007` 및 설치 검증 로그 경로 확인 | 릴리스/호환 테스트 내용·정확 배포 버전 확인; 후속 버전 전체를 대기하지 않음 |
+| 생성 export | LangChain trace 연결점 읽기 확인 | schema·copy manifest·source-v4 연결 및 독립 재현 계약 확정 |
+| 정답·사람 라벨 | 기존 원문 대응표는 사람 승인 아님 | 검토 묶음·실제 리뷰어/승인 절차·dataset 수/분리 고정 |
+| 평가기 실행 | 모델·입력/호출 예산 미확정 | 환경 확인·한정 호환 검증 후 lock/spec |
+| 점수/실패 규칙 | 본 문서 제안 | 검증 fixture/판정 정책 및 보고서 인터페이스 확정 |
+
+P013 C1~C4의 문구·실행 로그·완료 체크는 이번 초안으로 변경하지 않는다. 위 미결 항목이 닫히면 별도 readiness 검토와 정확한 plan commit으로 dev에 등록한다. P007 작업을 이 초안 때문에 재채택/중단시키지 않는다.
