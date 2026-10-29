@@ -1,8 +1,8 @@
-# HR RAG 에이전트 프로젝트 기획
+# Project B — HR RAG → Agentic RAG 프로젝트 기획
 
 HR 규정 문서에서 근거를 찾아 질문에 답하고, 근거가 부족하면 담당자에게 연결하는 에이전트를 만든다. 같은 문서와 평가 질문으로 검색 방식, 에이전트 흐름, 모델 서빙 설정을 비교하며 각 계층의 역할을 학습한다.
 
-기획 출처는 사용자가 2026-10-22 지정한 [HR RAG 에이전트 설계 대화](https://chatgpt.com/share/6ad97a1c-ef84-83ee-bb65-982dda568ead)다. 당시 “프로젝트 B” 원기획은 공유 범위에 없었으나 2026-10-29 사용자가 RAG Generation Evaluation 설계를 제공했다. 현재 B는 [별도 평가 모듈](../architecture/project-b-generation-evaluation.md)로 등록하며 Project A/C 정의는 아직 가정하지 않는다. 아래 단계와 P001 세부 계약은 이 대화를 실행 가능한 작업으로 구체화한 것이다.
+기획 출처는 사용자가 2026-10-22 지정한 [HR RAG 에이전트 설계 대화](https://chatgpt.com/share/6ad97a1c-ef84-83ee-bb65-982dda568ead)다. 당시 “프로젝트 B” 원기획은 공유 범위에 없었으나 2026-10-29 사용자가 RAG Generation Evaluation 설계를 제공했다. 후속 A/B/C 정의에 따라 현재 HR RAG 전체가 Project B이며, Generation Evaluation은 [B 내부의 별도 평가 모듈](../architecture/project-b-generation-evaluation.md)이다. Project A는 NL2SQL + Tool Calling, Project C는 Multi-Agent Orchestration이며 [프로젝트 구분](project-map.md)을 따른다. 아래 단계와 P001 세부 계약은 이 대화를 실행 가능한 작업으로 구체화한 것이다.
 
 ## 사용자 흐름
 
@@ -17,11 +17,11 @@ HR 규정 문서에서 근거를 찾아 질문에 답하고, 근거가 부족하
 | 1. Naive RAG | 평가 기반·BM25·Dense·기본 답변·학습 UI·원문 처리 기준선·ID 기반 인용 | P001~P006/P009 완료, 비교 기준 보존 |
 | 1단계 내 LangChain 비교 | 기존 직접 Naive 보존, 같은 입력의 검색·답변 품질·속도 비교와 조건부 채택 | P011 완료, ADOPT_LANGCHAIN |
 | 1단계 내 학습 화면 정리 | LangChain 기본 실행·별도 구현 비교 실험 | P012 완료 |
-| B 기본 평가 / NLI 비교 | 승인 정답·LLM Faithfulness/Correctness → 동일 입력 NLI 비교 | P013/P014 초안, 하네스 이후 Hybrid 전에 |
+| B 내부 평가 모듈 | 승인 정답·LLM Faithfulness/Correctness → 동일 입력 NLI 비교 | P013/P014 초안, 하네스 이후 Hybrid 전에 |
 | 2. Hybrid 검색 고도화 | BM25/Dense 단독 검색과 RRF 결합 비교 | P010 초안, P014 비교 완료 후 준비 |
 | 3. PDF 원문·청킹 실습 | 현실적인 가상 규정 PDF 추출·청킹/검색 실험·최종 답변/UI 비교 | P007/P008 초안, P010 이후 |
-| 후속 검색/판단 실험 | reranker, thinking 설정별 품질·지연 비교 | 검색 결합·청킹 효과와 분리해 계약 준비 |
-| 후속 Agentic RAG | Python ReAct 루프, 제한된 재검색, 도구 검증 | 도구 스키마·종료 조건·시간 예산 확정 |
+| 후속 검색/판단 실험 | Cross-Encoder Reranking, thinking 설정별 품질·지연 비교 | 검색 결합·청킹 효과와 분리해 계약 준비 |
+| 후속 Agentic RAG | Python ReAct 루프, 제한된 재검색, 도구 검증·Human-in-the-Loop | 도구 스키마·종료 조건·시간 예산 확정 |
 | 후속 실제 문서 동기화 | Google Drive 추가·수정·삭제·권한과 버전 반영 | 실제 문서 범위·권한·삭제 정책 확정 |
 | 후속 Slack 연결 | 질문 응답, 담당자 연결, 사람의 답변 전달 | 워크스페이스·채널·담당자·권한·중복 처리 계약 확정 |
 | 후속 서빙 비교 | Ollama와 vLLM의 동일 조건 성능·도구 호출 비교 | 모델과 GPU 환경 확보, 비교 조건 기록 |

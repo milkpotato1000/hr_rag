@@ -1,6 +1,8 @@
-# RAG 구현과 학습 로드맵
+# Project B — RAG 구현과 학습 로드맵
 
-2026-10-29 P011 완료·LangChain 채택 판정과 P012 기본 학습/실험 메뉴 분리 및 Project B 별도 평가 모듈 요청을 반영한 현재 계획이다. 검토 출처와 반영 항목은 [로드맵 대조 기록](reviews/2026-10-28-roadmap-reconciliation.md)에 남긴다. 구현·테스트·수정·실행은 Codex가 맡고, 사용자는 의미 이해·가설·관찰·평가·최적화에 집중한다.
+2026-10-29 P011 완료·LangChain 채택 판정과 P012 기본 학습/실험 메뉴 분리 및 Project B 내부 평가 모듈 요청을 반영한 현재 계획이다. 검토 출처와 반영 항목은 [로드맵 대조 기록](reviews/2026-10-28-roadmap-reconciliation.md)에 남긴다. 구현·테스트·수정·실행은 Codex가 맡고, 사용자는 의미 이해·가설·관찰·평가·최적화에 집중한다.
+
+현재 `hr_rag` 전체가 Project B다. A는 NL2SQL+Tool Calling, C는 Multi-Agent Orchestration이며 [A/B/C 정의](project-map.md)를 따른다. 아래 평가 모듈은 B의 구성 요소다.
 
 ## 큰 학습 단계와 현재 상태
 
@@ -9,13 +11,13 @@
 | 1. Naive RAG | `1. Naive RAG/` | P001~P005 검색·생성·학습 UI, P006 원문 처리 기준선, P009 ID 선택/원문 인용 | 구현 완료, 비교 기준 보존 |
 | 1단계 내 구현 비교 | `1. Naive RAG/variants/langchain/` | [P011](plans/P011.md): 기존 직접 구현 보존·검색/품질/속도 비교 | 완료, ADOPT_LANGCHAIN |
 | 1단계 내 학습 화면 정리 | 같은 후보 폴더 | [P012](plans/P012.md): LangChain 기본 실행·별도 구현 비교 실험 | 완료, dev 커밋/검증 근거로 확인 |
-| B 기본 답변 평가 | `evaluation/project_b/` 예정 | [P013](plans/P013.md): 승인 정답·공통 claim 추출·LLM Faithfulness/Correctness | 초안, 설치형 하네스 완료 후 |
-| B NLI 비교 | 같은 별도 평가 모듈 | [P014](plans/P014.md): LLM/NLI 정확도·점수·지연/메모리 비교 | 초안, P013 이후 |
+| B 내부 기본 답변 평가 | `evaluation/project_b/` 예정 | [P013](plans/P013.md): 승인 정답·공통 claim 추출·LLM Faithfulness/Correctness | 초안, 설치형 하네스 완료 후 |
+| B 내부 NLI 비교 | 같은 별도 평가 모듈 | [P014](plans/P014.md): LLM/NLI 정확도·점수·지연/메모리 비교 | 초안, P013 이후 |
 | 2. Hybrid 검색 고도화 | `2. Hybrid RAG/` 예정 | [P010](plans/P010.md): BM25/Dense 단독 검색과 RRF 결합 비교 | 초안, P014 비교 완료 후 준비 |
 | 3. PDF 원문·청킹 실습 | `3. Document Chunking/` 예정 | [P007](plans/P007.md): 현실적인 원문·청킹/검색 비교 → [P008](plans/P008.md): 답변 품질·실험 UI | 초안, P010 이후 |
 | 후속 Agentic RAG | 사용자 예시 `4. Agentic RAG/` | 도구 선택·제한된 재검색·종료/실패 처리 | 상세 범위·최종 번호는 착수 계약에서 확정 |
 
-P번호는 세부 작업 식별자이며 단계 번호와 다르다. 의존 순서는 **P009/P011 완료 → P012 → 설치형 하네스 → P013 B 기본 평가기 → P014 NLI 비교 → P010 Hybrid → P007 → P008**이고 P007은 P006 완료도 필요하다. reranker·thinking·서빙·실제 Drive/Slack 연동은 후속 후보로 유지한다. P012 완료 후에는 사용자 요청에 따라 별도 공개 설치형 plan-dev 하네스 제작으로 먼저 전환한다. 하네스는 HR RAG 번호 단계가 아니며 여기에는 전환 순서만 기록한다. P013 준비 검토에서 하네스 완료 근거를 확인한다. B/P010/P007/P008 초안은 자동 승인·실행하지 않는다.
+P번호는 세부 작업 식별자이며 단계 번호와 다르다. 의존 순서는 **P009/P011 완료 → P012 → 설치형 하네스 → P013 B 기본 평가기 → P014 NLI 비교 → P010 Hybrid → P007 → P008**이고 P007은 P006 완료도 필요하다. Cross-Encoder Reranking·thinking·Human-in-the-Loop·서빙·실제 Drive/Slack 연동은 후속 후보로 유지한다. P012 완료 후에는 사용자 요청에 따라 별도 공개 설치형 plan-dev 하네스 제작으로 먼저 전환한다. 하네스는 HR RAG 번호 단계가 아니며 여기에는 전환 순서만 기록한다. P013 준비 검토에서 하네스 완료 근거를 확인한다. P013/P014/P010/P007/P008 초안은 자동 승인·실행하지 않는다.
 
 새 큰 단계는 이전 단계에서 필요한 코드·데이터·테스트를 복사·선별해 시작한다. 이전 폴더는 비교 기준으로 보존하고 README/stage-manifest에 원본 커밋·경로·hash와 변경 이유를 남긴다. 단계 폴더만 복사해도 실행 가능해야 한다. [큰 단계 규칙](../architecture/stage-layout.md)을 따른다.
 
@@ -45,11 +47,11 @@ P011은 기존 직접 구현을 보존하고 독립 후보에서 LangChain Core 
 
 P012 완료 후 설치형 하네스를 먼저 진행한다. 이후 P010 준비 검토에서는 P011 판정과 P012 최신 UI/래퍼의 commit/path/hash를 함께 확인한다. P007/P008은 그 기반을 이어받는다.
 
-## Project B: 개선 전에 평가 기준선부터 확보
+## B 내부 평가 모듈: 개선 전에 평가 기준선부터 확보
 
-B는 여러 RAG 단계가 내보낸 답변·실제 전달 문맥을 읽는 별도 모듈이다. P013에서 원문 기반 Ground Truth 초안→사람 승인→버전 고정, claim 추출 공통 사용, LLM 검증/매칭과 Python Faithfulness/Factual P/R/F1을 구현한다. P014에서는 동일 claims/문맥/정답을 고정해 NLI 검증기와 비교한다. 상세 범위·오류/0분모/보류·평가기 검증은 [Project B 설계](../architecture/project-b-generation-evaluation.md)를 따른다.
+Generation Evaluation은 B의 여러 RAG 단계가 내보낸 답변·실제 전달 문맥을 읽는 별도 모듈이다. P013에서 원문 기반 Ground Truth 초안→사람 승인→버전 고정, claim 추출 공통 사용, LLM 검증/매칭과 Python Faithfulness/Factual P/R/F1을 구현한다. P014에서는 동일 claims/문맥/정답을 고정해 NLI 검증기와 비교한다. 상세 범위·오류/0분모/보류·평가기 검증은 [Project B 설계](../architecture/project-b-generation-evaluation.md)를 따른다.
 
-현재 생성 Qwen3-4B는 유지하고 제안 Qwen3-8B는 평가 역할 후보로 별도 검토한다. 실제 사람 승인과 Codex 대조를 구분한다. B의 평가기 선택/버전은 Hybrid·청킹 비교에서 고정해 사용하며 P008은 결과 화면을 연결한다. B는 큰 RAG 단계 번호를 추가하지 않는다. Project A/C의 정의는 미확인이다.
+현재 생성 Qwen3-4B는 유지하고 제안 Qwen3-8B는 평가 역할 후보로 별도 검토한다. 실제 사람 승인과 Codex 대조를 구분한다. B의 평가기 선택/버전은 Hybrid·청킹 비교에서 고정해 사용하며 P008은 결과 화면을 연결한다. 평가 모듈 때문에 B의 큰 RAG 단계 번호를 추가하지 않는다. A/B의 독립 개발 이후 C에서 전문 Agent 조율을 학습한다.
 
 ## 2단계: 검색 결합만 바꿔 보기
 

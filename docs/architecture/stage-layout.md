@@ -53,6 +53,6 @@ P001은 루트 경로에서 이미 완료됐다. 그 카드·로그·기존 검�
 
 직전 plan 80f667a의 세부 작업별 폴더 지시는 이 정정으로 대체한다. dev는 정정 plan을 재채택하고 기존 실행 로그에 정정·영향을 추가한다.
 
-## Project B 평가 모듈 (2026-10-29)
+## Project B 내부 평가 모듈 (2026-10-29)
 
-[Project B](project-b-generation-evaluation.md)는 `evaluation/project_b/`에 별도 구현할 예정이다. RAG 방식의 큰 단계 번호는 바꾸지 않는다. 각 단계는 평가용 run artifact를 내보내고 B가 읽으며, 정답/평가 코드를 생성 입력에 넣지 않는다. 설치형 하네스 후 P013 기본 평가기→P014 NLI 비교를 수행하고 Hybrid에 재사용한다. 개별 단계의 독립 실행과 이전 구현 보존 규칙은 유지한다.
+Project B는 HR RAG 전체이며, [내부 평가 모듈](project-b-generation-evaluation.md)은 `evaluation/project_b/`에 별도 구현할 예정이다. RAG 방식의 큰 단계 번호는 바꾸지 않는다. 각 단계는 평가용 run artifact를 내보내고 평가 모듈이 읽으며, 정답/평가 코드를 생성 입력에 넣지 않는다. 설치형 하네스 후 P013 기본 평가기→P014 NLI 비교를 수행하고 Hybrid에 재사용한다. 개별 단계의 독립 실행과 이전 구현 보존 규칙은 유지한다.

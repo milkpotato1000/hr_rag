@@ -1,16 +1,16 @@
-# Project B — 별도 RAG Generation Evaluation 모듈
+# Project B 내부 RAG Generation Evaluation 모듈
 
-상태: 학습 범위·순서 확정, 실행 상세 계약은 초안. 2026-10-29 사용자가 제공한 Project B 설계와 “설치형 하네스 끝나고 Hybrid 전에 기본 평가기부터 만들고, NLI 비교는 그다음” 요청을 근거로 한다. Project A/C의 정의는 아직 확인되지 않았으며 기존 HR RAG 단계에 임의 대응하지 않는다.
+상태: 학습 범위·순서 확정, 실행 상세 계약은 초안. 2026-10-29 사용자가 제공한 Project B 설계와 “설치형 하네스 끝나고 Hybrid 전에 기본 평가기부터 만들고, NLI 비교는 그다음” 요청을 근거로 한다. 후속 사용자 정의에 따라 Project B는 HR RAG→Agentic RAG 전체이며, 이 문서는 그 내부 평가 모듈을 다룬다. A는 NL2SQL+Tool Calling, C는 Multi-Agent Orchestration이다. [프로젝트 구분](../planning/project-map.md)을 따른다.
 
 ## 위치와 학습 순서
 
 P012 학습 UI 정리 → 별도 공개 설치형 하네스 완료 → **P013 B 기본 LLM 평가기 → P014 NLI 비교 → P010 Hybrid → P007 청킹 검색 → P008 답변 비교 UI** 순서로 진행한다. P014는 비교 완료가 선행이며 NLI의 성능 우위/채택 성공을 Hybrid 착수 조건으로 강제하지 않는다.
 
-B는 답변 생성 시스템과 독립적인 평가 모듈이다. 예정 구현 위치는 dev의 `evaluation/project_b/`이며 실제 생성은 P013 준비·채택 이후다. `1. Naive RAG/`, `2. Hybrid RAG/`, `3. Document Chunking/`의 번호를 바꾸거나 B를 새 RAG 방식으로 세지 않는다. 각 단계는 버전이 고정된 실행 결과를 export하고 B가 읽는다. 단계 코드가 B의 정답·rubric을 runtime import하거나 검색/생성 입력으로 사용하는 구조는 허용하지 않는다. 별도 Git 저장소 생성은 현재 계획에 포함하지 않는다.
+B 내부 Generation Evaluation은 답변 생성 시스템과 독립적인 평가 모듈이다. 예정 구현 위치는 dev의 `evaluation/project_b/`이며 실제 생성은 P013 준비·채택 이후다. `1. Naive RAG/`, `2. Hybrid RAG/`, `3. Document Chunking/`의 번호를 바꾸거나 B를 새 RAG 방식으로 세지 않는다. 각 단계는 버전이 고정된 실행 결과를 export하고 평가 모듈이 읽는다. 단계 코드가 평가 모듈의 정답·rubric을 runtime import하거나 검색/생성 입력으로 사용하는 구조는 허용하지 않는다. 별도 Git 저장소 생성은 현재 계획에 포함하지 않는다.
 
 설치형 하네스는 HR RAG P카드가 아닌 외부 선행 작업이다. P013 준비 검토에 실제 하네스 저장소·완료 commit/tag·설치/호환 검증 근거를 기록한 뒤 READY로 전환한다. 이 문서나 P012 완료만으로 하네스 완료를 간주하지 않는다. 큐의 P선행 외 이 게이트는 현재 준비 검토에서 확인하며 자동 검사로 구현됐다고 주장하지 않는다.
 
-## B1: 검증 데이터와 기본 LLM 평가기 — P013
+## 평가 1: 검증 데이터와 기본 LLM 평가기 — P013
 
 ### 실행 결과와 공통 입력
 
@@ -20,7 +20,7 @@ Faithfulness의 premise는 실제 전달 문맥이다. 문맥 예산 때문에 �
 
 ### Ground Truth의 독립 파이프라인
 
-원본 HR PDF/Markdown → 추출 검증 → 질문·기준 답변·Reference Claims 초안 → 원문 조항/페이지/span 연결 → **사람 검증·승인** → 버전 고정 저장 흐름이다. P006 원문/source-v2를 초기 후보로 활용하되 과거 Codex rubric을 사람 승인 데이터로 승격하지 않는다. 기존15청크/P011 세트는 관찰된 자료로 표시하고 새 검증 세트와 구분한다. P007의 새 현실적 PDF 완료를 B1 선행으로 두어 순환 의존을 만들지 않는다.
+원본 HR PDF/Markdown → 추출 검증 → 질문·기준 답변·Reference Claims 초안 → 원문 조항/페이지/span 연결 → **사람 검증·승인** → 버전 고정 저장 흐름이다. P006 원문/source-v2를 초기 후보로 활용하되 과거 Codex rubric을 사람 승인 데이터로 승격하지 않는다. 기존15청크/P011 세트는 관찰된 자료로 표시하고 새 검증 세트와 구분한다. P007의 새 현실적 PDF 완료를 기본 평가기 선행으로 두어 순환 의존을 만들지 않는다.
 
 각 정답 claim에 원문 hash·문서 버전·시행일·근거 위치·검토 상태·실제 검토자/승인 기록을 둔다. draft/reviewed/approved를 구분하고 평가 실행에는 호환되는 approved 버전만 사용한다. 승인자는 실제 사람이며 Codex 검토를 사람 승인으로 기록하지 않는다. 승인 데이터 준비 전 코드/fixture 검증은 가능하지만 실제 평가 완료로 처리하지 않는다. 문서 개정은 새 버전과 재검토로 처리하고 다른 시점 정책을 섞지 않는다. 정답 dataset은 평가 중 자동 생성·수정하지 않는다.
 
@@ -38,7 +38,7 @@ Faithfulness의 premise는 실제 전달 문맥이다. 문맥 예산 때문에 �
 
 모델 확보·8B의 로컬 메모리/속도·라이선스·실행 라이브러리 호환성·정확한 양자화·호출량/자원 상한은 P013 준비 시 확인한다. 이번 초안 등록은 다운로드·실제 평가 실행 승인이 아니다. ClaimExtractor, ClaimVerifier, ClaimMatcher, aggregator 경계를 분리하고 NLI adapter로 검증기를 교체할 수 있게 한다.
 
-## B2: NLI 비교 — P014
+## 평가 2: NLI 비교 — P014
 
 초기 NLI 후보는 사용자 지정 `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli`다. 모델 revision/tokenizer/label mapping/라이선스·한국어 HR 적합성·길이 제한/다중 청크 처리·실행 환경을 검증한 후 고정한다. [모델 카드](https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-mnli-xnli)의 다국어 설명이 한국어 HR 규정에 대한 검증 결과를 대신하지 않는다.
 
@@ -52,4 +52,4 @@ Faithfulness의 premise는 실제 전달 문맥이다. 문맥 예산 때문에 �
 
 P010 Hybrid와 P008 답변 비교는 B의 같은 평가 버전으로 생성 전후 run을 비교한다. P007의 검색/fact-span 지표는 그대로 유지한다. P007에서 원문이 바뀌면 B 정답의 새 버전·사람 재승인 후 P008에 연결하며 기존 정답 offset을 복사하지 않는다.
 
-B 기본 CLI/결과 JSON·보고서에서 질문→claims→판정→근거→산식을 추적할 수 있어야 한다. 학습 UI의 평가 메뉴/결과 연결 범위는 P013 준비 시 정하고, P008에서는 청킹 비교 run에 연결한다. 승인되지 않은 정답, 버전 불일치, 평가 미실행/오류/보류를0점 또는100점으로 표시하지 않는다. 정답과 평가 prompt가 RAG 입력으로 유출되지 않도록 검사한다.
+평가 모듈 기본 CLI/결과 JSON·보고서에서 질문→claims→판정→근거→산식을 추적할 수 있어야 한다. 학습 UI의 평가 메뉴/결과 연결 범위는 P013 준비 시 정하고, P008에서는 청킹 비교 run에 연결한다. 승인되지 않은 정답, 버전 불일치, 평가 미실행/오류/보류를0점 또는100점으로 표시하지 않는다. 정답과 평가 prompt가 RAG 입력으로 유출되지 않도록 검사한다.
