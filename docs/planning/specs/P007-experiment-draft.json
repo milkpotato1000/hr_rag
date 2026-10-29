@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "status": "DRAFT_NOT_EXECUTABLE",
+  "plan_id": "P007",
+  "design": "docs/architecture/chunking-experiment-contract.md",
+  "corpus": {
+    "p015_completion_commit": null,
+    "input_manifest_sha256": null,
+    "section_map_sha256": null
+  },
+  "dataset": {
+    "sha256": null,
+    "tuning_existing": 14,
+    "holdout_proposed": 12,
+    "holdout_answerable": 10,
+    "holdout_unanswerable": 2,
+    "reviewer_kind": "Codex_source_audit_not_human_approval"
+  },
+  "configs": [
+    {
+      "id": "fixed-200-0",
+      "method": "fixed",
+      "size_chars": 200,
+      "overlap_chars": 0
+    },
+    {
+      "id": "fixed-200-40",
+      "method": "fixed",
+      "size_chars": 200,
+      "overlap_chars": 40
+    },
+    {
+      "id": "fixed-400-0",
+      "method": "fixed",
+      "size_chars": 400,
+      "overlap_chars": 0
+    },
+    {
+      "id": "fixed-400-80",
+      "method": "fixed",
+      "size_chars": 400,
+      "overlap_chars": 80
+    },
+    {
+      "id": "fixed-800-0",
+      "method": "fixed",
+      "size_chars": 800,
+      "overlap_chars": 0
+    },
+    {
+      "id": "fixed-800-160",
+      "method": "fixed",
+      "size_chars": 800,
+      "overlap_chars": 160
+    },
+    {
+      "id": "recursive-0",
+      "method": "recursive",
+      "base_max_chars": 400,
+      "overlap_chars": 0,
+      "overlap_policy": "post_partition_left_extension_v1"
+    },
+    {
+      "id": "recursive-80",
+      "method": "recursive",
+      "base_max_chars": 400,
+      "overlap_chars": 80,
+      "overlap_policy": "post_partition_left_extension_v1"
+    },
+    {
+      "id": "structure-0",
+      "method": "structure",
+      "base_max_chars": 400,
+      "overlap_chars": 0,
+      "overlap_policy": "post_partition_left_extension_v1"
+    },
+    {
+      "id": "structure-80",
+      "method": "structure",
+      "base_max_chars": 400,
+      "overlap_chars": 80,
+      "overlap_policy": "post_partition_left_extension_v1"
+    },
+    {
+      "id": "semantic-0",
+      "method": "semantic",
+      "base_max_chars": 400,
+      "overlap_chars": 0,
+      "overlap_policy": "post_partition_left_extension_v1",
+      "distance_threshold": 0.25,
+      "min_split_chars": 100
+    },
+    {
+      "id": "semantic-80",
+      "method": "semantic",
+      "base_max_chars": 400,
+      "overlap_chars": 80,
+      "overlap_policy": "post_partition_left_extension_v1",
+      "distance_threshold": 0.25,
+      "min_split_chars": 100
+    },
+    {
+      "id": "llm-0",
+      "method": "llm",
+      "base_max_chars": 800,
+      "overlap_chars": 0,
+      "overlap_policy": "post_partition_left_extension_v1",
+      "preferred_chars": [
+        200,
+        400
+      ],
+      "boundary_source": "same_selected_invocation_for_both_overlaps"
+    },
+    {
+      "id": "llm-80",
+      "method": "llm",
+      "base_max_chars": 800,
+      "overlap_chars": 80,
+      "overlap_policy": "post_partition_left_extension_v1",
+      "preferred_chars": [
+        200,
+        400
+      ],
+      "boundary_source": "same_selected_invocation_for_both_overlaps"
+    }
+  ],
+  "retrieval": {
+    "groups": [
+      "bm25",
+      "dense"
+    ],
+    "text_version": "canonical-slice-only-v1",
+    "ks": [
+      5,
+      10,
+      20
+    ],
+    "character_budgets": [
+      400,
+      800,
+      1600
+    ],
+    "candidate_limit": 20,
+    "baseline_config": "fixed-400-80"
+  },
+  "llm": {
+    "name": "qwen3:4b",
+    "digest_candidate": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "stream": false,
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 1024,
+    "window_chars": 1600,
+    "window_units": 24,
+    "window_overlap_units": 0,
+    "max_windows_per_document": 8,
+    "independent_repetitions": 3,
+    "max_attempts_per_window": 2,
+    "max_requests_including_smokes": 300,
+    "timeout_seconds": 120,
+    "total_model_wall_seconds": 7200,
+    "input_budget_verification": null
+  },
+  "embedding": {
+    "name": "bge-m3:567m",
+    "digest_candidate": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+    "dimension": 1024,
+    "truncate": false,
+    "max_batch_items": 32,
+    "max_input_items_total": 50000,
+    "timeout_seconds": 60
+  },
+  "execution": {
+    "quality_rankings": 440,
+    "max_rankings_including_latency_repeats": 1320,
+    "concurrency": 1,
+    "ui_default_port": 8003,
+    "runtime_verified": false,
+    "resource_limits_finalized": false
+  },
+  "pending_readiness": [
+    "P015 completion and frozen corpus/section hashes",
+    "Source-based question/fact/span set and freeze",
+    "Runtime/model compatibility and tokenizer budget evidence",
+    "Window counts/resource estimates and final limits",
+    "Copy closure/manifest and preview renderer verification"
+  ]
+}
