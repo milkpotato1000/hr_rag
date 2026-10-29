@@ -18,12 +18,12 @@ A는 자연어 질문→의도/도구 선택→SQL 실행→결과 검증→답�
 4. Agentic RAG: 추론 설정·ReAct·Tool Calling·재검색·근거 검증·사람 검토/Slack 에스컬레이션. 내부 추론 전문의 수집/표시를 완료 조건으로 삼지 않고 도구 선택·실행 결과·근거·종료 상태로 동작을 검증한다.
 5. 운영/서빙: Google Drive 개정/삭제/권한 동기화, Ollama/vLLM 동일 조건 비교.
 
-위 목록은 영역 구분이며 현재 채택한 세부 실행 순서를 소급 변경하지 않는다. 직전 사용자 결정인 **P012 완료 → 설치형 하네스 → P013 기본 평가기 → P014 NLI 비교 → P010 Hybrid → P007/P008 청킹 실험**을 유지한다. Cross-Encoder Reranking·Agentic/Human-in-the-Loop·실제 Drive·서빙 비교는 후속 상세 계약으로 준비한다. A/B/C는 프로젝트 구분, P번호는 작업 식별자, `1. Naive RAG/` 등의 번호는 B 안의 큰 구현 단계다.
+위 목록은 영역 구분이며 세부 실행 순서는 최신 사용자 요청에 따라 **P015 원문 PDF 재작성 → P007 청킹·검색 실험 → P013 기본 평가기 → P014 NLI 비교 → P008 답변 비교 UI → P010 Hybrid**다. P012는 완료됐고 하네스는 별도 프로젝트로 분리했다. Cross-Encoder Reranking·Agentic/Human-in-the-Loop·실제 Drive·서빙 비교는 후속 상세 계약으로 준비한다. A/B/C는 프로젝트 구분, P번호는 작업 식별자, 번호 폴더는 B 안의 큰 구현 단계다.
 
 ## 현재 확인된 구현 상태
 
 dev 완료 커밋 `64cd00c`와 작업 큐 기준으로 Naive E2E, BM25/Dense, 원문 추출·고정 청킹 기준선, ID 인용, LangChain 채택·기본 학습/별도 비교 UI(P001~P006/P009/P011/P012)가 완료됐다. 다양한 청킹 실험은 이 기준선과 구분한다.
 
-Hybrid(P010), 자동 LLM 평가기(P013), NLI 평가기 비교(P014), 다양한 청킹/P008 평가 화면은 초안이다. Cross-Encoder Reranker·Agentic·실제 Drive/Slack·vLLM은 후속 계획이다. 사용자 설명의 “모두 B에 속함”은 분류를 뜻하며 이 항목들이 이미 모두 구현 완료됐다는 뜻으로 기록하지 않는다.
+P015 원문 재작성은 준비 완료이며 dev의 정확한 채택 후 착수한다. Hybrid(P010), 자동 LLM 평가기(P013), NLI 평가기 비교(P014), 다양한 청킹(P007)/평가 화면(P008)은 초안이다. Cross-Encoder Reranker·Agentic·실제 Drive/Slack·vLLM은 후속 계획이다. 사용자 설명의 “모두 B에 속함”은 분류를 뜻하며 이 항목들이 이미 모두 구현 완료됐다는 뜻으로 기록하지 않는다.
 
-이전 답변 및 초기 등록 문서에서 “B=평가 모듈 전체, A/C 미확인”으로 좁혀 해석한 부분은 이 정의로 정정한다. 평가 모듈 분리·P013/P014 범위와 기존 실행 순서는 유지한다. 현재 로드맵은 [RAG 학습 로드맵](naive-rag-roadmap.md), 평가 상세는 [B 내부 Generation Evaluation](../architecture/project-b-generation-evaluation.md)을 따른다.
+이전 답변 및 초기 등록 문서에서 “B=평가 모듈 전체, A/C 미확인”으로 좁혀 해석한 부분은 이 정의로 정정한다. 평가 모듈 분리·P013/P014의 역할은 유지하고 실행 순서는 위의 최신 요청을 따른다. 현재 로드맵은 [RAG 학습 로드맵](naive-rag-roadmap.md), 평가 상세는 [B 내부 Generation Evaluation](../architecture/project-b-generation-evaluation.md)을 따른다.
