@@ -1,0 +1,23 @@
+[
+  {
+    "phase": "initial_pdf_authoring",
+    "status": "FAIL",
+    "kind": "font_metadata",
+    "detail": "AppleGothic has no OS/2 table; first build stopped before publishing any output.",
+    "repair": "Record null embedding metadata and reuse prior P006 local font without asserting standalone font redistribution rights. No font file copied."
+  },
+  {
+    "phase": "original_and_langchain_regression",
+    "status": "FAIL",
+    "kind": "sandbox_loopback_permission",
+    "detail": "Both 107-test suites encountered 11 localhost bind PermissionErrors. Original logs and regression.json retained.",
+    "repair": "Repeat same tests with permitted local socket binding; see regression-retry.json."
+  },
+  {
+    "phase": "staged_diff_check",
+    "status": "FAIL",
+    "kind": "expected_parser_trailing_spaces",
+    "detail": "Exact pypdf annual page contains two line-end spaces, repeated in raw/normalized/canonical output.",
+    "repair": "Added stage-local .gitattributes scoped to extracted text, matching P006 policy. Preserved raw bytes/hash/offsets; code/prose whitespace checks remain enabled."
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "bundled_reportlab": "4.4.9",
+  "bundled_pypdf": "6.10.0",
+  "required_pypdf": "6.21.2",
+  "resolution": "Use existing P006 isolated Python for ingestion; bundled Python for authoring. No global dependency changes.",
+  "dependency_inspection": "Graphify AST of five document scripts only; no model calls. document_common imported evaluator solely for strict JSON helpers; selected those helpers locally.",
+  "environment_probe": "fonttools package metadata not installed in bundled runtime; not required by existing PDF pipeline."
+}

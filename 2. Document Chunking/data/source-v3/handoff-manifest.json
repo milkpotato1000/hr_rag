@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "source_version": "3",
+  "review_type": "Codex source-preservation comparison, not human-approved Ground Truth",
+  "snapshot_id": "fixture:e83b0cc3ab0591e593f57af5dacc2c0415cca78ef722ceed80de89bc5f802f34",
+  "ingestion_run_id": "8be724190f6d4aa69cf55ee2286655ef81483b865d5ead57b15512b412bf2260",
+  "ingestion_lock_sha256": "cbff277a316842fd0ff4815092ad6193ecdb4ad9e3214aced713cf2f5afe8814",
+  "offset_unit": "Unicode code point [start,end), not PDF coordinates",
+  "documents": [
+    {
+      "document_id": "hr-v3-birthday",
+      "version": "3",
+      "pdf_path": "output/pdf/birthday.pdf",
+      "pdf_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+      "canonical_path": "extracted/canonical/hr-v3-birthday.txt",
+      "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+      "canonical_chars": 392,
+      "page_count": 1,
+      "page_map_sha256": "b91e3cac46dbda3047cde319b19989b1ab4c9eee64bc56e00fa0d54554ab46c4",
+      "section_count": 4
+    },
+    {
+      "document_id": "hr-v3-annual",
+      "version": "3",
+      "pdf_path": "output/pdf/annual.pdf",
+      "pdf_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+      "canonical_path": "extracted/canonical/hr-v3-annual.txt",
+      "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+      "canonical_chars": 461,
+      "page_count": 1,
+      "page_map_sha256": "a96c511943c8504d7f1e3ea0c4c96585cf85fd2bcc51eabb395a57cd7fa6ad7d",
+      "section_count": 4
+    },
+    {
+      "document_id": "hr-v3-remote",
+      "version": "3",
+      "pdf_path": "output/pdf/remote.pdf",
+      "pdf_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+      "canonical_path": "extracted/canonical/hr-v3-remote.txt",
+      "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+      "canonical_chars": 469,
+      "page_count": 1,
+      "page_map_sha256": "119717b5efe9bdc3d71ae2ea22e9f28950490a2958dcfc91559d7edf275b9b65",
+      "section_count": 5
+    },
+    {
+      "document_id": "hr-v3-welfare",
+      "version": "3",
+      "pdf_path": "output/pdf/welfare.pdf",
+      "pdf_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+      "canonical_path": "extracted/canonical/hr-v3-welfare.txt",
+      "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+      "canonical_chars": 245,
+      "page_count": 1,
+      "page_map_sha256": "4c1772ff32600ebb0134c81e4b9e770ca4b6dff4b970d4be179116f154dc291f",
+      "section_count": 2
+    },
+    {
+      "document_id": "hr-v3-training",
+      "version": "3",
+      "pdf_path": "output/pdf/training.pdf",
+      "pdf_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+      "canonical_path": "extracted/canonical/hr-v3-training.txt",
+      "canonical_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+      "canonical_chars": 202,
+      "page_count": 1,
+      "page_map_sha256": "446d207bfe70d762cad286c2c48e664eef9f6b0f7cca331bc5785efac79fd08b",
+      "section_count": 2
+    },
+    {
+      "document_id": "hr-v3-travel",
+      "version": "3",
+      "pdf_path": "output/pdf/travel.pdf",
+      "pdf_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+      "canonical_path": "extracted/canonical/hr-v3-travel.txt",
+      "canonical_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+      "canonical_chars": 192,
+      "page_count": 1,
+      "page_map_sha256": "83d04aa4aff7ad763f7bbfb9d87b79c54deeb54bba41ddf671ac8f70e06b82b4",
+      "section_count": 2
+    }
+  ],
+  "known_limitations": [
+    "Only six short fictional policy documents; one page each. This corpus may not differentiate large chunk settings; P007 must confirm its grid after seeing these lengths.",
+    "Existing source-v2 multi-page fixture retained in previous stage; no forced page breaks or extra policy to increase size.",
+    "No OCR, tables, columns or PDF-coordinate map.",
+    "Heading spans are authoring candidates, not output of an automatic heading detector.",
+    "Legacy 14 questions are observed tuning only. P007 labels/holdout and P013 human-approved Ground Truth remain pending.",
+    "Fixture timestamps are synthetic; no Drive connection or download. Effective dates unknown.",
+    "Font not redistributed; recreating PDFs requires pinned local licensed font and ReportLab. Extracting delivered PDFs requires only pinned pypdf."
+  ],
+  "files": [
+    {
+      "path": "authoring/annual.md",
+      "sha256": "5b54417267320c864040b427473742941e8046c00cd521a82966ad6d8932a0bc"
+    },
+    {
+      "path": "authoring/birthday.md",
+      "sha256": "ce8091613e9a3dfcc6b9beec8b68e8be0daecb27c2767a2dcd7db522c5a4e208"
+    },
+    {
+      "path": "authoring/remote.md",
+      "sha256": "38cf743b78027bd3e3c24fcb864c3e0de0638d97ec16398bf796edb42a3686f0"
+    },
+    {
+      "path": "authoring/training.md",
+      "sha256": "a4e232b8c2f9fb865ea20a038d1ff79e1a7af6e8b9a935b1ba14d054b13734c7"
+    },
+    {
+      "path": "authoring/travel.md",
+      "sha256": "7ecf27b29345b89445f1357c45f94fc88e0daa7274bda79cb1b93b4d8e09e27a"
+    },
+    {
+      "path": "authoring/welfare.md",
+      "sha256": "6922bd28485c5120278ea07bde70570296cc8323ed0e7445b2de39082559b064"
+    },
+    {
+      "path": "authoring-notes.md",
+      "sha256": "5ce75a89764f07ec1725dfefe553511b6d5ec4c4701c6a39cdedb733c818a557"
+    },
+    {
+      "path": "document-metadata.json",
+      "sha256": "5a90809adba0214adcb51a37ddda5a1c01bf08255dbcf03b36679cd7551495fe"
+    },
+    {
+      "path": "drive-fixture-catalog.json",
+      "sha256": "86fb75ce03f73c3a4f089b80423ddee2347e4b8d86db87b53d86ebd4cb53ea7e"
+    },
+    {
+      "path": "extracted/canonical/hr-v3-annual.txt",
+      "sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+    },
+    {
+      "path": "extracted/canonical/hr-v3-birthday.txt",
+      "sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+    },
+    {
+      "path": "extracted/canonical/hr-v3-remote.txt",
+      "sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+    },
+    {
+      "path": "extracted/canonical/hr-v3-training.txt",
+      "sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362"
+    },
+    {
+      "path": "extracted/canonical/hr-v3-travel.txt",
+      "sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6"
+    },
+    {
+      "path": "extracted/canonical/hr-v3-welfare.txt",
+      "sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+    },
+    {
+      "path": "extracted/manifest.json",
+      "sha256": "3cd55b8c0a25f2d17022da6df268a3f6bcbbc2e7142ad38342acc45b07da3576"
+    },
+    {
+      "path": "extracted/pages/hr-v3-annual-p1.raw.txt",
+      "sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+    },
+    {
+      "path": "extracted/pages/hr-v3-annual-p1.txt",
+      "sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+    },
+    {
+      "path": "extracted/pages/hr-v3-birthday-p1.raw.txt",
+      "sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+    },
+    {
+      "path": "extracted/pages/hr-v3-birthday-p1.txt",
+      "sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+    },
+    {
+      "path": "extracted/pages/hr-v3-remote-p1.raw.txt",
+      "sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+    },
+    {
+      "path": "extracted/pages/hr-v3-remote-p1.txt",
+      "sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+    },
+    {
+      "path": "extracted/pages/hr-v3-training-p1.raw.txt",
+      "sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362"
+    },
+    {
+      "path": "extracted/pages/hr-v3-training-p1.txt",
+      "sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362"
+    },
+    {
+      "path": "extracted/pages/hr-v3-travel-p1.raw.txt",
+      "sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6"
+    },
+    {
+      "path": "extracted/pages/hr-v3-travel-p1.txt",
+      "sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6"
+    },
+    {
+      "path": "extracted/pages/hr-v3-welfare-p1.raw.txt",
+      "sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+    },
+    {
+      "path": "extracted/pages/hr-v3-welfare-p1.txt",
+      "sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+    },
+    {
+      "path": "legacy-reference-map.json",
+      "sha256": "7b3d85d6367e9ec75482a0afb7d6bb621226b17ed6ee2b73f3260b7777793d8c"
+    },
+    {
+      "path": "output/pdf/annual.pdf",
+      "sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd"
+    },
+    {
+      "path": "output/pdf/birthday.pdf",
+      "sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5"
+    },
+    {
+      "path": "output/pdf/remote.pdf",
+      "sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94"
+    },
+    {
+      "path": "output/pdf/training.pdf",
+      "sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b"
+    },
+    {
+      "path": "output/pdf/travel.pdf",
+      "sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280"
+    },
+    {
+      "path": "output/pdf/welfare.pdf",
+      "sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92"
+    },
+    {
+      "path": "output/pdf-authoring.json",
+      "sha256": "11e197605ff6c35ccc089e4eb14f3b93185acd502d1dce7f106bd25b49110bfc"
+    },
+    {
+      "path": "policy-inventory.json",
+      "sha256": "91718ab822d4c8da88b26125eb626af05f3eb2e4ba05c50a2a05b12d87487c08"
+    },
+    {
+      "path": "policy-map.json",
+      "sha256": "9e671c1eb4983302cc95fbf001a865519dba4c5f2e15b391f56a745bb837b1c8"
+    },
+    {
+      "path": "section-map.json",
+      "sha256": "1892ba92474c12800e508d4021752283e9529549c5efc48d1dc79da0d07f92ae"
+    },
+    {
+      "path": "snapshot/cache/48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280.pdf",
+      "sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280"
+    },
+    {
+      "path": "snapshot/cache/57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92.pdf",
+      "sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92"
+    },
+    {
+      "path": "snapshot/cache/6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd.pdf",
+      "sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd"
+    },
+    {
+      "path": "snapshot/cache/6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5.pdf",
+      "sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5"
+    },
+    {
+      "path": "snapshot/cache/c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b.pdf",
+      "sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b"
+    },
+    {
+      "path": "snapshot/cache/ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94.pdf",
+      "sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94"
+    },
+    {
+      "path": "snapshot/manifest.json",
+      "sha256": "6639495fba7af2730c4f61c0d3cab99f64aed73a490f005a0177d9cc00124713"
+    }
+  ],
+  "manifest_id": "bbb2d636ca1bb7793e79d444a864151f753b5b061c6cace1cd3f40ca403b9544"
+}

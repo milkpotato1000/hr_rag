@@ -1,0 +1,67 @@
+{
+  "reportlab_version": "4.4.9",
+  "font_name": "AppleGothic.ttf",
+  "font_sha256": "def69dc2b5e12746049a5dcb189f95341ec460589f47587938567313af3020b1",
+  "font_os2_fsType": null,
+  "font_version": "13.0d1e3",
+  "pdf_format": "A4, embedded TrueType subset, invariant metadata",
+  "font_licensing": "Reuse existing P006 local macOS AppleGothic authoring environment; standalone font is not distributed. OS/2 table absent: no fsType-based licensing assertion. Re-authoring on another host requires a licensed matching font; delivered PDFs are independently extractable.",
+  "source_history": "Fictional source-v3 authoring; not real company originals",
+  "font_note": "Local macOS authoring font; subset embedded, standalone font not redistributed. Other hosts use delivered PDFs or obtain licensed matching font.",
+  "pdfs": [
+    {
+      "document_id": "hr-v3-birthday",
+      "path": "pdf/birthday.pdf",
+      "pages": 1,
+      "sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+      "authoring_path": "authoring/birthday.md",
+      "authoring_sha256": "ce8091613e9a3dfcc6b9beec8b68e8be0daecb27c2767a2dcd7db522c5a4e208",
+      "effective_date": null
+    },
+    {
+      "document_id": "hr-v3-annual",
+      "path": "pdf/annual.pdf",
+      "pages": 1,
+      "sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+      "authoring_path": "authoring/annual.md",
+      "authoring_sha256": "5b54417267320c864040b427473742941e8046c00cd521a82966ad6d8932a0bc",
+      "effective_date": null
+    },
+    {
+      "document_id": "hr-v3-remote",
+      "path": "pdf/remote.pdf",
+      "pages": 1,
+      "sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+      "authoring_path": "authoring/remote.md",
+      "authoring_sha256": "38cf743b78027bd3e3c24fcb864c3e0de0638d97ec16398bf796edb42a3686f0",
+      "effective_date": null
+    },
+    {
+      "document_id": "hr-v3-welfare",
+      "path": "pdf/welfare.pdf",
+      "pages": 1,
+      "sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+      "authoring_path": "authoring/welfare.md",
+      "authoring_sha256": "6922bd28485c5120278ea07bde70570296cc8323ed0e7445b2de39082559b064",
+      "effective_date": null
+    },
+    {
+      "document_id": "hr-v3-training",
+      "path": "pdf/training.pdf",
+      "pages": 1,
+      "sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+      "authoring_path": "authoring/training.md",
+      "authoring_sha256": "a4e232b8c2f9fb865ea20a038d1ff79e1a7af6e8b9a935b1ba14d054b13734c7",
+      "effective_date": null
+    },
+    {
+      "document_id": "hr-v3-travel",
+      "path": "pdf/travel.pdf",
+      "pages": 1,
+      "sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+      "authoring_path": "authoring/travel.md",
+      "authoring_sha256": "7ecf27b29345b89445f1357c45f94fc88e0daa7274bda79cb1b93b4d8e09e27a",
+      "effective_date": null
+    }
+  ]
+}

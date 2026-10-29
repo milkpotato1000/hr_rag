@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "baseline_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
+  "tracked_original_files_byte_identical": 203,
+  "source_v2_block_exhaustiveness": [
+    {
+      "path": "1. Naive RAG/data/source-v2/authoring/annual.md",
+      "blocks": 12,
+      "status": "PASS"
+    },
+    {
+      "path": "1. Naive RAG/data/source-v2/authoring/birthday.md",
+      "blocks": 14,
+      "status": "PASS"
+    },
+    {
+      "path": "1. Naive RAG/data/source-v2/authoring/remote.md",
+      "blocks": 9,
+      "status": "PASS"
+    },
+    {
+      "path": "1. Naive RAG/data/source-v2/authoring/training.md",
+      "blocks": 5,
+      "status": "PASS"
+    },
+    {
+      "path": "1. Naive RAG/data/source-v2/authoring/travel.md",
+      "blocks": 5,
+      "status": "PASS"
+    },
+    {
+      "path": "1. Naive RAG/data/source-v2/authoring/welfare.md",
+      "blocks": 6,
+      "status": "PASS"
+    }
+  ],
+  "old_policy_sentences": 31,
+  "new_body_sentence_occurrences": 34,
+  "policy_conflicts_found": [],
+  "new_unsourced_policy_found": [],
+  "manual_semantic_review": "Reviewed all source-v2 paragraphs, including explanatory restatements and unspecified matters. 1 year+ annual 15-day baseline, no birthday splitting, non-auto approval, meal exclusions, address request timing retained beyond narrow legacy question coverage. Numbers/units/negation/exception/deadline/approver unchanged.",
+  "source_warning_scope": "Fictional HR rules, not actual employer or legal guidance."
+}

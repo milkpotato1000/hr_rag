@@ -1,0 +1,20 @@
+test_blank_and_image_pages_are_review_only_not_complete (test_documents.SourceTests.test_blank_and_image_pages_are_review_only_not_complete) ... ok
+test_damaged_and_encrypted_pdf_are_explicit_errors (test_documents.SourceTests.test_damaged_and_encrypted_pdf_are_explicit_errors) ... ok
+test_empty_markdown_requires_review (test_documents.SourceTests.test_empty_markdown_requires_review) ... ok
+test_snapshot_byte_preservation_and_identity_changes (test_documents.SourceTests.test_snapshot_byte_preservation_and_identity_changes) ... ok
+test_snapshot_rejects_escape_duplicates_bad_hash_and_nonfixture (test_documents.SourceTests.test_snapshot_rejects_escape_duplicates_bad_hash_and_nonfixture) ... ok
+test_exact_span_and_page_hash_rejection (test_source_v3.SourceV3Tests.test_exact_span_and_page_hash_rejection) ... ok
+test_frozen_six_docs_full_authoring_roundtrip_and_independent_policy_examples (test_source_v3.SourceV3Tests.test_frozen_six_docs_full_authoring_roundtrip_and_independent_policy_examples) ... ok
+test_handoff_rejects_pdf_canonical_map_and_document_removal (test_source_v3.SourceV3Tests.test_handoff_rejects_pdf_canonical_map_and_document_removal) ... ok
+test_missing_or_reordered_pages_rejected_even_with_updated_manifest (test_source_v3.SourceV3Tests.test_missing_or_reordered_pages_rejected_even_with_updated_manifest) ... ok
+test_notes_policy_references_are_excluded_from_pdf_catalog (test_source_v3.SourceV3Tests.test_notes_policy_references_are_excluded_from_pdf_catalog) ... ok
+test_original_page_separator_nfc_lf_and_multi_page_fixture (test_source_v3.SourceV3Tests.test_original_page_separator_nfc_lf_and_multi_page_fixture) ... ok
+test_pdf_timeout_and_worker_missing_page_result (test_source_v3.SourceV3Tests.test_pdf_timeout_and_worker_missing_page_result) ... ok
+test_snapshot_hash_failure_atomic_output_and_existing_preserved (test_source_v3.SourceV3Tests.test_snapshot_hash_failure_atomic_output_and_existing_preserved) ... ok
+test_strict_json_duplicate_and_nonfinite (test_source_v3.SourceV3Tests.test_strict_json_duplicate_and_nonfinite) ... ok
+test_unique_unicode_span_mapping_not_pdf_bytes (test_source_v3.SourceV3Tests.test_unique_unicode_span_mapping_not_pdf_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.507s
+
+OK

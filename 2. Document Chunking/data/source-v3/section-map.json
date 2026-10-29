@@ -1,0 +1,767 @@
+{
+  "schema_version": 1,
+  "offset_unit": "Unicode code point [start,end), not PDF coordinates",
+  "ingestion_run_id": "8be724190f6d4aa69cf55ee2286655ef81483b865d5ead57b15512b412bf2260",
+  "sections": [
+    {
+      "section_id": "hr-v3-birthday-s1",
+      "heading": "제1조 적용 대상 및 부여 일수",
+      "heading_span": {
+        "document_id": "hr-v3-birthday",
+        "start": 90,
+        "end": 107,
+        "quote": "제1조 적용 대상 및 부여 일수",
+        "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+        "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 90,
+            "end": 107,
+            "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-birthday",
+        "start": 108,
+        "end": 172,
+        "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상\n에서 제외한다.",
+        "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+        "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 108,
+            "end": 172,
+            "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+          }
+        ]
+      },
+      "start": 90,
+      "end": 172,
+      "chars": 82,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-birthday-s2",
+      "heading": "제2조 사용 기준",
+      "heading_span": {
+        "document_id": "hr-v3-birthday",
+        "start": 173,
+        "end": 182,
+        "quote": "제2조 사용 기준",
+        "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+        "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 173,
+            "end": 182,
+            "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-birthday",
+        "start": 183,
+        "end": 262,
+        "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다.\n생일 특별휴가는 분할할 수 없다.",
+        "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+        "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 183,
+            "end": 262,
+            "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+          }
+        ]
+      },
+      "start": 173,
+      "end": 262,
+      "chars": 89,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-birthday-s3",
+      "heading": "제3조 신청 및 승인",
+      "heading_span": {
+        "document_id": "hr-v3-birthday",
+        "start": 263,
+        "end": 274,
+        "quote": "제3조 신청 및 승인",
+        "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+        "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 263,
+            "end": 274,
+            "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-birthday",
+        "start": 275,
+        "end": 325,
+        "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+        "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+        "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 275,
+            "end": 325,
+            "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+          }
+        ]
+      },
+      "start": 263,
+      "end": 325,
+      "chars": 62,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-birthday-s4",
+      "heading": "제4조 관련 제도",
+      "heading_span": {
+        "document_id": "hr-v3-birthday",
+        "start": 326,
+        "end": 335,
+        "quote": "제4조 관련 제도",
+        "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+        "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 326,
+            "end": 335,
+            "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-birthday",
+        "start": 336,
+        "end": 369,
+        "quote": "생일 축하 포인트는 휴가 신청 자격이나 승인 여부와 별개다.",
+        "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+        "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 336,
+            "end": 369,
+            "page_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758"
+          }
+        ]
+      },
+      "start": 326,
+      "end": 369,
+      "chars": 43,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-annual-s1",
+      "heading": "제1조 연차 발생",
+      "heading_span": {
+        "document_id": "hr-v3-annual",
+        "start": 86,
+        "end": 95,
+        "quote": "제1조 연차 발생",
+        "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+        "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 86,
+            "end": 95,
+            "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-annual",
+        "start": 96,
+        "end": 166,
+        "quote": "1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 기\n준으로 별도 산정한다.",
+        "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+        "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 96,
+            "end": 166,
+            "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+          }
+        ]
+      },
+      "start": 86,
+      "end": 166,
+      "chars": 80,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-annual-s2",
+      "heading": "제2조 사용 단위",
+      "heading_span": {
+        "document_id": "hr-v3-annual",
+        "start": 167,
+        "end": 176,
+        "quote": "제2조 사용 단위",
+        "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+        "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 167,
+            "end": 176,
+            "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-annual",
+        "start": 177,
+        "end": 249,
+        "quote": "연차는 오전 또는 오후 반차로 나누어 사용할 수 있다. 반차 1회는 연차 0.5일로 차감한다. 생일 특\n별휴가는 분할할 수 없다.",
+        "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+        "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 177,
+            "end": 249,
+            "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+          }
+        ]
+      },
+      "start": 167,
+      "end": 249,
+      "chars": 82,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-annual-s3",
+      "heading": "제3조 신청 절차",
+      "heading_span": {
+        "document_id": "hr-v3-annual",
+        "start": 250,
+        "end": 259,
+        "quote": "제3조 신청 절차",
+        "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+        "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 250,
+            "end": 259,
+            "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-annual",
+        "start": 260,
+        "end": 325,
+        "quote": "연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다. 긴급 사유가 있으면 당일 팀장에게 알린 \n후 신청할 수 있다.",
+        "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+        "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 260,
+            "end": 325,
+            "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+          }
+        ]
+      },
+      "start": 250,
+      "end": 325,
+      "chars": 75,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-annual-s4",
+      "heading": "제4조 미사용 연차 이월",
+      "heading_span": {
+        "document_id": "hr-v3-annual",
+        "start": 326,
+        "end": 339,
+        "quote": "제4조 미사용 연차 이월",
+        "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+        "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 326,
+            "end": 339,
+            "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-annual",
+        "start": 340,
+        "end": 440,
+        "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 연차의 사용 \n기한은 다음 해 3월 31일이다. 생일 특별휴가에는 이 규정을 적용하지 않는다.",
+        "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+        "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 340,
+            "end": 440,
+            "page_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c"
+          }
+        ]
+      },
+      "start": 326,
+      "end": 440,
+      "chars": 114,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-remote-s1",
+      "heading": "제1조 신청 대상",
+      "heading_span": {
+        "document_id": "hr-v3-remote",
+        "start": 85,
+        "end": 94,
+        "quote": "제1조 신청 대상",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 85,
+            "end": 94,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-remote",
+        "start": 95,
+        "end": 167,
+        "quote": "입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다. 현장 장비 운영 직\n무는 재택 대상에서 제외한다.",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 95,
+            "end": 167,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "start": 85,
+      "end": 167,
+      "chars": 82,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-remote-s2",
+      "heading": "제2조 근무 횟수 및 승인",
+      "heading_span": {
+        "document_id": "hr-v3-remote",
+        "start": 168,
+        "end": 182,
+        "quote": "제2조 근무 횟수 및 승인",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 168,
+            "end": 182,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-remote",
+        "start": 183,
+        "end": 245,
+        "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다. 재택근무는 휴가가 아닌 근무\n일로 집계한다.",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 183,
+            "end": 245,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "start": 168,
+      "end": 245,
+      "chars": 77,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-remote-s3",
+      "heading": "제3조 근무 장소 및 주소 변경",
+      "heading_span": {
+        "document_id": "hr-v3-remote",
+        "start": 246,
+        "end": 263,
+        "quote": "제3조 근무 장소 및 주소 변경",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 246,
+            "end": 263,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-remote",
+        "start": 264,
+        "end": 330,
+        "quote": "재택근무 장소는 등록한 자택으로 제한한다. 주소 변경 시 근무 시작 전에 인사 담당자에게 등록 주\n소 변경을 요청한다.",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 264,
+            "end": 330,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "start": 246,
+      "end": 330,
+      "chars": 84,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-remote-s4",
+      "heading": "제4조 기기 및 접속 보안",
+      "heading_span": {
+        "document_id": "hr-v3-remote",
+        "start": 331,
+        "end": 345,
+        "quote": "제4조 기기 및 접속 보안",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 331,
+            "end": 345,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-remote",
+        "start": 346,
+        "end": 401,
+        "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다. 공용 컴퓨터로 내부 문서에 접근할 수 없다.",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 346,
+            "end": 401,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "start": 331,
+      "end": 401,
+      "chars": 70,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-remote-s5",
+      "heading": "제5조 다른 승인과의 관계",
+      "heading_span": {
+        "document_id": "hr-v3-remote",
+        "start": 402,
+        "end": 416,
+        "quote": "제5조 다른 승인과의 관계",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 402,
+            "end": 416,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-remote",
+        "start": 417,
+        "end": 448,
+        "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+        "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+        "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 417,
+            "end": 448,
+            "page_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5"
+          }
+        ]
+      },
+      "start": 402,
+      "end": 448,
+      "chars": 46,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-welfare-s1",
+      "heading": "제1조 식대 지원",
+      "heading_span": {
+        "document_id": "hr-v3-welfare",
+        "start": 87,
+        "end": 96,
+        "quote": "제1조 식대 지원",
+        "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+        "original_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 87,
+            "end": 96,
+            "page_text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-welfare",
+        "start": 97,
+        "end": 150,
+        "quote": "사무실 출근일에는 식대 1만 원을 지원한다. 재택근무일과 휴가일에는 이 식대를 지원하지 않는다.",
+        "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+        "original_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 97,
+            "end": 150,
+            "page_text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+          }
+        ]
+      },
+      "start": 87,
+      "end": 150,
+      "chars": 63,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-welfare-s2",
+      "heading": "제2조 생일 축하 포인트",
+      "heading_span": {
+        "document_id": "hr-v3-welfare",
+        "start": 151,
+        "end": 164,
+        "quote": "제2조 생일 축하 포인트",
+        "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+        "original_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 151,
+            "end": 164,
+            "page_text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-welfare",
+        "start": 165,
+        "end": 223,
+        "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다. 이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.",
+        "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+        "original_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 165,
+            "end": 223,
+            "page_text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc"
+          }
+        ]
+      },
+      "start": 151,
+      "end": 223,
+      "chars": 72,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-training-s1",
+      "heading": "제1조 신청 대상 및 일수",
+      "heading_span": {
+        "document_id": "hr-v3-training",
+        "start": 88,
+        "end": 102,
+        "quote": "제1조 신청 대상 및 일수",
+        "canonical_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+        "original_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 88,
+            "end": 102,
+            "page_text_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-training",
+        "start": 103,
+        "end": 140,
+        "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.",
+        "canonical_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+        "original_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 103,
+            "end": 140,
+            "page_text_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362"
+          }
+        ]
+      },
+      "start": 88,
+      "end": 140,
+      "chars": 52,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-training-s2",
+      "heading": "제2조 다른 휴가와의 관계",
+      "heading_span": {
+        "document_id": "hr-v3-training",
+        "start": 141,
+        "end": 155,
+        "quote": "제2조 다른 휴가와의 관계",
+        "canonical_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+        "original_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 141,
+            "end": 155,
+            "page_text_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-training",
+        "start": 156,
+        "end": 179,
+        "quote": "생일 특별휴가 및 연차와 별도로 관리한다.",
+        "canonical_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+        "original_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 156,
+            "end": 179,
+            "page_text_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362"
+          }
+        ]
+      },
+      "start": 141,
+      "end": 179,
+      "chars": 38,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-travel-s1",
+      "heading": "제1조 사전 승인",
+      "heading_span": {
+        "document_id": "hr-v3-travel",
+        "start": 89,
+        "end": 98,
+        "quote": "제1조 사전 승인",
+        "canonical_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+        "original_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 89,
+            "end": 98,
+            "page_text_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-travel",
+        "start": 99,
+        "end": 126,
+        "quote": "출장은 출발 5영업일 전에 팀장의 승인을 받는다.",
+        "canonical_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+        "original_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 99,
+            "end": 126,
+            "page_text_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6"
+          }
+        ]
+      },
+      "start": 89,
+      "end": 126,
+      "chars": 37,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    },
+    {
+      "section_id": "hr-v3-travel-s2",
+      "heading": "제2조 승인 적용 범위",
+      "heading_span": {
+        "document_id": "hr-v3-travel",
+        "start": 127,
+        "end": 139,
+        "quote": "제2조 승인 적용 범위",
+        "canonical_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+        "original_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 127,
+            "end": 139,
+            "page_text_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6"
+          }
+        ]
+      },
+      "body_span": {
+        "document_id": "hr-v3-travel",
+        "start": 140,
+        "end": 171,
+        "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+        "canonical_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+        "original_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+        "pages": [
+          {
+            "page_number": 1,
+            "start": 140,
+            "end": 171,
+            "page_text_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6"
+          }
+        ]
+      },
+      "start": 127,
+      "end": 171,
+      "chars": 44,
+      "role": "authoring section candidate; not a chunk or heading detector output"
+    }
+  ]
+}

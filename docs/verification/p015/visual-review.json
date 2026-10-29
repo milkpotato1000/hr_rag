@@ -1,0 +1,55 @@
+{
+  "reviewer": "Codex direct image inspection",
+  "renderer": "pdftoppm 110 dpi",
+  "status": "PASS",
+  "pages": [
+    {
+      "pdf_path": "2. Document Chunking/data/source-v3/output/pdf/annual.pdf",
+      "pdf_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+      "page": 1,
+      "rendered_path": "docs/verification/p015/rendered/annual-1.png",
+      "rendered_sha256": "08bc4fca4c6cb0324c5b0e1c898a370f09ec8e78a0b0401fc7696be8f9234ca1",
+      "observations": "Title, one fictional warning, ID/version/unknown effective date, numbered clauses, Korean glyphs and footer/page number visible. No clipping, overlap, black glyph boxes or broken reading order. Numeric/negative/approval conditions match authored document. Short document whitespace intentional; no padding or invented policy."
+    },
+    {
+      "pdf_path": "2. Document Chunking/data/source-v3/output/pdf/birthday.pdf",
+      "pdf_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+      "page": 1,
+      "rendered_path": "docs/verification/p015/rendered/birthday-1.png",
+      "rendered_sha256": "eaaec83396a675ff4cc9716639898a78b7e346052448438a84156b0fdca8dcc6",
+      "observations": "Title, one fictional warning, ID/version/unknown effective date, numbered clauses, Korean glyphs and footer/page number visible. No clipping, overlap, black glyph boxes or broken reading order. Numeric/negative/approval conditions match authored document. Short document whitespace intentional; no padding or invented policy."
+    },
+    {
+      "pdf_path": "2. Document Chunking/data/source-v3/output/pdf/remote.pdf",
+      "pdf_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+      "page": 1,
+      "rendered_path": "docs/verification/p015/rendered/remote-1.png",
+      "rendered_sha256": "549fa44c06bd42b010c111ece9df5fb065f35328a4103cd37be5729ca356a7b0",
+      "observations": "Title, one fictional warning, ID/version/unknown effective date, numbered clauses, Korean glyphs and footer/page number visible. No clipping, overlap, black glyph boxes or broken reading order. Numeric/negative/approval conditions match authored document. Short document whitespace intentional; no padding or invented policy."
+    },
+    {
+      "pdf_path": "2. Document Chunking/data/source-v3/output/pdf/training.pdf",
+      "pdf_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+      "page": 1,
+      "rendered_path": "docs/verification/p015/rendered/training-1.png",
+      "rendered_sha256": "3bf8900ce2fd1baee5678d42d18ad1ffe1a3a6a354e534be76eccd340f2d2f6d",
+      "observations": "Title, one fictional warning, ID/version/unknown effective date, numbered clauses, Korean glyphs and footer/page number visible. No clipping, overlap, black glyph boxes or broken reading order. Numeric/negative/approval conditions match authored document. Short document whitespace intentional; no padding or invented policy."
+    },
+    {
+      "pdf_path": "2. Document Chunking/data/source-v3/output/pdf/travel.pdf",
+      "pdf_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+      "page": 1,
+      "rendered_path": "docs/verification/p015/rendered/travel-1.png",
+      "rendered_sha256": "1a65385be2e7df827775261c41c7375150238f1a24f24a87bf66cd8998157971",
+      "observations": "Title, one fictional warning, ID/version/unknown effective date, numbered clauses, Korean glyphs and footer/page number visible. No clipping, overlap, black glyph boxes or broken reading order. Numeric/negative/approval conditions match authored document. Short document whitespace intentional; no padding or invented policy."
+    },
+    {
+      "pdf_path": "2. Document Chunking/data/source-v3/output/pdf/welfare.pdf",
+      "pdf_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+      "page": 1,
+      "rendered_path": "docs/verification/p015/rendered/welfare-1.png",
+      "rendered_sha256": "442b47dd87db16e431f1772b64e3ac315e47ed7f8812b99cceea583d43f9b008",
+      "observations": "Title, one fictional warning, ID/version/unknown effective date, numbered clauses, Korean glyphs and footer/page number visible. No clipping, overlap, black glyph boxes or broken reading order. Numeric/negative/approval conditions match authored document. Short document whitespace intentional; no padding or invented policy."
+    }
+  ]
+}

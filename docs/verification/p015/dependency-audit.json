@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "imports": {
+    "ingest_documents.py": [
+      "argparse",
+      "document_common",
+      "json",
+      "math",
+      "pathlib",
+      "subprocess",
+      "sys",
+      "time"
+    ],
+    "validate_source.py": [
+      "argparse",
+      "document_common",
+      "json",
+      "pathlib",
+      "prepare_handoff",
+      "re"
+    ],
+    "pdf_extract_worker.py": [
+      "document_common",
+      "json",
+      "pathlib",
+      "pypdf",
+      "sys"
+    ],
+    "document_common.py": [
+      "contextlib",
+      "ctypes",
+      "hashlib",
+      "importlib.metadata",
+      "json",
+      "math",
+      "os",
+      "pathlib",
+      "re",
+      "sys",
+      "tempfile",
+      "time",
+      "unicodedata"
+    ],
+    "snapshot_drive_fixture.py": [
+      "argparse",
+      "document_common",
+      "pathlib",
+      "shutil"
+    ],
+    "prepare_handoff.py": [
+      "argparse",
+      "document_common",
+      "json",
+      "pathlib",
+      "re"
+    ],
+    "create_source_pdfs.py": [
+      "argparse",
+      "document_common",
+      "hashlib",
+      "json",
+      "pathlib",
+      "reportlab",
+      "reportlab.lib.pagesizes",
+      "reportlab.pdfbase",
+      "reportlab.pdfbase.ttfonts",
+      "reportlab.pdfgen",
+      "struct"
+    ]
+  },
+  "symlinks": [],
+  "copy_records_verified": 9,
+  "unmodified_p006_files": [
+    "snapshot_drive_fixture.py",
+    "ingest_documents.py",
+    "pdf_extract_worker.py",
+    "ingestion-lock.json",
+    "ingestion-requirements.lock"
+  ],
+  "selected_strict_json_helpers": "document_common decoupled from evaluate_retrieval; no full evaluator copied",
+  "graphify": "AST-only inspection of five P006 scripts, 42 nodes / 181 edges, no model call; confirmed document_common import chain"
+}

@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "snapshot_manifest_sha256": "6639495fba7af2730c4f61c0d3cab99f64aed73a490f005a0177d9cc00124713",
+  "normalization_version": "nfc-lf-v1",
+  "page_separator": "\n\n",
+  "ingestion_lock_sha256": "cbff277a316842fd0ff4815092ad6193ecdb4ad9e3214aced713cf2f5afe8814",
+  "documents": [
+    {
+      "document_id": "hr-v3-birthday",
+      "version": "3",
+      "title": "생일 특별휴가 규정",
+      "synthetic": true,
+      "original_path": "cache/6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5.pdf",
+      "original_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+      "format": "pdf",
+      "authored_by": "Codex - fictional source-v3, not company policy",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:e83b0cc3ab0591e593f57af5dacc2c0415cca78ef722ceed80de89bc5f802f34",
+        "folder_id": "fixture:hr-source-v3",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-v3-birthday",
+        "name": "birthday.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-29T00:00:00Z",
+        "source_version": "fixture-source-v3-1",
+        "source_url": null,
+        "local_path": "cache/6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5.pdf",
+        "downloaded_content_sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5"
+      },
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      },
+      "canonical_path": "canonical/hr-v3-birthday.txt",
+      "canonical_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+      "canonical_chars": 392,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 392,
+          "raw_text_path": "pages/hr-v3-birthday-p1.raw.txt",
+          "raw_text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+          "text_path": "pages/hr-v3-birthday-p1.txt",
+          "text_sha256": "939bdba23d6c910246dd89d16d84d3b27493b583cc16a6fe15d70ca59ed0f758",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v3-annual",
+      "version": "3",
+      "title": "연차 사용 규정",
+      "synthetic": true,
+      "original_path": "cache/6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd.pdf",
+      "original_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+      "format": "pdf",
+      "authored_by": "Codex - fictional source-v3, not company policy",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:e83b0cc3ab0591e593f57af5dacc2c0415cca78ef722ceed80de89bc5f802f34",
+        "folder_id": "fixture:hr-source-v3",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-v3-annual",
+        "name": "annual.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-29T00:00:00Z",
+        "source_version": "fixture-source-v3-1",
+        "source_url": null,
+        "local_path": "cache/6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd.pdf",
+        "downloaded_content_sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd"
+      },
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      },
+      "canonical_path": "canonical/hr-v3-annual.txt",
+      "canonical_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+      "canonical_chars": 461,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 461,
+          "raw_text_path": "pages/hr-v3-annual-p1.raw.txt",
+          "raw_text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+          "text_path": "pages/hr-v3-annual-p1.txt",
+          "text_sha256": "bca316d9845cc1dac00d50200e0cd6ea2bf0305ceb2080abbb1500f327dc247c",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v3-remote",
+      "version": "3",
+      "title": "재택근무 규정",
+      "synthetic": true,
+      "original_path": "cache/ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94.pdf",
+      "original_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+      "format": "pdf",
+      "authored_by": "Codex - fictional source-v3, not company policy",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:e83b0cc3ab0591e593f57af5dacc2c0415cca78ef722ceed80de89bc5f802f34",
+        "folder_id": "fixture:hr-source-v3",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-v3-remote",
+        "name": "remote.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-29T00:00:00Z",
+        "source_version": "fixture-source-v3-1",
+        "source_url": null,
+        "local_path": "cache/ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94.pdf",
+        "downloaded_content_sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94"
+      },
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      },
+      "canonical_path": "canonical/hr-v3-remote.txt",
+      "canonical_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+      "canonical_chars": 469,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 469,
+          "raw_text_path": "pages/hr-v3-remote-p1.raw.txt",
+          "raw_text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+          "text_path": "pages/hr-v3-remote-p1.txt",
+          "text_sha256": "9e0089145959f4229af8e6329fcacc6138dd35274192c13698f402c3e497a3a5",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v3-welfare",
+      "version": "3",
+      "title": "복지 지원 규정",
+      "synthetic": true,
+      "original_path": "cache/57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92.pdf",
+      "original_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+      "format": "pdf",
+      "authored_by": "Codex - fictional source-v3, not company policy",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:e83b0cc3ab0591e593f57af5dacc2c0415cca78ef722ceed80de89bc5f802f34",
+        "folder_id": "fixture:hr-source-v3",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-v3-welfare",
+        "name": "welfare.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-29T00:00:00Z",
+        "source_version": "fixture-source-v3-1",
+        "source_url": null,
+        "local_path": "cache/57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92.pdf",
+        "downloaded_content_sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92"
+      },
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      },
+      "canonical_path": "canonical/hr-v3-welfare.txt",
+      "canonical_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+      "canonical_chars": 245,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 245,
+          "raw_text_path": "pages/hr-v3-welfare-p1.raw.txt",
+          "raw_text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+          "text_path": "pages/hr-v3-welfare-p1.txt",
+          "text_sha256": "2d2aa1411f80024f05bdcf75220b2b70f5bdb84a2eaa1172e741102d7e17c3dc",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v3-training",
+      "version": "3",
+      "title": "교육 휴가 규정",
+      "synthetic": true,
+      "original_path": "cache/c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b.pdf",
+      "original_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+      "format": "pdf",
+      "authored_by": "Codex - fictional source-v3, not company policy",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:e83b0cc3ab0591e593f57af5dacc2c0415cca78ef722ceed80de89bc5f802f34",
+        "folder_id": "fixture:hr-source-v3",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-v3-training",
+        "name": "training.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-29T00:00:00Z",
+        "source_version": "fixture-source-v3-1",
+        "source_url": null,
+        "local_path": "cache/c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b.pdf",
+        "downloaded_content_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b"
+      },
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      },
+      "canonical_path": "canonical/hr-v3-training.txt",
+      "canonical_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+      "canonical_chars": 202,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 202,
+          "raw_text_path": "pages/hr-v3-training-p1.raw.txt",
+          "raw_text_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+          "text_path": "pages/hr-v3-training-p1.txt",
+          "text_sha256": "5f38f3f7a6bdabb3a2dd3af0d0a6b6324601b62a2a0427e243c9489f5618e362",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    },
+    {
+      "document_id": "hr-v3-travel",
+      "version": "3",
+      "title": "출장 사전 승인 규정",
+      "synthetic": true,
+      "original_path": "cache/48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280.pdf",
+      "original_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+      "format": "pdf",
+      "authored_by": "Codex - fictional source-v3, not company policy",
+      "provenance": {
+        "source_provider": "google_drive",
+        "source_mode": "fixture",
+        "snapshot_id": "fixture:e83b0cc3ab0591e593f57af5dacc2c0415cca78ef722ceed80de89bc5f802f34",
+        "folder_id": "fixture:hr-source-v3",
+        "timestamps_synthetic": true,
+        "file_id": "fixture:hr-v3-travel",
+        "name": "travel.pdf",
+        "mime_type": "application/pdf",
+        "source_modified_time": "2026-10-29T00:00:00Z",
+        "source_version": "fixture-source-v3-1",
+        "source_url": null,
+        "local_path": "cache/48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280.pdf",
+        "downloaded_content_sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280"
+      },
+      "parser": {
+        "name": "pypdf",
+        "version": "6.21.2",
+        "mode": "plain"
+      },
+      "canonical_path": "canonical/hr-v3-travel.txt",
+      "canonical_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+      "canonical_chars": 192,
+      "pages": [
+        {
+          "page_number": 1,
+          "start": 0,
+          "end": 192,
+          "raw_text_path": "pages/hr-v3-travel-p1.raw.txt",
+          "raw_text_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+          "text_path": "pages/hr-v3-travel-p1.txt",
+          "text_sha256": "a9770312e81a8318f19f6e7eaa416d032bad43f3bb09524cba0a475ddafa9bd6",
+          "classification": "text",
+          "image_count": 0
+        }
+      ]
+    }
+  ],
+  "run_id": "8be724190f6d4aa69cf55ee2286655ef81483b865d5ead57b15512b412bf2260",
+  "status": "complete",
+  "review_pages": [],
+  "offset_unit": "Unicode code point [start,end) in canonical text, not PDF bytes",
+  "limits": {
+    "file_bytes": 20971520,
+    "pdf_pages": 100,
+    "canonical_chars": 1000000,
+    "pdf_timeout_seconds": 30
+  },
+  "limitations": [
+    "No OCR. Blank/image classifications are heuristic; vector-drawn text may look blank.",
+    "PDF reading order/table/column recovery is not guaranteed.",
+    "Limits/timeouts are not a comprehensive memory/resource sandbox."
+  ],
+  "elapsed_ms": 504.72362502478063
+}

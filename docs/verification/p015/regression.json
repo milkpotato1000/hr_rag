@@ -1,0 +1,16 @@
+[
+  {
+    "name": "original-regression",
+    "exit_code": 1,
+    "command": "python -m unittest discover -s tests -v",
+    "cwd": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG",
+    "tail": "v/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py\", line 457, in __init__\n    self.server_bind()\n  File \"/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py\", line 140, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py\", line 478, in server_bind\n    self.socket.bind(self.server_address)\nPermissionError: [Errno 1] Operation not permitted\n\n----------------------------------------------------------------------\nRan 107 tests in 13.395s\n\nFAILED (errors=11)\n"
+  },
+  {
+    "name": "langchain-regression",
+    "exit_code": 1,
+    "command": "python -m unittest discover -s tests -v",
+    "cwd": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/variants/langchain",
+    "tail": "v/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py\", line 457, in __init__\n    self.server_bind()\n  File \"/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/http/server.py\", line 140, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/socketserver.py\", line 478, in server_bind\n    self.socket.bind(self.server_address)\nPermissionError: [Errno 1] Operation not permitted\n\n----------------------------------------------------------------------\nRan 107 tests in 13.184s\n\nFAILED (errors=11)\n"
+  }
+]

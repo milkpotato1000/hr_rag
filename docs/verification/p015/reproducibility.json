@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "commands": [
+    {
+      "name": "source-tests",
+      "argv": [
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/document-stage",
+      "exit_code": 0
+    },
+    {
+      "name": "independent-validate",
+      "argv": [
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/venv/bin/python",
+        "scripts/validate_source.py",
+        "--source-root",
+        "data/source-v3"
+      ],
+      "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/document-stage",
+      "exit_code": 0
+    },
+    {
+      "name": "independent-snapshot",
+      "argv": [
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/venv/bin/python",
+        "scripts/snapshot_drive_fixture.py",
+        "--catalog",
+        "data/source-v3/drive-fixture-catalog.json",
+        "--output-dir",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/snapshot"
+      ],
+      "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/document-stage",
+      "exit_code": 0
+    },
+    {
+      "name": "independent-ingest",
+      "argv": [
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/venv/bin/python",
+        "scripts/ingest_documents.py",
+        "--manifest",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/snapshot/manifest.json",
+        "--output-dir",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/extracted"
+      ],
+      "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/document-stage",
+      "exit_code": 0
+    },
+    {
+      "name": "independent-environment",
+      "argv": [
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/venv/bin/python",
+        "-c",
+        "import sys,importlib.metadata as m; print(sys.executable); print(sys.path); print(\"pypdf\",m.version(\"pypdf\"))"
+      ],
+      "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/document-stage",
+      "exit_code": 0
+    },
+    {
+      "name": "pdf-rebuild",
+      "argv": [
+        "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/create_source_pdfs.py",
+        "--font",
+        "/System/Library/Fonts/Supplemental/AppleGothic.ttf",
+        "--output-dir",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/missing-document"
+      ],
+      "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/document-stage",
+      "exit_code": 0
+    },
+    {
+      "name": "pdf-overwrite-rejection",
+      "argv": [
+        "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/create_source_pdfs.py",
+        "--font",
+        "/System/Library/Fonts/Supplemental/AppleGothic.ttf",
+        "--output-dir",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/missing-document"
+      ],
+      "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/document-stage",
+      "exit_code": 2
+    },
+    {
+      "name": "pdf-missing-document-rejection",
+      "argv": [
+        "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/create_source_pdfs.py",
+        "--font",
+        "/System/Library/Fonts/Supplemental/AppleGothic.ttf",
+        "--output-dir",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/missing-document"
+      ],
+      "cwd": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/document-stage",
+      "exit_code": 2
+    }
+  ],
+  "standalone_copy": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/document-stage",
+  "isolated_python": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p015-standalone-ay693291/venv/bin/python",
+  "copied_parent_modules": false,
+  "installed_dependency": "pypdf 6.21.2 from existing wheel, offline with required SHA256",
+  "canonical_and_page_maps_identical": true,
+  "ingestion_run_id": "8be724190f6d4aa69cf55ee2286655ef81483b865d5ead57b15512b412bf2260",
+  "elapsed_metadata_equality_required": false,
+  "pdf_rebuild": [
+    {
+      "name": "annual.pdf",
+      "sha256": "6109fafe093cd8a4fad45e91945b874910a90c397240831beb0de3573a96f3dd",
+      "match": true
+    },
+    {
+      "name": "birthday.pdf",
+      "sha256": "6cd854e64f444de311cbd708f9ec42857999446eca2b76cf0b170c7161c62af5",
+      "match": true
+    },
+    {
+      "name": "remote.pdf",
+      "sha256": "ee4f05984c65dc482f433f38e1388e77d370fdd8f91b81a8c412fad7e0543b94",
+      "match": true
+    },
+    {
+      "name": "training.pdf",
+      "sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+      "match": true
+    },
+    {
+      "name": "travel.pdf",
+      "sha256": "48d2fd888c9569de5a7ba99f58ab09552d42b259bdbb13941f8f42e22d27a280",
+      "match": true
+    },
+    {
+      "name": "welfare.pdf",
+      "sha256": "57c13a27e92fa564e101ba703a10b1785eabd770f166473f2c56ba30d7f05e92",
+      "match": true
+    }
+  ],
+  "overwrite_refused": true,
+  "missing_document_no_partial_output": true
+}

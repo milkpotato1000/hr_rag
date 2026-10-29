@@ -1,0 +1,16 @@
+[
+  {
+    "name": "original-regression",
+    "exit_code": 0,
+    "command": "python -m unittest discover -s tests -v",
+    "cwd": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG",
+    "tail": "TPTests.test_serializes_pipeline_but_get_stays_responsive) ... 127.0.0.1 - - [29/Oct/2026 14:35:08] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:08] \"POST /api/ask HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:09] \"POST /api/ask HTTP/1.1\" 200 -\nok\ntest_static_assets_render_data_as_text (test_server.HTTPTests.test_static_assets_render_data_as_text) ... 127.0.0.1 - - [29/Oct/2026 14:35:09] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:09] \"GET /app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:09] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:09] \"GET /guide HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:09] \"POST /api/ask HTTP/1.1\" 200 -\nok\n\n----------------------------------------------------------------------\nRan 107 tests in 18.378s\n\nOK\n"
+  },
+  {
+    "name": "langchain-regression",
+    "exit_code": 0,
+    "command": "python -m unittest discover -s tests -v",
+    "cwd": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/variants/langchain",
+    "tail": "TPTests.test_serializes_pipeline_but_get_stays_responsive) ... 127.0.0.1 - - [29/Oct/2026 14:35:28] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:28] \"POST /api/ask HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:28] \"POST /api/ask HTTP/1.1\" 200 -\nok\ntest_static_assets_render_data_as_text (test_server.HTTPTests.test_static_assets_render_data_as_text) ... 127.0.0.1 - - [29/Oct/2026 14:35:28] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:28] \"GET /app.js HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:28] \"GET /style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:28] \"GET /guide HTTP/1.1\" 200 -\n127.0.0.1 - - [29/Oct/2026 14:35:28] \"POST /api/ask HTTP/1.1\" 200 -\nok\n\n----------------------------------------------------------------------\nRan 107 tests in 18.649s\n\nOK\n"
+  }
+]
