@@ -1,0 +1,70 @@
+{
+  "recorded_at": "2026-10-29T13:38:53.017137+09:00",
+  "scope": "synchronization_only",
+  "adopted_plan": "c269afb15414f6eed0339fa1faf2834a55690944",
+  "dev_before_sync": "64cd00c9c67e7e83c8d0efd5e2932718a13d4497",
+  "integration_commit": "fb480c1b6a625a1ccaf87071597b17edcb00d2a7",
+  "contract_check": "PASS: contracts match adopted plan c269afb15414",
+  "next": {
+    "plan": "P007",
+    "dev": "P015"
+  },
+  "completed_preserved": [
+    "P001",
+    "P002",
+    "P003",
+    "P004",
+    "P005",
+    "P006",
+    "P009",
+    "P011",
+    "P012"
+  ],
+  "upcoming": [
+    {
+      "id": "P015",
+      "state": "READY",
+      "checked": 0
+    },
+    {
+      "id": "P007",
+      "state": "DRAFT",
+      "checked": 0
+    },
+    {
+      "id": "P013",
+      "state": "DRAFT",
+      "checked": 0
+    },
+    {
+      "id": "P014",
+      "state": "DRAFT",
+      "checked": 0
+    },
+    {
+      "id": "P008",
+      "state": "DRAFT",
+      "checked": 0
+    },
+    {
+      "id": "P010",
+      "state": "DRAFT",
+      "checked": 0
+    }
+  ],
+  "roadmap": [
+    "P015",
+    "P007",
+    "P013",
+    "P014",
+    "P008",
+    "P010"
+  ],
+  "protected_paths_diff": "",
+  "stage_directory_exists": {
+    "2. Document Chunking": false,
+    "3. Hybrid RAG": false
+  },
+  "status": "WAITING: P015 READY and unstarted; P007 and later DRAFT. No product implementation or model calls performed during synchronization.",
+  "recording_retry": "Initial receipt write failed because docs/progress did not exist. Staging failed; commit hook rejected unstaged adoption. Created receipt directory and staged adoption before retry; no hook bypass."
+}
