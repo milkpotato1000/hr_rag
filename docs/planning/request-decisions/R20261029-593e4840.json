@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "R20261029-593e4840",
+  "request_sha256": "ab228dd89303bf098515df29f62635f072dade9ab82ac7af42b3daa2a0fd66c9",
+  "disposition": "linked",
+  "cards": [
+    "P016",
+    "P007"
+  ],
+  "reason": "완료 P015/source-v3는 보존하고 신규 가상 처리 절차·장문 규정집은 준비 완료 P016/source-v4에서 구현한다. P007 선행을 P016으로 변경하고 질문/정답·모델 window/호출/시간·UI 준비를 source-v4 완료 후 다시 검토한다.",
+  "review_reference": "docs/planning/reviews/P016-readiness.md"
+}

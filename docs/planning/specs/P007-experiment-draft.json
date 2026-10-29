@@ -4,17 +4,21 @@
   "plan_id": "P007",
   "design": "docs/architecture/chunking-experiment-contract.md",
   "corpus": {
-    "p015_completion_commit": null,
+    "p015_completion_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
     "input_manifest_sha256": null,
-    "section_map_sha256": null
+    "section_map_sha256": null,
+    "required_source_version": "source-v4",
+    "required_card": "P016",
+    "p016_completion_commit": null
   },
   "dataset": {
     "sha256": null,
     "tuning_existing": 14,
-    "holdout_proposed": 12,
-    "holdout_answerable": 10,
-    "holdout_unanswerable": 2,
-    "reviewer_kind": "Codex_source_audit_not_human_approval"
+    "holdout_proposed": null,
+    "holdout_answerable": null,
+    "holdout_unanswerable": null,
+    "reviewer_kind": "Codex_source_audit_not_human_approval",
+    "expanded_policy_question_coverage_pending": true
   },
   "configs": [
     {
@@ -155,12 +159,12 @@
     "window_chars": 1600,
     "window_units": 24,
     "window_overlap_units": 0,
-    "max_windows_per_document": 8,
+    "max_windows_per_document": null,
     "independent_repetitions": 3,
     "max_attempts_per_window": 2,
-    "max_requests_including_smokes": 300,
+    "max_requests_including_smokes": null,
     "timeout_seconds": 120,
-    "total_model_wall_seconds": 7200,
+    "total_model_wall_seconds": null,
     "input_budget_verification": null
   },
   "embedding": {
@@ -173,18 +177,29 @@
     "timeout_seconds": 60
   },
   "execution": {
-    "quality_rankings": 440,
-    "max_rankings_including_latency_repeats": 1320,
+    "quality_rankings": null,
+    "max_rankings_including_latency_repeats": null,
     "concurrency": 1,
     "ui_default_port": 8003,
     "runtime_verified": false,
     "resource_limits_finalized": false
   },
   "pending_readiness": [
-    "P015 completion and frozen corpus/section hashes",
-    "Source-based question/fact/span set and freeze",
+    "P016 completion and frozen source-v4 corpus/page/section/policy hashes",
+    "Rebuild source-v4 question/fact/span set including added fictional procedures, references and exceptions; freeze tuning/holdout",
     "Runtime/model compatibility and tokenizer budget evidence",
-    "Window counts/resource estimates and final limits",
+    "Re-profile long source-v4 unit/window counts and embedding/ranking workload; lock final limits without truncation",
     "Copy closure/manifest and preview renderer verification"
-  ]
+  ],
+  "superseded_size_assumptions": {
+    "reason": "R20261029-593e4840 requires long-form source-v4; not executable limits",
+    "llm_max_windows_per_document": 8,
+    "llm_max_requests_including_smokes": 300,
+    "llm_total_model_wall_seconds": 7200,
+    "holdout_proposed": 12,
+    "holdout_answerable": 10,
+    "holdout_unanswerable": 2,
+    "quality_rankings": 440,
+    "max_rankings_including_latency_repeats": 1320
+  }
 }
