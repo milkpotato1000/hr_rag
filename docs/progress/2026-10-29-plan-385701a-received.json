@@ -1,0 +1,70 @@
+{
+  "recorded_at": "2026-10-29T13:54:30.034968+09:00",
+  "scope": "synchronization_only",
+  "adopted_plan": "385701a2d7cce2ad9f62b96da9b64fc06fd505d3",
+  "dev_before_sync": "f24b85acebe2d86981d2f0c6558faf28c5671316",
+  "integration_commit": "110b6b597d2e02afdc81650d1016200ac652a15f",
+  "review_references": [
+    "docs/planning/plans/P007.md",
+    "docs/planning/reviews/2026-10-29-p007-llm-chunking.md"
+  ],
+  "change": "P007 adds LLM boundary-ID chunking as fifth method, separate from embedding semantic splitting. Python slices and validates original text; coverage, window, failures, repeated boundary consistency, costs and UI are included. Runtime parameters remain pending P015 output and readiness review.",
+  "contract_check": "PASS: contracts match adopted plan 385701a2d7cc",
+  "next": {
+    "plan": "P007",
+    "dev": "P015"
+  },
+  "completed_preserved": [
+    "P001",
+    "P002",
+    "P003",
+    "P004",
+    "P005",
+    "P006",
+    "P009",
+    "P011",
+    "P012"
+  ],
+  "upcoming": [
+    {
+      "id": "P015",
+      "state": "READY",
+      "checked": 0
+    },
+    {
+      "id": "P007",
+      "state": "DRAFT",
+      "checked": 0
+    },
+    {
+      "id": "P013",
+      "state": "DRAFT",
+      "checked": 0
+    },
+    {
+      "id": "P014",
+      "state": "DRAFT",
+      "checked": 0
+    },
+    {
+      "id": "P008",
+      "state": "DRAFT",
+      "checked": 0
+    },
+    {
+      "id": "P010",
+      "state": "DRAFT",
+      "checked": 0
+    }
+  ],
+  "roadmap": [
+    "P015",
+    "P007",
+    "P013",
+    "P014",
+    "P008",
+    "P010"
+  ],
+  "protected_paths_diff": "",
+  "status": "WAITING: P015 READY and unstarted; P007 and later DRAFT. No product implementation, download or model calls performed during synchronization."
+}
