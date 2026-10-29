@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "copy_path": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p011-standalone-dj550vuo/langchain",
+  "original_tests": 107,
+  "candidate_additional_tests": 32,
+  "live_cases": [
+    "meal-bm25",
+    "pdf-q06",
+    "q13"
+  ],
+  "model_service": "shared original owned locked runtime",
+  "parent_imports": false,
+  "root_vs_candidate_direct_meal_exact_except_declared_observations": true
+}

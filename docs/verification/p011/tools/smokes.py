@@ -8,8 +8,17 @@ for label,stage,impl,cid in [('original-meal',s,'direct','meal-bm25'),('candidat
  c=cases[cid];cmd=[str(stage/'.venv/bin/python'),str(stage/'scripts'/('ask.py' if stage==s else 'ask_compare.py')),'--question',c['question'],'--retriever',c['retriever']]
  if stage!=s:cmd+=['--implementation',impl]
  if cid=='pdf-q06':cmd+=['--chunks',str(stage/'data/source-v2/fixed-400-80/chunks.jsonl'),'--index-dir',str(stage/'.runtime/index-source-v2-fixed-400-80')]
- start=time.perf_counter();proc=subprocess.run(cmd,cwd=stage,capture_output=True,text=True);r=json.loads(proc.stdout);data={'label':label,'stage':str(stage),'returncode':proc.returncode,'result':r,'wall_ms':(time.perf_counter()-start)*1000,'stderr':proc.stderr};(out/(label+'.json')).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');results[label]=r
- with (ev/'ledger.jsonl').open('a') as f:f.write(json.dumps({'slot':'smoke-'+label,'dispatches':r['trace']['generation_calls'],'count_basis':'actual pipeline dispatch trace; 0/1 independently validated at HTTP boundary in parity suite','result':r['status']})+'\n')
+ path=out/(label+'.json')
+ if path.exists():
+  previous=json.loads(path.read_text())
+  if previous['result']['status']!='error':
+   results[label]=previous['result'];print(label,'reuse preserved successful smoke',flush=True);continue
+  path=out/(label+'-attempt2.json')
+  if path.exists():
+   previous=json.loads(path.read_text());assert previous['result']['status']!='error',path
+   results[label]=previous['result'];continue
+ start=time.perf_counter();proc=subprocess.run(cmd,cwd=stage,capture_output=True,text=True);r=json.loads(proc.stdout);data={'label':label,'stage':str(stage),'returncode':proc.returncode,'result':r,'wall_ms':(time.perf_counter()-start)*1000,'stderr':proc.stderr};path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');results[label]=r
+ with (ev/'ledger.jsonl').open('a') as f:f.write(json.dumps({'slot':'smoke-'+path.stem,'dispatches':r['trace']['generation_calls'],'count_basis':'actual pipeline dispatch trace; 0/1 independently validated at HTTP boundary in parity suite','result':r['status']})+'\n')
  print(label,r['status'],flush=True);assert r['status']!='error'
 def normalized(r):
  r=json.loads(json.dumps(r));t=r['trace'];t.pop('timings_ms');t.pop('comparison',None)

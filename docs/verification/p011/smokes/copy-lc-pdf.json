@@ -1,0 +1,47 @@
+{
+  "label": "copy-lc-pdf",
+  "stage": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p011-standalone-dj550vuo/langchain",
+  "returncode": 2,
+  "result": {
+    "status": "error",
+    "answer": "실행 중 오류가 발생했습니다. trace의 오류를 확인하고 다시 시도하세요.",
+    "citations": [],
+    "reason": "execution",
+    "trace": {
+      "question": "미사용 연차는 며칠까지 이월하고 언제까지 써야 하나요?",
+      "retriever": "dense",
+      "settings": {
+        "top_k": 5,
+        "max_context_chars": 8000,
+        "timeout_seconds": 120
+      },
+      "candidates": [],
+      "contexts": [],
+      "excluded": [],
+      "validation": [],
+      "citation_mode": "full_chunk_from_transmitted_context",
+      "response_contract": "id_only_v2",
+      "semantic_support": "not_automatically_evaluated",
+      "generation_calls": 0,
+      "timings_ms": {
+        "retrieval": 364.7886250400916,
+        "context": 0,
+        "generation": 0,
+        "total": 370.84845901699737
+      },
+      "corpus_sha256": "a8bbaa364c145e4e6ca0325adeef57d6225f73f5c371b4ace09753329c500ec9",
+      "error": {
+        "kind": "execution",
+        "phase": "retrieval",
+        "message": "complete persistent index is missing; build a new index"
+      },
+      "comparison": {
+        "implementation": "langchain",
+        "run_id": "a5aa6a18-a391-484b-b92a-b889d3b640fc",
+        "langchain_core_version": "1.7.0"
+      }
+    }
+  },
+  "wall_ms": 731.2868749722838,
+  "stderr": "error: complete persistent index is missing; build a new index\n"
+}

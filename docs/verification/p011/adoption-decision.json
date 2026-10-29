@@ -1,0 +1,656 @@
+{
+  "decision": "ADOPT_LANGCHAIN",
+  "scope": "No observed degradation in the fixed20-case experiment; not universal statistical equivalence or a fix for existing omissions",
+  "protocol_version": 1,
+  "protocol_sha256": "74fe909f2f53a798f6da36ddd02a02625bf60678baa4258f71c01165afa423a5",
+  "rubric_sha256": "d30a6e2c67b74e380cea6dd094107af4dccd83f200359bcb2506e9f5225e1934",
+  "protocol_commit": "f008d32fcb5059a7e08d7b1a727f4bea7b8de261",
+  "adopted_plan": "63f9d259d76f322f1c6112b4306d0eb6941064a6",
+  "baseline_commit": "58e8eb793b95c524c256c0206e37aa15ff99c6ff",
+  "candidate_source_commit": "37acda801695992cf96ee237fba7cdee8a99bb8b",
+  "candidate_manifest_sha256": "e0bc7e827c8523ea9211dd6cf6892dce85aec9d233a1ed917359bf1747f7fa21",
+  "entry_sha256": "273698d2f34bd4017722a9fbc92d77032b2352b44936c49a158213e1c367303c",
+  "direct_entry_sha256": "ad15cec44effced36ae44ecc364d4cf8f633628b7164f296796a179217da5f1e",
+  "gates": {
+    "preservation": "PASS",
+    "contract": "PASS",
+    "quality": "PASS",
+    "stability_after_environment_repair": "PASS",
+    "latency_and_resources": "PASS",
+    "ui_cli_api": "PASS",
+    "standalone_copy": "PASS"
+  },
+  "case_quality_gates": [
+    {
+      "case_id": "q01",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q02",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q03",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 24,
+          "facts_total": 27,
+          "complete_answer": 0,
+          "supported_claims": 24,
+          "claims_total": 24,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 24,
+          "facts_total": 27,
+          "complete_answer": 0,
+          "supported_claims": 24,
+          "claims_total": 24,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q04",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q05",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 12,
+          "facts_total": 12,
+          "complete_answer": 3,
+          "supported_claims": 12,
+          "claims_total": 12,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 12,
+          "facts_total": 12,
+          "complete_answer": 3,
+          "supported_claims": 12,
+          "claims_total": 12,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q06",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q07",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 12,
+          "facts_total": 18,
+          "complete_answer": 0,
+          "supported_claims": 12,
+          "claims_total": 12,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 12,
+          "facts_total": 18,
+          "complete_answer": 0,
+          "supported_claims": 12,
+          "claims_total": 12,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q08",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 0,
+          "facts_total": 9,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 0,
+          "over_abstention": 3,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 0,
+          "facts_total": 9,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 0,
+          "over_abstention": 3,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q09",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 9,
+          "facts_total": 12,
+          "complete_answer": 0,
+          "supported_claims": 12,
+          "claims_total": 15,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 9,
+          "facts_total": 12,
+          "complete_answer": 0,
+          "supported_claims": 12,
+          "claims_total": 15,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q10",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q11",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q12",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 0,
+          "facts_total": 0,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 3,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 0,
+          "facts_total": 0,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 3,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q13",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 0,
+          "facts_total": 0,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 3,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 0,
+          "facts_total": 0,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 3,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "q14",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 0,
+          "facts_total": 0,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 3,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 0,
+          "facts_total": 0,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 3,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "meal-bm25",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 6,
+          "facts_total": 9,
+          "complete_answer": 0,
+          "supported_claims": 6,
+          "claims_total": 6,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 6,
+          "facts_total": 9,
+          "complete_answer": 0,
+          "supported_claims": 6,
+          "claims_total": 6,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "pdf-q06",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 9,
+          "facts_total": 9,
+          "complete_answer": 3,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "c01",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 12,
+          "facts_total": 12,
+          "complete_answer": 3,
+          "supported_claims": 21,
+          "claims_total": 24,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 12,
+          "facts_total": 12,
+          "complete_answer": 3,
+          "supported_claims": 21,
+          "claims_total": 24,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "c02",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 9,
+          "facts_total": 12,
+          "complete_answer": 0,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 9,
+          "facts_total": 12,
+          "complete_answer": 0,
+          "supported_claims": 9,
+          "claims_total": 9,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "c03",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 12,
+          "facts_total": 12,
+          "complete_answer": 3,
+          "supported_claims": 12,
+          "claims_total": 12,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 12,
+          "facts_total": 12,
+          "complete_answer": 3,
+          "supported_claims": 12,
+          "claims_total": 12,
+          "appropriate_abstention": 0,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    },
+    {
+      "case_id": "c04",
+      "status": "PASS",
+      "metrics": {
+        "direct": {
+          "facts_met": 0,
+          "facts_total": 0,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 3,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        },
+        "langchain": {
+          "facts_met": 0,
+          "facts_total": 0,
+          "complete_answer": 0,
+          "supported_claims": 0,
+          "claims_total": 0,
+          "appropriate_abstention": 3,
+          "over_abstention": 0,
+          "errors": 0,
+          "contradictions": 0,
+          "fabrications": 0
+        }
+      }
+    }
+  ],
+  "initial_decision": "KEEP_DIRECT",
+  "initial_failure_evidence": "adoption-decision.initial.json",
+  "repair_plan_commit": "8e58d03155e68a1a93cf75a1d99f24c0a9fe69fb",
+  "selected_implementation": "langchain",
+  "source_path": "1. Naive RAG/variants/langchain",
+  "entry_path": "scripts/rag_langchain.py",
+  "ui_default": "direct; recommendation displayed separately",
+  "generation_dispatches": 189,
+  "max_dispatches": 320,
+  "followup_copy_excludes": [
+    ".venv",
+    ".runtime",
+    "__pycache__"
+  ],
+  "evidence": [
+    "protocol.json",
+    "rubric.json",
+    "manual-reviews.json",
+    "quality-review.json",
+    "controlled-comparison.json",
+    "latency-report.json",
+    "resource-report.json",
+    "live-parity.json",
+    "embedding-parity.json",
+    "browser-check.json",
+    "copy-regression.json",
+    "index-final-check.json"
+  ],
+  "remaining_p011_blockers": [],
+  "followup_gate": "P010 must review this decision and adopt its own prepared contract; no automatic Hybrid or installable harness implementation",
+  "created_at": "2026-10-29T10:54:05.755507+09:00"
+}

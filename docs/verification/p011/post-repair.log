@@ -1,0 +1,17 @@
+original-meal answered
+candidate-direct-meal answered
+candidate-lc-meal answered
+candidate-lc-pdf answered
+copy-lc-meal answered
+copy-lc-pdf error
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p011/tools/smokes.py", line 13, in <module>
+    print(label,r['status'],flush=True);assert r['status']!='error'
+                                               ^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p011/tools/post_repair.py", line 10, in <module>
+    subprocess.run([sys.executable,str(Path(__file__).with_name('smokes.py'))],check=True,cwd=root)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.runtime/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/1. Naive RAG/.venv/bin/python', '/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p011/tools/smokes.py']' returned non-zero exit status 1.
