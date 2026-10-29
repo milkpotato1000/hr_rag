@@ -1,0 +1,5 @@
+cli-default answered {'implementation': 'langchain', 'run_id': '2fae90be-0446-407f-aa65-f63a2490c33f', 'langchain_core_version': '1.7.0'}
+cli-direct answered {'implementation': 'direct', 'run_id': 'c39503e5-1449-4455-8173-498b88205d32', 'langchain_core_version': '1.7.0'}
+copy-cli-default answered {'implementation': 'langchain', 'run_id': '8f1aaebd-060a-46d4-81b1-941fca9a7a04', 'langchain_core_version': '1.7.0'}
+api-default answered {'implementation': 'langchain', 'run_id': 'b4737fda-4704-4ee8-bf5a-109d16380d6b', 'langchain_core_version': '1.7.0'}
+copy-api-default abstained {'implementation': 'langchain', 'run_id': '45896251-1c00-4a60-b76b-0e1e189f8c75', 'langchain_core_version': '1.7.0'}

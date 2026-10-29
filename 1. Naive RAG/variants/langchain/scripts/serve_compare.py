@@ -9,7 +9,7 @@ import threading
 
 from generation import load_generation_lock, strict_json, CITATION_MODE, RESPONSE_CONTRACT
 from rag import INDEX, validate_input, PROMPTS
-from comparison import ask
+from comparison import ask, DEFAULT_IMPLEMENTATION
 import time
 import uuid
 from runtime_common import STAGE, sha256
@@ -61,6 +61,7 @@ class Handler(BaseHTTPRequestHandler):
         if not self.local_request():
             return
         assets = {'/': ('index.html', 'text/html; charset=utf-8'),
+                  '/experiments/implementation': ('implementation.html', 'text/html; charset=utf-8'),
                   '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
                   '/style.css': ('style.css', 'text/css; charset=utf-8')}
         if self.path in assets:
@@ -103,7 +104,7 @@ class Handler(BaseHTTPRequestHandler):
                 raise ValueError('질문과 지원하는 설정만 전달하세요.')
             args = {'question': data.get('question'), 'retriever': data.get('retriever', 'dense'),
                     'top_k': data.get('top_k', 5), 'max_context_chars': data.get('max_context_chars', 8000)}
-            implementation = data.get('implementation', 'direct')
+            implementation = data.get('implementation', DEFAULT_IMPLEMENTATION)
             if implementation not in ('direct', 'langchain'):
                 raise ValueError('implementation must be direct or langchain')
             validate_input(**args, timeout_seconds=120)

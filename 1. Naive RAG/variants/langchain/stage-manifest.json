@@ -89,5 +89,16 @@
     "direct_entry": "scripts/rag.py",
     "candidate_entry": "scripts/rag_langchain.py",
     "ui": "scripts/serve_compare.py"
+  },
+  "learning_entry": {
+    "plan_id": "P012",
+    "implementation": "langchain",
+    "port": 8001,
+    "path": "/",
+    "experiment_path": "/experiments/implementation",
+    "ui": "scripts/serve_compare.py",
+    "baseline_port": 8000,
+    "historical_decision": "P011 decision unchanged",
+    "next_work": "separate installable plan-dev harness; no automatic P010"
   }
 }

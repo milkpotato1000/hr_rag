@@ -1,6 +1,9 @@
 # 1. Naive RAG
 
-P011 비교 후보는 [variants/langchain](variants/langchain/README.md)에 있습니다. 이 폴더의 기존 UI/CLI는 Direct 기준선으로 유지합니다. 후보 UI는8001에서 두 구현의 검색·답변·시간을 비교합니다.
+현재 학습 시작점은 **http://127.0.0.1:8001/** (LangChain)이다. `variants/langchain/`에서 `.venv/bin/python scripts/serve_compare.py --port 8001`을 실행한다. **실험 → 구현 비교**는 http://127.0.0.1:8001/experiments/implementation 이다. 기존8000과 아래 기존 명령은 Direct 기준선 재현용이다. P012 다음은 별도 설치형 plan-dev 하네스 제작이며 Hybrid는 이후 준비·채택한다.
+
+
+P011 비교 후보는 [variants/langchain](variants/langchain/README.md)에 있습니다. 이 폴더의 기존 UI/CLI는 Direct 기준선으로 유지합니다. 현재8001은 기본 학습이며 구현 비교는 별도 실험 메뉴입니다.
 
 RAG 방식별 큰 구현 단계다. 현재는 P001 검색 평가 기반, P002 BM25, P003 실제 로컬 Dense 검색과 P004 답변·인용·보류와 P005 한국어 학습 UI, P006 새 원문 PDF/Markdown 추출·fixed 문자 청킹을 구현했다. 평가·BM25는 Python 3.9 이상과 표준 라이브러리만 필요하고, Dense는 아래 격리 런타임을 사용한다.
 

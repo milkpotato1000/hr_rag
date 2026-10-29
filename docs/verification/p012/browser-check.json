@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "real_server": "http://127.0.0.1:8001/",
+  "experiment": "/experiments/implementation",
+  "real_downloads": [
+    "browser-basic.json",
+    "browser-multi.json",
+    "browser-missing.json",
+    "browser-pair.json"
+  ],
+  "checks": {
+    "root_has_no_implementation_selector_compare_button_or_panel": true,
+    "root_explicit_langchain": true,
+    "experiment_single_choice_and_pair": true,
+    "keyboard_enter_menu_then_link": true,
+    "explicit_direct_selection_then_learning_returns_langchain": true,
+    "back_forward_reload_no_auto_generation_or_old_results": true,
+    "inflight_inputs_submit_examples_navigation_disabled": true,
+    "inflight_menu_click_shows_wait_notice": true,
+    "failure_restores_controls": true,
+    "new_request_removes_old_result_and_download": true,
+    "single_and_pair_downloads_match_current_result": true,
+    "live_browser_console_errors": []
+  },
+  "fixture": {
+    "server": "http://127.0.0.1:8002",
+    "model_dispatches": 0,
+    "failure_downloads": [
+      "fixture-error.json",
+      "fixture-pair-error.json"
+    ],
+    "viewports": [
+      390,
+      1200
+    ],
+    "method": "production HTML/CSS/JS in explicit srcdoc iframe; visual and native accessibility checks; production CSP unchanged"
+  },
+  "screenshots": [
+    "learning-result.png",
+    "experiment-result.png",
+    "narrow-learning.png",
+    "narrow-experiment.png",
+    "desktop-learning.png",
+    "desktop-experiment.png",
+    "learning-final.png"
+  ],
+  "limits": [
+    "Real smoke only; not a new repeated quality/speed benchmark",
+    "Fixture answers clearly marked and excluded from model dispatch ledger",
+    "Browser close/back does not promise server generation cancellation"
+  ]
+}

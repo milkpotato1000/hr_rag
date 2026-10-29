@@ -1,0 +1,37 @@
+Browser tab: 4, Title: "Naive RAG · Direct / LangChain 비교", URL: "http://127.0.0.1:8002/experiments/implementation".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 22, 94
+~			6 button (collapsed) 실험, Secondary Actions: Expand
++			94 text ● 공유 로컬 모델 서비스 연결됨 · 색인 파일 준비됨
+~			37 text entry area (settable) 질문, Value: fixture-pair-error, ID: question
+~				39 button 생일 휴가 자격
+~				40 button 여러 근거 연결
+~				41 button 근거 없는 질문
+~				42 button 식대 지원
+~				45 pop up button (collapsed, settable) 구현, Value: LangChain · 단계 연결, ID: implementation, Secondary Actions: Expand
+~				51 pop up button (collapsed, settable) 검색 방식, Value: Dense · 의미 검색, ID: retriever, Secondary Actions: Expand
+~				57 stepper (settable, integer) 검색 개수 · top-k, Value: 5, ID: top-k
+~				60 stepper (settable, integer) 문맥 예산 · 문자, Value: 8000, ID: context-budget
+~			61 button 검색하고 답변하기 ↗, ID: submit
+~				62 text 검색하고 답변하기
++				95 text ↗
+~			64 button 두 구현 비교, ID: compare
++		96 text 완료 · 8.0초. 각 결과의 누락·보류·오류를 함께 확인하세요.
++		97 container comparison
++			98 heading 같은 조건의 두 구현, Value: 2
++				99 text 같은 조건의 두 구현
++			100 text 수동 1쌍 비교입니다. Direct → LangChain 순서로 실행하며 정식 반복 벤치마크와 구분합니다.
++			101 text corpus 2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f · dense / K=5 / 예산=8000 · 검색 순위·점수 차이/실패 · 전달 문맥 차이/실패 · 제외 문맥 차이/실패
++			102 container pair-results
++				103 container
++					104 heading 1. direct · 4.00초, Value: 3
++						105 text 1. direct · 4.00초
++					106 text answered · 정상 [UI fixture, no model call] 생일 휴가의 자격은 입사 후 3개월이 지난 재직자이며, 수습 중인 직원은 대상에서 제외됩니다. 신청 기한은 생일 특별휴가를 사용하기 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 사용 기간은 생일이 속한 달의 근무일에만 사용하며, 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다. [가상 규정] 생일 휴가 적용 대상 [가상 HR 규정: 실제 회사 정책이 아님] 입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상에서 제외한다. [가상 규정] 생일 휴가 신청 [가상 HR 규정: 실제 회사 정책이 아님] 생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다. [가상 규정] 생일 휴가 사용 기간 [가상 HR 규정: 실제 회사 정책이 아님] 생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않는다.
++					107 button 검색·문맥·trace 자세히 보기
++				108 container
++					109 heading 2. langchain · 4.01초, Value: 3
++						110 text 2. langchain · 4.01초
++					111 text error · timeout [UI fixture] timeout
++					112 button 검색·문맥·trace 자세히 보기
++			113 button 비교 JSON 저장 ↓, ID: download-pair
+The focused UI element is 1 AXWebArea Naive RAG · Direct / LangChain 비교, URL: 127.0.0.1:8002/experiments/implementation

@@ -1,6 +1,6 @@
-# Naive RAG — Direct / LangChain 비교 후보
+# Naive RAG — LangChain 기본 학습과 구현 비교 실험
 
-P011 후보 폴더다. 원본은 저장소의 `1. Naive RAG/`에 보존했다. 이 폴더의 `scripts/rag.py`와 검색·모델 경계는 기준 커밋 `58e8eb793b95c524c256c0206e37aa15ff99c6ff`의 동일 사본이다. `scripts/rag_langchain.py`는 검색→불변 문맥/메시지→무문맥 분기 또는 생성 1회→검증/원문 조립을 실제 Runnable 단계로 연결한다. 부모 소스를 import하지 않는다.
+P011에서 검증한 LangChain을 P012부터 기본 학습에 사용한다. 원본은 저장소의 `1. Naive RAG/`에 보존했다. 이 폴더의 `scripts/rag.py`와 검색·모델 경계는 기준 커밋 `58e8eb793b95c524c256c0206e37aa15ff99c6ff`의 동일 사본이다. `scripts/rag_langchain.py`는 검색→불변 문맥/메시지→무문맥 분기 또는 생성 1회→검증/원문 조립을 실제 Runnable 단계로 연결한다. 부모 소스를 import하지 않는다.
 
 ## 실행
 
@@ -8,11 +8,13 @@ P011 후보 폴더다. 원본은 저장소의 `1. Naive RAG/`에 보존했다. �
 
 ```sh
 .venv/bin/python scripts/serve_compare.py --port 8001
-.venv/bin/python scripts/ask_compare.py --implementation langchain --retriever dense --question '생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.'
+.venv/bin/python scripts/ask_compare.py --retriever dense --question '생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.'
 .venv/bin/python scripts/ask_compare.py --implementation direct --retriever bm25 --question '재택근무일과 휴가일에도 사무실 식대가 나오나요?'
 ```
 
-`http://127.0.0.1:8001/`에서 구현 선택 또는 두 구현 비교를 실행한다. 기본 선택은 항상 direct다. 정식 판정은 화면에 별도로 표시하며 선택을 자동 변경하지 않는다. 비교는 같은 서버 잠금 안에서 Direct→LangChain 두 질의를 직렬 실행한다. 각 결과·실패·검색/전달/제외 근거·시간·JSON을 남긴다. 수동 한 쌍의 시간으로 정식 벤치마크를 대체하지 않는다.
+`http://127.0.0.1:8001/`는 LangChain 단일 학습 화면이다. 질문·BM25/Dense·top-k·문맥 예산을 바꿔 검색→문맥→답변을 관찰한다. 상단 **실험 → 구현 비교** 또는 `http://127.0.0.1:8001/experiments/implementation`에서 명시 Direct/LangChain 선택과 A/B 비교를 실행한다. 새로고침/메뉴 이동은 자동 질의를 실행하지 않는다. 실행 중 앱 메뉴는 잠긴다. 브라우저 자체 이동/닫기는 서버 생성 취소를 보장하지 않는다. 비교는 같은 서버 잠금 안에서 Direct→LangChain 두 질의를 직렬 실행한다. 각 결과·실패·검색/전달/제외 근거·시간·JSON을 남긴다. 수동 한 쌍의 시간으로 정식 벤치마크를 대체하지 않는다.
+
+`ask_compare.py`, `comparison.ask`, 후보 `POST /api/ask`는 implementation 생략 시 LangChain을 실행한다. 파일명이 compare여도 기본 CLI는 단일 실행이다. 명시 direct/langchain을 지원하고 null·빈 문자열·다른 값은 입력 오류다. 보존된 ask.py/rag.ask/serve.py와 기존8000은 Direct 기준선이다.
 
 PDF corpus는 CLI로 명시한다. UI 기본 corpus는15개 청크이며 임의 파일 경로 입력은 받지 않는다.
 
@@ -46,8 +48,11 @@ python3.12 -m venv .venv
 ```sh
 .venv/bin/python -m unittest discover -s tests
 .venv/bin/python -m unittest discover -s tests_langchain
+.venv/bin/python -m unittest discover -s tests_learning
 ```
 
 추가 matrix 검사는 두 비교 색인이 필요하다. `copy-manifest.json`은 최초 복사와 현재 hash를 기록한다. `adoption-decision.json`은 정식 판정 사본이며, 전체 protocol/120 warm+18 cold 원응답/의미 검토/시간/실패 증거는 저장소의 `docs/verification/p011/`에 있다. 제품 사본은 그 증거 폴더를 런타임에 읽지 않는다.
 
-[학습 가이드](LEARNING_GUIDE.md)를 따라 검색 동일성, 답변의 조건 누락, 인용 지지, 로드 시간을 별도로 관찰한다. 후속 Hybrid 구현은 P010 준비 검토와 채택 후 진행한다.
+`adoption-decision.json`의 ui_default=direct는 P011 당시 기록으로 보존한다. 현재 기본값은 P012 stage-manifest의 learning_entry를 따른다.
+
+[학습 가이드](LEARNING_GUIDE.md)를 따라 검색 동일성, 답변의 조건 누락, 인용 지지, 로드 시간을 별도로 관찰한다. P012 다음은 별도 공개 설치형 plan-dev 하네스 제작이다. 이 HR RAG 작업에서는 자동 착수하지 않는다. 이후 Hybrid는 P010 준비 검토와 채택 후, 청킹 비교 실습은 그 뒤에 진행한다.

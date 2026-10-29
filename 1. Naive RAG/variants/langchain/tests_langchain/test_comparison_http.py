@@ -15,7 +15,7 @@ class ComparisonHTTP(unittest.TestCase):
  def request(self,body,path='/api/ask',headers=None):
   c=http.client.HTTPConnection('127.0.0.1',self.server.server_port,timeout=5);c.request('POST',path,json.dumps(body),headers={'Content-Type':'application/json',**(headers or {})});r=c.getresponse();code=r.status;data=json.loads(r.read());c.close();return code,data
  def test_default_and_invalid_selection(self):
-  self.assertEqual(self.request({'question':'q'})[0],200);self.assertEqual(self.calls[-1]['implementation'],'direct')
+  self.assertEqual(self.request({'question':'q'})[0],200);self.assertEqual(self.calls[-1]['implementation'],'langchain')
   for value in ['hybrid','',None,[],{}]:self.assertEqual(self.request({'question':'q','implementation':value})[0],400)
   for extra in [{'corpus':'../../'},{'chunks_path':'/tmp/file'},{'relevance':{}}]:self.assertEqual(self.request({'question':'q',**extra})[0],400)
  def test_pair_failure_retained_order_and_lock(self):

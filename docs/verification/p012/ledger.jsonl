@@ -1,0 +1,9 @@
+{"slot": "cli-default", "dispatches": 1, "status": "answered", "count_basis": "pipeline trace; no automatic retries"}
+{"slot": "cli-direct", "dispatches": 1, "status": "answered", "count_basis": "pipeline trace; no automatic retries"}
+{"slot": "copy-cli-default", "dispatches": 1, "status": "answered", "count_basis": "pipeline trace; no automatic retries"}
+{"slot": "api-default", "dispatches": 1, "status": "answered", "count_basis": "pipeline trace; no automatic retries"}
+{"slot": "copy-api-default", "dispatches": 0, "status": "abstained", "count_basis": "pipeline trace; no automatic retries"}
+{"slot": "browser-basic", "dispatches": 1, "statuses": ["answered"], "count_basis": "actual browser-downloaded trace; no automatic retries"}
+{"slot": "browser-multi", "dispatches": 1, "statuses": ["answered"], "count_basis": "actual browser-downloaded trace; no automatic retries"}
+{"slot": "browser-missing", "dispatches": 1, "statuses": ["abstained"], "count_basis": "actual browser-downloaded trace"}
+{"slot": "browser-pair", "dispatches": 2, "statuses": ["answered", "answered"], "count_basis": "actual browser-downloaded trace"}

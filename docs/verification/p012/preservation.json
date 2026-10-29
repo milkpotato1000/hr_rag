@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "baseline": "150884f5576aa75cdb324f66ff0a26e4fdf97d2b",
+  "protected_files_checked": 471,
+  "allowed_changes": [
+    {
+      "path": "1. Naive RAG/LEARNING_GUIDE.md",
+      "before_sha256": "1887fe1a240a30c00d64f19c56dccb358bf598d84927f5fee45518856182e12b",
+      "current_sha256": "d9bd0b25a2569a4fa79f44babca0dd8f46e731ae61b9cec4a8e6e37dce353ad5"
+    },
+    {
+      "path": "1. Naive RAG/README.md",
+      "before_sha256": "5c9a09d345ea97a3c188f2a0eeeed62ddadc0aacc6c8d71907047068ca25085b",
+      "current_sha256": "9e07100d12046febe09bcd36de8af27cd1c0fb1512d06efd020d306354e12626"
+    },
+    {
+      "path": "1. Naive RAG/stage-manifest.json",
+      "before_sha256": "dc914f0511baecd045d1874f674db677b4f7c3df7c4361157b8985f66569b0b1",
+      "current_sha256": "9ab102f7cb7053186acec3a9171f2e7c0f448a6e24920662bd2846413b1516c9"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/LEARNING_GUIDE.md",
+      "before_sha256": "8d48af9d747d5268b81412704e2f816c1f1bbe42baafe10c011433deec43323b",
+      "current_sha256": "0771ead8cc6696bc4d13d8aa832cc5198b91f2daed2f57d76155da0faaee8f14"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/README.md",
+      "before_sha256": "1fe5cafffdec42ac3ea4a8b9ba3fc6518ef7d275069383288505ee1b273b9447",
+      "current_sha256": "4a59bff8fa7531b59af83a1521bf5b5f91ce89cd5355a6703493611c7c9f9678"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/scripts/ask_compare.py",
+      "before_sha256": "0853b2e4d965086e23f79fe7fb39fe6d0e7cf496174d3b514600fde758990fab",
+      "current_sha256": "22def3555549193d98b45c7f70ab5ec5b8402b8df6ca457733d7564bbce401cb"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/scripts/comparison.py",
+      "before_sha256": "4ab8f822a60ec8e1c81d87d3108792e0b5e333a3c923c1c815c05520c1d0f08a",
+      "current_sha256": "cd76fa3dbac82635c1895e206ec599a25f0e89d9a2199b28164692b0d632135c"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/scripts/serve_compare.py",
+      "before_sha256": "75b2b91e033313e3c2cfbabda2c6930ba1539d6bc5c90d6554fc9ca27f1fd5f5",
+      "current_sha256": "71b5f1934e81e873de6e6df55b4d3ae229d493e4724b16c38f95e9c4204085be"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/stage-manifest.json",
+      "before_sha256": "7ebe1e5ff5e6d40670eef39bd61c9ea95393e3ee809d3b50c42476f80cb642fe",
+      "current_sha256": "15b27b9086ae90ec562d7bbab14de676601fc5d9ddf79cc9ae7a6b35d763043e"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/tests_langchain/test_comparison_http.py",
+      "before_sha256": "968f427327747d5529bdb0d709a536de959e4832b7f57c7e8bdc7f403e97f7b2",
+      "current_sha256": "3584f05b4e1ee37f4b6270be194779984868b274b51d47a2ba38189769b02987"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/web_compare/app.js",
+      "before_sha256": "49f8d867b3f834137d39747b9462a1b15bde33a241c384a8fda96094ecb37215",
+      "current_sha256": "8bba70330c7eb25e705ed530f24c8e1310154641e5603e60a47d5ce8f72dd708"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/web_compare/index.html",
+      "before_sha256": "4acba23c65093f510876be169d0e62436b180eae3197a12e46abb0dfd6a4f446",
+      "current_sha256": "d180d3a2b039165390d9d48eef81cba3b65019729c4394f6adb33a4751a8b0b5"
+    },
+    {
+      "path": "1. Naive RAG/variants/langchain/web_compare/style.css",
+      "before_sha256": "73170d5178f54c454b38dd47ec64966c708c82622be654e4d5a8519fc8fa1a66",
+      "current_sha256": "d27c0b34955f0333c8ccbd69ce81747e091a8e82ab982d1d188e149288b22981"
+    }
+  ],
+  "original_direct_and_candidate_pipeline_unchanged": true,
+  "p011_evidence_and_decision_unchanged": true,
+  "current_manifest_sha256": "9466634fe0de49f9985caf2379bdda6f9983ac03ea8f5fea6231e0d30a73b902"
+}

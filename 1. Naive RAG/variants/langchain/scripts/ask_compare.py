@@ -5,7 +5,7 @@ import json
 import sys
 from pathlib import Path
 from rag import INDEX, CHUNKS
-from comparison import ask
+from comparison import ask, DEFAULT_IMPLEMENTATION
 
 
 class Parser(argparse.ArgumentParser):
@@ -16,7 +16,7 @@ class Parser(argparse.ArgumentParser):
 def main(argv=None):
     p = Parser(description=__doc__)
     p.add_argument('--question', required=True)
-    p.add_argument('--implementation', default='direct')
+    p.add_argument('--implementation', default=DEFAULT_IMPLEMENTATION)
     p.add_argument('--retriever', default='dense')
     p.add_argument('--top-k', type=int, default=5)
     p.add_argument('--index-dir', type=Path, default=INDEX)

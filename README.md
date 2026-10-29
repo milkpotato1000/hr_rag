@@ -1,5 +1,8 @@
 # hr_rag
 
+현재 학습 시작점은 **http://127.0.0.1:8001/** (LangChain)이다. `1. Naive RAG/variants/langchain/`에서 `.venv/bin/python scripts/serve_compare.py --port 8001`을 실행한다. **실험 → 구현 비교**는 http://127.0.0.1:8001/experiments/implementation 이다. 기존8000과 아래 기존 명령은 Direct 기준선 재현용이다. P012 다음은 별도 설치형 plan-dev 하네스 제작이며 Hybrid는 이후 준비·채택한다.
+
+
 HR 규정 문서에 근거해 질문에 답하고, 근거가 부족하면 담당자에게 연결하는 RAG 에이전트 프로젝트입니다.
 기획·개발은 linked Git worktree로 분리하며 첫 구현은 합성 HR 데이터와 로컬 검색 평가 CLI입니다.
 

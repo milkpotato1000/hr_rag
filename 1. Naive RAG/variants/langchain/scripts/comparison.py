@@ -4,7 +4,10 @@ from importlib.metadata import version
 from rag import ask as direct_ask
 
 
-def ask(*, implementation='direct', **kwargs):
+DEFAULT_IMPLEMENTATION = 'langchain'
+
+
+def ask(*, implementation=DEFAULT_IMPLEMENTATION, **kwargs):
     if implementation not in ('direct', 'langchain'):
         return {'status': 'error', 'answer': 'implementation must be direct or langchain',
                 'citations': [], 'reason': 'input',

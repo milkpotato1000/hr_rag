@@ -1,0 +1,170 @@
+Browser tab: 3, Title: "Naive RAG · LangChain 학습", URL: "http://127.0.0.1:8001/".
+1 AXWebArea Naive RAG · LangChain 학습, URL: 127.0.0.1:8001/
+	2 container
+		3 link Description: R／LAB, Value: 127.0.0.1:8001/
+		4 container 주 메뉴
+			5 link Description: 학습, Value: 127.0.0.1:8001/
+			6 button (collapsed) 실험, Secondary Actions: Expand
+				7 text 실험
+			8 link Description: 학습 가이드 ↗, Value: 127.0.0.1:8001/guide
+	9 container
+		10 text 01 · RETRIEVE → READ → CHECK
+		11 heading 답을 읽고, 근거를 따라가세요., Value: 1
+			12 text 답을 읽고,
+			13 text 근거를 따라가세요.
+		14 container
+			15 text 같은 질문도 검색과 문맥에 따라 달라집니다.
+			16 text 무엇을 찾았고, 무엇을 전달했고, 어디서 답이 나왔는지 확인하세요.
+		17 container
+			18 text 가상 HR 문서 학습용 15개 청크 · 실제 로컬 모델
+			19 text BGE-M3 → Qdrant → Qwen3 4B 실제 회사 정책이 아닙니다.
+			20 text 인용이 맞아도 답변 조건이 빠질 수 있어요.
+			86 text ● 공유 로컬 모델 서비스 연결됨 · 색인 파일 준비됨
+		22 content list
+			23 container
+				24 text 01 질문 무엇이 필요할까?
+			25 container
+				26 text 02 검색 어떤 근거를 찾았나?
+			27 container
+				28 text 03 문맥 무엇을 전달했나?
+			29 container
+				30 text 04 답변 검증 원문이 뒷받침하나?
+		31 heading 직접 질문해 보세요, Value: 2
+			32 text 직접 질문해 보세요
+		33 text 먼저 예상하고, 결과와 비교해 보세요.
+		34 container ask-form
+			35 text 질문
+			36 text entry area (settable) 질문, Value: 생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요., ID: question
+			37 container 예시 질문
+				38 button 생일 휴가 자격
+				39 button 여러 근거 연결
+				40 button 근거 없는 질문
+				41 button 식대 지원
+			42 container
+				43 text 검색 방식
+				44 pop up button (collapsed, settable) 검색 방식, Value: Dense · 의미 검색, ID: retriever, Secondary Actions: Expand
+					45 menu
+						46 (selected) Dense · 의미 검색
+						47 BM25 · 단어 검색
+			48 container
+				49 text 검색 개수 · top-k
+				50 stepper (settable, integer) 검색 개수 · top-k, Value: 5, ID: top-k
+			51 container
+				52 text 문맥 예산 · 문자
+				53 stepper (settable, integer) 문맥 예산 · 문자, Value: 8000, ID: context-budget
+			54 button 검색하고 답변하기 ↗, ID: submit
+				55 text 검색하고 답변하기
+				87 text ↗
+			57 text LangChain으로 실행합니다. 구현별 차이는 상단 실험 → 구현 비교에서 확인하세요.
+			58 text 처음에는 기본값으로 실행하고, 다음에는 설정 하나만 바꿔 보세요. 모델 로드를 포함해 수십 초가 걸릴 수 있습니다.
+		88 text 완료 · 17.9초. 각 결과의 누락·보류·오류를 함께 확인하세요.
+		89 container result
+			90 heading 이번 실행 관찰, Value: 2
+				91 text 이번 실행 관찰
+			92 button 결과 JSON 저장 ↓, ID: download
+			93 container
+				94 text 04 · ANSWER & CITATIONS
+				95 heading 답변, Value: 2
+					96 text 답변
+				97 text 답변 생성
+				98 text 생일 휴가의 자격은 입사 후 3개월이 지난 재직자이며, 수습 중인 직원은 대상에서 제외됩니다. 신청 기한은 생일 특별휴가를 사용하기 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 사용 기간은 생일이 속한 달의 근무일에만 사용하며, 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다.
+				99 text 원문 인용을 확인하고, 답변에 필요한 조건이 모두 있는지 대조하세요.
+				100 container citations
+					101 text [가상 규정] 생일 휴가 적용 대상
+					102 text [가상 HR 규정: 실제 회사 정책이 아님] 입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상에서 제외한다.
+					103 text birthday-eligibility · fictional-birthday · v1 synthetic://hr/v1/birthday#birthday-eligibility
+					104 text [가상 규정] 생일 휴가 신청
+					105 text [가상 HR 규정: 실제 회사 정책이 아님] 생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.
+					106 text birthday-request · fictional-birthday · v1 synthetic://hr/v1/birthday#birthday-request
+					107 text [가상 규정] 생일 휴가 사용 기간
+					108 text [가상 HR 규정: 실제 회사 정책이 아님] 생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않는다.
+					109 text birthday-window · fictional-birthday · v1 synthetic://hr/v1/birthday#birthday-window
+				110 text 모델이 근거 ID를 선택하고, 코드는 전달된 청크 원문 전체를 인용합니다.
+				111 text 답변의 의미·조건 누락은 원문과 별도로 대조하세요.
+			112 container
+				113 text 02 · RETRIEVED EVIDENCE
+				114 heading 검색된 근거, Value: 2
+					115 text 검색된 근거
+				116 text 5개 후보
+				117 text 순위와 점수를 확인하고 펼쳐서 원문을 읽으세요.
+				118 container candidates
+					119 button (collapsed) 01[가상 규정] 생일 휴가 신청 0.6861, Secondary Actions: Expand
+						120 text 01
+						121 text [가상 규정] 생일 휴가 신청
+						122 text 0.6861
+					123 button (collapsed) 02[가상 규정] 생일 휴가 적용 대상 0.6798, Secondary Actions: Expand
+						124 text 02
+						125 text [가상 규정] 생일 휴가 적용 대상
+						126 text 0.6798
+					127 button (collapsed) 03[가상 규정] 생일 휴가 사용 기간 0.6747, Secondary Actions: Expand
+						128 text 03
+						129 text [가상 규정] 생일 휴가 사용 기간
+						130 text 0.6747
+					131 button (collapsed) 04[가상 규정] 교육 휴가 0.6217, Secondary Actions: Expand
+						132 text 04
+						133 text [가상 규정] 교육 휴가
+						134 text 0.6217
+					135 button (collapsed) 05[가상 규정] 연차 신청 0.5742, Secondary Actions: Expand
+						136 text 05
+						137 text [가상 규정] 연차 신청
+						138 text 0.5742
+			139 container
+				140 text 03 · CONTEXT SENT TO MODEL
+				141 heading 모델이 실제로 읽은 문맥, Value: 2
+					142 text 모델이 실제로 읽은 문맥
+				143 text 5개 · 1274 / 8000자
+				144 text 청크 전체가 예산에 들어갈 때만 전달합니다. 검색했어도 제외되면 모델은 읽지 못합니다.
+				145 container contexts
+					146 button (collapsed) 전달[가상 규정] 생일 휴가 신청, Secondary Actions: Expand
+						147 text 전달
+						148 text [가상 규정] 생일 휴가 신청
+					149 button (collapsed) 전달[가상 규정] 생일 휴가 적용 대상, Secondary Actions: Expand
+						150 text 전달
+						151 text [가상 규정] 생일 휴가 적용 대상
+					152 button (collapsed) 전달[가상 규정] 생일 휴가 사용 기간, Secondary Actions: Expand
+						153 text 전달
+						154 text [가상 규정] 생일 휴가 사용 기간
+					155 button (collapsed) 전달[가상 규정] 교육 휴가, Secondary Actions: Expand
+						156 text 전달
+						157 text [가상 규정] 교육 휴가
+					158 button (collapsed) 전달[가상 규정] 연차 신청, Secondary Actions: Expand
+						159 text 전달
+						160 text [가상 규정] 연차 신청
+			161 container
+				162 heading 설정과 실행 추적, Value: 2
+					163 text 설정과 실행 추적
+				164 text 같은 조건으로 비교하기
+				165 container timings
+					166 text 검색 전체 1.62 s 문맥 조립 0.00 s 생성 전체 16.29 s 전체 실행 17.92 s
+				167 container model-info
+					168 text 구현: langchain · 실행 ID d3ad158c-aa7b-4e41-bd65-8af2897e9774
+					169 text 검색: dense · top-k 5 · 생성 호출 1회
+					170 text 모델: qwen3:4b · digest 359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7
+					171 text 프롬프트: system-v3 · 4115c9cda0a2594c9d079d96579cd05c0ab6b5db6d6563305ccffb07c6d12eda
+					172 text 설정: {"temperature":0,"seed":42,"num_ctx":8192,"num_predict":1024} · think=false · stream=false
+					173 text 질문 임베딩 1.580 s · 검색 0.002 s · 생성 모델 로드 2.551 s
+					174 text 인용 구조: 통과 · 의미 지지: 자동 판정하지 않음
+				175 button (collapsed) 실제 프롬프트·검증·전체 trace 보기, Secondary Actions: Expand
+					176 text 실제 프롬프트·검증·전체 trace 보기
+		66 text NEXT OBSERVATION
+		67 heading 결과를 봤다면, 한 가지만 바꿔 보세요., Value: 2
+			68 text 결과를 봤다면, 한 가지만 바꿔 보세요.
+		69 container
+			70 text 01 / 근거의 개수
+			71 heading top-k 1 → 3 → 5 → 10, Value: 3
+				72 text top-k 1 → 3 → 5 → 10
+			73 text 복수 조건 질문에 필요한 근거가 언제 모두 들어오는지 관찰하세요. 검색 점수와 답변 정확도는 다릅니다.
+		74 container
+			75 text 02 / 검색의 방식
+			76 heading Dense ↔ BM25, Value: 3
+				77 text Dense ↔ BM25
+			78 text 같은 질문을 그대로 두고 검색만 바꿔 보세요. 조사·표현 차이로 어떤 청크가 사라졌나요?
+		79 container
+			80 text 03 / 실패의 위치
+			81 heading 검색 → 문맥 → 생성, Value: 3
+				82 text 검색 → 문맥 → 생성
+			83 text 원문은 있는데 답이 틀렸나요? 전달한 문맥과 조건 누락, 인용 구조와 의미를 나눠 확인하세요.
+		84 link Description: 평가·테스트·최적화 학습 가이드 읽기 ↗, Value: 127.0.0.1:8001/guide
+		85 text NAIVE RAG / LOCAL LEARNING LAB 구현은 Codex에, 가설과 해석은 나에게.
+
+The focused UI element is 1 AXWebArea Naive RAG · LangChain 학습, URL: 127.0.0.1:8001/
