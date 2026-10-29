@@ -1,0 +1,181 @@
+{
+  "method": "single-user-GPT2-byte-BPE-upper-bound-v1",
+  "template_sha256": "2d54db2b9bb29ce7db54fea63a891f5859603813c555b1f88b5e0994652897f9",
+  "assumptions": [
+    "Pinned runtime/model/template; no system/tools/images/history; one user message",
+    "UTF8 byte BPE merges cannot increase byte-symbol count; source contains no added-text normalization",
+    "Literal framing bounded by entire 1506-byte template plus64 special-token allowance; schema redundantly budgeted",
+    "Upper bound, not exact tokenizer count. Any runtime/template/message-shape change requires revalidation."
+  ],
+  "windows": [
+    {
+      "window_id": "w000",
+      "input_token_upper_bound": 6183,
+      "output_reserved": 1024,
+      "within_8192": true
+    },
+    {
+      "window_id": "w001",
+      "input_token_upper_bound": 7678,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w002",
+      "input_token_upper_bound": 7189,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w003",
+      "input_token_upper_bound": 7732,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w004",
+      "input_token_upper_bound": 7058,
+      "output_reserved": 1024,
+      "within_8192": true
+    },
+    {
+      "window_id": "w005",
+      "input_token_upper_bound": 7664,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w006",
+      "input_token_upper_bound": 7354,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w007",
+      "input_token_upper_bound": 7718,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w008",
+      "input_token_upper_bound": 6612,
+      "output_reserved": 1024,
+      "within_8192": true
+    },
+    {
+      "window_id": "w009",
+      "input_token_upper_bound": 7836,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w010",
+      "input_token_upper_bound": 7770,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w011",
+      "input_token_upper_bound": 7743,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w012",
+      "input_token_upper_bound": 7816,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w013",
+      "input_token_upper_bound": 6785,
+      "output_reserved": 1024,
+      "within_8192": true
+    },
+    {
+      "window_id": "w014",
+      "input_token_upper_bound": 7622,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w015",
+      "input_token_upper_bound": 7498,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w016",
+      "input_token_upper_bound": 7713,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w017",
+      "input_token_upper_bound": 6970,
+      "output_reserved": 1024,
+      "within_8192": true
+    },
+    {
+      "window_id": "w018",
+      "input_token_upper_bound": 7757,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w019",
+      "input_token_upper_bound": 7555,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w020",
+      "input_token_upper_bound": 7585,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w021",
+      "input_token_upper_bound": 6889,
+      "output_reserved": 1024,
+      "within_8192": true
+    },
+    {
+      "window_id": "w022",
+      "input_token_upper_bound": 7591,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w023",
+      "input_token_upper_bound": 7737,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w024",
+      "input_token_upper_bound": 7641,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w025",
+      "input_token_upper_bound": 7812,
+      "output_reserved": 1024,
+      "within_8192": false
+    },
+    {
+      "window_id": "w026",
+      "input_token_upper_bound": 5357,
+      "output_reserved": 1024,
+      "within_8192": true
+    }
+  ],
+  "maximum_input_upper_bound": 7836,
+  "all_fit": false,
+  "sources": [
+    "https://raw.githubusercontent.com/openai/gpt-2/master/src/encoder.py",
+    "https://docs.ollama.com/api/chat",
+    "https://docs.ollama.com/capabilities/structured-outputs"
+  ]
+}
