@@ -4,11 +4,11 @@
 
 ## 1. 기반과 입력 고정
 
-확인한 dev는 `d3d16fe29fe4fa384b75a700940d11e33007ea51`, 채택 plan은 `385701a2d7cce2ad9f62b96da9b64fc06fd505d3`이다. P015는 미착수이며 `2. Document Chunking/`와 source-v3가 아직 없다. 따라서 실제 원문 해시·길이·후보 경계 수·원문 기반 정답은 만들거나 추정하지 않는다.
+P015는 dev `7980162d9204d0443235f4dabaa835c0d19a39fc`에서 완료됐다. source-v3는 문서당192~469자로 짧아 사용자 후속 요청 R20261029-593e4840을 반영한 [P016](../planning/plans/P016.md)의 source-v4 확장 완료를 기다린다. **이 문서의 14설정·질문 수·window/호출/시간 상한은 재검토 후보**다. 이전 수치를 source-v4 실행 허가로 사용하지 않는다. 다섯 방법/원문 보존/동일 조건 비교 원칙은 유지하며 실제 원문 길이·구조·토큰 예산·자원 확인 후 READY로 전환한다.
 
-작업은 P015의 `2. Document Chunking/`에서 계속한다. P015의 PDF6개·canonical/page map·policy-map·인계 manifest를 읽고 원문을 수정하지 않는다. 실험 설정에 corpus/input manifest hash를 저장하고 불일치는 재사용 거부다. 같은 PDF의 Markdown 사본을 중복 입력하지 않는다. 표지/페이지 번호/가상 안내도 canonical의 일부로 보존한다. 소스 수정이 필요하면 원문 버전 변경과 실험 재시작을 plan에서 따로 판단한다.
+작업은 P015의 `2. Document Chunking/`에서 계속한다. P016의 PDF6개·canonical/page map·policy-map·인계 manifest를 읽고 원문을 수정하지 않는다. 실험 설정에 corpus/input manifest hash를 저장하고 불일치는 재사용 거부다. 같은 PDF의 Markdown 사본을 중복 입력하지 않는다. 표지/페이지 번호/가상 안내도 canonical의 일부로 보존한다. 소스 수정이 필요하면 원문 버전 변경과 실험 재시작을 plan에서 따로 판단한다.
 
-P012의 `1. Naive RAG/variants/langchain/`에서 scripts/{chunk_documents,document_common,run_bm25_baseline,evaluate_retrieval,build_dense_index,dense_retrieval,runtime_common,generation,serve_compare}.py, 필요한 import 의존 파일, 고정 lock, 관련 테스트, web_compare UI 구성/스타일을 복사·선별한다. PDF/추출 도구는 P015 사본을 재사용한다. 새 기능은 새 단계 안에서 수정하고 원래 생성/비교 UI·15청크/source-v2·색인/모델/증거는 보존한다. 실제 복사 목록/해시와 의존성 폐쇄는 준비 검토의 P015 manifest와 최신 dev 차이로 확정한다. 환경·모델 가중치·캐시를 소스처럼 복사하지 않는다.
+P012의 `1. Naive RAG/variants/langchain/`에서 scripts/{chunk_documents,document_common,run_bm25_baseline,evaluate_retrieval,build_dense_index,dense_retrieval,runtime_common,generation,serve_compare}.py, 필요한 import 의존 파일, 고정 lock, 관련 테스트, web_compare UI 구성/스타일을 복사·선별한다. PDF/추출 도구는 P015 사본을 재사용한다. 새 기능은 새 단계 안에서 수정하고 원래 생성/비교 UI·15청크/source-v2·색인/모델/증거는 보존한다. 실제 복사 목록/해시와 의존성 폐쇄는 준비 검토의 P015/P016 manifest와 최신 dev 차이로 확정한다. 환경·모델 가중치·캐시를 소스처럼 복사하지 않는다.
 
 기존 BM25와 Dense는 `title + LF + text`를 검색 입력으로 사용한다. **이번 실험의 공통 입력은 `text`만**으로 고정한다(`text_version=canonical-slice-only-v1`). 제목/조항명은 표시 메타데이터다. 실제 canonical 본문에 있는 제목은 그 위치에 남는다. 모든 방식/검색기에 같은 규칙을 적용하고 새 색인 manifest에 기록한다. 이전 색인을 그대로 재사용하지 않으며, 이 변경을 청킹 성능 개선으로 주장하지 않는다. 제목 보강 비교는 이번 기본 실험에서 제외한다.
 
@@ -32,11 +32,11 @@ source map은 각 청크의 기본 start/end와 overlap 확장 start/end, 실제
 
 recursive/structure/semantic/llm의 overlap은 **기본 분할 뒤** 각 구간의 시작을 최대80자 앞으로 확장하되 `max(직전 기본 구간 start, 현재 start-80)`로 제한한다. 첫 구간은 확장하지 않는다. 확장된 구간 최대 길이는 기본 최대+80이다. 문장/조항 경계를 넘어갈 수 있으므로 UI에 그 사실을 표시한다. fixed의 내장 sliding overlap과 의미가 다르며 결과 길이/중복량을 함께 비교한다.
 
-구조 경계는 canonical에 실제 있는 제목/조항으로부터 얻는다. P015 편집 원문의 제목을 근거로 canonical exact match·페이지/offset을 대조해 section map을 동결한다. 자동 탐지/수동 대조 여부를 명시하고 탐지 실패를 의미 기반 알고리즘의 효과로 해석하지 않는다. 메타데이터에만 있는 제목으로 경계를 만들지 않는다. 특정 규정의 예외를 잘 회수하도록 정답을 보고 재배치하지 않는다.
+구조 경계는 canonical에 실제 있는 제목/조항으로부터 얻는다. P016 편집 원문의 제목을 근거로 canonical exact match·페이지/offset을 대조해 section map을 동결한다. 자동 탐지/수동 대조 여부를 명시하고 탐지 실패를 의미 기반 알고리즘의 효과로 해석하지 않는다. 메타데이터에만 있는 제목으로 경계를 만들지 않는다. 특정 규정의 예외를 잘 회수하도록 정답을 보고 재배치하지 않는다.
 
 semantic은 기존 `bge-m3:567m`, 1024차원 벡터로 계산한다. `distance=1-dot(a,b)/(norm(a)*norm(b))`이며 유한값/0벡터를 검증하고 반올림 값으로 threshold를 판정하지 않는다. 길이 우선 조건을 먼저 적용하고 threshold와 같으면 분할한다. 문서 순서대로 계산하며 tail 병합은 하지 않는다. 단위 임베딩 cache는 model digest·text hash·입력 규칙으로 키를 만들고 구축 비용과 cache hit를 별도 기록한다.
 
-14개는 **초기 사전등록 후보**다. 실제 P015 프로파일에서 모두 같은 경계가 나오는 경우도 결과다. 준비 검토에서 길이/실행 예산만을 근거로 그리드를 수정할 수 있으나 검색 정답/성능을 본 뒤 유리한 설정으로 바꾸지 않는다. 실험 시작 뒤 추가 설정은 새 experiment version으로 분리한다.
+14개는 **초기 사전등록 후보**다. 실제 P016 프로파일에서 모두 같은 경계가 나오는 경우도 결과다. 준비 검토에서 길이/실행 예산만을 근거로 그리드를 수정할 수 있으나 검색 정답/성능을 본 뒤 유리한 설정으로 바꾸지 않는다. 실험 시작 뒤 추가 설정은 새 experiment version으로 분리한다.
 
 ## 4. LLM 경계 선택·모델·예산
 
@@ -50,7 +50,7 @@ window는 순서대로 최대1600 canonical 문자·최대24단위까지 묶고 
 
 1600문자는 정확한 토큰 수가 아니다. READY 전 **실제 모델 tokenizer/template에 맞춘 입력 한도 확인 또는 검증 가능한 보수적 상한**을 확보한다. 전체 system/user/schema/template 입력+출력 여유가 num_ctx8192 안인지 검증할 수 없으면 자동 truncate 없이 `budget_unverified`로 남기고 모델 실행을 승인하지 않는다. 서버가 입력을 잘랐는지 token count 하나로 증명됐다고 주장하지 않는다. 완료 응답의 done/done_reason·관측 prompt_eval_count/eval_count와 요청 내용을 보존한다. length 종료/불완전 응답은 성공이 아니다.
 
-초기 자원 제안: 문서당 최대8windows, 6문서×8×3독립 반복×최대2시도=288회. 호환/성능 smoke 최대12회를 포함해 LLM 최대300요청, 요청당120초, 전체 모델 작업 wall time120분 중 먼저 도달하는 제한에서 중단한다. 모델 동시 실행1, 자동 재시도는 동일 입력에1회만 허용하고 지연2초·오류 원인을 기록한다. window/호출/시간 상한에 맞지 않으면 누락 없이 preflight 실패로 반환한다. 상한은 실제 P015 프로파일과 smoke 예상 시간으로 READY 전에 확정하며 실행 중 조용히 늘리지 않는다.
+폐기 전 초안의 계산 예시(현재 실행 상한 아님): 문서당 최대8windows, 6문서×8×3독립 반복×최대2시도=288회. 호환/성능 smoke 최대12회를 포함해 LLM 최대300요청, 요청당120초, 전체 모델 작업 wall time120분 중 먼저 도달하는 제한에서 중단한다. 모델 동시 실행1, 자동 재시도는 동일 입력에1회만 허용하고 지연2초·오류 원인을 기록한다. window/호출/시간 상한에 맞지 않으면 누락 없이 preflight 실패로 반환한다. 상한은 실제 P016 프로파일과 smoke 예상 시간으로 READY 전에 확정하며 실행 중 조용히 늘리지 않는다.
 
 전체 corpus 3회 독립 반복(seed/모델/입력 동일, 응답 cache 사용 금지)을 실행한다. 첫 유효 corpus 실행을 검색 비교 대표로 고정하고 성능이 좋은 반복을 사후 선택하지 않는다. 첫 실행이 실패하면 그 실패를 보존하고 다음 유효 실행을 선택한다. 모두 실패하면 llm은 비교 실패로 기록하며 성공한 것으로 대체하지 않는다. 수동 수정·fixed fallback은 허용하지 않는다. 임의 fake 응답은 독립 테스트에만 쓴다.
 
@@ -58,9 +58,9 @@ window는 순서대로 최대1600 canonical 문자·최대24단위까지 묶고 
 
 ## 5. 검색 정답과 평가 산식
 
-검색용 데이터는 source-v3의 정책 대응표를 바탕으로 작성하며 P013의 사람 승인 Reference Claims를 대신하지 않는다. Codex 원문 대조 주체·시각·정책 출처·exact quote/hash를 기록한다. fact는 요구 의미와 하나 이상의 필수 span(같은/다른 문서 가능)을 가지며 이번 기본 계약에서는 모든 span을 충족해야 한다. 대체 정답 집합은 첫 실험에서 사용하지 않는다. 정답 변경은 새 버전으로 분리한다.
+검색용 데이터는 source-v4의 정책 대응표를 바탕으로 작성하며 P013의 사람 승인 Reference Claims를 대신하지 않는다. Codex 원문 대조 주체·시각·정책 출처·exact quote/hash를 기록한다. fact는 요구 의미와 하나 이상의 필수 span(같은/다른 문서 가능)을 가지며 이번 기본 계약에서는 모든 span을 충족해야 한다. 대체 정답 집합은 첫 실험에서 사용하지 않는다. 정답 변경은 새 버전으로 분리한다.
 
-초기 질문은 기존14개 tuning 유지 + 새12개 holdout 후보(답변 가능10/불가2, 6주제와 복수 근거/조건·예외 포함)다. 새 질문이 기존 질문의 단순 복사인지 대조하고 PDF 확정 후 작성/검토한다. holdout은 설정 동결 전에 질문/원문 근거를 커밋하되 튜닝 지표/UI 기본 예제에서는 제외한다. threshold/그리드 수정은 tuning만 사용하고, 1차 동결 후보의 holdout 실행 뒤에는 모든 관찰 데이터를 tuning으로 간주한다. 같은 Codex가 작성·검토하는 합성 세트이므로 독립적 사람 검증이나 대규모 일반화 성능을 주장하지 않는다.
+이전 질문 규모 후보는 기존14개 tuning 유지 + 새12개 holdout 후보(답변 가능10/불가2, 6주제와 복수 근거/조건·예외 포함)다. source-v4의 신규 절차·조건/예외·다중 조항/문서 참조를 포함하도록 질문 수와 구성을 다시 정한다. 기존14개도 새 버전 정책으로 재대조하며 이전 qrels/offset을 복사하지 않는다. 새 질문이 기존 질문의 단순 복사인지 대조하고 PDF 확정 후 작성/검토한다. holdout은 설정 동결 전에 질문/원문 근거를 커밋하되 튜닝 지표/UI 기본 예제에서는 제외한다. threshold/그리드 수정은 tuning만 사용하고, 1차 동결 후보의 holdout 실행 뒤에는 모든 관찰 데이터를 tuning으로 간주한다. 같은 Codex가 작성·검토하는 합성 세트이므로 독립적 사람 검증이나 대규모 일반화 성능을 주장하지 않는다.
 
 검색은 BM25와 Dense를 **별도 고정 실험군**으로 수행한다. BM25 k1=1.2/b=0.75, 기존 unicode-word-v1 tokenizer를 재사용하되 text-only를 적용한다. Dense는 기존 BGE/Qdrant cosine를 사용하고 동점은 chunk_id 오름차순으로 재정렬한다. 문서/모델/설정/query hash와 index fingerprint가 맞는 색인만 읽는다. UI 임의 질문 최대2000자, top-k1~20(기본5); 보고 K=5/10/20이며 각 corpus가 작으면 실제 반환 개수를 함께 표시한다.
 
@@ -75,9 +75,9 @@ window는 순서대로 최대1600 canonical 문자·최대24단위까지 묶고 
 
 ## 6. 실험량·선정·비용
 
-tuning은14설정×2검색기×14질문=392 ranking, 동결/선정 뒤 holdout은 기준선·후보 최대2설정×2검색기×12질문=48 ranking으로 총440 ranking 결과가 기본 상한이다. 후보가 기준선과 같으면 holdout 중복 실행을 생략한다. 같은 ranking에서 K/예산 지표를 파생하고 새 모델 호출로 세지 않는다. 지연 측정은 같은 조건 최대3회까지(기본 포함 최대1320 ranking 요청); cold 여부는 실제 모델 load/색인 open 기록으로만 분류하며 cache를 강제로 지우지 않는다. 설정 순서는 고정 ID 순서와 회차별 회전으로 기록한다. 구축 시간/색인 크기/검색 지연을 분리한다.
+이전 질문 규모에 대한 계산 예시(현재 실행 상한 아님): tuning은14설정×2검색기×14질문=392 ranking, 동결/선정 뒤 holdout은 기준선·후보 최대2설정×2검색기×12질문=48 ranking으로 총440 ranking 결과를 제안했던 계산이다. 현재 상한은 미확정이다. 후보가 기준선과 같으면 holdout 중복 실행을 생략한다. 같은 ranking에서 K/예산 지표를 파생하고 새 모델 호출로 세지 않는다. 지연 측정은 같은 조건 최대3회까지(기본 포함 최대1320 ranking 요청); cold 여부는 실제 모델 load/색인 open 기록으로만 분류하며 cache를 강제로 지우지 않는다. 설정 순서는 고정 ID 순서와 회차별 회전으로 기록한다. 구축 시간/색인 크기/검색 지연을 분리한다.
 
-초기 자원 제안: corpus별 청크 최대2000, 단위 최대2000, 임베딩 batch 최대32, 요청 timeout60초, 모든 단위/문서/질문 벡터 input item 누계50000 이내(cache miss/재시도 포함). embedding은 truncate=false, 잘못된 벡터·모델/version 변화는 실패다. 작업 deadline과 요청 수 제한은 UI/API/CLI 모두 같은 코어에 적용한다. 실제 P015 규모에서 불필요하게 넓은 예산은 READY 전에 줄일 수 있다. 누적 예산을 프로세스 재시작으로 초기화하지 않고 experiment ledger에 보존한다.
+초기 자원 제안: corpus별 청크 최대2000, 단위 최대2000, 임베딩 batch 최대32, 요청 timeout60초, 모든 단위/문서/질문 벡터 input item 누계50000 이내(cache miss/재시도 포함). embedding은 truncate=false, 잘못된 벡터·모델/version 변화는 실패다. 작업 deadline과 요청 수 제한은 UI/API/CLI 모두 같은 코어에 적용한다. 실제 P016 규모에서 불필요하게 넓은 예산은 READY 전에 줄일 수 있다. 누적 예산을 프로세스 재시작으로 초기화하지 않고 experiment ledger에 보존한다.
 
 기준선은 fixed400/80이다. 후속 P013 비교 후보는 tuning Dense fact recall@5 최댓값, 동점은 emitted/unique 문자비가 낮은 것, 다음 구축시간이 짧은 것, 다음 config_id 사전순으로 정한다. BM25 결과는 별도로 보고한다. 반복 모델 경계는 앞 절의 대표 실행만 사용한다. holdout은 선정 후 기준선/후보를 확인하며 holdout 점수로 재선정하지 않는다. 유효 후보가 기준선을 넘지 못하면 기준선을 유지한다. 전체 그리드 결과와 실패를 삭제하지 않는다.
 
@@ -116,7 +116,7 @@ C1: 독립 문자열/유니코드/빈 단위/문단·소수점/긴 단위/최대
 
 C2: 두 span fact를 각각 다른 청크가 덮는 예, 중복 청크, 문서별 같은 offset, 공백만 overlap, 결과<K, 관련청크0, 답변불가, IDCG0의 수작업 기대값으로 지표/분모를 검증한다. 모델 정답/검색 qrels/policy-map이 검색·임베딩·LLM 청킹 입력에 유출되지 않는 read spy/요청 기록 검사를 포함한다.
 
-C3: 고정 실험 결과·N/A/실패와 LLM3반복/호출 예산·대표 선택·cache 구분을 기록한다. 5개 방법의 실제 유효 출력/검색 연결이 필요하며 특정 방법의 우위는 불필요하다. 한 방법이 끝내 실행 불가능하면 완료로 가리지 않고 P007 차단/계약 재검토로 남긴다. P015가 너무 짧아 경계가 같더라도 그것 자체는 실패가 아니다.
+C3: 고정 실험 결과·N/A/실패와 LLM3반복/호출 예산·대표 선택·cache 구분을 기록한다. 5개 방법의 실제 유효 출력/검색 연결이 필요하며 특정 방법의 우위는 불필요하다. 한 방법이 끝내 실행 불가능하면 완료로 가리지 않고 P007 차단/계약 재검토로 남긴다. P016 구조 기준을 충족해도 일부 방법의 경계가 같을 수 있으며 그것 자체는 실패가 아니다. 어떤 방법의 우위를 만들려고 원문을 수정하지 않는다.
 
 C4: 원래 단계 파일·모델/lock·색인 보존 inventory, 새 단계 단독 임시 복사 CLI/API/모델 경로 확인, 기존 복사 코드 영향 회귀·가이드·manifest를 검증한다. 복사본은 같은 명시 소유 loopback 모델을 공유할 수 있지만 부모 Python import/경로 의존은 없어야 한다.
 

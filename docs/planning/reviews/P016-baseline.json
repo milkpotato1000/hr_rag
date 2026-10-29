@@ -1,0 +1,58 @@
+{
+  "review_date": "2026-10-29",
+  "p015_completion_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
+  "request_commit": "1c0e861a0aaa63256896b0b99897ec0553a379a4",
+  "verification_kind": "read_committed_evidence_and_rehash_not_test_rerun_or_new_visual_review",
+  "verified_manifest_entries": 46,
+  "manifest_path": "2. Document Chunking/data/source-v3/handoff-manifest.json",
+  "manifest_sha256": "10e682b1f4487dbc145c09b85e657d8cdb80590b6d02a765d63ad1f9da9a2e4f",
+  "observed": {
+    "status": "PASS",
+    "documents": 6,
+    "pages": 6,
+    "policy_sentences": 31,
+    "source_v2_blocks": 51,
+    "sections": 19,
+    "legacy_facts": 15,
+    "tuning_questions": 14,
+    "canonical_chars": {
+      "hr-v3-birthday": 392,
+      "hr-v3-annual": 461,
+      "hr-v3-remote": 469,
+      "hr-v3-welfare": 245,
+      "hr-v3-training": 202,
+      "hr-v3-travel": 192
+    },
+    "manifest_id": "bbb2d636ca1bb7793e79d444a864151f753b5b061c6cace1cd3f40ca403b9544"
+  },
+  "evidence": [
+    {
+      "path": "docs/verification/p015/completion.json",
+      "sha256": "261bd92591889c146d11f81e0a3bf5db3e686a18df04b333eaf7ec5d5da3d751"
+    },
+    {
+      "path": "docs/verification/p015/README.md",
+      "sha256": "6c9258f28db79e9381ccd60857cb93df68ba05c09a9881d44fc5381887fd29a0"
+    },
+    {
+      "path": "docs/verification/p015/final-source-validation.json",
+      "sha256": "9d9d5a2056487c9e3431d786028e564ff9d29a35f810719355c9bd95ef67b50e"
+    },
+    {
+      "path": "docs/verification/p015/policy-preservation-audit.json",
+      "sha256": "5f6eb034b6c3865b06d411303f522f25987103b2a975bf94f7e88ee43cc6e0e3"
+    },
+    {
+      "path": "docs/verification/p015/visual-review.json",
+      "sha256": "dcd8090fdb36acb7adf81bfd81499c659145e0122ad0f6fc04924f03e6a64974"
+    },
+    {
+      "path": "docs/verification/p015/reproducibility.json",
+      "sha256": "99d0b7f8f6d5befd96df8f7585ff8fe32fa557afbc2aca1928f2a18392a10f5e"
+    },
+    {
+      "path": "docs/verification/p015/regression-retry.json",
+      "sha256": "fb381cb0d3629fd46cf52f100ac4db88cc5844ccf23e56d343e53630f936717f"
+    }
+  ]
+}
