@@ -1,0 +1,8 @@
+# P007 development observations (append-only)
+
+- Initial sandbox metadata GET to loopback Ollama failed before inference dispatch (Operation not permitted). Retried in authorized local-network execution. No generation/embedding call was charged for the blocked metadata read.
+- Initial full-corpus LLM runs both completed: first 541.722s, second 337.003s. First valid run is selected before retrieval. Two original runs preserve their original code fingerprints; `chunk_core-initial.py.txt` preserves that code. Before the third run, only recursive truncated-sentence detection and parent replay validation were repaired in chunk_core; LLM payload/partition/validation and fixed source did not change. model_runtime only added accounting for embedding retry delay; this does not alter LLM inference.
+- Independent leakage fixture initially failed with `busy` because the real UI LLM job correctly held the stage-wide lock. Isolated that fixture's work lock (fake vectors, temporary outputs); production lock remained unchanged. Re-run passed. This was a test isolation failure, not a reason to bypass locks in actual jobs.
+- Browser found page intersections rendered as `[object Object]` in chunk labels. Fixed UI to use `page_number` and pass that number when navigating to source; source maps were already correct.
+- Native AX click on an offscreen button did not dispatch a job. Navigated to the chunk section and clicked the visible button; exactly one third corpus invocation started. Reload resumed polling the same job. Selecting a configuration alone did not dispatch inference.
+- Timing repetitions fixed to 2 (contract maximum 3) before retrieval evaluation, preserving capacity for actual UI comparisons under the shared 2328-ranking cap.
