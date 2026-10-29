@@ -6,11 +6,13 @@
 
 P015는 dev `7980162d9204d0443235f4dabaa835c0d19a39fc`에서 완료됐다. source-v3는 문서당192~469자로 짧아 사용자 후속 요청 R20261029-593e4840을 반영한 [P016](../planning/plans/P016.md)의 source-v4 확장 완료를 기다린다. **이 문서의 14설정·질문 수·window/호출/시간 상한은 재검토 후보**다. 이전 수치를 source-v4 실행 허가로 사용하지 않는다. 다섯 방법/원문 보존/동일 조건 비교 원칙은 유지하며 실제 원문 길이·구조·토큰 예산·자원 확인 후 READY로 전환한다.
 
-작업은 P015의 `2. Document Chunking/`에서 계속한다. P016의 PDF6개·canonical/page map·policy-map·인계 manifest를 읽고 원문을 수정하지 않는다. 실험 설정에 corpus/input manifest hash를 저장하고 불일치는 재사용 거부다. 같은 PDF의 Markdown 사본을 중복 입력하지 않는다. 표지/페이지 번호/가상 안내도 canonical의 일부로 보존한다. 소스 수정이 필요하면 원문 버전 변경과 실험 재시작을 plan에서 따로 판단한다.
+작업은 P015의 `2. Document Chunking/`에서 계속한다. P016의 단일 규정집 PDF·canonical/page map·policy-map·인계 manifest를 읽고 원문을 수정하지 않는다. 실험 설정에 corpus/input manifest hash를 저장하고 불일치는 재사용 거부다. 같은 PDF의 Markdown 사본을 중복 입력하지 않는다. 표지/페이지 번호/가상 안내도 canonical의 일부로 보존한다. 소스 수정이 필요하면 원문 버전 변경과 실험 재시작을 plan에서 따로 판단한다.
 
 P012의 `1. Naive RAG/variants/langchain/`에서 scripts/{chunk_documents,document_common,run_bm25_baseline,evaluate_retrieval,build_dense_index,dense_retrieval,runtime_common,generation,serve_compare}.py, 필요한 import 의존 파일, 고정 lock, 관련 테스트, web_compare UI 구성/스타일을 복사·선별한다. PDF/추출 도구는 P015 사본을 재사용한다. 새 기능은 새 단계 안에서 수정하고 원래 생성/비교 UI·15청크/source-v2·색인/모델/증거는 보존한다. 실제 복사 목록/해시와 의존성 폐쇄는 준비 검토의 P015/P016 manifest와 최신 dev 차이로 확정한다. 환경·모델 가중치·캐시를 소스처럼 복사하지 않는다.
 
 기존 BM25와 Dense는 `title + LF + text`를 검색 입력으로 사용한다. **이번 실험의 공통 입력은 `text`만**으로 고정한다(`text_version=canonical-slice-only-v1`). 제목/조항명은 표시 메타데이터다. 실제 canonical 본문에 있는 제목은 그 위치에 남는다. 모든 방식/검색기에 같은 규칙을 적용하고 새 색인 manifest에 기록한다. 이전 색인을 그대로 재사용하지 않으며, 이 변경을 청킹 성능 개선으로 주장하지 않는다. 제목 보강 비교는 이번 기본 실험에서 제외한다.
+
+source-v4는 document_id 하나의 연속 canonical이며 주제 장6개는 section metadata다. 목차와 본문 제목을 구분하고 전역 offset을 유지한다. UI는 통합 목차→장/절→페이지를 탐색하며, 장을 가상 문서로 분리해 문서당 window 제한을 우회하지 않는다. 전체 문서 기반 호출 예산과 장별 경계/회수 통계는 P016 완료 후 확정한다.
 
 ## 2. 원문 단위·경계와 공통 불변 조건
 
@@ -60,7 +62,7 @@ window는 순서대로 최대1600 canonical 문자·최대24단위까지 묶고 
 
 검색용 데이터는 source-v4의 정책 대응표를 바탕으로 작성하며 P013의 사람 승인 Reference Claims를 대신하지 않는다. Codex 원문 대조 주체·시각·정책 출처·exact quote/hash를 기록한다. fact는 요구 의미와 하나 이상의 필수 span(같은/다른 문서 가능)을 가지며 이번 기본 계약에서는 모든 span을 충족해야 한다. 대체 정답 집합은 첫 실험에서 사용하지 않는다. 정답 변경은 새 버전으로 분리한다.
 
-이전 질문 규모 후보는 기존14개 tuning 유지 + 새12개 holdout 후보(답변 가능10/불가2, 6주제와 복수 근거/조건·예외 포함)다. source-v4의 신규 절차·조건/예외·다중 조항/문서 참조를 포함하도록 질문 수와 구성을 다시 정한다. 기존14개도 새 버전 정책으로 재대조하며 이전 qrels/offset을 복사하지 않는다. 새 질문이 기존 질문의 단순 복사인지 대조하고 PDF 확정 후 작성/검토한다. holdout은 설정 동결 전에 질문/원문 근거를 커밋하되 튜닝 지표/UI 기본 예제에서는 제외한다. threshold/그리드 수정은 tuning만 사용하고, 1차 동결 후보의 holdout 실행 뒤에는 모든 관찰 데이터를 tuning으로 간주한다. 같은 Codex가 작성·검토하는 합성 세트이므로 독립적 사람 검증이나 대규모 일반화 성능을 주장하지 않는다.
+이전 질문 규모 후보는 기존14개 tuning 유지 + 새12개 holdout 후보(답변 가능10/불가2, 6주제와 복수 근거/조건·예외 포함)다. source-v4의 신규 절차·조건/예외·다중 조항/장 간 참조를 포함하도록 질문 수와 구성을 다시 정한다. 기존14개도 새 버전 정책으로 재대조하며 이전 qrels/offset을 복사하지 않는다. 새 질문이 기존 질문의 단순 복사인지 대조하고 PDF 확정 후 작성/검토한다. holdout은 설정 동결 전에 질문/원문 근거를 커밋하되 튜닝 지표/UI 기본 예제에서는 제외한다. threshold/그리드 수정은 tuning만 사용하고, 1차 동결 후보의 holdout 실행 뒤에는 모든 관찰 데이터를 tuning으로 간주한다. 같은 Codex가 작성·검토하는 합성 세트이므로 독립적 사람 검증이나 대규모 일반화 성능을 주장하지 않는다.
 
 검색은 BM25와 Dense를 **별도 고정 실험군**으로 수행한다. BM25 k1=1.2/b=0.75, 기존 unicode-word-v1 tokenizer를 재사용하되 text-only를 적용한다. Dense는 기존 BGE/Qdrant cosine를 사용하고 동점은 chunk_id 오름차순으로 재정렬한다. 문서/모델/설정/query hash와 index fingerprint가 맞는 색인만 읽는다. UI 임의 질문 최대2000자, top-k1~20(기본5); 보고 K=5/10/20이며 각 corpus가 작으면 실제 반환 개수를 함께 표시한다.
 
