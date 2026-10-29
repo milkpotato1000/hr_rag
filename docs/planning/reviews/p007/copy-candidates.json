@@ -1,0 +1,288 @@
+{
+  "source_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+  "purpose": "Reviewed static import/UI candidate closure, not a product copy action",
+  "files": [
+    {
+      "source_path": "1. Naive RAG/variants/langchain/generation-lock.json",
+      "sha256": "7b6dfda231be7840f56956d326386d45e6fd78503b74aff0ad7bc5d63c2f2ce1",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/generation-lock.json",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/ingestion-lock.json",
+      "sha256": "cbff277a316842fd0ff4815092ad6193ecdb4ad9e3214aced713cf2f5afe8814",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/ingestion-lock.json",
+      "existing_target_sha256": "cbff277a316842fd0ff4815092ad6193ecdb4ad9e3214aced713cf2f5afe8814",
+      "action": "reuse_identical"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/ingestion-requirements.lock",
+      "sha256": "c3f793c919ec790734762729cc0d68915b451d4da24c3d78edfd3fe1ac2b067f",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/ingestion-requirements.lock",
+      "existing_target_sha256": "c3f793c919ec790734762729cc0d68915b451d4da24c3d78edfd3fe1ac2b067f",
+      "action": "reuse_identical"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/requirements-langchain.lock",
+      "sha256": "4194d226dcef4ffaf7ff37023119edd8b5a4949c97e75dce056974c7e0ef1a79",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/requirements-langchain.lock",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/requirements.lock",
+      "sha256": "642638148f4bf810df637b6fc52f10e06e5ca402846a864628a272ed84fe1daf",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/requirements.lock",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/runtime-lock.json",
+      "sha256": "80733dae580bf02e5000f76971ed17013e415d8540426225915f339b6c6e7357",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/runtime-lock.json",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/build_dense_index.py",
+      "sha256": "6f17279b6e78e92c744397b0b55e5287fade851ceb9b814c868cecf41728ebfa",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/dense_retrieval.py",
+        "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py",
+        "1. Naive RAG/variants/langchain/scripts/runtime_common.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/build_dense_index.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/chunk_documents.py",
+      "sha256": "9677e363665f3e4649e04626c101851a1daca0dca67e21c01e9a98a23c0b8bdb",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/document_common.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/chunk_documents.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/comparison.py",
+      "sha256": "cd76fa3dbac82635c1895e206ec599a25f0e89d9a2199b28164692b0d632135c",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/rag.py",
+        "1. Naive RAG/variants/langchain/scripts/rag_langchain.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/comparison.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/dense_retrieval.py",
+      "sha256": "06e5ad23123f4b29f19dff91cc2827666b30ec33ffa5d7ed32d06a5cb675a7aa",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/run_bm25_baseline.py",
+        "1. Naive RAG/variants/langchain/scripts/runtime_common.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/dense_retrieval.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/document_common.py",
+      "sha256": "1c2fe05df33cfcc066964397fc035a58b2311c6bea4d40c5da502a8ecc08ea2b",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/document_common.py",
+      "existing_target_sha256": "87fd8d0a06b5bbbd38125667e279e4c1d5c37778f8c3710121d88edffd6539a1",
+      "action": "preserve_existing_and_integrate_compatibility"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py",
+      "sha256": "6b863f2c7557a54113ceb5883e0ba60594a0161d5a706c4a58e26c9a47cb0b11",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/scripts/evaluate_retrieval.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/generation.py",
+      "sha256": "8961d1e20de5005e35c326271adcf4b030bfaf51ff8c9562c60e9c36ce48c8e3",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py",
+        "1. Naive RAG/variants/langchain/scripts/runtime_common.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/generation.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/rag.py",
+      "sha256": "ad15cec44effced36ae44ecc364d4cf8f633628b7164f296796a179217da5f1e",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/dense_retrieval.py",
+        "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py",
+        "1. Naive RAG/variants/langchain/scripts/generation.py",
+        "1. Naive RAG/variants/langchain/scripts/run_bm25_baseline.py",
+        "1. Naive RAG/variants/langchain/scripts/runtime_common.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/rag.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/rag_langchain.py",
+      "sha256": "273698d2f34bd4017722a9fbc92d77032b2352b44936c49a158213e1c367303c",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py",
+        "1. Naive RAG/variants/langchain/scripts/generation.py",
+        "1. Naive RAG/variants/langchain/scripts/rag.py",
+        "1. Naive RAG/variants/langchain/scripts/run_bm25_baseline.py",
+        "1. Naive RAG/variants/langchain/scripts/runtime_common.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/rag_langchain.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/run_bm25_baseline.py",
+      "sha256": "bdbe19867eaaadff6223089d4ee09ea6d152de9bfde63bfa7ada41e4a0967711",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/run_bm25_baseline.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/runtime.py",
+      "sha256": "d7d662094d87b45c2aab4afa6e3ca97f580fa7b741f03f26561cc8ae2d363e67",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py",
+        "1. Naive RAG/variants/langchain/scripts/runtime_common.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/runtime.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/runtime_common.py",
+      "sha256": "a1884eedc1b5c00caa2c0146d7d0b6e21d49434d5e10d83ea4f763e1237d463b",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/evaluate_retrieval.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/runtime_common.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/scripts/serve_compare.py",
+      "sha256": "71b5f1934e81e873de6e6df55b4d3ae229d493e4724b16c38f95e9c4204085be",
+      "local_dependencies": [
+        "1. Naive RAG/variants/langchain/scripts/comparison.py",
+        "1. Naive RAG/variants/langchain/scripts/generation.py",
+        "1. Naive RAG/variants/langchain/scripts/rag.py",
+        "1. Naive RAG/variants/langchain/scripts/runtime.py",
+        "1. Naive RAG/variants/langchain/scripts/runtime_common.py"
+      ],
+      "target_path": "2. Document Chunking/scripts/serve_compare.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/tests/test_bm25_baseline.py",
+      "sha256": "a8b6c3829f14fb17a0fabaa07eae9ee596f2bdef409f1d031e072e8670f53242",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/tests/test_bm25_baseline.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/tests/test_documents.py",
+      "sha256": "304a4fab86142604b3acf894bde42a2129daac9959dc99cbe9dc36610d8abb0c",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/tests/test_documents.py",
+      "existing_target_sha256": "3fd699264ce71c941253c4c1ae17cee46713fddd9243cc3e6648bb148c780f5a",
+      "action": "preserve_existing_and_integrate_compatibility"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/tests/test_evaluate_retrieval.py",
+      "sha256": "15bf716fd25eaf524f041b43027c96d4851ff22106daa608c739e9712a167555",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/tests/test_evaluate_retrieval.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/tests/test_generation_metadata.py",
+      "sha256": "d528d4b523af90d3b3b6449adec0bac1ca2866ada6d72eaeea1f5ee58a071780",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/tests/test_generation_metadata.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/tests/test_server.py",
+      "sha256": "de4083f69e1e74517b3ba630836db1014a7f4411422339d18e17f076ac583dc4",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/tests/test_server.py",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/web_compare/app.js",
+      "sha256": "8bba70330c7eb25e705ed530f24c8e1310154641e5603e60a47d5ce8f72dd708",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/web_compare/app.js",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/web_compare/implementation.html",
+      "sha256": "9932769311dfe6ebecc383740978e9c8e6a31c7811ff008033e326546b4a6337",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/web_compare/implementation.html",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/web_compare/index.html",
+      "sha256": "d180d3a2b039165390d9d48eef81cba3b65019729c4394f6adb33a4751a8b0b5",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/web_compare/index.html",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    },
+    {
+      "source_path": "1. Naive RAG/variants/langchain/web_compare/style.css",
+      "sha256": "d27c0b34955f0333c8ccbd69ce81747e091a8e82ab982d1d188e149288b22981",
+      "local_dependencies": [],
+      "target_path": "2. Document Chunking/web_compare/style.css",
+      "action": "copy_candidate_then_adapt_for_chunking"
+    }
+  ],
+  "external_modules": [
+    "argparse",
+    "collections",
+    "contextlib",
+    "copy",
+    "ctypes",
+    "hashlib",
+    "http",
+    "importlib",
+    "json",
+    "langchain_core",
+    "langsmith",
+    "math",
+    "os",
+    "pathlib",
+    "platform",
+    "qdrant_client",
+    "re",
+    "shutil",
+    "signal",
+    "socket",
+    "statistics",
+    "subprocess",
+    "sys",
+    "tarfile",
+    "tempfile",
+    "threading",
+    "time",
+    "traceback",
+    "types",
+    "unicodedata",
+    "urllib",
+    "uuid"
+  ],
+  "constraints": [
+    "Keep v3/v4 source pipelines compatible; preserve existing2stage scripts when hashes differ",
+    "generation/serve_compare are references; implement separate chunking adapter and async server without answer UI routes",
+    "Do not copy virtualenv/models/indexes; requirements and runtime/source provenance recorded separately",
+    "Dev must verify dynamic runtime references and standalone execution; AST closure alone is not runtime proof"
+  ]
+}

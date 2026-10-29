@@ -1,27 +1,36 @@
 {
-  "schema_version": 1,
-  "status": "DRAFT_NOT_EXECUTABLE",
+  "schema_version": 2,
+  "status": "READY_FOR_DEV_ADOPTION",
   "plan_id": "P007",
   "design": "docs/architecture/chunking-experiment-contract.md",
   "corpus": {
     "p015_completion_commit": "7980162d9204d0443235f4dabaa835c0d19a39fc",
-    "input_manifest_sha256": null,
-    "section_map_sha256": null,
+    "input_manifest_sha256": "82918298ce6abeab89c033ab055fcba12302069a27ba0bc7f413bd98d783888a",
+    "section_map_sha256": "4e0b78b6ae482ebdfa5d2f17f42c086c3944c4f75c18efa57545b37d1324b0ed",
     "required_source_version": "source-v4",
     "required_card": "P016",
-    "p016_completion_commit": null,
+    "p016_completion_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
     "expected_document_count": 1,
     "expected_document_id": "hr-v4-handbook",
-    "topic_chapter_count": 6
+    "topic_chapter_count": 6,
+    "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+    "canonical_chars": 38582,
+    "body_chars": 35477,
+    "pages": 23,
+    "source_base": "2. Document Chunking/data/source-v4/"
   },
   "dataset": {
-    "sha256": null,
+    "sha256": "9be17b08440418d75d2128c39eae6cbb9ce76301221b2fe79b60c99dd468b0e9",
     "tuning_existing": 14,
-    "holdout_proposed": null,
-    "holdout_answerable": null,
-    "holdout_unanswerable": null,
+    "holdout_proposed": 12,
+    "holdout_answerable": 10,
+    "holdout_unanswerable": 2,
     "reviewer_kind": "Codex_source_audit_not_human_approval",
-    "expanded_policy_question_coverage_pending": true
+    "expanded_policy_question_coverage_pending": false,
+    "path": "docs/planning/specs/P007-retrieval-dataset.json",
+    "tuning_new": 12,
+    "tuning_total": 26,
+    "evidence_sets": "OR complete evidence sets; AND spans within each; AND required facts per query"
   },
   "configs": [
     {
@@ -159,16 +168,27 @@
     "seed": 42,
     "num_ctx": 8192,
     "num_predict": 1024,
-    "window_chars": 1600,
-    "window_units": 24,
+    "window_chars": 1200,
+    "window_units": 20,
     "window_overlap_units": 0,
-    "max_windows_per_document": null,
+    "max_windows_per_document": 35,
     "independent_repetitions": 3,
     "max_attempts_per_window": 2,
-    "max_requests_including_smokes": null,
-    "timeout_seconds": 120,
-    "total_model_wall_seconds": null,
-    "input_budget_verification": null
+    "max_requests_including_smokes": 219,
+    "timeout_seconds": 90,
+    "total_model_wall_seconds": 7200,
+    "input_budget_verification": {
+      "path": "docs/planning/reviews/p007/input-budget.json",
+      "sha256": "4e9feaef5931ce436733f2683641981c043dd683c9d9b1164e06fc808ae5f06d",
+      "maximum_input_upper_bound": 6510,
+      "output_reservation": 1024,
+      "context_limit": 8192
+    },
+    "readiness_requests_already_used": 3,
+    "additional_dev_smoke_max": 6,
+    "corpus_repetition_request_max": 210,
+    "prompt_contract_path": "docs/planning/reviews/p007/prompt-contract.json",
+    "prompt_contract_sha256": "b5fa4403a8a94b0236a669c4b5ec2a0c5deac49c601ed956ecaada99bc96ebd5"
   },
   "embedding": {
     "name": "bge-m3:567m",
@@ -176,24 +196,27 @@
     "dimension": 1024,
     "truncate": false,
     "max_batch_items": 32,
-    "max_input_items_total": 50000,
-    "timeout_seconds": 60
+    "max_input_items_total": 32000,
+    "timeout_seconds": 60,
+    "max_attempts_per_item": 2,
+    "total_wall_seconds": 1800,
+    "readiness_requests_already_used": 1,
+    "readiness_items_already_used": 2
   },
   "execution": {
-    "quality_rankings": null,
-    "max_rankings_including_latency_repeats": null,
+    "quality_rankings": 776,
+    "max_rankings_including_latency_repeats": 2328,
     "concurrency": 1,
     "ui_default_port": 8003,
-    "runtime_verified": false,
-    "resource_limits_finalized": false
+    "runtime_verified": true,
+    "resource_limits_finalized": true,
+    "max_chunks_per_config": 1000,
+    "max_units": 1000,
+    "full_quality_experiment_executed": false,
+    "preview_manifest_path": "docs/planning/reviews/p007/preview-manifest.json",
+    "copy_candidates_path": "docs/planning/reviews/p007/copy-candidates.json"
   },
-  "pending_readiness": [
-    "P016 completion and frozen source-v4 corpus/page/section/policy hashes",
-    "Rebuild source-v4 question/fact/span set including added fictional procedures, references and exceptions; freeze tuning/holdout",
-    "Runtime/model compatibility and tokenizer budget evidence",
-    "Re-profile long source-v4 unit/window counts and embedding/ranking workload; lock final limits without truncation",
-    "Copy closure/manifest and preview renderer verification"
-  ],
+  "pending_readiness": [],
   "superseded_size_assumptions": {
     "reason": "R20261029-593e4840 requires long-form source-v4; not executable limits",
     "llm_max_windows_per_document": 8,
@@ -204,5 +227,12 @@
     "holdout_unanswerable": 2,
     "quality_rankings": 440,
     "max_rankings_including_latency_repeats": 1320
+  },
+  "boundary_map": {
+    "path": "docs/planning/reviews/p007/boundary-map.json",
+    "sha256": "daa50e2958a617694d4c8d962d00a4b71519e66ba96560fbf4fb74a29f7a5b37",
+    "unit_count": 630,
+    "heading_boundaries": "verified section-map heading ends; not TOC",
+    "version": "boundary-map-v1"
   }
 }

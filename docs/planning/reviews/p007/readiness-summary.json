@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-29",
+  "purpose": "P007 readiness only",
+  "p016_completion_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+  "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "source_handoff_entries_rehashed": 62,
+  "completion_evidence_rehashed": 10,
+  "preview_pages_rehashed": 23,
+  "runtime": {
+    "ollama": "0.40.8",
+    "python": "3.12.14",
+    "langchain_core": "1.7.0",
+    "langsmith": "0.14.14",
+    "qdrant_client": "1.19.1",
+    "pdftoppm": "26.08.0",
+    "host_total_memory_bytes": 17179869184,
+    "memory_note": "Installed memory, not free memory or a measured peak. Probes ran successfully; full workload peak remains a dev observation."
+  },
+  "probes": {
+    "qwen_calls": 3,
+    "valid_boundary_json": 3,
+    "embedding_requests": 1,
+    "embedding_items": 2,
+    "embedding_dimension": 1024,
+    "all_boundary_selection_observed": true,
+    "identical_repeated_window": true,
+    "wall_seconds": [
+      19.2636,
+      16.1389,
+      9.1741
+    ],
+    "quality_claim": null
+  },
+  "first_failure": "1600char/24unit candidate maximum input upper bound7836+1024 exceeded8192; no model call made; retained first-failure evidence; changed to1200/20 before probes",
+  "candidate_limits": {
+    "units": 630,
+    "windows": 35,
+    "three_full_repetitions_normal_requests": 105,
+    "with_one_retry_each": 210,
+    "preflight_plus_dev_smokes": 9,
+    "total_llm_cap": 219,
+    "model_deadline_seconds": 7200,
+    "embedding_item_cap": 32000,
+    "rankings": 776,
+    "rankings_with_latency_repeats": 2328
+  },
+  "product_implementation_started": false,
+  "source_or_dev_files_modified": false,
+  "full_sweep_or_retrieval_runs": 0
+}
