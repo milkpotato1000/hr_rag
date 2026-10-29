@@ -1,0 +1,84 @@
+{
+  "recorded_at": "2026-10-29T15:17:57.258086+09:00",
+  "source_implementation_commit": "ea601a40b2e6f552f161f38e8afe2f63b1605cb8",
+  "frozen_handoff_and_validation_commit": "e72d1f905297739cca2c229164b3f166a4b36106",
+  "adopted_plan": "96ebe9d612bb4a1aae4f52fa25ee650139b5114f",
+  "contract_check_before_completion": "PASS: contracts match adopted plan 96ebe9d612bb",
+  "committed_evidence": [
+    {
+      "path": "docs/verification/p016/structure-audit.json",
+      "sha256": "b2868e806ccce16bcf2ade8abb1253fc304566aa276170dcf2727119c58416b1"
+    },
+    {
+      "path": "docs/verification/p016/narrative-review.json",
+      "sha256": "a981361e5f033a4bcc11172ecbcd96789b5b3a72772b43ac88d6fa6b90b9096a"
+    },
+    {
+      "path": "docs/verification/p016/policy-preservation-audit.json",
+      "sha256": "397325e8971a95d1d987df97fc49bad47a31240c4a62add8b08ac4b386df6f48"
+    },
+    {
+      "path": "docs/verification/p016/visual-review.json",
+      "sha256": "c842b9d794f697236d8227e43af916d1ebe3e50df415b250fac11d67cb9d5652"
+    },
+    {
+      "path": "docs/verification/p016/final-source-validation.json",
+      "sha256": "b9843bda8774f1d67b0f01e9f4606184950127a210d921c81856f1a5252205a8"
+    },
+    {
+      "path": "docs/verification/p016/baseline-preservation.json",
+      "sha256": "866cf83cc17323c0a844e8ce285c721422d4a55eb06adcbf390f88e192c97844"
+    },
+    {
+      "path": "docs/verification/p016/standalone.json",
+      "sha256": "7279c517fa982971ea04249fdbfc2adaf2569774ee0d47f825419bf9ff7890ec"
+    },
+    {
+      "path": "docs/verification/p016/pdf-reproduction.json",
+      "sha256": "e21db516e64949aee597c294f2f0a563b615e977397155f01199315320ca79fd"
+    },
+    {
+      "path": "docs/verification/p016/tests-stage.log",
+      "sha256": "16528c32fc80919fa9134d810625ec8af569e3d7a939e4cde70ac0debc403f3e"
+    },
+    {
+      "path": "2. Document Chunking/data/source-v4/handoff-manifest.json",
+      "sha256": "82918298ce6abeab89c033ab055fcba12302069a27ba0bc7f413bd98d783888a"
+    }
+  ],
+  "tests": {
+    "unique_stage_tests": 27,
+    "legacy_stage_tests": 15,
+    "new_handbook_tests": 12,
+    "independent_copy_tests": 27,
+    "additional_frozen_tampering_cases": 5,
+    "naive_rag_regression": "Not rerun: no Naive/UI/shared runtime changes; all293 protected files byte unchanged."
+  },
+  "pdfs": 1,
+  "pages_visually_reviewed": 23,
+  "body_chars": 35477,
+  "chapters": 6,
+  "sections": 15,
+  "articles": 57,
+  "paragraphs": 105,
+  "preserved_policy_sentences": 31,
+  "old_body_occurrences_mapped": 34,
+  "added_procedural_sentences": 481,
+  "explanatory_sentences": 14,
+  "page_crossing_paragraphs": 17,
+  "protected_files_unchanged": 293,
+  "model_calls": 0,
+  "retrieval_runs": 0,
+  "scope": "P016 only; P007 remains DRAFT and needs new readiness; existing8001 UI/default corpus unchanged; cancelled8000 not restarted; no main promotion",
+  "state": "P016 criteria verified against committed source and final validation evidence.",
+  "contract_check_after_completion": "PASS: contracts match adopted plan 96ebe9d612bb",
+  "queue": {
+    "next": {
+      "plan": "P007",
+      "dev": null
+    },
+    "P016": "DONE",
+    "P007": "DRAFT",
+    "P015": "DONE"
+  }
+}
