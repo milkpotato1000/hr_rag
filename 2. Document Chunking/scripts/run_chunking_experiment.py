@@ -30,7 +30,8 @@ def run_group(out,split,runmap,questions,facts,texts,provider,repeats):
                 load_ms=(time.monotonic()-started)*1000;rows=[]
                 for q in questions:
                     trials=[search.search(q['question'],20,byqid[q['query_id']] if retriever=='dense' else None,provider.ledger) for _ in range(repeats)]
-                    need(all(t['results']==trials[0]['results'] for t in trials),'ranking_instability','Ranking changed during latency repeats')
+                    trial_dir=out/'ranking-trials'/split;trial_dir.mkdir(parents=True,exist_ok=True);write_json(trial_dir/f"{cfgid}-{retriever}-{q['query_id']}.json",trials)
+                    need(all([r['chunk_id'] for r in t['results']]==[r['chunk_id'] for r in trials[0]['results']] for t in trials),'ranking_instability','Ranked IDs changed during latency repeats')
                     ranking=trials[0];ids=[r['chunk_id'] for r in ranking['results']];metrics={};qrels=None
                     for k in (5,10,20):
                         m=evaluate(q,facts,search.maps,ids,k,texts);qrels=m.pop('qrels',qrels);metrics[str(k)]=m
@@ -44,7 +45,7 @@ def run_group(out,split,runmap,questions,facts,texts,provider,repeats):
     return summaries
 
 
-def execute(out,llm_ids,repeats=2):
+def execute(out,llm_ids,repeats=2,reuse=None):
     need(not out.exists(),'output_exists','Never overwrite experiment output');out.mkdir(parents=True)
     with work_lock():
         started=time.monotonic();provider=Provider();provider.verify();row,text,_=source()
@@ -56,7 +57,9 @@ def execute(out,llm_ids,repeats=2):
         # First chronological valid corpus run is selected without observing retrieval.
         selected=llm_ids[0];runmap={};builds=[]
         for cfg in spec()['configs']:
-            if cfg['id']=='llm-0':m=llm[0][0]
+            if reuse:
+                m=load_run(ARTIFACTS/reuse[cfg['id']]);need(m['config']==cfg and m['canonical_sha256']==row['canonical_sha256'],'stale','Reuse configuration/source mismatch')
+            elif cfg['id']=='llm-0':m=llm[0][0]
             else:
                 parent=ARTIFACTS/runmap[cfg['method']+'-0'] if cfg['method'] in ('semantic','llm') and cfg['overlap_chars'] else None
                 m=build(cfg,provider=provider,parent=parent)
@@ -79,9 +82,9 @@ def execute(out,llm_ids,repeats=2):
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--spec',type=Path,required=True);p.add_argument('--output-dir',type=Path,required=True);p.add_argument('--llm-runs',nargs=3,required=True);p.add_argument('--latency-repeats',type=int,choices=[1,2,3],default=2);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--spec',type=Path,required=True);p.add_argument('--output-dir',type=Path,required=True);p.add_argument('--llm-runs',nargs=3,required=True);p.add_argument('--chunk-runs-file',type=Path);p.add_argument('--latency-repeats',type=int,choices=[1,2,3],default=2);a=p.parse_args()
     need(file_hash(a.spec)==file_hash(EXP/'spec.json'),'stale','Use the frozen experiment spec')
-    try:execute(a.output_dir,a.llm_runs,a.latency_repeats)
+    try:execute(a.output_dir,a.llm_runs,a.latency_repeats,read_json(a.chunk_runs_file) if a.chunk_runs_file else None)
     except Exception as e:
         if a.output_dir.exists():save_state(a.output_dir/'failure.json',dict(status='failed',reason=getattr(e,'kind','execution'),message=str(e),ledger=Ledger().refresh()))
         raise

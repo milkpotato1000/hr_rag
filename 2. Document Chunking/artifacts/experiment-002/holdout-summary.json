@@ -1,0 +1,2336 @@
+[
+  {
+    "config_id": "fixed-400-80",
+    "run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+    "retriever": "bm25",
+    "index": {
+      "identity": {
+        "chunk_run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+        "chunks_sha256": "54425b468bb51b31ffd09580874aacf3c058349a1142ae84d10fad0215d934e9",
+        "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+        "config": {
+          "id": "fixed-400-80",
+          "method": "fixed",
+          "size_chars": 400,
+          "overlap_chars": 80
+        },
+        "retriever": "bm25",
+        "text_version": "canonical-slice-only-v1",
+        "model_digest": null,
+        "parameters": {
+          "k1": 1.2,
+          "b": 0.75,
+          "tokenizer": "unicode-word-v1"
+        }
+      },
+      "fingerprint": "bb1af5e5f0535179f3018156d77c1c70f7d30bcb51012ef53ff120c43c7acb86",
+      "status": "complete",
+      "build_ms": 3.3341660164296627,
+      "embedding": null,
+      "replayed": true,
+      "index_bytes": 753
+    },
+    "statistics": {
+      "chunk_count": 121,
+      "lengths": [
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        182
+      ],
+      "min": 182,
+      "max": 400,
+      "mean": 398.198347107438,
+      "median": 400,
+      "emitted_chars": 48182,
+      "unique_chars": 38582,
+      "emitted_unique_ratio": 1.2488206935876833,
+      "overlap_chars": 9600,
+      "coverage_with_skipped": 38582,
+      "canonical_chars": 38582,
+      "below_200_ratio": 0.008264462809917356,
+      "chunks_per_unit": 0.19206349206349208,
+      "base_lengths": [
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        182
+      ]
+    },
+    "chunk_build_ms": 27.592208003625274,
+    "at_k": {
+      "5": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.886475201356507,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.34,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.825,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.840005513995637,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.8,
+          "matched": 8,
+          "required": 10
+        }
+      },
+      "10": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.9220835099618483,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.18,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.85,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.853018182328707,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.8,
+          "matched": 8,
+          "required": 10
+        }
+      },
+      "20": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.1,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.925,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8804771350120533,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 1.0,
+          "matched": 10,
+          "required": 10
+        }
+      }
+    },
+    "context_budget_simulation": {
+      "400": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.5,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.5,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.831616061217036,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.475,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.5,
+          "matched": 5,
+          "required": 10
+        }
+      },
+      "800": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.5,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.5,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.831616061217036,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.55,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.525,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.7370674592341532,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.5,
+          "matched": 5,
+          "required": 10
+        }
+      },
+      "1600": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.886475201356507,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.425,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.825,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.840005513995637,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.8,
+          "matched": 8,
+          "required": 10
+        }
+      }
+    },
+    "latency": {
+      "repetitions": 2,
+      "index_load_ms": 15.474749961867929,
+      "first_query_ms": [
+        0.18929201178252697,
+        0.1538750366307795
+      ],
+      "mean_ms": 0.17462845668584728,
+      "note": "Sequential order; persisted index load measured separately. OS/model caches not forcibly evicted. Query embeddings cached before ranking; embedding build/usage reported separately."
+    },
+    "query_embeddings": {
+      "items": 12,
+      "cache_hits": 0,
+      "new_items": 12
+    }
+  },
+  {
+    "config_id": "fixed-400-80",
+    "run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+    "retriever": "dense",
+    "index": {
+      "identity": {
+        "chunk_run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+        "chunks_sha256": "54425b468bb51b31ffd09580874aacf3c058349a1142ae84d10fad0215d934e9",
+        "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+        "config": {
+          "id": "fixed-400-80",
+          "method": "fixed",
+          "size_chars": 400,
+          "overlap_chars": 80
+        },
+        "retriever": "dense",
+        "text_version": "canonical-slice-only-v1",
+        "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+        "parameters": {
+          "dimension": 1024,
+          "distance": "Cosine",
+          "qdrant": "1.19.1"
+        }
+      },
+      "fingerprint": "01e0887fd234585c639b29e70f33268b6e80fc40e756e9784772a4f91bc73963",
+      "status": "complete",
+      "build_ms": 9697.043874999508,
+      "embedding": {
+        "items": 121,
+        "cache_hits": 25,
+        "new_items": 96
+      },
+      "replayed": true,
+      "index_bytes": 1513329
+    },
+    "statistics": {
+      "chunk_count": 121,
+      "lengths": [
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        182
+      ],
+      "min": 182,
+      "max": 400,
+      "mean": 398.198347107438,
+      "median": 400,
+      "emitted_chars": 48182,
+      "unique_chars": 38582,
+      "emitted_unique_ratio": 1.2488206935876833,
+      "overlap_chars": 9600,
+      "coverage_with_skipped": 38582,
+      "canonical_chars": 38582,
+      "below_200_ratio": 0.008264462809917356,
+      "chunks_per_unit": 0.19206349206349208,
+      "base_lengths": [
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        182
+      ]
+    },
+    "chunk_build_ms": 27.592208003625274,
+    "at_k": {
+      "5": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.9163692242475625,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.32,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.75,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.7666666666666667,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.7225142394565365,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.8,
+          "matched": 8,
+          "required": 10
+        }
+      },
+      "10": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.9747774480712167,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.19,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.875,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.7666666666666667,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.7652869786932017,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.9,
+          "matched": 9,
+          "required": 10
+        }
+      },
+      "20": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.10500000000000001,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.95,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.7666666666666667,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.7835189480853292,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 1.0,
+          "matched": 10,
+          "required": 10
+        }
+      }
+    },
+    "context_budget_simulation": {
+      "400": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.2,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.2,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.4619347529903,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.6,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.3,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.6,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.5333333333333333,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.2,
+          "matched": 2,
+          "required": 10
+        }
+      },
+      "800": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.6,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.6,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.738509904563317,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.6,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.575,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.7,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.6144238266733387,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.6,
+          "matched": 6,
+          "required": 10
+        }
+      },
+      "1600": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.9163692242475625,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.4,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.75,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.7666666666666667,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.7225142394565365,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.8,
+          "matched": 8,
+          "required": 10
+        }
+      }
+    },
+    "latency": {
+      "repetitions": 2,
+      "index_load_ms": 36.08216700376943,
+      "first_query_ms": [
+        1.958583015948534,
+        1.8474169773980975
+      ],
+      "mean_ms": 1.880012161564082,
+      "note": "Sequential order; persisted index load measured separately. OS/model caches not forcibly evicted. Query embeddings cached before ranking; embedding build/usage reported separately."
+    },
+    "query_embeddings": {
+      "items": 12,
+      "cache_hits": 0,
+      "new_items": 12
+    }
+  },
+  {
+    "config_id": "structure-0",
+    "run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+    "retriever": "bm25",
+    "index": {
+      "identity": {
+        "chunk_run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+        "chunks_sha256": "09e64e0e4449311e790083dfec2e8fae93fd92b2047e29c0582dda17d9f1abc9",
+        "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+        "config": {
+          "id": "structure-0",
+          "method": "structure",
+          "base_max_chars": 400,
+          "overlap_chars": 0,
+          "overlap_policy": "post_partition_left_extension_v1"
+        },
+        "retriever": "bm25",
+        "text_version": "canonical-slice-only-v1",
+        "model_digest": null,
+        "parameters": {
+          "k1": 1.2,
+          "b": 0.75,
+          "tokenizer": "unicode-word-v1"
+        }
+      },
+      "fingerprint": "5a065e600529b57dc152c40d1b7c926032d78faf7a9d862874231b9bd99f41c6",
+      "status": "complete",
+      "build_ms": 2.836958970874548,
+      "embedding": null,
+      "replayed": true,
+      "index_bytes": 818
+    },
+    "statistics": {
+      "chunk_count": 155,
+      "lengths": [
+        209,
+        26,
+        18,
+        211,
+        204,
+        293,
+        22,
+        366,
+        390,
+        393,
+        396,
+        320,
+        277,
+        383,
+        87,
+        196,
+        23,
+        22,
+        188,
+        371,
+        362,
+        319,
+        341,
+        95,
+        200,
+        22,
+        337,
+        283,
+        388,
+        373,
+        376,
+        368,
+        261,
+        302,
+        22,
+        223,
+        363,
+        346,
+        301,
+        156,
+        367,
+        252,
+        395,
+        283,
+        362,
+        371,
+        22,
+        25,
+        206,
+        193,
+        235,
+        22,
+        372,
+        168,
+        364,
+        335,
+        324,
+        394,
+        382,
+        214,
+        340,
+        340,
+        117,
+        23,
+        392,
+        337,
+        112,
+        307,
+        394,
+        41,
+        328,
+        366,
+        50,
+        374,
+        378,
+        22,
+        25,
+        183,
+        199,
+        346,
+        162,
+        23,
+        387,
+        326,
+        362,
+        382,
+        76,
+        324,
+        351,
+        165,
+        364,
+        159,
+        385,
+        110,
+        317,
+        209,
+        389,
+        338,
+        66,
+        22,
+        22,
+        183,
+        211,
+        303,
+        240,
+        26,
+        357,
+        387,
+        343,
+        258,
+        220,
+        344,
+        373,
+        154,
+        372,
+        280,
+        105,
+        325,
+        274,
+        397,
+        211,
+        376,
+        211,
+        23,
+        25,
+        191,
+        173,
+        398,
+        264,
+        26,
+        361,
+        64,
+        349,
+        380,
+        370,
+        59,
+        370,
+        350,
+        108,
+        356,
+        327,
+        79,
+        29,
+        400,
+        361,
+        158,
+        383,
+        141,
+        360,
+        399,
+        96,
+        360,
+        303,
+        398,
+        239
+      ],
+      "min": 18,
+      "max": 400,
+      "mean": 248.91612903225806,
+      "median": 301,
+      "emitted_chars": 38582,
+      "unique_chars": 38582,
+      "emitted_unique_ratio": 1.0,
+      "overlap_chars": 0,
+      "coverage_with_skipped": 38582,
+      "canonical_chars": 38582,
+      "below_200_ratio": 0.33548387096774196,
+      "chunks_per_unit": 0.24603174603174602,
+      "base_lengths": [
+        209,
+        26,
+        18,
+        211,
+        204,
+        293,
+        22,
+        366,
+        390,
+        393,
+        396,
+        320,
+        277,
+        383,
+        87,
+        196,
+        23,
+        22,
+        188,
+        371,
+        362,
+        319,
+        341,
+        95,
+        200,
+        22,
+        337,
+        283,
+        388,
+        373,
+        376,
+        368,
+        261,
+        302,
+        22,
+        223,
+        363,
+        346,
+        301,
+        156,
+        367,
+        252,
+        395,
+        283,
+        362,
+        371,
+        22,
+        25,
+        206,
+        193,
+        235,
+        22,
+        372,
+        168,
+        364,
+        335,
+        324,
+        394,
+        382,
+        214,
+        340,
+        340,
+        117,
+        23,
+        392,
+        337,
+        112,
+        307,
+        394,
+        41,
+        328,
+        366,
+        50,
+        374,
+        378,
+        22,
+        25,
+        183,
+        199,
+        346,
+        162,
+        23,
+        387,
+        326,
+        362,
+        382,
+        76,
+        324,
+        351,
+        165,
+        364,
+        159,
+        385,
+        110,
+        317,
+        209,
+        389,
+        338,
+        66,
+        22,
+        22,
+        183,
+        211,
+        303,
+        240,
+        26,
+        357,
+        387,
+        343,
+        258,
+        220,
+        344,
+        373,
+        154,
+        372,
+        280,
+        105,
+        325,
+        274,
+        397,
+        211,
+        376,
+        211,
+        23,
+        25,
+        191,
+        173,
+        398,
+        264,
+        26,
+        361,
+        64,
+        349,
+        380,
+        370,
+        59,
+        370,
+        350,
+        108,
+        356,
+        327,
+        79,
+        29,
+        400,
+        361,
+        158,
+        383,
+        141,
+        360,
+        399,
+        96,
+        360,
+        303,
+        398,
+        239
+      ]
+    },
+    "chunk_build_ms": 44.08770799636841,
+    "at_k": {
+      "5": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.9599406528189911,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.22000000000000003,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.95,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8894997876144048,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.9,
+          "matched": 9,
+          "required": 10
+        }
+      },
+      "10": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.9599406528189911,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.11000000000000001,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.95,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8894997876144048,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.9,
+          "matched": 9,
+          "required": 10
+        }
+      },
+      "20": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.06000000000000001,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.9060693641909279,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 1.0,
+          "matched": 10,
+          "required": 10
+        }
+      }
+    },
+    "context_budget_simulation": {
+      "400": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.7,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.7,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.8103223322083041,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.8333333333333334,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.85,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8386852807234542,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.7,
+          "matched": 7,
+          "required": 10
+        }
+      },
+      "800": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.9599406528189911,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.4083333333333333,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.95,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8937503349954186,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.9,
+          "matched": 9,
+          "required": 10
+        }
+      },
+      "1600": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.9599406528189911,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.19952380952380952,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.95,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.9,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8894997876144048,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.9,
+          "matched": 9,
+          "required": 10
+        }
+      }
+    },
+    "latency": {
+      "repetitions": 2,
+      "index_load_ms": 16.849957988597453,
+      "first_query_ms": [
+        0.21787500008940697,
+        0.3731659962795675
+      ],
+      "mean_ms": 0.2555017053964548,
+      "note": "Sequential order; persisted index load measured separately. OS/model caches not forcibly evicted. Query embeddings cached before ranking; embedding build/usage reported separately."
+    },
+    "query_embeddings": {
+      "items": 12,
+      "cache_hits": 0,
+      "new_items": 12
+    }
+  },
+  {
+    "config_id": "structure-0",
+    "run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+    "retriever": "dense",
+    "index": {
+      "identity": {
+        "chunk_run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+        "chunks_sha256": "09e64e0e4449311e790083dfec2e8fae93fd92b2047e29c0582dda17d9f1abc9",
+        "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+        "config": {
+          "id": "structure-0",
+          "method": "structure",
+          "base_max_chars": 400,
+          "overlap_chars": 0,
+          "overlap_policy": "post_partition_left_extension_v1"
+        },
+        "retriever": "dense",
+        "text_version": "canonical-slice-only-v1",
+        "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+        "parameters": {
+          "dimension": 1024,
+          "distance": "Cosine",
+          "qdrant": "1.19.1"
+        }
+      },
+      "fingerprint": "33668ca15f786de56b8f32b413094fa60f5a82570056aeb7ef95eddf728dcbb9",
+      "status": "complete",
+      "build_ms": 8016.833333007526,
+      "embedding": {
+        "items": 155,
+        "cache_hits": 57,
+        "new_items": 98
+      },
+      "replayed": true,
+      "index_bytes": 1849267
+    },
+    "statistics": {
+      "chunk_count": 155,
+      "lengths": [
+        209,
+        26,
+        18,
+        211,
+        204,
+        293,
+        22,
+        366,
+        390,
+        393,
+        396,
+        320,
+        277,
+        383,
+        87,
+        196,
+        23,
+        22,
+        188,
+        371,
+        362,
+        319,
+        341,
+        95,
+        200,
+        22,
+        337,
+        283,
+        388,
+        373,
+        376,
+        368,
+        261,
+        302,
+        22,
+        223,
+        363,
+        346,
+        301,
+        156,
+        367,
+        252,
+        395,
+        283,
+        362,
+        371,
+        22,
+        25,
+        206,
+        193,
+        235,
+        22,
+        372,
+        168,
+        364,
+        335,
+        324,
+        394,
+        382,
+        214,
+        340,
+        340,
+        117,
+        23,
+        392,
+        337,
+        112,
+        307,
+        394,
+        41,
+        328,
+        366,
+        50,
+        374,
+        378,
+        22,
+        25,
+        183,
+        199,
+        346,
+        162,
+        23,
+        387,
+        326,
+        362,
+        382,
+        76,
+        324,
+        351,
+        165,
+        364,
+        159,
+        385,
+        110,
+        317,
+        209,
+        389,
+        338,
+        66,
+        22,
+        22,
+        183,
+        211,
+        303,
+        240,
+        26,
+        357,
+        387,
+        343,
+        258,
+        220,
+        344,
+        373,
+        154,
+        372,
+        280,
+        105,
+        325,
+        274,
+        397,
+        211,
+        376,
+        211,
+        23,
+        25,
+        191,
+        173,
+        398,
+        264,
+        26,
+        361,
+        64,
+        349,
+        380,
+        370,
+        59,
+        370,
+        350,
+        108,
+        356,
+        327,
+        79,
+        29,
+        400,
+        361,
+        158,
+        383,
+        141,
+        360,
+        399,
+        96,
+        360,
+        303,
+        398,
+        239
+      ],
+      "min": 18,
+      "max": 400,
+      "mean": 248.91612903225806,
+      "median": 301,
+      "emitted_chars": 38582,
+      "unique_chars": 38582,
+      "emitted_unique_ratio": 1.0,
+      "overlap_chars": 0,
+      "coverage_with_skipped": 38582,
+      "canonical_chars": 38582,
+      "below_200_ratio": 0.33548387096774196,
+      "chunks_per_unit": 0.24603174603174602,
+      "base_lengths": [
+        209,
+        26,
+        18,
+        211,
+        204,
+        293,
+        22,
+        366,
+        390,
+        393,
+        396,
+        320,
+        277,
+        383,
+        87,
+        196,
+        23,
+        22,
+        188,
+        371,
+        362,
+        319,
+        341,
+        95,
+        200,
+        22,
+        337,
+        283,
+        388,
+        373,
+        376,
+        368,
+        261,
+        302,
+        22,
+        223,
+        363,
+        346,
+        301,
+        156,
+        367,
+        252,
+        395,
+        283,
+        362,
+        371,
+        22,
+        25,
+        206,
+        193,
+        235,
+        22,
+        372,
+        168,
+        364,
+        335,
+        324,
+        394,
+        382,
+        214,
+        340,
+        340,
+        117,
+        23,
+        392,
+        337,
+        112,
+        307,
+        394,
+        41,
+        328,
+        366,
+        50,
+        374,
+        378,
+        22,
+        25,
+        183,
+        199,
+        346,
+        162,
+        23,
+        387,
+        326,
+        362,
+        382,
+        76,
+        324,
+        351,
+        165,
+        364,
+        159,
+        385,
+        110,
+        317,
+        209,
+        389,
+        338,
+        66,
+        22,
+        22,
+        183,
+        211,
+        303,
+        240,
+        26,
+        357,
+        387,
+        343,
+        258,
+        220,
+        344,
+        373,
+        154,
+        372,
+        280,
+        105,
+        325,
+        274,
+        397,
+        211,
+        376,
+        211,
+        23,
+        25,
+        191,
+        173,
+        398,
+        264,
+        26,
+        361,
+        64,
+        349,
+        380,
+        370,
+        59,
+        370,
+        350,
+        108,
+        356,
+        327,
+        79,
+        29,
+        400,
+        361,
+        158,
+        383,
+        141,
+        360,
+        399,
+        96,
+        360,
+        303,
+        398,
+        239
+      ]
+    },
+    "chunk_build_ms": 44.08770799636841,
+    "at_k": {
+      "5": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.24000000000000005,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.8833333333333334,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8981274659106212,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 1.0,
+          "matched": 10,
+          "required": 10
+        }
+      },
+      "10": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.12000000000000002,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.8833333333333334,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8981274659106212,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 1.0,
+          "matched": 10,
+          "required": 10
+        }
+      },
+      "20": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.06000000000000001,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.8833333333333334,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8981274659106212,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 1.0,
+          "matched": 10,
+          "required": 10
+        }
+      }
+    },
+    "context_budget_simulation": {
+      "400": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.6,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.6,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.7095589734296781,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.7,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.7,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.7613147192765458,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.6,
+          "matched": 6,
+          "required": 10
+        }
+      },
+      "800": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 0.8,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 0.8599406528189911,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.3833333333333333,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 0.85,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.85,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8244076946336916,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 0.8,
+          "matched": 8,
+          "required": 10
+        }
+      },
+      "1600": {
+        "valid_queries": 10,
+        "na_queries": 2,
+        "error_queries": 0,
+        "total_queries": 12,
+        "fact_recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "full_evidence_success": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "partial_coverage": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "precision": {
+          "macro": 0.22095238095238096,
+          "denominator": 10
+        },
+        "recall": {
+          "macro": 1.0,
+          "denominator": 10
+        },
+        "mrr": {
+          "macro": 0.8833333333333334,
+          "denominator": 10
+        },
+        "ndcg": {
+          "macro": 0.8981274659106212,
+          "denominator": 10
+        },
+        "fact_recall_micro": {
+          "value": 1.0,
+          "matched": 10,
+          "required": 10
+        }
+      }
+    },
+    "latency": {
+      "repetitions": 2,
+      "index_load_ms": 47.157042019534856,
+      "first_query_ms": [
+        2.5325000169686973,
+        2.918457961641252
+      ],
+      "mean_ms": 2.5804356215909743,
+      "note": "Sequential order; persisted index load measured separately. OS/model caches not forcibly evicted. Query embeddings cached before ranking; embedding build/usage reported separately."
+    },
+    "query_embeddings": {
+      "items": 12,
+      "cache_hits": 0,
+      "new_items": 12
+    }
+  }
+]

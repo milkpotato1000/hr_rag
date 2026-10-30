@@ -1,0 +1,182 @@
+[
+  {
+    "question_hash": "83db5fee80ce61190177804a254cac486486c914b5d85b09474ef33caf968654",
+    "chunk_run_id": "chunk-3f6313fdc60c411ebb80a930a4fc6a4c",
+    "index_fingerprint": "a6e81992d4ed9814ca00d84d5f2d28654077b070e4088694d941a6fc6ec400e3",
+    "config_id": "llm-80",
+    "retriever": "dense",
+    "results": [
+      {
+        "chunk_id": "llm-bb687f58bdf68cfb9a9447d937b6c9018c11b2c0708c7bba989e069688c4d36b",
+        "score": 0.7313560166291628
+      },
+      {
+        "chunk_id": "llm-6a5506ed5b583ab13c70b49a9d53faf29f71f04db7f47431ae4d519e5a5b05f6",
+        "score": 0.711730086361885
+      },
+      {
+        "chunk_id": "llm-4b65b316dcd192508acb0b1b6b4a371f0f70c4425bf7a6d68433b89858ab2499",
+        "score": 0.7059293354794988
+      },
+      {
+        "chunk_id": "llm-e13739e8a4e5e862c23360167a192dbe57258cd7bf52be7cab903e5809d68ae0",
+        "score": 0.7024668654511452
+      },
+      {
+        "chunk_id": "llm-2e005c378f29016e77bd0fce48e1aebf154f55013ca377446d5c6ea081eb105c",
+        "score": 0.6902193403134294
+      },
+      {
+        "chunk_id": "llm-c8dd11316656e98d66bf6e2c0a4db22193e5816b48bb71f07f7afccf028b4c67",
+        "score": 0.6888941262192874
+      },
+      {
+        "chunk_id": "llm-d6b0e9a6cbf51afadcdb05832bb6cbc6ae183b942cc38153d921afb0034710e1",
+        "score": 0.6864645434712136
+      },
+      {
+        "chunk_id": "llm-0c95a22b62ca56a9694c4c8dc04a783df72e38be9fd14890863f2dcc9ca851a1",
+        "score": 0.6837702222320505
+      },
+      {
+        "chunk_id": "llm-b43652aafb20ce156b29f46a9d9dfa92de728a1428c5cec77d84f5f3df886351",
+        "score": 0.6828262840493966
+      },
+      {
+        "chunk_id": "llm-9ad16d982e7983c07f8ab8f854b4be58ef8e727021e43a55cb9ff0799456458e",
+        "score": 0.674540505086709
+      },
+      {
+        "chunk_id": "llm-a4f6d0a77f2e2d20c5b184df8eea783ea9b6e3fc20434af6963183ce65b89a19",
+        "score": 0.6719048812947649
+      },
+      {
+        "chunk_id": "llm-dcc429ec3dc5d42221fd28b08f8e99ba0aebb689cdce7d98e7bcfd570765bb5b",
+        "score": 0.6709721002646123
+      },
+      {
+        "chunk_id": "llm-2bcf8abf313b4d0494c71baa96b1817856de23fb52cc5d77688fbcf71d80aedb",
+        "score": 0.6707139863953209
+      },
+      {
+        "chunk_id": "llm-3443aec895aadc473888447744862ba96af20d984d0b8fef197f46a10a6906ad",
+        "score": 0.669963331848002
+      },
+      {
+        "chunk_id": "llm-839d48a3aaf416dd82a57a3c0b492fcc48609ae7b15328a272ce3ed5bf4994cc",
+        "score": 0.6644058777067466
+      },
+      {
+        "chunk_id": "llm-6b51408c1374a0e9a41e26948641206508dad7ecf7c803b2302399a289078b6e",
+        "score": 0.6626956864283167
+      },
+      {
+        "chunk_id": "llm-e0dd5cab56002376c6c0ded26dcd4fc732c559c62ba7d5002145572032c5f97a",
+        "score": 0.6622150947748339
+      },
+      {
+        "chunk_id": "llm-7e8642982b33343cb620adb9e769ae21694b944d982a7d7b384abb0f676f9dfe",
+        "score": 0.6585803922506543
+      },
+      {
+        "chunk_id": "llm-956361562101797efe9f048e198fc2749c5189ae763469e2ae82d5d64413c87b",
+        "score": 0.6551838584364909
+      },
+      {
+        "chunk_id": "llm-6393b5a6a82348b176088abe73328eec93b168ec6311fd82d814216a623acb05",
+        "score": 0.6542585586804786
+      }
+    ],
+    "elapsed_ms": 7.149916025809944
+  },
+  {
+    "question_hash": "83db5fee80ce61190177804a254cac486486c914b5d85b09474ef33caf968654",
+    "chunk_run_id": "chunk-3f6313fdc60c411ebb80a930a4fc6a4c",
+    "index_fingerprint": "a6e81992d4ed9814ca00d84d5f2d28654077b070e4088694d941a6fc6ec400e3",
+    "config_id": "llm-80",
+    "retriever": "dense",
+    "results": [
+      {
+        "chunk_id": "llm-bb687f58bdf68cfb9a9447d937b6c9018c11b2c0708c7bba989e069688c4d36b",
+        "score": 0.7313560166291628
+      },
+      {
+        "chunk_id": "llm-6a5506ed5b583ab13c70b49a9d53faf29f71f04db7f47431ae4d519e5a5b05f6",
+        "score": 0.711730086361885
+      },
+      {
+        "chunk_id": "llm-4b65b316dcd192508acb0b1b6b4a371f0f70c4425bf7a6d68433b89858ab2499",
+        "score": 0.7059293354794988
+      },
+      {
+        "chunk_id": "llm-e13739e8a4e5e862c23360167a192dbe57258cd7bf52be7cab903e5809d68ae0",
+        "score": 0.7024668654511452
+      },
+      {
+        "chunk_id": "llm-2e005c378f29016e77bd0fce48e1aebf154f55013ca377446d5c6ea081eb105c",
+        "score": 0.6902193403134294
+      },
+      {
+        "chunk_id": "llm-c8dd11316656e98d66bf6e2c0a4db22193e5816b48bb71f07f7afccf028b4c67",
+        "score": 0.6888941262192874
+      },
+      {
+        "chunk_id": "llm-d6b0e9a6cbf51afadcdb05832bb6cbc6ae183b942cc38153d921afb0034710e1",
+        "score": 0.6864645434712136
+      },
+      {
+        "chunk_id": "llm-0c95a22b62ca56a9694c4c8dc04a783df72e38be9fd14890863f2dcc9ca851a1",
+        "score": 0.6837702222320505
+      },
+      {
+        "chunk_id": "llm-b43652aafb20ce156b29f46a9d9dfa92de728a1428c5cec77d84f5f3df886351",
+        "score": 0.6828262840493966
+      },
+      {
+        "chunk_id": "llm-9ad16d982e7983c07f8ab8f854b4be58ef8e727021e43a55cb9ff0799456458e",
+        "score": 0.674540505086709
+      },
+      {
+        "chunk_id": "llm-a4f6d0a77f2e2d20c5b184df8eea783ea9b6e3fc20434af6963183ce65b89a19",
+        "score": 0.6719048812947649
+      },
+      {
+        "chunk_id": "llm-dcc429ec3dc5d42221fd28b08f8e99ba0aebb689cdce7d98e7bcfd570765bb5b",
+        "score": 0.6709721002646123
+      },
+      {
+        "chunk_id": "llm-2bcf8abf313b4d0494c71baa96b1817856de23fb52cc5d77688fbcf71d80aedb",
+        "score": 0.6707139863953209
+      },
+      {
+        "chunk_id": "llm-3443aec895aadc473888447744862ba96af20d984d0b8fef197f46a10a6906ad",
+        "score": 0.669963331848002
+      },
+      {
+        "chunk_id": "llm-839d48a3aaf416dd82a57a3c0b492fcc48609ae7b15328a272ce3ed5bf4994cc",
+        "score": 0.6644058777067466
+      },
+      {
+        "chunk_id": "llm-6b51408c1374a0e9a41e26948641206508dad7ecf7c803b2302399a289078b6e",
+        "score": 0.6626956864283167
+      },
+      {
+        "chunk_id": "llm-e0dd5cab56002376c6c0ded26dcd4fc732c559c62ba7d5002145572032c5f97a",
+        "score": 0.6622150947748339
+      },
+      {
+        "chunk_id": "llm-7e8642982b33343cb620adb9e769ae21694b944d982a7d7b384abb0f676f9dfe",
+        "score": 0.6585803922506543
+      },
+      {
+        "chunk_id": "llm-956361562101797efe9f048e198fc2749c5189ae763469e2ae82d5d64413c87b",
+        "score": 0.6551838584364909
+      },
+      {
+        "chunk_id": "llm-6393b5a6a82348b176088abe73328eec93b168ec6311fd82d814216a623acb05",
+        "score": 0.6542585586804786
+      }
+    ],
+    "elapsed_ms": 6.966583023313433
+  }
+]

@@ -1,0 +1,316 @@
+{
+  "comparison_id": "comparison-5f027095d3624e4c8ed054a5b30c07d1",
+  "question": "반려동물 병원 동행 휴가가 있나요?",
+  "query_id": "q14",
+  "split": "tuning",
+  "corpus_id": "source-v4",
+  "top_k": 5,
+  "budget_chars": 800,
+  "retriever": "bm25",
+  "embedding": null,
+  "results": [
+    {
+      "ranking": {
+        "question_hash": "b35c14320bed4fea7a8e05917fbccb2a0ce6c052b607cb118986bc1cc1882a4f",
+        "chunk_run_id": "chunk-33d09a4c7dd4441ca7778719614fe2c6",
+        "index_fingerprint": "3b2dc8f01a4f23ba495f4a24fcb5daa038f81ba0dcf89a4cbb6ed1407c4239ca",
+        "config_id": "llm-0",
+        "retriever": "bm25",
+        "results": [
+          {
+            "chunk_id": "llm-c8c1ea689a53df094096b250e2271d4e2905cfa5929fa417e88fb0b911d69505",
+            "score": 7.41750616409649
+          },
+          {
+            "chunk_id": "llm-645bfb462b4d3e7c83f198b8c8d3ac5bf1e586992cf602beecd099b7cc2238f8",
+            "score": 4.6880911817786775
+          }
+        ],
+        "elapsed_ms": 0.24429202312603593
+      },
+      "metrics": {
+        "status": "N/A",
+        "reason": "unanswerable_document_scope",
+        "required_facts": 0
+      },
+      "budget": {
+        "kind": "context_budget_simulation",
+        "selected": [
+          "llm-c8c1ea689a53df094096b250e2271d4e2905cfa5929fa417e88fb0b911d69505",
+          "llm-645bfb462b4d3e7c83f198b8c8d3ac5bf1e586992cf602beecd099b7cc2238f8"
+        ],
+        "excluded": [],
+        "used_chars": 111,
+        "budget_chars": 800,
+        "actually_sent_to_llm": false,
+        "metrics": {
+          "status": "N/A",
+          "reason": "unanswerable_document_scope",
+          "required_facts": 0
+        }
+      },
+      "hits": [
+        {
+          "chunk_id": "llm-c8c1ea689a53df094096b250e2271d4e2905cfa5929fa417e88fb0b911d69505",
+          "score": 7.41750616409649,
+          "text": "재택근무는 휴가가 아닌 근\n무일로 집계한다.\n",
+          "source": {
+            "chunk_id": "llm-c8c1ea689a53df094096b250e2271d4e2905cfa5929fa417e88fb0b911d69505",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 12170,
+            "base_end": 12195,
+            "start": 12170,
+            "end": 12195,
+            "pages": [
+              {
+                "page_number": 8,
+                "canonical_start": 12170,
+                "canonical_end": 12195,
+                "page_start": 420,
+                "page_end": 445,
+                "page_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7",
+                "raw_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제3장 재택근무의 신청과 운영 [RM]",
+                "제1절 신청 범위와 기본 조건 [RM-S1]",
+                "RM-02 횟수와 승인 기한"
+              ]
+            ],
+            "article_ids": [
+              "RM-02"
+            ],
+            "unit_ids": [
+              "u00206"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "766bfc06c4903a087879ad1b224a5813773863ceeb803a424d9e2d56da875c11"
+          }
+        },
+        {
+          "chunk_id": "llm-645bfb462b4d3e7c83f198b8c8d3ac5bf1e586992cf602beecd099b7cc2238f8",
+          "score": 4.6880911817786775,
+          "text": "한 화면에 합계만 표시되\n어 있을 때에는 그 합계가 어느 시점의 자료인지 확인하며, 최근에 접수한 휴가가 아직 반영되지 않\n은 상태인지도 함께 기록한다. ",
+          "source": {
+            "chunk_id": "llm-645bfb462b4d3e7c83f198b8c8d3ac5bf1e586992cf602beecd099b7cc2238f8",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 4194,
+            "base_end": 4280,
+            "start": 4194,
+            "end": 4280,
+            "pages": [
+              {
+                "page_number": 3,
+                "canonical_start": 4194,
+                "canonical_end": 4280,
+                "page_start": 1346,
+                "page_end": 1432,
+                "page_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+                "raw_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제2장 연차의 사용과 기록 관리 [AN]",
+                "제1절 발생과 사용 단위 [AN-S1]",
+                "AN-02 발생 내역의 확인과 정정"
+              ]
+            ],
+            "article_ids": [
+              "AN-02"
+            ],
+            "unit_ids": [
+              "u00076"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "ac5a40de6381bc4a8d74acf798384097e67603a3f87240310e8339f202119dc2"
+          }
+        }
+      ]
+    },
+    {
+      "ranking": {
+        "question_hash": "b35c14320bed4fea7a8e05917fbccb2a0ce6c052b607cb118986bc1cc1882a4f",
+        "chunk_run_id": "chunk-33d09a4c7dd4441ca7778719614fe2c6",
+        "index_fingerprint": "3b2dc8f01a4f23ba495f4a24fcb5daa038f81ba0dcf89a4cbb6ed1407c4239ca",
+        "config_id": "llm-0",
+        "retriever": "bm25",
+        "results": [
+          {
+            "chunk_id": "llm-c8c1ea689a53df094096b250e2271d4e2905cfa5929fa417e88fb0b911d69505",
+            "score": 7.41750616409649
+          },
+          {
+            "chunk_id": "llm-645bfb462b4d3e7c83f198b8c8d3ac5bf1e586992cf602beecd099b7cc2238f8",
+            "score": 4.6880911817786775
+          }
+        ],
+        "elapsed_ms": 0.2479159738868475
+      },
+      "metrics": {
+        "status": "N/A",
+        "reason": "unanswerable_document_scope",
+        "required_facts": 0
+      },
+      "budget": {
+        "kind": "context_budget_simulation",
+        "selected": [
+          "llm-c8c1ea689a53df094096b250e2271d4e2905cfa5929fa417e88fb0b911d69505",
+          "llm-645bfb462b4d3e7c83f198b8c8d3ac5bf1e586992cf602beecd099b7cc2238f8"
+        ],
+        "excluded": [],
+        "used_chars": 111,
+        "budget_chars": 800,
+        "actually_sent_to_llm": false,
+        "metrics": {
+          "status": "N/A",
+          "reason": "unanswerable_document_scope",
+          "required_facts": 0
+        }
+      },
+      "hits": [
+        {
+          "chunk_id": "llm-c8c1ea689a53df094096b250e2271d4e2905cfa5929fa417e88fb0b911d69505",
+          "score": 7.41750616409649,
+          "text": "재택근무는 휴가가 아닌 근\n무일로 집계한다.\n",
+          "source": {
+            "chunk_id": "llm-c8c1ea689a53df094096b250e2271d4e2905cfa5929fa417e88fb0b911d69505",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 12170,
+            "base_end": 12195,
+            "start": 12170,
+            "end": 12195,
+            "pages": [
+              {
+                "page_number": 8,
+                "canonical_start": 12170,
+                "canonical_end": 12195,
+                "page_start": 420,
+                "page_end": 445,
+                "page_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7",
+                "raw_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제3장 재택근무의 신청과 운영 [RM]",
+                "제1절 신청 범위와 기본 조건 [RM-S1]",
+                "RM-02 횟수와 승인 기한"
+              ]
+            ],
+            "article_ids": [
+              "RM-02"
+            ],
+            "unit_ids": [
+              "u00206"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "766bfc06c4903a087879ad1b224a5813773863ceeb803a424d9e2d56da875c11"
+          }
+        },
+        {
+          "chunk_id": "llm-645bfb462b4d3e7c83f198b8c8d3ac5bf1e586992cf602beecd099b7cc2238f8",
+          "score": 4.6880911817786775,
+          "text": "한 화면에 합계만 표시되\n어 있을 때에는 그 합계가 어느 시점의 자료인지 확인하며, 최근에 접수한 휴가가 아직 반영되지 않\n은 상태인지도 함께 기록한다. ",
+          "source": {
+            "chunk_id": "llm-645bfb462b4d3e7c83f198b8c8d3ac5bf1e586992cf602beecd099b7cc2238f8",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 4194,
+            "base_end": 4280,
+            "start": 4194,
+            "end": 4280,
+            "pages": [
+              {
+                "page_number": 3,
+                "canonical_start": 4194,
+                "canonical_end": 4280,
+                "page_start": 1346,
+                "page_end": 1432,
+                "page_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+                "raw_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제2장 연차의 사용과 기록 관리 [AN]",
+                "제1절 발생과 사용 단위 [AN-S1]",
+                "AN-02 발생 내역의 확인과 정정"
+              ]
+            ],
+            "article_ids": [
+              "AN-02"
+            ],
+            "unit_ids": [
+              "u00076"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "ac5a40de6381bc4a8d74acf798384097e67603a3f87240310e8339f202119dc2"
+          }
+        }
+      ]
+    }
+  ],
+  "dataset_sha256": "9be17b08440418d75d2128c39eae6cbb9ce76301221b2fe79b60c99dd468b0e9"
+}

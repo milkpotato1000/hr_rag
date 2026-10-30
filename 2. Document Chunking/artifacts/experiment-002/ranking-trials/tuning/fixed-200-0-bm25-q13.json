@@ -1,0 +1,38 @@
+[
+  {
+    "question_hash": "6c5cb7e3e8a3d6dd93aa2d9f0fba4439ffe9766e2164928529c2bc337570e62f",
+    "chunk_run_id": "chunk-ddd0dabae2c0441b8d11b0c532b40b72",
+    "index_fingerprint": "754730da7eaf29adddf94f1b6a7d7cf359948ec74365fd8757768e33a765eeb1",
+    "config_id": "fixed-200-0",
+    "retriever": "bm25",
+    "results": [
+      {
+        "chunk_id": "fixed-e4b90423a029ad0cd96c8943be7ce267066bc9eb4fc1340e1f831ad05523cb9f",
+        "score": 4.4952214289231405
+      },
+      {
+        "chunk_id": "fixed-2dd14d965069be2858e26d27340d9e1a927f64a100474938a60e21c4d841307a",
+        "score": 4.286478595888021
+      }
+    ],
+    "elapsed_ms": 0.08783297380432487
+  },
+  {
+    "question_hash": "6c5cb7e3e8a3d6dd93aa2d9f0fba4439ffe9766e2164928529c2bc337570e62f",
+    "chunk_run_id": "chunk-ddd0dabae2c0441b8d11b0c532b40b72",
+    "index_fingerprint": "754730da7eaf29adddf94f1b6a7d7cf359948ec74365fd8757768e33a765eeb1",
+    "config_id": "fixed-200-0",
+    "retriever": "bm25",
+    "results": [
+      {
+        "chunk_id": "fixed-e4b90423a029ad0cd96c8943be7ce267066bc9eb4fc1340e1f831ad05523cb9f",
+        "score": 4.4952214289231405
+      },
+      {
+        "chunk_id": "fixed-2dd14d965069be2858e26d27340d9e1a927f64a100474938a60e21c4d841307a",
+        "score": 4.286478595888021
+      }
+    ],
+    "elapsed_ms": 0.09966699872165918
+  }
+]

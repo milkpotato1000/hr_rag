@@ -1,0 +1,44 @@
+{
+  "job_id": "job-3a7f9f3b6fa44f7ab51e83c472cf5bdd",
+  "request_id": "c86e1615-56b0-4d2a-a17b-cbb37c628600",
+  "request_hash": "527a8ee4dd50a797795414ee783e0165f7a91cec45adddd5151606165bd3b7fc",
+  "status": "SUCCEEDED",
+  "kind": "chunk",
+  "created_at": 1793261074.588778,
+  "request": {
+    "corpus_id": "source-v4",
+    "config": {
+      "id": "llm-0",
+      "method": "llm",
+      "base_max_chars": 800,
+      "overlap_chars": 0,
+      "overlap_policy": "post_partition_left_extension_v1",
+      "preferred_chars": [
+        200,
+        400
+      ],
+      "boundary_source": "same_selected_invocation_for_both_overlaps"
+    },
+    "fresh": true,
+    "request_id": "c86e1615-56b0-4d2a-a17b-cbb37c628600"
+  },
+  "progress": {
+    "run_id": "chunk-a53633f4cd574dc382c532e635beec2d",
+    "completed_windows": 35,
+    "total_windows": 35,
+    "elapsed_seconds": 403.2797217920306,
+    "attempts": 35
+  },
+  "result": {
+    "run_id": "chunk-a53633f4cd574dc382c532e635beec2d",
+    "replayed": false,
+    "usage_delta": {
+      "llm_requests": 35,
+      "embedding_items": 0,
+      "llm_seconds": 403.65582400001574,
+      "embedding_seconds": 0.0
+    }
+  },
+  "started_at": 1793261074.590061,
+  "finished_at": 1793261478.265493
+}

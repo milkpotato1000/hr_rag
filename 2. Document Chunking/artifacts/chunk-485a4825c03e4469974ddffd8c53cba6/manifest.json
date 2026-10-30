@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "run_id": "chunk-485a4825c03e4469974ddffd8c53cba6",
+  "status": "complete",
+  "algorithm_version": "chunk-experiment-v1",
+  "config": {
+    "id": "recursive-0",
+    "method": "recursive",
+    "base_max_chars": 400,
+    "overlap_chars": 0,
+    "overlap_policy": "post_partition_left_extension_v1"
+  },
+  "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "input_manifest_sha256": "b8373ee69892d92bff1623b2a9fc6b8c651521396c8a13f08d254f62b229313d",
+  "spec_sha256": "285028d2d76af9bd14e741894864f61aeafd1f6ecfee8aef2bf727ea4e748b5f",
+  "prompt_sha256": "b5fa4403a8a94b0236a669c4b5ec2a0c5deac49c601ed956ecaada99bc96ebd5",
+  "runtime_lock_sha256": "ce39ba744b645afd13d0a5b9c092ff872bee64ef30e20f4d20ae851054700e03",
+  "parent_run_ids": [],
+  "code_hash": "b19805dbaa2b78244f0bd7fea662918eb2d5c17f9e31c64e231d6a294f77c69c",
+  "outputs": {
+    "chunks.jsonl": "1d89f3300312c370cc0a4335376b48ae4b6df653754e8625df1a127da85b4afa",
+    "statistics.json": "cd3a51299d1478e2f03d2aa5cfa03a63ea9aad510cebb9e4a9dfd99228cd5f99",
+    "boundary-details.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "source-map.json": "b6e413b143511232ea54fa00fd47d0cd476eda5e2c3cf0e6f6c799eff8e96432"
+  },
+  "elapsed_ms": 81.54383295914158,
+  "counts": {
+    "chunks": 117,
+    "units": 630
+  },
+  "text_version": "canonical-slice-only-v1"
+}

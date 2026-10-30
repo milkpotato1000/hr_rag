@@ -1,0 +1,26 @@
+{
+  "baseline": "fixed-400-80",
+  "candidate": "structure-0",
+  "candidate_run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+  "baseline_run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+  "criterion": "tuning Dense macro fact_recall@5; ratio, build_ms, config_id ties; retain baseline without strict recall improvement",
+  "ranked": [
+    "structure-0",
+    "recursive-0",
+    "fixed-800-160",
+    "structure-80",
+    "fixed-400-80",
+    "recursive-80",
+    "fixed-800-0",
+    "fixed-400-0",
+    "llm-80",
+    "semantic-80",
+    "fixed-200-40",
+    "semantic-0",
+    "fixed-200-0",
+    "llm-0"
+  ],
+  "status": "frozen",
+  "holdout_observed": false,
+  "frozen_at": 1793261808.2318652
+}

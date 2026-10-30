@@ -1,0 +1,39 @@
+{
+  "job_id": "job-13bf1b779fdb47d496b13541f5058215",
+  "request_id": "0e443dae-910f-4eb1-94df-579aa19ae2f9",
+  "request_hash": "88468dac1a24b79793e1f66deb50bb856a1e5732cfb385cce7eaf6cd775fbb09",
+  "status": "SUCCEEDED",
+  "kind": "chunk",
+  "created_at": 1793317227.3471758,
+  "request": {
+    "corpus_id": "source-v4",
+    "config": {
+      "id": "llm-0",
+      "method": "llm",
+      "base_max_chars": 800,
+      "overlap_chars": 0,
+      "overlap_policy": "post_partition_left_extension_v1",
+      "preferred_chars": [
+        200,
+        400
+      ],
+      "boundary_source": "same_selected_invocation_for_both_overlaps"
+    },
+    "fresh": false,
+    "request_id": "0e443dae-910f-4eb1-94df-579aa19ae2f9"
+  },
+  "progress": {},
+  "result": {
+    "run_id": "chunk-a53633f4cd574dc382c532e635beec2d",
+    "replayed": true,
+    "model_calls": 0,
+    "usage_delta": {
+      "llm_requests": 0,
+      "embedding_items": 0,
+      "llm_seconds": 0.0,
+      "embedding_seconds": 0.0
+    }
+  },
+  "started_at": 1793317227.347646,
+  "finished_at": 1793317227.356544
+}

@@ -1,0 +1,824 @@
+{
+  "comparison_id": "comparison-757786c741fd41f7957ef33a260d8ccd",
+  "question": "반려동물 병원 동행 휴가가 있나요?",
+  "query_id": "q14",
+  "split": "tuning",
+  "corpus_id": "source-v4",
+  "top_k": 5,
+  "budget_chars": 1600,
+  "retriever": "dense",
+  "embedding": {
+    "items": 1,
+    "cache_hits": 1,
+    "new_items": 0
+  },
+  "results": [
+    {
+      "ranking": {
+        "question_hash": "b35c14320bed4fea7a8e05917fbccb2a0ce6c052b607cb118986bc1cc1882a4f",
+        "chunk_run_id": "chunk-33d09a4c7dd4441ca7778719614fe2c6",
+        "index_fingerprint": "38a215ae1c39920ee3835dc506745bc47e79443c167c8f010df939e5dc5b608a",
+        "config_id": "llm-0",
+        "retriever": "dense",
+        "results": [
+          {
+            "chunk_id": "llm-3d0b39725348236cae8b001eed2a8449c576c7211a6548f59ff17ff02e286a3b",
+            "score": 0.500331522262021
+          },
+          {
+            "chunk_id": "llm-516dbbe797dcfad148e2b96e891a0e667edaaef4ddddae1ff3b66f866557756c",
+            "score": 0.49227534999684897
+          },
+          {
+            "chunk_id": "llm-b44e2747c24339d945272a9397346edd1f4e84b8ea60924a195ff08ecb638da0",
+            "score": 0.47807867993355724
+          },
+          {
+            "chunk_id": "llm-fd4b1dd83b8c4f012aaf015cb6ea0fa898d8df4311cb977384c9f42c6d4fff00",
+            "score": 0.4769389508508851
+          },
+          {
+            "chunk_id": "llm-0788dddf0508ac0a7a3704776060ae5c5b3b9ee6cb99edc5d7dc8549617ae4f6",
+            "score": 0.4614983025513254
+          },
+          {
+            "chunk_id": "llm-d76f29309915a5572cc14c777587f070f3ba84e395156ae8212959d38c8b542f",
+            "score": 0.4553816172411316
+          },
+          {
+            "chunk_id": "llm-ac3bdeb89ca9c41a57e8aed5eb46263d3d648944795bf4c6137d05ff28027c8b",
+            "score": 0.45288676215636775
+          },
+          {
+            "chunk_id": "llm-1270706752c4426285574be3436861f5df1bd4caac399bf7bd553aabb2db9570",
+            "score": 0.4525627949066436
+          },
+          {
+            "chunk_id": "llm-d98c98de73de0f33d0eee23043ab5b353f3f7921dfdc0199c8cc557439b9772f",
+            "score": 0.44526282600971967
+          },
+          {
+            "chunk_id": "llm-b2973158f29d8f54ed2f3d86fb904bd865eb7e1eb6e2b735469a3fa7cbb81a95",
+            "score": 0.4427429671292376
+          },
+          {
+            "chunk_id": "llm-8167c124b167f98264e6786b9d9c99db52626966674f70e22b5b92828d15e5bc",
+            "score": 0.4416913483502959
+          },
+          {
+            "chunk_id": "llm-29917e64bf91f9396d9b6722b9d075aab6a1ee1d5f207410a04defac872861b5",
+            "score": 0.4402359772112107
+          },
+          {
+            "chunk_id": "llm-8860c7b3442e8c89667d3bb35040545a3631c8c2a4a6af693e425f268d1d2e77",
+            "score": 0.43953570511126716
+          },
+          {
+            "chunk_id": "llm-9de1be671137955011d0d049c9b1b07803d8565b6c1e89e55b66488616524fca",
+            "score": 0.4377954253684063
+          },
+          {
+            "chunk_id": "llm-afb468bb89ce975b722b94eef019c1d56c1c212a80d91b30da2961e240a86184",
+            "score": 0.43482470145243346
+          },
+          {
+            "chunk_id": "llm-54c4b2f66854d8363f929d46b6b53a2bf470acddf616c0de72a877ed45de75b6",
+            "score": 0.4321614359828511
+          },
+          {
+            "chunk_id": "llm-4af9240fa37f2a7397c886a91f14f681f90f7ba060251b1fe104b5b7995ca873",
+            "score": 0.4318940552926995
+          },
+          {
+            "chunk_id": "llm-1bfaed8d90ce16fce10cf88cb57483b5f5a7f7393897ed50eeed04f9c7d25f37",
+            "score": 0.43177200570609414
+          },
+          {
+            "chunk_id": "llm-6984e1151032c1d07d752e180fdd26994e37b5cecb264acb09c0cf0d4470cb2c",
+            "score": 0.42720872493234774
+          },
+          {
+            "chunk_id": "llm-71d7f1c73f5a960dd50042a4fff1a8963fae7de8a2942ae4f53aa7366dde019c",
+            "score": 0.4270567990746787
+          }
+        ],
+        "elapsed_ms": 7.708917022682726
+      },
+      "metrics": {
+        "status": "N/A",
+        "reason": "unanswerable_document_scope",
+        "required_facts": 0
+      },
+      "budget": {
+        "kind": "context_budget_simulation",
+        "selected": [
+          "llm-3d0b39725348236cae8b001eed2a8449c576c7211a6548f59ff17ff02e286a3b",
+          "llm-516dbbe797dcfad148e2b96e891a0e667edaaef4ddddae1ff3b66f866557756c",
+          "llm-b44e2747c24339d945272a9397346edd1f4e84b8ea60924a195ff08ecb638da0",
+          "llm-fd4b1dd83b8c4f012aaf015cb6ea0fa898d8df4311cb977384c9f42c6d4fff00",
+          "llm-0788dddf0508ac0a7a3704776060ae5c5b3b9ee6cb99edc5d7dc8549617ae4f6",
+          "llm-d76f29309915a5572cc14c777587f070f3ba84e395156ae8212959d38c8b542f",
+          "llm-ac3bdeb89ca9c41a57e8aed5eb46263d3d648944795bf4c6137d05ff28027c8b",
+          "llm-1270706752c4426285574be3436861f5df1bd4caac399bf7bd553aabb2db9570",
+          "llm-d98c98de73de0f33d0eee23043ab5b353f3f7921dfdc0199c8cc557439b9772f",
+          "llm-b2973158f29d8f54ed2f3d86fb904bd865eb7e1eb6e2b735469a3fa7cbb81a95",
+          "llm-8167c124b167f98264e6786b9d9c99db52626966674f70e22b5b92828d15e5bc",
+          "llm-29917e64bf91f9396d9b6722b9d075aab6a1ee1d5f207410a04defac872861b5",
+          "llm-8860c7b3442e8c89667d3bb35040545a3631c8c2a4a6af693e425f268d1d2e77",
+          "llm-9de1be671137955011d0d049c9b1b07803d8565b6c1e89e55b66488616524fca",
+          "llm-afb468bb89ce975b722b94eef019c1d56c1c212a80d91b30da2961e240a86184",
+          "llm-54c4b2f66854d8363f929d46b6b53a2bf470acddf616c0de72a877ed45de75b6",
+          "llm-4af9240fa37f2a7397c886a91f14f681f90f7ba060251b1fe104b5b7995ca873",
+          "llm-1bfaed8d90ce16fce10cf88cb57483b5f5a7f7393897ed50eeed04f9c7d25f37",
+          "llm-6984e1151032c1d07d752e180fdd26994e37b5cecb264acb09c0cf0d4470cb2c",
+          "llm-71d7f1c73f5a960dd50042a4fff1a8963fae7de8a2942ae4f53aa7366dde019c"
+        ],
+        "excluded": [],
+        "used_chars": 907,
+        "budget_chars": 1600,
+        "actually_sent_to_llm": false,
+        "metrics": {
+          "status": "N/A",
+          "reason": "unanswerable_document_scope",
+          "required_facts": 0
+        }
+      },
+      "hits": [
+        {
+          "chunk_id": "llm-3d0b39725348236cae8b001eed2a8449c576c7211a6548f59ff17ff02e286a3b",
+          "score": 0.500331522262021,
+          "text": "ED-02 다른 휴가와의 관리 구분\n",
+          "source": {
+            "chunk_id": "llm-3d0b39725348236cae8b001eed2a8449c576c7211a6548f59ff17ff02e286a3b",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 24915,
+            "base_end": 24935,
+            "start": 24915,
+            "end": 24935,
+            "pages": [
+              {
+                "page_number": 15,
+                "canonical_start": 24915,
+                "canonical_end": 24935,
+                "page_start": 1229,
+                "page_end": 1249,
+                "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+                "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제5장 교육휴가의 신청과 변경 [ED]",
+                "제1절 대상과 신청 정보 [ED-S1]",
+                "ED-02 다른 휴가와의 관리 구분"
+              ]
+            ],
+            "article_ids": [
+              "ED-02"
+            ],
+            "unit_ids": [
+              "u00415"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "4108216c41765e9a0cfe0499839bbc22f0007602fad16315a27e612397de5120"
+          }
+        },
+        {
+          "chunk_id": "llm-516dbbe797dcfad148e2b96e891a0e667edaaef4ddddae1ff3b66f866557756c",
+          "score": 0.49227534999684897,
+          "text": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.\n",
+          "source": {
+            "chunk_id": "llm-516dbbe797dcfad148e2b96e891a0e667edaaef4ddddae1ff3b66f866557756c",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 30941,
+            "base_end": 30973,
+            "start": 30941,
+            "end": 30973,
+            "pages": [
+              {
+                "page_number": 19,
+                "canonical_start": 30941,
+                "canonical_end": 30973,
+                "page_start": 259,
+                "page_end": 291,
+                "page_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+                "raw_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제6장 출장의 승인과 일정 관리 [TR]",
+                "제1절 출장 요청의 기본 사항 [TR-S1]",
+                "TR-02 다른 제도의 승인과 구분"
+              ]
+            ],
+            "article_ids": [
+              "TR-02"
+            ],
+            "unit_ids": [
+              "u00511"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "dbece438a4d949867b7089289aab7608a8d5beb4b78583d35c03ff555b69acf0"
+          }
+        },
+        {
+          "chunk_id": "llm-b44e2747c24339d945272a9397346edd1f4e84b8ea60924a195ff08ecb638da0",
+          "score": 0.47807867993355724,
+          "text": "재택근무일과 휴가일에는 이 식대를 지원하지 \n않는다.\n",
+          "source": {
+            "chunk_id": "llm-b44e2747c24339d945272a9397346edd1f4e84b8ea60924a195ff08ecb638da0",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 19105,
+            "base_end": 19135,
+            "start": 19105,
+            "end": 19135,
+            "pages": [
+              {
+                "page_number": 12,
+                "canonical_start": 19105,
+                "canonical_end": 19135,
+                "page_start": 465,
+                "page_end": 495,
+                "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+                "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제4장 복지 지원 내역의 확인 [WF]",
+                "제1절 지급 기준과 문의 구분 [WF-S1]",
+                "WF-01 식대 지원 기준"
+              ]
+            ],
+            "article_ids": [
+              "WF-01"
+            ],
+            "unit_ids": [
+              "u00317"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "91d9b847f16dd3dc6b3ce2b8ad5044eeb2dd8d431ae742585da6284d61aaaf7c"
+          }
+        },
+        {
+          "chunk_id": "llm-fd4b1dd83b8c4f012aaf015cb6ea0fa898d8df4311cb977384c9f42c6d4fff00",
+          "score": 0.4769389508508851,
+          "text": "이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.\n",
+          "source": {
+            "chunk_id": "llm-fd4b1dd83b8c4f012aaf015cb6ea0fa898d8df4311cb977384c9f42c6d4fff00",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 19292,
+            "base_end": 19323,
+            "start": 19292,
+            "end": 19323,
+            "pages": [
+              {
+                "page_number": 12,
+                "canonical_start": 19292,
+                "canonical_end": 19323,
+                "page_start": 652,
+                "page_end": 683,
+                "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+                "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제4장 복지 지원 내역의 확인 [WF]",
+                "제1절 지급 기준과 문의 구분 [WF-S1]",
+                "WF-02 생일 축하 포인트"
+              ]
+            ],
+            "article_ids": [
+              "WF-02"
+            ],
+            "unit_ids": [
+              "u00322"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "a6c7a8a838c1e5f5883fc2e7bd5b92ef6868542417c47ec2d0668bd037c4c8b4"
+          }
+        },
+        {
+          "chunk_id": "llm-0788dddf0508ac0a7a3704776060ae5c5b3b9ee6cb99edc5d7dc8549617ae4f6",
+          "score": 0.4614983025513254,
+          "text": "생일 특별휴가 및 연차와 별도로 관리한다.\n",
+          "source": {
+            "chunk_id": "llm-0788dddf0508ac0a7a3704776060ae5c5b3b9ee6cb99edc5d7dc8549617ae4f6",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 24935,
+            "base_end": 24959,
+            "start": 24935,
+            "end": 24959,
+            "pages": [
+              {
+                "page_number": 15,
+                "canonical_start": 24935,
+                "canonical_end": 24959,
+                "page_start": 1249,
+                "page_end": 1273,
+                "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+                "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제5장 교육휴가의 신청과 변경 [ED]",
+                "제1절 대상과 신청 정보 [ED-S1]",
+                "ED-02 다른 휴가와의 관리 구분"
+              ]
+            ],
+            "article_ids": [
+              "ED-02"
+            ],
+            "unit_ids": [
+              "u00416"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "d7c8fb44ed2943fc19f9e0fba10d15abaaf44d26210bc87e134486b76f7a38cc"
+          }
+        }
+      ]
+    },
+    {
+      "ranking": {
+        "question_hash": "b35c14320bed4fea7a8e05917fbccb2a0ce6c052b607cb118986bc1cc1882a4f",
+        "chunk_run_id": "chunk-33d09a4c7dd4441ca7778719614fe2c6",
+        "index_fingerprint": "38a215ae1c39920ee3835dc506745bc47e79443c167c8f010df939e5dc5b608a",
+        "config_id": "llm-0",
+        "retriever": "dense",
+        "results": [
+          {
+            "chunk_id": "llm-3d0b39725348236cae8b001eed2a8449c576c7211a6548f59ff17ff02e286a3b",
+            "score": 0.500331522262021
+          },
+          {
+            "chunk_id": "llm-516dbbe797dcfad148e2b96e891a0e667edaaef4ddddae1ff3b66f866557756c",
+            "score": 0.49227534999684897
+          },
+          {
+            "chunk_id": "llm-b44e2747c24339d945272a9397346edd1f4e84b8ea60924a195ff08ecb638da0",
+            "score": 0.47807867993355724
+          },
+          {
+            "chunk_id": "llm-fd4b1dd83b8c4f012aaf015cb6ea0fa898d8df4311cb977384c9f42c6d4fff00",
+            "score": 0.4769389508508851
+          },
+          {
+            "chunk_id": "llm-0788dddf0508ac0a7a3704776060ae5c5b3b9ee6cb99edc5d7dc8549617ae4f6",
+            "score": 0.4614983025513254
+          },
+          {
+            "chunk_id": "llm-d76f29309915a5572cc14c777587f070f3ba84e395156ae8212959d38c8b542f",
+            "score": 0.4553816172411316
+          },
+          {
+            "chunk_id": "llm-ac3bdeb89ca9c41a57e8aed5eb46263d3d648944795bf4c6137d05ff28027c8b",
+            "score": 0.45288676215636775
+          },
+          {
+            "chunk_id": "llm-1270706752c4426285574be3436861f5df1bd4caac399bf7bd553aabb2db9570",
+            "score": 0.4525627949066436
+          },
+          {
+            "chunk_id": "llm-d98c98de73de0f33d0eee23043ab5b353f3f7921dfdc0199c8cc557439b9772f",
+            "score": 0.44526282600971967
+          },
+          {
+            "chunk_id": "llm-b2973158f29d8f54ed2f3d86fb904bd865eb7e1eb6e2b735469a3fa7cbb81a95",
+            "score": 0.4427429671292376
+          },
+          {
+            "chunk_id": "llm-8167c124b167f98264e6786b9d9c99db52626966674f70e22b5b92828d15e5bc",
+            "score": 0.4416913483502959
+          },
+          {
+            "chunk_id": "llm-29917e64bf91f9396d9b6722b9d075aab6a1ee1d5f207410a04defac872861b5",
+            "score": 0.4402359772112107
+          },
+          {
+            "chunk_id": "llm-8860c7b3442e8c89667d3bb35040545a3631c8c2a4a6af693e425f268d1d2e77",
+            "score": 0.43953570511126716
+          },
+          {
+            "chunk_id": "llm-9de1be671137955011d0d049c9b1b07803d8565b6c1e89e55b66488616524fca",
+            "score": 0.4377954253684063
+          },
+          {
+            "chunk_id": "llm-afb468bb89ce975b722b94eef019c1d56c1c212a80d91b30da2961e240a86184",
+            "score": 0.43482470145243346
+          },
+          {
+            "chunk_id": "llm-54c4b2f66854d8363f929d46b6b53a2bf470acddf616c0de72a877ed45de75b6",
+            "score": 0.4321614359828511
+          },
+          {
+            "chunk_id": "llm-4af9240fa37f2a7397c886a91f14f681f90f7ba060251b1fe104b5b7995ca873",
+            "score": 0.4318940552926995
+          },
+          {
+            "chunk_id": "llm-1bfaed8d90ce16fce10cf88cb57483b5f5a7f7393897ed50eeed04f9c7d25f37",
+            "score": 0.43177200570609414
+          },
+          {
+            "chunk_id": "llm-6984e1151032c1d07d752e180fdd26994e37b5cecb264acb09c0cf0d4470cb2c",
+            "score": 0.42720872493234774
+          },
+          {
+            "chunk_id": "llm-71d7f1c73f5a960dd50042a4fff1a8963fae7de8a2942ae4f53aa7366dde019c",
+            "score": 0.4270567990746787
+          }
+        ],
+        "elapsed_ms": 7.234207994770259
+      },
+      "metrics": {
+        "status": "N/A",
+        "reason": "unanswerable_document_scope",
+        "required_facts": 0
+      },
+      "budget": {
+        "kind": "context_budget_simulation",
+        "selected": [
+          "llm-3d0b39725348236cae8b001eed2a8449c576c7211a6548f59ff17ff02e286a3b",
+          "llm-516dbbe797dcfad148e2b96e891a0e667edaaef4ddddae1ff3b66f866557756c",
+          "llm-b44e2747c24339d945272a9397346edd1f4e84b8ea60924a195ff08ecb638da0",
+          "llm-fd4b1dd83b8c4f012aaf015cb6ea0fa898d8df4311cb977384c9f42c6d4fff00",
+          "llm-0788dddf0508ac0a7a3704776060ae5c5b3b9ee6cb99edc5d7dc8549617ae4f6",
+          "llm-d76f29309915a5572cc14c777587f070f3ba84e395156ae8212959d38c8b542f",
+          "llm-ac3bdeb89ca9c41a57e8aed5eb46263d3d648944795bf4c6137d05ff28027c8b",
+          "llm-1270706752c4426285574be3436861f5df1bd4caac399bf7bd553aabb2db9570",
+          "llm-d98c98de73de0f33d0eee23043ab5b353f3f7921dfdc0199c8cc557439b9772f",
+          "llm-b2973158f29d8f54ed2f3d86fb904bd865eb7e1eb6e2b735469a3fa7cbb81a95",
+          "llm-8167c124b167f98264e6786b9d9c99db52626966674f70e22b5b92828d15e5bc",
+          "llm-29917e64bf91f9396d9b6722b9d075aab6a1ee1d5f207410a04defac872861b5",
+          "llm-8860c7b3442e8c89667d3bb35040545a3631c8c2a4a6af693e425f268d1d2e77",
+          "llm-9de1be671137955011d0d049c9b1b07803d8565b6c1e89e55b66488616524fca",
+          "llm-afb468bb89ce975b722b94eef019c1d56c1c212a80d91b30da2961e240a86184",
+          "llm-54c4b2f66854d8363f929d46b6b53a2bf470acddf616c0de72a877ed45de75b6",
+          "llm-4af9240fa37f2a7397c886a91f14f681f90f7ba060251b1fe104b5b7995ca873",
+          "llm-1bfaed8d90ce16fce10cf88cb57483b5f5a7f7393897ed50eeed04f9c7d25f37",
+          "llm-6984e1151032c1d07d752e180fdd26994e37b5cecb264acb09c0cf0d4470cb2c",
+          "llm-71d7f1c73f5a960dd50042a4fff1a8963fae7de8a2942ae4f53aa7366dde019c"
+        ],
+        "excluded": [],
+        "used_chars": 907,
+        "budget_chars": 1600,
+        "actually_sent_to_llm": false,
+        "metrics": {
+          "status": "N/A",
+          "reason": "unanswerable_document_scope",
+          "required_facts": 0
+        }
+      },
+      "hits": [
+        {
+          "chunk_id": "llm-3d0b39725348236cae8b001eed2a8449c576c7211a6548f59ff17ff02e286a3b",
+          "score": 0.500331522262021,
+          "text": "ED-02 다른 휴가와의 관리 구분\n",
+          "source": {
+            "chunk_id": "llm-3d0b39725348236cae8b001eed2a8449c576c7211a6548f59ff17ff02e286a3b",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 24915,
+            "base_end": 24935,
+            "start": 24915,
+            "end": 24935,
+            "pages": [
+              {
+                "page_number": 15,
+                "canonical_start": 24915,
+                "canonical_end": 24935,
+                "page_start": 1229,
+                "page_end": 1249,
+                "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+                "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제5장 교육휴가의 신청과 변경 [ED]",
+                "제1절 대상과 신청 정보 [ED-S1]",
+                "ED-02 다른 휴가와의 관리 구분"
+              ]
+            ],
+            "article_ids": [
+              "ED-02"
+            ],
+            "unit_ids": [
+              "u00415"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "4108216c41765e9a0cfe0499839bbc22f0007602fad16315a27e612397de5120"
+          }
+        },
+        {
+          "chunk_id": "llm-516dbbe797dcfad148e2b96e891a0e667edaaef4ddddae1ff3b66f866557756c",
+          "score": 0.49227534999684897,
+          "text": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.\n",
+          "source": {
+            "chunk_id": "llm-516dbbe797dcfad148e2b96e891a0e667edaaef4ddddae1ff3b66f866557756c",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 30941,
+            "base_end": 30973,
+            "start": 30941,
+            "end": 30973,
+            "pages": [
+              {
+                "page_number": 19,
+                "canonical_start": 30941,
+                "canonical_end": 30973,
+                "page_start": 259,
+                "page_end": 291,
+                "page_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+                "raw_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제6장 출장의 승인과 일정 관리 [TR]",
+                "제1절 출장 요청의 기본 사항 [TR-S1]",
+                "TR-02 다른 제도의 승인과 구분"
+              ]
+            ],
+            "article_ids": [
+              "TR-02"
+            ],
+            "unit_ids": [
+              "u00511"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "dbece438a4d949867b7089289aab7608a8d5beb4b78583d35c03ff555b69acf0"
+          }
+        },
+        {
+          "chunk_id": "llm-b44e2747c24339d945272a9397346edd1f4e84b8ea60924a195ff08ecb638da0",
+          "score": 0.47807867993355724,
+          "text": "재택근무일과 휴가일에는 이 식대를 지원하지 \n않는다.\n",
+          "source": {
+            "chunk_id": "llm-b44e2747c24339d945272a9397346edd1f4e84b8ea60924a195ff08ecb638da0",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 19105,
+            "base_end": 19135,
+            "start": 19105,
+            "end": 19135,
+            "pages": [
+              {
+                "page_number": 12,
+                "canonical_start": 19105,
+                "canonical_end": 19135,
+                "page_start": 465,
+                "page_end": 495,
+                "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+                "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제4장 복지 지원 내역의 확인 [WF]",
+                "제1절 지급 기준과 문의 구분 [WF-S1]",
+                "WF-01 식대 지원 기준"
+              ]
+            ],
+            "article_ids": [
+              "WF-01"
+            ],
+            "unit_ids": [
+              "u00317"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "91d9b847f16dd3dc6b3ce2b8ad5044eeb2dd8d431ae742585da6284d61aaaf7c"
+          }
+        },
+        {
+          "chunk_id": "llm-fd4b1dd83b8c4f012aaf015cb6ea0fa898d8df4311cb977384c9f42c6d4fff00",
+          "score": 0.4769389508508851,
+          "text": "이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.\n",
+          "source": {
+            "chunk_id": "llm-fd4b1dd83b8c4f012aaf015cb6ea0fa898d8df4311cb977384c9f42c6d4fff00",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 19292,
+            "base_end": 19323,
+            "start": 19292,
+            "end": 19323,
+            "pages": [
+              {
+                "page_number": 12,
+                "canonical_start": 19292,
+                "canonical_end": 19323,
+                "page_start": 652,
+                "page_end": 683,
+                "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+                "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제4장 복지 지원 내역의 확인 [WF]",
+                "제1절 지급 기준과 문의 구분 [WF-S1]",
+                "WF-02 생일 축하 포인트"
+              ]
+            ],
+            "article_ids": [
+              "WF-02"
+            ],
+            "unit_ids": [
+              "u00322"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "a6c7a8a838c1e5f5883fc2e7bd5b92ef6868542417c47ec2d0668bd037c4c8b4"
+          }
+        },
+        {
+          "chunk_id": "llm-0788dddf0508ac0a7a3704776060ae5c5b3b9ee6cb99edc5d7dc8549617ae4f6",
+          "score": 0.4614983025513254,
+          "text": "생일 특별휴가 및 연차와 별도로 관리한다.\n",
+          "source": {
+            "chunk_id": "llm-0788dddf0508ac0a7a3704776060ae5c5b3b9ee6cb99edc5d7dc8549617ae4f6",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "llm-0",
+              "method": "llm",
+              "base_max_chars": 800,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1",
+              "preferred_chars": [
+                200,
+                400
+              ],
+              "boundary_source": "same_selected_invocation_for_both_overlaps"
+            },
+            "base_start": 24935,
+            "base_end": 24959,
+            "start": 24935,
+            "end": 24959,
+            "pages": [
+              {
+                "page_number": 15,
+                "canonical_start": 24935,
+                "canonical_end": 24959,
+                "page_start": 1249,
+                "page_end": 1273,
+                "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+                "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제5장 교육휴가의 신청과 변경 [ED]",
+                "제1절 대상과 신청 정보 [ED-S1]",
+                "ED-02 다른 휴가와의 관리 구분"
+              ]
+            ],
+            "article_ids": [
+              "ED-02"
+            ],
+            "unit_ids": [
+              "u00416"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "d7c8fb44ed2943fc19f9e0fba10d15abaaf44d26210bc87e134486b76f7a38cc"
+          }
+        }
+      ]
+    }
+  ],
+  "dataset_sha256": "9be17b08440418d75d2128c39eae6cbb9ce76301221b2fe79b60c99dd468b0e9"
+}

@@ -2,10 +2,10 @@
   "stage": "Document Chunking",
   "implemented_cards": [
     "P015",
-    "P016"
+    "P016",
+    "P007"
   ],
   "planned_cards": [
-    "P007",
     "P008"
   ],
   "source_commit": "4957d59bad8ed898c9513b6922c215a4d7ca931a",
@@ -199,5 +199,193 @@
       "path": "tests/test_handbook.py",
       "sha256": "725604adf77f920c434708ccc6220f5e86f1c34545ed5f30b604511220fe85cb"
     }
+  },
+  "p007_extensions": {
+    "source_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+    "plan_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+    "copies": [
+      {
+        "source_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+        "source_path": "docs/planning/specs/P007-experiment-draft.json",
+        "source_sha256": "285028d2d76af9bd14e741894864f61aeafd1f6ecfee8aef2bf727ea4e748b5f",
+        "path": "experiments/p007/spec.json",
+        "mode": "immutable experiment input",
+        "current_sha256": "285028d2d76af9bd14e741894864f61aeafd1f6ecfee8aef2bf727ea4e748b5f"
+      },
+      {
+        "source_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+        "source_path": "docs/planning/specs/P007-retrieval-dataset.json",
+        "source_sha256": "9be17b08440418d75d2128c39eae6cbb9ce76301221b2fe79b60c99dd468b0e9",
+        "path": "experiments/p007/dataset.json",
+        "mode": "immutable experiment input",
+        "current_sha256": "9be17b08440418d75d2128c39eae6cbb9ce76301221b2fe79b60c99dd468b0e9"
+      },
+      {
+        "source_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+        "source_path": "docs/planning/reviews/p007/boundary-map.json",
+        "source_sha256": "daa50e2958a617694d4c8d962d00a4b71519e66ba96560fbf4fb74a29f7a5b37",
+        "path": "experiments/p007/boundary-map.json",
+        "mode": "immutable experiment input",
+        "current_sha256": "daa50e2958a617694d4c8d962d00a4b71519e66ba96560fbf4fb74a29f7a5b37"
+      },
+      {
+        "source_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+        "source_path": "docs/planning/reviews/p007/source-profile.json",
+        "source_sha256": "ed49f35a9cefa8b4498212371584c7849d62937a0bb3467686d975bbb46b316c",
+        "path": "experiments/p007/source-profile.json",
+        "mode": "immutable experiment input",
+        "current_sha256": "ed49f35a9cefa8b4498212371584c7849d62937a0bb3467686d975bbb46b316c"
+      },
+      {
+        "source_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+        "source_path": "docs/planning/reviews/p007/prompt-contract.json",
+        "source_sha256": "b5fa4403a8a94b0236a669c4b5ec2a0c5deac49c601ed956ecaada99bc96ebd5",
+        "path": "experiments/p007/prompt-contract.json",
+        "mode": "immutable experiment input",
+        "current_sha256": "b5fa4403a8a94b0236a669c4b5ec2a0c5deac49c601ed956ecaada99bc96ebd5"
+      },
+      {
+        "source_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+        "source_path": "docs/planning/reviews/p007/input-budget.json",
+        "source_sha256": "4e9feaef5931ce436733f2683641981c043dd683c9d9b1164e06fc808ae5f06d",
+        "path": "experiments/p007/input-budget.json",
+        "mode": "immutable experiment input",
+        "current_sha256": "4e9feaef5931ce436733f2683641981c043dd683c9d9b1164e06fc808ae5f06d"
+      },
+      {
+        "source_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+        "source_path": "docs/planning/reviews/p007/runtime-metadata.json",
+        "source_sha256": "ce39ba744b645afd13d0a5b9c092ff872bee64ef30e20f4d20ae851054700e03",
+        "path": "experiments/p007/runtime-metadata.json",
+        "mode": "immutable experiment input",
+        "current_sha256": "ce39ba744b645afd13d0a5b9c092ff872bee64ef30e20f4d20ae851054700e03"
+      },
+      {
+        "source_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+        "source_path": "docs/planning/reviews/p007/probe-results.json",
+        "source_sha256": "5293045fbf9186bd1e57c24442426e960ac56d124ee527a38f2728c072d1e82f",
+        "path": "experiments/p007/probe-results.json",
+        "mode": "immutable experiment input",
+        "current_sha256": "5293045fbf9186bd1e57c24442426e960ac56d124ee527a38f2728c072d1e82f"
+      },
+      {
+        "source_commit": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+        "source_path": "docs/planning/reviews/p007/preview-manifest.json",
+        "source_sha256": "735a8235eec388bdd18e232d4765c5695d9a79990738982f43f78dbf7b0885d4",
+        "path": "experiments/p007/preview-manifest.json",
+        "mode": "immutable experiment input",
+        "current_sha256": "735a8235eec388bdd18e232d4765c5695d9a79990738982f43f78dbf7b0885d4"
+      },
+      {
+        "source_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+        "source_path": "1. Naive RAG/variants/langchain/runtime-lock.json",
+        "source_sha256": "80733dae580bf02e5000f76971ed17013e415d8540426225915f339b6c6e7357",
+        "path": "runtime-lock.json",
+        "mode": "dependency contract retained",
+        "current_sha256": "80733dae580bf02e5000f76971ed17013e415d8540426225915f339b6c6e7357"
+      },
+      {
+        "source_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+        "source_path": "1. Naive RAG/variants/langchain/requirements.lock",
+        "source_sha256": "642638148f4bf810df637b6fc52f10e06e5ca402846a864628a272ed84fe1daf",
+        "path": "requirements.lock",
+        "mode": "dependency contract retained",
+        "current_sha256": "642638148f4bf810df637b6fc52f10e06e5ca402846a864628a272ed84fe1daf"
+      },
+      {
+        "source_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+        "source_path": "1. Naive RAG/variants/langchain/requirements-langchain.lock",
+        "source_sha256": "4194d226dcef4ffaf7ff37023119edd8b5a4949c97e75dce056974c7e0ef1a79",
+        "path": "requirements-langchain.lock",
+        "mode": "dependency contract retained",
+        "current_sha256": "4194d226dcef4ffaf7ff37023119edd8b5a4949c97e75dce056974c7e0ef1a79"
+      },
+      {
+        "source_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+        "source_path": "1. Naive RAG/variants/langchain/scripts/chunk_documents.py",
+        "source_sha256": "9677e363665f3e4649e04626c101851a1daca0dca67e21c01e9a98a23c0b8bdb",
+        "path": "scripts/source_io.py",
+        "selected_symbols": [
+          "windows",
+          "load_documents",
+          "page_intersections",
+          "union_length"
+        ],
+        "reason": "Local reusable core; no parent-stage imports",
+        "current_sha256": "6fba9fb94c660fd5761e0f0ec942a1d8d3e5749b594f70b41c57b808e4688e9b"
+      },
+      {
+        "source_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+        "source_path": "1. Naive RAG/variants/langchain/scripts/run_bm25_baseline.py",
+        "source_sha256": "bdbe19867eaaadff6223089d4ee09ea6d152de9bfde63bfa7ada41e4a0967711",
+        "path": "scripts/bm25_core.py",
+        "selected_symbols": [
+          "tokenize",
+          "BM25Index"
+        ],
+        "reason": "Local reusable core; no parent-stage imports",
+        "current_sha256": "e52836efafd3f992f92b521cd28204ba9ccc054085de672ebad671cb2ee35ff1"
+      },
+      {
+        "source_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+        "source_path": "1. Naive RAG/variants/langchain/scripts/dense_retrieval.py",
+        "source_sha256": "06e5ad23123f4b29f19dff91cc2827666b30ec33ffa5d7ed32d06a5cb675a7aa",
+        "path": "scripts/dense_core.py",
+        "reason": "Keep persistent Qdrant cosine validation and tie-breaking; adapt text-only/version and local imports",
+        "current_sha256": "aa342a2ee9f3700a8cd416a5df1e9155242665f62724b6a452fbb7e4d23aeaa8"
+      },
+      {
+        "source_commit": "4cdee6f9583c899d76e95237af8b5de8d77d8012",
+        "source_path": "1. Naive RAG/variants/langchain/web_compare/style.css",
+        "source_sha256": "d27c0b34955f0333c8ccbd69ce81747e091a8e82ab982d1d188e149288b22981",
+        "path": "web_chunking/base.css",
+        "reason": "Retain P012 visual foundation; accessible chunking-specific layout added separately",
+        "current_sha256": "d27c0b34955f0333c8ccbd69ce81747e091a8e82ab982d1d188e149288b22981"
+      }
+    ],
+    "implementation_files": {
+      "scripts/bm25_core.py": "e52836efafd3f992f92b521cd28204ba9ccc054085de672ebad671cb2ee35ff1",
+      "scripts/chunk_core.py": "70c35dcb1d9b852bc7e7cd8840c9a17eadfe3b13843b42084e61392d6971ad29",
+      "scripts/chunk_documents.py": "33b0cefb46a4cbffd1907adb996580a1df2985203edb6f22f93673ae38dc225c",
+      "scripts/create_handbook_pdf.py": "e06947a2ed3129ea0bc95e62ee7ee6a2670a83f96521102ef6c0c4a0c4a0d4eb",
+      "scripts/create_source_pdfs.py": "4370109b479eaead8e1ddf85ccc87f6d6e49b0c3f925b2767031aeac4c1f17f4",
+      "scripts/dense_core.py": "aa342a2ee9f3700a8cd416a5df1e9155242665f62724b6a452fbb7e4d23aeaa8",
+      "scripts/document_common.py": "87fd8d0a06b5bbbd38125667e279e4c1d5c37778f8c3710121d88edffd6539a1",
+      "scripts/experiment_common.py": "e82facce0134b2acd3e745b0f277e39e27509180f2dc4811397bed00de9954c7",
+      "scripts/handbook_artifacts.py": "eeaec4b947f7b4b5044dd1c25e8ec3f581c5148caa59c3fc2e60fad3ede098e7",
+      "scripts/handbook_model.py": "2b6e02c16b49135817f76d5945ecbb04aa3ba5c9c722ddf40916d21c254322c6",
+      "scripts/ingest_documents.py": "355f432ad1c8bca7734407a48d35bc32dfdee83b26a7ed8fb9733b10c87404d3",
+      "scripts/model_runtime.py": "aeb116cfa85f6c214d4a93c5585cff98bccaa7edf634a8d46a231ccd117675fc",
+      "scripts/pdf_extract_worker.py": "68396755d4dfc415cb250b87223de1c007d61fd67116756a53ae4ea0e0abcb33",
+      "scripts/prepare_handbook.py": "d4b77d14dc7aece363b6db48590ee938780647f25b6bb4f1cbd653afb62ed4a6",
+      "scripts/prepare_handoff.py": "e32a015dc3c597feebec195655e7b9b5599bae522f9e5ee95d7d56077f0bbc19",
+      "scripts/retrieval_core.py": "4fac8a0f63cec82e13dc8d149b15d1ee998ec68e4a7bf8aa27a754d423fe2871",
+      "scripts/run_chunking_experiment.py": "57135967f639577e5e161fd6660b069fcbbd629bdcc34ce98fde2f4581e1c986",
+      "scripts/run_llm_repetitions.py": "26eef82a1a08e5d29ec2865ab0ee787a3eaad9519aab0286aeb71daf996db4a6",
+      "scripts/serve_chunking.py": "073b4b06a3f1759e54b4d98b8a85c5d29e3f1979d617b51ce40b551c072b05e8",
+      "scripts/snapshot_drive_fixture.py": "dabf8e55e7e672c25d77c2126ffa2da4b0304fe2a82994fa4757dbb3c487737b",
+      "scripts/source_io.py": "6fba9fb94c660fd5761e0f0ec942a1d8d3e5749b594f70b41c57b808e4688e9b",
+      "scripts/span_metrics.py": "9b6ccb2a8b0ab3b89c81c1b9ed0f9d183c14284bab1846bde936e1634e700f38",
+      "scripts/validate_handbook.py": "8e36f36d66eefb9b5d8a51f4749d4918f1cf198d12de505120665b6131b8fee3",
+      "scripts/validate_source.py": "48a8f47b3f42ea48ff74ec9b52280a2073f16a00d1a53d6bdece9f31c105fcf3",
+      "tests/test_budget.py": "29062bf5fc21f3c9593aa2398fc06de5866ae433558a50381d157eaab3743849",
+      "tests/test_chunk_core.py": "0690933662e34f9e762654605f9e45f7fafc706459f6d8f70466a6ecbce1a3ab",
+      "tests/test_documents.py": "3fd699264ce71c941253c4c1ae17cee46713fddd9243cc3e6648bb148c780f5a",
+      "tests/test_handbook.py": "725604adf77f920c434708ccc6220f5e86f1c34545ed5f30b604511220fe85cb",
+      "tests/test_retrieval_contract.py": "9ed74df3df2afb6fc16dc92ad0fe9d9f36babd3ae18e68bf80869a0adc633fef",
+      "tests/test_server_contract.py": "be7d8da581830f0ddf603069300bbd1d829b450ef31677e7c3dec911fd2fefc4",
+      "tests/test_source_v3.py": "69a9ff766113eafe7caee3061d1d91537cc0fabb63ea46848e59f0da83c31dbf",
+      "tests/test_span_metrics.py": "96f4c24a359b78f8bd5ad8e3116db06534f54f4449193ed7d8e50c4812a45b69",
+      "web_chunking/app.js": "351509eeb208fda581658b7820a65bb062b2a52f3184c6e407ab66648045a3a9",
+      "web_chunking/base.css": "d27c0b34955f0333c8ccbd69ce81747e091a8e82ab982d1d188e149288b22981",
+      "web_chunking/index.html": "9bab237ce9ecbfd671ff4e3d5e3767a146b609b94c42acc156f8e34356ad6356",
+      "web_chunking/style.css": "3b02afa2d28e57caddfa0c3b001998e8afdb242849770cb26d7b08d29bedff12"
+    },
+    "fixed_input": "data/source-v4",
+    "experiment": "artifacts/experiment-002",
+    "runtime_python": "3.12.14",
+    "requirements": "requirements-langchain.lock",
+    "provider": "owned loopback 127.0.0.1:11434; no model download",
+    "no_parent_runtime_imports": true
   }
 }

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "browser": "Codex in-app browser",
+  "production_port": 8003,
+  "normal_workflow": ["registered PDF/page preview/canonical text", "chapter/section/article selection", "chunk exact source range and first intersecting page", "fixed overlap highlight 80 characters", "fresh LLM job 35 windows/35 requests", "reload reconnects same job without new inference", "saved LLM replay with zero inference delta", "same-query Dense baseline/candidate comparison", "BM25 unknown query empty results with N/A", "cached index reuse with zero embedding delta", "run export API allowlist and hashes"],
+  "responsive": [{"viewport_width":1200,"document_scroll_width":1200},{"viewport_width":390,"document_scroll_width":390}],
+  "keyboard": "question -> Tab topk -> Tab budget -> Tab compare -> Enter; results returned",
+  "birthday_query": {"baseline_fact_recall":"2/3","candidate_fact_recall":"3/3","baseline_duplicate_chars":160,"candidate_duplicate_chars":0,"budget_800_fact_recall_both":"1/3"},
+  "error_fixture": {"isolated_copy_port":8004,"provider_inference":0,"cases":["invalid_config shown","stale corpus/index shown","FAILED provider shown while previous successful result preserved"],"server_stopped":true,"scope":"Injected failures only; actual production LLM success was separately tested"},
+  "download": {"pdf_browser_path_observed":"Downloads/hr-handbook.pdf","zip_browser_event":"unavailable; do not claim completed browser download","zip_api_verified":true},
+  "screenshots": ["browser-final-comparison.png","browser-390-keyboard-search.png","browser-390-running.png","browser-error-fixture.png","browser-1200-source.png","browser-1200-llm-complete.png"],
+  "temporary_viewport_override_reset": true
+}

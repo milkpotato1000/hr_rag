@@ -11,6 +11,7 @@ from run_llm_repetitions import one
 from model_runtime import Provider,Ledger
 from retrieval_core import build_index,Searcher,read_chunks,identity
 from span_metrics import evaluate,select_budget
+from source_io import union_length
 CORPUS='source-v4';DID='hr-v4-handbook'
 JOBS=RUNTIME/'jobs';request_mutex=threading.Lock()
 
@@ -110,7 +111,8 @@ def compare(b):
                 metrics=evaluate(q,facts,search.maps,ids,b['top_k'],{DID:text});metrics.pop('qrels',None)
                 budget=select_budget(ids,search.chunks,b['budget_chars']);budget['metrics']=evaluate(q,facts,search.maps,budget['selected'],max(1,len(budget['selected'])),{DID:text});budget['metrics'].pop('qrels',None)
                 lookup={m['chunk_id']:m for m in search.maps}
-                out.append(dict(ranking=ranking,metrics=metrics,budget=budget,hits=[dict(**r,text=search.chunks[r['chunk_id']]['text'],source=lookup[r['chunk_id']]) for r in ranking['results'][:b['top_k']]]))
+                top=ids[:b['top_k']];emitted=sum(len(search.chunks[cid]['text']) for cid in top);unique=union_length([(lookup[cid]['start'],lookup[cid]['end']) for cid in top])
+                out.append(dict(ranking=ranking,metrics=metrics,budget=budget,retrieved_text=dict(emitted_chars=emitted,unique_chars=unique,duplicate_chars=emitted-unique),hits=[dict(**r,text=search.chunks[r['chunk_id']]['text'],source=lookup[r['chunk_id']]) for r in ranking['results'][:b['top_k']]]))
         value=dict(comparison_id=new_id('comparison'),question=question,query_id=q['query_id'] if q else None,split=q['split'] if q else None,corpus_id=CORPUS,top_k=b['top_k'],budget_chars=b['budget_chars'],retriever=b['retriever'],embedding=embedding,results=out,dataset_sha256=file_hash(EXP/'dataset.json'))
         save_state(RUNTIME/'comparisons'/(value['comparison_id']+'.json'),value);return value
 

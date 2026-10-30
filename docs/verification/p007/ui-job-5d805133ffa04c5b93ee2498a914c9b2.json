@@ -1,0 +1,53 @@
+{
+  "job_id": "job-5d805133ffa04c5b93ee2498a914c9b2",
+  "request_id": "cb2fd812-07f5-4aac-9f92-d524ec48f58d",
+  "request_hash": "d61a1d7f0eef754ae6e9575c6ffe72fceb818080a7ae2666f086e49e8449e249",
+  "status": "SUCCEEDED",
+  "kind": "index",
+  "created_at": 1793316988.034487,
+  "request": {
+    "chunk_run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+    "retriever": "dense",
+    "request_id": "cb2fd812-07f5-4aac-9f92-d524ec48f58d"
+  },
+  "progress": {},
+  "result": {
+    "identity": {
+      "chunk_run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+      "chunks_sha256": "54425b468bb51b31ffd09580874aacf3c058349a1142ae84d10fad0215d934e9",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "config": {
+        "id": "fixed-400-80",
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "retriever": "dense",
+      "text_version": "canonical-slice-only-v1",
+      "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+      "parameters": {
+        "dimension": 1024,
+        "distance": "Cosine",
+        "qdrant": "1.19.1"
+      }
+    },
+    "fingerprint": "01e0887fd234585c639b29e70f33268b6e80fc40e756e9784772a4f91bc73963",
+    "status": "complete",
+    "build_ms": 9697.043874999508,
+    "embedding": {
+      "items": 121,
+      "cache_hits": 25,
+      "new_items": 96
+    },
+    "replayed": true,
+    "index_bytes": 1513329,
+    "usage_delta": {
+      "llm_requests": 0,
+      "embedding_items": 0,
+      "llm_seconds": 0.0,
+      "embedding_seconds": 0.0
+    }
+  },
+  "started_at": 1793316988.036098,
+  "finished_at": 1793316988.0773618
+}

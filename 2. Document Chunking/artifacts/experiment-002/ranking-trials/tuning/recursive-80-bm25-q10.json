@@ -1,0 +1,62 @@
+[
+  {
+    "question_hash": "7cc27d194d2c800c3ea9aed7efd4153ba5c3b70ec3e15fe2cb77b0ba9dab4deb",
+    "chunk_run_id": "chunk-bbe33af397954d02bbdbe8d7324c5aa8",
+    "index_fingerprint": "6d0ca9e5eacd512b6fac86ab47b49e00839d313613d049e8e510d6306399d83c",
+    "config_id": "recursive-80",
+    "retriever": "bm25",
+    "results": [
+      {
+        "chunk_id": "recursive-a0ee08e25bb77142f6cb5f91a8ea4509e3a0d6edb0e559c9c8048c0302166cf1",
+        "score": 9.056060699654516
+      },
+      {
+        "chunk_id": "recursive-18b3f8ed1d536c4d5a0e2b708f49e4811c1a81752b6ea942f0bbee3eccc9034d",
+        "score": 4.522557016204477
+      },
+      {
+        "chunk_id": "recursive-f63c181e128c8a2dced3c3b3929dc353aa33e5df310c5352646a23044244f5b9",
+        "score": 4.345835744576414
+      },
+      {
+        "chunk_id": "recursive-a71ac221135d11be5fe2e7c43f2613d0e4b866045e5897ac5f22b5b2cde95683",
+        "score": 3.825106905359418
+      },
+      {
+        "chunk_id": "recursive-7ac6241a71a151686b260ba1ff949b37c9a70995baef0bb4f1ac771d57bc35b3",
+        "score": 3.518390153464452
+      }
+    ],
+    "elapsed_ms": 0.2210829989053309
+  },
+  {
+    "question_hash": "7cc27d194d2c800c3ea9aed7efd4153ba5c3b70ec3e15fe2cb77b0ba9dab4deb",
+    "chunk_run_id": "chunk-bbe33af397954d02bbdbe8d7324c5aa8",
+    "index_fingerprint": "6d0ca9e5eacd512b6fac86ab47b49e00839d313613d049e8e510d6306399d83c",
+    "config_id": "recursive-80",
+    "retriever": "bm25",
+    "results": [
+      {
+        "chunk_id": "recursive-a0ee08e25bb77142f6cb5f91a8ea4509e3a0d6edb0e559c9c8048c0302166cf1",
+        "score": 9.056060699654516
+      },
+      {
+        "chunk_id": "recursive-18b3f8ed1d536c4d5a0e2b708f49e4811c1a81752b6ea942f0bbee3eccc9034d",
+        "score": 4.522557016204477
+      },
+      {
+        "chunk_id": "recursive-f63c181e128c8a2dced3c3b3929dc353aa33e5df310c5352646a23044244f5b9",
+        "score": 4.345835744576414
+      },
+      {
+        "chunk_id": "recursive-a71ac221135d11be5fe2e7c43f2613d0e4b866045e5897ac5f22b5b2cde95683",
+        "score": 3.825106905359418
+      },
+      {
+        "chunk_id": "recursive-7ac6241a71a151686b260ba1ff949b37c9a70995baef0bb4f1ac771d57bc35b3",
+        "score": 3.518390153464452
+      }
+    ],
+    "elapsed_ms": 0.11729198740795255
+  }
+]

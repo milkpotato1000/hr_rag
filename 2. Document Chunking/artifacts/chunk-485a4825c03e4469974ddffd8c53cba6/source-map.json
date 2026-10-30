@@ -1,0 +1,6446 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "recursive-da373947c79ccd2bb0c1370aa61b46ba24746e14a1ec3564eaacbe9812509eb1",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 0,
+      "base_end": 376,
+      "start": 0,
+      "end": 376,
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 0,
+          "canonical_end": 376,
+          "page_start": 0,
+          "page_end": 376,
+          "page_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28",
+          "raw_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제1절 적용 기준 [BD-S1]",
+          "BD-01 적용 대상과 부여 일수"
+        ]
+      ],
+      "article_ids": [
+        "BD-01"
+      ],
+      "unit_ids": [
+        "u00000",
+        "u00001",
+        "u00002",
+        "u00003",
+        "u00004",
+        "u00005",
+        "u00006",
+        "u00007",
+        "u00008"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "f05de121b41439a00159c671b8069e3f6b87978d3c9dbd7e57314e2f676a0564"
+    },
+    {
+      "chunk_id": "recursive-4baab75cee4a215978a39335f90fbfece8bc0ee789585c9011d34b05851c5caa",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 376,
+      "base_end": 762,
+      "start": 376,
+      "end": 762,
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 376,
+          "canonical_end": 762,
+          "page_start": 376,
+          "page_end": 762,
+          "page_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28",
+          "raw_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제1절 적용 기준 [BD-S1]",
+          "BD-01 적용 대상과 부여 일수"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제1절 적용 기준 [BD-S1]",
+          "BD-02 사용 범위와 다른 제도"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제1절 적용 기준 [BD-S1]",
+          "BD-03 신청 기한과 승인"
+        ]
+      ],
+      "article_ids": [
+        "BD-01",
+        "BD-02",
+        "BD-03"
+      ],
+      "unit_ids": [
+        "u00009",
+        "u00010",
+        "u00011",
+        "u00012",
+        "u00013",
+        "u00014",
+        "u00015",
+        "u00016",
+        "u00017",
+        "u00018"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "6d5ad6975b7bb31fa0c0e739f25307c597e037d0251635e339780d7b68334ac9"
+    },
+    {
+      "chunk_id": "recursive-cf1b116d80216a24f59e1561ee837a9c38174d6ad37c3b9b4533693606ffd368",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 762,
+      "base_end": 961,
+      "start": 762,
+      "end": 961,
+      "pages": [
+        {
+          "page_number": 1,
+          "canonical_start": 762,
+          "canonical_end": 959,
+          "page_start": 762,
+          "page_end": 959,
+          "page_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28",
+          "raw_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제1절 적용 기준 [BD-S1]",
+          "BD-03 신청 기한과 승인"
+        ]
+      ],
+      "article_ids": [
+        "BD-03"
+      ],
+      "unit_ids": [
+        "u00019",
+        "u00020",
+        "u00021",
+        "u00022"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "43456f98cabdaa06ca954090e071bb748cd3c81e2761141be9aaa3596fb0558f"
+    },
+    {
+      "chunk_id": "recursive-7c147f4d24a16622dec10119a437a12917d3ad19d008e268511a54d2f6113512",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 961,
+      "base_end": 1349,
+      "start": 961,
+      "end": 1349,
+      "pages": [
+        {
+          "page_number": 2,
+          "canonical_start": 961,
+          "canonical_end": 1349,
+          "page_start": 0,
+          "page_end": 388,
+          "page_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d",
+          "raw_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제2절 신청 정보의 처리 [BD-S2]",
+          "BD-04 접수부터 결과 통지까지"
+        ]
+      ],
+      "article_ids": [
+        "BD-04"
+      ],
+      "unit_ids": [
+        "u00023",
+        "u00024",
+        "u00025",
+        "u00026",
+        "u00027",
+        "u00028",
+        "u00029"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "cfa5d52c010eb70a91d1f837ac11486194d64c1ed82c3a95baf865f31a4ad82a"
+    },
+    {
+      "chunk_id": "recursive-9505951156125450f33b820eb8d4dd502d1378eb0c81095ef6ee793c62fd3fde",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 1349,
+      "base_end": 1739,
+      "start": 1349,
+      "end": 1739,
+      "pages": [
+        {
+          "page_number": 2,
+          "canonical_start": 1349,
+          "canonical_end": 1739,
+          "page_start": 388,
+          "page_end": 778,
+          "page_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d",
+          "raw_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제2절 신청 정보의 처리 [BD-S2]",
+          "BD-04 접수부터 결과 통지까지"
+        ]
+      ],
+      "article_ids": [
+        "BD-04"
+      ],
+      "unit_ids": [
+        "u00030",
+        "u00031",
+        "u00032",
+        "u00033",
+        "u00034"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "a6f2dd217bafa60c3b99cb8ea1c89a228d1d3d319099ec14b145902028b13ad8"
+    },
+    {
+      "chunk_id": "recursive-400d463bbc38661017cf2307d91546cc4718b0394e3e37c89ec7d000d8a4fdb4",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 1739,
+      "base_end": 2132,
+      "start": 1739,
+      "end": 2132,
+      "pages": [
+        {
+          "page_number": 2,
+          "canonical_start": 1739,
+          "canonical_end": 2132,
+          "page_start": 778,
+          "page_end": 1171,
+          "page_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d",
+          "raw_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제2절 신청 정보의 처리 [BD-S2]",
+          "BD-04 접수부터 결과 통지까지"
+        ]
+      ],
+      "article_ids": [
+        "BD-04"
+      ],
+      "unit_ids": [
+        "u00035",
+        "u00036",
+        "u00037",
+        "u00038",
+        "u00039"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "fc3f85b1bb82b3ff043d1ef8263223449c3b4dfa99093e06ed6e9b5b8eeb30ad"
+    },
+    {
+      "chunk_id": "recursive-bc0f6778af2da4c0c8942cc35b6e61c18ff0e53914aa63a9d73e4edcf6c71652",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 2132,
+      "base_end": 2528,
+      "start": 2132,
+      "end": 2528,
+      "pages": [
+        {
+          "page_number": 2,
+          "canonical_start": 2132,
+          "canonical_end": 2528,
+          "page_start": 1171,
+          "page_end": 1567,
+          "page_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d",
+          "raw_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제2절 신청 정보의 처리 [BD-S2]",
+          "BD-04 접수부터 결과 통지까지"
+        ]
+      ],
+      "article_ids": [
+        "BD-04"
+      ],
+      "unit_ids": [
+        "u00040",
+        "u00041",
+        "u00042",
+        "u00043",
+        "u00044",
+        "u00045"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "26e1cf027b5b3ecae34e82a144e2d132d365380605cd5fbb8fa17184509538d9"
+    },
+    {
+      "chunk_id": "recursive-5ee894835d5916e69908385d12d9ecf79b92f9e50bfcf39f9e466326cb78bb00",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 2528,
+      "base_end": 2848,
+      "start": 2528,
+      "end": 2848,
+      "pages": [
+        {
+          "page_number": 2,
+          "canonical_start": 2528,
+          "canonical_end": 2846,
+          "page_start": 1567,
+          "page_end": 1885,
+          "page_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d",
+          "raw_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제2절 신청 정보의 처리 [BD-S2]",
+          "BD-05 시스템 장애와 중복 접수"
+        ]
+      ],
+      "article_ids": [
+        "BD-05"
+      ],
+      "unit_ids": [
+        "u00046",
+        "u00047",
+        "u00048",
+        "u00049",
+        "u00050"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "bb5c41200147988878cde1e129f6d031d357914de63d126ceaf3cb5ebeb4f839"
+    },
+    {
+      "chunk_id": "recursive-6383c23c279db6c1cf4a7c33b2ad8b5ed630d9b64e12b6b61b4d4789c58c62c3",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 2848,
+      "base_end": 3212,
+      "start": 2848,
+      "end": 3212,
+      "pages": [
+        {
+          "page_number": 3,
+          "canonical_start": 2848,
+          "canonical_end": 3212,
+          "page_start": 0,
+          "page_end": 364,
+          "page_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+          "raw_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제2절 신청 정보의 처리 [BD-S2]",
+          "BD-05 시스템 장애와 중복 접수"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제2절 신청 정보의 처리 [BD-S2]",
+          "BD-06 날짜 변경과 취소 의사 확인"
+        ]
+      ],
+      "article_ids": [
+        "BD-05",
+        "BD-06"
+      ],
+      "unit_ids": [
+        "u00051",
+        "u00052",
+        "u00053",
+        "u00054",
+        "u00055",
+        "u00056"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "fd5b4a1360e72de6cc86f58c92daf0385f7b02f41e9d77f9f684dc65e5a2556c"
+    },
+    {
+      "chunk_id": "recursive-acbc68841749001f9b4acc1b31791db48981e208e6a9bd3125b75c58494e7035",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 3212,
+      "base_end": 3595,
+      "start": 3212,
+      "end": 3595,
+      "pages": [
+        {
+          "page_number": 3,
+          "canonical_start": 3212,
+          "canonical_end": 3595,
+          "page_start": 364,
+          "page_end": 747,
+          "page_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+          "raw_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제2절 신청 정보의 처리 [BD-S2]",
+          "BD-06 날짜 변경과 취소 의사 확인"
+        ]
+      ],
+      "article_ids": [
+        "BD-06"
+      ],
+      "unit_ids": [
+        "u00057",
+        "u00058",
+        "u00059",
+        "u00060",
+        "u00061"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "7ad170805e7d94e97108a49c351c38cb334a80de545b366bfd246287abbed340"
+    },
+    {
+      "chunk_id": "recursive-f47959a4d7857d4ea91462159fc6f0fea82e02a37b84af603070515f75d4d426",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 3595,
+      "base_end": 3969,
+      "start": 3595,
+      "end": 3969,
+      "pages": [
+        {
+          "page_number": 3,
+          "canonical_start": 3595,
+          "canonical_end": 3969,
+          "page_start": 747,
+          "page_end": 1121,
+          "page_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+          "raw_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제2절 신청 정보의 처리 [BD-S2]",
+          "BD-07 생일 축하 포인트의 관계"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제1절 발생과 사용 단위 [AN-S1]",
+          "AN-01 발생 기준"
+        ]
+      ],
+      "article_ids": [
+        "BD-07",
+        "AN-01"
+      ],
+      "unit_ids": [
+        "u00062",
+        "u00063",
+        "u00064",
+        "u00065",
+        "u00066",
+        "u00067",
+        "u00068",
+        "u00069",
+        "u00070",
+        "u00071"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "68a168043ec5b12ab272ef3e6f6bdf0961f1960aedce222a5783d5906cd1c4f5"
+    },
+    {
+      "chunk_id": "recursive-34a7fe83a1bd7051d3d4e0f4809abda9cfc5c790f7d94aba3eac29af5c541e90",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 3969,
+      "base_end": 4358,
+      "start": 3969,
+      "end": 4358,
+      "pages": [
+        {
+          "page_number": 3,
+          "canonical_start": 3969,
+          "canonical_end": 4358,
+          "page_start": 1121,
+          "page_end": 1510,
+          "page_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+          "raw_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제1절 발생과 사용 단위 [AN-S1]",
+          "AN-01 발생 기준"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제1절 발생과 사용 단위 [AN-S1]",
+          "AN-02 발생 내역의 확인과 정정"
+        ]
+      ],
+      "article_ids": [
+        "AN-01",
+        "AN-02"
+      ],
+      "unit_ids": [
+        "u00072",
+        "u00073",
+        "u00074",
+        "u00075",
+        "u00076",
+        "u00077"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "412e8a872499e05f8ffbd7cfcbad4ccc90cfacafb98edc0ed11926a0228439d3"
+    },
+    {
+      "chunk_id": "recursive-5706e39b572e88bd0bbb424a0b268896d87361ce2a5f79a9dea727f1e15cdebc",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 4358,
+      "base_end": 4395,
+      "start": 4358,
+      "end": 4395,
+      "pages": [
+        {
+          "page_number": 3,
+          "canonical_start": 4358,
+          "canonical_end": 4393,
+          "page_start": 1510,
+          "page_end": 1545,
+          "page_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+          "raw_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제1절 발생과 사용 단위 [AN-S1]",
+          "AN-02 발생 내역의 확인과 정정"
+        ]
+      ],
+      "article_ids": [
+        "AN-02"
+      ],
+      "unit_ids": [
+        "u00078"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "b7b7819abc21f9a8d0174be2d254bafdf66f429f070e49fd268b094ec8ab3409"
+    },
+    {
+      "chunk_id": "recursive-710abf00a2a062558030264b33a36532dbe4e340eeec769a799bbac6d00b6d8c",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 4395,
+      "base_end": 4757,
+      "start": 4395,
+      "end": 4757,
+      "pages": [
+        {
+          "page_number": 4,
+          "canonical_start": 4395,
+          "canonical_end": 4757,
+          "page_start": 0,
+          "page_end": 362,
+          "page_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2",
+          "raw_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제1절 발생과 사용 단위 [AN-S1]",
+          "AN-02 발생 내역의 확인과 정정"
+        ]
+      ],
+      "article_ids": [
+        "AN-02"
+      ],
+      "unit_ids": [
+        "u00079",
+        "u00080",
+        "u00081",
+        "u00082",
+        "u00083"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "3787320fa2b228713e6e6dfb6434be3b6eeb32b8836de4643d16f6d092eb0992"
+    },
+    {
+      "chunk_id": "recursive-f614aa93a0278402fa540fdd8d40a5e3b3428654799fa9d4217279b77fe9b7e1",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 4757,
+      "base_end": 5076,
+      "start": 4757,
+      "end": 5076,
+      "pages": [
+        {
+          "page_number": 4,
+          "canonical_start": 4757,
+          "canonical_end": 5076,
+          "page_start": 362,
+          "page_end": 681,
+          "page_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2",
+          "raw_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제1절 발생과 사용 단위 [AN-S1]",
+          "AN-02 발생 내역의 확인과 정정"
+        ]
+      ],
+      "article_ids": [
+        "AN-02"
+      ],
+      "unit_ids": [
+        "u00084",
+        "u00085",
+        "u00086",
+        "u00087"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "0b9e5a993d9c8950d0cd514a202b66442fa7d7a31c857fff2d006d12508c62ef"
+    },
+    {
+      "chunk_id": "recursive-c05daef42e698f37611edba7f8f9c1addbbabb576359e0fc9f8cff6d870a28a4",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 5076,
+      "base_end": 5417,
+      "start": 5076,
+      "end": 5417,
+      "pages": [
+        {
+          "page_number": 4,
+          "canonical_start": 5076,
+          "canonical_end": 5417,
+          "page_start": 681,
+          "page_end": 1022,
+          "page_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2",
+          "raw_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제1절 발생과 사용 단위 [AN-S1]",
+          "AN-02 발생 내역의 확인과 정정"
+        ]
+      ],
+      "article_ids": [
+        "AN-02"
+      ],
+      "unit_ids": [
+        "u00088",
+        "u00089",
+        "u00090",
+        "u00091",
+        "u00092"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "90855049ede9b6cfdaacebd2f63f8fce7ff93981ecac3cc7e16e4c04e1df60e5"
+    },
+    {
+      "chunk_id": "recursive-8f3920b1d9f657b57feaabe1f5ecd27fe9e65c6b73bc3a5e4fb75696e9bc6b11",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 5417,
+      "base_end": 5784,
+      "start": 5417,
+      "end": 5784,
+      "pages": [
+        {
+          "page_number": 4,
+          "canonical_start": 5417,
+          "canonical_end": 5784,
+          "page_start": 1022,
+          "page_end": 1389,
+          "page_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2",
+          "raw_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제1절 발생과 사용 단위 [AN-S1]",
+          "AN-02 발생 내역의 확인과 정정"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제1절 발생과 사용 단위 [AN-S1]",
+          "AN-03 반차의 사용 단위"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-04 통상 신청과 확인 정보"
+        ]
+      ],
+      "article_ids": [
+        "AN-02",
+        "AN-03",
+        "AN-04"
+      ],
+      "unit_ids": [
+        "u00093",
+        "u00094",
+        "u00095",
+        "u00096",
+        "u00097",
+        "u00098",
+        "u00099",
+        "u00100",
+        "u00101"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "48158fff8b11bd72f8dbaeb0c282d1b8c7e9547094e57a777e002fa699bedb91"
+    },
+    {
+      "chunk_id": "recursive-39c89e9cf99e070ecc724f3334789423324c5dff6a8f17ab14a35155e8be16f5",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 5784,
+      "base_end": 6155,
+      "start": 5784,
+      "end": 6155,
+      "pages": [
+        {
+          "page_number": 4,
+          "canonical_start": 5784,
+          "canonical_end": 6155,
+          "page_start": 1389,
+          "page_end": 1760,
+          "page_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2",
+          "raw_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-04 통상 신청과 확인 정보"
+        ]
+      ],
+      "article_ids": [
+        "AN-04"
+      ],
+      "unit_ids": [
+        "u00102",
+        "u00103",
+        "u00104",
+        "u00105",
+        "u00106",
+        "u00107"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "cda6bb5f73da084f3815fec25bfa92198d73d0d3e33ec866323e9cdcb7f8356e"
+    },
+    {
+      "chunk_id": "recursive-93cd93c780ba8946ad018d962d779dc30c5c0050f106da3c6ab77891e1f66166",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 6155,
+      "base_end": 6223,
+      "start": 6155,
+      "end": 6223,
+      "pages": [
+        {
+          "page_number": 4,
+          "canonical_start": 6155,
+          "canonical_end": 6221,
+          "page_start": 1760,
+          "page_end": 1826,
+          "page_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2",
+          "raw_text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-04 통상 신청과 확인 정보"
+        ]
+      ],
+      "article_ids": [
+        "AN-04"
+      ],
+      "unit_ids": [
+        "u00108"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "5ab05b70d17128fbd3a5d82cad9732d21db2440ea7091a58eeabf05ce90d5adf"
+    },
+    {
+      "chunk_id": "recursive-2ece9093bd877ee6ca877941a12f8ab958caeae3e1072bdbff03757af77ae47d",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 6223,
+      "base_end": 6571,
+      "start": 6223,
+      "end": 6571,
+      "pages": [
+        {
+          "page_number": 5,
+          "canonical_start": 6223,
+          "canonical_end": 6571,
+          "page_start": 0,
+          "page_end": 348,
+          "page_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d",
+          "raw_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-04 통상 신청과 확인 정보"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-05 검토 내용의 연결과 처리 통지"
+        ]
+      ],
+      "article_ids": [
+        "AN-04",
+        "AN-05"
+      ],
+      "unit_ids": [
+        "u00109",
+        "u00110",
+        "u00111",
+        "u00112",
+        "u00113",
+        "u00114"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "b772b13c22d175117d9fefa3d045806ff0a8a11e5aef823d73619a44c6d22279"
+    },
+    {
+      "chunk_id": "recursive-b26cea5222ed2ee0db362bedf51e3dc3cf5b0cc39bd06904086b0614c1af2c60",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 6571,
+      "base_end": 6910,
+      "start": 6571,
+      "end": 6910,
+      "pages": [
+        {
+          "page_number": 5,
+          "canonical_start": 6571,
+          "canonical_end": 6910,
+          "page_start": 348,
+          "page_end": 687,
+          "page_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d",
+          "raw_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-05 검토 내용의 연결과 처리 통지"
+        ]
+      ],
+      "article_ids": [
+        "AN-05"
+      ],
+      "unit_ids": [
+        "u00115",
+        "u00116",
+        "u00117",
+        "u00118",
+        "u00119"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "694d3d55c551a235a8b3a5529b70ef02f218326b98e1502ff68ee36dc6342fb7"
+    },
+    {
+      "chunk_id": "recursive-fa223942ebb8ca2daec7ef4f4289b0cc53a8844a1c195eaa9afd0109ae8d0e99",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 6910,
+      "base_end": 7240,
+      "start": 6910,
+      "end": 7240,
+      "pages": [
+        {
+          "page_number": 5,
+          "canonical_start": 6910,
+          "canonical_end": 7240,
+          "page_start": 687,
+          "page_end": 1017,
+          "page_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d",
+          "raw_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-05 검토 내용의 연결과 처리 통지"
+        ]
+      ],
+      "article_ids": [
+        "AN-05"
+      ],
+      "unit_ids": [
+        "u00120",
+        "u00121",
+        "u00122",
+        "u00123",
+        "u00124"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "2e53c2532ba64adcaef099a75307fa3e96d8649818b27651d9dcaf880e9d7426"
+    },
+    {
+      "chunk_id": "recursive-b916b1a2cfba0e219cc69cca47d0a21b9f2b1f7dbd005c34f0c6197cb35500bf",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 7240,
+      "base_end": 7607,
+      "start": 7240,
+      "end": 7607,
+      "pages": [
+        {
+          "page_number": 5,
+          "canonical_start": 7240,
+          "canonical_end": 7607,
+          "page_start": 1017,
+          "page_end": 1384,
+          "page_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d",
+          "raw_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-05 검토 내용의 연결과 처리 통지"
+        ]
+      ],
+      "article_ids": [
+        "AN-05"
+      ],
+      "unit_ids": [
+        "u00125",
+        "u00126",
+        "u00127",
+        "u00128",
+        "u00129",
+        "u00130"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "62c0ad59c3839444feeef506aa0eae339cd8cd68a7054fed84a92ad7137c27ba"
+    },
+    {
+      "chunk_id": "recursive-6b9b52585a57823f73dabcc8a68a2c2613f051725921d76305316e33981db914",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 7607,
+      "base_end": 7951,
+      "start": 7607,
+      "end": 7951,
+      "pages": [
+        {
+          "page_number": 5,
+          "canonical_start": 7607,
+          "canonical_end": 7951,
+          "page_start": 1384,
+          "page_end": 1728,
+          "page_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d",
+          "raw_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-05 검토 내용의 연결과 처리 통지"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-06 긴급 신청의 접수 예외"
+        ]
+      ],
+      "article_ids": [
+        "AN-05",
+        "AN-06"
+      ],
+      "unit_ids": [
+        "u00131",
+        "u00132",
+        "u00133",
+        "u00134",
+        "u00135"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "c214e33e0421cfc973db2248047004b29cd462eccc4621554fa88fcfab697b48"
+    },
+    {
+      "chunk_id": "recursive-c84cff19288312d6077507c5c2c25c9b98e7ddba727979e8a713412063259b6a",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 7951,
+      "base_end": 8120,
+      "start": 7951,
+      "end": 8120,
+      "pages": [
+        {
+          "page_number": 5,
+          "canonical_start": 7951,
+          "canonical_end": 8118,
+          "page_start": 1728,
+          "page_end": 1895,
+          "page_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d",
+          "raw_text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-06 긴급 신청의 접수 예외"
+        ]
+      ],
+      "article_ids": [
+        "AN-06"
+      ],
+      "unit_ids": [
+        "u00136",
+        "u00137"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "943560db6028a6f9e4730ef8046c64e24e70051c0bc6a8841565c67f511a3e11"
+    },
+    {
+      "chunk_id": "recursive-0c3ead709c4d8e2334740fde39c7dff17c3e0180cda08a46e1236057d8e01c0c",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 8120,
+      "base_end": 8508,
+      "start": 8120,
+      "end": 8508,
+      "pages": [
+        {
+          "page_number": 6,
+          "canonical_start": 8120,
+          "canonical_end": 8508,
+          "page_start": 0,
+          "page_end": 388,
+          "page_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b",
+          "raw_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제2절 신청과 사용 기록 [AN-S2]",
+          "AN-06 긴급 신청의 접수 예외"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-07 미사용 연차의 이월 기준"
+        ]
+      ],
+      "article_ids": [
+        "AN-06",
+        "AN-07"
+      ],
+      "unit_ids": [
+        "u00138",
+        "u00139",
+        "u00140",
+        "u00141",
+        "u00142",
+        "u00143",
+        "u00144",
+        "u00145"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "f4347fa357aaac1bfcb096040f11948115ff96a649a7d83d15a743119d59d2c7"
+    },
+    {
+      "chunk_id": "recursive-00627238785bb3093e4844de91ebb349e995de3f9eaecf45033993c91d79b030",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 8508,
+      "base_end": 8873,
+      "start": 8508,
+      "end": 8873,
+      "pages": [
+        {
+          "page_number": 6,
+          "canonical_start": 8508,
+          "canonical_end": 8873,
+          "page_start": 388,
+          "page_end": 753,
+          "page_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b",
+          "raw_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-07 미사용 연차의 이월 기준"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-08 연도를 넘긴 내역의 대조"
+        ]
+      ],
+      "article_ids": [
+        "AN-07",
+        "AN-08"
+      ],
+      "unit_ids": [
+        "u00146",
+        "u00147",
+        "u00148",
+        "u00149",
+        "u00150",
+        "u00151",
+        "u00152"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "98aacdf10da50f1bbf34adf7c841448d01fcf468fb5eba9df84905cb26bb91ae"
+    },
+    {
+      "chunk_id": "recursive-ee0efdd4dfe9acab7eb2e5bb5613791eca400a5a42bcb1272a39a8161ddde7f1",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 8873,
+      "base_end": 9246,
+      "start": 8873,
+      "end": 9246,
+      "pages": [
+        {
+          "page_number": 6,
+          "canonical_start": 8873,
+          "canonical_end": 9246,
+          "page_start": 753,
+          "page_end": 1126,
+          "page_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b",
+          "raw_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-08 연도를 넘긴 내역의 대조"
+        ]
+      ],
+      "article_ids": [
+        "AN-08"
+      ],
+      "unit_ids": [
+        "u00153",
+        "u00154",
+        "u00155",
+        "u00156",
+        "u00157"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "8516f3881d175bb1c1607b3705f789d2dda83783655facec86b914f396bb8762"
+    },
+    {
+      "chunk_id": "recursive-9e43a4614a76da24b0fb06fdd8c0b440dea2dcf0cb918ad9d7e4e78d81e06a91",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 9246,
+      "base_end": 9583,
+      "start": 9246,
+      "end": 9583,
+      "pages": [
+        {
+          "page_number": 6,
+          "canonical_start": 9246,
+          "canonical_end": 9583,
+          "page_start": 1126,
+          "page_end": 1463,
+          "page_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b",
+          "raw_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-08 연도를 넘긴 내역의 대조"
+        ]
+      ],
+      "article_ids": [
+        "AN-08"
+      ],
+      "unit_ids": [
+        "u00158",
+        "u00159",
+        "u00160",
+        "u00161",
+        "u00162"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "6f607b8783055078c3a4f0e4fd86499a3cbad7224e89e5da5c71a1cb3e0d8147"
+    },
+    {
+      "chunk_id": "recursive-9638ea97d5ef0a984b05faba744faf54d8a0b8dceee6190e91a18d7d54e279c8",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 9583,
+      "base_end": 9833,
+      "start": 9583,
+      "end": 9833,
+      "pages": [
+        {
+          "page_number": 6,
+          "canonical_start": 9583,
+          "canonical_end": 9831,
+          "page_start": 1463,
+          "page_end": 1711,
+          "page_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b",
+          "raw_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-08 연도를 넘긴 내역의 대조"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-09 사용 날짜와 반차 구분의 변경"
+        ]
+      ],
+      "article_ids": [
+        "AN-08",
+        "AN-09"
+      ],
+      "unit_ids": [
+        "u00163",
+        "u00164",
+        "u00165",
+        "u00166"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "b9980fff16db3525ebb3e6ed102968ddcf7222b151220a5b857edcbfd0279433"
+    },
+    {
+      "chunk_id": "recursive-0d12e182bd8aeb7cd042f7b0775a77fdcc3afa1887853ffb9bcf246e75d4815f",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 9833,
+      "base_end": 10200,
+      "start": 9833,
+      "end": 10200,
+      "pages": [
+        {
+          "page_number": 7,
+          "canonical_start": 9833,
+          "canonical_end": 10200,
+          "page_start": 0,
+          "page_end": 367,
+          "page_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177",
+          "raw_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-09 사용 날짜와 반차 구분의 변경"
+        ]
+      ],
+      "article_ids": [
+        "AN-09"
+      ],
+      "unit_ids": [
+        "u00167",
+        "u00168",
+        "u00169",
+        "u00170",
+        "u00171"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "e86de8583f880dfce2881e6017e5fb4bbcb8e51d821bcbcfb1a5d243454232d9"
+    },
+    {
+      "chunk_id": "recursive-b2655c0b4e0862998df861c0081f7be731f00964852d5e8aeed951520b0afcda",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 10200,
+      "base_end": 10535,
+      "start": 10200,
+      "end": 10535,
+      "pages": [
+        {
+          "page_number": 7,
+          "canonical_start": 10200,
+          "canonical_end": 10535,
+          "page_start": 367,
+          "page_end": 702,
+          "page_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177",
+          "raw_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-09 사용 날짜와 반차 구분의 변경"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-10 취소 요청과 사용 기록 정리"
+        ]
+      ],
+      "article_ids": [
+        "AN-09",
+        "AN-10"
+      ],
+      "unit_ids": [
+        "u00172",
+        "u00173",
+        "u00174",
+        "u00175",
+        "u00176",
+        "u00177"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "f4655f3208c35e9a08efb928eb6544f2cb26a6db3159c499436aa4514a323f10"
+    },
+    {
+      "chunk_id": "recursive-463e946e2bfe7136671b9dba62a149ee9658c713772586e1e336f2ec7467a259",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 10535,
+      "base_end": 10921,
+      "start": 10535,
+      "end": 10921,
+      "pages": [
+        {
+          "page_number": 7,
+          "canonical_start": 10535,
+          "canonical_end": 10921,
+          "page_start": 702,
+          "page_end": 1088,
+          "page_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177",
+          "raw_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-10 취소 요청과 사용 기록 정리"
+        ]
+      ],
+      "article_ids": [
+        "AN-10"
+      ],
+      "unit_ids": [
+        "u00178",
+        "u00179",
+        "u00180",
+        "u00181",
+        "u00182"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "77424723a2df8b400624c1a4dfb06f1d030eea8b77910ca396da8bcc19c4c49d"
+    },
+    {
+      "chunk_id": "recursive-e973f0fe9639fd1287fd5b968d200df887dffa2ebdca94aa3a8823ee13bb9dae",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 10921,
+      "base_end": 11242,
+      "start": 10921,
+      "end": 11242,
+      "pages": [
+        {
+          "page_number": 7,
+          "canonical_start": 10921,
+          "canonical_end": 11242,
+          "page_start": 1088,
+          "page_end": 1409,
+          "page_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177",
+          "raw_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-10 취소 요청과 사용 기록 정리"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-11 접속 장애와 자료 불일치의 분리 처리"
+        ]
+      ],
+      "article_ids": [
+        "AN-10",
+        "AN-11"
+      ],
+      "unit_ids": [
+        "u00183",
+        "u00184",
+        "u00185",
+        "u00186",
+        "u00187"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "27f1746f775e8bc45a3cf5def2b3f773fb629e24409fc12935177b3b144f5718"
+    },
+    {
+      "chunk_id": "recursive-740a76ef9e08abd1fa86d4894caa8b468ff33eaadbc3ae12ec9d3b7154d7e2ce",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 11242,
+      "base_end": 11617,
+      "start": 11242,
+      "end": 11617,
+      "pages": [
+        {
+          "page_number": 7,
+          "canonical_start": 11242,
+          "canonical_end": 11617,
+          "page_start": 1409,
+          "page_end": 1784,
+          "page_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177",
+          "raw_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-11 접속 장애와 자료 불일치의 분리 처리"
+        ]
+      ],
+      "article_ids": [
+        "AN-11"
+      ],
+      "unit_ids": [
+        "u00188",
+        "u00189",
+        "u00190",
+        "u00191",
+        "u00192"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "90d64619f036eaecf956c5fb15f71f84deaf82ebba27c698ee6f62118ee8f353"
+    },
+    {
+      "chunk_id": "recursive-f40e6c7749ac90d1d1c90f5169b333883ed6c1fe390ceb1ac429dd1950bb956e",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 11617,
+      "base_end": 11750,
+      "start": 11617,
+      "end": 11750,
+      "pages": [
+        {
+          "page_number": 7,
+          "canonical_start": 11617,
+          "canonical_end": 11748,
+          "page_start": 1784,
+          "page_end": 1915,
+          "page_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177",
+          "raw_text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-11 접속 장애와 자료 불일치의 분리 처리"
+        ]
+      ],
+      "article_ids": [
+        "AN-11"
+      ],
+      "unit_ids": [
+        "u00193",
+        "u00194"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "c8cc065c1b14e9c5541fdf6f6cb1a0cbd4970c1aa877b5fbbbccc77977470b21"
+    },
+    {
+      "chunk_id": "recursive-cddd6f9b71fd77a1b81d84ddf5d17c8e71a5553bd96b09d9bb4a9156c2a918e6",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 11750,
+      "base_end": 12116,
+      "start": 11750,
+      "end": 12116,
+      "pages": [
+        {
+          "page_number": 8,
+          "canonical_start": 11750,
+          "canonical_end": 12116,
+          "page_start": 0,
+          "page_end": 366,
+          "page_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7",
+          "raw_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제2장 연차의 사용과 기록 관리 [AN]",
+          "제3절 이월과 변경 이력 [AN-S3]",
+          "AN-11 접속 장애와 자료 불일치의 분리 처리"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제1절 신청 범위와 기본 조건 [RM-S1]",
+          "RM-01 신청 대상"
+        ]
+      ],
+      "article_ids": [
+        "AN-11",
+        "RM-01"
+      ],
+      "unit_ids": [
+        "u00195",
+        "u00196",
+        "u00197",
+        "u00198",
+        "u00199",
+        "u00200",
+        "u00201",
+        "u00202",
+        "u00203"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "9b0acfb062717eb9b719190f8c15c0df821c61bf6c91eba942df72a688b8bce5"
+    },
+    {
+      "chunk_id": "recursive-12ca720d2c9d956a0366c1a7ff75dabaeea1d20c01a0d3200545ba68f1861d23",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 12116,
+      "base_end": 12447,
+      "start": 12116,
+      "end": 12447,
+      "pages": [
+        {
+          "page_number": 8,
+          "canonical_start": 12116,
+          "canonical_end": 12447,
+          "page_start": 366,
+          "page_end": 697,
+          "page_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7",
+          "raw_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제1절 신청 범위와 기본 조건 [RM-S1]",
+          "RM-02 횟수와 승인 기한"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제1절 신청 범위와 기본 조건 [RM-S1]",
+          "RM-03 기기와 내부 문서 접근"
+        ]
+      ],
+      "article_ids": [
+        "RM-02",
+        "RM-03"
+      ],
+      "unit_ids": [
+        "u00204",
+        "u00205",
+        "u00206",
+        "u00207",
+        "u00208",
+        "u00209",
+        "u00210",
+        "u00211",
+        "u00212"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "99ebb536a5c025137e74aff75a62066b60ff769d4f96fd2cf51cffdab1b8898b"
+    },
+    {
+      "chunk_id": "recursive-5a9c9bc94f27be40d539bff66a43773fe36585f5a4655d1c4bc3c83321801960",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 12447,
+      "base_end": 12769,
+      "start": 12447,
+      "end": 12769,
+      "pages": [
+        {
+          "page_number": 8,
+          "canonical_start": 12447,
+          "canonical_end": 12769,
+          "page_start": 697,
+          "page_end": 1019,
+          "page_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7",
+          "raw_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제1절 신청 범위와 기본 조건 [RM-S1]",
+          "RM-03 기기와 내부 문서 접근"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-04 근무 신청의 검토와 통지"
+        ]
+      ],
+      "article_ids": [
+        "RM-03",
+        "RM-04"
+      ],
+      "unit_ids": [
+        "u00213",
+        "u00214",
+        "u00215",
+        "u00216",
+        "u00217",
+        "u00218"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "40ad251cdb22e108573773085a4006d1bde68b5e0b24bb0c55e2d399d4dd441f"
+    },
+    {
+      "chunk_id": "recursive-5a069487184027d6fb1cfafdbf395958fb3f7052d8897d95dcc7787fe6dfb945",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 12769,
+      "base_end": 13106,
+      "start": 12769,
+      "end": 13106,
+      "pages": [
+        {
+          "page_number": 8,
+          "canonical_start": 12769,
+          "canonical_end": 13104,
+          "page_start": 1019,
+          "page_end": 1354,
+          "page_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7",
+          "raw_text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-04 근무 신청의 검토와 통지"
+        ]
+      ],
+      "article_ids": [
+        "RM-04"
+      ],
+      "unit_ids": [
+        "u00219",
+        "u00220",
+        "u00221",
+        "u00222"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "f96faf797aa4d2b73be1ee91b6a07ea01aea286cb58fb2e3127a74cc88bd0a98"
+    },
+    {
+      "chunk_id": "recursive-3f47b1671134274492604e1a0225882540b839b5d1399cf4f4e1584e2286589d",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 13106,
+      "base_end": 13470,
+      "start": 13106,
+      "end": 13470,
+      "pages": [
+        {
+          "page_number": 9,
+          "canonical_start": 13106,
+          "canonical_end": 13470,
+          "page_start": 0,
+          "page_end": 364,
+          "page_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361",
+          "raw_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-04 근무 신청의 검토와 통지"
+        ]
+      ],
+      "article_ids": [
+        "RM-04"
+      ],
+      "unit_ids": [
+        "u00223",
+        "u00224",
+        "u00225",
+        "u00226",
+        "u00227",
+        "u00228"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "e27f0d30971465a32bf0c3b5dd7f1b0bb1181e9b5f7ccbf5881033a19af4fa38"
+    },
+    {
+      "chunk_id": "recursive-e5f8d0b64fa099d533f6a1a88022de484f9e01161a24a3723099b8fd26f78b1f",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 13470,
+      "base_end": 13805,
+      "start": 13470,
+      "end": 13805,
+      "pages": [
+        {
+          "page_number": 9,
+          "canonical_start": 13470,
+          "canonical_end": 13805,
+          "page_start": 364,
+          "page_end": 699,
+          "page_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361",
+          "raw_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-04 근무 신청의 검토와 통지"
+        ]
+      ],
+      "article_ids": [
+        "RM-04"
+      ],
+      "unit_ids": [
+        "u00229",
+        "u00230",
+        "u00231",
+        "u00232",
+        "u00233"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "6ece5d54e959f53fca4ab52f9ea5494e4ddc23e8cab5fc2a1507fde4c6dbbe7f"
+    },
+    {
+      "chunk_id": "recursive-2f8586d0fc21d912ca40bf53b454050dac387a0445f55d29c75a2fa414a76aac",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 13805,
+      "base_end": 14175,
+      "start": 13805,
+      "end": 14175,
+      "pages": [
+        {
+          "page_number": 9,
+          "canonical_start": 13805,
+          "canonical_end": 14175,
+          "page_start": 699,
+          "page_end": 1069,
+          "page_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361",
+          "raw_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-04 근무 신청의 검토와 통지"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-05 등록 자택과 주소 변경 요청"
+        ]
+      ],
+      "article_ids": [
+        "RM-04",
+        "RM-05"
+      ],
+      "unit_ids": [
+        "u00234",
+        "u00235",
+        "u00236",
+        "u00237",
+        "u00238",
+        "u00239"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "29bbd33c0808b49b33a316d347be3e2d434b84c7773bd7edd8bab9e196ada17d"
+    },
+    {
+      "chunk_id": "recursive-8014eedcf3b364851ffe1d2f7fbd3c5c02b03f64a1f5c02659502fa5af15002b",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 14175,
+      "base_end": 14523,
+      "start": 14175,
+      "end": 14523,
+      "pages": [
+        {
+          "page_number": 9,
+          "canonical_start": 14175,
+          "canonical_end": 14523,
+          "page_start": 1069,
+          "page_end": 1417,
+          "page_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361",
+          "raw_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-05 등록 자택과 주소 변경 요청"
+        ]
+      ],
+      "article_ids": [
+        "RM-05"
+      ],
+      "unit_ids": [
+        "u00240",
+        "u00241",
+        "u00242",
+        "u00243",
+        "u00244"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "e3c59ebc930fa18d44fa2d86fbd29ffb0980382f0d3783b89fe637330d4b944f"
+    },
+    {
+      "chunk_id": "recursive-6d7486284ea1c088e4e2b268c0c0ae47c2afde21298d1c251f8dc4f7740b5086",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 14523,
+      "base_end": 14905,
+      "start": 14523,
+      "end": 14905,
+      "pages": [
+        {
+          "page_number": 9,
+          "canonical_start": 14523,
+          "canonical_end": 14905,
+          "page_start": 1417,
+          "page_end": 1799,
+          "page_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361",
+          "raw_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-05 등록 자택과 주소 변경 요청"
+        ]
+      ],
+      "article_ids": [
+        "RM-05"
+      ],
+      "unit_ids": [
+        "u00245",
+        "u00246",
+        "u00247",
+        "u00248",
+        "u00249"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "528bec7ed48fb73907e7d42d52f6cd4e4603134fa04c11d1c9de26a06416771f"
+    },
+    {
+      "chunk_id": "recursive-633027107405c5c2842d365a32b71c0c3c435b0c0dd250a568e79aef9a8f6d91",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 14905,
+      "base_end": 14971,
+      "start": 14905,
+      "end": 14971,
+      "pages": [
+        {
+          "page_number": 9,
+          "canonical_start": 14905,
+          "canonical_end": 14969,
+          "page_start": 1799,
+          "page_end": 1863,
+          "page_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361",
+          "raw_text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-05 등록 자택과 주소 변경 요청"
+        ]
+      ],
+      "article_ids": [
+        "RM-05"
+      ],
+      "unit_ids": [
+        "u00250"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "042d691f9293d695ac7d6c455b84564a34fdd8453cd35540ad3dcb338251fa6e"
+    },
+    {
+      "chunk_id": "recursive-0849ea789296983ed43ecb0bb36649d5dce47e3082bd3f21dd7d39d8163a2921",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 14971,
+      "base_end": 15314,
+      "start": 14971,
+      "end": 15314,
+      "pages": [
+        {
+          "page_number": 10,
+          "canonical_start": 14971,
+          "canonical_end": 15314,
+          "page_start": 0,
+          "page_end": 343,
+          "page_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9",
+          "raw_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-05 등록 자택과 주소 변경 요청"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-06 기기 정보의 정정과 확인 기록"
+        ]
+      ],
+      "article_ids": [
+        "RM-05",
+        "RM-06"
+      ],
+      "unit_ids": [
+        "u00251",
+        "u00252",
+        "u00253",
+        "u00254",
+        "u00255",
+        "u00256"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "f0e3be25cc365b9013e61ea395421a007275bc7eee7de4ebdf8a8c3d8c5c5587"
+    },
+    {
+      "chunk_id": "recursive-ddc3fdaf222b98877dbabb098045884f39b6fd065efe0d2e72a72aac45c5f47c",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 15314,
+      "base_end": 15668,
+      "start": 15314,
+      "end": 15668,
+      "pages": [
+        {
+          "page_number": 10,
+          "canonical_start": 15314,
+          "canonical_end": 15668,
+          "page_start": 343,
+          "page_end": 697,
+          "page_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9",
+          "raw_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-06 기기 정보의 정정과 확인 기록"
+        ]
+      ],
+      "article_ids": [
+        "RM-06"
+      ],
+      "unit_ids": [
+        "u00257",
+        "u00258",
+        "u00259",
+        "u00260",
+        "u00261"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "60a836c644a2def8e8ffc4afd7cf27cc6fe9fcfbaff48ae2345fc1d35e0891c4"
+    },
+    {
+      "chunk_id": "recursive-44cfefd00dce0eed6a56ce4e8fed5003b961acd526774d110c16a3eed130a18a",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 15668,
+      "base_end": 16066,
+      "start": 15668,
+      "end": 16066,
+      "pages": [
+        {
+          "page_number": 10,
+          "canonical_start": 15668,
+          "canonical_end": 16066,
+          "page_start": 697,
+          "page_end": 1095,
+          "page_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9",
+          "raw_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제2절 접수와 장소 정보 [RM-S2]",
+          "RM-06 기기 정보의 정정과 확인 기록"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-07 VPN 연결 확인과 장애 접수"
+        ]
+      ],
+      "article_ids": [
+        "RM-06",
+        "RM-07"
+      ],
+      "unit_ids": [
+        "u00262",
+        "u00263",
+        "u00264",
+        "u00265",
+        "u00266",
+        "u00267",
+        "u00268"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "198f066f88910ff571f26d772e16ad62aa3d4fc7d0ddc20cfb67e5f2ed052be9"
+    },
+    {
+      "chunk_id": "recursive-9ff6b52cd13d29378c9dafcb321aaee95caa1ae0bec1aa977517e4160cbfe260",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 16066,
+      "base_end": 16425,
+      "start": 16066,
+      "end": 16425,
+      "pages": [
+        {
+          "page_number": 10,
+          "canonical_start": 16066,
+          "canonical_end": 16425,
+          "page_start": 1095,
+          "page_end": 1454,
+          "page_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9",
+          "raw_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-07 VPN 연결 확인과 장애 접수"
+        ]
+      ],
+      "article_ids": [
+        "RM-07"
+      ],
+      "unit_ids": [
+        "u00269",
+        "u00270",
+        "u00271",
+        "u00272"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "0977de19232b8d36b5367a5b3553d71e25c745aa802ea17cd043cfb59cbed206"
+    },
+    {
+      "chunk_id": "recursive-a667178fb556189b6de52dc62b750c7674dc40a3791257b507b6c26666a9881f",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 16425,
+      "base_end": 16780,
+      "start": 16425,
+      "end": 16780,
+      "pages": [
+        {
+          "page_number": 10,
+          "canonical_start": 16425,
+          "canonical_end": 16778,
+          "page_start": 1454,
+          "page_end": 1807,
+          "page_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9",
+          "raw_text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-07 VPN 연결 확인과 장애 접수"
+        ]
+      ],
+      "article_ids": [
+        "RM-07"
+      ],
+      "unit_ids": [
+        "u00273",
+        "u00274",
+        "u00275",
+        "u00276",
+        "u00277",
+        "u00278"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "24e1df6c82c97614ad78194ba957193d2c40bdd8969eecf5a871a075cb2a87bc"
+    },
+    {
+      "chunk_id": "recursive-935b34ee69407c1a2769b525e8d077144530a28293b6083407a1289697dd5a4b",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 16780,
+      "base_end": 17087,
+      "start": 16780,
+      "end": 17087,
+      "pages": [
+        {
+          "page_number": 11,
+          "canonical_start": 16780,
+          "canonical_end": 17087,
+          "page_start": 0,
+          "page_end": 307,
+          "page_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545",
+          "raw_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-08 승인 날짜의 변경과 신청 철회"
+        ]
+      ],
+      "article_ids": [
+        "RM-08"
+      ],
+      "unit_ids": [
+        "u00279",
+        "u00280",
+        "u00281",
+        "u00282",
+        "u00283"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "07f659c9b2b411dfaffbfc81dd0dfb6b37795832fd9d65a8390a6c3634994035"
+    },
+    {
+      "chunk_id": "recursive-8b9e76a3f19465262317ba0fda794c41c1bab6031f0d52ace3fa0074c64afcf9",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 17087,
+      "base_end": 17481,
+      "start": 17087,
+      "end": 17481,
+      "pages": [
+        {
+          "page_number": 11,
+          "canonical_start": 17087,
+          "canonical_end": 17481,
+          "page_start": 307,
+          "page_end": 701,
+          "page_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545",
+          "raw_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-08 승인 날짜의 변경과 신청 철회"
+        ]
+      ],
+      "article_ids": [
+        "RM-08"
+      ],
+      "unit_ids": [
+        "u00284",
+        "u00285",
+        "u00286",
+        "u00287",
+        "u00288"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "39f646861cb91042e40b98366eca7749635df20b213c82422ed5a2908802f8e5"
+    },
+    {
+      "chunk_id": "recursive-2aaf943e8f1428ae501350c4cb228b9cdc76c1457f1f803b054dd2bd9adc3b35",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 17481,
+      "base_end": 17850,
+      "start": 17481,
+      "end": 17850,
+      "pages": [
+        {
+          "page_number": 11,
+          "canonical_start": 17481,
+          "canonical_end": 17850,
+          "page_start": 701,
+          "page_end": 1070,
+          "page_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545",
+          "raw_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-08 승인 날짜의 변경과 신청 철회"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-09 알림 누락과 담당 업무의 인계"
+        ]
+      ],
+      "article_ids": [
+        "RM-08",
+        "RM-09"
+      ],
+      "unit_ids": [
+        "u00289",
+        "u00290",
+        "u00291",
+        "u00292",
+        "u00293",
+        "u00294"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "daaf160a7feecb8abcf5a50f043c46323a071cc2508e4816fa3b52db4e48a1ba"
+    },
+    {
+      "chunk_id": "recursive-847e952c5a359577ae2a5b4dc549dfba754ecd073f7daa3f03db4077c1aed0f6",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 17850,
+      "base_end": 18216,
+      "start": 17850,
+      "end": 18216,
+      "pages": [
+        {
+          "page_number": 11,
+          "canonical_start": 17850,
+          "canonical_end": 18216,
+          "page_start": 1070,
+          "page_end": 1436,
+          "page_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545",
+          "raw_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-09 알림 누락과 담당 업무의 인계"
+        ]
+      ],
+      "article_ids": [
+        "RM-09"
+      ],
+      "unit_ids": [
+        "u00295",
+        "u00296",
+        "u00297",
+        "u00298",
+        "u00299"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "6126f93ffddd0c597f1f618691e410e4bf964da3f9912459191012eed6c7a290"
+    },
+    {
+      "chunk_id": "recursive-79801d0d71d07d9b8128a86fe1097413d7dd896be7dce380f6892e52c65c22da",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 18216,
+      "base_end": 18587,
+      "start": 18216,
+      "end": 18587,
+      "pages": [
+        {
+          "page_number": 11,
+          "canonical_start": 18216,
+          "canonical_end": 18587,
+          "page_start": 1436,
+          "page_end": 1807,
+          "page_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545",
+          "raw_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-09 알림 누락과 담당 업무의 인계"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-10 근무 기록에 관한 이견 확인"
+        ]
+      ],
+      "article_ids": [
+        "RM-09",
+        "RM-10"
+      ],
+      "unit_ids": [
+        "u00300",
+        "u00301",
+        "u00302",
+        "u00303",
+        "u00304",
+        "u00305"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "d0f7bcceec2dfab8ff08aa11729bfffc95687526898e1b2b68a49841a80c9db7"
+    },
+    {
+      "chunk_id": "recursive-e4b258948f9df1ac615b8052f955c4265e212d45a1ad350b8f62a71e453c24de",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 18587,
+      "base_end": 18640,
+      "start": 18587,
+      "end": 18640,
+      "pages": [
+        {
+          "page_number": 11,
+          "canonical_start": 18587,
+          "canonical_end": 18638,
+          "page_start": 1807,
+          "page_end": 1858,
+          "page_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545",
+          "raw_text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-10 근무 기록에 관한 이견 확인"
+        ]
+      ],
+      "article_ids": [
+        "RM-10"
+      ],
+      "unit_ids": [
+        "u00306"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "c4476f2820963ca1b795739ec144e9c2ae7424d47b4d8115cf4fe68aebd2db05"
+    },
+    {
+      "chunk_id": "recursive-4d046c7fe7d1c44773444765f3aa698fabe3d8c0791e05a19fa319f1d1fab4f9",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 18640,
+      "base_end": 19018,
+      "start": 18640,
+      "end": 19018,
+      "pages": [
+        {
+          "page_number": 12,
+          "canonical_start": 18640,
+          "canonical_end": 19018,
+          "page_start": 0,
+          "page_end": 378,
+          "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+          "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제3장 재택근무의 신청과 운영 [RM]",
+          "제3절 변경과 장애의 기록 [RM-S3]",
+          "RM-10 근무 기록에 관한 이견 확인"
+        ]
+      ],
+      "article_ids": [
+        "RM-10"
+      ],
+      "unit_ids": [
+        "u00307",
+        "u00308",
+        "u00309",
+        "u00310",
+        "u00311",
+        "u00312"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "ad7534fcd9bd1d7d1f49383d8f1fde9012c6374bbc38d8bc0e2928a51def95a2"
+    },
+    {
+      "chunk_id": "recursive-61cf4c5ab48790863d9a9320ad2372f642d799eda39e68534513c1394b7a49d9",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 19018,
+      "base_end": 19359,
+      "start": 19018,
+      "end": 19359,
+      "pages": [
+        {
+          "page_number": 12,
+          "canonical_start": 19018,
+          "canonical_end": 19359,
+          "page_start": 378,
+          "page_end": 719,
+          "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+          "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제1절 지급 기준과 문의 구분 [WF-S1]",
+          "WF-01 식대 지원 기준"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제1절 지급 기준과 문의 구분 [WF-S1]",
+          "WF-02 생일 축하 포인트"
+        ]
+      ],
+      "article_ids": [
+        "WF-01",
+        "WF-02"
+      ],
+      "unit_ids": [
+        "u00313",
+        "u00314",
+        "u00315",
+        "u00316",
+        "u00317",
+        "u00318",
+        "u00319",
+        "u00320",
+        "u00321",
+        "u00322",
+        "u00323"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "e823643cda7e8bc7a095957b8b4716df8ddd9e349ba3abe717de3e53700407c5"
+    },
+    {
+      "chunk_id": "recursive-617468cab2a4003860ba2c47e018a035962244920ae41d3348d28f68a4c2e4e0",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 19359,
+      "base_end": 19717,
+      "start": 19359,
+      "end": 19717,
+      "pages": [
+        {
+          "page_number": 12,
+          "canonical_start": 19359,
+          "canonical_end": 19717,
+          "page_start": 719,
+          "page_end": 1077,
+          "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+          "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제1절 지급 기준과 문의 구분 [WF-S1]",
+          "WF-02 생일 축하 포인트"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제1절 지급 기준과 문의 구분 [WF-S1]",
+          "WF-03 문의 접수와 대상 내역의 식별"
+        ]
+      ],
+      "article_ids": [
+        "WF-02",
+        "WF-03"
+      ],
+      "unit_ids": [
+        "u00324",
+        "u00325",
+        "u00326",
+        "u00327",
+        "u00328",
+        "u00329"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "c931830380724891ad45b588563e4825a7bc0b98e64fdff509fab5b20ac24ebb"
+    },
+    {
+      "chunk_id": "recursive-7a1e659efacf8225077b9ed016305086cd425d2e173304e54aeac9d377b04987",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 19717,
+      "base_end": 19955,
+      "start": 19717,
+      "end": 19955,
+      "pages": [
+        {
+          "page_number": 12,
+          "canonical_start": 19717,
+          "canonical_end": 19953,
+          "page_start": 1077,
+          "page_end": 1313,
+          "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+          "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제1절 지급 기준과 문의 구분 [WF-S1]",
+          "WF-03 문의 접수와 대상 내역의 식별"
+        ]
+      ],
+      "article_ids": [
+        "WF-03"
+      ],
+      "unit_ids": [
+        "u00330",
+        "u00331",
+        "u00332",
+        "u00333"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "f6438efb3d53bfb346b61063a0902bfa597c39a3bba1f77bd52fe817bebe2ded"
+    },
+    {
+      "chunk_id": "recursive-a28b433e01af39d3ec44411d6745995d2627d6b7fea36bda903759fa08383dd0",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 19955,
+      "base_end": 20286,
+      "start": 19955,
+      "end": 20286,
+      "pages": [
+        {
+          "page_number": 13,
+          "canonical_start": 19955,
+          "canonical_end": 20286,
+          "page_start": 0,
+          "page_end": 331,
+          "page_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3",
+          "raw_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-04 지급 표시의 확인부터 정정 통지까지"
+        ]
+      ],
+      "article_ids": [
+        "WF-04"
+      ],
+      "unit_ids": [
+        "u00334",
+        "u00335",
+        "u00336",
+        "u00337",
+        "u00338",
+        "u00339"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "e5337071859fcba5bba9d3cee5cd01cb54aedb219791a462aa5f2b8f47014f3d"
+    },
+    {
+      "chunk_id": "recursive-3935276ee1bad6b7793d6209137fde24c78a3d04b6c57e81730091b6206eb947",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 20286,
+      "base_end": 20633,
+      "start": 20286,
+      "end": 20633,
+      "pages": [
+        {
+          "page_number": 13,
+          "canonical_start": 20286,
+          "canonical_end": 20633,
+          "page_start": 331,
+          "page_end": 678,
+          "page_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3",
+          "raw_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-04 지급 표시의 확인부터 정정 통지까지"
+        ]
+      ],
+      "article_ids": [
+        "WF-04"
+      ],
+      "unit_ids": [
+        "u00340",
+        "u00341",
+        "u00342",
+        "u00343",
+        "u00344"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "8acb7ea9c2b8f204c6421e4e9d4e31bfeec24eeece225eac4d639307f5290e4c"
+    },
+    {
+      "chunk_id": "recursive-a51b161218b46f4baaca297928b19376ce002a130216ab9ad9ad43579e631290",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 20633,
+      "base_end": 21005,
+      "start": 20633,
+      "end": 21005,
+      "pages": [
+        {
+          "page_number": 13,
+          "canonical_start": 20633,
+          "canonical_end": 21005,
+          "page_start": 678,
+          "page_end": 1050,
+          "page_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3",
+          "raw_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-04 지급 표시의 확인부터 정정 통지까지"
+        ]
+      ],
+      "article_ids": [
+        "WF-04"
+      ],
+      "unit_ids": [
+        "u00345",
+        "u00346",
+        "u00347",
+        "u00348",
+        "u00349",
+        "u00350"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "1af9bd37d0538b5bc950392e1666f36e8534c70c22e17a575720a188ca43158c"
+    },
+    {
+      "chunk_id": "recursive-2723f6531aec835b364a0f129d8136908b3173d4df5c62fb1d1bcb1a8414cc1e",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 21005,
+      "base_end": 21371,
+      "start": 21005,
+      "end": 21371,
+      "pages": [
+        {
+          "page_number": 13,
+          "canonical_start": 21005,
+          "canonical_end": 21371,
+          "page_start": 1050,
+          "page_end": 1416,
+          "page_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3",
+          "raw_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-04 지급 표시의 확인부터 정정 통지까지"
+        ]
+      ],
+      "article_ids": [
+        "WF-04"
+      ],
+      "unit_ids": [
+        "u00351",
+        "u00352",
+        "u00353",
+        "u00354",
+        "u00355"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "15bf457114c426350b36e5c56fea35aeb21ad99bf08e240ceb6652c321c27fe1"
+    },
+    {
+      "chunk_id": "recursive-a68c349bd9a973c24a100ce5dd23bf5d1eb198a7908b7010e7c3f1445367e933",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 21371,
+      "base_end": 21720,
+      "start": 21371,
+      "end": 21720,
+      "pages": [
+        {
+          "page_number": 13,
+          "canonical_start": 21371,
+          "canonical_end": 21720,
+          "page_start": 1416,
+          "page_end": 1765,
+          "page_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3",
+          "raw_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-04 지급 표시의 확인부터 정정 통지까지"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-05 근무 형태 기록이 다른 경우"
+        ]
+      ],
+      "article_ids": [
+        "WF-04",
+        "WF-05"
+      ],
+      "unit_ids": [
+        "u00356",
+        "u00357",
+        "u00358",
+        "u00359",
+        "u00360",
+        "u00361"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "bd18970813a586ea68d78d715612dbfaef74122a1ca48cba4973b6764f624911"
+    },
+    {
+      "chunk_id": "recursive-38ab737eaf37ce862e2b62f8b8bf54cf8ac7fd8214cb3217fef7a63c415582d8",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 21720,
+      "base_end": 21835,
+      "start": 21720,
+      "end": 21835,
+      "pages": [
+        {
+          "page_number": 13,
+          "canonical_start": 21720,
+          "canonical_end": 21833,
+          "page_start": 1765,
+          "page_end": 1878,
+          "page_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3",
+          "raw_text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-05 근무 형태 기록이 다른 경우"
+        ]
+      ],
+      "article_ids": [
+        "WF-05"
+      ],
+      "unit_ids": [
+        "u00362",
+        "u00363"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "85aa9593ae6a947cdee88ef30cbd72e01398505e43cc3918f8ae36f08903d99e"
+    },
+    {
+      "chunk_id": "recursive-c661d43e10d798fa448073ecbe5e623f650918e9de0aace51b034057d042bb2e",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 21835,
+      "base_end": 22186,
+      "start": 21835,
+      "end": 22186,
+      "pages": [
+        {
+          "page_number": 14,
+          "canonical_start": 21835,
+          "canonical_end": 22186,
+          "page_start": 0,
+          "page_end": 351,
+          "page_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673",
+          "raw_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-05 근무 형태 기록이 다른 경우"
+        ]
+      ],
+      "article_ids": [
+        "WF-05"
+      ],
+      "unit_ids": [
+        "u00364",
+        "u00365",
+        "u00366",
+        "u00367",
+        "u00368"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "07848498ab914cc9ab26f463c02c8168371ef1948911e1f3c3fb7a705c46fbec"
+    },
+    {
+      "chunk_id": "recursive-5613b14f7e6412b0ec45a0417088f0f3f86c10a5b58e7b0262880da0c55fee02",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 22186,
+      "base_end": 22581,
+      "start": 22186,
+      "end": 22581,
+      "pages": [
+        {
+          "page_number": 14,
+          "canonical_start": 22186,
+          "canonical_end": 22581,
+          "page_start": 351,
+          "page_end": 746,
+          "page_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673",
+          "raw_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-05 근무 형태 기록이 다른 경우"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-06 중복으로 보이는 지급 항목"
+        ]
+      ],
+      "article_ids": [
+        "WF-05",
+        "WF-06"
+      ],
+      "unit_ids": [
+        "u00369",
+        "u00370",
+        "u00371",
+        "u00372",
+        "u00373",
+        "u00374",
+        "u00375"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "d0e1cffcae836bb67bd68672af7fb740b642af9ed218d2aa3fc092cab4b47d66"
+    },
+    {
+      "chunk_id": "recursive-e3563b0076402eed266181af9be86a47f8ea5b1cf8e42dd8153ff1605f17fca2",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 22581,
+      "base_end": 22874,
+      "start": 22581,
+      "end": 22874,
+      "pages": [
+        {
+          "page_number": 14,
+          "canonical_start": 22581,
+          "canonical_end": 22874,
+          "page_start": 746,
+          "page_end": 1039,
+          "page_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673",
+          "raw_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-06 중복으로 보이는 지급 항목"
+        ]
+      ],
+      "article_ids": [
+        "WF-06"
+      ],
+      "unit_ids": [
+        "u00376",
+        "u00377",
+        "u00378",
+        "u00379"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "c07e853ea9079d852e3bde3d73f46b90258d15da4bd9afb46e8f49b7cabf600c"
+    },
+    {
+      "chunk_id": "recursive-160a67366e6d20bc64d5a9fccfcf52681ba06983b2109ee3fb23f4a565ca0256",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 22874,
+      "base_end": 23259,
+      "start": 22874,
+      "end": 23259,
+      "pages": [
+        {
+          "page_number": 14,
+          "canonical_start": 22874,
+          "canonical_end": 23259,
+          "page_start": 1039,
+          "page_end": 1424,
+          "page_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673",
+          "raw_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-07 조회 장애 시 임시 문의 기록"
+        ]
+      ],
+      "article_ids": [
+        "WF-07"
+      ],
+      "unit_ids": [
+        "u00380",
+        "u00381",
+        "u00382",
+        "u00383",
+        "u00384",
+        "u00385"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "5fafca5eb973092e73ac707fc421cfba7b71ecedfc0e0cea43106e5837041e4a"
+    },
+    {
+      "chunk_id": "recursive-93c2d6ecf0077128ba00c9332b3c19fb644bce894b0fe9e21ee9bc7e779e2162",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 23259,
+      "base_end": 23651,
+      "start": 23259,
+      "end": 23651,
+      "pages": [
+        {
+          "page_number": 14,
+          "canonical_start": 23259,
+          "canonical_end": 23651,
+          "page_start": 1424,
+          "page_end": 1816,
+          "page_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673",
+          "raw_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-07 조회 장애 시 임시 문의 기록"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-08 안내 내용에 관한 이견과 인계"
+        ]
+      ],
+      "article_ids": [
+        "WF-07",
+        "WF-08"
+      ],
+      "unit_ids": [
+        "u00386",
+        "u00387",
+        "u00388",
+        "u00389",
+        "u00390",
+        "u00391",
+        "u00392"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "476bdf9b25759231091496be6564928dc751d2afe3aedc26fdc48127baf53f75"
+    },
+    {
+      "chunk_id": "recursive-1ce9099fc09cf7fe5c3416995ff57976519d5b7ea0c6947e7d68a6755ffbfe13",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 23651,
+      "base_end": 23686,
+      "start": 23651,
+      "end": 23686,
+      "pages": [
+        {
+          "page_number": 14,
+          "canonical_start": 23651,
+          "canonical_end": 23684,
+          "page_start": 1816,
+          "page_end": 1849,
+          "page_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673",
+          "raw_text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-08 안내 내용에 관한 이견과 인계"
+        ]
+      ],
+      "article_ids": [
+        "WF-08"
+      ],
+      "unit_ids": [
+        "u00393"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "96c28effb4044763fd31965c01f076bdfd351a5493a114d68f6f0ea2a85015bd"
+    },
+    {
+      "chunk_id": "recursive-db7dd0852d588f4c218c23d65b048829022e12bd023cfed9245c27df72a76261",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 23686,
+      "base_end": 24076,
+      "start": 23686,
+      "end": 24076,
+      "pages": [
+        {
+          "page_number": 15,
+          "canonical_start": 23686,
+          "canonical_end": 24076,
+          "page_start": 0,
+          "page_end": 390,
+          "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+          "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-08 안내 내용에 관한 이견과 인계"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-09 여러 항목을 함께 확인하는 문의"
+        ]
+      ],
+      "article_ids": [
+        "WF-08",
+        "WF-09"
+      ],
+      "unit_ids": [
+        "u00394",
+        "u00395",
+        "u00396",
+        "u00397",
+        "u00398",
+        "u00399"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "3b4accc448929e89dda98c15c3d12a9f950f7aad625da0a9b42fbe3c61009f1a"
+    },
+    {
+      "chunk_id": "recursive-85a5eaafcee3e6e174267774f2fecd0612ca2c44e4ef86eed0030c7aa8202cbf",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 24076,
+      "base_end": 24448,
+      "start": 24076,
+      "end": 24448,
+      "pages": [
+        {
+          "page_number": 15,
+          "canonical_start": 24076,
+          "canonical_end": 24448,
+          "page_start": 390,
+          "page_end": 762,
+          "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+          "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-09 여러 항목을 함께 확인하는 문의"
+        ]
+      ],
+      "article_ids": [
+        "WF-09"
+      ],
+      "unit_ids": [
+        "u00400",
+        "u00401",
+        "u00402",
+        "u00403",
+        "u00404"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "004c1d6c232615464ce33b9b6d96989c5707fe80348a88ee556c0e4542c5a257"
+    },
+    {
+      "chunk_id": "recursive-87443d11af1e64ce5901feadfc6c549cf741ef81fe20e93af7e8f6eb3f63decf",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 24448,
+      "base_end": 24833,
+      "start": 24448,
+      "end": 24833,
+      "pages": [
+        {
+          "page_number": 15,
+          "canonical_start": 24448,
+          "canonical_end": 24833,
+          "page_start": 762,
+          "page_end": 1147,
+          "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+          "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제4장 복지 지원 내역의 확인 [WF]",
+          "제2절 대조와 정정의 진행 [WF-S2]",
+          "WF-09 여러 항목을 함께 확인하는 문의"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제1절 대상과 신청 정보 [ED-S1]",
+          "ED-01 신청 대상과 일수"
+        ]
+      ],
+      "article_ids": [
+        "WF-09",
+        "ED-01"
+      ],
+      "unit_ids": [
+        "u00405",
+        "u00406",
+        "u00407",
+        "u00408",
+        "u00409",
+        "u00410",
+        "u00411",
+        "u00412",
+        "u00413"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "7874f5b5f1fd077c4ffb9dd490dd58b2881ce09fcc8387873bb9aa04d1b2ff16"
+    },
+    {
+      "chunk_id": "recursive-5b410ba54957eaaf36b4afa07c7641555649152512e16a7f2fdf8d970cb3e24a",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 24833,
+      "base_end": 25126,
+      "start": 24833,
+      "end": 25126,
+      "pages": [
+        {
+          "page_number": 15,
+          "canonical_start": 24833,
+          "canonical_end": 25124,
+          "page_start": 1147,
+          "page_end": 1438,
+          "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+          "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제1절 대상과 신청 정보 [ED-S1]",
+          "ED-01 신청 대상과 일수"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제1절 대상과 신청 정보 [ED-S1]",
+          "ED-02 다른 휴가와의 관리 구분"
+        ]
+      ],
+      "article_ids": [
+        "ED-01",
+        "ED-02"
+      ],
+      "unit_ids": [
+        "u00414",
+        "u00415",
+        "u00416",
+        "u00417",
+        "u00418",
+        "u00419"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "9e700d1084505be0a187298f3f9f51cd2dfcc17909f21c569a94d85e4e2f8547"
+    },
+    {
+      "chunk_id": "recursive-6f96996b402e8aa5cc3030f47fe8e08fa8894c4bb3d350750b148aa44c1c4f89",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 25126,
+      "base_end": 25429,
+      "start": 25126,
+      "end": 25429,
+      "pages": [
+        {
+          "page_number": 16,
+          "canonical_start": 25126,
+          "canonical_end": 25429,
+          "page_start": 0,
+          "page_end": 303,
+          "page_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582",
+          "raw_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제1절 대상과 신청 정보 [ED-S1]",
+          "ED-03 시험 일정과 사용 희망일의 표시"
+        ]
+      ],
+      "article_ids": [
+        "ED-03"
+      ],
+      "unit_ids": [
+        "u00420",
+        "u00421",
+        "u00422",
+        "u00423",
+        "u00424"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "dd5980f961c912d8c39e506e285833f659e63c9199d9835692a32b07a1cae04e"
+    },
+    {
+      "chunk_id": "recursive-8351a7892c03ea84c7893c9e26568cfc97d6099e8e397c50836d183e40cd1b0c",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 25429,
+      "base_end": 25799,
+      "start": 25429,
+      "end": 25799,
+      "pages": [
+        {
+          "page_number": 16,
+          "canonical_start": 25429,
+          "canonical_end": 25799,
+          "page_start": 303,
+          "page_end": 673,
+          "page_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582",
+          "raw_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제1절 대상과 신청 정보 [ED-S1]",
+          "ED-03 시험 일정과 사용 희망일의 표시"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-04 신청 내용을 검토하고 안내하는 절차"
+        ]
+      ],
+      "article_ids": [
+        "ED-03",
+        "ED-04"
+      ],
+      "unit_ids": [
+        "u00425",
+        "u00426",
+        "u00427",
+        "u00428",
+        "u00429",
+        "u00430"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "5f9bedc180c6190a99edf400b43ed5fceff00a9e06c42a7d9131757a0e1964d0"
+    },
+    {
+      "chunk_id": "recursive-7f4090aac5000a4cb7195b057103493a5feb4c9db84987a0608396b0489fb35d",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 25799,
+      "base_end": 26124,
+      "start": 25799,
+      "end": 26124,
+      "pages": [
+        {
+          "page_number": 16,
+          "canonical_start": 25799,
+          "canonical_end": 26124,
+          "page_start": 673,
+          "page_end": 998,
+          "page_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582",
+          "raw_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-04 신청 내용을 검토하고 안내하는 절차"
+        ]
+      ],
+      "article_ids": [
+        "ED-04"
+      ],
+      "unit_ids": [
+        "u00431",
+        "u00432",
+        "u00433",
+        "u00434"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "9e8b988acde886d20ad7d45618a7785e01ac7745841aec104d58fc12eaae9fcd"
+    },
+    {
+      "chunk_id": "recursive-097ae148009d248576f6d0529ab4fe25d0fc34dd7ee8ded59606e71a8c4c767a",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 26124,
+      "base_end": 26439,
+      "start": 26124,
+      "end": 26439,
+      "pages": [
+        {
+          "page_number": 16,
+          "canonical_start": 26124,
+          "canonical_end": 26439,
+          "page_start": 998,
+          "page_end": 1313,
+          "page_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582",
+          "raw_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-04 신청 내용을 검토하고 안내하는 절차"
+        ]
+      ],
+      "article_ids": [
+        "ED-04"
+      ],
+      "unit_ids": [
+        "u00435",
+        "u00436",
+        "u00437",
+        "u00438"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "cfb475fcf1c7401a705d0e682f254f7c9c1fe8591edfc95f5adcb976a3be2bde"
+    },
+    {
+      "chunk_id": "recursive-b1470307db43a5feeebef08d20c158a12bcf4b4691f82ae251cc637ce99e756f",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 26439,
+      "base_end": 26782,
+      "start": 26439,
+      "end": 26782,
+      "pages": [
+        {
+          "page_number": 16,
+          "canonical_start": 26439,
+          "canonical_end": 26782,
+          "page_start": 1313,
+          "page_end": 1656,
+          "page_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582",
+          "raw_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-04 신청 내용을 검토하고 안내하는 절차"
+        ]
+      ],
+      "article_ids": [
+        "ED-04"
+      ],
+      "unit_ids": [
+        "u00439",
+        "u00440",
+        "u00441",
+        "u00442",
+        "u00443"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "1d555f50d6a6e672b17d6c85dabecd14a263a2f26ecfefa9b3fba834d2e076cb"
+    },
+    {
+      "chunk_id": "recursive-dff0c47211560e18c5b6b81a7386dd8c51a87c7a387386e7445dc76162b40839",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 26782,
+      "base_end": 27040,
+      "start": 26782,
+      "end": 27040,
+      "pages": [
+        {
+          "page_number": 16,
+          "canonical_start": 26782,
+          "canonical_end": 27038,
+          "page_start": 1656,
+          "page_end": 1912,
+          "page_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582",
+          "raw_text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-04 신청 내용을 검토하고 안내하는 절차"
+        ]
+      ],
+      "article_ids": [
+        "ED-04"
+      ],
+      "unit_ids": [
+        "u00444",
+        "u00445",
+        "u00446",
+        "u00447"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "b6f4ee4cc824a870390978a38eb896040c085f400b22b34681c2ab6112ffab56"
+    },
+    {
+      "chunk_id": "recursive-bd7af5f3b2248da3f692882ab8a56413262b0c04627377fe363e21bb85b50c2c",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 27040,
+      "base_end": 27429,
+      "start": 27040,
+      "end": 27429,
+      "pages": [
+        {
+          "page_number": 17,
+          "canonical_start": 27040,
+          "canonical_end": 27429,
+          "page_start": 0,
+          "page_end": 389,
+          "page_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b",
+          "raw_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-04 신청 내용을 검토하고 안내하는 절차"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-05 시험 일정 변경과 신청 정정"
+        ]
+      ],
+      "article_ids": [
+        "ED-04",
+        "ED-05"
+      ],
+      "unit_ids": [
+        "u00448",
+        "u00449",
+        "u00450",
+        "u00451",
+        "u00452",
+        "u00453"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "3b1a6699b6cb17da5015d07c324d7edde91c50bdfed8214def29f2295dbbef00"
+    },
+    {
+      "chunk_id": "recursive-5f3ab9907f86b4ea2f35e3b3df9632d29eabd9fb79e28c53ca84acc1c0ac72e5",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 27429,
+      "base_end": 27813,
+      "start": 27429,
+      "end": 27813,
+      "pages": [
+        {
+          "page_number": 17,
+          "canonical_start": 27429,
+          "canonical_end": 27813,
+          "page_start": 389,
+          "page_end": 773,
+          "page_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b",
+          "raw_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-05 시험 일정 변경과 신청 정정"
+        ]
+      ],
+      "article_ids": [
+        "ED-05"
+      ],
+      "unit_ids": [
+        "u00454",
+        "u00455",
+        "u00456",
+        "u00457"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "770e7a0053c30869731a7900beef539f9dcb0bd5b51cfccadc1f2162cd344802"
+    },
+    {
+      "chunk_id": "recursive-76df57db53b80bb592f292937fc77ecd9cabf8e7332884c4fe6f588c8cf93eb2",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 27813,
+      "base_end": 28207,
+      "start": 27813,
+      "end": 28207,
+      "pages": [
+        {
+          "page_number": 17,
+          "canonical_start": 27813,
+          "canonical_end": 28207,
+          "page_start": 773,
+          "page_end": 1167,
+          "page_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b",
+          "raw_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-05 시험 일정 변경과 신청 정정"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-06 응시 계획 취소와 요청 상태의 정리"
+        ]
+      ],
+      "article_ids": [
+        "ED-05",
+        "ED-06"
+      ],
+      "unit_ids": [
+        "u00458",
+        "u00459",
+        "u00460",
+        "u00461",
+        "u00462",
+        "u00463",
+        "u00464"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "e5372a247bf6e4160777cc2a41c82189c8c71fc5ff2161b5cd48aad5e5dcd4ce"
+    },
+    {
+      "chunk_id": "recursive-c3a727df945568ef3a53a63a5b18ba14e24383b9a071f11a8aa1bee99908cc71",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 28207,
+      "base_end": 28576,
+      "start": 28207,
+      "end": 28576,
+      "pages": [
+        {
+          "page_number": 17,
+          "canonical_start": 28207,
+          "canonical_end": 28576,
+          "page_start": 1167,
+          "page_end": 1536,
+          "page_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b",
+          "raw_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-06 응시 계획 취소와 요청 상태의 정리"
+        ]
+      ],
+      "article_ids": [
+        "ED-06"
+      ],
+      "unit_ids": [
+        "u00465",
+        "u00466",
+        "u00467",
+        "u00468",
+        "u00469"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "2fcc3f66111ead95af7e56feafa384b1b4d53cee506466024098a6d1b67bfe78"
+    },
+    {
+      "chunk_id": "recursive-6ca0519d84ce23c1412f23224ff4f7d96d63437a0a570cba5c4c374d8396d1b6",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 28576,
+      "base_end": 28888,
+      "start": 28576,
+      "end": 28888,
+      "pages": [
+        {
+          "page_number": 17,
+          "canonical_start": 28576,
+          "canonical_end": 28886,
+          "page_start": 1536,
+          "page_end": 1846,
+          "page_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b",
+          "raw_text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-06 응시 계획 취소와 요청 상태의 정리"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-07 신청 화면 장애와 복구 후 연결"
+        ]
+      ],
+      "article_ids": [
+        "ED-06",
+        "ED-07"
+      ],
+      "unit_ids": [
+        "u00470",
+        "u00471",
+        "u00472",
+        "u00473",
+        "u00474"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "9c4c2c09723d0d56789541a23380dfd4e1a4f966f112adeda936b5e71e41fa0f"
+    },
+    {
+      "chunk_id": "recursive-f668f967a72acc4434fcd46c92c0f42c6b21bd0a79b97360ca3bee6277f4c01f",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 28888,
+      "base_end": 29213,
+      "start": 28888,
+      "end": 29213,
+      "pages": [
+        {
+          "page_number": 18,
+          "canonical_start": 28888,
+          "canonical_end": 29213,
+          "page_start": 0,
+          "page_end": 325,
+          "page_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778",
+          "raw_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-07 신청 화면 장애와 복구 후 연결"
+        ]
+      ],
+      "article_ids": [
+        "ED-07"
+      ],
+      "unit_ids": [
+        "u00475",
+        "u00476",
+        "u00477",
+        "u00478",
+        "u00479"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "f5b94bc7cd47debc156272c717fbc5897aa81b6228a45beca1eeb558ad8d0a64"
+    },
+    {
+      "chunk_id": "recursive-7af42d12562b616248c5054aca20fb2fb438a38999123fa747e372615a2f7b12",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 29213,
+      "base_end": 29582,
+      "start": 29213,
+      "end": 29582,
+      "pages": [
+        {
+          "page_number": 18,
+          "canonical_start": 29213,
+          "canonical_end": 29582,
+          "page_start": 325,
+          "page_end": 694,
+          "page_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778",
+          "raw_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-07 신청 화면 장애와 복구 후 연결"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-08 자발적으로 전달된 결과 정보의 관리"
+        ]
+      ],
+      "article_ids": [
+        "ED-07",
+        "ED-08"
+      ],
+      "unit_ids": [
+        "u00480",
+        "u00481",
+        "u00482",
+        "u00483",
+        "u00484",
+        "u00485"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "23d65b866927b543396646c3f662af3171e2b96718ddfe2a11ba39a9cea95f4f"
+    },
+    {
+      "chunk_id": "recursive-c4f62aef1b094d63782a8b97fc976b42d9f51d9d12bbfbcd86b016e1e5e8f7e2",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 29582,
+      "base_end": 29934,
+      "start": 29582,
+      "end": 29934,
+      "pages": [
+        {
+          "page_number": 18,
+          "canonical_start": 29582,
+          "canonical_end": 29934,
+          "page_start": 694,
+          "page_end": 1046,
+          "page_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778",
+          "raw_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-08 자발적으로 전달된 결과 정보의 관리"
+        ]
+      ],
+      "article_ids": [
+        "ED-08"
+      ],
+      "unit_ids": [
+        "u00486",
+        "u00487",
+        "u00488",
+        "u00489",
+        "u00490"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "cc00f8d6177da4bceeea2c78226bfb3b77550e1aea45ac244cd2c9a52c9adbe6"
+    },
+    {
+      "chunk_id": "recursive-2b1798ca609a688362e8f0e73529829d821c1ad78339d761f73aa0aebf4d94d4",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 29934,
+      "base_end": 30332,
+      "start": 29934,
+      "end": 30332,
+      "pages": [
+        {
+          "page_number": 18,
+          "canonical_start": 29934,
+          "canonical_end": 30332,
+          "page_start": 1046,
+          "page_end": 1444,
+          "page_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778",
+          "raw_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-08 자발적으로 전달된 결과 정보의 관리"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-09 복합 문의의 답변과 담당 업무 인계"
+        ]
+      ],
+      "article_ids": [
+        "ED-08",
+        "ED-09"
+      ],
+      "unit_ids": [
+        "u00491",
+        "u00492",
+        "u00493",
+        "u00494",
+        "u00495",
+        "u00496"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "edb7d013b1dca70611d4a79c329dc98219bc97daa4082a3d9fc27c49495c4b28"
+    },
+    {
+      "chunk_id": "recursive-0cea5bcd62a2c082ae6783614e2af5d9952179e07b21d1d954a4679373f323b2",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 30332,
+      "base_end": 30682,
+      "start": 30332,
+      "end": 30682,
+      "pages": [
+        {
+          "page_number": 18,
+          "canonical_start": 30332,
+          "canonical_end": 30680,
+          "page_start": 1444,
+          "page_end": 1792,
+          "page_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778",
+          "raw_text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제5장 교육휴가의 신청과 변경 [ED]",
+          "제2절 접수와 처리 결과의 확인 [ED-S2]",
+          "ED-09 복합 문의의 답변과 담당 업무 인계"
+        ]
+      ],
+      "article_ids": [
+        "ED-09"
+      ],
+      "unit_ids": [
+        "u00497",
+        "u00498",
+        "u00499",
+        "u00500",
+        "u00501",
+        "u00502"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "75ab6b18bfdbbafde341f07f3a199cc0faf6d9763489531f2f62ac7736f06eea"
+    },
+    {
+      "chunk_id": "recursive-b4f8e6c583cefaae796a247ba5bc291f90aa2b62b7e2b47c6aa721863319b643",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 30682,
+      "base_end": 31019,
+      "start": 30682,
+      "end": 31019,
+      "pages": [
+        {
+          "page_number": 19,
+          "canonical_start": 30682,
+          "canonical_end": 31019,
+          "page_start": 0,
+          "page_end": 337,
+          "page_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+          "raw_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제1절 출장 요청의 기본 사항 [TR-S1]",
+          "TR-01 승인 기한과 승인 주체"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제1절 출장 요청의 기본 사항 [TR-S1]",
+          "TR-02 다른 제도의 승인과 구분"
+        ]
+      ],
+      "article_ids": [
+        "TR-01",
+        "TR-02"
+      ],
+      "unit_ids": [
+        "u00503",
+        "u00504",
+        "u00505",
+        "u00506",
+        "u00507",
+        "u00508",
+        "u00509",
+        "u00510",
+        "u00511",
+        "u00512"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "5cada72ac8b96dd5c4d475236df51c3f7a4bdcc9470ad7bef8c733f4befae481"
+    },
+    {
+      "chunk_id": "recursive-91e27f690b10c64f0121b2945f18bcb8a76f003e6bad828ab1d089a642b71d16",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 31019,
+      "base_end": 31397,
+      "start": 31019,
+      "end": 31397,
+      "pages": [
+        {
+          "page_number": 19,
+          "canonical_start": 31019,
+          "canonical_end": 31397,
+          "page_start": 337,
+          "page_end": 715,
+          "page_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+          "raw_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제1절 출장 요청의 기본 사항 [TR-S1]",
+          "TR-02 다른 제도의 승인과 구분"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제1절 출장 요청의 기본 사항 [TR-S1]",
+          "TR-03 목적과 일정 정보의 작성"
+        ]
+      ],
+      "article_ids": [
+        "TR-02",
+        "TR-03"
+      ],
+      "unit_ids": [
+        "u00513",
+        "u00514",
+        "u00515",
+        "u00516",
+        "u00517",
+        "u00518"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "135bef7116dbe42d5e902dee4283fd8239d9559c32a8ed01bbdba5a8d557e0e7"
+    },
+    {
+      "chunk_id": "recursive-1d74dab5a94f26599efa4ef7501dd7be06b584e0fe70b674d258b5e19a7a8ed9",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 31397,
+      "base_end": 31756,
+      "start": 31397,
+      "end": 31756,
+      "pages": [
+        {
+          "page_number": 19,
+          "canonical_start": 31397,
+          "canonical_end": 31756,
+          "page_start": 715,
+          "page_end": 1074,
+          "page_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+          "raw_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제1절 출장 요청의 기본 사항 [TR-S1]",
+          "TR-03 목적과 일정 정보의 작성"
+        ]
+      ],
+      "article_ids": [
+        "TR-03"
+      ],
+      "unit_ids": [
+        "u00519",
+        "u00520",
+        "u00521",
+        "u00522",
+        "u00523"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "1ccc92fce809161c3d930d95407534f89d6394e8b6cfdbdee712db4a34d5d095"
+    },
+    {
+      "chunk_id": "recursive-170388e56ae1fd8b424d3ee26664efc3c896409b5e6c4cc984ae2fb4383c4d1e",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 31756,
+      "base_end": 32143,
+      "start": 31756,
+      "end": 32143,
+      "pages": [
+        {
+          "page_number": 19,
+          "canonical_start": 31756,
+          "canonical_end": 32143,
+          "page_start": 1074,
+          "page_end": 1461,
+          "page_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+          "raw_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-04 접수부터 승인 통지까지의 연결 절차"
+        ]
+      ],
+      "article_ids": [
+        "TR-04"
+      ],
+      "unit_ids": [
+        "u00524",
+        "u00525",
+        "u00526",
+        "u00527",
+        "u00528",
+        "u00529",
+        "u00530"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "e9ecaebf7574abb9d42534652f1eba9303a2489a69d8db14e959c3d105f1c0bb"
+    },
+    {
+      "chunk_id": "recursive-dcbcd8dfa333b862d7fa33f5bd7ea3565630e7f23597f0e2cf645c67d7087960",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 32143,
+      "base_end": 32207,
+      "start": 32143,
+      "end": 32207,
+      "pages": [
+        {
+          "page_number": 19,
+          "canonical_start": 32143,
+          "canonical_end": 32205,
+          "page_start": 1461,
+          "page_end": 1523,
+          "page_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+          "raw_text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-04 접수부터 승인 통지까지의 연결 절차"
+        ]
+      ],
+      "article_ids": [
+        "TR-04"
+      ],
+      "unit_ids": [
+        "u00531"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "7426d571082b488e826db1a2347552926431a3bab954cd20e70ecd2fe330de73"
+    },
+    {
+      "chunk_id": "recursive-681ebbc21680c4076340eece268c3645dbf4e987ca964b48cc6d18efa436b8df",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 32207,
+      "base_end": 32556,
+      "start": 32207,
+      "end": 32556,
+      "pages": [
+        {
+          "page_number": 20,
+          "canonical_start": 32207,
+          "canonical_end": 32556,
+          "page_start": 0,
+          "page_end": 349,
+          "page_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d",
+          "raw_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-04 접수부터 승인 통지까지의 연결 절차"
+        ]
+      ],
+      "article_ids": [
+        "TR-04"
+      ],
+      "unit_ids": [
+        "u00532",
+        "u00533",
+        "u00534",
+        "u00535",
+        "u00536"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "8b205ebf303efe70a686c04c0d56bc0f80c69919a935eb424e096aa35a08e99f"
+    },
+    {
+      "chunk_id": "recursive-0e45e475b2b9f33cbb468b9b36f37bd95c7f6fb182125fae01dc831f74a79eef",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 32556,
+      "base_end": 32936,
+      "start": 32556,
+      "end": 32936,
+      "pages": [
+        {
+          "page_number": 20,
+          "canonical_start": 32556,
+          "canonical_end": 32936,
+          "page_start": 349,
+          "page_end": 729,
+          "page_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d",
+          "raw_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-04 접수부터 승인 통지까지의 연결 절차"
+        ]
+      ],
+      "article_ids": [
+        "TR-04"
+      ],
+      "unit_ids": [
+        "u00537",
+        "u00538",
+        "u00539",
+        "u00540",
+        "u00541"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "f7cf84304884f7cbafb57e9e9d0965b88c5a1b7ce8797b6d142ff446ea57746f"
+    },
+    {
+      "chunk_id": "recursive-c2d515d5abc22fd057e06077abfcdff2c64a07b27d271c370ac1fe123fc6169b",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 32936,
+      "base_end": 33306,
+      "start": 32936,
+      "end": 33306,
+      "pages": [
+        {
+          "page_number": 20,
+          "canonical_start": 32936,
+          "canonical_end": 33306,
+          "page_start": 729,
+          "page_end": 1099,
+          "page_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d",
+          "raw_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-04 접수부터 승인 통지까지의 연결 절차"
+        ]
+      ],
+      "article_ids": [
+        "TR-04"
+      ],
+      "unit_ids": [
+        "u00542",
+        "u00543",
+        "u00544",
+        "u00545",
+        "u00546"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "c865f77628f0e5f550aa7caaba3b0a18661de7d22dcfa6c0e2dc451c3210c2aa"
+    },
+    {
+      "chunk_id": "recursive-0d374e4493e7c3477e034160852cade3951aebfa59a3185dbb5dd232a53afd69",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 33306,
+      "base_end": 33680,
+      "start": 33306,
+      "end": 33680,
+      "pages": [
+        {
+          "page_number": 20,
+          "canonical_start": 33306,
+          "canonical_end": 33680,
+          "page_start": 1099,
+          "page_end": 1473,
+          "page_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d",
+          "raw_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-04 접수부터 승인 통지까지의 연결 절차"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-05 방문 순서와 세부 일정의 변경"
+        ]
+      ],
+      "article_ids": [
+        "TR-04",
+        "TR-05"
+      ],
+      "unit_ids": [
+        "u00547",
+        "u00548",
+        "u00549",
+        "u00550",
+        "u00551",
+        "u00552"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "50423718fe557b32a7cbf17cf8822a860e011cbf6893f79afdeadad1fe6bc2c6"
+    },
+    {
+      "chunk_id": "recursive-5cbb91a8c7832cf615a1a97c204791f6a33f1777aa44d7577b95c9cc438a1ce2",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 33680,
+      "base_end": 34022,
+      "start": 33680,
+      "end": 34022,
+      "pages": [
+        {
+          "page_number": 20,
+          "canonical_start": 33680,
+          "canonical_end": 34022,
+          "page_start": 1473,
+          "page_end": 1815,
+          "page_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d",
+          "raw_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-05 방문 순서와 세부 일정의 변경"
+        ]
+      ],
+      "article_ids": [
+        "TR-05"
+      ],
+      "unit_ids": [
+        "u00553",
+        "u00554",
+        "u00555",
+        "u00556",
+        "u00557"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "ba92f49618f1b733fc797018dd5cbb1a1b8708b64bbec2cd0c9fa22b4ce1632c"
+    },
+    {
+      "chunk_id": "recursive-e703c8e06bc1c33f229a7d83d4076715015f690a8ebb07d5880bb460b72b388e",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 34022,
+      "base_end": 34179,
+      "start": 34022,
+      "end": 34179,
+      "pages": [
+        {
+          "page_number": 20,
+          "canonical_start": 34022,
+          "canonical_end": 34177,
+          "page_start": 1815,
+          "page_end": 1970,
+          "page_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d",
+          "raw_text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-05 방문 순서와 세부 일정의 변경"
+        ]
+      ],
+      "article_ids": [
+        "TR-05"
+      ],
+      "unit_ids": [
+        "u00558",
+        "u00559"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "cb9c1e2d5b799bf4ddf7ffd58ffa9d716d4b2f150c5eb95b310ecfe43a37e651"
+    },
+    {
+      "chunk_id": "recursive-119f947a76827b3e10193d9d09deb4b90bf3325e522bd3319ae7cc838c37e9af",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 34179,
+      "base_end": 34549,
+      "start": 34179,
+      "end": 34549,
+      "pages": [
+        {
+          "page_number": 21,
+          "canonical_start": 34179,
+          "canonical_end": 34549,
+          "page_start": 0,
+          "page_end": 370,
+          "page_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab",
+          "raw_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-05 방문 순서와 세부 일정의 변경"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-06 승인 범위와 문의 답변의 대조"
+        ]
+      ],
+      "article_ids": [
+        "TR-05",
+        "TR-06"
+      ],
+      "unit_ids": [
+        "u00560",
+        "u00561",
+        "u00562",
+        "u00563",
+        "u00564",
+        "u00565",
+        "u00566"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "ce3fac481f8bfaf1b21e7e567f5fde0a7fa60957d345d3684fab1554e132ad83"
+    },
+    {
+      "chunk_id": "recursive-5d4a4e59380e7800f8cb8ac08f77c5c813d7064bb05200ffd328bf6995912f65",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 34549,
+      "base_end": 34876,
+      "start": 34549,
+      "end": 34876,
+      "pages": [
+        {
+          "page_number": 21,
+          "canonical_start": 34549,
+          "canonical_end": 34876,
+          "page_start": 370,
+          "page_end": 697,
+          "page_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab",
+          "raw_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-06 승인 범위와 문의 답변의 대조"
+        ]
+      ],
+      "article_ids": [
+        "TR-06"
+      ],
+      "unit_ids": [
+        "u00567",
+        "u00568",
+        "u00569",
+        "u00570",
+        "u00571"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "985344ec02adf41cf2f248039acc83e4ee11d69de5ddc4c93f0b5f7fc1e96942"
+    },
+    {
+      "chunk_id": "recursive-ec7602626afa92a71a6560099b9934a9ce95d0d83f804a975476cf3d0e006e2f",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 34876,
+      "base_end": 35228,
+      "start": 34876,
+      "end": 35228,
+      "pages": [
+        {
+          "page_number": 21,
+          "canonical_start": 34876,
+          "canonical_end": 35228,
+          "page_start": 697,
+          "page_end": 1049,
+          "page_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab",
+          "raw_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제2절 검토와 승인 내용의 전달 [TR-S2]",
+          "TR-06 승인 범위와 문의 답변의 대조"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-07 신청 시스템 장애 시의 임시 기록"
+        ]
+      ],
+      "article_ids": [
+        "TR-06",
+        "TR-07"
+      ],
+      "unit_ids": [
+        "u00572",
+        "u00573",
+        "u00574",
+        "u00575",
+        "u00576",
+        "u00577"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "6ef827fbc69202bd7465275eae7382944b6972804fd8865fc944151f3ec878f9"
+    },
+    {
+      "chunk_id": "recursive-4c491b964a9bf24ef767d4eee31ac0cfd43a43e966b0b8ffdb7dfa99d86967f1",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 35228,
+      "base_end": 35597,
+      "start": 35228,
+      "end": 35597,
+      "pages": [
+        {
+          "page_number": 21,
+          "canonical_start": 35228,
+          "canonical_end": 35597,
+          "page_start": 1049,
+          "page_end": 1418,
+          "page_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab",
+          "raw_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-07 신청 시스템 장애 시의 임시 기록"
+        ]
+      ],
+      "article_ids": [
+        "TR-07"
+      ],
+      "unit_ids": [
+        "u00578",
+        "u00579",
+        "u00580",
+        "u00581",
+        "u00582"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "8884884530b7b81f337d2b120c8462deb8b1700edd9a80ae2ff8c3e50fe26182"
+    },
+    {
+      "chunk_id": "recursive-638e77b70c042b236d7dd785830ac2497bb1103c4c5b8ac537af43091dfea1f6",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 35597,
+      "base_end": 35903,
+      "start": 35597,
+      "end": 35903,
+      "pages": [
+        {
+          "page_number": 21,
+          "canonical_start": 35597,
+          "canonical_end": 35901,
+          "page_start": 1418,
+          "page_end": 1722,
+          "page_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab",
+          "raw_text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-07 신청 시스템 장애 시의 임시 기록"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-08 전체 취소와 일부 일정 취소의 구분"
+        ]
+      ],
+      "article_ids": [
+        "TR-07",
+        "TR-08"
+      ],
+      "unit_ids": [
+        "u00583",
+        "u00584",
+        "u00585",
+        "u00586",
+        "u00587"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "13c17014826711f1dae8069d2003640a6965dc50311d089609e7eab8423c00bb"
+    },
+    {
+      "chunk_id": "recursive-62f34e9bff76aaa47b0e54c931c9dfcfd83819d5d29740ef26150438bd44d200",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 35903,
+      "base_end": 36286,
+      "start": 35903,
+      "end": 36286,
+      "pages": [
+        {
+          "page_number": 22,
+          "canonical_start": 35903,
+          "canonical_end": 36286,
+          "page_start": 0,
+          "page_end": 383,
+          "page_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c",
+          "raw_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-08 전체 취소와 일부 일정 취소의 구분"
+        ]
+      ],
+      "article_ids": [
+        "TR-08"
+      ],
+      "unit_ids": [
+        "u00588",
+        "u00589",
+        "u00590",
+        "u00591",
+        "u00592",
+        "u00593"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "b80a5d4bc81edf751704c0dd72541d34f1820ad4a402768ae5a5c340376ff538"
+    },
+    {
+      "chunk_id": "recursive-2bf14f27b147b0ca0d5b1564e718aad1bbd509d2056ae9ed0f5fe0f1cce2bf3d",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 36286,
+      "base_end": 36646,
+      "start": 36286,
+      "end": 36646,
+      "pages": [
+        {
+          "page_number": 22,
+          "canonical_start": 36286,
+          "canonical_end": 36646,
+          "page_start": 383,
+          "page_end": 743,
+          "page_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c",
+          "raw_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-08 전체 취소와 일부 일정 취소의 구분"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-09 비용 관련 자료를 접수하고 구분하는 절차"
+        ]
+      ],
+      "article_ids": [
+        "TR-08",
+        "TR-09"
+      ],
+      "unit_ids": [
+        "u00594",
+        "u00595",
+        "u00596",
+        "u00597",
+        "u00598",
+        "u00599"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "c87df763adbb7d9345536f49783f739798fe3ffc3e4073e2f24cb7cf724ddf05"
+    },
+    {
+      "chunk_id": "recursive-f15a12f67998b09f5fe24ee1412f955feb7964613673cbb291958941bb39033a",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 36646,
+      "base_end": 36979,
+      "start": 36646,
+      "end": 36979,
+      "pages": [
+        {
+          "page_number": 22,
+          "canonical_start": 36646,
+          "canonical_end": 36979,
+          "page_start": 743,
+          "page_end": 1076,
+          "page_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c",
+          "raw_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-09 비용 관련 자료를 접수하고 구분하는 절차"
+        ]
+      ],
+      "article_ids": [
+        "TR-09"
+      ],
+      "unit_ids": [
+        "u00600",
+        "u00601",
+        "u00602",
+        "u00603",
+        "u00604"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "a2418040296da895b7eb856d765c6e93e630a795b560a51ce0faa2dd2fb314b6"
+    },
+    {
+      "chunk_id": "recursive-df9c22c575313a2326218eb31e67d1c3ed03b563a0d8e9c7deffd90248f9b11e",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 36979,
+      "base_end": 37282,
+      "start": 36979,
+      "end": 37282,
+      "pages": [
+        {
+          "page_number": 22,
+          "canonical_start": 36979,
+          "canonical_end": 37282,
+          "page_start": 1076,
+          "page_end": 1379,
+          "page_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c",
+          "raw_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-09 비용 관련 자료를 접수하고 구분하는 절차"
+        ]
+      ],
+      "article_ids": [
+        "TR-09"
+      ],
+      "unit_ids": [
+        "u00605",
+        "u00606",
+        "u00607",
+        "u00608"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "00d15fbc240c677e003d73c95fcede2dff0e84825c77ceac25dbbf2c69be5cac"
+    },
+    {
+      "chunk_id": "recursive-f735c2687c96241aec34760366ad147e4806554f85a4523f9323a658e9a070ca",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 37282,
+      "base_end": 37642,
+      "start": 37282,
+      "end": 37642,
+      "pages": [
+        {
+          "page_number": 22,
+          "canonical_start": 37282,
+          "canonical_end": 37642,
+          "page_start": 1379,
+          "page_end": 1739,
+          "page_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c",
+          "raw_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-10 대상이 불분명한 비용 자료의 보완"
+        ]
+      ],
+      "article_ids": [
+        "TR-10"
+      ],
+      "unit_ids": [
+        "u00609",
+        "u00610",
+        "u00611",
+        "u00612",
+        "u00613",
+        "u00614"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "31e13d56645f43529ef3c5e4a91b457337ccb1851a325d81b576e03925e4c4b8"
+    },
+    {
+      "chunk_id": "recursive-55e226a16a29f4857b5ad465e39d5096f8a3c14fec2b7c9364b0a364a78ebd5f",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 37642,
+      "base_end": 37874,
+      "start": 37642,
+      "end": 37874,
+      "pages": [
+        {
+          "page_number": 22,
+          "canonical_start": 37642,
+          "canonical_end": 37872,
+          "page_start": 1739,
+          "page_end": 1969,
+          "page_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c",
+          "raw_text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-10 대상이 불분명한 비용 자료의 보완"
+        ]
+      ],
+      "article_ids": [
+        "TR-10"
+      ],
+      "unit_ids": [
+        "u00615",
+        "u00616",
+        "u00617"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "e0e5f31ee31b055360e16eb3f1b0c9aabf3fe853bba9e01ec2eaa9859e05854d"
+    },
+    {
+      "chunk_id": "recursive-5ce8c5f883def8e338e858cbe5572af485778d61fc9451a7f58f065841e9dd92",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 37874,
+      "base_end": 38254,
+      "start": 37874,
+      "end": 38254,
+      "pages": [
+        {
+          "page_number": 23,
+          "canonical_start": 37874,
+          "canonical_end": 38254,
+          "page_start": 0,
+          "page_end": 380,
+          "page_text_sha256": "92215736d3b6307012d975c434f5af9a41cadb0d637ebdbfd094e6096edb2542",
+          "raw_text_sha256": "92215736d3b6307012d975c434f5af9a41cadb0d637ebdbfd094e6096edb2542"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-10 대상이 불분명한 비용 자료의 보완"
+        ],
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-11 실제 일정과 사후 문의의 기록"
+        ]
+      ],
+      "article_ids": [
+        "TR-10",
+        "TR-11"
+      ],
+      "unit_ids": [
+        "u00618",
+        "u00619",
+        "u00620",
+        "u00621",
+        "u00622",
+        "u00623",
+        "u00624"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "27ae34cff63971329a6f527261db9c316abcb840ae50b5b2f27cf960d7afc048"
+    },
+    {
+      "chunk_id": "recursive-3a4b56a333fcc728a45e013828f80931ae27d7cd004b5581037bc7095cc135f9",
+      "document_id": "hr-v4-handbook",
+      "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "algorithm_version": "chunk-experiment-v1",
+      "config": {
+        "id": "recursive-0",
+        "method": "recursive",
+        "base_max_chars": 400,
+        "overlap_chars": 0,
+        "overlap_policy": "post_partition_left_extension_v1"
+      },
+      "base_start": 38254,
+      "base_end": 38582,
+      "start": 38254,
+      "end": 38582,
+      "pages": [
+        {
+          "page_number": 23,
+          "canonical_start": 38254,
+          "canonical_end": 38582,
+          "page_start": 380,
+          "page_end": 708,
+          "page_text_sha256": "92215736d3b6307012d975c434f5af9a41cadb0d637ebdbfd094e6096edb2542",
+          "raw_text_sha256": "92215736d3b6307012d975c434f5af9a41cadb0d637ebdbfd094e6096edb2542"
+        }
+      ],
+      "title_paths": [
+        [
+          "가상 HR 운영 규정집",
+          "제6장 출장의 승인과 일정 관리 [TR]",
+          "제3절 예외 접수와 출장 이후의 기록 [TR-S3]",
+          "TR-11 실제 일정과 사후 문의의 기록"
+        ]
+      ],
+      "article_ids": [
+        "TR-11"
+      ],
+      "unit_ids": [
+        "u00625",
+        "u00626",
+        "u00627",
+        "u00628",
+        "u00629"
+      ],
+      "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "text_sha256": "a464bc3e0556d7f9c87d9009ed4e9c9d8330a817f49213cd9e04063a735fe17e"
+    }
+  ],
+  "skipped": [],
+  "base_spans": [
+    [
+      0,
+      376
+    ],
+    [
+      376,
+      762
+    ],
+    [
+      762,
+      961
+    ],
+    [
+      961,
+      1349
+    ],
+    [
+      1349,
+      1739
+    ],
+    [
+      1739,
+      2132
+    ],
+    [
+      2132,
+      2528
+    ],
+    [
+      2528,
+      2848
+    ],
+    [
+      2848,
+      3212
+    ],
+    [
+      3212,
+      3595
+    ],
+    [
+      3595,
+      3969
+    ],
+    [
+      3969,
+      4358
+    ],
+    [
+      4358,
+      4395
+    ],
+    [
+      4395,
+      4757
+    ],
+    [
+      4757,
+      5076
+    ],
+    [
+      5076,
+      5417
+    ],
+    [
+      5417,
+      5784
+    ],
+    [
+      5784,
+      6155
+    ],
+    [
+      6155,
+      6223
+    ],
+    [
+      6223,
+      6571
+    ],
+    [
+      6571,
+      6910
+    ],
+    [
+      6910,
+      7240
+    ],
+    [
+      7240,
+      7607
+    ],
+    [
+      7607,
+      7951
+    ],
+    [
+      7951,
+      8120
+    ],
+    [
+      8120,
+      8508
+    ],
+    [
+      8508,
+      8873
+    ],
+    [
+      8873,
+      9246
+    ],
+    [
+      9246,
+      9583
+    ],
+    [
+      9583,
+      9833
+    ],
+    [
+      9833,
+      10200
+    ],
+    [
+      10200,
+      10535
+    ],
+    [
+      10535,
+      10921
+    ],
+    [
+      10921,
+      11242
+    ],
+    [
+      11242,
+      11617
+    ],
+    [
+      11617,
+      11750
+    ],
+    [
+      11750,
+      12116
+    ],
+    [
+      12116,
+      12447
+    ],
+    [
+      12447,
+      12769
+    ],
+    [
+      12769,
+      13106
+    ],
+    [
+      13106,
+      13470
+    ],
+    [
+      13470,
+      13805
+    ],
+    [
+      13805,
+      14175
+    ],
+    [
+      14175,
+      14523
+    ],
+    [
+      14523,
+      14905
+    ],
+    [
+      14905,
+      14971
+    ],
+    [
+      14971,
+      15314
+    ],
+    [
+      15314,
+      15668
+    ],
+    [
+      15668,
+      16066
+    ],
+    [
+      16066,
+      16425
+    ],
+    [
+      16425,
+      16780
+    ],
+    [
+      16780,
+      17087
+    ],
+    [
+      17087,
+      17481
+    ],
+    [
+      17481,
+      17850
+    ],
+    [
+      17850,
+      18216
+    ],
+    [
+      18216,
+      18587
+    ],
+    [
+      18587,
+      18640
+    ],
+    [
+      18640,
+      19018
+    ],
+    [
+      19018,
+      19359
+    ],
+    [
+      19359,
+      19717
+    ],
+    [
+      19717,
+      19955
+    ],
+    [
+      19955,
+      20286
+    ],
+    [
+      20286,
+      20633
+    ],
+    [
+      20633,
+      21005
+    ],
+    [
+      21005,
+      21371
+    ],
+    [
+      21371,
+      21720
+    ],
+    [
+      21720,
+      21835
+    ],
+    [
+      21835,
+      22186
+    ],
+    [
+      22186,
+      22581
+    ],
+    [
+      22581,
+      22874
+    ],
+    [
+      22874,
+      23259
+    ],
+    [
+      23259,
+      23651
+    ],
+    [
+      23651,
+      23686
+    ],
+    [
+      23686,
+      24076
+    ],
+    [
+      24076,
+      24448
+    ],
+    [
+      24448,
+      24833
+    ],
+    [
+      24833,
+      25126
+    ],
+    [
+      25126,
+      25429
+    ],
+    [
+      25429,
+      25799
+    ],
+    [
+      25799,
+      26124
+    ],
+    [
+      26124,
+      26439
+    ],
+    [
+      26439,
+      26782
+    ],
+    [
+      26782,
+      27040
+    ],
+    [
+      27040,
+      27429
+    ],
+    [
+      27429,
+      27813
+    ],
+    [
+      27813,
+      28207
+    ],
+    [
+      28207,
+      28576
+    ],
+    [
+      28576,
+      28888
+    ],
+    [
+      28888,
+      29213
+    ],
+    [
+      29213,
+      29582
+    ],
+    [
+      29582,
+      29934
+    ],
+    [
+      29934,
+      30332
+    ],
+    [
+      30332,
+      30682
+    ],
+    [
+      30682,
+      31019
+    ],
+    [
+      31019,
+      31397
+    ],
+    [
+      31397,
+      31756
+    ],
+    [
+      31756,
+      32143
+    ],
+    [
+      32143,
+      32207
+    ],
+    [
+      32207,
+      32556
+    ],
+    [
+      32556,
+      32936
+    ],
+    [
+      32936,
+      33306
+    ],
+    [
+      33306,
+      33680
+    ],
+    [
+      33680,
+      34022
+    ],
+    [
+      34022,
+      34179
+    ],
+    [
+      34179,
+      34549
+    ],
+    [
+      34549,
+      34876
+    ],
+    [
+      34876,
+      35228
+    ],
+    [
+      35228,
+      35597
+    ],
+    [
+      35597,
+      35903
+    ],
+    [
+      35903,
+      36286
+    ],
+    [
+      36286,
+      36646
+    ],
+    [
+      36646,
+      36979
+    ],
+    [
+      36979,
+      37282
+    ],
+    [
+      37282,
+      37642
+    ],
+    [
+      37642,
+      37874
+    ],
+    [
+      37874,
+      38254
+    ],
+    [
+      38254,
+      38582
+    ]
+  ],
+  "offset_unit": "Unicode code point [start,end)",
+  "page_separator_note": "Separators have no fake page"
+}

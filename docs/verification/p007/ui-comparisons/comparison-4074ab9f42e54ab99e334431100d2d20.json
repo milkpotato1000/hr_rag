@@ -1,0 +1,70 @@
+{
+  "comparison_id": "comparison-4074ab9f42e54ab99e334431100d2d20",
+  "question": "zzzxxyy없는어휘123",
+  "query_id": null,
+  "split": null,
+  "corpus_id": "source-v4",
+  "top_k": 5,
+  "budget_chars": 800,
+  "retriever": "bm25",
+  "embedding": null,
+  "results": [
+    {
+      "ranking": {
+        "question_hash": "dc1a28a1e1263ffb0946aee764c506a6f93598c1ac66f815fe51d17ef5a844dd",
+        "chunk_run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+        "index_fingerprint": "bb1af5e5f0535179f3018156d77c1c70f7d30bcb51012ef53ff120c43c7acb86",
+        "config_id": "fixed-400-80",
+        "retriever": "bm25",
+        "results": [],
+        "elapsed_ms": 0.03966700751334429
+      },
+      "metrics": {
+        "status": "N/A",
+        "reason": "no_registered_ground_truth"
+      },
+      "budget": {
+        "kind": "context_budget_simulation",
+        "selected": [],
+        "excluded": [],
+        "used_chars": 0,
+        "budget_chars": 800,
+        "actually_sent_to_llm": false,
+        "metrics": {
+          "status": "N/A",
+          "reason": "no_registered_ground_truth"
+        }
+      },
+      "hits": []
+    },
+    {
+      "ranking": {
+        "question_hash": "dc1a28a1e1263ffb0946aee764c506a6f93598c1ac66f815fe51d17ef5a844dd",
+        "chunk_run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+        "index_fingerprint": "5a065e600529b57dc152c40d1b7c926032d78faf7a9d862874231b9bd99f41c6",
+        "config_id": "structure-0",
+        "retriever": "bm25",
+        "results": [],
+        "elapsed_ms": 0.04354200791567564
+      },
+      "metrics": {
+        "status": "N/A",
+        "reason": "no_registered_ground_truth"
+      },
+      "budget": {
+        "kind": "context_budget_simulation",
+        "selected": [],
+        "excluded": [],
+        "used_chars": 0,
+        "budget_chars": 800,
+        "actually_sent_to_llm": false,
+        "metrics": {
+          "status": "N/A",
+          "reason": "no_registered_ground_truth"
+        }
+      },
+      "hits": []
+    }
+  ],
+  "dataset_sha256": "9be17b08440418d75d2128c39eae6cbb9ce76301221b2fe79b60c99dd468b0e9"
+}

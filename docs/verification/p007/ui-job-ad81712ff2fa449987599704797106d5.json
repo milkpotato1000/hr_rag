@@ -1,0 +1,33 @@
+{
+  "job_id": "job-ad81712ff2fa449987599704797106d5",
+  "request_id": "bdfbc8fa-5a1f-4636-bb97-8f812cddfc0c",
+  "request_hash": "006fec21309a896143aa1214df3e9ee0501a67c84d8996e5fc09b43f22252476",
+  "status": "SUCCEEDED",
+  "kind": "chunk",
+  "created_at": 1793316542.954072,
+  "request": {
+    "corpus_id": "source-v4",
+    "config": {
+      "id": "fixed-400-80",
+      "method": "fixed",
+      "size_chars": 400,
+      "overlap_chars": 80
+    },
+    "fresh": false,
+    "request_id": "bdfbc8fa-5a1f-4636-bb97-8f812cddfc0c"
+  },
+  "progress": {},
+  "result": {
+    "run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+    "replayed": true,
+    "model_calls": 0,
+    "usage_delta": {
+      "llm_requests": 0,
+      "embedding_items": 0,
+      "llm_seconds": 0.0,
+      "embedding_seconds": 0.0
+    }
+  },
+  "started_at": 1793316542.956697,
+  "finished_at": 1793316542.976382
+}

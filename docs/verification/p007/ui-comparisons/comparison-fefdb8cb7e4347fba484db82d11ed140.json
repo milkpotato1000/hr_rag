@@ -1,0 +1,1045 @@
+{
+  "comparison_id": "comparison-fefdb8cb7e4347fba484db82d11ed140",
+  "question": "생일 휴가",
+  "query_id": null,
+  "split": null,
+  "corpus_id": "source-v4",
+  "top_k": 5,
+  "budget_chars": 800,
+  "retriever": "bm25",
+  "embedding": null,
+  "results": [
+    {
+      "ranking": {
+        "question_hash": "b00aea1e3de87d52e170311c82ef93de7531667bfcfdabd17bbed33dcd425712",
+        "chunk_run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+        "index_fingerprint": "bb1af5e5f0535179f3018156d77c1c70f7d30bcb51012ef53ff120c43c7acb86",
+        "config_id": "fixed-400-80",
+        "retriever": "bm25",
+        "results": [
+          {
+            "chunk_id": "fixed-1aeb151613dff47074588b5410b6ce31d5c11ebe495c958a3fa48d6a6432726e",
+            "score": 5.955545301102283
+          },
+          {
+            "chunk_id": "fixed-0e6270901ea4f0a41c15d504dcd4a4e80f03ea49ba1de157c291016e5091713e",
+            "score": 5.245094175232118
+          },
+          {
+            "chunk_id": "fixed-cea0ef02dee0a87fae75e13ea50e1022a2e5140d1b4054e32b805c4a9b4477a8",
+            "score": 5.206701302436626
+          },
+          {
+            "chunk_id": "fixed-c55834cafc83be81ffcbbbece771048e45477c9f2fb2ae73fd2c248fc375a0da",
+            "score": 4.722707018056953
+          },
+          {
+            "chunk_id": "fixed-f628638c7c611d7bbe56e5ebb0882933f1853c10e6725cac80766911beb8bf96",
+            "score": 4.303189057718831
+          },
+          {
+            "chunk_id": "fixed-5d7617ab593d14dc6a6fde34ee26b54a4fbc7d462926d3d10f0ab05d8091f946",
+            "score": 4.12917051973903
+          },
+          {
+            "chunk_id": "fixed-e90d2b0d75bd8c0e413918db94530f5d587a7b58660615590c2b9fc6bcdcbd84",
+            "score": 3.585178196385857
+          },
+          {
+            "chunk_id": "fixed-108ed632714bd1da5fe3a6184dfc1803f540c99d08b58c7d3daa6918287dbd9f",
+            "score": 3.5426930330414153
+          },
+          {
+            "chunk_id": "fixed-1a14678be1cc26c4e93d093ce7676e0ff0d487e12dad49fcceede284d5dbd066",
+            "score": 3.514924604659825
+          },
+          {
+            "chunk_id": "fixed-5f58f0194e594b4c3eda7a5b51a357c5bb8430732c6faef309b8557cd208ba78",
+            "score": 3.223841287437836
+          },
+          {
+            "chunk_id": "fixed-59504c7a24f3d345121bc1e95a86ba2dcf51004653336a671041344acd74b01e",
+            "score": 2.83120215260009
+          },
+          {
+            "chunk_id": "fixed-764952968dac03d31ec7b830c8e64e6b2cdb3209fce1bb20461bd068a236538d",
+            "score": 2.304182302953192
+          },
+          {
+            "chunk_id": "fixed-80f496e2d22a2f4114ccb60d9018abe7c61f089d328baaf6504cd845a9fcf23f",
+            "score": 2.0986354314584728
+          },
+          {
+            "chunk_id": "fixed-62f9ea1e20c67195f9fae84a0efc0cc550a18fcdeb6303825dd644232b8a3ce4",
+            "score": 2.06123578373167
+          },
+          {
+            "chunk_id": "fixed-48e6fc438afb8ab647439c71ec5bf6abb4dae81fcfc4145d85c8e966730fbee7",
+            "score": 2.0556024231223193
+          },
+          {
+            "chunk_id": "fixed-6309ceb5083facf01622e72c0fb66dd4ac376cb980dd433f85eec25e30fbbb10",
+            "score": 2.0556024231223193
+          },
+          {
+            "chunk_id": "fixed-8b00f65e8339c33dfd6a76554ba3f3654c8d72db1cf8a3db098ff323b8dc8f4a",
+            "score": 2.049092531288122
+          },
+          {
+            "chunk_id": "fixed-a104a51c43e74a4271af1bfc10661158ecec8186e2a3d0848bb1657e382ac171",
+            "score": 2.049092531288122
+          },
+          {
+            "chunk_id": "fixed-97b35910b17f48864a3c3453c0cf57baa5490b1b784a2ba4242ea1b63b3f44db",
+            "score": 2.041061906185744
+          },
+          {
+            "chunk_id": "fixed-5bfed42c616716209c550876cba72b32da91f21f4b409c66608d6a0405123443",
+            "score": 2.0388855906319883
+          }
+        ],
+        "elapsed_ms": 0.15008304035291076
+      },
+      "metrics": {
+        "status": "N/A",
+        "reason": "no_registered_ground_truth"
+      },
+      "budget": {
+        "kind": "context_budget_simulation",
+        "selected": [
+          "fixed-1aeb151613dff47074588b5410b6ce31d5c11ebe495c958a3fa48d6a6432726e",
+          "fixed-0e6270901ea4f0a41c15d504dcd4a4e80f03ea49ba1de157c291016e5091713e"
+        ],
+        "excluded": [
+          {
+            "chunk_id": "fixed-cea0ef02dee0a87fae75e13ea50e1022a2e5140d1b4054e32b805c4a9b4477a8",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-c55834cafc83be81ffcbbbece771048e45477c9f2fb2ae73fd2c248fc375a0da",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-f628638c7c611d7bbe56e5ebb0882933f1853c10e6725cac80766911beb8bf96",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-5d7617ab593d14dc6a6fde34ee26b54a4fbc7d462926d3d10f0ab05d8091f946",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-e90d2b0d75bd8c0e413918db94530f5d587a7b58660615590c2b9fc6bcdcbd84",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-108ed632714bd1da5fe3a6184dfc1803f540c99d08b58c7d3daa6918287dbd9f",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-1a14678be1cc26c4e93d093ce7676e0ff0d487e12dad49fcceede284d5dbd066",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-5f58f0194e594b4c3eda7a5b51a357c5bb8430732c6faef309b8557cd208ba78",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-59504c7a24f3d345121bc1e95a86ba2dcf51004653336a671041344acd74b01e",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-764952968dac03d31ec7b830c8e64e6b2cdb3209fce1bb20461bd068a236538d",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-80f496e2d22a2f4114ccb60d9018abe7c61f089d328baaf6504cd845a9fcf23f",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-62f9ea1e20c67195f9fae84a0efc0cc550a18fcdeb6303825dd644232b8a3ce4",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-48e6fc438afb8ab647439c71ec5bf6abb4dae81fcfc4145d85c8e966730fbee7",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-6309ceb5083facf01622e72c0fb66dd4ac376cb980dd433f85eec25e30fbbb10",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-8b00f65e8339c33dfd6a76554ba3f3654c8d72db1cf8a3db098ff323b8dc8f4a",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-a104a51c43e74a4271af1bfc10661158ecec8186e2a3d0848bb1657e382ac171",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-97b35910b17f48864a3c3453c0cf57baa5490b1b784a2ba4242ea1b63b3f44db",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          },
+          {
+            "chunk_id": "fixed-5bfed42c616716209c550876cba72b32da91f21f4b409c66608d6a0405123443",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 400
+          }
+        ],
+        "used_chars": 800,
+        "budget_chars": 800,
+        "actually_sent_to_llm": false,
+        "metrics": {
+          "status": "N/A",
+          "reason": "no_registered_ground_truth"
+        }
+      },
+      "hits": [
+        {
+          "chunk_id": "fixed-1aeb151613dff47074588b5410b6ce31d5c11ebe495c958a3fa48d6a6432726e",
+          "score": 5.955545301102283,
+          "text": " 출근 여부를 판단하지 않고, 날짜나 근무 형태가 불명확한 항목은 별도로 확\n인한다.\nWF-02 생일 축하 포인트\n재직자에게 생일 축하 포인트 3만 점을 지급한다. 이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.\n생일 포인트의 지급 내역을 휴가 승인 기록으로 사용하지 않는다. 휴가 승인 여부에 관한 문의는 B\nD-03@v4의 신청·승인 기록과 구분하여 확인하며, 포인트 확인 화면에 휴가 승인 상태를 함께 확\n정해 표시하지 않는다.\nWF-03 문의 접수와 대상 내역의 식별\n복지 내역 문의를 받으면 담당자는 식대와 생일 축하 포인트 중 어느 항목에 관한 문의인지 먼저 구\n분한다. 문의자가 금액과 점수를 혼용하여 설명한 경우에는 지급 단위를 확인한 뒤 원래 내역과 대\n조한다. 문의 내용에는 확인하려는 날짜",
+          "source": {
+            "chunk_id": "fixed-1aeb151613dff47074588b5410b6ce31d5c11ebe495c958a3fa48d6a6432726e",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "fixed-400-80",
+              "method": "fixed",
+              "size_chars": 400,
+              "overlap_chars": 80
+            },
+            "base_start": 19200,
+            "base_end": 19600,
+            "start": 19200,
+            "end": 19600,
+            "pages": [
+              {
+                "page_number": 12,
+                "canonical_start": 19200,
+                "canonical_end": 19600,
+                "page_start": 560,
+                "page_end": 960,
+                "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+                "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제4장 복지 지원 내역의 확인 [WF]",
+                "제1절 지급 기준과 문의 구분 [WF-S1]",
+                "WF-01 식대 지원 기준"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제4장 복지 지원 내역의 확인 [WF]",
+                "제1절 지급 기준과 문의 구분 [WF-S1]",
+                "WF-02 생일 축하 포인트"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제4장 복지 지원 내역의 확인 [WF]",
+                "제1절 지급 기준과 문의 구분 [WF-S1]",
+                "WF-03 문의 접수와 대상 내역의 식별"
+              ]
+            ],
+            "article_ids": [
+              "WF-01",
+              "WF-02",
+              "WF-03"
+            ],
+            "unit_ids": [
+              "u00319",
+              "u00320",
+              "u00321",
+              "u00322",
+              "u00323",
+              "u00324",
+              "u00325",
+              "u00326",
+              "u00327",
+              "u00328"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "b5b764ff71199d123a2a48ea269540cb7bd84378fcbae8b4efd1fe9bfa08e356"
+          }
+        },
+        {
+          "chunk_id": "fixed-0e6270901ea4f0a41c15d504dcd4a4e80f03ea49ba1de157c291016e5091713e",
+          "score": 5.245094175232118,
+          "text": "사실과 실제 \n기록 정리가 끝났다는 사실을 분리해 안내하고, 담당자의 확인이 끝나지 않은 값을 개인별 잔여 일\n수로 단정하지 않는다.\nBD-07 생일 축하 포인트의 관계\n생일 축하 포인트 지급 내역은 생일 특별휴가의 신청 번호와 별개로 식별한다. 포인트를 받았다는 \n문의가 휴가 승인 확인으로 접수되면 문의 목적을 먼저 구분하고, 휴가에 관한 내용은 BD-03@v4\n의 승인 기록에서 확인한다. 지급 내역 화면을 휴가 승인서 대신 첨부하거나 두 상태를 같은 항목\n으로 합치지 않는다.\n제2장 연차의 사용과 기록 관리 [AN]\n제1절 발생과 사용 단위 [AN-S1]\nAN-01 발생 기준\n1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 \n기준으로 별도 산정한다.\n연",
+          "source": {
+            "chunk_id": "fixed-0e6270901ea4f0a41c15d504dcd4a4e80f03ea49ba1de157c291016e5091713e",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "fixed-400-80",
+              "method": "fixed",
+              "size_chars": 400,
+              "overlap_chars": 80
+            },
+            "base_start": 3520,
+            "base_end": 3920,
+            "start": 3520,
+            "end": 3920,
+            "pages": [
+              {
+                "page_number": 3,
+                "canonical_start": 3520,
+                "canonical_end": 3920,
+                "page_start": 672,
+                "page_end": 1072,
+                "page_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+                "raw_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제2절 신청 정보의 처리 [BD-S2]",
+                "BD-06 날짜 변경과 취소 의사 확인"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제2절 신청 정보의 처리 [BD-S2]",
+                "BD-07 생일 축하 포인트의 관계"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제2장 연차의 사용과 기록 관리 [AN]",
+                "제1절 발생과 사용 단위 [AN-S1]",
+                "AN-01 발생 기준"
+              ]
+            ],
+            "article_ids": [
+              "BD-06",
+              "BD-07",
+              "AN-01"
+            ],
+            "unit_ids": [
+              "u00061",
+              "u00062",
+              "u00063",
+              "u00064",
+              "u00065",
+              "u00066",
+              "u00067",
+              "u00068",
+              "u00069",
+              "u00070",
+              "u00071"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "0d124c91e3bd881fdb41ce7f292844cb672ae9a14629e6908c12760f7906cced"
+          }
+        },
+        {
+          "chunk_id": "fixed-cea0ef02dee0a87fae75e13ea50e1022a2e5140d1b4054e32b805c4a9b4477a8",
+          "score": 5.206701302436626,
+          "text": "도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n제2절 신청 정보의 처리 [BD-S2]\nBD-04 접수부터 결과 통지까지\n휴가 시스템에서 접수한 생일 특별휴가 신청에는 신청자를 식별하는 정보",
+          "source": {
+            "chunk_id": "fixed-cea0ef02dee0a87fae75e13ea50e1022a2e5140d1b4054e32b805c4a9b4477a8",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "fixed-400-80",
+              "method": "fixed",
+              "size_chars": 400,
+              "overlap_chars": 80
+            },
+            "base_start": 640,
+            "base_end": 1040,
+            "start": 640,
+            "end": 1040,
+            "pages": [
+              {
+                "page_number": 1,
+                "canonical_start": 640,
+                "canonical_end": 959,
+                "page_start": 640,
+                "page_end": 959,
+                "page_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28",
+                "raw_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28"
+              },
+              {
+                "page_number": 2,
+                "canonical_start": 961,
+                "canonical_end": 1040,
+                "page_start": 0,
+                "page_end": 79,
+                "page_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d",
+                "raw_text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제1절 적용 기준 [BD-S1]",
+                "BD-02 사용 범위와 다른 제도"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제1절 적용 기준 [BD-S1]",
+                "BD-03 신청 기한과 승인"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제2절 신청 정보의 처리 [BD-S2]",
+                "BD-04 접수부터 결과 통지까지"
+              ]
+            ],
+            "article_ids": [
+              "BD-02",
+              "BD-03",
+              "BD-04"
+            ],
+            "unit_ids": [
+              "u00015",
+              "u00016",
+              "u00017",
+              "u00018",
+              "u00019",
+              "u00020",
+              "u00021",
+              "u00022",
+              "u00023",
+              "u00024",
+              "u00025"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "edcdc15ef500f30168c8307ec5034d9235c426b1b171c0413dbf35be0b6d7109"
+          }
+        },
+        {
+          "chunk_id": "fixed-c55834cafc83be81ffcbbbece771048e45477c9f2fb2ae73fd2c248fc375a0da",
+          "score": 4.722707018056953,
+          "text": " 직원은 대상\n에서 제외한다.\n담당자는 신청 내역에 표시된 재직 기간과 수습 구분을 각각 확인한다. 두 정보의 표시가 서로 맞\n지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운\n 제외 사유로 처리하지 않는다.\nBD-02 사용 범위와 다른 제도\n생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다. 생일 특별휴가는 분할할 수 없다.\n신청서에는 사용하려는 날짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의\n로 연차로 바꾸지 않고 선택 오류인지 신청 의도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀",
+          "source": {
+            "chunk_id": "fixed-c55834cafc83be81ffcbbbece771048e45477c9f2fb2ae73fd2c248fc375a0da",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "fixed-400-80",
+              "method": "fixed",
+              "size_chars": 400,
+              "overlap_chars": 80
+            },
+            "base_start": 320,
+            "base_end": 720,
+            "start": 320,
+            "end": 720,
+            "pages": [
+              {
+                "page_number": 1,
+                "canonical_start": 320,
+                "canonical_end": 720,
+                "page_start": 320,
+                "page_end": 720,
+                "page_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28",
+                "raw_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제1절 적용 기준 [BD-S1]",
+                "BD-01 적용 대상과 부여 일수"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제1절 적용 기준 [BD-S1]",
+                "BD-02 사용 범위와 다른 제도"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제1절 적용 기준 [BD-S1]",
+                "BD-03 신청 기한과 승인"
+              ]
+            ],
+            "article_ids": [
+              "BD-01",
+              "BD-02",
+              "BD-03"
+            ],
+            "unit_ids": [
+              "u00007",
+              "u00008",
+              "u00009",
+              "u00010",
+              "u00011",
+              "u00012",
+              "u00013",
+              "u00014",
+              "u00015",
+              "u00016",
+              "u00017"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "7774ad7d5ba8271c9d1ccd0326aa3987f314eb5acdc0e531545437fea4549541"
+          }
+        },
+        {
+          "chunk_id": "fixed-f628638c7c611d7bbe56e5ebb0882933f1853c10e6725cac80766911beb8bf96",
+          "score": 4.303189057718831,
+          "text": " 대조할 때 필요한 구분을 설명하며 새 지원 \n항목이나 환산 비율을 제시하지 않는다.\n제5장 교육휴가의 신청과 변경 [ED]\n제1절 대상과 신청 정보 [ED-S1]\nED-01 신청 대상과 일수\n직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.\n신청 정보에는 어떤 자격시험 응시를 위한 요청인지 식별할 수 있는 설명을 연결한다. 이미 전달된\n 설명으로 대상을 확인할 수 있으면 같은 내용을 반복 제출하도록 요구하지 않고, 시험 이름이 비슷\n해 구별이 필요한 부분만 확인한다.\nED-02 다른 휴가와의 관리 구분\n생일 특별휴가 및 연차와 별도로 관리한다.\n교육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 \n관한 문의가 함께 들어오면 해당 휴가 종류를 구분",
+          "source": {
+            "chunk_id": "fixed-f628638c7c611d7bbe56e5ebb0882933f1853c10e6725cac80766911beb8bf96",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "fixed-400-80",
+              "method": "fixed",
+              "size_chars": 400,
+              "overlap_chars": 80
+            },
+            "base_start": 24640,
+            "base_end": 25040,
+            "start": 24640,
+            "end": 25040,
+            "pages": [
+              {
+                "page_number": 15,
+                "canonical_start": 24640,
+                "canonical_end": 25040,
+                "page_start": 954,
+                "page_end": 1354,
+                "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+                "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제4장 복지 지원 내역의 확인 [WF]",
+                "제2절 대조와 정정의 진행 [WF-S2]",
+                "WF-09 여러 항목을 함께 확인하는 문의"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제5장 교육휴가의 신청과 변경 [ED]",
+                "제1절 대상과 신청 정보 [ED-S1]",
+                "ED-01 신청 대상과 일수"
+              ],
+              [
+                "가상 HR 운영 규정집",
+                "제5장 교육휴가의 신청과 변경 [ED]",
+                "제1절 대상과 신청 정보 [ED-S1]",
+                "ED-02 다른 휴가와의 관리 구분"
+              ]
+            ],
+            "article_ids": [
+              "WF-09",
+              "ED-01",
+              "ED-02"
+            ],
+            "unit_ids": [
+              "u00408",
+              "u00409",
+              "u00410",
+              "u00411",
+              "u00412",
+              "u00413",
+              "u00414",
+              "u00415",
+              "u00416",
+              "u00417",
+              "u00418"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "a29e19d5cc39f9b0a921ce395e4d61c30e4f00c4112eaed66588a8cf3da3b23c"
+          }
+        }
+      ]
+    },
+    {
+      "ranking": {
+        "question_hash": "b00aea1e3de87d52e170311c82ef93de7531667bfcfdabd17bbed33dcd425712",
+        "chunk_run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+        "index_fingerprint": "5a065e600529b57dc152c40d1b7c926032d78faf7a9d862874231b9bd99f41c6",
+        "config_id": "structure-0",
+        "retriever": "bm25",
+        "results": [
+          {
+            "chunk_id": "structure-c3e6256e5174e085ca1f540867a87ddba9932e6300df98252de1ead913312ca0",
+            "score": 6.78776358355706
+          },
+          {
+            "chunk_id": "structure-c41a4c4247bbb14d672958825effb6fac104a399ac35384d7657e6ef9fa7b48a",
+            "score": 6.314045613176422
+          },
+          {
+            "chunk_id": "structure-05d2cf4660aad2b29f754a39b4c1bbd882481ec85c98fcbb45edcbe23fc96174",
+            "score": 5.202149681686744
+          },
+          {
+            "chunk_id": "structure-1982a62ac29f7dbd2e92e79d86a5520e175b06673f7689316843e40bea3c6ffa",
+            "score": 4.506186819443354
+          },
+          {
+            "chunk_id": "structure-58754ff48264eb68ba12e575a5e9fcac2ba9820d719735f4548626836070f34f",
+            "score": 4.228326229766626
+          },
+          {
+            "chunk_id": "structure-4b80e30cd1643e79c34a216bb75d70c99f5261b87891836bbb525523f38496c4",
+            "score": 3.5712301661730055
+          },
+          {
+            "chunk_id": "structure-ba239e7073eec5311481a39f689a55f2bed7eb042add24ca78e6c5ddf3bdbe97",
+            "score": 3.4510085613848647
+          },
+          {
+            "chunk_id": "structure-943ebbdcc3e0e25ff90bb760fa8a3d140474a78c99d9d17243df98a248243a88",
+            "score": 3.2651571646024227
+          },
+          {
+            "chunk_id": "structure-c7da722003775277bc52929a7e27cdf5abee73faed1aa540b4c8ed07c6d4769c",
+            "score": 3.22436729179508
+          },
+          {
+            "chunk_id": "structure-fc5d249c05fb550320cd7ec683daa5dc20645b343efabb32bc4c392dd833bf1b",
+            "score": 2.4211753724131118
+          },
+          {
+            "chunk_id": "structure-fad8d0617ef0d360c40ef3faff7af07d9bf34284a09dd14e2eef4b636d582b7a",
+            "score": 2.375128153598796
+          },
+          {
+            "chunk_id": "structure-3d3c358740b5cf7fbb2973d8561ab120d5c96bd15a0311bedec9f0bb1e9a80fa",
+            "score": 2.3409762090742943
+          },
+          {
+            "chunk_id": "structure-9cffa133ca08e10512861cd29eff0732c6da5af962cd24c787d416dc95884493",
+            "score": 2.2046479566708403
+          },
+          {
+            "chunk_id": "structure-6966906afb90cafea7cb11ffa3340623228a6e1ed3b4108840ea4cc3e68acc2b",
+            "score": 2.154626803634709
+          },
+          {
+            "chunk_id": "structure-a3495f73eadeae6aee520096fe12c16a6247918364636351e3d7e3319382a6ce",
+            "score": 2.138453711983178
+          },
+          {
+            "chunk_id": "structure-e3269d725e7f0acbaebe6a0496fe792af0e008ab47177597d8f2ca72a455c656",
+            "score": 2.1111226895715625
+          },
+          {
+            "chunk_id": "structure-e9ffc6abbe892459f56589a740fe89cea8e8ffe51d96fa73cc490e88dbd6a6c2",
+            "score": 1.9528568916227282
+          },
+          {
+            "chunk_id": "structure-97b20d8e65fb24f580a5cf538352dbdb80a18c4a408c75b63fe06ee17db64fc8",
+            "score": 1.9126924784496526
+          },
+          {
+            "chunk_id": "structure-aef05f0687287cf65b18437286de11677780350f851bcd8bbd0a02c613fd76af",
+            "score": 1.8801238898083898
+          },
+          {
+            "chunk_id": "structure-7a3e5d540af70a83d56829a98bb1b9e701d906047df8fcd97530cc7e3039dcd1",
+            "score": 1.8386277645232325
+          }
+        ],
+        "elapsed_ms": 0.09975000284612179
+      },
+      "metrics": {
+        "status": "N/A",
+        "reason": "no_registered_ground_truth"
+      },
+      "budget": {
+        "kind": "context_budget_simulation",
+        "selected": [
+          "structure-c3e6256e5174e085ca1f540867a87ddba9932e6300df98252de1ead913312ca0",
+          "structure-c41a4c4247bbb14d672958825effb6fac104a399ac35384d7657e6ef9fa7b48a",
+          "structure-05d2cf4660aad2b29f754a39b4c1bbd882481ec85c98fcbb45edcbe23fc96174",
+          "structure-4b80e30cd1643e79c34a216bb75d70c99f5261b87891836bbb525523f38496c4",
+          "structure-fad8d0617ef0d360c40ef3faff7af07d9bf34284a09dd14e2eef4b636d582b7a"
+        ],
+        "excluded": [
+          {
+            "chunk_id": "structure-1982a62ac29f7dbd2e92e79d86a5520e175b06673f7689316843e40bea3c6ffa",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 293
+          },
+          {
+            "chunk_id": "structure-58754ff48264eb68ba12e575a5e9fcac2ba9820d719735f4548626836070f34f",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 223
+          },
+          {
+            "chunk_id": "structure-ba239e7073eec5311481a39f689a55f2bed7eb042add24ca78e6c5ddf3bdbe97",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 366
+          },
+          {
+            "chunk_id": "structure-943ebbdcc3e0e25ff90bb760fa8a3d140474a78c99d9d17243df98a248243a88",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 204
+          },
+          {
+            "chunk_id": "structure-c7da722003775277bc52929a7e27cdf5abee73faed1aa540b4c8ed07c6d4769c",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 385
+          },
+          {
+            "chunk_id": "structure-fc5d249c05fb550320cd7ec683daa5dc20645b343efabb32bc4c392dd833bf1b",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 209
+          },
+          {
+            "chunk_id": "structure-3d3c358740b5cf7fbb2973d8561ab120d5c96bd15a0311bedec9f0bb1e9a80fa",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 211
+          },
+          {
+            "chunk_id": "structure-9cffa133ca08e10512861cd29eff0732c6da5af962cd24c787d416dc95884493",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 372
+          },
+          {
+            "chunk_id": "structure-6966906afb90cafea7cb11ffa3340623228a6e1ed3b4108840ea4cc3e68acc2b",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 397
+          },
+          {
+            "chunk_id": "structure-a3495f73eadeae6aee520096fe12c16a6247918364636351e3d7e3319382a6ce",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 373
+          },
+          {
+            "chunk_id": "structure-e3269d725e7f0acbaebe6a0496fe792af0e008ab47177597d8f2ca72a455c656",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 154
+          },
+          {
+            "chunk_id": "structure-e9ffc6abbe892459f56589a740fe89cea8e8ffe51d96fa73cc490e88dbd6a6c2",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 346
+          },
+          {
+            "chunk_id": "structure-97b20d8e65fb24f580a5cf538352dbdb80a18c4a408c75b63fe06ee17db64fc8",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 200
+          },
+          {
+            "chunk_id": "structure-aef05f0687287cf65b18437286de11677780350f851bcd8bbd0a02c613fd76af",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 371
+          },
+          {
+            "chunk_id": "structure-7a3e5d540af70a83d56829a98bb1b9e701d906047df8fcd97530cc7e3039dcd1",
+            "reason": "whole_chunk_exceeds_remaining_budget",
+            "chars": 240
+          }
+        ],
+        "used_chars": 740,
+        "budget_chars": 800,
+        "actually_sent_to_llm": false,
+        "metrics": {
+          "status": "N/A",
+          "reason": "no_registered_ground_truth"
+        }
+      },
+      "hits": [
+        {
+          "chunk_id": "structure-c3e6256e5174e085ca1f540867a87ddba9932e6300df98252de1ead913312ca0",
+          "score": 6.78776358355706,
+          "text": "WF-02 생일 축하 포인트\n재직자에게 생일 축하 포인트 3만 점을 지급한다. 이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.\n생일 포인트의 지급 내역을 휴가 승인 기록으로 사용하지 않는다. 휴가 승인 여부에 관한 문의는 B\nD-03@v4의 신청·승인 기록과 구분하여 확인하며, 포인트 확인 화면에 휴가 승인 상태를 함께 확\n정해 표시하지 않는다.\n",
+          "source": {
+            "chunk_id": "structure-c3e6256e5174e085ca1f540867a87ddba9932e6300df98252de1ead913312ca0",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "structure-0",
+              "method": "structure",
+              "base_max_chars": 400,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1"
+            },
+            "base_start": 19248,
+            "base_end": 19447,
+            "start": 19248,
+            "end": 19447,
+            "pages": [
+              {
+                "page_number": 12,
+                "canonical_start": 19248,
+                "canonical_end": 19447,
+                "page_start": 608,
+                "page_end": 807,
+                "page_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+                "raw_text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제4장 복지 지원 내역의 확인 [WF]",
+                "제1절 지급 기준과 문의 구분 [WF-S1]",
+                "WF-02 생일 축하 포인트"
+              ]
+            ],
+            "article_ids": [
+              "WF-02"
+            ],
+            "unit_ids": [
+              "u00320",
+              "u00321",
+              "u00322",
+              "u00323",
+              "u00324"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "e5a32bc8112a830efcd9bb33a62f009dea1793dfc2b3d8fdee651643406cd743"
+          }
+        },
+        {
+          "chunk_id": "structure-c41a4c4247bbb14d672958825effb6fac104a399ac35384d7657e6ef9fa7b48a",
+          "score": 6.314045613176422,
+          "text": "BD-07 생일 축하 포인트의 관계\n생일 축하 포인트 지급 내역은 생일 특별휴가의 신청 번호와 별개로 식별한다. 포인트를 받았다는 \n문의가 휴가 승인 확인으로 접수되면 문의 목적을 먼저 구분하고, 휴가에 관한 내용은 BD-03@v4\n의 승인 기록에서 확인한다. 지급 내역 화면을 휴가 승인서 대신 첨부하거나 두 상태를 같은 항목\n으로 합치지 않는다.\n",
+          "source": {
+            "chunk_id": "structure-c41a4c4247bbb14d672958825effb6fac104a399ac35384d7657e6ef9fa7b48a",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "structure-0",
+              "method": "structure",
+              "base_max_chars": 400,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1"
+            },
+            "base_start": 3595,
+            "base_end": 3791,
+            "start": 3595,
+            "end": 3791,
+            "pages": [
+              {
+                "page_number": 3,
+                "canonical_start": 3595,
+                "canonical_end": 3791,
+                "page_start": 747,
+                "page_end": 943,
+                "page_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+                "raw_text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제2절 신청 정보의 처리 [BD-S2]",
+                "BD-07 생일 축하 포인트의 관계"
+              ]
+            ],
+            "article_ids": [
+              "BD-07"
+            ],
+            "unit_ids": [
+              "u00062",
+              "u00063",
+              "u00064",
+              "u00065"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "047d77b55fdfb3e3fd97446da4c60c85c6ab5b170e23c8eaddbf26c6951a3c1c"
+          }
+        },
+        {
+          "chunk_id": "structure-05d2cf4660aad2b29f754a39b4c1bbd882481ec85c98fcbb45edcbe23fc96174",
+          "score": 5.202149681686744,
+          "text": "ED-02 다른 휴가와의 관리 구분\n생일 특별휴가 및 연차와 별도로 관리한다.\n교육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 \n관한 문의가 함께 들어오면 해당 휴가 종류를 구분하고, 연차 사용 단위는 AN-03@v4에서 확인하\n되 그 규칙을 교육휴가의 분할 기준으로 적용하지 않는다.\nHR-V4-HANDBOOK / v4\n15\n\n\n",
+          "source": {
+            "chunk_id": "structure-05d2cf4660aad2b29f754a39b4c1bbd882481ec85c98fcbb45edcbe23fc96174",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "structure-0",
+              "method": "structure",
+              "base_max_chars": 400,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1"
+            },
+            "base_start": 24915,
+            "base_end": 25126,
+            "start": 24915,
+            "end": 25126,
+            "pages": [
+              {
+                "page_number": 15,
+                "canonical_start": 24915,
+                "canonical_end": 25124,
+                "page_start": 1229,
+                "page_end": 1438,
+                "page_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+                "raw_text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제5장 교육휴가의 신청과 변경 [ED]",
+                "제1절 대상과 신청 정보 [ED-S1]",
+                "ED-02 다른 휴가와의 관리 구분"
+              ]
+            ],
+            "article_ids": [
+              "ED-02"
+            ],
+            "unit_ids": [
+              "u00415",
+              "u00416",
+              "u00417",
+              "u00418",
+              "u00419"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "01fdb7ed581dafec6a750c988fbd5e40290ce1d666e1c3e018bcf875b7a3866b"
+          }
+        },
+        {
+          "chunk_id": "structure-1982a62ac29f7dbd2e92e79d86a5520e175b06673f7689316843e40bea3c6ffa",
+          "score": 4.506186819443354,
+          "text": "BD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n",
+          "source": {
+            "chunk_id": "structure-1982a62ac29f7dbd2e92e79d86a5520e175b06673f7689316843e40bea3c6ffa",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "structure-0",
+              "method": "structure",
+              "base_max_chars": 400,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1"
+            },
+            "base_start": 668,
+            "base_end": 961,
+            "start": 668,
+            "end": 961,
+            "pages": [
+              {
+                "page_number": 1,
+                "canonical_start": 668,
+                "canonical_end": 959,
+                "page_start": 668,
+                "page_end": 959,
+                "page_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28",
+                "raw_text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+                "제1절 적용 기준 [BD-S1]",
+                "BD-03 신청 기한과 승인"
+              ]
+            ],
+            "article_ids": [
+              "BD-03"
+            ],
+            "unit_ids": [
+              "u00016",
+              "u00017",
+              "u00018",
+              "u00019",
+              "u00020",
+              "u00021",
+              "u00022"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "dd283e5ff4e3b647e4cff78396b227b0d544d47d6d22796bc235ebb166af8e2e"
+          }
+        },
+        {
+          "chunk_id": "structure-58754ff48264eb68ba12e575a5e9fcac2ba9820d719735f4548626836070f34f",
+          "score": 4.228326229766626,
+          "text": "AN-07 미사용 연차의 이월 기준\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 연차의 사용 \n기한은 다음 해 3월 31일이다. 생일 특별휴가에는 이 규정을 적용하지 않는다.\n이월 기록에는 원래 연도와 사용 기한을 구별하여 표시한다. 다른 휴가 종류의 잔여 표시를 이월할\n 연차에 포함하지 않고, 종류가 불분명한 내역은 합산하기 전에 확인 대상으로 남긴다.\n",
+          "source": {
+            "chunk_id": "structure-58754ff48264eb68ba12e575a5e9fcac2ba9820d719735f4548626836070f34f",
+            "document_id": "hr-v4-handbook",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "algorithm_version": "chunk-experiment-v1",
+            "config": {
+              "id": "structure-0",
+              "method": "structure",
+              "base_max_chars": 400,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1"
+            },
+            "base_start": 8444,
+            "base_end": 8667,
+            "start": 8444,
+            "end": 8667,
+            "pages": [
+              {
+                "page_number": 6,
+                "canonical_start": 8444,
+                "canonical_end": 8667,
+                "page_start": 324,
+                "page_end": 547,
+                "page_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b",
+                "raw_text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b"
+              }
+            ],
+            "title_paths": [
+              [
+                "가상 HR 운영 규정집",
+                "제2장 연차의 사용과 기록 관리 [AN]",
+                "제3절 이월과 변경 이력 [AN-S3]",
+                "AN-07 미사용 연차의 이월 기준"
+              ]
+            ],
+            "article_ids": [
+              "AN-07"
+            ],
+            "unit_ids": [
+              "u00144",
+              "u00145",
+              "u00146",
+              "u00147",
+              "u00148",
+              "u00149"
+            ],
+            "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+            "text_sha256": "6180274ef262654eed4a5bf520993b2820cb2d5989b934595eb5426953a4d0dc"
+          }
+        }
+      ]
+    }
+  ],
+  "dataset_sha256": "9be17b08440418d75d2128c39eae6cbb9ce76301221b2fe79b60c99dd468b0e9"
+}

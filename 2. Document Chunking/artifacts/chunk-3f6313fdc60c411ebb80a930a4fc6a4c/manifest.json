@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run_id": "chunk-3f6313fdc60c411ebb80a930a4fc6a4c",
+  "status": "complete",
+  "algorithm_version": "chunk-experiment-v1",
+  "config": {
+    "id": "llm-80",
+    "method": "llm",
+    "base_max_chars": 800,
+    "overlap_chars": 80,
+    "overlap_policy": "post_partition_left_extension_v1",
+    "preferred_chars": [
+      200,
+      400
+    ],
+    "boundary_source": "same_selected_invocation_for_both_overlaps"
+  },
+  "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "input_manifest_sha256": "b8373ee69892d92bff1623b2a9fc6b8c651521396c8a13f08d254f62b229313d",
+  "spec_sha256": "285028d2d76af9bd14e741894864f61aeafd1f6ecfee8aef2bf727ea4e748b5f",
+  "prompt_sha256": "b5fa4403a8a94b0236a669c4b5ec2a0c5deac49c601ed956ecaada99bc96ebd5",
+  "runtime_lock_sha256": "ce39ba744b645afd13d0a5b9c092ff872bee64ef30e20f4d20ae851054700e03",
+  "parent_run_ids": [
+    "chunk-33d09a4c7dd4441ca7778719614fe2c6"
+  ],
+  "code_hash": "b19805dbaa2b78244f0bd7fea662918eb2d5c17f9e31c64e231d6a294f77c69c",
+  "outputs": {
+    "chunks.jsonl": "127c441c78eae6e1ad8dce3de23aae9e4e73374f62ec79a4144fc9273fa91ca9",
+    "statistics.json": "f62985aa41b42e9a056cc05b89d23433f76dd897b496d00209d5f1c3e9f5647e",
+    "boundary-details.json": "096fe16a9c3be97d6c7ecb83a34efd94b6305e13fa3063d0fdeb9851cb63ca68",
+    "source-map.json": "a73027d3ffbc0868950c49254fdbf17d8a556930c401d0dc65bcbc1b120457df"
+  },
+  "elapsed_ms": 90.47641704091802,
+  "counts": {
+    "chunks": 621,
+    "units": 630
+  },
+  "text_version": "canonical-slice-only-v1"
+}

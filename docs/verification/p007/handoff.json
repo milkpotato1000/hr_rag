@@ -1,0 +1,185 @@
+{
+  "status": "P007_RETRIEVAL_COMPLETE",
+  "adopted_plan": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+  "experiment": "2. Document Chunking/artifacts/experiment-002",
+  "experiment_manifest_sha256": "c217120300aa887689ed0ee19ac8e8ac2ac6a58f18d7b3f707b92080f676b42d",
+  "selection_sha256": "471aefe110375d96ef14916739fd546d14c08396443a2f4a76aac73d334102c8",
+  "inputs": {
+    "spec_sha256": "285028d2d76af9bd14e741894864f61aeafd1f6ecfee8aef2bf727ea4e748b5f",
+    "dataset_sha256": "9be17b08440418d75d2128c39eae6cbb9ce76301221b2fe79b60c99dd468b0e9",
+    "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+    "llm_runs": [
+      "chunk-33d09a4c7dd4441ca7778719614fe2c6",
+      "chunk-e63e197469ef43fa861bbf34ff5808ad",
+      "chunk-a53633f4cd574dc382c532e635beec2d"
+    ],
+    "latency_repetitions": 2,
+    "config_order": [
+      "fixed-200-0",
+      "fixed-200-40",
+      "fixed-400-0",
+      "fixed-400-80",
+      "fixed-800-0",
+      "fixed-800-160",
+      "recursive-0",
+      "recursive-80",
+      "structure-0",
+      "structure-80",
+      "semantic-0",
+      "semantic-80",
+      "llm-0",
+      "llm-80"
+    ],
+    "code_hash": "6223010423f4d34da4b0ef3f85da35011f672cd6a2abfb38e472b3a1279c042c",
+    "started_at": 1793261646.296448
+  },
+  "selected": [
+    {
+      "config_id": "fixed-400-80",
+      "run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+      "manifest_sha256": "702cced46192462958b44627380894ad4798126e72369acac933d748c51eb0b6",
+      "outputs": {
+        "chunks.jsonl": "54425b468bb51b31ffd09580874aacf3c058349a1142ae84d10fad0215d934e9",
+        "statistics.json": "cbd548f7a4bcbe80ff1e4766781842b458d3570989406cae53f3e8f9f82d430c",
+        "boundary-details.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+        "source-map.json": "0a02d4708ed56703ce1c0a809b8ef4fd38de99ae88a2adac04c3f1d59e0bf262"
+      },
+      "index": {
+        "bm25": {
+          "identity": {
+            "chunk_run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+            "chunks_sha256": "54425b468bb51b31ffd09580874aacf3c058349a1142ae84d10fad0215d934e9",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "config": {
+              "id": "fixed-400-80",
+              "method": "fixed",
+              "size_chars": 400,
+              "overlap_chars": 80
+            },
+            "retriever": "bm25",
+            "text_version": "canonical-slice-only-v1",
+            "model_digest": null,
+            "parameters": {
+              "k1": 1.2,
+              "b": 0.75,
+              "tokenizer": "unicode-word-v1"
+            }
+          },
+          "fingerprint": "bb1af5e5f0535179f3018156d77c1c70f7d30bcb51012ef53ff120c43c7acb86",
+          "status": "complete",
+          "build_ms": 3.3341660164296627,
+          "embedding": null,
+          "index_bytes": 753
+        },
+        "dense": {
+          "identity": {
+            "chunk_run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+            "chunks_sha256": "54425b468bb51b31ffd09580874aacf3c058349a1142ae84d10fad0215d934e9",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "config": {
+              "id": "fixed-400-80",
+              "method": "fixed",
+              "size_chars": 400,
+              "overlap_chars": 80
+            },
+            "retriever": "dense",
+            "text_version": "canonical-slice-only-v1",
+            "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+            "parameters": {
+              "dimension": 1024,
+              "distance": "Cosine",
+              "qdrant": "1.19.1"
+            }
+          },
+          "fingerprint": "01e0887fd234585c639b29e70f33268b6e80fc40e756e9784772a4f91bc73963",
+          "status": "complete",
+          "build_ms": 9697.043874999508,
+          "embedding": {
+            "items": 121,
+            "cache_hits": 25,
+            "new_items": 96
+          },
+          "index_bytes": 1513329
+        }
+      }
+    },
+    {
+      "config_id": "structure-0",
+      "run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+      "manifest_sha256": "687008eb45dbc4cbadec7156759547d8fe13e3b5665006c73c3f5835f1472d6b",
+      "outputs": {
+        "chunks.jsonl": "09e64e0e4449311e790083dfec2e8fae93fd92b2047e29c0582dda17d9f1abc9",
+        "statistics.json": "8a44b1fcafc0edb204fe4077a8ef0ba58b812c6315849dfb47b6f5550292995b",
+        "boundary-details.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+        "source-map.json": "5b907e26620e373f7f7c5f1e074f9824be2473442d068f7d350e2158889ec9d4"
+      },
+      "index": {
+        "bm25": {
+          "identity": {
+            "chunk_run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+            "chunks_sha256": "09e64e0e4449311e790083dfec2e8fae93fd92b2047e29c0582dda17d9f1abc9",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "config": {
+              "id": "structure-0",
+              "method": "structure",
+              "base_max_chars": 400,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1"
+            },
+            "retriever": "bm25",
+            "text_version": "canonical-slice-only-v1",
+            "model_digest": null,
+            "parameters": {
+              "k1": 1.2,
+              "b": 0.75,
+              "tokenizer": "unicode-word-v1"
+            }
+          },
+          "fingerprint": "5a065e600529b57dc152c40d1b7c926032d78faf7a9d862874231b9bd99f41c6",
+          "status": "complete",
+          "build_ms": 2.836958970874548,
+          "embedding": null,
+          "index_bytes": 818
+        },
+        "dense": {
+          "identity": {
+            "chunk_run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+            "chunks_sha256": "09e64e0e4449311e790083dfec2e8fae93fd92b2047e29c0582dda17d9f1abc9",
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+            "config": {
+              "id": "structure-0",
+              "method": "structure",
+              "base_max_chars": 400,
+              "overlap_chars": 0,
+              "overlap_policy": "post_partition_left_extension_v1"
+            },
+            "retriever": "dense",
+            "text_version": "canonical-slice-only-v1",
+            "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+            "parameters": {
+              "dimension": 1024,
+              "distance": "Cosine",
+              "qdrant": "1.19.1"
+            }
+          },
+          "fingerprint": "33668ca15f786de56b8f32b413094fa60f5a82570056aeb7ef95eddf728dcbb9",
+          "status": "complete",
+          "build_ms": 8016.833333007526,
+          "embedding": {
+            "items": 155,
+            "cache_hits": 57,
+            "new_items": 98
+          },
+          "index_bytes": 1849267
+        }
+      }
+    }
+  ],
+  "restrictions": [
+    "No answer generation/evaluation performed",
+    "Search results are not human-approved ground truth",
+    "Keep first failed experiment and all three LLM repetitions",
+    "Holdout observed; no reselection"
+  ],
+  "ui": "http://127.0.0.1:8003/"
+}

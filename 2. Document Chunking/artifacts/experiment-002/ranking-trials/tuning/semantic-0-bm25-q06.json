@@ -1,0 +1,54 @@
+[
+  {
+    "question_hash": "174f69c0ee56fd07c0ed6c6fba7bf21ede2e33786c047b5dd2bcf211bb7524ff",
+    "chunk_run_id": "chunk-0f4642a74b92415aa056e0b2fefac8a0",
+    "index_fingerprint": "8c89774f5af35e00e4024a90ae6f3e16cf3fcf8058321ac0a1ba52ca2abd0c71",
+    "config_id": "semantic-0",
+    "retriever": "bm25",
+    "results": [
+      {
+        "chunk_id": "semantic-5a31966c85b5a1268d5c5a3c00581a68c3543dbc75889626bb2b0d371959c782",
+        "score": 5.533505487393065
+      },
+      {
+        "chunk_id": "semantic-d9dc2ad2b5e58f1af7868b8789e842f19eda1fb745974ba48d63b4d23612dc23",
+        "score": 4.751034844280967
+      },
+      {
+        "chunk_id": "semantic-c8d6540bb68e8a05ff01bfb9f74c365e7daf60e85d61b716287371e410669c17",
+        "score": 4.58099742621562
+      },
+      {
+        "chunk_id": "semantic-f5e23a1d0bacb2d8bc57d2d47bc7a0c3d7b77071a8fd479bf1e2f016615e8d6f",
+        "score": 4.181883444082915
+      }
+    ],
+    "elapsed_ms": 0.33758400240913033
+  },
+  {
+    "question_hash": "174f69c0ee56fd07c0ed6c6fba7bf21ede2e33786c047b5dd2bcf211bb7524ff",
+    "chunk_run_id": "chunk-0f4642a74b92415aa056e0b2fefac8a0",
+    "index_fingerprint": "8c89774f5af35e00e4024a90ae6f3e16cf3fcf8058321ac0a1ba52ca2abd0c71",
+    "config_id": "semantic-0",
+    "retriever": "bm25",
+    "results": [
+      {
+        "chunk_id": "semantic-5a31966c85b5a1268d5c5a3c00581a68c3543dbc75889626bb2b0d371959c782",
+        "score": 5.533505487393065
+      },
+      {
+        "chunk_id": "semantic-d9dc2ad2b5e58f1af7868b8789e842f19eda1fb745974ba48d63b4d23612dc23",
+        "score": 4.751034844280967
+      },
+      {
+        "chunk_id": "semantic-c8d6540bb68e8a05ff01bfb9f74c365e7daf60e85d61b716287371e410669c17",
+        "score": 4.58099742621562
+      },
+      {
+        "chunk_id": "semantic-f5e23a1d0bacb2d8bc57d2d47bc7a0c3d7b77071a8fd479bf1e2f016615e8d6f",
+        "score": 4.181883444082915
+      }
+    ],
+    "elapsed_ms": 0.2429999876767397
+  }
+]

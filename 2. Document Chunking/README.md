@@ -1,6 +1,37 @@
-# Document Chunking - 원문 준비
+# Document Chunking — 원문·청킹·검색 비교
 
 현재 장문 실습 입력은 **source-v4 단일 규정집**입니다. 아래 source-v3 설명은 보존된 짧은 기준선입니다.
+
+
+## P007 실습 실행
+
+다섯 청킹 방식·14설정과 BM25/Dense 검색 비교를 구현했습니다. 학습 순서는 [LEARNING.md](LEARNING.md)를 따르세요.
+원문은 아래 P016에서 확정한 PDF/추출본을 그대로 사용합니다. 전체 실험은 `artifacts/experiment-002/`, 최초 실패는 `artifacts/experiment-001/`에 보존했습니다.
+후속 후보는 tuning으로 고정한 `structure-0`이며 holdout을 보고 재선정하지 않았습니다.
+
+이 단계 폴더에서 Python3.12.14로 별도 환경을 만들고 고정 해시 의존성을 설치합니다. 기존 소유 Ollama0.40.8의 Qwen3:4b/BGE-M3만 사용합니다. 서버가 모델을 다운로드하거나 기존8001서버를 재시작하지 않습니다.
+
+```sh
+uv venv --python 3.12.14 .venv
+uv pip install --python .venv/bin/python --require-hashes -r requirements-langchain.lock -r ingestion-requirements.lock
+.venv/bin/python scripts/serve_chunking.py --port 8003
+```
+
+`http://127.0.0.1:8003/`에서 원문 페이지 → 설정/저장 결과 → 색인 준비 → 같은 질문 A/B를 사용합니다.
+GET/설정변경은 모델을 호출하지 않습니다. **새로 실행**은 새 invocation이며, 저장 결과 보기는 모델 호출0회입니다.
+미리보기23장은 검증된 P016 PNG 사본으로 런타임 PDF 렌더러 없이 동작합니다.
+`.runtime/`의 영구 ledger·cache·index·job은 Git에서 제외됩니다. 다른 폴더로 옮겨 실험할 때 ledger를 초기화해 예산을 우회하지 마세요.
+완료 실험의 사용량과 호출 기록은 verification 및 experiment artifact에도 보존합니다.
+
+CLI 예시(출력 경로는 새 폴더여야 함):
+
+```sh
+mkdir -p runs
+.venv/bin/python scripts/chunk_documents.py --documents data/source-v4/extracted/manifest.json --config fixed-400-80 --output-dir runs/fixed-example
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+고정 전체 실험 실행기는 `scripts/run_chunking_experiment.py`입니다. `--spec experiments/p007/spec.json --output-dir <새폴더> --llm-runs <독립3회 run ID>`를 요구합니다. 기존 실행은 저장 결과로 관찰하는 것이 기본이며 전체 재실행에는 남은 누적 예산 확인이 필요합니다. 답변 생성/LLM 평가기는 이 단계에 포함하지 않았습니다.
 
 ## P016 단일 장문 규정집
 
@@ -42,14 +73,12 @@ python3 scripts/create_handbook_pdf.py --font /System/Library/Fonts/Supplemental
 동결 manifest는 원문/도구를 커밋한 뒤 `--freeze-source-commit <full SHA>`로 별도 새 폴더에 만들며
 자기 hash는 외부 완료 증거에 기록합니다. 이미 존재하는 출력은 도구가 덮어쓰지 않습니다.
 
-P007은 이 corpus로 다섯 청킹 방식·overlap·전체 coverage·긴 조항 처리·질문/holdout·실제 window와 비용 예산을
-다시 준비해야 합니다. 과거8window/300요청/440ranking 예산을 승계하지 않습니다.
-기존 UI와8001서버의 기본 corpus는 바꾸지 않았고, 청킹·검색 실험과 모델 호출은 이번 작업에서 실행하지 않았습니다.
+P016 완료 당시에는 원문 준비까지 수행했습니다. 이후 P007에서 새 고정 계약(630단위/35window/38질문)으로 청킹·검색 실험을 완료했습니다. 기존 UI와8001서버의 기본 corpus는 유지합니다.
 
 ## 보존된 P015 기준선
 
 P015에서 준비한 가상 HR 규정 원문입니다. 현재 범위는 PDF 작성, 로컬 수집 fixture,
-텍스트 추출 및 정책 보존 대조까지입니다. 청킹·검색·모델 호출·웹 화면은 아직 구현하지 않았습니다.
+텍스트 추출 및 정책 보존 대조까지였습니다. 아래 설명은 P015 당시의 원문 준비 범위입니다. 현재 청킹·검색·모델 호출·웹 화면은 위 P007 절을 참고하세요.
 기존 `1. Naive RAG/`와 LangChain 비교 화면의 데이터·동작은 유지됩니다.
 
 ## 먼저 볼 파일

@@ -1,0 +1,29 @@
+{
+  "spec_sha256": "285028d2d76af9bd14e741894864f61aeafd1f6ecfee8aef2bf727ea4e748b5f",
+  "dataset_sha256": "9be17b08440418d75d2128c39eae6cbb9ce76301221b2fe79b60c99dd468b0e9",
+  "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "llm_runs": [
+    "chunk-33d09a4c7dd4441ca7778719614fe2c6",
+    "chunk-e63e197469ef43fa861bbf34ff5808ad",
+    "chunk-a53633f4cd574dc382c532e635beec2d"
+  ],
+  "latency_repetitions": 2,
+  "config_order": [
+    "fixed-200-0",
+    "fixed-200-40",
+    "fixed-400-0",
+    "fixed-400-80",
+    "fixed-800-0",
+    "fixed-800-160",
+    "recursive-0",
+    "recursive-80",
+    "structure-0",
+    "structure-80",
+    "semantic-0",
+    "semantic-80",
+    "llm-0",
+    "llm-80"
+  ],
+  "code_hash": "6223010423f4d34da4b0ef3f85da35011f672cd6a2abfb38e472b3a1279c042c",
+  "started_at": 1793261646.296448
+}

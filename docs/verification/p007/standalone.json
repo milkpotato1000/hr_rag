@@ -1,0 +1,23 @@
+{
+  "run_id": "chunk-a2e2c9272ffc42caaa5d3f10e100a8da",
+  "python": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p007-independent-9g2vtrgg/venv/bin/python",
+  "modules": {
+    "document_common": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p007-independent-9g2vtrgg/stage/scripts/document_common.py",
+    "source_io": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p007-independent-9g2vtrgg/stage/scripts/source_io.py",
+    "model_runtime": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p007-independent-9g2vtrgg/stage/scripts/model_runtime.py",
+    "chunk_core": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p007-independent-9g2vtrgg/stage/scripts/chunk_core.py",
+    "retrieval_core": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p007-independent-9g2vtrgg/stage/scripts/retrieval_core.py"
+  },
+  "provider_verified": true,
+  "api_status": "complete",
+  "hit_counts": [
+    5,
+    5
+  ],
+  "source_sha": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "copy": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p007-independent-9g2vtrgg/stage",
+  "venv": "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p007-independent-9g2vtrgg/venv",
+  "inference_calls_added": 0,
+  "ranking_calls_merged": 2,
+  "status": "PASS"
+}
