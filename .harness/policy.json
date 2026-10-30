@@ -15,7 +15,9 @@
     "docs/planning/plans",
     ".githooks",
     "scripts/plan_intake.py",
-    "tests/harness"
+    "tests/harness",
+    "CLAUDE.md",
+    ".harness/installation.json"
   ],
   "baseline_file": ".harness/adopted-plan.json",
   "p_card_execution": true
