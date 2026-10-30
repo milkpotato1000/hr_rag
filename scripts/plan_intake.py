@@ -35,7 +35,7 @@ def request(text, ident):
     if not IDENT.fullmatch(ident) or item.get('id') != ident or item.get('schema_version') != 1:
         raise ValueError('Invalid intake request ID/schema: ' + ident)
     required_text(item, ('title', 'request', 'source', 'impact', 'created_at'))
-    if datetime.fromisoformat(item['created_at']).tzinfo is None:
+    if datetime.fromisoformat(item['created_at'].replace('Z', '+00:00')).tzinfo is None:
         raise ValueError('Request timestamp requires timezone')
     return item
 

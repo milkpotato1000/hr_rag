@@ -59,7 +59,7 @@ def parse(text):
         if len(fields) != 5 or not fields[0].startswith('- '):
             raise ValueError('Invalid P-card log; use timestamp | criterion | result | evidence | note')
         stamp, criterion, result, evidence, note = fields
-        moment = datetime.fromisoformat(stamp[2:])
+        moment = datetime.fromisoformat(stamp[2:].replace('Z', '+00:00'))
         if moment.tzinfo is None or not note.strip():
             raise ValueError('P-card log requires timezone and note')
         if criterion == 'STATE':
