@@ -1,0 +1,19 @@
+{
+  "version": "p019-preparation-v1",
+  "human_approval": null,
+  "files": {
+    "source/extracted/canonical/hr-v4-handbook.txt": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+    "source/section-map.json": "4e0b78b6ae482ebdfa5d2f17f42c086c3944c4f75c18efa57545b37d1324b0ed",
+    "source/policy-inventory.json": "56b1f63f85471aa68c63be0ff7800a085932c57c54e04b8ac9f5fbe871cee763",
+    "source/handoff-manifest.json": "82918298ce6abeab89c033ab055fcba12302069a27ba0bc7f413bd98d783888a",
+    "inputs.json": "f97ca60c75481d184018dc4324687974be49c45b4470ba195830919a397b653a",
+    "model-lock.json": "7d290e8e26f3c8e1014cb2547cbcf30a33fe10e4858901f3835e0dff08e92152",
+    "cases.json": "ba862a815a820c8dd2c12127cd7e876d188b3536eaac6ae3f06dd344f90227f5",
+    "judgements.json": "7acc97ea5d54b0f123003b77d6e307892348a6fffaed8a187b46eaff9c36cb13",
+    "p007-inputs.json": "c6503c27ca91b50e32dc8ce0f8f5f1df1ed70c9133faddd74213479073a17378",
+    "preflight.json": "5b5b2c6ebe2c7d025d279cf010d3946ed3b1c6b6d4b7ccbdf5d62cc16bf27b05"
+  },
+  "prompt_version": "p019-source-only-v1",
+  "schema_version": "p019-strict-json-v1",
+  "sha256": "c3f328a7964508f75509d1b4cd193a4055f30748a27fa24a9928f048f7508cc0"
+}

@@ -1,0 +1,16 @@
+{
+  "bytes_downloaded": 5225388164,
+  "seconds": 90.26277708399999,
+  "attempts": [
+    {
+      "status": "failed",
+      "bytes": 5225388164,
+      "error": "'qwen3:8b'"
+    },
+    {
+      "status": "complete",
+      "bytes": 0
+    }
+  ],
+  "completed": true
+}

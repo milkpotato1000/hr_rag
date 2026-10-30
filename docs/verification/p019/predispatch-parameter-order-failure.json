@@ -1,0 +1,7 @@
+{
+  "phase": "pre-dispatch runtime verification",
+  "error": "model template/parameters changed",
+  "actual_model_requests": 0,
+  "cause": "Ollama serialized identical parameter keys in different order; template equal, no system prompt",
+  "fix": "Compare sorted complete key/value line multiset; preserve duplicate stop values; locked raw metadata and frozen payload unchanged"
+}

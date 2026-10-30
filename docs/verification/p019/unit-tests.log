@@ -1,0 +1,25 @@
+partial failed semantic: None seconds: 0.0
+Frozen prompt revision; cumulative calls retained: 1
+timeout failed semantic: None seconds: 0.0
+test_approval_cannot_be_fabricated (test_preparation.PreparationTests) ... ok
+test_byte_bound_and_template_gate (test_preparation.PreparationTests) ... ok
+test_category_cap_includes_failed_attempts (test_preparation.PreparationTests) ... ok
+test_cumulative_cap_duplicate_and_artifact_tamper (test_preparation.PreparationTests) ... ok
+test_exact_offsets_and_answer_provenance (test_preparation.PreparationTests) ... ok
+test_extra_fields_and_wrong_types_rejected (test_preparation.PreparationTests) ... ok
+test_json_report_roundtrip_and_tamper (test_preparation.PreparationTests) ... ok
+test_partial_response_is_not_success (test_preparation.PreparationTests) ... ok
+test_pending_restart_and_retry_limits (test_preparation.PreparationTests) ... ok
+test_prompt_revision_preserves_inputs_and_cumulative_ledger (test_preparation.PreparationTests) ... ok
+test_recorded_artifact_tamper_and_repeat_retry (test_preparation.PreparationTests) ... ok
+test_runtime_parameter_order_only_is_ignored (test_preparation.PreparationTests) ... ok
+test_semantics_separate_from_format (test_preparation.PreparationTests) ... ok
+test_source_tamper_and_truncation_fail (test_preparation.PreparationTests) ... ok
+test_timeout_saved_and_blocks_next_call (test_preparation.PreparationTests) ... ok
+test_unknown_id_mismatch_duplicate_quote (test_preparation.PreparationTests) ... ok
+test_wall_time_cap (test_preparation.PreparationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.181s
+
+OK

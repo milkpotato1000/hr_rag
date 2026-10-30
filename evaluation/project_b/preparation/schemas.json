@@ -1,0 +1,140 @@
+{
+  "atomic_claims": {
+    "type": "object",
+    "properties": {
+      "claims": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "properties": {
+            "unit_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "quote": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "unit_id",
+            "quote"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "claims"
+    ],
+    "additionalProperties": false
+  },
+  "grounded_answer": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "type": "string",
+        "minLength": 1
+      },
+      "claims": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "properties": {
+            "answer_quote": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unit_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source_quote": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "answer_quote",
+            "unit_id",
+            "source_quote"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "answer",
+      "claims"
+    ],
+    "additionalProperties": false
+  },
+  "verification": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "type": "string",
+        "enum": [
+          "E",
+          "N",
+          "C"
+        ]
+      },
+      "unit_id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "premise_quote": {
+        "type": "string",
+        "minLength": 1
+      },
+      "claim_quote": {
+        "type": "string",
+        "minLength": 1
+      },
+      "reason": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "label",
+      "unit_id",
+      "premise_quote",
+      "claim_quote",
+      "reason"
+    ],
+    "additionalProperties": false
+  },
+  "semantic_match": {
+    "type": "object",
+    "properties": {
+      "equivalent": {
+        "type": "boolean"
+      },
+      "left_quote": {
+        "type": "string",
+        "minLength": 1
+      },
+      "right_quote": {
+        "type": "string",
+        "minLength": 1
+      },
+      "reason": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "equivalent",
+      "left_quote",
+      "right_quote",
+      "reason"
+    ],
+    "additionalProperties": false
+  }
+}

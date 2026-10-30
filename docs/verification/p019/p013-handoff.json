@@ -1,0 +1,35 @@
+{
+  "status": "PREPARATION_COMPLETE_HUMAN_REVIEW_PENDING",
+  "adopted_plan": "e065560e3a48a6a4a1d41c26a721ee2a99521dce",
+  "adoption_commit": "b2e6edd",
+  "packet": {
+    "packet_sha256": "6f9b0b673b4b18e3739ac5038f048c00c8563ceaeab9dde105dedea9b1e13508",
+    "json_file_sha256": "10a708ebf25c4f9ee44b3a7b6a3e6aeaf336f7f4b136cbcc3c4d006f07d092d6",
+    "html_file_sha256": "c1c5fa0d6c73893b275076e685bbf69dfb42ef02c1d7c041817b2c848797022f",
+    "absence_review_sha256": "2862099eb1d0df6f823a26f00ff16db8850d6bfec093159de706e3b36430965e"
+  },
+  "report": "evaluation/project_b/preparation/artifacts/run001/review.html",
+  "source_canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "model_lock_sha256": "7d290e8e26f3c8e1014cb2547cbcf30a33fe10e4858901f3835e0dff08e92152",
+  "frozen_input_sha256": "c3f328a7964508f75509d1b4cd193a4055f30748a27fa24a9928f048f7508cc0",
+  "prompt_revision_sha256": "f292bbc65579733bf8b5e3f1bb49b295a00647582de678f9f251f525c13eeb84",
+  "schema_version": "p019-strict-json-v1",
+  "ledger_sha256": "eda31ca01e1e1c1e7871f081aed5f41b800db2a805546a153605ae4ba6855c96",
+  "p007_handoff": {
+    "inputs_sha256": "c6503c27ca91b50e32dc8ce0f8f5f1df1ed70c9133faddd74213479073a17378",
+    "index_fingerprints_sha256": "3f02cb95af458e8b257c5373becacedf60b010685ba52c9b75c8dce9f39174b9"
+  },
+  "human_approval": null,
+  "human_review": [
+    "Check each of the 48 standalone claims and their conditions/exceptions/source scope.",
+    "Check document-limited absence candidates gt09/gt10 against full canonical and inventory.",
+    "Review all 18 proposed E/N/C labels; none are approved.",
+    "Resolve exact-quote robustness and gt08 output-limit failures before P013 readiness; no production scoring implemented."
+  ],
+  "limitations": [
+    "Small reused learning/development set, not independent blind holdout.",
+    "Initial draft smoke failed twice; one frozen prompt clarification, no counter reset.",
+    "All eight real-question drafts require quote/provenance revision; gt08 replies hit fixed output cap.",
+    "P019 completion is preparation only, not model quality acceptance, human approval, or P013 completion."
+  ]
+}

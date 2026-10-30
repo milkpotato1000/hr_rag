@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "id": "smoke-atoms",
+      "user_bytes": 428,
+      "template_bytes": 1723,
+      "schema_bytes": 318,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 3557
+    },
+    {
+      "id": "smoke-E",
+      "user_bytes": 575,
+      "template_bytes": 1723,
+      "schema_bytes": 355,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 3741
+    },
+    {
+      "id": "smoke-N",
+      "user_bytes": 569,
+      "template_bytes": 1723,
+      "schema_bytes": 355,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 3735
+    },
+    {
+      "id": "smoke-C",
+      "user_bytes": 562,
+      "template_bytes": 1723,
+      "schema_bytes": 355,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 3728
+    },
+    {
+      "id": "smoke-match",
+      "user_bytes": 446,
+      "template_bytes": 1723,
+      "schema_bytes": 287,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 3544
+    },
+    {
+      "id": "smoke-draft",
+      "user_bytes": 691,
+      "template_bytes": 1723,
+      "schema_bytes": 444,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 3946
+    },
+    {
+      "id": "gt01",
+      "user_bytes": 2341,
+      "template_bytes": 1723,
+      "schema_bytes": 444,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 5596
+    },
+    {
+      "id": "gt02",
+      "user_bytes": 1147,
+      "template_bytes": 1723,
+      "schema_bytes": 444,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 4402
+    },
+    {
+      "id": "gt03",
+      "user_bytes": 2165,
+      "template_bytes": 1723,
+      "schema_bytes": 444,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 5420
+    },
+    {
+      "id": "gt04",
+      "user_bytes": 1537,
+      "template_bytes": 1723,
+      "schema_bytes": 444,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 4792
+    },
+    {
+      "id": "gt05",
+      "user_bytes": 1537,
+      "template_bytes": 1723,
+      "schema_bytes": 444,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 4792
+    },
+    {
+      "id": "gt06",
+      "user_bytes": 3369,
+      "template_bytes": 1723,
+      "schema_bytes": 444,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 6624
+    },
+    {
+      "id": "gt07",
+      "user_bytes": 2017,
+      "template_bytes": 1723,
+      "schema_bytes": 444,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 5272
+    },
+    {
+      "id": "gt08",
+      "user_bytes": 3893,
+      "template_bytes": 1723,
+      "schema_bytes": 444,
+      "special_token_margin": 64,
+      "output_reserve": 1024,
+      "upper_bound": 7148
+    }
+  ],
+  "failures": []
+}

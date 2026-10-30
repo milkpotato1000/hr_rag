@@ -1,0 +1,23 @@
+{
+  "model_requests": 0,
+  "commands": [
+    {
+      "command": "verify",
+      "exit_code": 0,
+      "output": "Offline verification PASS\n"
+    },
+    {
+      "command": "report",
+      "exit_code": 0,
+      "output": "Unapproved packet: 6f9b0b673b4b18e3739ac5038f048c00c8563ceaeab9dde105dedea9b1e13508\n"
+    },
+    {
+      "command": "verify",
+      "exit_code": 0,
+      "output": "Offline verification PASS\n"
+    }
+  ],
+  "html_hash_before": "c1c5fa0d6c73893b275076e685bbf69dfb42ef02c1d7c041817b2c848797022f",
+  "html_hash_after": "c1c5fa0d6c73893b275076e685bbf69dfb42ef02c1d7c041817b2c848797022f",
+  "scope": "Only preparation directory copied; no product modules, source repo, model server, or model cache required"
+}

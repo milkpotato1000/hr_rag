@@ -1,0 +1,79 @@
+{
+  "experiment_manifest_sha256": "c217120300aa887689ed0ee19ac8e8ac2ac6a58f18d7b3f707b92080f676b42d",
+  "source_pdf_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+  "baseline": "fixed-400-80",
+  "candidate": "structure-0",
+  "runs": {
+    "baseline": {
+      "run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+      "manifest_sha256": "702cced46192462958b44627380894ad4798126e72369acac933d748c51eb0b6",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "chunk-c8ec33f9511342288b8117f7b89df6bf",
+        "status": "complete",
+        "algorithm_version": "chunk-experiment-v1",
+        "config": {
+          "id": "fixed-400-80",
+          "method": "fixed",
+          "size_chars": 400,
+          "overlap_chars": 80
+        },
+        "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+        "input_manifest_sha256": "b8373ee69892d92bff1623b2a9fc6b8c651521396c8a13f08d254f62b229313d",
+        "spec_sha256": "285028d2d76af9bd14e741894864f61aeafd1f6ecfee8aef2bf727ea4e748b5f",
+        "prompt_sha256": "b5fa4403a8a94b0236a669c4b5ec2a0c5deac49c601ed956ecaada99bc96ebd5",
+        "runtime_lock_sha256": "ce39ba744b645afd13d0a5b9c092ff872bee64ef30e20f4d20ae851054700e03",
+        "parent_run_ids": [],
+        "code_hash": "b19805dbaa2b78244f0bd7fea662918eb2d5c17f9e31c64e231d6a294f77c69c",
+        "outputs": {
+          "chunks.jsonl": "54425b468bb51b31ffd09580874aacf3c058349a1142ae84d10fad0215d934e9",
+          "statistics.json": "cbd548f7a4bcbe80ff1e4766781842b458d3570989406cae53f3e8f9f82d430c",
+          "boundary-details.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+          "source-map.json": "0a02d4708ed56703ce1c0a809b8ef4fd38de99ae88a2adac04c3f1d59e0bf262"
+        },
+        "elapsed_ms": 27.592208003625274,
+        "counts": {
+          "chunks": 121,
+          "units": 630
+        },
+        "text_version": "canonical-slice-only-v1"
+      }
+    },
+    "candidate": {
+      "run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+      "manifest_sha256": "687008eb45dbc4cbadec7156759547d8fe13e3b5665006c73c3f5835f1472d6b",
+      "manifest": {
+        "schema_version": 1,
+        "run_id": "chunk-494d0aab594c41abbaf9735e10e0aab1",
+        "status": "complete",
+        "algorithm_version": "chunk-experiment-v1",
+        "config": {
+          "id": "structure-0",
+          "method": "structure",
+          "base_max_chars": 400,
+          "overlap_chars": 0,
+          "overlap_policy": "post_partition_left_extension_v1"
+        },
+        "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+        "input_manifest_sha256": "b8373ee69892d92bff1623b2a9fc6b8c651521396c8a13f08d254f62b229313d",
+        "spec_sha256": "285028d2d76af9bd14e741894864f61aeafd1f6ecfee8aef2bf727ea4e748b5f",
+        "prompt_sha256": "b5fa4403a8a94b0236a669c4b5ec2a0c5deac49c601ed956ecaada99bc96ebd5",
+        "runtime_lock_sha256": "ce39ba744b645afd13d0a5b9c092ff872bee64ef30e20f4d20ae851054700e03",
+        "parent_run_ids": [],
+        "code_hash": "b19805dbaa2b78244f0bd7fea662918eb2d5c17f9e31c64e231d6a294f77c69c",
+        "outputs": {
+          "chunks.jsonl": "09e64e0e4449311e790083dfec2e8fae93fd92b2047e29c0582dda17d9f1abc9",
+          "statistics.json": "8a44b1fcafc0edb204fe4077a8ef0ba58b812c6315849dfb47b6f5550292995b",
+          "boundary-details.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+          "source-map.json": "5b907e26620e373f7f7c5f1e074f9824be2473442d068f7d350e2158889ec9d4"
+        },
+        "elapsed_ms": 44.08770799636841,
+        "counts": {
+          "chunks": 155,
+          "units": 630
+        },
+        "text_version": "canonical-slice-only-v1"
+      }
+    }
+  }
+}

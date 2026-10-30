@@ -1,0 +1,446 @@
+{
+  "scope": "Read-only P007 identity; no retrieval/generation performed; never included in model payload",
+  "experiment_manifest_sha256": "c217120300aa887689ed0ee19ac8e8ac2ac6a58f18d7b3f707b92080f676b42d",
+  "configs": {
+    "fixed-400-80": {
+      "bm25": {
+        "index_fingerprint": "bb1af5e5f0535179f3018156d77c1c70f7d30bcb51012ef53ff120c43c7acb86",
+        "verified_trial_files": [
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q01.json",
+            "sha256": "e0ca6750952b2040a8b6336f88cf8dc592d523b1d4b9ada66e0baecab8c0a90e"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q02.json",
+            "sha256": "9744a1be5db501e65614875fc03239532aa6d0d23abc06ac6d5a0deac5db2f24"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q03.json",
+            "sha256": "20b49d30d9727cda8d4896d62b510923643cc1978a7dac00be3028b7366398f7"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q04.json",
+            "sha256": "b7b1c39107835c59007e876ed1762083b2f818003d1b6300aca20bb9cfd240d4"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q05.json",
+            "sha256": "4b7960778ea9d6ef3357dd7b868363bbbf14726b26b0ef17f6f5453ec279b5d2"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q06.json",
+            "sha256": "63826f3ab4234c38a7d780756ff9e1412f04938f004e5ea315bb7519550893f9"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q07.json",
+            "sha256": "ea4c8f3f9dafc85f6bee266bc8013515c39b157f9401d3847759fc62aa2bec69"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q08.json",
+            "sha256": "4a6daaf9c26614e1ea81485bfa505cdd8ab0ca3d40496f4229a9e27c58c5e703"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q09.json",
+            "sha256": "95c5436299be99c6e016171c8d304dbfaf1b07322848e5f2aab42509f1e01aa0"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q10.json",
+            "sha256": "4d6873e81992d6a0fb39a87da423868aa85bbfddc7d82646c8de320a32d5f340"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q11.json",
+            "sha256": "3b722a5aa0b57c17c98439d421b35844ffb4f19b952e525db59c5b21cf605ed9"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q12.json",
+            "sha256": "c9f2db7365ac4e615c4d3c8e3d42047eeaf0bc2154f654d818fe1a893c84b8c8"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q13.json",
+            "sha256": "683bc03c747081360c86de648a5e15795532d5429f230834612605afb81fba1b"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-q14.json",
+            "sha256": "2abd5382ab92407548045d5f6a89f178ed4da764f1eff0bd37320e20e95967e7"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t01.json",
+            "sha256": "d9bdce75850538f4899d311ef1efadb91e350b4e079e7a3ecc1227d1b6c5245a"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t02.json",
+            "sha256": "7409a249ea9aff8e76757d3844aa1b99cbefebfde9b007761b57f5aa757df9f4"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t03.json",
+            "sha256": "d6c42753a123018e3af3975ef72ac209bf1450a3bc58b13fb96cccfd7bfe6a8d"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t04.json",
+            "sha256": "95001d17cac02cbc8448891fc9d8b7600906391e1ab16bccff5fceaa99aca608"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t05.json",
+            "sha256": "9c82f75c586f0b41211e3da4bae17ac94ec46b4e544bb98519908be42e22dc6f"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t06.json",
+            "sha256": "9fe5d1e3376bcb386d7952bed0dbcd1fdd176e5bf2e940173e21eb557001f3a7"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t07.json",
+            "sha256": "ecfe54083e61cda7c9af92ad366199fbb7097c1fe1accac376bcdc1cc12a620e"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t08.json",
+            "sha256": "90e4d95266b2f4632687a0bf1480d47ebf7c27d70919be97a37f3f5420af8e0e"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t09.json",
+            "sha256": "dd9a4c73b7eeefcdb7e310e811cf55aaa172759619c557f3ea82041a956c63f2"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t10.json",
+            "sha256": "6f8b383b84b937d62b2607ce82005ec0fef1a452816831486322e86969855f38"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t11.json",
+            "sha256": "d71caf4159bd5a2f243766e89b382c330bd594d24aa8b2772a6cc86fb89d08f0"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-bm25-t12.json",
+            "sha256": "3f4c23025d43f0fdbdeb20f264220b5b3ac8ff500a98af8d36980643d9c91864"
+          }
+        ]
+      },
+      "dense": {
+        "index_fingerprint": "01e0887fd234585c639b29e70f33268b6e80fc40e756e9784772a4f91bc73963",
+        "verified_trial_files": [
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q01.json",
+            "sha256": "6585f7c6365e329a78776b7ba87ae7bc5c8596ce39e8ca58bcfd0c036441ae09"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q02.json",
+            "sha256": "fdef8dbe7af1294f688b4f108a2676ac31df181c557334270f80b765d76fba84"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q03.json",
+            "sha256": "da858514e7b33f283f0e57e311123d06af7e3ea60e589d91c925f393d8f08e72"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q04.json",
+            "sha256": "d7e482af163b4589f614d9ec4aa6a11d34be9acdeede0b44666953419f7f8ad3"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q05.json",
+            "sha256": "231c28d3d701fc165e881b13942ba2075f23337a16cd3fd794da290d351392f7"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q06.json",
+            "sha256": "2dc48a866aa171726053d0e2730453a1ac454b407a4c5e712f9950be6f753c5e"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q07.json",
+            "sha256": "00dfa1a751ce9d4ae1c1672bdcbd6c32d97ca8ad935ac9dd7663390f799fac97"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q08.json",
+            "sha256": "4b6ee951ea00e7548650e76772d998e688b03db7b00f5546bce0564f1194e221"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q09.json",
+            "sha256": "2c7e5b5be3b80f59bddc56d97b5325ccd3aac080c3b54157f595f57d68829b50"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q10.json",
+            "sha256": "b86a6cc89bcd3429cfa3a8d7588e572e4d394d54a54d75e3a193609c452ebe2d"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q11.json",
+            "sha256": "4ab55a85c65f99db67749ffc819ef2029a17186e00efe4512722a35c40cd10d5"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q12.json",
+            "sha256": "f19a69300ae54c6ac660a4cdbafb5295d480146439b1623dd9d95ad9aa9ba597"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q13.json",
+            "sha256": "2b521dde24d5050a303aabf88c5b6375e85b00038f7a0ce01d94e6ba66fa7b03"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-q14.json",
+            "sha256": "e4b9f2b951b1c0a6e590b965f84ed16cf1b2458bc46a3be09065d00c973dcc10"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t01.json",
+            "sha256": "70d82f2420d1afba48099ebb3eca5613629316a158f2222c544d5d4886c5331f"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t02.json",
+            "sha256": "85e47e9520e10f7d9e6a0830fe5aafcc8b962659c15d854ad62a2d9fc430a361"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t03.json",
+            "sha256": "50f9fec0231cd53eb3d3745099d67266705fe69c2a4cdcb7e14e5f00267f5905"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t04.json",
+            "sha256": "dcba0eee3c33b0a9253f6ca32cb502543b19312eca936facc8132079b2c3e789"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t05.json",
+            "sha256": "93b68163f756645c22ecc082f95ff85a1fd9ce16904716fd3043fdd7da26c2f2"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t06.json",
+            "sha256": "7dc71501b5d37716c5b3b144c6bae325ca09d33ba254ffec25956d41db99a137"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t07.json",
+            "sha256": "3d9abcaea38917e2db9d2c27e45878d4db022136f81ccbe0197f6909bd4545d5"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t08.json",
+            "sha256": "14013a1bec5401abc42b1e2c12bdaeb183a45a1e81adac8fc0988ddfa6027211"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t09.json",
+            "sha256": "461b38bb3f2954af8f9c3454aebb23bf8195c0155223e128270e46d63ab7c16c"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t10.json",
+            "sha256": "8abf8d39ac6411fe7e90ca3a3f58287a024ca92a66768885f116d2ac39177bcb"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t11.json",
+            "sha256": "3866bebf986698351295ff51efff3e00bce613b1dced875d77f1fcfbea89bdee"
+          },
+          {
+            "path": "ranking-trials/tuning/fixed-400-80-dense-t12.json",
+            "sha256": "42e962bfd7e1839b228dc6d4f7ca5e3a46ec96ca93522e2768fae6c800fb6358"
+          }
+        ]
+      }
+    },
+    "structure-0": {
+      "bm25": {
+        "index_fingerprint": "5a065e600529b57dc152c40d1b7c926032d78faf7a9d862874231b9bd99f41c6",
+        "verified_trial_files": [
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q01.json",
+            "sha256": "30a2348e6e383708f9c90f9d606547190a56313992f5b038fdab976c89c9bc3a"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q02.json",
+            "sha256": "3c8db8ae06db15b9d19cc19ecd095fc1a59239c9af2f988bef6b7a239ecf9b2b"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q03.json",
+            "sha256": "2076f3c49d1faf592dedd146d8c739b199c36228f2469b460e08ed3e336c1578"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q04.json",
+            "sha256": "49cf1ee55bb8819bb5a70d144bc671a7b6c6e3eb4c1a13ef7d18fae9d23eab6f"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q05.json",
+            "sha256": "ae3d33578b8fad26fbc00f1323ad219636448da7267b36a25e88aeee4af47ff6"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q06.json",
+            "sha256": "90927864801cc83bf256c1cccdd43eaddf7b318401541a3485cc7fea7ee43f86"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q07.json",
+            "sha256": "f0e3534503a28b13d20f9ee940985fee734eda06cd4cbe7b57853055cafe5fe0"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q08.json",
+            "sha256": "50290bdd09756b9033b032771ec477a945a64cdd2aa819212604e1cc29b8fc7e"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q09.json",
+            "sha256": "67f2fe42c445c9bbec21dbf3a962b68b8405e5f2fde19d8e75615c6bb5cdba5b"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q10.json",
+            "sha256": "c07d84daf0c02e4ea141fcecea50826e511a5f4690dfe7e78c1cfd5a36c55971"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q11.json",
+            "sha256": "b6b7e0c4307e0f1490be5c8dd86c81092e30a05879ea2ba081fe22f7e88f36c5"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q12.json",
+            "sha256": "9421c0a49a19128794a464e65450efc41c7a267a38a97238a01491353ccc352e"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q13.json",
+            "sha256": "f49afd9566b85b024699fcc391ae33531d601c03d82e0afc998322e252c967a9"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-q14.json",
+            "sha256": "da608fb361fc6281205a4cdc34b7c1f97b5885491dced2d8ca625cea86542eb0"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t01.json",
+            "sha256": "23f1dab3d053d859b3c2bc1a6b007b7e41a81517675e4c7eea0527f4a66d2c82"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t02.json",
+            "sha256": "50672bf9a04afac1fb401ebdaed4848dfc5c3891484955b6298215e8026be423"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t03.json",
+            "sha256": "7cb0a36de05a40b5ad7ce89d9f9e9f212752c9a6975f74506734020178eafe1e"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t04.json",
+            "sha256": "4db0af9f248477a2ca816aceb06ae7b17191fe7c0246cd5e63578f16e0dcd1d2"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t05.json",
+            "sha256": "6268840fa81cb3cb8b56334254a1e48ba579df24dba3a5e3feb4b6787d5c5553"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t06.json",
+            "sha256": "1618619cf1d9880675b160b68fabf99f5c9db99973112497b5132043683c6cb6"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t07.json",
+            "sha256": "05596f11799ace1a66a02e1d0057f94221653d2090936834591904e730bdcb97"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t08.json",
+            "sha256": "0f4257c6a4ef782634e9ea4ecd2c563871d96ddc487c5eb9ff701ee36cddccbb"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t09.json",
+            "sha256": "abcd6abe9c628593d69edd72af99dba2bc9dd9663582ff9cb0e930b7579c9ce0"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t10.json",
+            "sha256": "7bf75e733f1c7e1281407776363f39b9ea9a8842f3e250204a957cc6aba727f0"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t11.json",
+            "sha256": "1a73b3628b5ee849f302d089280678aa0167604effc0e72eb0522aefba2f6d1c"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-bm25-t12.json",
+            "sha256": "a937d54c25efe7908c48005550c00cd5c3ab882972c3d1e9a383b95997686218"
+          }
+        ]
+      },
+      "dense": {
+        "index_fingerprint": "33668ca15f786de56b8f32b413094fa60f5a82570056aeb7ef95eddf728dcbb9",
+        "verified_trial_files": [
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q01.json",
+            "sha256": "afab3367b14b50b2f9ba8e389a8e949b32072a8d7b3fca17b42963067c50482c"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q02.json",
+            "sha256": "545e7f3369092e34267931ba02818e24a02aa7ee37e18229a92a58f4b9f7eb38"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q03.json",
+            "sha256": "1735bbb596246b1c33c561a4510976cb7e001906d578f6a521ef26cfc28d9e44"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q04.json",
+            "sha256": "d9289998b35e3aedc818bb61f8a21bd5502e0f7ad4f348ccadd82111e64f6599"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q05.json",
+            "sha256": "b1f18d110cb9d7a3f96d8597141b45a686051abd9352b51bff1b06fc5ca3cad7"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q06.json",
+            "sha256": "e45a297e77f115fc644a8b760361ec069a326abd24edcfa42f15da05e88326ba"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q07.json",
+            "sha256": "abc3949dd6ff8ead6940e10b54c54cf1b0da9dfea9106dbea4f1b7eeec6a15bc"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q08.json",
+            "sha256": "c6e7cad49353bc06992847e43383fe271be782dc9a64ab6c7c52fa548e549d27"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q09.json",
+            "sha256": "a3b0a2490fe19a41b294394181fbe8bb73b4a5ff05163a13c263ac69a92df2ce"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q10.json",
+            "sha256": "e72480f76a05013b8ff417a1584cc6c8041d06d126e4a557f703c15b687370e3"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q11.json",
+            "sha256": "686ef71a32523646fe8ef748001ac5590dd35f2ee7e8db09eb14293488954c56"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q12.json",
+            "sha256": "cb75fc72763f9e37d41c606aff9e5ce07125db972bcccdb4b8806b5893b1b5f9"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q13.json",
+            "sha256": "0307d10c9be03d68b63c95d9a6bef3f2c54038fc4d4d80f0c1c1564989afe7bd"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-q14.json",
+            "sha256": "b96b9de1d53e34c52d74b042a573272143a60a0ef0ff1b8ac9710619641f8f2e"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t01.json",
+            "sha256": "74514e1eb86e7a9fef0e0f8989a8e0df48b53a347b563236a3280d35a01f32af"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t02.json",
+            "sha256": "09315020916f70ce5d67d5505581234f8b64e9ec8c55198e44133f4a73544459"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t03.json",
+            "sha256": "514608857e717686c3b3980e80310c990d833b979eec29561855ff84efe72013"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t04.json",
+            "sha256": "ce19cbdb93c70d226ff762615b200f44e9f91dc3e697f046f3fcf1ad08da74f9"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t05.json",
+            "sha256": "eb274f8e825a8becb463c5efbc9096fbc6f74559a216f2841ce89916c72fea6d"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t06.json",
+            "sha256": "df1ec742040bc0d16462bdcc1284f78424e40668db7f58ed89aad327ebea8a2a"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t07.json",
+            "sha256": "d981d63b4d5f779fddf2f71d4afecfaf23d067cf0078191a8dcbe30834769c94"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t08.json",
+            "sha256": "b9d74321b5c6d5fad334591331cf848430da2515a0686aea7262c0fb61572f97"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t09.json",
+            "sha256": "2149337b4d3bd723757fcc3bb92acd63699cfc8f8c256b3238ae5a7a933d5103"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t10.json",
+            "sha256": "47ec44902243068bb70941b661aaaae028ec9a8f0b1a0c91161631b8d0f8d6ce"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t11.json",
+            "sha256": "cf4ceea11f19b2b1fd8ad1a948d8a8727f4521340a88c8ac26869d811f85b6a3"
+          },
+          {
+            "path": "ranking-trials/tuning/structure-0-dense-t12.json",
+            "sha256": "65a0027600387ac1a80056e6afbd58a4972009234567f6d297ad66e64cf30e3e"
+          }
+        ]
+      }
+    }
+  }
+}

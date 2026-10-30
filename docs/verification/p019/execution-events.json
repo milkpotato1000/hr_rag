@@ -1,0 +1,25 @@
+[
+  {
+    "phase": "download/registration",
+    "result": "failed then recovered",
+    "evidence": "download.json",
+    "detail": "Downloaded verified blobs once into external cache; initial default-cache assumption prevented server lookup. Read running OLLAMA_MODELS; reused verified blobs by links in ignored server cache without model copy, redownload, restart, or settings change."
+  },
+  {
+    "phase": "runtime metadata pre-dispatch",
+    "result": "failed then corrected",
+    "evidence": "predispatch-parameter-order-failure.json",
+    "detail": "Identical parameter multiset serialized in different order; preserve raw metadata and compare full key/value multiset."
+  },
+  {
+    "phase": "local syntax helper",
+    "result": "failed then replaced by ordinary imports/tests",
+    "detail": "System py_compile tried to write outside workspace in Python cache; no product change. Standard-library unit tests run with -B."
+  },
+  {
+    "phase": "ground smoke v1",
+    "result": "2 failed model calls retained",
+    "evidence": "evaluation/project_b/preparation/artifacts/run001/calls/006.json",
+    "detail": "answer copied question; claims were not substrings of answer. One same-question/source/schema instruction clarification frozen as ground-v2; cumulative ledger preserved."
+  }
+]

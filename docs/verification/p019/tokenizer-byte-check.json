@@ -1,0 +1,8 @@
+{
+  "byte_bpe": "gpt2/qwen2",
+  "all_256_single_byte_symbols_present": true,
+  "missing": [],
+  "vocabulary_size": 151936,
+  "source": "actual model-show tokenizer.ggml.tokens; GPT-2 reversible byte alphabet",
+  "template_review": "full pinned template single-user/no-system/no-tools inspected before freeze"
+}

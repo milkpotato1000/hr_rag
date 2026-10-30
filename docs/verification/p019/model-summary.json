@@ -1,0 +1,135 @@
+{
+  "experiment": {
+    "model": "qwen3:8b Q4_K_M",
+    "requests": 30,
+    "max_requests": 34,
+    "cumulative_seconds": 1287.986085086,
+    "schema_valid_calls": 28,
+    "exact_quote_valid_calls": 12,
+    "repeated_payloads_equal": 6,
+    "repeated_normalized_outputs_equal": 6,
+    "repeat_cases": 6,
+    "median_call_seconds": 41.80317377099993,
+    "max_call_seconds": 103.22947662499996,
+    "max_sampled_ollama_rss_bytes": 6735839232,
+    "memory_scope": "1-second sampled sum of Ollama process RSS, including server/runner; not true peak, GPU allocation, or system memory",
+    "warning": "Six smoke cases and their repeats are compatibility evidence, not independent evaluator accuracy. All raw failures retained; human review pending."
+  },
+  "failed_validation_calls": [
+    {
+      "id": 6,
+      "case": "smoke-draft",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 7,
+      "case": "smoke-draft",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 15,
+      "case": "gt01",
+      "error": "duplicate claim quote",
+      "done_reason": "stop"
+    },
+    {
+      "id": 16,
+      "case": "gt01",
+      "error": "duplicate claim quote",
+      "done_reason": "stop"
+    },
+    {
+      "id": 17,
+      "case": "gt02",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 18,
+      "case": "gt02",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 19,
+      "case": "gt03",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 20,
+      "case": "gt03",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 21,
+      "case": "gt04",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 22,
+      "case": "gt04",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 23,
+      "case": "gt05",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 24,
+      "case": "gt05",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 25,
+      "case": "gt06",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 26,
+      "case": "gt06",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 27,
+      "case": "gt07",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 28,
+      "case": "gt07",
+      "error": "quote mismatch or ambiguity",
+      "done_reason": "stop"
+    },
+    {
+      "id": 29,
+      "case": "gt08",
+      "error": "partial or unexpected model output",
+      "done_reason": "length"
+    },
+    {
+      "id": 30,
+      "case": "gt08",
+      "error": "partial or unexpected model output",
+      "done_reason": "length"
+    }
+  ],
+  "initial_smoke_first_attempt_pass": 5,
+  "initial_smoke_cases": 6,
+  "final_smoke_semantic_pass": 6,
+  "repeat_output_agreement": "6/6 normalized JSON outputs; identical payloads",
+  "grounded_draft_exact_quote_pass_cases": 0,
+  "grounded_draft_cases": 8,
+  "human_approval": null
+}
