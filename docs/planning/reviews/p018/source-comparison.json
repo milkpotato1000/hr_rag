@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "status": "REVIEWED_UPGRADE_INPUT_NOT_INSTALLED",
+  "checked_date": "2026-10-30",
+  "repository": "https://github.com/milkpotato1000/plan-dev-harness",
+  "release_url": "https://github.com/milkpotato1000/plan-dev-harness/releases/tag/v0.1.0",
+  "version": "0.1.0",
+  "release_commit": "803d658a8c61dc6aa007645a98d4160b16746faa",
+  "release_tag_object": "1aa78969b0050269fed8a5a30232779c85f9c7dd",
+  "unreleased_dev_observed": "6b77a5d6cc10b3345a510c50bdff88336998de8c",
+  "target_plan_before": "48011d50aee68accec2f27799e5aa9a23fed3850",
+  "target_dev_before": "229a080d2c987eb687da05fffb681c2e60fb2c7e",
+  "files": [
+    {
+      "path": "scripts/contract_guard.py",
+      "source_path": "assets/scripts/contract_guard.py",
+      "before_sha256": "0b0e3c84051665df258d6be5bf1b2efecc188c6c6cc410c720e71dfef69d9860",
+      "release_sha256": "0b0e3c84051665df258d6be5bf1b2efecc188c6c6cc410c720e71dfef69d9860",
+      "identical": true,
+      "decision": "preserve_identical"
+    },
+    {
+      "path": "scripts/plan_cards.py",
+      "source_path": "assets/scripts/plan_cards.py",
+      "before_sha256": "287caeea6e11916f0b43919c68805961e9c94329ad26e3037db10850d9f3657d",
+      "release_sha256": "d16884698f9555d5cbdb123e50177e43c00d3dc78d4057b06669efd0932add14",
+      "identical": false,
+      "decision": "review_two_timestamp_fixes"
+    },
+    {
+      "path": "scripts/work_queue.py",
+      "source_path": "assets/scripts/work_queue.py",
+      "before_sha256": "bef59788f80da663fc25eb0e75b86d070090ea17f89ef2248ed47316b553bd43",
+      "release_sha256": "bef59788f80da663fc25eb0e75b86d070090ea17f89ef2248ed47316b553bd43",
+      "identical": true,
+      "decision": "preserve_identical"
+    },
+    {
+      "path": "scripts/plan_intake.py",
+      "source_path": "assets/scripts/plan_intake.py",
+      "before_sha256": "5097771befe91a7fa803a813b18df1083d8ba893df2bd47d65fb35600bb44630",
+      "release_sha256": "c49bbb3d9a58c3a1b7b3967cc302effd40c2b82621ebc6cff15a77509fcdd4f8",
+      "identical": false,
+      "decision": "review_two_timestamp_fixes"
+    },
+    {
+      "path": ".githooks/pre-commit",
+      "source_path": "assets/.githooks/pre-commit",
+      "before_sha256": "a90663e546e9737837e900abad5fa1986fc010860c87d570f8562c68b581b050",
+      "release_sha256": "a90663e546e9737837e900abad5fa1986fc010860c87d570f8562c68b581b050",
+      "identical": true,
+      "decision": "preserve_identical"
+    },
+    {
+      "path": ".githooks/pre-push",
+      "source_path": "assets/.githooks/pre-push",
+      "before_sha256": "a1369e815241d85b9b96795eca8cd234d7e2fc7639cef862e9ceb45092cacf29",
+      "release_sha256": "a1369e815241d85b9b96795eca8cd234d7e2fc7639cef862e9ceb45092cacf29",
+      "identical": true,
+      "decision": "preserve_identical"
+    },
+    {
+      "path": "docs/process/work-queue.md",
+      "source_path": "assets/docs/process/work-queue.md",
+      "before_sha256": "b576c70ea2f614d776ebd47ede8aa5c1aa9272d1608398da59189357f167c0ea",
+      "release_sha256": "b576c70ea2f614d776ebd47ede8aa5c1aa9272d1608398da59189357f167c0ea",
+      "identical": true,
+      "decision": "preserve_identical"
+    },
+    {
+      "path": "docs/process/plan-intake.md",
+      "source_path": "assets/docs/process/plan-intake.md",
+      "before_sha256": "cbf17b9f5bb0734d412390feba7bd58d37c288e279e4ea1f32eade5dbdeb7019",
+      "release_sha256": "c7991e05ca6ba568ff21b5776fe38299cbdc7ce89b69577d0883aead15d55f72",
+      "identical": false,
+      "decision": "retain_project_example"
+    },
+    {
+      "path": "docs/planning/plans/_TEMPLATE.md",
+      "source_path": "assets/docs/planning/plans/_TEMPLATE.md",
+      "before_sha256": "7ac1e72d1f8eba89899a3b7d290c6fd087e65011bc584d106dd18a7d10abfae8",
+      "release_sha256": "7ac1e72d1f8eba89899a3b7d290c6fd087e65011bc584d106dd18a7d10abfae8",
+      "identical": true,
+      "decision": "preserve_identical"
+    }
+  ],
+  "preserve_dirty_files": {
+    "docs/architecture/project-b-generation-evaluation.md": "0595507929d3d82cab1536dfb020c9582b6ffb23fe8ee72873893db20918d126",
+    "docs/planning/naive-rag-roadmap.md": "562572a49642673966e3f935576268e7fffa087856496e22df69003dbc44288f",
+    "docs/planning/plans/P014.md": "858dc8997a1fba21e4f5d32f81c3ae7ba56941afd4b52cbc5ea89aa9b906bc32",
+    "docs/planning/project-brief.md": "ef0ae9c8f2a37401cef6c5010ebd24ed4bea5687505a41f1e8af65e36ab7f3f3"
+  },
+  "installer_preview": {
+    "apply": false,
+    "exit_code": 1,
+    "message": "Existing file differs; review/integrate instead of overwriting: scripts/plan_intake.py"
+  },
+  "installation_manifest_exists": false,
+  "limits": [
+    "This is comparison evidence, not installer ownership metadata.",
+    "No installed scripts, hooks, global skill or release checkout changed.",
+    "Project-specific ground rules and policy will be reviewed separately."
+  ]
+}
