@@ -1,0 +1,30 @@
+[
+  {
+    "name": "baseline-intake",
+    "python": "3.9.6",
+    "exit_code": 0,
+    "seconds": 16.94,
+    "log": "baseline-intake.log"
+  },
+  {
+    "name": "baseline-regression",
+    "python": "3.9.6",
+    "exit_code": 1,
+    "seconds": 24.57,
+    "log": "baseline-regression.log"
+  },
+  {
+    "name": "candidate-regression",
+    "python": "3.9.6",
+    "exit_code": 0,
+    "seconds": 24.49,
+    "log": "candidate-regression.log"
+  },
+  {
+    "name": "release-bundled",
+    "python": "3.9.6",
+    "exit_code": 0,
+    "seconds": 46.23,
+    "log": "release-bundled.log"
+  }
+]

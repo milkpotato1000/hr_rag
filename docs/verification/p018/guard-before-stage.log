@@ -1,0 +1,8 @@
+$ python3 scripts/contract_guard.py check --target worktree
+PASS: contracts match adopted plan 405cae9d23ea
+
+$ python3 scripts/contract_guard.py check --target index
+PASS: contracts match adopted plan 405cae9d23ea
+
+$ python3 scripts/contract_guard.py check --target HEAD
+PASS: contracts match adopted plan 405cae9d23ea

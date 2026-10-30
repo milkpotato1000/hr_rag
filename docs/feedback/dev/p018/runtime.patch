@@ -1,0 +1,10 @@
+--- a/scripts/plan_cards.py
++++ b/scripts/plan_cards.py
+@@ -62 +62 @@
+-        moment = datetime.fromisoformat(stamp[2:])
++        moment = datetime.fromisoformat(stamp[2:].replace('Z', '+00:00'))
+--- a/scripts/plan_intake.py
++++ b/scripts/plan_intake.py
+@@ -38 +38 @@
+-    if datetime.fromisoformat(item['created_at']).tzinfo is None:
++    if datetime.fromisoformat(item['created_at'].replace('Z', '+00:00')).tzinfo is None:

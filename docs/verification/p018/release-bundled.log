@@ -1,0 +1,56 @@
+test_adoption_of_dev_only_commit_is_rejected_without_losing_record (test_contract_guard.ContractGuardTests) ... ok
+test_dev_records_allowed_despite_unstaged_contract_draft (test_contract_guard.ContractGuardTests) ... ok
+test_direct_main_commit_is_rejected (test_contract_guard.ContractGuardTests) ... ok
+test_installer_preserves_existing_custom_hooks (test_contract_guard.ContractGuardTests) ... ok
+test_latest_plan_can_advance_without_blocking_dev (test_contract_guard.ContractGuardTests) ... ok
+test_missing_baseline_fails_closed (test_contract_guard.ContractGuardTests) ... ok
+test_new_and_deleted_contracts_are_rejected (test_contract_guard.ContractGuardTests) ... ok
+test_policy_edit_cannot_remove_protected_paths_in_index (test_contract_guard.ContractGuardTests) ... ok
+test_push_checks_actual_commit_even_when_launched_from_plan (test_contract_guard.ContractGuardTests) ... ok
+test_reviewed_merge_and_new_adoption_pass (test_contract_guard.ContractGuardTests) ... ok
+test_staged_contract_edit_is_rejected_by_commit_hook (test_contract_guard.ContractGuardTests) ... ok
+test_agent_entrypoints_and_idempotence (test_distribution.DistributionTests) ... ok
+test_bootstrap_preview_then_real_shared_worktrees (test_distribution.DistributionTests) ... ok
+test_bootstrap_refuses_invalid_and_nested_destinations (test_distribution.DistributionTests) ... ok
+test_existing_agent_instructions_refuse_every_write (test_distribution.DistributionTests) ... ok
+test_skill_collision_and_symlink_refused (test_distribution.DistributionTests) ... ok
+test_skill_install_both_agents_and_standalone_scripts (test_distribution.DistributionTests) ... ok
+test_upgrade_preview_and_unchanged_files_only (test_distribution.DistributionTests) ... ok
+test_z_timestamp_compatibility (test_distribution.DistributionTests) ... ok
+test_adoption_record_cannot_be_in_protected_scope (test_installer.InstallerTests) ... ok
+test_apply_is_idempotent_and_configurable (test_installer.InstallerTests) ... ok
+test_differing_existing_file_aborts_all_writes (test_installer.InstallerTests) ... ok
+test_existing_hook_system_preserved (test_installer.InstallerTests) ... ok
+test_preview_writes_nothing (test_installer.InstallerTests) ... ok
+test_symlink_destination_is_refused (test_installer.InstallerTests) ... ok
+test_committed_logs_append_only_and_failure_invalidates_pass (test_numbered_queue.NumberedQueueTests) ... ok
+test_dev_completion_visible_without_merge_back (test_numbered_queue.NumberedQueueTests) ... ok
+test_draft_and_dependency_do_not_auto_approve (test_numbered_queue.NumberedQueueTests) ... ok
+test_empty_queue_and_shared_worktree_repository (test_numbered_queue.NumberedQueueTests) ... ok
+test_no_false_completion_or_criteria_changes (test_numbered_queue.NumberedQueueTests) ... ok
+test_release_worktree_has_shared_guard_and_rejects_direct_commit (test_numbered_queue.NumberedQueueTests) ... ok
+test_committed_request_visible_to_plan_without_merging_dev (test_plan_intake.IntakeTests) ... ok
+test_dev_cannot_review_or_forge_decision (test_plan_intake.IntakeTests) ... ok
+test_invalid_request_rejected_by_hook (test_plan_intake.IntakeTests) ... ok
+test_linking_draft_does_not_approve_execution (test_plan_intake.IntakeTests) ... ok
+test_missing_card_rejected_before_writing_decision (test_plan_intake.IntakeTests) ... ok
+test_pending_request_does_not_block_unrelated_dev_record (test_plan_intake.IntakeTests) ... ok
+test_plan_advance_does_not_invalidate_old_dev_adoption (test_plan_intake.IntakeTests) ... ok
+test_plan_cannot_capture_dev_request (test_plan_intake.IntakeTests) ... ok
+test_plan_decision_requires_exact_adoption_on_dev (test_plan_intake.IntakeTests) ... ok
+test_request_edit_and_delete_rejected_in_index (test_plan_intake.IntakeTests) ... ok
+test_stale_review_hash_reappears_pending (test_plan_intake.IntakeTests) ... ok
+test_uncommitted_request_not_reported_as_plan_handoff (test_plan_intake.IntakeTests) ... ok
+test_dirty_worktree_refused_before_any_movement (test_workspace_layout.WorkspaceLayoutTests) ... ok
+test_existing_container_instructions_are_preserved (test_workspace_layout.WorkspaceLayoutTests) ... ok
+test_locked_worktree_refused (test_workspace_layout.WorkspaceLayoutTests) ... ok
+test_migration_preserves_repository_and_ignored_runtime_and_is_repeatable (test_workspace_layout.WorkspaceLayoutTests) ... ok
+test_new_container_with_spaces_and_shell_metacharacters (test_workspace_layout.WorkspaceLayoutTests) ... ok
+test_occupied_destination_refused (test_workspace_layout.WorkspaceLayoutTests) ... ok
+test_preview_does_not_move_or_write (test_workspace_layout.WorkspaceLayoutTests) ... ok
+test_symlink_container_refused (test_workspace_layout.WorkspaceLayoutTests) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 46.174s
+
+OK

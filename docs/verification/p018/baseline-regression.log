@@ -1,0 +1,70 @@
+test_committed_log_rewrite_rejected (test_timestamp_guards.HRGuardTests) ... ok
+test_committed_request_visible_to_plan_without_merging_dev (test_timestamp_guards.HRGuardTests) ... ok
+test_dev_cannot_review_or_forge_decision (test_timestamp_guards.HRGuardTests) ... ok
+test_dev_protected_runtime_edit_rejected (test_timestamp_guards.HRGuardTests) ... ok
+test_false_completion_rejected (test_timestamp_guards.HRGuardTests) ... ok
+test_invalid_request_rejected_by_hook (test_timestamp_guards.HRGuardTests) ... ok
+test_latest_fail_invalidates_checked_pass (test_timestamp_guards.HRGuardTests) ... ok
+test_linking_draft_does_not_approve_execution (test_timestamp_guards.HRGuardTests) ... ok
+test_missing_card_rejected_before_writing_decision (test_timestamp_guards.HRGuardTests) ... ok
+test_pending_request_does_not_block_unrelated_dev_record (test_timestamp_guards.HRGuardTests) ... ok
+test_plan_advance_does_not_invalidate_old_dev_adoption (test_timestamp_guards.HRGuardTests) ... ok
+test_plan_cannot_capture_dev_request (test_timestamp_guards.HRGuardTests) ... ok
+test_plan_decision_requires_exact_adoption_on_dev (test_timestamp_guards.HRGuardTests) ... ok
+test_plan_queue_reads_committed_dev_completion_with_z (test_timestamp_guards.HRGuardTests) ... FAIL
+test_request_edit_and_delete_rejected_in_index (test_timestamp_guards.HRGuardTests) ... ok
+test_stale_review_hash_reappears_pending (test_timestamp_guards.HRGuardTests) ... ok
+test_uncommitted_request_not_reported_as_plan_handoff (test_timestamp_guards.HRGuardTests) ... ok
+test_card_naive_rejected (test_timestamp_guards.TimestampTests) ... ok
+test_card_offset (test_timestamp_guards.TimestampTests) ... ok
+test_card_z (test_timestamp_guards.TimestampTests) ... ERROR
+test_request_naive_rejected (test_timestamp_guards.TimestampTests) ... ok
+test_request_offset (test_timestamp_guards.TimestampTests) ... ok
+test_request_z (test_timestamp_guards.TimestampTests) ... ERROR
+
+======================================================================
+ERROR: test_card_z (test_timestamp_guards.TimestampTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<disposable-copy>/baseline/tests/harness/test_timestamp_guards.py", line 39, in test_card_z
+    self.assertEqual(len(self.card('2026-10-30T12:00:00Z')['events']), 1)
+  File "/private<disposable-copy>/baseline/tests/harness/test_timestamp_guards.py", line 30, in card
+    return plan_cards.parse(CARD.format(stamp=stamp))
+  File "/private<disposable-copy>/baseline/scripts/plan_cards.py", line 62, in parse
+    moment = datetime.fromisoformat(stamp[2:])
+ValueError: Invalid isoformat string: '2026-10-30T12:00:00Z'
+
+======================================================================
+ERROR: test_request_z (test_timestamp_guards.TimestampTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<disposable-copy>/baseline/tests/harness/test_timestamp_guards.py", line 49, in test_request_z
+    self.assertEqual(self.request('2026-10-30T12:00:00Z')['title'], 'Fixture')
+  File "/private<disposable-copy>/baseline/tests/harness/test_timestamp_guards.py", line 34, in request
+    return plan_intake.request(json.dumps(dict(
+  File "/private<disposable-copy>/baseline/scripts/plan_intake.py", line 38, in request
+    if datetime.fromisoformat(item['created_at']).tzinfo is None:
+ValueError: Invalid isoformat string: '2026-10-30T12:00:00Z'
+
+======================================================================
+FAIL: test_plan_queue_reads_committed_dev_completion_with_z (test_timestamp_guards.HRGuardTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<disposable-copy>/baseline/tests/harness/test_timestamp_guards.py", line 119, in test_plan_queue_reads_committed_dev_completion_with_z
+    self.complete(stamp='2026-10-30T12:00:00Z')
+  File "/private<disposable-copy>/baseline/tests/harness/test_timestamp_guards.py", line 91, in complete
+    self.commit_card(path, done)
+  File "/private<disposable-copy>/baseline/tests/harness/test_timestamp_guards.py", line 80, in commit_card
+    return self.git('commit', '-m', 'Fixture execution', ok=ok)
+  File "/private<disposable-copy>/baseline/tests/harness/test_plan_intake.py", line 20, in git
+    return self.run_cmd('git', *args, **kw)
+  File "/private<disposable-copy>/baseline/tests/harness/test_plan_intake.py", line 16, in run_cmd
+    self.assertEqual(result.returncode == 0, ok, result.stdout + result.stderr)
+AssertionError: False != True : FAIL: Protected files differ from adopted plan de74c2efe883:
+  docs/planning/plans/P001.md (Invalid isoformat string: '2026-10-30T12:00:00Z')
+
+
+----------------------------------------------------------------------
+Ran 23 tests in 24.507s
+
+FAILED (failures=1, errors=2)

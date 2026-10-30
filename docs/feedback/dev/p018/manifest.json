@@ -1,0 +1,21 @@
+{
+  "release_commit": "803d658a8c61dc6aa007645a98d4160b16746faa",
+  "adopted_plan": "405cae9d23ea836bfa67f504e8a8ae423f96ef54",
+  "dev_base": "7d3abc591c70d377f1842a298c7ba858e77565be",
+  "files": [
+    {
+      "path": "scripts/plan_cards.py",
+      "before_sha256": "287caeea6e11916f0b43919c68805961e9c94329ad26e3037db10850d9f3657d",
+      "candidate_sha256": "d16884698f9555d5cbdb123e50177e43c00d3dc78d4057b06669efd0932add14"
+    },
+    {
+      "path": "scripts/plan_intake.py",
+      "before_sha256": "5097771befe91a7fa803a813b18df1083d8ba893df2bd47d65fb35600bb44630",
+      "candidate_sha256": "c49bbb3d9a58c3a1b7b3967cc302effd40c2b82621ebc6cff15a77509fcdd4f8"
+    }
+  ],
+  "test_proposal": {
+    "path": "tests/harness/test_timestamp_guards.py",
+    "sha256": "bfbdb9c47136fa5e865377ecfa34690c608ac179dbbf38465bef88aaf68282aa"
+  }
+}

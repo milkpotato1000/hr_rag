@@ -1,0 +1,17 @@
+test_committed_request_visible_to_plan_without_merging_dev (test_plan_intake.IntakeTests) ... ok
+test_dev_cannot_review_or_forge_decision (test_plan_intake.IntakeTests) ... ok
+test_invalid_request_rejected_by_hook (test_plan_intake.IntakeTests) ... ok
+test_linking_draft_does_not_approve_execution (test_plan_intake.IntakeTests) ... ok
+test_missing_card_rejected_before_writing_decision (test_plan_intake.IntakeTests) ... ok
+test_pending_request_does_not_block_unrelated_dev_record (test_plan_intake.IntakeTests) ... ok
+test_plan_advance_does_not_invalidate_old_dev_adoption (test_plan_intake.IntakeTests) ... ok
+test_plan_cannot_capture_dev_request (test_plan_intake.IntakeTests) ... ok
+test_plan_decision_requires_exact_adoption_on_dev (test_plan_intake.IntakeTests) ... ok
+test_request_edit_and_delete_rejected_in_index (test_plan_intake.IntakeTests) ... ok
+test_stale_review_hash_reappears_pending (test_plan_intake.IntakeTests) ... ok
+test_uncommitted_request_not_reported_as_plan_handoff (test_plan_intake.IntakeTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 16.886s
+
+OK

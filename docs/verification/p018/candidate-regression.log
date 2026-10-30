@@ -1,0 +1,28 @@
+test_committed_log_rewrite_rejected (test_timestamp_guards.HRGuardTests) ... ok
+test_committed_request_visible_to_plan_without_merging_dev (test_timestamp_guards.HRGuardTests) ... ok
+test_dev_cannot_review_or_forge_decision (test_timestamp_guards.HRGuardTests) ... ok
+test_dev_protected_runtime_edit_rejected (test_timestamp_guards.HRGuardTests) ... ok
+test_false_completion_rejected (test_timestamp_guards.HRGuardTests) ... ok
+test_invalid_request_rejected_by_hook (test_timestamp_guards.HRGuardTests) ... ok
+test_latest_fail_invalidates_checked_pass (test_timestamp_guards.HRGuardTests) ... ok
+test_linking_draft_does_not_approve_execution (test_timestamp_guards.HRGuardTests) ... ok
+test_missing_card_rejected_before_writing_decision (test_timestamp_guards.HRGuardTests) ... ok
+test_pending_request_does_not_block_unrelated_dev_record (test_timestamp_guards.HRGuardTests) ... ok
+test_plan_advance_does_not_invalidate_old_dev_adoption (test_timestamp_guards.HRGuardTests) ... ok
+test_plan_cannot_capture_dev_request (test_timestamp_guards.HRGuardTests) ... ok
+test_plan_decision_requires_exact_adoption_on_dev (test_timestamp_guards.HRGuardTests) ... ok
+test_plan_queue_reads_committed_dev_completion_with_z (test_timestamp_guards.HRGuardTests) ... ok
+test_request_edit_and_delete_rejected_in_index (test_timestamp_guards.HRGuardTests) ... ok
+test_stale_review_hash_reappears_pending (test_timestamp_guards.HRGuardTests) ... ok
+test_uncommitted_request_not_reported_as_plan_handoff (test_timestamp_guards.HRGuardTests) ... ok
+test_card_naive_rejected (test_timestamp_guards.TimestampTests) ... ok
+test_card_offset (test_timestamp_guards.TimestampTests) ... ok
+test_card_z (test_timestamp_guards.TimestampTests) ... ok
+test_request_naive_rejected (test_timestamp_guards.TimestampTests) ... ok
+test_request_offset (test_timestamp_guards.TimestampTests) ... ok
+test_request_z (test_timestamp_guards.TimestampTests) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 24.423s
+
+OK
