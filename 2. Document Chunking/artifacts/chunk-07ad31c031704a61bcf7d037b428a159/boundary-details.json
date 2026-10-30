@@ -1,0 +1,3783 @@
+{
+  "embedding": {
+    "items": 630,
+    "cache_hits": 630,
+    "new_items": 0
+  },
+  "distances": [
+    {
+      "unit_id": "u00001",
+      "distance": 0.16334732938007923,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00002",
+      "distance": 0.4114387262749888,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00003",
+      "distance": 0.6251632375205421,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00004",
+      "distance": 0.501923306540446,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00005",
+      "distance": 0.26487854908271224,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00006",
+      "distance": 0.6037435542626748,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00007",
+      "distance": 0.5670206210285724,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00008",
+      "distance": 0.3967332369980079,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00009",
+      "distance": 0.41157869125758084,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00010",
+      "distance": 0.595481807025249,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00011",
+      "distance": 0.6434117175497455,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00012",
+      "distance": 0.5284023258493071,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00013",
+      "distance": 0.4310554650833768,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00014",
+      "distance": 0.4868595503829951,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00015",
+      "distance": 0.4109187304754961,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00016",
+      "distance": 0.6140852710320439,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00017",
+      "distance": 0.526814477412902,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00018",
+      "distance": 0.5053751380355422,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00019",
+      "distance": 0.25873325678935966,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00020",
+      "distance": 0.4971173311458764,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00021",
+      "distance": 0.48962703077867287,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00022",
+      "distance": 0.6865422486230249,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00023",
+      "distance": 0.5727729864765704,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00024",
+      "distance": 0.3630003550127855,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00025",
+      "distance": 0.6160704820786709,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00026",
+      "distance": 0.3963611782009786,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00027",
+      "distance": 0.3925547168711391,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00028",
+      "distance": 0.49665088126062606,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00029",
+      "distance": 0.48491245375475434,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00030",
+      "distance": 0.4903743280875994,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00031",
+      "distance": 0.4446602138643274,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00032",
+      "distance": 0.39159397710120636,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00033",
+      "distance": 0.4726010218166202,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00034",
+      "distance": 0.47081209669128055,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00035",
+      "distance": 0.4233003698736625,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00036",
+      "distance": 0.36512800261177747,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00037",
+      "distance": 0.34541589047567023,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00038",
+      "distance": 0.4215215615274487,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00039",
+      "distance": 0.5005724615982062,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00040",
+      "distance": 0.497851642296937,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00041",
+      "distance": 0.4242703085637436,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00042",
+      "distance": 0.38614018258795824,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00043",
+      "distance": 0.2647810621174581,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00044",
+      "distance": 0.4036153784732246,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00045",
+      "distance": 0.45224143058772326,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00046",
+      "distance": 0.5857857195745959,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00047",
+      "distance": 0.4003819562222557,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00048",
+      "distance": 0.45028029086745525,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00049",
+      "distance": 0.3799549841646349,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00050",
+      "distance": 0.4731224964066202,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00051",
+      "distance": 0.43304896770903123,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00052",
+      "distance": 0.3726626299766731,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00053",
+      "distance": 0.48895512399207297,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00054",
+      "distance": 0.4475039999438485,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00055",
+      "distance": 0.5379006349289512,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00056",
+      "distance": 0.42822207151588954,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00057",
+      "distance": 0.22564612833473008,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00058",
+      "distance": 0.3830792298341591,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00059",
+      "distance": 0.3759979454075223,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00060",
+      "distance": 0.4235437266873091,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00061",
+      "distance": 0.31530309545532564,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00062",
+      "distance": 0.6192921500434454,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00063",
+      "distance": 0.38152991767389244,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00064",
+      "distance": 0.35579034318984426,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00065",
+      "distance": 0.42722744351333186,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00066",
+      "distance": 0.5631531464109091,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00067",
+      "distance": 0.3989811075688535,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00068",
+      "distance": 0.37055096604546134,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00069",
+      "distance": 0.5522055351430821,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00070",
+      "distance": 0.23473280561016518,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00071",
+      "distance": 0.4086052889131867,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00072",
+      "distance": 0.3360464118626938,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00073",
+      "distance": 0.6075931835055481,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00074",
+      "distance": 0.539983981090138,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00075",
+      "distance": 0.22881755196925324,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00076",
+      "distance": 0.36244192577096823,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00077",
+      "distance": 0.3649106425527918,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00078",
+      "distance": 0.4785932271758325,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00079",
+      "distance": 0.46645885466965675,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00080",
+      "distance": 0.46676837885173894,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00081",
+      "distance": 0.4664108743611922,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00082",
+      "distance": 0.5679822508057004,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00083",
+      "distance": 0.5005607343823993,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00084",
+      "distance": 0.37402005729527277,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00085",
+      "distance": 0.2794591022789381,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00086",
+      "distance": 0.3260600636532571,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00087",
+      "distance": 0.3753277259430172,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00088",
+      "distance": 0.3705199522667295,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00089",
+      "distance": 0.3832247761930905,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00090",
+      "distance": 0.370228645585157,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00091",
+      "distance": 0.3831687887241808,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00092",
+      "distance": 0.3719902957430218,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00093",
+      "distance": 0.343335925628135,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00094",
+      "distance": 0.6367993838917411,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00095",
+      "distance": 0.4933481809811606,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00096",
+      "distance": 0.32909415831356703,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00097",
+      "distance": 0.3779761987251006,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00098",
+      "distance": 0.3313482360190969,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00099",
+      "distance": 0.575136653240246,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00100",
+      "distance": 0.394969772751844,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00101",
+      "distance": 0.5932756477533314,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00102",
+      "distance": 0.4251964264854361,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00103",
+      "distance": 0.4057188594207346,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00104",
+      "distance": 0.533482735330349,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00105",
+      "distance": 0.5269822306692615,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00106",
+      "distance": 0.5143130494259193,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00107",
+      "distance": 0.556616761025629,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00108",
+      "distance": 0.5145392575451133,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00109",
+      "distance": 0.5561158883286228,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00110",
+      "distance": 0.4711481153900591,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00111",
+      "distance": 0.6173568147656439,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00112",
+      "distance": 0.5350173162437613,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00113",
+      "distance": 0.46184738756682064,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00114",
+      "distance": 0.45130833686430505,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00115",
+      "distance": 0.321909161643968,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00116",
+      "distance": 0.32794590319510786,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00117",
+      "distance": 0.4626467432691228,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00118",
+      "distance": 0.47372703527256876,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00119",
+      "distance": 0.47584784688516746,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00120",
+      "distance": 0.3528142016796276,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00121",
+      "distance": 0.4511444144182516,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00122",
+      "distance": 0.4715702183408568,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00123",
+      "distance": 0.3679014197033603,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00124",
+      "distance": 0.44512139842290255,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00125",
+      "distance": 0.48510867173865346,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00126",
+      "distance": 0.5213374136369222,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00127",
+      "distance": 0.5526707668122783,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00128",
+      "distance": 0.29875480843779767,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00129",
+      "distance": 0.5376482082346814,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00130",
+      "distance": 0.5669380582300136,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00131",
+      "distance": 0.3685983910569015,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00132",
+      "distance": 0.372894332889635,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00133",
+      "distance": 0.3433898070608389,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00134",
+      "distance": 0.6499265162312335,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00135",
+      "distance": 0.5191332507317166,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00136",
+      "distance": 0.39786172355614413,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00137",
+      "distance": 0.5013026823701912,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00138",
+      "distance": 0.4535959363270671,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00139",
+      "distance": 0.5069740702437401,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00140",
+      "distance": 0.47677283700732365,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00141",
+      "distance": 0.40856310723728473,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00142",
+      "distance": 0.3036030313775896,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00143",
+      "distance": 0.5517615705164605,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00144",
+      "distance": 0.36232799667141,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00145",
+      "distance": 0.3585283566316376,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00146",
+      "distance": 0.2639502425065774,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00147",
+      "distance": 0.5605585742750948,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00148",
+      "distance": 0.596637358497253,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00149",
+      "distance": 0.4380096025173019,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00150",
+      "distance": 0.5578801241874343,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00151",
+      "distance": 0.4914339968837875,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00152",
+      "distance": 0.38266001645094316,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00153",
+      "distance": 0.47992352136595773,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00154",
+      "distance": 0.4286540946625166,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00155",
+      "distance": 0.4886883944540362,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00156",
+      "distance": 0.37019934364182605,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00157",
+      "distance": 0.4433849975532419,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00158",
+      "distance": 0.3504758104637805,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00159",
+      "distance": 0.37441108396007194,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00160",
+      "distance": 0.5586660790496696,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00161",
+      "distance": 0.5141974562867784,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00162",
+      "distance": 0.3590782304262238,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00163",
+      "distance": 0.5076941306517806,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00164",
+      "distance": 0.6268858420307386,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00165",
+      "distance": 0.47638737591232694,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00166",
+      "distance": 0.3752597732531978,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00167",
+      "distance": 0.4469422898791846,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00168",
+      "distance": 0.48861676696424294,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00169",
+      "distance": 0.4343396661065897,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00170",
+      "distance": 0.44236189122754677,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00171",
+      "distance": 0.3593641041234953,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00172",
+      "distance": 0.45038914789406803,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00173",
+      "distance": 0.3992768714435906,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00174",
+      "distance": 0.5010238261140427,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00175",
+      "distance": 0.38467796327117354,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00176",
+      "distance": 0.5946793946276191,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00177",
+      "distance": 0.40026841169439187,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00178",
+      "distance": 0.285769818249473,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00179",
+      "distance": 0.3498478479267969,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00180",
+      "distance": 0.3234247637673866,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00181",
+      "distance": 0.3552258312038805,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00182",
+      "distance": 0.21960689923433074,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00183",
+      "distance": 0.4213659712805602,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00184",
+      "distance": 0.326038165965991,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00185",
+      "distance": 0.32151357663503366,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00186",
+      "distance": 0.5830515348939858,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00187",
+      "distance": 0.5696190590691023,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00188",
+      "distance": 0.39946004894201503,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00189",
+      "distance": 0.4151717662801252,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00190",
+      "distance": 0.44208991768074835,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00191",
+      "distance": 0.5005425809925612,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00192",
+      "distance": 0.6295644152934627,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00193",
+      "distance": 0.52657751212172,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00194",
+      "distance": 0.4782867761274099,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00195",
+      "distance": 0.6023255552357181,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00196",
+      "distance": 0.41651610074977763,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00197",
+      "distance": 0.6120194419006078,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00198",
+      "distance": 0.34935066544570037,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00199",
+      "distance": 0.250175094380648,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00200",
+      "distance": 0.6020513859114248,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00201",
+      "distance": 0.4983144454449483,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00202",
+      "distance": 0.5298563957026106,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00203",
+      "distance": 0.41493238013903744,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00204",
+      "distance": 0.6799409047025147,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00205",
+      "distance": 0.49409027413318973,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00206",
+      "distance": 0.42159565334771554,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00207",
+      "distance": 0.5559638991087736,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00208",
+      "distance": 0.3772879886590288,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00209",
+      "distance": 0.6278206505463666,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00210",
+      "distance": 0.5115334454580025,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00211",
+      "distance": 0.5385342222026404,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00212",
+      "distance": 0.6433899639747322,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00213",
+      "distance": 0.3514144563499181,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00214",
+      "distance": 0.533328400435265,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00215",
+      "distance": 0.38099111576388656,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00216",
+      "distance": 0.5061380043678363,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00217",
+      "distance": 0.36348103710233093,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00218",
+      "distance": 0.35128092742716055,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00219",
+      "distance": 0.3129332948597692,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00220",
+      "distance": 0.4309804096814933,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00221",
+      "distance": 0.5822392975836876,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00222",
+      "distance": 0.4887530230089291,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00223",
+      "distance": 0.5133913245676628,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00224",
+      "distance": 0.4979779171063875,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00225",
+      "distance": 0.35666788875661637,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00226",
+      "distance": 0.518743272244683,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00227",
+      "distance": 0.3065747168312374,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00228",
+      "distance": 0.3711061318862455,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00229",
+      "distance": 0.5149613574290827,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00230",
+      "distance": 0.45772777707208223,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00231",
+      "distance": 0.4395412848075929,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00232",
+      "distance": 0.3389457314881815,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00233",
+      "distance": 0.3849433388792607,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00234",
+      "distance": 0.2715220245334605,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00235",
+      "distance": 0.553357387792828,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00236",
+      "distance": 0.485747202962887,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00237",
+      "distance": 0.4085246545197242,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00238",
+      "distance": 0.6317267932170194,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00239",
+      "distance": 0.4514738178141481,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00240",
+      "distance": 0.4391374377838104,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00241",
+      "distance": 0.26023295688982484,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00242",
+      "distance": 0.28457137914606323,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00243",
+      "distance": 0.39901221910353346,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00244",
+      "distance": 0.3050611926001222,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00245",
+      "distance": 0.3372533571945163,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00246",
+      "distance": 0.37485058088256684,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00247",
+      "distance": 0.27654654442207205,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00248",
+      "distance": 0.35537570114251615,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00249",
+      "distance": 0.4639426282864866,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00250",
+      "distance": 0.49904668738414726,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00251",
+      "distance": 0.46997688498529877,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00252",
+      "distance": 0.4657481184552932,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00253",
+      "distance": 0.3604903137764621,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00254",
+      "distance": 0.5657256847583777,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00255",
+      "distance": 0.5188728013638533,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00256",
+      "distance": 0.32732964492049654,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00257",
+      "distance": 0.3888023469420786,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00258",
+      "distance": 0.4532048345519273,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00259",
+      "distance": 0.42509385589027626,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00260",
+      "distance": 0.36985305053771844,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00261",
+      "distance": 0.3708024808679399,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00262",
+      "distance": 0.47877534208495165,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00263",
+      "distance": 0.4981363872838479,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00264",
+      "distance": 0.4527582567866614,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00265",
+      "distance": 0.3593759035765691,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00266",
+      "distance": 0.6168686021509933,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00267",
+      "distance": 0.4843557664704714,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00268",
+      "distance": 0.3743278033945635,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00269",
+      "distance": 0.28905946334632715,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00270",
+      "distance": 0.36346065360078583,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00271",
+      "distance": 0.5018752404817661,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00272",
+      "distance": 0.3976535009957569,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00273",
+      "distance": 0.425453511538465,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00274",
+      "distance": 0.4293334055692032,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00275",
+      "distance": 0.4446682311874409,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00276",
+      "distance": 0.40158079090055887,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00277",
+      "distance": 0.3805572030204153,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00278",
+      "distance": 0.6451624856466305,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00279",
+      "distance": 0.5939091467943468,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00280",
+      "distance": 0.4576607414521461,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00281",
+      "distance": 0.3397533993985027,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00282",
+      "distance": 0.3713215372527463,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00283",
+      "distance": 0.4132642451011642,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00284",
+      "distance": 0.4354776746392117,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00285",
+      "distance": 0.45822258288057127,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00286",
+      "distance": 0.3947140075735843,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00287",
+      "distance": 0.33038077662692256,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00288",
+      "distance": 0.31111133920074574,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00289",
+      "distance": 0.41292510258165027,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00290",
+      "distance": 0.5301903908887957,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00291",
+      "distance": 0.434616939386104,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00292",
+      "distance": 0.3544860853692614,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00293",
+      "distance": 0.314022819967973,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00294",
+      "distance": 0.44016562190866126,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00295",
+      "distance": 0.40761246748809343,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00296",
+      "distance": 0.424883354166392,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00297",
+      "distance": 0.531523639939975,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00298",
+      "distance": 0.42254911753164603,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00299",
+      "distance": 0.3263601063907666,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00300",
+      "distance": 0.39948942963036704,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00301",
+      "distance": 0.5316132480036171,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00302",
+      "distance": 0.43306388360020354,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00303",
+      "distance": 0.39603967730997425,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00304",
+      "distance": 0.36465954756808094,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00305",
+      "distance": 0.5056810031290493,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00306",
+      "distance": 0.5291185764864468,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00307",
+      "distance": 0.49877077200270525,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00308",
+      "distance": 0.5598363719553339,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00309",
+      "distance": 0.38310932537091935,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00310",
+      "distance": 0.3882960133791482,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00311",
+      "distance": 0.4029830024647074,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00312",
+      "distance": 0.4333933561708986,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00313",
+      "distance": 0.534006843612882,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00314",
+      "distance": 0.3729433535710148,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00315",
+      "distance": 0.36918166448128964,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00316",
+      "distance": 0.4042346108772443,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00317",
+      "distance": 0.3543385426727441,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00318",
+      "distance": 0.4709754688727362,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00319",
+      "distance": 0.3739441326908126,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00320",
+      "distance": 0.6600841183637092,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00321",
+      "distance": 0.42573173959193644,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00322",
+      "distance": 0.5138911155739961,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00323",
+      "distance": 0.313172625190722,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00324",
+      "distance": 0.33408154828962977,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00325",
+      "distance": 0.5123991928738134,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00326",
+      "distance": 0.5362712722890756,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00327",
+      "distance": 0.3534171397432948,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00328",
+      "distance": 0.3364855224357969,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00329",
+      "distance": 0.4265589416858556,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00330",
+      "distance": 0.38197405876724977,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00331",
+      "distance": 0.5115437799055403,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00332",
+      "distance": 0.48542437959073814,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00333",
+      "distance": 0.6268695914715618,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00334",
+      "distance": 0.5283674444118969,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00335",
+      "distance": 0.4167132350069206,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00336",
+      "distance": 0.45886908634963985,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00337",
+      "distance": 0.3023129889059296,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00338",
+      "distance": 0.46011194506998065,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00339",
+      "distance": 0.543224769741302,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00340",
+      "distance": 0.282743381971305,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00341",
+      "distance": 0.43096690244461744,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00342",
+      "distance": 0.357094818821744,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00343",
+      "distance": 0.3465936260931567,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00344",
+      "distance": 0.34165559346290386,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00345",
+      "distance": 0.36166453797603193,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00346",
+      "distance": 0.3426577261977892,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00347",
+      "distance": 0.47649788587988506,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00348",
+      "distance": 0.3242039793804353,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00349",
+      "distance": 0.4092446785911833,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00350",
+      "distance": 0.4909981291157056,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00351",
+      "distance": 0.30323322935000263,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00352",
+      "distance": 0.28577181111949124,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00353",
+      "distance": 0.32095873094713856,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00354",
+      "distance": 0.3442251197583489,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00355",
+      "distance": 0.36679908935140193,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00356",
+      "distance": 0.6274062888360696,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00357",
+      "distance": 0.5072740391910842,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00358",
+      "distance": 0.5304669574768293,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00359",
+      "distance": 0.36931940332804003,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00360",
+      "distance": 0.37083001771080737,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00361",
+      "distance": 0.436520690691123,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00362",
+      "distance": 0.5860980766816161,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00363",
+      "distance": 0.5089922957172981,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00364",
+      "distance": 0.6269986807319959,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00365",
+      "distance": 0.46787723514475665,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00366",
+      "distance": 0.48304602464473145,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00367",
+      "distance": 0.5579654192252548,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00368",
+      "distance": 0.5520476491614505,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00369",
+      "distance": 0.43052456843264486,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00370",
+      "distance": 0.49042554683067474,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00371",
+      "distance": 0.4784183902237301,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00372",
+      "distance": 0.40904503573222706,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00373",
+      "distance": 0.49077033217405563,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00374",
+      "distance": 0.4254973884995876,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00375",
+      "distance": 0.5294498662595906,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00376",
+      "distance": 0.2390030387611879,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00377",
+      "distance": 0.27578564331962707,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00378",
+      "distance": 0.46014740335398174,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00379",
+      "distance": 0.43720421491780703,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00380",
+      "distance": 0.5525253109900687,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00381",
+      "distance": 0.29274941976791646,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00382",
+      "distance": 0.4394264538047079,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00383",
+      "distance": 0.4126469867867314,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00384",
+      "distance": 0.39463619418246143,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00385",
+      "distance": 0.452645914515026,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00386",
+      "distance": 0.4864077627675326,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00387",
+      "distance": 0.5070994984390955,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00388",
+      "distance": 0.6014342548494563,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00389",
+      "distance": 0.49036864891267584,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00390",
+      "distance": 0.31948605729561785,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00391",
+      "distance": 0.46611228238416036,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00392",
+      "distance": 0.25803329845798784,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00393",
+      "distance": 0.6335799197381227,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00394",
+      "distance": 0.5779400000063429,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00395",
+      "distance": 0.428646274524465,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00396",
+      "distance": 0.37194985214604026,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00397",
+      "distance": 0.5410573604739899,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00398",
+      "distance": 0.4442511195703549,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00399",
+      "distance": 0.3660030260464189,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00400",
+      "distance": 0.33271867333395744,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00401",
+      "distance": 0.381484425500244,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00402",
+      "distance": 0.3714277383021988,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00403",
+      "distance": 0.5170539312429419,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00404",
+      "distance": 0.4646451153187976,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00405",
+      "distance": 0.537025097924742,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00406",
+      "distance": 0.4646072362183541,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00407",
+      "distance": 0.2796067417042428,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00408",
+      "distance": 0.46796797402323964,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00409",
+      "distance": 0.6433031788833015,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00410",
+      "distance": 0.38573752275985573,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00411",
+      "distance": 0.20765773485680106,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00412",
+      "distance": 0.5647755533763708,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00413",
+      "distance": 0.4028661420906844,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00414",
+      "distance": 0.3845787733735325,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00415",
+      "distance": 0.6384357145995516,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00416",
+      "distance": 0.43416520156961824,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00417",
+      "distance": 0.3420968313830547,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00418",
+      "distance": 0.36039011098058016,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00419",
+      "distance": 0.5600515693029076,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00420",
+      "distance": 0.6063294864052846,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00421",
+      "distance": 0.492260748964088,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00422",
+      "distance": 0.2846351371621255,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00423",
+      "distance": 0.30558428727178466,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00424",
+      "distance": 0.3886219912361616,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00425",
+      "distance": 0.46014457346419435,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00426",
+      "distance": 0.3831362684659083,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00427",
+      "distance": 0.4380710205381102,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00428",
+      "distance": 0.6020363934449936,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00429",
+      "distance": 0.3657458103895094,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00430",
+      "distance": 0.32778597520041064,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00431",
+      "distance": 0.48612239539700697,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00432",
+      "distance": 0.34777477077950514,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00433",
+      "distance": 0.41964803776692317,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00434",
+      "distance": 0.32873413868943013,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00435",
+      "distance": 0.3921035251459024,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00436",
+      "distance": 0.4674250535113166,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00437",
+      "distance": 0.38574971468789354,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00438",
+      "distance": 0.44983834566700986,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00439",
+      "distance": 0.487586874439611,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00440",
+      "distance": 0.34490529403172665,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00441",
+      "distance": 0.3746422027131384,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00442",
+      "distance": 0.6256656579465907,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00443",
+      "distance": 0.5447469254438377,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00444",
+      "distance": 0.34458365698019655,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00445",
+      "distance": 0.40163501089518105,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00446",
+      "distance": 0.38271385794352875,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00447",
+      "distance": 0.6676302294515859,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00448",
+      "distance": 0.6604293704197938,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00449",
+      "distance": 0.5419308370005775,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00450",
+      "distance": 0.4573735298566107,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00451",
+      "distance": 0.5944428923016053,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00452",
+      "distance": 0.4067307101720291,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00453",
+      "distance": 0.32714592901579964,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00454",
+      "distance": 0.31989568310094973,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00455",
+      "distance": 0.4325006455831921,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00456",
+      "distance": 0.4131292786934079,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00457",
+      "distance": 0.2606576704130109,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00458",
+      "distance": 0.4352122573347659,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00459",
+      "distance": 0.33608868238154876,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00460",
+      "distance": 0.3367279033755842,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00461",
+      "distance": 0.3646492663237013,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00462",
+      "distance": 0.38032526630045516,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00463",
+      "distance": 0.43144094171959646,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00464",
+      "distance": 0.3916425757856683,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00465",
+      "distance": 0.335312948476978,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00466",
+      "distance": 0.21509020748359975,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00467",
+      "distance": 0.47128175333675026,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00468",
+      "distance": 0.2621807026555395,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00469",
+      "distance": 0.2786349410294472,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00470",
+      "distance": 0.2953010530275497,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00471",
+      "distance": 0.35154123254294334,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00472",
+      "distance": 0.34074697843674073,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00473",
+      "distance": 0.5842999952248435,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00474",
+      "distance": 0.36886056433277314,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00475",
+      "distance": 0.43010811204743615,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00476",
+      "distance": 0.41725519019882784,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00477",
+      "distance": 0.38062905464368557,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00478",
+      "distance": 0.38677815942159466,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00479",
+      "distance": 0.2573247308686559,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00480",
+      "distance": 0.40177305425224796,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00481",
+      "distance": 0.41658955863053004,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00482",
+      "distance": 0.3192287633982994,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00483",
+      "distance": 0.4063399301182349,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00484",
+      "distance": 0.5494799712697237,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00485",
+      "distance": 0.44417490927215,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00486",
+      "distance": 0.4281491365222563,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00487",
+      "distance": 0.26733514487938825,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00488",
+      "distance": 0.5370906673231635,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00489",
+      "distance": 0.48890502106619715,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00490",
+      "distance": 0.45922139718496924,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00491",
+      "distance": 0.3835690684503503,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00492",
+      "distance": 0.3622402173393805,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00493",
+      "distance": 0.6098332381172709,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00494",
+      "distance": 0.5189017111906077,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00495",
+      "distance": 0.3822931381576873,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00496",
+      "distance": 0.5757762504740715,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00497",
+      "distance": 0.46558137019331713,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00498",
+      "distance": 0.4050389042042256,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00499",
+      "distance": 0.3394851309571145,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00500",
+      "distance": 0.3597954511550293,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00501",
+      "distance": 0.37714957384235603,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00502",
+      "distance": 0.6707958953544189,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00503",
+      "distance": 0.5236151994676568,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00504",
+      "distance": 0.3121030347195908,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00505",
+      "distance": 0.37448275518257135,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00506",
+      "distance": 0.49434665510152165,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00507",
+      "distance": 0.4006059194304258,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00508",
+      "distance": 0.3600653317100174,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00509",
+      "distance": 0.33477960610498314,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00510",
+      "distance": 0.5481990554211422,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00511",
+      "distance": 0.5447183027773379,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00512",
+      "distance": 0.40047823855386855,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00513",
+      "distance": 0.4457090269680064,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00514",
+      "distance": 0.5634473471675157,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00515",
+      "distance": 0.44851965786879144,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00516",
+      "distance": 0.4240730270421368,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00517",
+      "distance": 0.4786409363959616,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00518",
+      "distance": 0.36063914742743175,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00519",
+      "distance": 0.33894926944096393,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00520",
+      "distance": 0.3464456628695407,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00521",
+      "distance": 0.35919385932708414,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00522",
+      "distance": 0.393214237604655,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00523",
+      "distance": 0.4647556383989956,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00524",
+      "distance": 0.4348829106715786,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00525",
+      "distance": 0.35764196299384476,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00526",
+      "distance": 0.5365753918109095,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00527",
+      "distance": 0.28309637455640624,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00528",
+      "distance": 0.4330793252281815,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00529",
+      "distance": 0.4398936461534224,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00530",
+      "distance": 0.4653305045463383,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00531",
+      "distance": 0.5033629341830365,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00532",
+      "distance": 0.4094731930834198,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00533",
+      "distance": 0.48111152859652095,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00534",
+      "distance": 0.3833576423051155,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00535",
+      "distance": 0.4183818661384574,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00536",
+      "distance": 0.25949870875435244,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00537",
+      "distance": 0.346751952684898,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00538",
+      "distance": 0.2968547525248021,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00539",
+      "distance": 0.5056607284958958,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00540",
+      "distance": 0.4251106128993696,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00541",
+      "distance": 0.37089478062548187,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00542",
+      "distance": 0.42005947370183916,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00543",
+      "distance": 0.46596387314669696,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00544",
+      "distance": 0.3046262448129765,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00545",
+      "distance": 0.3484648532798099,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00546",
+      "distance": 0.36983937701150194,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00547",
+      "distance": 0.39463637754163783,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00548",
+      "distance": 0.570529079040155,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00549",
+      "distance": 0.4699094740860712,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00550",
+      "distance": 0.35762803556804446,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00551",
+      "distance": 0.4656984348111475,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00552",
+      "distance": 0.2533649165027433,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00553",
+      "distance": 0.3231896027143242,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00554",
+      "distance": 0.3613958833383595,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00555",
+      "distance": 0.4987790220807974,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00556",
+      "distance": 0.38797921061868,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00557",
+      "distance": 0.3653406206471054,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00558",
+      "distance": 0.42470971845735916,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00559",
+      "distance": 0.49578699470649357,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00560",
+      "distance": 0.6269194005994918,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00561",
+      "distance": 0.627908467316007,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00562",
+      "distance": 0.519810843660758,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00563",
+      "distance": 0.4347750036067918,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00564",
+      "distance": 0.4616726659435799,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00565",
+      "distance": 0.4241639333412104,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00566",
+      "distance": 0.3693712096713846,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00567",
+      "distance": 0.39142257479327125,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00568",
+      "distance": 0.30865038355341645,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00569",
+      "distance": 0.4214051299266566,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00570",
+      "distance": 0.5045282160593023,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00571",
+      "distance": 0.5385459404201163,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00572",
+      "distance": 0.33897441660525296,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00573",
+      "distance": 0.5004791538245311,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00574",
+      "distance": 0.36740421238424303,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00575",
+      "distance": 0.37963090166326663,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00576",
+      "distance": 0.4852905582723057,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00577",
+      "distance": 0.3662699991572147,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00578",
+      "distance": 0.47828247250724154,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00579",
+      "distance": 0.37572202776561126,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00580",
+      "distance": 0.3736382053654661,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00581",
+      "distance": 0.3670902086948098,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00582",
+      "distance": 0.29288707844351713,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00583",
+      "distance": 0.32688928444334686,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00584",
+      "distance": 0.31477860090846543,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00585",
+      "distance": 0.5531332914824967,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00586",
+      "distance": 0.4407182674592467,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00587",
+      "distance": 0.3585755505049866,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00588",
+      "distance": 0.5089118958406176,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00589",
+      "distance": 0.47569469978425716,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00590",
+      "distance": 0.34923022115275804,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00591",
+      "distance": 0.22812325170338754,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00592",
+      "distance": 0.3319585459669776,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00593",
+      "distance": 0.28408816318613783,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00594",
+      "distance": 0.4467486309609614,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00595",
+      "distance": 0.4232761074516762,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00596",
+      "distance": 0.5759295176653674,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00597",
+      "distance": 0.435026531401843,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00598",
+      "distance": 0.5028016252971999,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00599",
+      "distance": 0.377695798947036,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00600",
+      "distance": 0.4450591811010255,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00601",
+      "distance": 0.34499922970148633,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00602",
+      "distance": 0.44340700192372495,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00603",
+      "distance": 0.4102376615323545,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00604",
+      "distance": 0.47713644642407216,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00605",
+      "distance": 0.45648057652614127,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00606",
+      "distance": 0.41867127678393556,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00607",
+      "distance": 0.5593350503945673,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00608",
+      "distance": 0.483629169260708,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00609",
+      "distance": 0.48595530827931055,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00610",
+      "distance": 0.37610961867090975,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00611",
+      "distance": 0.4627553649865416,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00612",
+      "distance": 0.3801267601488727,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00613",
+      "distance": 0.43401364093094297,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00614",
+      "distance": 0.3651974013167075,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00615",
+      "distance": 0.3834392867045864,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00616",
+      "distance": 0.43204513925836485,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00617",
+      "distance": 0.4809742642259399,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00618",
+      "distance": 0.5754603409713296,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00619",
+      "distance": 0.5681570809211078,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00620",
+      "distance": 0.5987476960934365,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00621",
+      "distance": 0.49393511678113444,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00622",
+      "distance": 0.42292319111417964,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00623",
+      "distance": 0.39849515917770917,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00624",
+      "distance": 0.4857746417083936,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00625",
+      "distance": 0.4345136197422681,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00626",
+      "distance": 0.580531878163834,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00627",
+      "distance": 0.42369500708415475,
+      "boundary": false,
+      "reason": null
+    },
+    {
+      "unit_id": "u00628",
+      "distance": 0.4490843717602303,
+      "boundary": true,
+      "reason": "semantic"
+    },
+    {
+      "unit_id": "u00629",
+      "distance": 0.673142096674546,
+      "boundary": false,
+      "reason": null
+    }
+  ]
+}

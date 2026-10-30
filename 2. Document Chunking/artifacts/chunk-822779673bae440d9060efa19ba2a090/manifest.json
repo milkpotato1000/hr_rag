@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "chunk-822779673bae440d9060efa19ba2a090",
+  "status": "complete",
+  "algorithm_version": "chunk-custom-v1",
+  "created_at": 1793327920.91664,
+  "config": {
+    "id": "custom-fixed-3483f86812777435",
+    "profile": "custom-v1",
+    "method": "fixed",
+    "size_chars": 600,
+    "overlap_chars": 100
+  },
+  "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "input_manifest_sha256": "b8373ee69892d92bff1623b2a9fc6b8c651521396c8a13f08d254f62b229313d",
+  "spec_sha256": "285028d2d76af9bd14e741894864f61aeafd1f6ecfee8aef2bf727ea4e748b5f",
+  "prompt_sha256": "b5fa4403a8a94b0236a669c4b5ec2a0c5deac49c601ed956ecaada99bc96ebd5",
+  "runtime_lock_sha256": "ce39ba744b645afd13d0a5b9c092ff872bee64ef30e20f4d20ae851054700e03",
+  "parent_run_ids": [],
+  "code_hash": "327f3bd399c1eb6e9853f198e370a96d54c719e2bac4ba39a6329c47dd972b45",
+  "outputs": {
+    "chunks.jsonl": "7ce1ba13a69e0598fd80e2d617492eda5bd631ed17e6f8efd9515b9d0ea10cbc",
+    "statistics.json": "ae3a944ba77b82468e3cd77b99cbbb377368be83b0006877a88059caebb3f7f4",
+    "boundary-details.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "source-map.json": "a72e6c1e3af8605999b13f7120e7e7a463c84f44252158fa60df71772b6d752d"
+  },
+  "elapsed_ms": 269.16762499604374,
+  "counts": {
+    "chunks": 77,
+    "units": 630
+  },
+  "text_version": "canonical-slice-only-v1"
+}

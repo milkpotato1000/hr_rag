@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8003/",
+  "mobile_width": 390,
+  "mobile_scroll_width": 390,
+  "desktop_width": 1280,
+  "viewport_restored": true,
+  "checks": [
+    "all three history selectors have identical run IDs",
+    "no selections disables compare",
+    "LLM run without BM25 index disables compare with next action",
+    "new numeric inputs do not mutate selected stored run labels",
+    "fixed99 blocked locally with inline error; correction clears error",
+    "semantic empty threshold rejected with Korean inline error",
+    "semantic threshold hidden for fixed",
+    "reload restores active job without restarting",
+    "actual fresh LLM35 windows and replay0 calls",
+    "Dense selected runs produce Top5 and separate budget summary",
+    "budget detail expands13 selected cards and exclusion reasons",
+    "keyboard focus visible and help always visible",
+    "no browser error/warn logs"
+  ],
+  "screenshots": [
+    "mobile.png",
+    "inputs.png",
+    "comparison.png"
+  ],
+  "fixture_tests": [
+    "empty and failed history",
+    "source mismatch/tamper exclusion",
+    "unknown run and missing index reject before model",
+    "stale code/prompt/runtime replay and parent rejection"
+  ]
+}

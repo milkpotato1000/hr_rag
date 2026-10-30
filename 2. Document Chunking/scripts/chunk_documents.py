@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run a frozen P007 configuration over the registered canonical source."""
+"""Run a frozen P007 preset or a P017 JSON configuration on the registered source."""
 import argparse,json
 from pathlib import Path
 from document_common import read_json,cli_error,atomic_directory,write_json

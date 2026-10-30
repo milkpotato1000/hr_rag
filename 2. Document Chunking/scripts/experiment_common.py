@@ -44,6 +44,10 @@ def work_lock():
         _local.depth=0;f.close();_mutex.release()
 def spec():return read_json(EXP/'spec.json')
 def config(value):
+    if isinstance(value,dict) and (value.get('profile')=='custom-v1' or 'id' not in value):
+        from chunk_settings import normalize
+        return normalize(value)
+    need(isinstance(value,(str,dict)),'invalid_config','Choose a supported configuration')
     configs=spec()['configs'];found=[x for x in configs if x['id']==(value if isinstance(value,str) else value.get('id'))]
     need(len(found)==1 and (isinstance(value,str) or value==found[0]),'invalid_config','Choose an exact supported experiment configuration')
     return dict(found[0])

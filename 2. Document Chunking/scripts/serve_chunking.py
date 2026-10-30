@@ -5,13 +5,14 @@ from pathlib import Path
 from http.server import ThreadingHTTPServer,BaseHTTPRequestHandler
 from urllib.parse import urlsplit,parse_qs
 from document_common import STAGE,read_json,file_hash,fingerprint
-from experiment_common import EXP,RUNTIME,ARTIFACTS,need,ExperimentError,source,spec,config,load_run,work_lock,new_id,save_state,strict
+from experiment_common import EXP,RUNTIME,ARTIFACTS,need,ExperimentError,source,spec,config,load_run,work_lock,new_id,save_state,strict,code_hash
 from chunk_core import build
 from run_llm_repetitions import one
 from model_runtime import Provider,Ledger
 from retrieval_core import build_index,Searcher,read_chunks,identity
 from span_metrics import evaluate,select_budget
 from source_io import union_length
+from chunk_settings import LIMITS,custom
 CORPUS='source-v4';DID='hr-v4-handbook'
 JOBS=RUNTIME/'jobs';request_mutex=threading.Lock()
 
@@ -22,15 +23,32 @@ def registered_run(rid):
     return path
 
 def catalog():
-    result=[]
+    result=[];canon=spec()['corpus']['canonical_sha256']
     for p in sorted(ARTIFACTS.glob('chunk-*/manifest.json'),key=lambda p:p.stat().st_mtime):
         if p.parent.is_symlink():continue
-        m=read_json(p)
-        result.append({k:m.get(k) for k in ['run_id','status','config','counts','elapsed_ms','reason']})
+        try:
+            m=load_run(p.parent)
+            need(m.get('run_id')==p.parent.name and m.get('canonical_sha256')==canon and m.get('text_version')=='canonical-slice-only-v1','stale','Incompatible run')
+            cfg=config(m['config'])
+            indexes={}
+            for retriever in ('bm25','dense'):
+                meta,fp,*_=identity(p.parent,retriever);index=RUNTIME/'indexes'/fp/'metadata.json'
+                indexes[retriever]=index.is_file() and read_json(index).get('identity')==meta
+            result.append({k:m.get(k) for k in ['run_id','status','config','counts','elapsed_ms']}|dict(created_at=m.get('created_at',p.stat().st_mtime),origin='사용자 설정' if custom(cfg) else 'P007 고정 실험',indexes=indexes))
+        except (ValueError,OSError,KeyError,TypeError):continue
     return result
 
 def replay(cfg):
     rows=[m for m in catalog() if m['status']=='complete' and m['config']==cfg]
+    if custom(cfg):
+        compatible=[]
+        for row in rows:
+            m=load_run(registered_run(row['run_id']))
+            if m.get('code_hash')!=code_hash(['chunk_core.py','source_io.py','experiment_common.py','model_runtime.py','chunk_settings.py']):continue
+            if any(m.get(key)!=file_hash(EXP/name) for key,name in [('spec_sha256','spec.json'),('prompt_sha256','prompt-contract.json'),('runtime_lock_sha256','runtime-metadata.json')]):continue
+            if cfg['method']=='llm' and m.get('effective_prompt_sha256')!=fingerprint(read_json(EXP/'prompt-contract.json')['prefix'].replace('<=800 source characters',f"<={cfg['base_max_chars']} source characters")):continue
+            compatible.append(row)
+        rows=compatible
     need(rows,'not_found','저장 결과가 없습니다. 새로 실행을 선택하세요.')
     path=registered_run(rows[-1]['run_id']);load_run(path);return path
 
@@ -70,10 +88,10 @@ def start_job(kind,b):
                     if kind=='chunk':
                         if not b['fresh']:
                             out=replay(cfg);m=load_run(out);result=dict(run_id=m['run_id'],replayed=True,model_calls=0)
-                        elif cfg['method']=='llm' and not cfg['overlap_chars']:
-                            m=one(progress=progress);result=dict(run_id=m['run_id'],replayed=False)
+                        elif cfg['method']=='llm':
+                            m=one(progress=progress,cfg=cfg);result=dict(run_id=m['run_id'],replayed=False)
                         else:
-                            parent=replay(config(cfg['method']+'-0')) if cfg['method'] in ('llm','semantic') and cfg['overlap_chars'] else None
+                            parent=None  # Explicit fresh means new boundaries; replay is a separate action.
                             m=build(cfg,parent=parent,on_progress=progress);result=dict(run_id=m['run_id'],replayed=False,boundary_replayed=bool(parent))
                     else:result=build_index(registered_run(b['chunk_run_id']),b['retriever'])
                     after=Ledger().refresh();result['usage_delta']={k:after[k]-before[k] for k in ['llm_requests','embedding_items','llm_seconds','embedding_seconds']}
@@ -91,7 +109,7 @@ def start_job(kind,b):
 def compare(b):
     common={'a_run_id','b_run_id','retriever','top_k','budget_chars'}
     need(isinstance(b,dict) and set(b) in (common|{'question'},common|{'query_id'}),'invalid_input','question 또는 query_id 하나를 지정하세요.')
-    need(type(b['top_k']) is int and 1<=b['top_k']<=20 and type(b['budget_chars']) is int and b['budget_chars'] in (400,800,1600),'invalid_input','K/문자 예산 범위를 확인하세요.')
+    need(type(b['top_k']) is int and 1<=b['top_k']<=20 and type(b['budget_chars']) is int and 1<=b['budget_chars']<=LIMITS['budget_chars']['maximum'],'invalid_input','Top-K는 1~20, 문자 예산은 1~24,000의 정수로 입력하세요.')
     q=None;dataset=read_json(EXP/'dataset.json')
     if 'query_id' in b:
         q=next((q for q in dataset['questions'] if q['query_id']==b['query_id']),None);need(q,'not_found','등록 질문이 없습니다.')
@@ -99,6 +117,8 @@ def compare(b):
     else:question=b['question']
     need(isinstance(question,str) and question.strip() and len(question)<=2000,'invalid_input','질문은 1~2000자입니다.')
     with work_lock():
+        available={m['run_id'] for m in catalog()}
+        need(all(b[k] in available for k in ('a_run_id','b_run_id')),'not_found','성공한 저장 이력에서 A/B를 선택하세요.')
         paths=[registered_run(b[k]) for k in ('a_run_id','b_run_id')]
         for path in paths:
             _,fp,*_=identity(path,b['retriever']);need((RUNTIME/'indexes'/fp/'metadata.json').exists(),'index_not_ready','먼저 해당 검색기 색인을 준비하세요.')
@@ -109,9 +129,10 @@ def compare(b):
             with Searcher(path,b['retriever']) as search:
                 ranking=search.search(question,20,vector,Ledger());ids=[r['chunk_id'] for r in ranking['results']]
                 metrics=evaluate(q,facts,search.maps,ids,b['top_k'],{DID:text});metrics.pop('qrels',None)
-                budget=select_budget(ids,search.chunks,b['budget_chars']);budget['metrics']=evaluate(q,facts,search.maps,budget['selected'],max(1,len(budget['selected'])),{DID:text});budget['metrics'].pop('qrels',None)
+                budget=select_budget(ids,search.chunks,b['budget_chars']);budget['candidate_count']=len(ids);budget['metrics']=evaluate(q,facts,search.maps,budget['selected'],max(1,len(budget['selected'])),{DID:text});budget['metrics'].pop('qrels',None)
                 lookup={m['chunk_id']:m for m in search.maps}
                 top=ids[:b['top_k']];emitted=sum(len(search.chunks[cid]['text']) for cid in top);unique=union_length([(lookup[cid]['start'],lookup[cid]['end']) for cid in top])
+                budget['hits']=[dict(chunk_id=cid,text=search.chunks[cid]['text'],rank=ids.index(cid)+1,source=lookup[cid]) for cid in budget['selected']]
                 out.append(dict(ranking=ranking,metrics=metrics,budget=budget,retrieved_text=dict(emitted_chars=emitted,unique_chars=unique,duplicate_chars=emitted-unique),hits=[dict(**r,text=search.chunks[r['chunk_id']]['text'],source=lookup[r['chunk_id']]) for r in ranking['results'][:b['top_k']]]))
         value=dict(comparison_id=new_id('comparison'),question=question,query_id=q['query_id'] if q else None,split=q['split'] if q else None,corpus_id=CORPUS,top_k=b['top_k'],budget_chars=b['budget_chars'],retriever=b['retriever'],embedding=embedding,results=out,dataset_sha256=file_hash(EXP/'dataset.json'))
         save_state(RUNTIME/'comparisons'/(value['comparison_id']+'.json'),value);return value
@@ -144,7 +165,7 @@ class Handler(BaseHTTPRequestHandler):
                 raise ExperimentError('not_found','등록 API가 없습니다.')
             if path=='/api/corpora':
                 row,_,_=source();dataset=read_json(EXP/'dataset.json')
-                return self.send(200,dict(status='complete',corpus_id=CORPUS,document_id=DID,title=row['title'],canonical_sha256=row['canonical_sha256'],synthetic=True,source_mode='fixture',configs=spec()['configs'],runs=catalog(),questions=[{k:q[k] for k in ('query_id','question','split')} for q in dataset['questions'] if q['split']=='tuning'],ledger={k:v for k,v in Ledger().refresh().items() if k not in ('calls','pending')},jobs=[read_json(p) for p in sorted(JOBS.glob('*.json'))]))
+                return self.send(200,dict(status='complete',corpus_id=CORPUS,document_id=DID,title=row['title'],canonical_sha256=row['canonical_sha256'],synthetic=True,source_mode='fixture',configs=spec()['configs'],input_limits=LIMITS,runs=catalog(),questions=[{k:q[k] for k in ('query_id','question','split')} for q in dataset['questions'] if q['split']=='tuning'],ledger={k:v for k,v in Ledger().refresh().items() if k not in ('calls','pending')},jobs=[read_json(p) for p in sorted(JOBS.glob('*.json'))]))
             if path==f'/api/documents/{DID}':
                 need(parse_qs(url.query)=={'corpus_id':[CORPUS]},'invalid_input','corpus_id가 필요합니다.');r,t,s=source()
                 nodes=[dict(id=n['id'],level=n['level'],title_path=n['title_path'],start=n['heading']['start'],pages=n['heading']['pages']) for n in s['nodes']]

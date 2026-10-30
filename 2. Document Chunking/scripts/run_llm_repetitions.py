@@ -3,19 +3,20 @@
 import argparse,time,json
 from pathlib import Path
 from chunk_core import build
-from experiment_common import ARTIFACTS,RUNTIME,new_id,work_lock,save_state
+from experiment_common import ARTIFACTS,RUNTIME,new_id,work_lock,save_state,config
 from document_common import read_json,write_json,atomic_directory
 from model_runtime import Provider
 
-def one(provider=None,progress=lambda x:None):
+def one(provider=None,progress=lambda x:None,cfg='llm-0'):
+    cfg=config(cfg)
     provider=provider or Provider();rid=new_id('chunk');out=ARTIFACTS/rid;latest={};started=time.monotonic();before=provider.ledger.refresh()['llm_seconds']
     def update(value):
         latest.update(value);save_state(RUNTIME/'progress'/f'{rid}.json',dict(run_id=rid,**latest));progress(dict(run_id=rid,**latest))
-    try:return build('llm-0',out,provider=provider,on_progress=update)
+    try:return build(cfg,out,provider=provider,on_progress=update)
     except BaseException as exc:
         if not out.exists():
             with atomic_directory(out) as target:
-                write_json(target/'attempts.json',latest);write_json(target/'manifest.json',dict(schema_version=1,run_id=rid,status='interrupted' if isinstance(exc,(KeyboardInterrupt,SystemExit)) else 'failed',reason=getattr(exc,'kind','execution'),error=str(exc),config={'id':'llm-0'},elapsed_ms=(time.monotonic()-started)*1000))
+                write_json(target/'attempts.json',latest);write_json(target/'manifest.json',dict(schema_version=1,run_id=rid,status='interrupted' if isinstance(exc,(KeyboardInterrupt,SystemExit)) else 'failed',reason=getattr(exc,'kind','execution'),error=str(exc),config=cfg,elapsed_ms=(time.monotonic()-started)*1000))
         raise
     finally:
         state=provider.ledger.refresh();used=state['llm_seconds']-before;extra=max(0,time.monotonic()-started-used);state['llm_seconds']+=extra

@@ -5,6 +5,7 @@ from document_common import read_json,write_json,file_hash,fingerprint,atomic_di
 from experiment_common import EXP,ARTIFACTS,need,ExperimentError,config as checked_config,source,code_hash,new_id,work_lock,strict,load_run
 from source_io import windows,page_intersections,union_length
 from model_runtime import Provider,validate_vector
+from chunk_settings import custom,without_overlap
 
 
 def boundary_units(text,nodes=(),maximum=400):
@@ -73,11 +74,12 @@ def semantic(units,vectors,maximum=400,minimum=100,threshold=.25):
 def extend(spans,overlap):
     return [(max(spans[i-1][0],a-overlap) if i else a,b) for i,(a,b) in enumerate(spans)]
 
-def llm_payload(text,units):
+def llm_payload(text,units,maximum=800):
     prompt=read_json(EXP/'prompt-contract.json');ids=[u['id'] for u in units]
     schema={'type':'object','additionalProperties':False,'required':['end_unit_ids'],'properties':{'end_unit_ids':{'type':'array','minItems':1,'uniqueItems':True,'items':{'type':'string','enum':ids}}}}
     enc=lambda x:json.dumps(x,ensure_ascii=False,separators=(',',':'))
-    content=prompt['prefix']+enc(schema)+'\nUnits:\n'+enc([dict(id=u['id'],start=u['start'],end=u['end'],text=text[u['start']:u['end']]) for u in units])
+    prefix=prompt['prefix'].replace('<=800 source characters',f'<={maximum} source characters')
+    content=prefix+enc(schema)+'\nUnits:\n'+enc([dict(id=u['id'],start=u['start'],end=u['end'],text=text[u['start']:u['end']]) for u in units])
     template=read_json(EXP/'runtime-metadata.json')['/api/show:qwen3:4b']['template']
     upper=len(content.encode())+len(template.encode())+len(enc(schema).encode())+64
     need(upper+1024<=8192,'budget_unverified','Input upper bound plus output exceeds context')
@@ -95,18 +97,20 @@ def parse_boundaries(response,units,maximum=800):
         end=units[i]['end'];need(0<end-start<=maximum,'invalid_boundaries','LLM span exceeds maximum');spans.append((start,end));start=end
     return spans
 
-def llm_partition(text,units,provider,on_progress=lambda x:None,purpose='corpus'):
+def llm_partition(text,units,provider,on_progress=lambda x:None,purpose='corpus',maximum=800):
     batches=unit_windows(units);need(len(batches)<=35,'input_overflow','Window budget exceeds frozen corpus')
+    # Verify every window before the first paid/local inference call.
+    payloads=[llm_payload(text,us,maximum) for us in batches]
     spans=[];records=[];started=time.monotonic()
     for i,us in enumerate(batches):
-        payload,upper=llm_payload(text,us);record=dict(window_id=f'w{i:03d}',start=us[0]['start'],end=us[-1]['end'],input_upper_bound=upper,payload=payload,payload_sha256=fingerprint(payload),attempts=[])
+        payload,upper=payloads[i];record=dict(window_id=f'w{i:03d}',start=us[0]['start'],end=us[-1]['end'],input_upper_bound=upper,payload=payload,payload_sha256=fingerprint(payload),attempts=[])
         records.append(record)
         on_progress(dict(completed_windows=i,total_windows=len(batches),records=records,elapsed_seconds=time.monotonic()-started))
         for attempt in range(2):
             t=time.monotonic();response=None
             try:
                 response=provider.call('llm',payload,purpose=purpose)
-                selected=parse_boundaries(response,us)
+                selected=parse_boundaries(response,us,maximum)
                 record['attempts'].append(dict(attempt=attempt+1,status='complete',content=response['message']['content'],usage={k:v for k,v in response.items() if k!='message'},wall_seconds=time.monotonic()-t))
                 spans+=selected;record['selected_ends']=[b for a,b in selected];break
             except (ValueError,OSError) as exc:
@@ -125,7 +129,7 @@ def make_chunks(row,text,nodes,units,cfg,base):
     chunks=[];maps=[];skipped=[]
     for (a,b),(s,e) in zip(base,expanded):
         if not text[s:e].strip():skipped.append(dict(document_id=row['document_id'],start=s,end=e));continue
-        identity=dict(document_id=row['document_id'],canonical_sha256=row['canonical_sha256'],algorithm_version='chunk-experiment-v1',config=cfg,base_start=a,base_end=b,start=s,end=e)
+        identity=dict(document_id=row['document_id'],canonical_sha256=row['canonical_sha256'],algorithm_version='chunk-custom-v1' if custom(cfg) else 'chunk-experiment-v1',config=cfg,base_start=a,base_end=b,start=s,end=e)
         cid=cfg['method']+'-'+fingerprint(identity);pages=page_intersections(row['pages'],s,e)
         arts=[n for n in nodes if n['level']==4 and s<n['extent']['end'] and e>n['extent']['start']]
         title_paths=[n['title_path'] for n in arts];uri=f"synthetic://hr/source-v4/{row['document_id']}?chars={s}-{e}"
@@ -144,14 +148,18 @@ def build(cfg,output_dir=None,provider=None,parent=None,on_progress=lambda x:Non
         row,text,sections=source(documents);units=boundary_units(text,sections['nodes'])
         need(units==read_json(EXP/'boundary-map.json')['units'],'boundary_mismatch','Boundary map differs from frozen plan')
         if parent:
-            pm=load_run(parent);need(cfg['method'] in ('semantic','llm') and pm['config']==checked_config(cfg['method']+'-0') and pm['canonical_sha256']==row['canonical_sha256'],'stale','Invalid boundary parent')
+            pm=load_run(parent);need(cfg['method'] in ('semantic','llm') and pm['config']==checked_config(without_overlap(cfg)) and pm['canonical_sha256']==row['canonical_sha256'],'stale','Invalid boundary parent')
+            if custom(cfg):
+                need(pm.get('code_hash')==code_hash(['chunk_core.py','source_io.py','experiment_common.py','model_runtime.py','chunk_settings.py']),'stale','Boundary parent code version differs')
+                need(all(pm.get(key)==file_hash(EXP/name) for key,name in [('spec_sha256','spec.json'),('prompt_sha256','prompt-contract.json'),('runtime_lock_sha256','runtime-metadata.json')]),'stale','Boundary parent contract version differs')
+                if cfg['method']=='llm':need(pm.get('effective_prompt_sha256')==fingerprint(read_json(EXP/'prompt-contract.json')['prefix'].replace('<=800 source characters',f"<={cfg['base_max_chars']} source characters")),'stale','Boundary parent prompt differs')
             base=[tuple(x) for x in read_json(Path(parent)/'source-map.json')['base_spans']];parent_ids=[pm['run_id']];details=dict(boundary_replay=True,model_calls=0,parent_run_id=pm['run_id'])
         elif cfg['method']=='fixed':base=list(windows(text,cfg['size_chars'],cfg['overlap_chars']))
-        elif cfg['method']=='recursive':base=recursive(text)
-        elif cfg['method']=='structure':base=structure(text,sections['nodes'])
+        elif cfg['method']=='recursive':base=recursive(text,maximum=cfg['base_max_chars'])
+        elif cfg['method']=='structure':base=structure(text,sections['nodes'],maximum=cfg['base_max_chars'])
         elif cfg['method']=='semantic':
-            vectors,usage=(provider or Provider()).embed([text[u['start']:u['end']] for u in units]);base,distances=semantic(units,vectors);details=dict(embedding=usage,distances=distances)
-        elif cfg['method']=='llm':base,details=llm_partition(text,units,provider or Provider(),on_progress)
+            vectors,usage=(provider or Provider()).embed([text[u['start']:u['end']] for u in units]);base,distances=semantic(units,vectors,maximum=cfg['base_max_chars'],minimum=cfg.get('minimum_chars',100),threshold=cfg['distance_threshold']);details=dict(embedding=usage,distances=distances)
+        elif cfg['method']=='llm':base,details=llm_partition(text,units,provider or Provider(),on_progress,maximum=cfg['base_max_chars'])
         chunks,maps,stats=make_chunks(row,text,sections['nodes'],units,cfg,base)
         # Keep LangChain orchestration request-local; the provider remains explicit and bounded.
         from langchain_core.runnables import RunnableLambda
@@ -163,8 +171,10 @@ def build(cfg,output_dir=None,provider=None,parent=None,on_progress=lambda x:Non
             with atomic_directory(out) as target:
                 (target/'chunks.jsonl').write_text(''.join(json.dumps(c,ensure_ascii=False,separators=(',',':'))+'\n' for c in chunks),encoding='utf-8')
                 for name,value in [('source-map.json',maps),('statistics.json',stats),('boundary-details.json',details)]:write_json(target/name,value)
-                m=dict(schema_version=1,run_id=run_id,status='complete',algorithm_version='chunk-experiment-v1',config=cfg,canonical_sha256=row['canonical_sha256'],input_manifest_sha256=file_hash(Path(documents) if documents else EXP.parents[1]/'data/source-v4/extracted/manifest.json'),
-                    spec_sha256=file_hash(EXP/'spec.json'),prompt_sha256=file_hash(EXP/'prompt-contract.json'),runtime_lock_sha256=file_hash(EXP/'runtime-metadata.json'),parent_run_ids=parent_ids,code_hash=code_hash(['chunk_core.py','source_io.py','experiment_common.py','model_runtime.py']),outputs={p.name:file_hash(p) for p in target.iterdir()},elapsed_ms=(time.monotonic()-started)*1000,counts={'chunks':len(chunks),'units':len(units)},text_version='canonical-slice-only-v1')
+                m=dict(schema_version=1,run_id=run_id,status='complete',algorithm_version='chunk-custom-v1' if custom(cfg) else 'chunk-experiment-v1',created_at=time.time(),config=cfg,canonical_sha256=row['canonical_sha256'],input_manifest_sha256=file_hash(Path(documents) if documents else EXP.parents[1]/'data/source-v4/extracted/manifest.json'),
+                    spec_sha256=file_hash(EXP/'spec.json'),prompt_sha256=file_hash(EXP/'prompt-contract.json'),runtime_lock_sha256=file_hash(EXP/'runtime-metadata.json'),parent_run_ids=parent_ids,code_hash=code_hash(['chunk_core.py','source_io.py','experiment_common.py','model_runtime.py','chunk_settings.py']),outputs={p.name:file_hash(p) for p in target.iterdir()},elapsed_ms=(time.monotonic()-started)*1000,counts={'chunks':len(chunks),'units':len(units)},text_version='canonical-slice-only-v1')
+                if cfg['method']=='llm':
+                    m['effective_prompt_sha256']=fingerprint(read_json(EXP/'prompt-contract.json')['prefix'].replace('<=800 source characters',f"<={cfg['base_max_chars']} source characters"))
                 write_json(target/'manifest.json',m)
             return m
         with tracing_context(enabled=False):return RunnableLambda(publish,name='publish_verified_source_slices').invoke(None)
