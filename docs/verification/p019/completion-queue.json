@@ -1,0 +1,31 @@
+{
+  "observation": "worktree before completion commit; committed plan overlay checked separately",
+  "p019": {
+    "id": "P019",
+    "title": "P013 평가 모델 사전검증과 사람 검토용 정답 초안",
+    "owner": "dev",
+    "priority": 67,
+    "state": "DONE",
+    "reason": "",
+    "work_order": "docs/planning/plans/P019.md",
+    "checked": 4,
+    "total": 4,
+    "completed_checks": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "acceptance": {
+      "C1": "고정8B 모델·라이선스/입력/메모리·시간·누적호출 한도를 확인하고6역할 smoke 및 동일조건 반복의 실제 결과/실패를 기록한다.",
+      "C2": "고정10질문의 원문 근거·초안 답변/원자 claims와18판정 검토 후보를 JSON 및 읽기 보고서로 제공하고 실제 사람 미승인 상태와 수정 이력을 보존한다.",
+      "C3": "source/ID/quote/offset·스키마/오류/예산/재생·승인 오인 방지·단독 복사 검증을 수행하고 원문·기존 모델/ledger·제품·P007/P017 산출물 보존 증거를 남긴다.",
+      "C4": "P018/P007 완료·정확 채택·guard/큐/최신 PASS 및 커밋된 P013 인계 패킷·정상dev push가 일치하며 사람이 확인할 항목과 모델 실험 한계를 명시한다."
+    }
+  },
+  "next": {
+    "plan": "P013",
+    "dev": null
+  },
+  "human_review": "pending; not P013 approval"
+}

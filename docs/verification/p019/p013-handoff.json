@@ -1,7 +1,7 @@
 {
   "status": "PREPARATION_COMPLETE_HUMAN_REVIEW_PENDING",
   "adopted_plan": "e065560e3a48a6a4a1d41c26a721ee2a99521dce",
-  "adoption_commit": "b2e6edd",
+  "adoption_commit": "b2e6edde9171ba46b4c362b5676ebfcbd59c818a",
   "packet": {
     "packet_sha256": "6f9b0b673b4b18e3739ac5038f048c00c8563ceaeab9dde105dedea9b1e13508",
     "json_file_sha256": "10a708ebf25c4f9ee44b3a7b6a3e6aeaf336f7f4b136cbcc3c4d006f07d092d6",
@@ -31,5 +31,6 @@
     "Initial draft smoke failed twice; one frozen prompt clarification, no counter reset.",
     "All eight real-question drafts require quote/provenance revision; gt08 replies hit fixed output cap.",
     "P019 completion is preparation only, not model quality acceptance, human approval, or P013 completion."
-  ]
+  ],
+  "verified_evidence_commit": "1ae0e2c6d07a502c14811055a4e7dd4f4b6984d8"
 }
