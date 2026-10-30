@@ -1,0 +1,31 @@
+{
+  "observation": "worktree before completion commit; post-commit plan overlay checked separately",
+  "adopted_plan": "0e4cdc8fdf4196962b33a30ecd792748d39850ff",
+  "p018": {
+    "id": "P018",
+    "title": "정식 하네스 기준 업데이트와 plan/dev 역할·직접 인계 정비",
+    "owner": "dev",
+    "priority": 66,
+    "state": "DONE",
+    "reason": "",
+    "work_order": "docs/planning/plans/P018.md",
+    "checked": 4,
+    "total": 4,
+    "completed_checks": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "acceptance": {
+      "C1": "정식 v0.1.0 commit·파일 hash·legacy 충돌/커스텀 차이와 실제 반영 내용을 기록하고 두 timestamp 수정이 검증된 배포본과 일치한다.",
+      "C2": "계획/보호 정책은 plan, 구현·검증은 dev라는 규칙과 직접 인계·전송/수신/채택/완료 구분이 tracked AGENTS/CLAUDE/프로세스 및 로컬 workspace 진입점에서 일치한다.",
+      "C3": "변경 후보 및 최종 적용본의 날짜/무시간대·정확 채택·보호/append-only/허위 완료·intake/큐 검증과 guard worktree/index/HEAD가 통과하고 실패·최종 PASS 증거가 보존된다.",
+      "C4": "기존 제품/모델 ledger·P001~P017 실행 이력·미커밋 계획 네 파일을 보존하고, S1 제안→plan 검토 배포→S2 exact adoption·최종 증거·정상 dev push와 큐가 일치한다."
+    }
+  },
+  "next": {
+    "plan": "P013",
+    "dev": null
+  }
+}
