@@ -1,0 +1,24 @@
+{
+  "tracked_files": {
+    "checked": 2142,
+    "changed": []
+  },
+  "plan_dirty_files": {
+    "checked": 4,
+    "changed": []
+  },
+  "ignored_runtime_ledger": {
+    "checked": 1,
+    "changed": []
+  },
+  "authorized_replacements": [
+    ".harness/adopted-plan.json",
+    "scripts/plan_cards.py",
+    "scripts/plan_intake.py"
+  ],
+  "hooks_path": ".githooks",
+  "hooks_executable": true,
+  "intake_custom_example_retained": true,
+  "workspace_matches_tracked": true,
+  "main_sha": "2ebd724ce925962f7a2e67df7bdb63e1eab569d7"
+}

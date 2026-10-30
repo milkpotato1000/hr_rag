@@ -1,0 +1,7 @@
+{
+  "python": "3.9.6",
+  "command": "python3 -m unittest discover -s tests/harness -p test_timestamp_guards.py -v",
+  "exit_code": 0,
+  "seconds": 22.41,
+  "scope": "23 unique tests including 12 inherited current HR intake cases; installed files, disposable Git fixtures"
+}

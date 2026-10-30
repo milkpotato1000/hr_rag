@@ -1,0 +1,34 @@
+{
+  "status": "S2_INSTALLED_AND_VERIFIED",
+  "integration": "legacy manual integration; no installer ownership manifest",
+  "adopted_plan": "0e4cdc8fdf4196962b33a30ecd792748d39850ff",
+  "adoption_commit": "2cd8a2923a302da1622a7316b2cce84883bf1fe3",
+  "release_commit": "803d658a8c61dc6aa007645a98d4160b16746faa",
+  "installed_files": [
+    {
+      "path": "scripts/plan_cards.py",
+      "sha256": "d16884698f9555d5cbdb123e50177e43c00d3dc78d4057b06669efd0932add14",
+      "equals_s1_candidate": true
+    },
+    {
+      "path": "scripts/plan_intake.py",
+      "sha256": "c49bbb3d9a58c3a1b7b3967cc302effd40c2b82621ebc6cff15a77509fcdd4f8",
+      "equals_s1_candidate": true
+    },
+    {
+      "path": "tests/harness/test_timestamp_guards.py",
+      "sha256": "bfbdb9c47136fa5e865377ecfa34690c608ac179dbbf38465bef88aaf68282aa"
+    }
+  ],
+  "workspace_entrypoint": {
+    "path": "../AGENTS.md",
+    "local_only": true,
+    "before_sha256": "13db8d66fb3618f7c2beabb7766a8bc15463975db9222e5eecfc9f8d86003b0a",
+    "after_sha256": "7cf54ebfb178d0e28f17b9df8963d2b521b4b733ace67f0481851c6b6e1b7009",
+    "matched_pre_update_tracked_template": true,
+    "local_extra_instructions": false,
+    "matches_current_tracked_template": true
+  },
+  "claude_import": "@AGENTS.md",
+  "installer_manifest_exists": false
+}

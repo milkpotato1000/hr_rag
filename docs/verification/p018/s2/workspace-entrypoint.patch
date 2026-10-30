@@ -1,0 +1,22 @@
+--- a/workspace/AGENTS.md
++++ b/workspace/AGENTS.md
+@@ -14,2 +14,4 @@
+-and read its AGENTS.md. A request covering both roles proceeds plan → dev, with
+-readiness review, integration and exact adoption before implementation.
++and read its AGENTS.md. Work needing both roles proceeds through the plan chat's
++readiness review and committed P-card, then the separate dev chat's integration,
++exact adoption and implementation. General requests to plan then proceed, start,
++or continue do not authorize the plan chat to switch roles and implement.
+@@ -37,0 +40,12 @@
++Within actual human authorization, plan directly sends the committed READY card,
++full SHA, scope, verification and next action to the verified existing dev chat.
++Do not ask repeatedly for the same authorized handoff or make the user copy it.
++Record sending, observed receipt, exact adoption and completion separately.
++The user's 2026-10-30 approval covers P018 delivery/start and its S1/S2 handoffs;
++it is not a grant for other projects, reverse messages or all future work.
++Follow the tracked docs/process/direct-handoff.md. Preserve stops and unresolved
++decisions. Do not infer a role-change permission from generic progress requests.
++For protected harness code, dev prepares isolated proposals/tests; plan reviews
++and publishes the governed baseline; dev adopts that exact commit before applying.
++Never disable guards or move to plan to approve your own implementation.
++
