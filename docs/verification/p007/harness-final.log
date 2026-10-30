@@ -1,0 +1,19 @@
+PASS: contracts match adopted plan d70336fddda2
+PASS: contracts match adopted plan d70336fddda2
+dev는 채택한 plan d70336fddda2 기준. 이후 plan 초안은 자동 채택하지 않음.
+dev 다음 작업: P007
+plan 새 요구 검토 대기: 0건 (구현 승인과 별개)
+조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음
+
+Initial completion-log validation FAIL: P-card evidence path referenced stage artifact instead of repository verification/progress directory. Corrected uncommitted log reference to development-notes.md, which retains experiment-001 failure location.
+FAIL: Protected files differ from adopted plan d70336fddda2:
+  docs/planning/plans/P007.md (STATE log must use NOTE and -)
+QUEUE ERROR: Adopted-plan guard failed; no task selected.
+FAIL: Protected files differ from adopted plan d70336fddda2:
+  docs/planning/plans/P007.md (STATE log must use NOTE and -)
+Corrected uncommitted STATE log to required NOTE / - format; handoff path retained in message.
+PASS: contracts match adopted plan d70336fddda2
+dev는 채택한 plan d70336fddda2 기준. 이후 plan 초안은 자동 채택하지 않음.
+dev 다음 작업: 실행 가능한 승인 작업 없음
+plan 새 요구 검토 대기: 0건 (구현 승인과 별개)
+조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음

@@ -181,5 +181,6 @@
     "Keep first failed experiment and all three LLM repetitions",
     "Holdout observed; no reselection"
   ],
-  "ui": "http://127.0.0.1:8003/"
+  "ui": "http://127.0.0.1:8003/",
+  "implementation_evidence_commit": "e1495b3185c1faa3cf3e41f864fe4a0289b9a8b9"
 }

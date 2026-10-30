@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "at": "2026-10-30T10:30:23.929239+09:00",
+  "implementation_evidence_commit": "e1495b3185c1faa3cf3e41f864fe4a0289b9a8b9",
+  "adopted_plan": "d70336fddda2c98685a5186344b03f8ca8eadf27",
+  "checks": {
+    "C1": {
+      "evidence": "docs/verification/p007/tests-stage-final.log",
+      "sha256": "000fd1938e7af1ffdde857c456278c48f876b0c565bfece81c323f4bb6495dcb"
+    },
+    "C2": {
+      "evidence": "docs/verification/p007/tests-stage-final.log",
+      "sha256": "000fd1938e7af1ffdde857c456278c48f876b0c565bfece81c323f4bb6495dcb"
+    },
+    "C3": {
+      "evidence": "docs/verification/p007/report.md",
+      "sha256": "95e59342d6dff844ce6d173f4d45e84122a1b548ee70cafedf0c8f392397ffb4"
+    },
+    "C4": {
+      "evidence": "docs/verification/p007/preservation.json",
+      "sha256": "db2c834a5b29b4b64f478ebb7a8d7de09ee028e4af89539361e61062fdc70926"
+    },
+    "C5": {
+      "evidence": "docs/verification/p007/browser-verification.json",
+      "sha256": "aed7732c1361e1d1038addc89616a3adf2a507bace36a4717b783bc2c5f6e362"
+    },
+    "C6": {
+      "evidence": "docs/verification/p007/harness-final.log",
+      "sha256": "00039e9469fc2cd92af19837982e1ed11c22f5405059b3be1c7e3ce70529b886"
+    }
+  },
+  "limitations": [
+    "Synthetic single corpus; no answer evaluation",
+    "ZIP browser download completion event unavailable; API archive verified"
+  ]
+}
