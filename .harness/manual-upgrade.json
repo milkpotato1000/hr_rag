@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "method": "reviewed-manual-integration",
+  "source_version": "0.2.1",
+  "source_commit": "14e73e9bcf1f0a51ec0c3ca13261e4699c9fa214",
+  "baseline_parent": "e065560e3a48a6a4a1d41c26a721ee2a99521dce",
+  "customizations": [
+    "existing hooks, protected paths, project daily skill preserved"
+  ],
+  "files": {
+    "scripts/contract_guard.py": "c1c693adf831f6f87bdb85985e03e5f73507f0066648fe6d2f54f7e757e9850f",
+    "scripts/plan_cards.py": "c79afa41e72cc36842d4e59e909af71a1a93edee73061b822586959142913196",
+    "scripts/work_queue.py": "d0329fe031d1611bc857a6afe24ef34fbfa257d5b27189e73768384368300627",
+    "scripts/workflow_control.py": "c7e195a7e295d25f9d014f0370b446bba2369782a87476c3478df927486837c0",
+    ".harness/policy.json": "9d7858a0b348e83c8b631a5340628482a47f8bd0e2de6e49441ee8fb69ab1154",
+    "docs/process/workflow-controls.md": "7a3226518eb3a37e05956f443cf5a4116746aa88c9c1c86c48175a61b144b2a3",
+    "docs/process/optional-adapters.md": "0356c4384d839f0304f942c07593019e48ffcb83813b1e5ac7fbea06736d11bd",
+    "docs/process/checkpoint-template.md": "79fcd8e681239b085c7e46e05c3607234d63220e4397f997f544f7885471dcea",
+    "docs/process/handoff-template.md": "03be4b2ac25287ec71c185f516431a546a4b71750f4c24c560a6053b41500b83",
+    "docs/process/agent-workflow.md": "39c857a497a0d554ea3ea7cea61f0aed99d82ba1e3a074f803f3318c6886f5ae",
+    "AGENTS.md": "dac8154510437c1487e5b786f62ac07a59fa88b7d72bb109dd588fee34d20ef4",
+    "docs/process/work-queue.md": "ab043cc93098d2220bc3f466d6cc1d37775e39d301c69bb39feb45a3ee07b8eb",
+    "docs/process/workspace-AGENTS.md": "64da6e62bd58dc46f8e1f168d676eceaf716d9ed02652936bbe6dfd2b8106ba4",
+    "docs/process/harness-0.2.1-integration.md": "749f4a8d191fd33af47d9d632d2ad05a3f8742907bb9d1534f7b92bb6ee318d3"
+  }
+}

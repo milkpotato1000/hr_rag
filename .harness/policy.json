@@ -17,7 +17,11 @@
     "scripts/plan_intake.py",
     "tests/harness",
     "CLAUDE.md",
-    ".harness/installation.json"
+    ".harness/installation.json",
+    "scripts/workflow_control.py",
+    "docs/progress/sessions/plan.md",
+    "docs/progress/handoffs/plan",
+    ".harness/manual-upgrade.json"
   ],
   "baseline_file": ".harness/adopted-plan.json",
   "p_card_execution": true

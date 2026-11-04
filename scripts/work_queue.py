@@ -11,6 +11,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import plan_cards
 import plan_intake
+import workflow_control
 
 QUEUE = 'docs/planning/work-queue.json'
 PROGRESS = {'plan': 'docs/planning/queue-progress', 'dev': 'docs/progress/queue'}
@@ -160,7 +161,7 @@ def evaluate(document, records, source, evidence_sources):
     return sorted(result, key=lambda r: (r['state'] != 'IN_PROGRESS', r['priority'], r['id']))
 
 
-def dev_ref(root, development_branch='dev'):
+def latest_ref(root, development_branch):
     upstream = git(root, 'rev-parse', '--abbrev-ref', development_branch + '@{upstream}', required=False)
     remote_ref = upstream.stdout.strip() if upstream.returncode == 0 else 'origin/' + development_branch
     refs = [r for r in dict.fromkeys((development_branch, remote_ref)) if git(root, 'rev-parse', '--verify', r, required=False).returncode == 0]
@@ -168,8 +169,12 @@ def dev_ref(root, development_branch='dev'):
         for older, newer in (refs, refs[::-1]):
             if git(root, 'merge-base', '--is-ancestor', older, newer, required=False).returncode == 0:
                 return newer
-        raise ValueError('Local dev and origin/dev diverge; inspect before trusting progress')
+        raise ValueError('Local/upstream ' + development_branch + ' diverge; inspect before trusting progress')
     return refs[0] if refs else None
+
+
+def dev_ref(root, development_branch='dev'):
+    return latest_ref(root, development_branch)
 
 
 def main():
@@ -204,6 +209,13 @@ def main():
         notices.append('plan은 작업 트리의 기획 + ' + (ref or '미연결 dev') + ' 커밋의 진척을 표시. dev 미커밋 기록은 표시하지 않음.')
     intake = plan_intake.collect(local, dev_source)
     pending_intake = [r for r in intake if r['state'] in ('PENDING', 'CHANGED')]
+    plan_tip = latest_ref(root, config['planning_branch']) if role == 'dev' else None
+    control_sources = {'plan': local if role == 'plan' else (Source(root, plan_tip) if plan_tip else None), 'dev': dev_source}
+    pauses = workflow_control.paused_sessions(control_sources)
+    pending = workflow_control.pending_decisions(local, dev_source, baseline_file)
+    handoffs = workflow_control.handoffs(control_sources)
+    if pauses: notices.append('사용자 중지 기록이 적용됩니다. 명시적 재개 전에는 해당 역할을 선택하지 않습니다.')
+    if pending: notices.append('기획 결정 대기: 분류된 작업 또는 dev 전체가 차단됩니다.')
     sources = {'plan': local, 'dev': dev_source}
     records = {o: s.records(PROGRESS[o]) if s else {} for o, s in sources.items()}
     document = json.loads(local.read(QUEUE)) if (root / QUEUE).exists() else {'schema_version': 1, 'tasks': []}
@@ -217,18 +229,16 @@ def main():
     # Completed historical IDs remain queryable without filling the default P-number queue.
     rows = cards + [r for r in legacy if args.history or r['state'] != 'DONE' or not cards]
     rows.sort(key=lambda r: (r['state'] != 'IN_PROGRESS', r['priority'], r['id']))
-    for role in PROGRESS:
-        if sum(r['owner'] == role and r['state'] == 'IN_PROGRESS' for r in rows) > 1:
-            raise ValueError('Only one active task per owner: ' + role)
+    for task_owner in PROGRESS:
+        if sum(r['owner'] == task_owner and r['state'] == 'IN_PROGRESS' for r in rows) > 1:
+            raise ValueError('Only one active task per owner: ' + task_owner)
     owner = args.owner or role
     selected = [r for r in rows if owner == 'all' or r['owner'] == owner]
-    next_tasks = {o: next((r['id'] for r in rows if r['owner'] == o and
-                           (r['state'] in ('IN_PROGRESS', 'READY') or
-                            (o == 'plan' and r['id'] in replacements and r['state'] == 'DRAFT'))), None)
-                  for o in PROGRESS if owner in ('all', o)}
+    next_tasks = workflow_control.select_next(rows, replacements,
+        [o for o in PROGRESS if owner in ('all', o)], pending, pauses)
     output = {'branch': branch, 'owner': owner, 'notices': notices, 'next': next_tasks,
               'tasks': [r for r in selected if not args.open or r['state'] != 'DONE'],
-              'plan_requests': intake}
+              'plan_requests': intake, 'pending_decisions': pending, 'paused_sessions': pauses, 'handoffs': handoffs}
     if args.json:
         print(json.dumps(output, ensure_ascii=False, indent=2))
     else:
@@ -238,6 +248,10 @@ def main():
         print(f'plan 새 요구 검토 대기: {len(pending_intake)}건 (구현 승인과 별개)')
         for item in pending_intake:
             print(f"  [{item['state']}] {item['id']} {item['title']} — {item['path']}")
+        for item in pending:
+            print('  결정 대기: ' + item['path'] + ' — ' + item['scope'] + ' ' + ', '.join(item['tasks']))
+        for item in pauses:
+            print('  사용자 중지: ' + item['role'] + ' (' + item['scope'] + ') — ' + item['path'])
         if not args.brief:
             for row in output['tasks']:
                 label = {'DRAFT': '기획 중', 'READY': '준비 완료', 'WAITING': '선행 대기', 'IN_PROGRESS': '개발 중', 'BLOCKED': '차단', 'DONE': '완료'}[row['state']]
@@ -252,7 +266,7 @@ def main():
                     print(f'  [{mark}] {key}: {value}')
         print('조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음')
     return 1 if args.open and (any(r['state'] != 'DONE' for r in selected)
-                              or (owner in ('plan', 'all') and pending_intake)) else 0
+                              or pending or pauses or (owner in ('plan', 'all') and pending_intake)) else 0
 
 
 if __name__ == '__main__':
