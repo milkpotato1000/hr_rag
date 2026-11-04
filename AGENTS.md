@@ -87,3 +87,19 @@ Snowflake 접근은 `snow` CLI를 기본으로 한다. 브라우저는 사용자
 CLI 실패 시 연결을 진단하고 차단 원인을 보고한다. 계정·DB·역할을 확인하고 다른 프로젝트의 연결을 재사용하지 않는다.
 plan은 별도 허가 없이는 읽기·기획만 수행하며 dev는 채택한 계약과 승인 범위를 따른다.
 비밀키는 저장소 밖의 로컬 Snowflake 설정 디렉터리에 보관한다.
+
+## Harness 0.2.1 startup and documentation
+
+Read [shared workflow](docs/process/agent-workflow.md), especially "Fresh sessions
+and document delivery", at every new/resumed session. Restore the assigned role
+from human instructions and actual files; branch/location alone is not a role grant.
+Unassigned material requests use a P-card, plan review, exact dev adoption and dev
+execution. Product README/user guides are dev deliverables; requirements/reviews
+remain plan-owned. Check the requested target ref before claiming delivery.
+Preserve existing role-specific delegation, single-writer ownership, bootstrap-only
+waiting, product authorization and one-shot consumption. This maintenance adds no
+messaging or product-work permission and resumes no pause.
+Use [workflow controls](docs/process/workflow-controls.md) for durable decisions,
+scopes and pauses. Legacy OPEN decisions and scope-less PAUSED checkpoints still
+block conservatively. Existing approval ledgers and adapter rules remain in force.
+See [integration record](docs/process/harness-0.2.1-integration.md).
