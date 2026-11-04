@@ -9,9 +9,9 @@ Git commands and project scripts run inside the selected worktree.
 | `hr_rag_dev/` | `dev` | Adopted implementation, verification and execution logs |
 | `hr_rag_main/` | `main` | Release baseline; promotion requires an explicit request |
 
-For planning requests, enter `hr_rag_plan/` and read its AGENTS.md.
-For implementation, fixes, verification or “다음 큐 진행”, enter `hr_rag_dev/`
-and read its AGENTS.md. Work needing both roles proceeds through the plan chat's
+For an assigned plan role, work in `hr_rag_plan/`; for an assigned dev role,
+work in `hr_rag_dev/`. Read that child's AGENTS.md. Unassigned material requests
+follow the reviewed plan-to-dev workflow below. Work needing both roles proceeds through the plan chat's
 readiness review and committed P-card, then the separate dev chat's integration,
 exact adoption and implementation. General requests to plan then proceed, start,
 or continue do not authorize the plan chat to switch roles and implement.
@@ -66,3 +66,16 @@ This local entrypoint is outside Git. Tracked instructions in each worktree must
 also describe this layout so it can be recreated on another computer. The release
 worktree may retain historical instructions until explicitly promoted; the path
 mapping above describes the current local workspace.
+
+## New/resumed sessions and document delivery
+
+Read the selected child's AGENTS.md and docs/process/agent-workflow.md before
+material changes. Preserve the human-assigned role; a branch, path or Markdown
+extension does not assign a role. Unassigned change requests follow P-card
+preparation -> plan review -> exact dev adoption -> dev execution. Plan prepares
+and hands off; it does not silently switch roles to implement. Product README and
+user-guide changes are dev deliverables; planning contracts remain plan-owned.
+Check existing writers, current adoption, task/decision/pause files and the actual
+requested delivery ref. A plan push alone is not delivery to dev or main.
+Bootstrap remains read/status/wait. Existing messaging and release grants are
+unchanged, and stops/consumed one-shot records are never resumed/rearmed by upgrade.

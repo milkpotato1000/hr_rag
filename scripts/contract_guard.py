@@ -9,6 +9,7 @@ import sys
 
 import plan_cards
 import plan_intake
+import workflow_control
 
 
 def git(*args, check=True):
@@ -102,20 +103,38 @@ def check_contracts(target, config):
         for path in prior:
             if path.endswith('.json') and read_at(path, previous) != read_at(path, target):
                 raise ValueError('Dev intake request is immutable; add a follow-up request: ' + path)
-    # Validate the target snapshot, including staged/committed request files.
+    current = snapshot(target)
+    plan_intake.collect(current, current)
+    previous_snapshot = snapshot(previous) if git('rev-parse', '--verify', previous, check=False).returncode == 0 else None
+    workflow_control.validate_changes(current, previous_snapshot, config)
+    print("PASS: contracts match adopted plan " + sha[:12])
+
+
+def snapshot(revision):
     from work_queue import Source
     class Snapshot(Source):
+        def __init__(self, revision):
+            super().__init__(pathlib.Path.cwd())
+            self.revision = revision
         def read(self, path):
-            return read_at(path, target)
+            return read_at(path, self.revision)
+        def names(self, directory):
+            if self.revision == 'worktree':
+                return [str(p.relative_to(pathlib.Path.cwd())) for p in (pathlib.Path.cwd() / directory).rglob('*') if p.is_file()]
+            command = ('ls-files', '--', directory) if self.revision == 'index' else ('ls-tree', '-r', '--name-only', self.revision, '--', directory)
+            return git(*command).stdout.splitlines()
+        def paths(self, directory):
+            return [p for p in self.names(directory) if p.endswith('.md')]
         def records(self, directory):
-            if target == 'worktree':
-                return Source(pathlib.Path.cwd()).records(directory)
-            command = ('ls-files', '--', directory) if target == 'index' else ('ls-tree', '-r', '--name-only', target, '--', directory)
-            names = git(*command).stdout.splitlines()
-            return {pathlib.Path(p).stem: json.loads(self.read(p)) for p in names if p.endswith('.json')}
-    snapshot = Snapshot(pathlib.Path.cwd())
-    plan_intake.collect(snapshot, snapshot)
-    print("PASS: contracts match adopted plan " + sha[:12])
+            return {pathlib.Path(p).stem: json.loads(self.read(p)) for p in self.names(directory) if p.endswith('.json')}
+    return Snapshot(revision)
+
+
+def check_plan_controls(target):
+    previous = 'HEAD' if target in ('worktree', 'index') else target + '^'
+    prior = snapshot(previous) if git('rev-parse', '--verify', previous, check=False).returncode == 0 else None
+    workflow_control.validate_role_changes(snapshot(target), prior, 'plan')
+    print('PASS: plan checkpoint and handoff history')
 
 
 def install():
@@ -176,12 +195,16 @@ def main():
                 continue
             if remote_ref == "refs/heads/" + config["development_branch"]:
                 check_contracts(sha, config)
+            elif remote_ref == "refs/heads/" + config["planning_branch"]:
+                check_plan_controls(sha)
     else:
         selected = args.branch or branch
         if selected == config["release_branch"] and args.target == "index":
             raise ValueError("No direct release-branch commits; promote reviewed development with a fast-forward merge")
         if selected == config["development_branch"]:
             check_contracts(args.target, config)
+        elif selected == config["planning_branch"]:
+            check_plan_controls(args.target)
         elif not selected:
             raise ValueError("Detached HEAD: specify --branch for an explicit check")
         else:
@@ -191,6 +214,6 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except (ValueError, OSError, KeyError) as error:
+    except (ValueError, OSError, KeyError, TypeError) as error:
         print("FAIL: " + str(error), file=sys.stderr)
         sys.exit(1)

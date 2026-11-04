@@ -83,3 +83,10 @@ plan의 검토를 아직 채택하지 않았다면 dev에는 대기가 남을 �
 
 [요청 접수 규칙](plan-intake.md)에 따라 dev 기록 → plan 판단 → P카드 준비 검토 → 정확한 채택을 거친다.
 요청의 LINKED/COVERED 상태는 검토/연결 표시이며 구현 준비 완료를 뜻하지 않는다.
+
+## 0.2.1 controls and startup
+
+Read [workflow controls](workflow-controls.md) and [shared startup/document rules](agent-workflow.md).
+New intake is not implementation approval. Legacy OPEN decisions and scope-less
+PAUSED checkpoints continue to block; role-scoped pauses require actual human scope.
+Queue reads perform no execution, messaging or external synchronization.

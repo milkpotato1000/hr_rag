@@ -172,7 +172,7 @@ def rows(source, dev_source, legacy, branch, baseline_file='.harness/adopted-pla
         reason = card['notice'] or ('선행 작업: ' + ', '.join(missing) if missing else '')
         if state == 'BLOCKED':
             reason = [e['note'] for e in card['events'] if e['criterion'] == 'STATE'][-1]
-        result[ident] = dict(id=ident, title=card['title'], owner=owner, priority=card['priority'],
+        result[ident] = dict(id=ident, depends_on=card['depends_on'], title=card['title'], owner=owner, priority=card['priority'],
                             state=state, reason=reason, work_order=card['work_order'],
                             checked=sum(v['checked'] for v in card['checks'].values()), total=len(card['checks']),
                             completed_checks=[k for k,v in card['checks'].items() if v['checked']],
