@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "git_required": false,
+  "model_required": false,
+  "runtime_lock_required": false,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "verify",
+        "--out",
+        "artifacts/run001"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline verification PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "report",
+        "--out",
+        "artifacts/run001"
+      ],
+      "exit_code": 0,
+      "stdout": "Unapproved packet: 6f9b0b673b4b18e3739ac5038f048c00c8563ceaeab9dde105dedea9b1e13508\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "revise-review",
+        "--parent",
+        "artifacts/run001",
+        "--out",
+        "artifacts/run002"
+      ],
+      "exit_code": 0,
+      "stdout": "Unapproved offline review revision: e6a264387d3dd169168bcf1733156bf91bd4bdf76fc8bb70f5a704e3bc7a2b0e\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "verify",
+        "--out",
+        "artifacts/run002"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision verification PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "report",
+        "--out",
+        "artifacts/run002"
+      ],
+      "exit_code": 0,
+      "stdout": "Unapproved offline review revision: e6a264387d3dd169168bcf1733156bf91bd4bdf76fc8bb70f5a704e3bc7a2b0e\n",
+      "stderr": ""
+    }
+  ],
+  "run001_identical": true,
+  "run002_identical": true,
+  "generated_files": {
+    "review.html": "c431d7c19d35c23b545ff849f83299559b441e2da739832e6e597c0054cfc604",
+    "packet.json": "320a63d8c27bcd2a7a53db65d4cb820e4fd87f988b19c4515fdbdd2cf663f624",
+    "revision-mapping.json": "391ad796b8d3ee153babd211b1998aed9b646bf341b326b50fcd46774e27316a",
+    "packet-manifest.json": "7c3d86d5c17b497ee078db1d394cd902fbb058be2538a3e8c800e344bcfbaad5"
+  }
+}

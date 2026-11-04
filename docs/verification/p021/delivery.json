@@ -1,0 +1,22 @@
+{
+  "plan_commit": "3a8c23e39df1b8102420a7dba5577fae56b56d2f",
+  "adoption_commit": "6e5d437634aed1e0311b479f3c867d16ddf925da",
+  "report": "evaluation/project_b/preparation/artifacts/run002/review.html",
+  "manifest": {
+    "version": "p021-review-v1",
+    "packet_sha256": "e6a264387d3dd169168bcf1733156bf91bd4bdf76fc8bb70f5a704e3bc7a2b0e",
+    "parent_packet_sha256": "6f9b0b673b4b18e3739ac5038f048c00c8563ceaeab9dde105dedea9b1e13508",
+    "files": {
+      "packet.json": "320a63d8c27bcd2a7a53db65d4cb820e4fd87f988b19c4515fdbdd2cf663f624",
+      "revision-mapping.json": "391ad796b8d3ee153babd211b1998aed9b646bf341b326b50fcd46774e27316a",
+      "review.html": "c431d7c19d35c23b545ff849f83299559b441e2da739832e6e597c0054cfc604"
+    }
+  },
+  "status": "implementation_verified_ui_blocked",
+  "human_approval": null,
+  "new_model_calls": 0,
+  "questions": 10,
+  "claims": 45,
+  "judgements": 18,
+  "ui_validation": "BLOCKED: browser file URL policy; no workaround attempted"
+}

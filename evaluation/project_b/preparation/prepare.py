@@ -139,7 +139,24 @@ def main():
     f = sub.add_parser('freeze'); f.add_argument('--repo', type=Path, required=True); f.add_argument('--out', type=Path, required=True); f.add_argument('--model-lock', type=Path, required=True)
     for name in ['verify', 'run', 'report', 'revise-ground']:
         s = sub.add_parser(name); s.add_argument('--out', type=Path, required=True)
+    s = sub.add_parser('revise-review', help='Offline P021 review revision; no model calls')
+    s.add_argument('--parent', type=Path, required=True)
+    s.add_argument('--out', type=Path, required=True)
     args = p.parse_args()
+    if args.command == 'revise-review':
+        from review_revision import create
+        create(args.parent, args.out)
+        return
+    if (args.out / 'revision-mapping.json').exists():
+        from review_revision import verify, create
+        if args.command == 'verify':
+            verify(args.out)
+            print('Offline review revision verification PASS')
+        elif args.command == 'report':
+            create(args.out.resolve().parent / 'run001', args.out)
+        else:
+            raise ValueError('Review revision is offline only; no model execution or prompt revision')
+        return
     if args.command == 'freeze':
         freeze(args.repo.resolve(), args.out.resolve(), args.model_lock.resolve())
     elif args.command == 'run':

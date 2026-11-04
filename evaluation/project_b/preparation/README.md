@@ -1,5 +1,39 @@
 # P019 evaluator preparation
 
+## 최신 검토본: P021 / run002
+
+[새 검토 보고서](artifacts/run002/review.html)는 질문 → 정답 클레임 → 근거 원문
+순서로 읽습니다. 각 주장의 인용은 펼쳐 두고 실험 로그·원응답·해시·문자 위치는
+접힌 상세 정보로 분리했습니다. 로컬 HTML을 직접 열며 외부 서버/CDN이 필요 없습니다.
+`gt`는 질문·정답 항목, `c`는 주장 ID이고 청크가 아닙니다. 원문 페이지는 PDF 페이지입니다.
+
+48개 중 중복 조건을 정리해 **45개 미승인 주장**으로 개정했습니다. 생일휴가의
+대상·연1일·수습 제외는 c02 하나에 통합하고, 교육휴가 대상은 기존 c02에 통합했습니다.
+재택일 식대 미지원 문장의 반복 금액만 제거했습니다. 다른 주장과 판정 후보18개는
+유지합니다. [개정 매핑](artifacts/run002/revision-mapping.json)에 기존48개 각각의
+문장·ID·근거와 새45개 연결, 사유가 있습니다. ID는 재번호하지 않습니다.
+
+run002는 모델 실험이 아니라 **run001의 오프라인 검토본 개정**입니다. 새로운 모델
+호출은0회이고 원래 실행 기록30회와 구분합니다. [이전 보고서](artifacts/run001/review.html),
+실패 기록 및 원문은 변경하지 않습니다. gt09/10은 문서에 금액이 없다는 확인 필요
+후보이며 회사의 미지원으로 단정하지 않습니다. 어떤 후보도 사람 승인으로 승격하지 않습니다.
+
+```sh
+python3 -B prepare.py revise-review --parent artifacts/run001 --out artifacts/run002
+python3 -B prepare.py verify --out artifacts/run002
+python3 -B prepare.py report --out artifacts/run002
+python3 -B -m unittest discover -s . -p 'test_*.py' -v
+```
+
+기존 run002가 있으면 검증만 하며 다른 내용으로 덮어쓰지 않습니다. 새 출력은
+run001과 같은 부모 폴더의 새 경로에 생성합니다. 독립 복사 시 이 모듈과 run001을
+함께 가져가세요. run002는 부모 패킷과 파일 hash를 검증합니다. 실행용 `.runner.lock`은
+부모 이력의 일부가 아니므로 개정 패킷 hash에서 제외하되 원본 파일은 건드리지 않습니다.
+`run`/`revise-ground`는 검토본에서 거부됩니다. 기존 run001 명령도 그대로 동작합니다.
+
+브라우저 도구의 file URL 정책 제한으로 P021의 실제 렌더링·좁은 폭·키보드 동작
+검증은 미완료입니다. HTML 구조 검사와 실제 화면 검증을 구분합니다.
+
 Small standard-library CLI for frozen local-model compatibility experiments and
 an **unapproved** human review packet. No production scoring, serving, NLI model,
 approval mutation, or integrated product UI is implemented here.
