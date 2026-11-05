@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "0cb6497a63c3c79e2b11615f6897f3f4f8f7eb85",
+  "document": "docs/planning/handoffs/P013.md",
+  "summary": "P013 READY: approved references and evaluator expectations",
+  "next_action": "Integrate exact READY SHA, commit adoption, check guard and implement bounded S1-S4",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T08:35:38.636240+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T08:36:16.556491+00:00",
+      "evidence": "2026-11-05 host send_message_to_thread succeeded to verified existing HR dev with exact READY 0cb6497a63c3c79e2b11615f6897f3f4f8f7eb85; human approval sidecar and bounded S1-S4 implementation/start delivered"
+    }
+  ]
+}
