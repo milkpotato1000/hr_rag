@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P022.md",
   "summary": "P022 atomic reference review READY: 45 to 57 claims, preserve run001/run002, no model calls",
   "next_action": "Adopt exact READY plan; complete existing P021 C1, then implement and verify P022 run003",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-05T07:06:43.260241+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T07:07:13.829429+00:00",
+      "evidence": "2026-11-05 host send_message_to_thread succeeded to verified existing HR dev with exact READY SHA 1308141b695708ab125c0a9ba1517156493d563b, P021 prerequisite and P022 run003 scope"
     }
   ]
 }
