@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P023.md",
   "summary": "P023 READY: preserve 57 claims; required38 supplementary19; run004 review and P013 scoring policy",
   "next_action": "Integrate and adopt exact READY SHA, implement and verify only P023, push personal/dev and provide new review",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-05T07:46:40.632773+00:00",
       "evidence": "2026-11-05 host send_message_to_thread succeeded to verified existing HR dev with exact READY 5d3e47774a162e235b7886298a947dccb2be662d; P023 run004 only, no models and no P013 execution"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-05T07:48:57.824374+00:00",
+      "evidence": "Observed dev response confirming run004 scope and committed exact adopted-plan 5d12fc6 -> READY 5d3e47774a162e235b7886298a947dccb2be662d; product completion still pending"
     }
   ]
 }
