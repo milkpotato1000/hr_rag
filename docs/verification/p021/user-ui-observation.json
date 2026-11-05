@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "source_commit": "c8447a12ef41d087d5acb2f445d8630a0de3f21c",
+  "source_document": "docs/planning/handoffs/P022-user-ui-confirmation.md",
+  "observer": "human user",
+  "observation_method": "User directly confirmed four run002 UI behaviors in plan chat; recorded by plan, received by dev",
+  "reported_text": "네 가지 모두 정상 확인했어. dev에 전달해서 P022 새 검토본 수정 이어서 진행해줘.",
+  "report": "evaluation/project_b/preparation/artifacts/run002/review.html",
+  "packet_sha256": "e6a264387d3dd169168bcf1733156bf91bd4bdf76fc8bb70f5a704e3bc7a2b0e",
+  "checks": {
+    "question_claim_source_order_and_visible_quotes": "PASS",
+    "experiment_initially_collapsed": "PASS",
+    "narrow_window_without_horizontal_overflow": "PASS",
+    "tab_enter_space_disclosure": "PASS"
+  },
+  "codex_browser_verification": false,
+  "run003_observation": false,
+  "human_gt_approval": null,
+  "prior_policy_failures_preserved": true
+}
