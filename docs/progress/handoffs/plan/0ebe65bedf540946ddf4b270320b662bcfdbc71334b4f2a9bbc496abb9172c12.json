@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "5d3e47774a162e235b7886298a947dccb2be662d",
+  "document": "docs/planning/handoffs/P023.md",
+  "summary": "P023 READY: preserve 57 claims; required38 supplementary19; run004 review and P013 scoring policy",
+  "next_action": "Integrate and adopt exact READY SHA, implement and verify only P023, push personal/dev and provide new review",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T07:46:14.034495+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
