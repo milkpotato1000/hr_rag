@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P013.md",
   "summary": "P013 READY: approved references and evaluator expectations",
   "next_action": "Integrate exact READY SHA, commit adoption, check guard and implement bounded S1-S4",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-05T08:36:16.556491+00:00",
       "evidence": "2026-11-05 host send_message_to_thread succeeded to verified existing HR dev with exact READY 0cb6497a63c3c79e2b11615f6897f3f4f8f7eb85; human approval sidecar and bounded S1-S4 implementation/start delivered"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-05T08:36:35.117887+00:00",
+      "evidence": "Observed dev commentary acknowledging P013 handoff, approved dataset/expectations, exact adoption next, offline verification first and staged model gates; adoption and completion not yet observed"
     }
   ]
 }
