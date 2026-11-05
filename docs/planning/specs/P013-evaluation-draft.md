@@ -4,14 +4,16 @@
 
 2026-10-30 갱신: P007/P017/P018은 완료됐다. 모델 사전검증·정답/판정 검토 패킷은 준비 완료 P019로 분리해 dev에 인계했다. [산술 fixture 초안](P013-metric-fixtures-draft.json)16개는 plan이 계산한 인공 사례이며 사람 승인 Ground Truth가 아니다. P019 결과/실제 승인 전까지 아래 실행 계약은 초안이다.
 
+2026-11-04 사용자 요청으로 Neutral rate·Contradiction rate의 산식·필수 보고 필드·완료 검증 범위를 추가했다. 현재 산술 fixture는18개이며 두 비율과 실패/0분모/macro·micro 예시를 포함한다. 이 요구 보강은 실제 사람 승인, P021 완료, P013 READY 또는 dev 착수를 대신하지 않는다. [변경 검토](../reviews/P013-rate-metrics-update.md)를 참조한다.
+
 ## 1. 학습과 개발 순서
 
 1. **입력 고정:** P016 원문과 P007 기준선/선정 후보·검색 설정의 hash 및 완료 commit을 확인한다.
-2. **정답 초안과 검토 묶음:** 원문에서 질문·기준 답변·원자 주장·정확한 근거 위치를 만들고 사람이 검토할 수 있게 묶는다. 검색 결과나 생성 답변으로 정답을 만들지 않는다.
+2. **Codex 정답 후보와 검토 묶음:** Codex가 원문에서 질문·기준 답변·원자 주장·정확한 근거 위치를 작성해 사람이 검토할 수 있게 묶는다. Qwen 정답 초안 생성을 필수로 거치지 않는다. 검색 결과나 평가 대상 생성 답변으로 정답을 만들지 않는다.
 3. **승인 기록:** 실제 사람이 확인한 항목만 approved로 동결한다. 승인 전에는 합성 fixture로 코드/산식을 검증할 수 있지만 실제 Correctness 평가 완료를 선언하지 않는다.
 4. **생성 결과 export:** 기존 LangChain Naive 생성 흐름을 사용해 고정 source-v4/청크 입력에 대한 답변과 실제 전달 문맥을 저장한다. 기존 Naive 기본 corpus와 학습 서버의 동작은 보존한다.
 5. **독립 평가:** 주장 추출 1회 → 전달 문맥으로 Faithfulness 판정 / 승인 정답과 Correctness 매칭 → Python 집계.
-6. **평가기 검증과 인계:** 사람 기준과 대조하고 오류·반복 일치도·지연·메모리를 기록한다. 동일 답변/주장/문맥/정답 artifact를 P014에 인계한다.
+6. **평가기 검증과 인계:** Qwen 추출기는 고정 답변·별도 사람 검토 기대 클레임으로 단독 검증한다. 정답 후보 생성과 추출 검증을 혼합하지 않고 사람 기준 오류·반복 일치도·지연·메모리를 기록한다. 동일 답변/주장/문맥/정답 artifact를 P014에 인계한다. 추출 검증은 후속 지지/정답 매칭 판정과 별도 run/보고서로 남긴다.
 
 P013 구현 위치는 `evaluation/project_b/`다. P007의 검색 UI는 그대로 사용하며, P013은 CLI와 사람이 읽을 수 있는 검토·결과 보고서부터 제공하는 안으로 준비한다. 통합 답변·평가 UI는 P008에서 구현한다. CLI/보고서의 확정 인터페이스와 독립 복사 목록은 READY 검토 때 고정한다.
 
@@ -33,14 +35,19 @@ P013 export adapter는 새 run ID/schema version/code commit, P016 corpus snapsh
 | rag-run | 질문, 최종 답변/status, 실제 전달 messages/contexts, 모델·프롬프트·설정·code/hash, 후보/제외 목록, 비용/오류 | 평가기와 진단 보고서 |
 | reference-dataset | 질문 ID, answerability, 기준 답변/claims, 근거 PDF/페이지/조항/canonical span/hash, 버전·검토 상태 | 정답 검토와 Correctness |
 | approval-record | 실제 승인자, 대상 dataset/항목 hash, 확인 시점·명시 승인 증거, 승인/수정요청 | 정답 유효성 검사 |
+| extraction-inputs | 고정 답변/질문 ID·정확한 텍스트/hash·작성 출처·사례 분류·세트 버전 | Qwen 추출기; 원문/기대값 제외 |
+| extraction-expectations | 고정 답변에 충실한 기대 원자 claims/답변 span·중복 정책·사람 검토 기록/hash | 독립 추출 검증기·사람; 추출 모델에 비공개 |
+| extraction-validation-report | 입력/기대값/모델/prompt hashes·추출 정렬·P/R/F1·누락/추가/중복/조건 손실·실행/인용 실패·전체 분모 | 준비 검토·독립 보고서/P014 |
 | extracted-claims | 답변 hash, 원자 claim ID/text, 답변 span, 중복/제외 사유, extractor 모델·prompt/설정 hash | 두 평가 경로 공통 |
 | claim-verdicts | claim ID, E/N/C 또는 판정 불능, premise/근거 span, 원응답·실행 메타 | Faithfulness 집계 |
 | claim-matches | 생성/정답 claim ID 대응, 동등/부분/불일치/미확정 구분, 근거, 결정된 매칭 | Correctness 집계 |
-| evaluation-report | 입력 artifact hashes, 지표/분모/status, 오류 종류, 비용, 사람 기준 대조 | 보고서/P014/P008 |
+| evaluation-report | 입력 artifact hashes, Faithfulness·Neutral rate·Contradiction rate/라벨별 개수·분모·coverage/status, Correctness P/R/F1·TP/FP/FN, 포함/제외 수·오류 종류·비용·사람 기준 대조 | 보고서/P014/P008 |
 
 JSON duplicate key/NaN, 알 수 없는 필드·ID, 중복 ID, 변경된 hash/범위 밖 span은 거부한다. 성공과 실패 artifact를 구분하고 기존 실행 결과를 덮어쓰지 않는다. 정답/평가 prompt/사람 라벨은 검색·생성·청킹 입력에서 제외하고 요청 기록을 통해 유출을 검증한다.
 
 ## 4. 사람 검토 범위와 데이터 분리
+
+2026-11-05 원자화 재검수는 [P022](../plans/P022.md)와 [전수 검수](../reviews/P022-atomicity-audit.md)로 선행한다. 현재 run002의45개를 분리10개·조건 복원2개·유지33개로 검토했고 새 후보 제안은57개다. 이는 plan 검수 결과이며 실제 패킷 수정/사람 승인 완료가 아니다. P022의 새 버전/hash·구신ID/원문 매핑 인계와 그 버전의 실제 사람 승인 후 정답을 고정한다. 과거 본문의48/45개·승인 요청은 역사적 이력이며 새 버전에 자동 승계하지 않는다.
 
 정답 검토 묶음은 질문 → 기준 답변 → 주장별 원문 인용/페이지/조항 → 승인 또는 수정 요청 순서로 읽을 수 있게 만든다. 가상 회사 규정의 원문 일치 여부를 승인하는 것이며 실제 법률/HR 정책 승인으로 표현하지 않는다. 시행일 unknown/null은 임의 날짜로 채우지 않는다.
 
@@ -48,20 +55,63 @@ JSON duplicate key/NaN, 알 수 없는 필드·ID, 중복 ID, 변경된 hash/범
 
 P019에서 질문10개와 판정 후보18개를 준비한다. 실제 승인 대상·리뷰어 증거는 아직 미결이며, 이 세트는 독립 holdout이 아닌 공개 학습/개발 세트다. 원문의 모든 주제, 수치/부정/조건·예외, 복수 근거, 보류 적절/부적절 사례를 포함하도록 설계한다. P007의 holdout은 검색 실험에서 열람되면 관찰된 자료로 기록하며 P013의 새 독립 holdout이라고 부르지 않는다. 사람이 승인한 항목이 적으면 검증 범위도 그만큼 제한해 보고한다.
 
+### 4.1 정답 후보 작성과 추출 성능 검증의 분리 — 2026-11-04 결정
+
+사용자가 정답 후보는 Codex가 원문 기반으로 작성하고 사람이 승인하며, Qwen의 Claim Extraction은 고정 답변으로 따로 검증하도록 요청했다. 이 결정이 현재 P013의 역할 분담이며 과거 Qwen 초안 생성 실험을 필수 절차로 승계하지 않는다. [고정 답변 추출 검증 상세 초안](P013-claim-extraction-validation-draft.md)을 따른다.
+
+정답 데이터는 원문에 맞는 사실을 작성·승인하는 경로다. 추출 검증 기대값은 고정 답변이 실제로 주장한 사실을 나타내는 별도 라벨이다. 고정 답변에 틀린 숫자가 있으면 기대 클레임에도 그 숫자를 보존하며, 원문의 올바른 숫자로 고치는 추출 결과는 오류다. Qwen에는 질문과 고정 답변만 주고 원문·승인 정답·기대 클레임·채점 라벨은 제공하지 않는다.
+
+기존 run001/run002와 Qwen 원응답·Codex 수정본·오류·패킷 hash를 보존한다. 기존 후보를 재사용하려면 Codex가 원문에서 재확인하고 변경/유지 근거·이전 ID 대응을 새 버전에 남긴다. Qwen 작성 이력을 지우거나 기존 파일을 이름만 바꿔 Codex 신규 작성으로 표시하지 않는다. 실제 사람의 항목·hash별 승인은 별도이며 이번 역할 결정은 데이터 승인이 아니다.
+
+준비 검토에서 고정 답변/기대값 세트, 실제 검토자·검토 증거, 세트 크기·분리, 의미 정렬/원자화·중복·0분모 정책, 추출 P/R/F1의 판정 기준과 통과 기준, model/prompt·실행량을 미리 고정한다. 결과를 보고 기준 답변이나 기대값을 맞춰 바꾸지 않는다. Qwen 검증 실패 시 실패와 버전을 보존하고 후속 수정/재검증하며 정답지를 고쳐 실패를 숨기지 않는다.
+
 ## 5. 산식과 실패 처리 제안
 
 다음은 독립 fixture와 사람 검토를 거쳐 READY 때 확정할 제안이다.
 
 - **주장 단위:** 숫자·대상·조건·예외를 포함해 단독으로 참/거짓 판단이 가능한 원자 주장. 조건을 제거해 서로 다른 주장을 동등하게 만들지 않는다. 동일 의미 반복은 1회 계산하고 원답변의 모든 발생 span은 보존한다. 추출 누락/추가가 확인되면 추출 실패로 분리한다.
-- **Faithfulness:** 평가 가능한 고유 주장 N개 중 E개가 지지되면 E/N. Neutral과 Contradiction은 모두 비지지지만 별도 개수로 보고한다. 어떤 주장이라도 판정 불능이면 전체 점수는 null/incomplete이며 유효 판정 수·coverage와 진단 수치만 표시한다. 실제 전달 문맥 밖의 근거/정답을 추가하지 않는다. 상충 근거는 명시 충돌 상태로 보존하고 유리한 청크만 선택하지 않는다.
+- **Faithfulness와 보조 비율:** 중복 정규화 후 평가 대상 고유 생성 주장 T개를 동일 분모로 사용한다. E/U/C는 각각 entailment/neutral/contradiction 수다. Faithfulness=E/T, Neutral rate=U/T, Contradiction rate=C/T를 필수 보고하며 세 비율은 모든 판정이 유효하고 T>0일 때만 확정한다. 어떤 주장이라도 판정 불능이면 세 비율은 null/incomplete이고 유효 판정 수·coverage와 진단 개수만 표시한다. 실제 전달 문맥 밖의 근거/정답을 추가하지 않는다. 상충 근거는 명시 충돌 상태로 보존하고 유리한 청크만 선택하지 않는다. 상세 계약은5.1을 따른다.
 - **Correctness:** 의미 동등 판정된 생성-정답 주장 간 이분 그래프에서 최대 일대일 매칭의 크기를 TP로 한다. 동점은 claim ID 사전순으로 결정하며 선택 결과를 저장한다. FP=고유 생성 수−TP, FN=고유 정답 수−TP. 부분 일치는 TP에 소수 가산하지 않고 분리 기록한다. reference coverage 기준 FP와 사실적 거짓을 동일시하지 않는다.
 - **정답 불완전 의심:** 승인 정답 밖이지만 원문에 근거한 중요한 추가 사실은 데이터셋 누락 의심으로 별도 기록한다. 해당 사례의 최종 Correctness는 review_required로 보류하고 자동 정답 확장/재채점하지 않는다. 새 승인 버전으로 재실행할 때 이전 결과를 보존한다.
-- **0분모:** N=0의 Faithfulness는 null/no_claims. 생성0·정답>0은 P=null, R=0, F1=0. 생성>0·정답0은 P=0, R=null, F1=0. 모두0이면 P/R/F1=null이고 보류 적절성을 별도 판정한다. 일반 F1은 `2TP/(2TP+FP+FN)`으로 계산해 P/R null 전파를 잘못 처리하지 않는다.
-- **집계:** Faithfulness는 유효 답변별 macro와 유효 claim 가중 micro를 둘 다 보고한다. Correctness는 유효 사례별 macro-F1과 합산 TP/FP/FN 기반 micro-F1을 보고한다. 각 지표의 포함/제외 수, 오류/보류/정답미승인 수를 함께 출력한다. 미실행/실패를 0점으로 치환하지 않는다.
+- **0분모:** T=0의 Faithfulness/Neutral rate/Contradiction rate는 모두 null/no_claims. 생성0·정답>0은 P=null, R=0, F1=0. 생성>0·정답0은 P=0, R=null, F1=0. 모두0이면 P/R/F1=null이고 보류 적절성을 별도 판정한다. 일반 F1은 `2TP/(2TP+FP+FN)`으로 계산해 P/R null 전파를 잘못 처리하지 않는다.
+- **집계:** Faithfulness/Neutral rate/Contradiction rate는 같은 complete·T>0 답변 집합에서 답변별 macro와 claim 가중 micro를 각각 보고한다. micro는 해당 라벨 개수 합/전체 주장 수 합이며 macro는 답변별 비율의 평균이다. Correctness는 유효 사례별 macro-F1과 합산 TP/FP/FN 기반 micro-F1을 보고한다. 각 지표의 포함/제외 수, 오류/보류/정답미승인 수를 함께 출력한다. 미실행/실패를 0점으로 치환하지 않는다. 포함 답변이0이면 평균도 null로 보고한다.
 
 독립 산술 예: Faithfulness E2/N1/C1→0.5, 생성3/정답4/TP2→FP1/FN2/P2/3/R1/2/F1=4/7. 중복 생성 주장을 추가해도 TP와 분모가 늘지 않아야 한다. 2개 생성이 같은 정답 하나에 매칭돼도 TP는1이다. 다중 청크가 함께 조건과 예외를 지지하는 경우는 단일 청크 누락과 구분한다.
 
+### 5.1 Neutral/Contradiction rate 필수 보고 계약
+
+2026-11-04 사용자 요청으로 다음 항목은 P013의 구현·검증 요구에 포함한다. 모델은 claim별 라벨을 판정하고 Python이 개수·분모·비율을 계산한다. 모델 확률의 평균과 라벨 비율을 혼용하지 않는다.
+
+| JSON 결과 필드 | 의미 / 산식 |
+| --- | --- |
+| `total` | 중복 정규화 후 전체 평가 대상 생성 claim 수 T. 정답 claim 수나 검색 청크 수가 아님 |
+| `supported`, `neutral`, `contradiction` | E/U/C의 개수. claim별 판정 기록에서 재계산 가능해야 함 |
+| `indeterminate` | 판정 보류 또는 claim별 처리 실패로 확정 라벨이 없는 claim 수 I |
+| `valid_verdicts`, `coverage` | V=E+U+C, coverage=V/T. T=0이면 coverage=null |
+| `faithfulness` | E/T. 산술 fixture의 기존 `score` 필드는 이 값에 대응 |
+| `neutral_rate`, `contradiction_rate` | U/T, C/T |
+| `status`, 진단 내역 | complete / incomplete / no_claims와 claim ID별 보류·실패 사유 |
+
+유효한 입력에서 T=E+U+C+I여야 한다. **T>0·I=0·모든 입력 claim ID가 정확히 한 번 판정된 경우에만** 세 비율을 확정하고 합계1을 허용 오차1e-12 안에서 확인한다. Neutral과 Contradiction은 Faithfulness의 분자에서 빠지지만 세 비율 모두의 분모 T에는 포함된다.
+
+I>0이면 세 비율 모두 null, status=incomplete로 남긴다. V만을 분모로 사용해 정상 점수처럼 보고하지 않는다. T=0이면 세 비율과 coverage는 null, status=no_claims다. ID 누락/중복·알 수 없는 라벨·손상 artifact는 입력 검증 오류로 기록하며 임의로 neutral로 보정하지 않는다. 정보가 부족하다는 정상 판정 neutral과 처리 불능은 구분한다.
+
+JSON artifact와 읽기 보고서는 **세 비율, E/U/C/I, T/V/coverage, 상태·사유, claim별 판정/근거 연결**을 동일하게 제공한다. 보고서의 백분율은 JSON의0~1 비율에서 표시용으로 변환하며 원래 개수·분모와 반올림 전 값을 보존한다. 집계 결과는 macro/micro를 구분하고 포함/제외 답변 수·주장 수 및 제외 사유를 함께 제공한다. 세 비율의 합계1은 complete 집합에만 적용하며 incomplete 보고서에 성공 불변식으로 강제하지 않는다.
+
+| 독립 예시 / fixture ID | T; E/U/C/I | Faithfulness / Neutral rate / Contradiction rate | 상태; coverage |
+| --- | --- | --- | --- |
+| 혼합 / `faithful_mixed` | 4; 2/1/1/0 | 0.5 / 0.25 / 0.25 | complete; 1 |
+| 전부 지지 / `faithful_all_entailments` | 2; 2/0/0/0 | 1 / 0 / 0 | complete; 1 |
+| 전부 근거 부족 / `faithful_all_neutral` | 2; 0/2/0/0 | 0 / 1 / 0 | complete; 1 |
+| 전부 모순 / `faithful_all_contradictions` | 2; 0/0/2/0 | 0 / 0 / 1 | complete; 1 |
+| 판정 불능1개 / `faithful_error` | 2; 1/0/0/1 | null / null / null | incomplete; 0.5 |
+| 주장0개 / `faithful_none` | 0; 0/0/0/0 | null / null / null | no_claims; null |
+
+`faithfulness_macro_micro_differ`는 complete 답변 두 개를 E/U/C=(1/0/0), (1/1/1)로 구성한다. 세 비율의 macro는 (2/3, 1/6, 1/6), micro는 (1/2, 1/4, 1/4)다. no_claims 답변1개는 평균에서 제외하되 제외 개수1과 원인을 표시한다. 이 산술 예시는 모델 성능·사람 정답 승인의 증거가 아니다. dev는 독립 구현에서 재현하고 JSON/보고서·불변식·입력 오류 처리까지 검증해야 한다.
+
 ## 6. 모델·실험 준비 게이트
+
+2026-11-05 추가: [생일휴가 상황별 검증](P013-evaluator-scenarios-draft.md)에서 근거3개/2개 × 답변3개/2개를 고정 비교한다. 별도 [4상황 fixture](P013-evaluator-scenarios-draft.json)는 기존18개 산술 fixture를 대체하지 않는다. 평가기 단독 검증은 고정 주장·문맥·전체 기준 정답으로 판정/매칭/집계를 검사하고, Qwen 추출 단독 검증은 고정 답변만으로 별도 수행한다. 실제 E2E는 관측된 전달 snapshot으로 실행하며 검색 성공이나 합성 예상 점수를 실제 결과로 가정하지 않는다.
 
 현재 생성 모델은 유지한다. 평가용 Qwen3-8B는 기존 계획의 검토 후보이며 이 초안은 다운로드나 실행을 승인하지 않는다. 설치된 모델/정확한 digest·양자화/토크나이저·context 한도, 라이선스, 로컬 가용 자원과 호출당 입력/출력·timeout/재시도·전체 호출/시간 상한을 확인해 별도 lock/spec으로 고정한다. P007 모델 작업과 동시 실행해 자원/지연 측정을 오염시키지 않는다.
 
@@ -76,6 +126,7 @@ P019에서 질문10개와 판정 후보18개를 준비한다. 실제 승인 대�
 | 설치형 하네스 | P018 완료 `da43db3`, 공식 v0.1.0 `803d658` 수동 통합·23회귀 PASS | 선행 완료 근거 확보; 후속 하네스 버전 대기 없음 |
 | 생성 export | LangChain trace 연결점 읽기 확인 | schema·copy manifest·source-v4 연결 및 독립 재현 계약 확정 |
 | 정답·사람 라벨 | 기존 원문 대응표는 사람 승인 아님 | 검토 묶음·실제 리뷰어/승인 절차·dataset 수/분리 고정 |
+| Codex 정답 후보 / Qwen 추출 단독 검증 | 2026-11-04 역할 분리 결정; 기존 Qwen 초안은 이력으로 보존 | 원문 기반 후보 작성/재확인·사람 승인과 별도 고정 답변/기대값·실행/통과 기준 고정 |
 | 평가기 실행 | P019 완료 `1f46c6e`, 고정8B/실패 및 검토 패킷 확보; P013 예산 미확정 | 실제 승인·인용/출력 실패 정책 검토 후 P013 별도 실행량·한도 고정 |
 | 점수/실패 규칙 | 본 문서 제안 | 검증 fixture/판정 정책 및 보고서 인터페이스 확정 |
 
@@ -89,7 +140,7 @@ P019가 제공할 10질문/18판정 후보를 사용자에게 질문·초안 답
 
 실제 P013 run은 고정 source-v4, P007 baseline과 선정 후보, 동일 질문·retriever·Top-K·실제 전달 예산/생성 prompt/4B digest를 사용한다. P017 사용자가 만든 임의 설정이나 최근 서버 기본값을 읽어 실험 조건을 바꾸지 않는다. 모델 바꾸기/재검색으로 평가 점수를 유리하게 보정하지 않는다. 실행량은 승인된 사례 수와 최대 주장 수에 따라 산정하고, 생성/추출/검증/쌍별매칭/반복/재시도 각각의 요청 수·최대시간을 READY spec에서 고정한다. P019 상한을 P013 전체 실행 허가로 재사용하지 않는다.
 
-16개 산술 fixture는 중복 정규화 이후 claim 수, 일대일 최대 매칭, 0분모, 부분 일치, 불확실/정답누락 의심, macro/micro 차이를 포함한다. 매칭은 greedy 첫 일치가 아니라 최대 일대일 매칭이어야 하며, 모델이 출력한 점수를 그대로 계산 결과로 쓰지 않는다. 오류/무응답/승인 없음은 별도 상태다. 유효 사례만 집계할 때 전체 실행 수와 제외 사유/비율을 함께 표시한다.
+18개 산술 fixture는 중복 정규화 이후 claim 수, 일대일 최대 매칭, 0분모, 부분 일치, 불확실/정답누락 의심, macro/micro 차이를 포함한다. 매칭은 greedy 첫 일치가 아니라 최대 일대일 매칭이어야 하며, 모델이 출력한 점수를 그대로 계산 결과로 쓰지 않는다. 오류/무응답/승인 없음은 별도 상태다. 유효 사례만 집계할 때 전체 실행 수와 제외 사유/비율을 함께 표시한다.
 
 P019 완료 후 plan이 닫을 체크는: 실제 model lock·schema/prompt와 입력 여유, P007 manifest/hash 검산, 실제 승인 대상과 reviewer evidence, extraction/duplicate/matching 실패 정책, 호출/시간/embedding/메모리 한도, export/독립복사 경계, 사람 기준 비교의 분모·제한이다. 하나라도 미결이면 READY로 전환하지 않는다.
 
