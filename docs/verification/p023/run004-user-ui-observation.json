@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-05",
+  "observer": "human user",
+  "source": "Direct response to run004 UI observation question in this dev chat",
+  "reported_text": "1 이고, 도구정책 차단 원인부터 해결해봐. 직접 니가 확인 가능하다는거잖아?",
+  "selected_option": "run004를 직접 확인했고 네 항목 모두 정상",
+  "report": "evaluation/project_b/preparation/artifacts/run004/review.html",
+  "packet_sha256": "ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235",
+  "manifest_file_sha256": "a47d7921ac55e35a706072236c9fc5c430f01931b4566ba0ba6f4c886fab2afb",
+  "checks": {
+    "required38_supplementary19_groups_and_reasons": "PASS",
+    "expanded_quotes_collapsed_experiments_policy_examples": "PASS",
+    "narrow_window_wrapping_no_horizontal_overflow": "PASS",
+    "tab_enter_space_disclosure": "PASS"
+  },
+  "observation_method": "Direct human observation; Codex did not perform browser UI verification",
+  "codex_browser_verification": false,
+  "prior_run_observation_reused": false,
+  "human_gt_approval": null,
+  "previous_policy_block_evidence": "docs/verification/p023/ui-status.json",
+  "prior_failures_preserved": true,
+  "tool_policy_diagnosis": "docs/verification/p023/browser-policy-diagnosis.md"
+}

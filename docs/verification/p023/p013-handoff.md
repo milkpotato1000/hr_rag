@@ -15,3 +15,7 @@ P013은DRAFT다. 새 패킷/정책/manifest의 정확 hash는 delivery.json에 �
 새57개 전체 또는 새 분류의 실제 사람 승인은 아니다. 위임 검토·정책 수락·UI 관찰과 정답
 승인을 구분한다. 새 run004의 UI 관찰은 별도로 남아 있다.
 P013의 승인/준비 검토/holdout·모델/호출 상한 등의 기존 게이트를 해제하지 않는다.
+
+2026-11-05 후속: run004-user-ui-observation.json에 새 화면 네 항목의 실제 사용자 PASS를
+기록했다. 위 UI 대기는 해소되었으며 Codex 직접 브라우저 검증/전체 정답 승인은 아니다.
+도구 file URL 제한은 미해결이고 전체 human_approval=null 및 P013 DRAFT는 유지한다.

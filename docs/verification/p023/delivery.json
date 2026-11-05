@@ -2,7 +2,7 @@
   "plan_commit": "5d3e47774a162e235b7886298a947dccb2be662d",
   "adoption_commit": "5d12fc6",
   "parent_completion_commit": "dfe5e48effe84f83edb314bb8a428eee42d5531d",
-  "status": "IMPLEMENTED_OFFLINE_VERIFIED_UI_PENDING",
+  "status": "COMPLETED_WITH_DIRECT_HUMAN_UI_OBSERVATION",
   "report_absolute_path": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/evaluation/project_b/preparation/artifacts/run004/review.html",
   "packet_sha256": "ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235",
   "manifest_file_sha256": "a47d7921ac55e35a706072236c9fc5c430f01931b4566ba0ba6f4c886fab2afb",
@@ -27,5 +27,8 @@
   "questions": 10,
   "judgements": 18,
   "human_approval": null,
-  "new_model_calls": 0
+  "new_model_calls": 0,
+  "human_ui_evidence": "docs/verification/p023/run004-user-ui-observation.json",
+  "codex_browser_ui_verification": false,
+  "browser_policy_resolved": false
 }

@@ -17,7 +17,9 @@
 
 run003 gt01의 첫5개 직접 승인은 정확한 parent hash/ID/text/source와 함께 별도
 과거 이력으로 보존합니다. 위임된 Codex 분류 검토와 새 패킷 전체의 실제 사람 승인은
-구분하며 전체 human_approval은 null입니다. 새 run004 화면 자체의 실제 관찰도 별도로 필요합니다.
+구분하며 전체 human_approval은 null입니다. 새 run004 화면은 2026-11-05 사용자가 직접
+네 항목을 확인해 정상이라고 응답했습니다. [사용자 관찰 기록](../../../docs/verification/p023/run004-user-ui-observation.json)을 참고하세요.
+이는 Codex 브라우저 직접 검증이나 정답 내용 승인이 아닙니다. file URL 도구 제한은 남아 있습니다.
 
 ```sh
 python3 -B evaluation/project_b/preparation/prepare.py revise-scoped-review --parent evaluation/project_b/preparation/artifacts/run003 --audit docs/planning/reviews/p023/run003-scope-audit.json --policy docs/planning/specs/P023-scoring-policy.md --out evaluation/project_b/preparation/artifacts/run004
