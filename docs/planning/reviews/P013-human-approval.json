@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "APPROVED",
+  "reviewer": "human_project_owner",
+  "recorded_by": "Codex plan",
+  "recorded_at": "2026-11-05T08:35:20.337328+00:00",
+  "user_statement": "정답지와 검증 기대값 전체 승인",
+  "review_package_commit": "017bb18ec59aac45eebc450581740fce31de3ab2",
+  "review_manifest": "docs/planning/reviews/P013-human-review-manifest.json",
+  "review_manifest_sha256": "3872d8a19459785faed1fb8f7ec6f6b5fcc783d2f5a72551254ed2736a9ccb38",
+  "run004_packet_sha256": "ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235",
+  "scope": {
+    "questions": [
+      "gt01",
+      "gt02",
+      "gt03",
+      "gt04",
+      "gt05",
+      "gt06",
+      "gt07",
+      "gt08",
+      "gt09",
+      "gt10"
+    ],
+    "required": 38,
+    "supplementary": 19,
+    "judge_ids": [
+      "judge01",
+      "judge02",
+      "judge03",
+      "judge04",
+      "judge05",
+      "judge06",
+      "judge07",
+      "judge08",
+      "judge09",
+      "judge10",
+      "judge11",
+      "judge12",
+      "judge13",
+      "judge14",
+      "judge15",
+      "judge16",
+      "judge17",
+      "judge18"
+    ],
+    "extraction_ids": [
+      "extract01",
+      "extract02",
+      "extract03",
+      "extract04",
+      "extract05",
+      "extract06",
+      "extract07",
+      "extract08"
+    ],
+    "matching_ids": [
+      "match01",
+      "match02",
+      "match03",
+      "match04",
+      "match05",
+      "match06",
+      "match07",
+      "match08"
+    ],
+    "synthetic_scenarios": 4,
+    "policy": "p023-core-supplement-v1"
+  },
+  "approved_files": {
+    "docs/planning/specs/P013-fixed-extraction-candidates.json": "6947c627ad31b6ffb28cb4f98afd633808eef341f77cd3a5be6ab784a45adea3",
+    "docs/planning/specs/P013-matching-candidates.json": "df7bc383b798cc3e2fed5d5b28da8952e83270ca8596ec51f8f4210775188301",
+    "docs/planning/specs/P013-evaluator-scenarios-draft.json": "858f4c27cb4324c0328e745ca1237e9b8cee2b24b1a05771a25cc2d336d92225",
+    "docs/planning/specs/P013-metric-fixtures-draft.json": "a59035abfc5ea2216043ac856369731cd4ffaac3370e5232b31c3ef5ab7951d7",
+    "docs/planning/specs/P023-scoring-policy.md": "ea9c1d2da4cc02c5743a56e919e59ed86c6ac474172974e2e5f04640926a7ab8",
+    "docs/planning/specs/P013-execution-contract.md": "2b01a108ae480bab4a8f27d98dcc2854c7dfd69ca7623e73ef9d9f82463b50b2",
+    "docs/planning/reviews/P013-human-review.md": "5efbbd466a1b4931f5604ee4ba8d6989a2207fc01639cfb7f1a0f24011e50c44"
+  },
+  "evidence": "Direct human reply in HR RAG plan chat to the P013 review-package question on 2026-11-05. The reply approved the complete ground-truth and validation expectations presented in that package.",
+  "limitations": [
+    "Approval of fictional-source learning/development data and expected labels; not actual model performance or independent holdout validation.",
+    "Prior run004 packet remains unchanged with original approval fields; use this version-bound sidecar.",
+    "Implementation and bounded model execution require exact adoption of the subsequent READY plan commit."
+  ]
+}
