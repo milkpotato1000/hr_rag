@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "status": "COMPLETE",
+  "plan_commit": "1308141b695708ab125c0a9ba1517156493d563b",
+  "implementation_commit": "5c036d84a570a171842bcbee36dd535cf3956d08",
+  "human_ui_evidence_commit": "02df691",
+  "checks_passed": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "packet_sha256": "946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199",
+  "manifest_file_sha256": "aa7ac7eacb6e0b352b6df93c18146bc964debac3ab3f93c131609ef540d35184",
+  "human_ui_observation": true,
+  "codex_browser_ui_verification": false,
+  "human_gt_approval": null,
+  "p013_state": "DRAFT",
+  "new_model_calls": 0
+}
