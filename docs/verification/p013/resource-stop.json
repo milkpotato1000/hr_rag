@@ -1,0 +1,49 @@
+{
+  "status": "STOPPED_OS_MEMORY_PRESSURE",
+  "requests_dispatched": 1,
+  "requests_retried": 0,
+  "model_calls_8b": 1,
+  "model_calls_4b": 0,
+  "embedding_calls": 0,
+  "first_result_schema": "valid",
+  "first_result_exact_claims": 2,
+  "first_result_extraction_metrics": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "status": "complete",
+    "matched_edges": [
+      [
+        "1",
+        "extract01-c1"
+      ],
+      [
+        "2",
+        "extract01-c2"
+      ]
+    ]
+  },
+  "stage_gate": "S2 NOT_PASSED (1/16 only; resource stop)",
+  "manifest_sha256": "007f38f7c5ae6f6de30baff8762717db87b3e757218457b334bc14109e8fb514",
+  "wall_seconds": 21.761621542,
+  "prompt_tokens": 287,
+  "output_tokens": 146,
+  "peak_sampled_ollama_rss_bytes": 6239797248,
+  "critical_samples": 4,
+  "critical_pressure_level": 4,
+  "threshold_rss_bytes": 12884901888,
+  "threshold_rss_exceeded": false,
+  "stop_trigger": "OS critical pressure independently requires stop under P013 section 3",
+  "memory_scope": "1-second samples, not hard sandbox/GPU memory",
+  "remaining_s2_requests_not_executed": 15,
+  "s3_requests": 0,
+  "s4_requests": 0,
+  "ledger_unresolved": true,
+  "pending_request": null,
+  "resume_guard_verified_without_network": true,
+  "post_stop": "runtime-after-stop.json: pressure normal and no loaded models; this does not clear the preserved stop or authorize a retry",
+  "raw_evidence": "evaluation/project_b/artifacts/p013-run001/calls/001.json"
+}

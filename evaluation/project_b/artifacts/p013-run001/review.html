@@ -1,0 +1,138 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>P013 평가기 검증</title>
+<style>body{font:16px/1.65 system-ui;margin:auto;padding:24px;max-width:1000px;background:#faf9f6;color:#222}article{background:white;border:1px solid #ddd;border-radius:12px;margin:20px 0;padding:20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 monospace}p,li,code{overflow-wrap:anywhere}summary{cursor:pointer;padding:8px}summary:focus-visible,a:focus-visible{outline:3px solid #2678b7}blockquote{border-left:3px solid #2678b7;margin:12px 0;padding:8px 16px}nav{display:flex;flex-wrap:wrap;gap:12px}.status{font-weight:bold}@media(max-width:480px){body{padding:12px}article{padding:12px}}</style>
+<h1>P013 평가기 단계 검증</h1><p>승인 정답과 새 모델 출력의 검토는 별개입니다. 공개 학습 세트이며 일반화 성능 보장이 아닙니다.</p>
+<p>실제 모델 요청: 1 · 실제 RAG 평가: False</p>
+<h2>단계 진행 기준</h2><pre>{
+  &quot;extraction&quot;: {
+    &quot;expected&quot;: 16,
+    &quot;dispatched&quot;: 1,
+    &quot;passed&quot;: 1,
+    &quot;status&quot;: &quot;NOT_PASSED&quot;
+  },
+  &quot;judge&quot;: {
+    &quot;expected&quot;: 68,
+    &quot;dispatched&quot;: 0,
+    &quot;passed&quot;: 0,
+    &quot;status&quot;: &quot;NOT_PASSED&quot;
+  }
+}</pre>
+<p>정확한 문장·발생 위치 일치는 자동 대조합니다. 표현이 다른 추출 결과는 의미 오류로 단정하거나 자동 승인하지 않고 별도 검토로 남깁니다.</p>
+<nav><a href="#extract01-r1">extract01-r1</a></nav>
+<article id="extract01-r1"><h2>extract01-r1 · extraction</h2><p class="status">pass</p>
+<h3>질문</h3><p>연차 이월 한도와 기한은?</p>
+<h3>고정 답변</h3><blockquote>연차는 최대 5일 이월할 수 있습니다. 이월 연차는 다음 해 3월 31일까지 사용해야 합니다.</blockquote>
+<h3>추출 주장</h3><p>연차는 최대 5일 이월할 수 있습니다.</p>
+<blockquote>연차는 최대 5일 이월할 수 있습니다.</blockquote>
+<h3>추출 주장</h3><p>이월 연차는 다음 해 3월 31일까지 사용해야 합니다.</p>
+<blockquote>이월 연차는 다음 해 3월 31일까지 사용해야 합니다.</blockquote>
+<h3>기대값 대조 · 점수/미확정</h3><pre>{
+  &quot;status&quot;: &quot;pass&quot;,
+  &quot;precision&quot;: 1.0,
+  &quot;recall&quot;: 1.0,
+  &quot;f1&quot;: 1.0,
+  &quot;exact_diagnostic&quot;: {
+    &quot;tp&quot;: 2,
+    &quot;fp&quot;: 0,
+    &quot;fn&quot;: 0,
+    &quot;precision&quot;: 1.0,
+    &quot;recall&quot;: 1.0,
+    &quot;f1&quot;: 1.0,
+    &quot;status&quot;: &quot;complete&quot;,
+    &quot;matched_edges&quot;: [
+      [
+        &quot;1&quot;,
+        &quot;extract01-c1&quot;
+      ],
+      [
+        &quot;2&quot;,
+        &quot;extract01-c2&quot;
+      ]
+    ]
+  },
+  &quot;expected_claims&quot;: [
+    {
+      &quot;id&quot;: &quot;extract01-c1&quot;,
+      &quot;text&quot;: &quot;연차는 최대 5일 이월할 수 있습니다.&quot;,
+      &quot;occurrences&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 21,
+          &quot;quote&quot;: &quot;연차는 최대 5일 이월할 수 있습니다.&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;extract01-c2&quot;,
+      &quot;text&quot;: &quot;이월 연차는 다음 해 3월 31일까지 사용해야 합니다.&quot;,
+      &quot;occurrences&quot;: [
+        {
+          &quot;start&quot;: 22,
+          &quot;end&quot;: 52,
+          &quot;quote&quot;: &quot;이월 연차는 다음 해 3월 31일까지 사용해야 합니다.&quot;
+        }
+      ]
+    }
+  ],
+  &quot;generated_claims&quot;: [
+    {
+      &quot;id&quot;: &quot;1&quot;,
+      &quot;text&quot;: &quot;연차는 최대 5일 이월할 수 있습니다.&quot;,
+      &quot;occurrences&quot;: [
+        {
+          &quot;start&quot;: 0,
+          &quot;end&quot;: 21,
+          &quot;quote&quot;: &quot;연차는 최대 5일 이월할 수 있습니다.&quot;,
+          &quot;quote_sha256&quot;: &quot;d3935ac3ed7083c69dbdeb7812dfa1ce0e689e2d541fd83e8d39d46c4f9386a4&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;2&quot;,
+      &quot;text&quot;: &quot;이월 연차는 다음 해 3월 31일까지 사용해야 합니다.&quot;,
+      &quot;occurrences&quot;: [
+        {
+          &quot;start&quot;: 22,
+          &quot;end&quot;: 52,
+          &quot;quote&quot;: &quot;이월 연차는 다음 해 3월 31일까지 사용해야 합니다.&quot;,
+          &quot;quote_sha256&quot;: &quot;7656b018a453d290f3d1e8ec29f8601d4861bff41f114819e36a0222549e7bb7&quot;
+        }
+      ]
+    }
+  ],
+  &quot;human_semantic_review&quot;: null,
+  &quot;reason&quot;: &quot;exact text and all occurrence spans agree&quot;
+}</pre>
+<details><summary>실험 기록</summary><pre>{
+  &quot;case_id&quot;: &quot;extract01-r1&quot;,
+  &quot;stage&quot;: &quot;extraction&quot;,
+  &quot;role&quot;: &quot;extraction&quot;,
+  &quot;question&quot;: &quot;연차 이월 한도와 기한은?&quot;,
+  &quot;result_status&quot;: &quot;valid&quot;,
+  &quot;seconds&quot;: 21.761621542,
+  &quot;artifact&quot;: &quot;calls/001.json&quot;
+}</pre></details></article>
+<details><summary>버전과 실행 상태</summary><pre>{
+  &quot;schema_version&quot;: &quot;p013-report-v1&quot;,
+  &quot;manifest_sha256&quot;: &quot;007f38f7c5ae6f6de30baff8762717db87b3e757218457b334bc14109e8fb514&quot;,
+  &quot;packet_sha256&quot;: &quot;ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235&quot;,
+  &quot;model_requests&quot;: 1,
+  &quot;pending&quot;: null,
+  &quot;unresolved&quot;: true,
+  &quot;gates&quot;: {
+    &quot;extraction&quot;: {
+      &quot;expected&quot;: 16,
+      &quot;dispatched&quot;: 1,
+      &quot;passed&quot;: 1,
+      &quot;status&quot;: &quot;NOT_PASSED&quot;
+    },
+    &quot;judge&quot;: {
+      &quot;expected&quot;: 68,
+      &quot;dispatched&quot;: 0,
+      &quot;passed&quot;: 0,
+      &quot;status&quot;: &quot;NOT_PASSED&quot;
+    }
+  },
+  &quot;ground_truth_approval&quot;: &quot;version-bound human sidecar&quot;,
+  &quot;actual_rag_evaluated&quot;: false,
+  &quot;model_quality_generalization&quot;: false
+}</pre></details></html>

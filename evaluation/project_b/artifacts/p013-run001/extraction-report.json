@@ -1,0 +1,117 @@
+{
+  "schema_version": "p013-report-v1",
+  "manifest_sha256": "007f38f7c5ae6f6de30baff8762717db87b3e757218457b334bc14109e8fb514",
+  "packet_sha256": "ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235",
+  "model_requests": 1,
+  "pending": null,
+  "unresolved": true,
+  "gates": {
+    "extraction": {
+      "expected": 16,
+      "dispatched": 1,
+      "passed": 1,
+      "status": "NOT_PASSED"
+    },
+    "judge": {
+      "expected": 68,
+      "dispatched": 0,
+      "passed": 0,
+      "status": "NOT_PASSED"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "extract01-r1",
+      "stage": "extraction",
+      "role": "extraction",
+      "question": "연차 이월 한도와 기한은?",
+      "data": {
+        "question": "연차 이월 한도와 기한은?",
+        "answer": "연차는 최대 5일 이월할 수 있습니다. 이월 연차는 다음 해 3월 31일까지 사용해야 합니다."
+      },
+      "result_status": "valid",
+      "comparison": {
+        "status": "pass",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "exact_diagnostic": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "status": "complete",
+          "matched_edges": [
+            [
+              "1",
+              "extract01-c1"
+            ],
+            [
+              "2",
+              "extract01-c2"
+            ]
+          ]
+        },
+        "expected_claims": [
+          {
+            "id": "extract01-c1",
+            "text": "연차는 최대 5일 이월할 수 있습니다.",
+            "occurrences": [
+              {
+                "start": 0,
+                "end": 21,
+                "quote": "연차는 최대 5일 이월할 수 있습니다."
+              }
+            ]
+          },
+          {
+            "id": "extract01-c2",
+            "text": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+            "occurrences": [
+              {
+                "start": 22,
+                "end": 52,
+                "quote": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다."
+              }
+            ]
+          }
+        ],
+        "generated_claims": [
+          {
+            "id": "1",
+            "text": "연차는 최대 5일 이월할 수 있습니다.",
+            "occurrences": [
+              {
+                "start": 0,
+                "end": 21,
+                "quote": "연차는 최대 5일 이월할 수 있습니다.",
+                "quote_sha256": "d3935ac3ed7083c69dbdeb7812dfa1ce0e689e2d541fd83e8d39d46c4f9386a4"
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "text": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+            "occurrences": [
+              {
+                "start": 22,
+                "end": 52,
+                "quote": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+                "quote_sha256": "7656b018a453d290f3d1e8ec29f8601d4861bff41f114819e36a0222549e7bb7"
+              }
+            ]
+          }
+        ],
+        "human_semantic_review": null,
+        "reason": "exact text and all occurrence spans agree"
+      },
+      "seconds": 21.761621542,
+      "artifact": "calls/001.json"
+    }
+  ],
+  "ground_truth_approval": "version-bound human sidecar",
+  "actual_rag_evaluated": false,
+  "model_quality_generalization": false
+}

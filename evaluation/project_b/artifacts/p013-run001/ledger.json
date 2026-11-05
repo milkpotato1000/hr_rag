@@ -1,0 +1,19 @@
+{
+  "manifest_sha256": "007f38f7c5ae6f6de30baff8762717db87b3e757218457b334bc14109e8fb514",
+  "calls": [
+    {
+      "sequence": 1,
+      "case_id": "extract01-r1",
+      "stage": "extraction",
+      "role": "extraction",
+      "payload_sha256": "64f65bc0bfb384cb86cddc367de6f759084991a7bd6c17737d7a2556cc99dd63",
+      "started_at": 1793868385.93001,
+      "artifact": "calls/001.json",
+      "artifact_sha256": "570bb990dfc8f648578d772c0d73aa09daf4e4918d3e78f3bea19bb886fe8418",
+      "status": "valid"
+    }
+  ],
+  "pending": null,
+  "unresolved": true,
+  "started_at": 1793868385.93001
+}
