@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "007f38f7c5ae6f6de30baff8762717db87b3e757218457b334bc14109e8fb514",
+  "tests": 16,
+  "preparation_regression_tests": 41,
+  "independent_copy_replay": true,
+  "model_calls": 0,
+  "scope": "Offline schema, arithmetic, provenance, tokenizer, export validation and extraction/judge runtime gates. S4 live integration remains disabled pending S2/S3.",
+  "evidence_files": {
+    "s1-evidence/preservation-s1.json": "ad50d155972f126012882928501a9c52f89f232b0e57b69da3a2fd70cfb5be17",
+    "s1-evidence/offline-replay-s1.json": "2f1980a3e87ca21131a9eb33d5d9579ada78da138226407a803d2e92f37cb0fe",
+    "s1-evidence/preparation-regression.log": "fad45578269dfe96a89af9fcc0bec7ebd79f91ee94f5fec6703eb229599668d7",
+    "s1-evidence/tokenizer-historical-check.json": "d204faa95a22b70dba57872abdd431fda5bf5ba992336c1a81131daeed6114fa",
+    "s1-evidence/unit-tests-final.log": "fed2cf3f4ca78b3018f842e8c65ecbb0698c32be05efe7bdd0bef33ceac59c37"
+  }
+}

@@ -1,0 +1,2150 @@
+{
+  "extract01-r1": {
+    "id": "extract01",
+    "question": "연차 이월 한도와 기한은?",
+    "fixed_answer": "연차는 최대 5일 이월할 수 있습니다. 이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+    "answer_sha256": "b5d005705bc3c44804a052b76f446746f5e03fd931ccadb2d6a0d10195449525",
+    "tags": [
+      "multiple_facts",
+      "number",
+      "deadline"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract01-c1",
+        "text": "연차는 최대 5일 이월할 수 있습니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 21,
+            "quote": "연차는 최대 5일 이월할 수 있습니다."
+          }
+        ]
+      },
+      {
+        "id": "extract01-c2",
+        "text": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+        "occurrences": [
+          {
+            "start": 22,
+            "end": 52,
+            "quote": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract01-r2": {
+    "id": "extract01",
+    "question": "연차 이월 한도와 기한은?",
+    "fixed_answer": "연차는 최대 5일 이월할 수 있습니다. 이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+    "answer_sha256": "b5d005705bc3c44804a052b76f446746f5e03fd931ccadb2d6a0d10195449525",
+    "tags": [
+      "multiple_facts",
+      "number",
+      "deadline"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract01-c1",
+        "text": "연차는 최대 5일 이월할 수 있습니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 21,
+            "quote": "연차는 최대 5일 이월할 수 있습니다."
+          }
+        ]
+      },
+      {
+        "id": "extract01-c2",
+        "text": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+        "occurrences": [
+          {
+            "start": 22,
+            "end": 52,
+            "quote": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract02-r1": {
+    "id": "extract02",
+    "question": "수습 직원도 생일휴가 대상인가요?",
+    "fixed_answer": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+    "answer_sha256": "269d1e95bd4d339b3af65253460979c9d217ce3d5eeb7ec0a6ad8e015a384bdd",
+    "tags": [
+      "negation",
+      "eligibility"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract02-c1",
+        "text": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 29,
+            "quote": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract02-r2": {
+    "id": "extract02",
+    "question": "수습 직원도 생일휴가 대상인가요?",
+    "fixed_answer": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+    "answer_sha256": "269d1e95bd4d339b3af65253460979c9d217ce3d5eeb7ec0a6ad8e015a384bdd",
+    "tags": [
+      "negation",
+      "eligibility"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract02-c1",
+        "text": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 29,
+            "quote": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract03-r1": {
+    "id": "extract03",
+    "question": "연차 이월 한도는?",
+    "fixed_answer": "연차 이월 한도는 최대 5일입니다. 연차는 최대 5일까지만 이월할 수 있습니다.",
+    "answer_sha256": "35f366fd94e8d092465fb789a0536292f2c8a090e48b1f1a9dcddc79c5eeb685",
+    "tags": [
+      "semantic_duplicate"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract03-c1",
+        "text": "연차 이월 한도는 최대 5일입니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 19,
+            "quote": "연차 이월 한도는 최대 5일입니다."
+          },
+          {
+            "start": 20,
+            "end": 44,
+            "quote": "연차는 최대 5일까지만 이월할 수 있습니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract03-r2": {
+    "id": "extract03",
+    "question": "연차 이월 한도는?",
+    "fixed_answer": "연차 이월 한도는 최대 5일입니다. 연차는 최대 5일까지만 이월할 수 있습니다.",
+    "answer_sha256": "35f366fd94e8d092465fb789a0536292f2c8a090e48b1f1a9dcddc79c5eeb685",
+    "tags": [
+      "semantic_duplicate"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract03-c1",
+        "text": "연차 이월 한도는 최대 5일입니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 19,
+            "quote": "연차 이월 한도는 최대 5일입니다."
+          },
+          {
+            "start": 20,
+            "end": 44,
+            "quote": "연차는 최대 5일까지만 이월할 수 있습니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract04-r1": {
+    "id": "extract04",
+    "question": "연차 이월 한도는?",
+    "fixed_answer": "연차 이월 한도는 최대 10일입니다.",
+    "answer_sha256": "be0d96533e8c8702a4592d606d0ec121218194064c19e94b8838ac79a4162733",
+    "tags": [
+      "preserve_factual_error"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract04-c1",
+        "text": "연차 이월 한도는 최대 10일입니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 20,
+            "quote": "연차 이월 한도는 최대 10일입니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract04-r2": {
+    "id": "extract04",
+    "question": "연차 이월 한도는?",
+    "fixed_answer": "연차 이월 한도는 최대 10일입니다.",
+    "answer_sha256": "be0d96533e8c8702a4592d606d0ec121218194064c19e94b8838ac79a4162733",
+    "tags": [
+      "preserve_factual_error"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract04-c1",
+        "text": "연차 이월 한도는 최대 10일입니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 20,
+            "quote": "연차 이월 한도는 최대 10일입니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract05-r1": {
+    "id": "extract05",
+    "question": "시스템 장애 임시 기록이면 승인이 면제되나요?",
+    "fixed_answer": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않습니다.",
+    "answer_sha256": "df192eb69793e95dc9030a8091d1682102cf04bdf0123e3fdff3a39f48d096ec",
+    "tags": [
+      "conditional_relation",
+      "negation"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract05-c1",
+        "text": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않습니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 44,
+            "quote": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않습니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract05-r2": {
+    "id": "extract05",
+    "question": "시스템 장애 임시 기록이면 승인이 면제되나요?",
+    "fixed_answer": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않습니다.",
+    "answer_sha256": "df192eb69793e95dc9030a8091d1682102cf04bdf0123e3fdff3a39f48d096ec",
+    "tags": [
+      "conditional_relation",
+      "negation"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract05-c1",
+        "text": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않습니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 44,
+            "quote": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않습니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract06-r1": {
+    "id": "extract06",
+    "question": "생일휴가 규정을 알려주세요.",
+    "fixed_answer": "확인해 드리겠습니다.",
+    "answer_sha256": "77ea468fb46a8b474bca0efc7f5ad22040eb92b1e98085e95f985b32008e6836",
+    "tags": [
+      "no_factual_claim"
+    ],
+    "expected_claims": [],
+    "human_approval": null
+  },
+  "extract06-r2": {
+    "id": "extract06",
+    "question": "생일휴가 규정을 알려주세요.",
+    "fixed_answer": "확인해 드리겠습니다.",
+    "answer_sha256": "77ea468fb46a8b474bca0efc7f5ad22040eb92b1e98085e95f985b32008e6836",
+    "tags": [
+      "no_factual_claim"
+    ],
+    "expected_claims": [],
+    "human_approval": null
+  },
+  "extract07-r1": {
+    "id": "extract07",
+    "question": "생일 특별휴가는 누가 며칠 받고 언제 신청해서 사용하나요?",
+    "fixed_answer": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다. 생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다. 수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다. 생일 특별휴가는 생일이 속한 달에 사용해야 합니다. 생일 특별휴가는 근무일에 사용해야 합니다. 생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다.",
+    "answer_sha256": "b090c8bc42faf597fc9f038011979740138296fa6167e4f4527718ccd78d33f9",
+    "tags": [
+      "six_atomic_facts",
+      "scope_preservation"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract07-c1",
+        "text": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 34,
+            "quote": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c2",
+        "text": "생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다.",
+        "occurrences": [
+          {
+            "start": 35,
+            "end": 66,
+            "quote": "생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c3",
+        "text": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+        "occurrences": [
+          {
+            "start": 67,
+            "end": 96,
+            "quote": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c4",
+        "text": "생일 특별휴가는 생일이 속한 달에 사용해야 합니다.",
+        "occurrences": [
+          {
+            "start": 97,
+            "end": 125,
+            "quote": "생일 특별휴가는 생일이 속한 달에 사용해야 합니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c5",
+        "text": "생일 특별휴가는 근무일에 사용해야 합니다.",
+        "occurrences": [
+          {
+            "start": 126,
+            "end": 149,
+            "quote": "생일 특별휴가는 근무일에 사용해야 합니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c6",
+        "text": "생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다.",
+        "occurrences": [
+          {
+            "start": 150,
+            "end": 181,
+            "quote": "생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract07-r2": {
+    "id": "extract07",
+    "question": "생일 특별휴가는 누가 며칠 받고 언제 신청해서 사용하나요?",
+    "fixed_answer": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다. 생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다. 수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다. 생일 특별휴가는 생일이 속한 달에 사용해야 합니다. 생일 특별휴가는 근무일에 사용해야 합니다. 생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다.",
+    "answer_sha256": "b090c8bc42faf597fc9f038011979740138296fa6167e4f4527718ccd78d33f9",
+    "tags": [
+      "six_atomic_facts",
+      "scope_preservation"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract07-c1",
+        "text": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 34,
+            "quote": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c2",
+        "text": "생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다.",
+        "occurrences": [
+          {
+            "start": 35,
+            "end": 66,
+            "quote": "생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c3",
+        "text": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+        "occurrences": [
+          {
+            "start": 67,
+            "end": 96,
+            "quote": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c4",
+        "text": "생일 특별휴가는 생일이 속한 달에 사용해야 합니다.",
+        "occurrences": [
+          {
+            "start": 97,
+            "end": 125,
+            "quote": "생일 특별휴가는 생일이 속한 달에 사용해야 합니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c5",
+        "text": "생일 특별휴가는 근무일에 사용해야 합니다.",
+        "occurrences": [
+          {
+            "start": 126,
+            "end": 149,
+            "quote": "생일 특별휴가는 근무일에 사용해야 합니다."
+          }
+        ]
+      },
+      {
+        "id": "extract07-c6",
+        "text": "생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다.",
+        "occurrences": [
+          {
+            "start": 150,
+            "end": 181,
+            "quote": "생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract08-r1": {
+    "id": "extract08",
+    "question": "생일휴가 사용에 팀장 승인이 필요한가요?",
+    "fixed_answer": "생일 특별휴가를 사용할 때 팀장 승인은 필요 없습니다.",
+    "answer_sha256": "6c9b84dd986410e17aab3ddfa577bfb1be2a8292557b95d67030f14bd6597283",
+    "tags": [
+      "preserve_false_negation"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract08-c1",
+        "text": "생일 특별휴가를 사용할 때 팀장 승인은 필요 없습니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 30,
+            "quote": "생일 특별휴가를 사용할 때 팀장 승인은 필요 없습니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "extract08-r2": {
+    "id": "extract08",
+    "question": "생일휴가 사용에 팀장 승인이 필요한가요?",
+    "fixed_answer": "생일 특별휴가를 사용할 때 팀장 승인은 필요 없습니다.",
+    "answer_sha256": "6c9b84dd986410e17aab3ddfa577bfb1be2a8292557b95d67030f14bd6597283",
+    "tags": [
+      "preserve_false_negation"
+    ],
+    "expected_claims": [
+      {
+        "id": "extract08-c1",
+        "text": "생일 특별휴가를 사용할 때 팀장 승인은 필요 없습니다.",
+        "occurrences": [
+          {
+            "start": 0,
+            "end": 30,
+            "quote": "생일 특별휴가를 사용할 때 팀장 승인은 필요 없습니다."
+          }
+        ]
+      }
+    ],
+    "human_approval": null
+  },
+  "judge01-r1": {
+    "labels": {
+      "judge01": "entailment"
+    }
+  },
+  "judge01-r2": {
+    "labels": {
+      "judge01": "entailment"
+    }
+  },
+  "judge02-r1": {
+    "labels": {
+      "judge02": "neutral"
+    }
+  },
+  "judge02-r2": {
+    "labels": {
+      "judge02": "neutral"
+    }
+  },
+  "judge03-r1": {
+    "labels": {
+      "judge03": "contradiction"
+    }
+  },
+  "judge03-r2": {
+    "labels": {
+      "judge03": "contradiction"
+    }
+  },
+  "judge04-r1": {
+    "labels": {
+      "judge04": "entailment"
+    }
+  },
+  "judge04-r2": {
+    "labels": {
+      "judge04": "entailment"
+    }
+  },
+  "judge05-r1": {
+    "labels": {
+      "judge05": "neutral"
+    }
+  },
+  "judge05-r2": {
+    "labels": {
+      "judge05": "neutral"
+    }
+  },
+  "judge06-r1": {
+    "labels": {
+      "judge06": "contradiction"
+    }
+  },
+  "judge06-r2": {
+    "labels": {
+      "judge06": "contradiction"
+    }
+  },
+  "judge07-r1": {
+    "labels": {
+      "judge07": "entailment"
+    }
+  },
+  "judge07-r2": {
+    "labels": {
+      "judge07": "entailment"
+    }
+  },
+  "judge08-r1": {
+    "labels": {
+      "judge08": "neutral"
+    }
+  },
+  "judge08-r2": {
+    "labels": {
+      "judge08": "neutral"
+    }
+  },
+  "judge09-r1": {
+    "labels": {
+      "judge09": "contradiction"
+    }
+  },
+  "judge09-r2": {
+    "labels": {
+      "judge09": "contradiction"
+    }
+  },
+  "judge10-r1": {
+    "labels": {
+      "judge10": "entailment"
+    }
+  },
+  "judge10-r2": {
+    "labels": {
+      "judge10": "entailment"
+    }
+  },
+  "judge11-r1": {
+    "labels": {
+      "judge11": "neutral"
+    }
+  },
+  "judge11-r2": {
+    "labels": {
+      "judge11": "neutral"
+    }
+  },
+  "judge12-r1": {
+    "labels": {
+      "judge12": "contradiction"
+    }
+  },
+  "judge12-r2": {
+    "labels": {
+      "judge12": "contradiction"
+    }
+  },
+  "judge13-r1": {
+    "labels": {
+      "judge13": "entailment"
+    }
+  },
+  "judge13-r2": {
+    "labels": {
+      "judge13": "entailment"
+    }
+  },
+  "judge14-r1": {
+    "labels": {
+      "judge14": "neutral"
+    }
+  },
+  "judge14-r2": {
+    "labels": {
+      "judge14": "neutral"
+    }
+  },
+  "judge15-r1": {
+    "labels": {
+      "judge15": "contradiction"
+    }
+  },
+  "judge15-r2": {
+    "labels": {
+      "judge15": "contradiction"
+    }
+  },
+  "judge16-r1": {
+    "labels": {
+      "judge16": "entailment"
+    }
+  },
+  "judge16-r2": {
+    "labels": {
+      "judge16": "entailment"
+    }
+  },
+  "judge17-r1": {
+    "labels": {
+      "judge17": "neutral"
+    }
+  },
+  "judge17-r2": {
+    "labels": {
+      "judge17": "neutral"
+    }
+  },
+  "judge18-r1": {
+    "labels": {
+      "judge18": "contradiction"
+    }
+  },
+  "judge18-r2": {
+    "labels": {
+      "judge18": "contradiction"
+    }
+  },
+  "match01-r1": {
+    "pairs": {
+      "g:ref": "equivalent"
+    }
+  },
+  "match01-r2": {
+    "pairs": {
+      "g:ref": "equivalent"
+    }
+  },
+  "match02-r1": {
+    "pairs": {
+      "g:ref": "different"
+    }
+  },
+  "match02-r2": {
+    "pairs": {
+      "g:ref": "different"
+    }
+  },
+  "match03-r1": {
+    "pairs": {
+      "g:ref": "different"
+    }
+  },
+  "match03-r2": {
+    "pairs": {
+      "g:ref": "different"
+    }
+  },
+  "match04-r1": {
+    "pairs": {
+      "g:ref": "partial"
+    }
+  },
+  "match04-r2": {
+    "pairs": {
+      "g:ref": "partial"
+    }
+  },
+  "match05-r1": {
+    "pairs": {
+      "g:ref": "equivalent"
+    }
+  },
+  "match05-r2": {
+    "pairs": {
+      "g:ref": "equivalent"
+    }
+  },
+  "match06-r1": {
+    "pairs": {
+      "g:ref": "different"
+    }
+  },
+  "match06-r2": {
+    "pairs": {
+      "g:ref": "different"
+    }
+  },
+  "match07-r1": {
+    "pairs": {
+      "g:ref": "uncertain"
+    }
+  },
+  "match07-r2": {
+    "pairs": {
+      "g:ref": "uncertain"
+    }
+  },
+  "match08-r1": {
+    "pairs": {
+      "g:ref": "different"
+    }
+  },
+  "match08-r2": {
+    "pairs": {
+      "g:ref": "different"
+    }
+  },
+  "birthday_A-judge-r1": {
+    "labels": {
+      "g1": "entailment",
+      "g2": "entailment",
+      "g3": "entailment"
+    },
+    "scenario": {
+      "id": "birthday_A",
+      "scenario": "all_contexts_all_claims",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다. 생일휴가는 생일이 속한 달에 사용해야 한다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2",
+        "ctx3"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "4daa41030197efcdeec2be6084195172989a3adcf491ddd23bad4fbe0059b971",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          },
+          {
+            "claim_id": "g3",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx3"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 3,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 3,
+          "valid_verdicts": 3,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ],
+            [
+              "g3",
+              "ref3"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [],
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1.0,
+          "f1": 1.0,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_A-judge-r2": {
+    "labels": {
+      "g1": "entailment",
+      "g2": "entailment",
+      "g3": "entailment"
+    },
+    "scenario": {
+      "id": "birthday_A",
+      "scenario": "all_contexts_all_claims",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다. 생일휴가는 생일이 속한 달에 사용해야 한다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2",
+        "ctx3"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "4daa41030197efcdeec2be6084195172989a3adcf491ddd23bad4fbe0059b971",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          },
+          {
+            "claim_id": "g3",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx3"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 3,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 3,
+          "valid_verdicts": 3,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ],
+            [
+              "g3",
+              "ref3"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [],
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1.0,
+          "f1": 1.0,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_A-matching-r1": {
+    "pairs": {
+      "g1:ref1": "equivalent",
+      "g1:ref2": "different",
+      "g1:ref3": "different",
+      "g2:ref1": "different",
+      "g2:ref2": "equivalent",
+      "g2:ref3": "different",
+      "g3:ref1": "different",
+      "g3:ref2": "different",
+      "g3:ref3": "equivalent"
+    },
+    "scenario": {
+      "id": "birthday_A",
+      "scenario": "all_contexts_all_claims",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다. 생일휴가는 생일이 속한 달에 사용해야 한다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2",
+        "ctx3"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "4daa41030197efcdeec2be6084195172989a3adcf491ddd23bad4fbe0059b971",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          },
+          {
+            "claim_id": "g3",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx3"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 3,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 3,
+          "valid_verdicts": 3,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ],
+            [
+              "g3",
+              "ref3"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [],
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1.0,
+          "f1": 1.0,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_A-matching-r2": {
+    "pairs": {
+      "g1:ref1": "equivalent",
+      "g1:ref2": "different",
+      "g1:ref3": "different",
+      "g2:ref1": "different",
+      "g2:ref2": "equivalent",
+      "g2:ref3": "different",
+      "g3:ref1": "different",
+      "g3:ref2": "different",
+      "g3:ref3": "equivalent"
+    },
+    "scenario": {
+      "id": "birthday_A",
+      "scenario": "all_contexts_all_claims",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다. 생일휴가는 생일이 속한 달에 사용해야 한다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2",
+        "ctx3"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "4daa41030197efcdeec2be6084195172989a3adcf491ddd23bad4fbe0059b971",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          },
+          {
+            "claim_id": "g3",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx3"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 3,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 3,
+          "valid_verdicts": 3,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ],
+            [
+              "g3",
+              "ref3"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [],
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1.0,
+          "f1": 1.0,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_B-judge-r1": {
+    "labels": {
+      "g1": "entailment",
+      "g2": "entailment",
+      "g3": "neutral"
+    },
+    "scenario": {
+      "id": "birthday_B",
+      "scenario": "missing_context_full_answer",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다. 생일휴가는 생일이 속한 달에 사용해야 한다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "e9e98741a49e48f13c9a74bb49349169080820f3f095971d0dd922748b26b427",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          },
+          {
+            "claim_id": "g3",
+            "label": "neutral",
+            "evidence_context_ids": []
+          }
+        ],
+        "faithfulness": {
+          "score": 0.6666666666666666,
+          "neutral_rate": 0.3333333333333333,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 1,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 3,
+          "valid_verdicts": 3,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ],
+            [
+              "g3",
+              "ref3"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [],
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1.0,
+          "f1": 1.0,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_B-judge-r2": {
+    "labels": {
+      "g1": "entailment",
+      "g2": "entailment",
+      "g3": "neutral"
+    },
+    "scenario": {
+      "id": "birthday_B",
+      "scenario": "missing_context_full_answer",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다. 생일휴가는 생일이 속한 달에 사용해야 한다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "e9e98741a49e48f13c9a74bb49349169080820f3f095971d0dd922748b26b427",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          },
+          {
+            "claim_id": "g3",
+            "label": "neutral",
+            "evidence_context_ids": []
+          }
+        ],
+        "faithfulness": {
+          "score": 0.6666666666666666,
+          "neutral_rate": 0.3333333333333333,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 1,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 3,
+          "valid_verdicts": 3,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ],
+            [
+              "g3",
+              "ref3"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [],
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1.0,
+          "f1": 1.0,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_B-matching-r1": {
+    "pairs": {
+      "g1:ref1": "equivalent",
+      "g1:ref2": "different",
+      "g1:ref3": "different",
+      "g2:ref1": "different",
+      "g2:ref2": "equivalent",
+      "g2:ref3": "different",
+      "g3:ref1": "different",
+      "g3:ref2": "different",
+      "g3:ref3": "equivalent"
+    },
+    "scenario": {
+      "id": "birthday_B",
+      "scenario": "missing_context_full_answer",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다. 생일휴가는 생일이 속한 달에 사용해야 한다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "e9e98741a49e48f13c9a74bb49349169080820f3f095971d0dd922748b26b427",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          },
+          {
+            "claim_id": "g3",
+            "label": "neutral",
+            "evidence_context_ids": []
+          }
+        ],
+        "faithfulness": {
+          "score": 0.6666666666666666,
+          "neutral_rate": 0.3333333333333333,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 1,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 3,
+          "valid_verdicts": 3,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ],
+            [
+              "g3",
+              "ref3"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [],
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1.0,
+          "f1": 1.0,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_B-matching-r2": {
+    "pairs": {
+      "g1:ref1": "equivalent",
+      "g1:ref2": "different",
+      "g1:ref3": "different",
+      "g2:ref1": "different",
+      "g2:ref2": "equivalent",
+      "g2:ref3": "different",
+      "g3:ref1": "different",
+      "g3:ref2": "different",
+      "g3:ref3": "equivalent"
+    },
+    "scenario": {
+      "id": "birthday_B",
+      "scenario": "missing_context_full_answer",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다. 생일휴가는 생일이 속한 달에 사용해야 한다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "e9e98741a49e48f13c9a74bb49349169080820f3f095971d0dd922748b26b427",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          },
+          {
+            "claim_id": "g3",
+            "label": "neutral",
+            "evidence_context_ids": []
+          }
+        ],
+        "faithfulness": {
+          "score": 0.6666666666666666,
+          "neutral_rate": 0.3333333333333333,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 1,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 3,
+          "valid_verdicts": 3,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ],
+            [
+              "g3",
+              "ref3"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [],
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1.0,
+          "f1": 1.0,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_C-judge-r1": {
+    "labels": {
+      "g1": "entailment",
+      "g2": "entailment"
+    },
+    "scenario": {
+      "id": "birthday_C",
+      "scenario": "full_contexts_missing_answer_claim",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2",
+        "ctx3"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "5f4b8f178200af8239221d45b3eeb1303ec6f19383a2d4a055938e6c1ac09e1e",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 2,
+          "valid_verdicts": 2,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [
+            "ref3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_C-judge-r2": {
+    "labels": {
+      "g1": "entailment",
+      "g2": "entailment"
+    },
+    "scenario": {
+      "id": "birthday_C",
+      "scenario": "full_contexts_missing_answer_claim",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2",
+        "ctx3"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "5f4b8f178200af8239221d45b3eeb1303ec6f19383a2d4a055938e6c1ac09e1e",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 2,
+          "valid_verdicts": 2,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [
+            "ref3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_C-matching-r1": {
+    "pairs": {
+      "g1:ref1": "equivalent",
+      "g1:ref2": "different",
+      "g1:ref3": "different",
+      "g2:ref1": "different",
+      "g2:ref2": "equivalent",
+      "g2:ref3": "different"
+    },
+    "scenario": {
+      "id": "birthday_C",
+      "scenario": "full_contexts_missing_answer_claim",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2",
+        "ctx3"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "5f4b8f178200af8239221d45b3eeb1303ec6f19383a2d4a055938e6c1ac09e1e",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 2,
+          "valid_verdicts": 2,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [
+            "ref3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_C-matching-r2": {
+    "pairs": {
+      "g1:ref1": "equivalent",
+      "g1:ref2": "different",
+      "g1:ref3": "different",
+      "g2:ref1": "different",
+      "g2:ref2": "equivalent",
+      "g2:ref3": "different"
+    },
+    "scenario": {
+      "id": "birthday_C",
+      "scenario": "full_contexts_missing_answer_claim",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2",
+        "ctx3"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "5f4b8f178200af8239221d45b3eeb1303ec6f19383a2d4a055938e6c1ac09e1e",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 2,
+          "valid_verdicts": 2,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [
+            "ref3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_D-judge-r1": {
+    "labels": {
+      "g1": "entailment",
+      "g2": "entailment"
+    },
+    "scenario": {
+      "id": "birthday_D",
+      "scenario": "missing_context_and_answer_claim",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "bf049910d1196876d91c7def427069d58a11d0e49681e041cfa1dc287437e081",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 2,
+          "valid_verdicts": 2,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [
+            "ref3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_D-judge-r2": {
+    "labels": {
+      "g1": "entailment",
+      "g2": "entailment"
+    },
+    "scenario": {
+      "id": "birthday_D",
+      "scenario": "missing_context_and_answer_claim",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "bf049910d1196876d91c7def427069d58a11d0e49681e041cfa1dc287437e081",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 2,
+          "valid_verdicts": 2,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [
+            "ref3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_D-matching-r1": {
+    "pairs": {
+      "g1:ref1": "equivalent",
+      "g1:ref2": "different",
+      "g1:ref3": "different",
+      "g2:ref1": "different",
+      "g2:ref2": "equivalent",
+      "g2:ref3": "different"
+    },
+    "scenario": {
+      "id": "birthday_D",
+      "scenario": "missing_context_and_answer_claim",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "bf049910d1196876d91c7def427069d58a11d0e49681e041cfa1dc287437e081",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 2,
+          "valid_verdicts": 2,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [
+            "ref3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "status": "complete"
+        }
+      }
+    }
+  },
+  "birthday_D-matching-r2": {
+    "pairs": {
+      "g1:ref1": "equivalent",
+      "g1:ref2": "different",
+      "g1:ref3": "different",
+      "g2:ref1": "different",
+      "g2:ref2": "equivalent",
+      "g2:ref3": "different"
+    },
+    "scenario": {
+      "id": "birthday_D",
+      "scenario": "missing_context_and_answer_claim",
+      "answer": "생일휴가 신청 대상은 재직 기간이 3개월 이상인 직원이다. 생일휴가는 매년 1일 사용할 수 있다.",
+      "generated_claim_ids": [
+        "g1",
+        "g2"
+      ],
+      "delivered_context_ids": [
+        "ctx1",
+        "ctx2"
+      ],
+      "reference_claim_ids": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "input_sha256": "bf049910d1196876d91c7def427069d58a11d0e49681e041cfa1dc287437e081",
+      "expected": {
+        "claim_verdicts": [
+          {
+            "claim_id": "g1",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx1"
+            ]
+          },
+          {
+            "claim_id": "g2",
+            "label": "entailment",
+            "evidence_context_ids": [
+              "ctx2"
+            ]
+          }
+        ],
+        "faithfulness": {
+          "score": 1.0,
+          "neutral_rate": 0.0,
+          "contradiction_rate": 0,
+          "supported": 2,
+          "neutral": 0,
+          "contradiction": 0,
+          "indeterminate": 0,
+          "total": 2,
+          "valid_verdicts": 2,
+          "coverage": 1,
+          "status": "complete"
+        },
+        "correctness": {
+          "matched_edges": [
+            [
+              "g1",
+              "ref1"
+            ],
+            [
+              "g2",
+              "ref2"
+            ]
+          ],
+          "unmatched_generated_ids": [],
+          "unmatched_reference_ids": [
+            "ref3"
+          ],
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "status": "complete"
+        }
+      }
+    }
+  }
+}

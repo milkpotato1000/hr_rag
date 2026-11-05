@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "DRAFT_EXPECTATIONS_NOT_EXECUTED",
+  "synthetic": true,
+  "human_approval": null,
+  "cases": [
+    {
+      "id": "match01",
+      "question": "이월 연차의 사용 기한은?",
+      "reference": "이월 연차는 다음 해 3월 31일까지 사용한다.",
+      "generated": "이월한 연차의 사용 마감일은 다음 해 3월 31일이다.",
+      "expected_label": "equivalent",
+      "reason": "같은 대상과 기한을 다른 표현으로 말한다."
+    },
+    {
+      "id": "match02",
+      "question": "이월 가능한 연차는 며칠인가?",
+      "reference": "연차 이월 한도는 최대 5일이다.",
+      "generated": "연차 이월 한도는 최대 10일이다.",
+      "expected_label": "different",
+      "reason": "5일과10일은 명시적으로 다른 수치다."
+    },
+    {
+      "id": "match03",
+      "question": "생일휴가에 팀장 승인이 필요한가?",
+      "reference": "생일휴가 사용에는 팀장 승인이 필요하다.",
+      "generated": "생일휴가 사용에는 팀장 승인이 필요하지 않다.",
+      "expected_label": "different",
+      "reason": "필요와 불필요가 반대다."
+    },
+    {
+      "id": "match04",
+      "question": "휴가는 언제까지 신청하는가?",
+      "reference": "휴가는 사용 3영업일 전까지 신청한다.",
+      "generated": "휴가는 사용 전에 신청한다.",
+      "expected_label": "partial",
+      "reason": "사전 신청은 보존하지만3영업일 기한이 빠졌다. 이번 정책에서 명확한 정보 손실은 partial이다."
+    },
+    {
+      "id": "match05",
+      "question": "수습 직원도 생일휴가를 받는가?",
+      "reference": "수습 중인 직원은 생일휴가 대상에서 제외된다.",
+      "generated": "수습 중인 직원은 생일휴가를 받을 수 없다.",
+      "expected_label": "equivalent",
+      "reason": "동일 대상/제도/제외 의미다."
+    },
+    {
+      "id": "match06",
+      "question": "휴가는 언제까지 신청하는가?",
+      "reference": "휴가는 사용 3영업일 전까지 신청한다.",
+      "generated": "휴가는 휴가 시스템에서 신청한다.",
+      "expected_label": "different",
+      "reason": "신청 시점과 신청 경로는 다른 사실이다. 거짓이라는 뜻은 아니다."
+    },
+    {
+      "id": "match07",
+      "question": "연차와 생일휴가 중 어느 휴가가 이월 가능한가?",
+      "reference": "연차는 최대 5일 이월할 수 있다.",
+      "generated": "그 휴가는 최대 5일 이월할 수 있다.",
+      "expected_label": "uncertain",
+      "reason": "선행 문맥이 없어 그 휴가가 어느 제도인지 확정할 수 없다."
+    },
+    {
+      "id": "match08",
+      "question": "시스템 장애 임시 기록이면 승인이 면제되는가?",
+      "reference": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않는다.",
+      "generated": "생일휴가 신청 시스템 장애로 임시 기록을 남기면 팀장 승인이 면제된다.",
+      "expected_label": "different",
+      "reason": "동일 조건에서 승인 면제 여부가 반대다."
+    }
+  ]
+}
