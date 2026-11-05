@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "status": "DRAFT_EXPECTATIONS_NOT_EXECUTED",
+  "author": "Codex",
+  "dataset_usage": "public learning/development, not independent holdout",
+  "extractor_input_fields": [
+    "question",
+    "fixed_answer"
+  ],
+  "hidden_from_extractor": [
+    "expected_claims",
+    "tags",
+    "human_approval",
+    "source",
+    "ground_truth"
+  ],
+  "expected_unique_claim_counts": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    0,
+    6,
+    1
+  ],
+  "cases": [
+    {
+      "id": "extract01",
+      "question": "연차 이월 한도와 기한은?",
+      "fixed_answer": "연차는 최대 5일 이월할 수 있습니다. 이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+      "answer_sha256": "b5d005705bc3c44804a052b76f446746f5e03fd931ccadb2d6a0d10195449525",
+      "tags": [
+        "multiple_facts",
+        "number",
+        "deadline"
+      ],
+      "expected_claims": [
+        {
+          "id": "extract01-c1",
+          "text": "연차는 최대 5일 이월할 수 있습니다.",
+          "occurrences": [
+            {
+              "start": 0,
+              "end": 21,
+              "quote": "연차는 최대 5일 이월할 수 있습니다."
+            }
+          ]
+        },
+        {
+          "id": "extract01-c2",
+          "text": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+          "occurrences": [
+            {
+              "start": 22,
+              "end": 52,
+              "quote": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다."
+            }
+          ]
+        }
+      ],
+      "human_approval": null
+    },
+    {
+      "id": "extract02",
+      "question": "수습 직원도 생일휴가 대상인가요?",
+      "fixed_answer": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+      "answer_sha256": "269d1e95bd4d339b3af65253460979c9d217ce3d5eeb7ec0a6ad8e015a384bdd",
+      "tags": [
+        "negation",
+        "eligibility"
+      ],
+      "expected_claims": [
+        {
+          "id": "extract02-c1",
+          "text": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+          "occurrences": [
+            {
+              "start": 0,
+              "end": 29,
+              "quote": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다."
+            }
+          ]
+        }
+      ],
+      "human_approval": null
+    },
+    {
+      "id": "extract03",
+      "question": "연차 이월 한도는?",
+      "fixed_answer": "연차 이월 한도는 최대 5일입니다. 연차는 최대 5일까지만 이월할 수 있습니다.",
+      "answer_sha256": "35f366fd94e8d092465fb789a0536292f2c8a090e48b1f1a9dcddc79c5eeb685",
+      "tags": [
+        "semantic_duplicate"
+      ],
+      "expected_claims": [
+        {
+          "id": "extract03-c1",
+          "text": "연차 이월 한도는 최대 5일입니다.",
+          "occurrences": [
+            {
+              "start": 0,
+              "end": 19,
+              "quote": "연차 이월 한도는 최대 5일입니다."
+            },
+            {
+              "start": 20,
+              "end": 44,
+              "quote": "연차는 최대 5일까지만 이월할 수 있습니다."
+            }
+          ]
+        }
+      ],
+      "human_approval": null
+    },
+    {
+      "id": "extract04",
+      "question": "연차 이월 한도는?",
+      "fixed_answer": "연차 이월 한도는 최대 10일입니다.",
+      "answer_sha256": "be0d96533e8c8702a4592d606d0ec121218194064c19e94b8838ac79a4162733",
+      "tags": [
+        "preserve_factual_error"
+      ],
+      "expected_claims": [
+        {
+          "id": "extract04-c1",
+          "text": "연차 이월 한도는 최대 10일입니다.",
+          "occurrences": [
+            {
+              "start": 0,
+              "end": 20,
+              "quote": "연차 이월 한도는 최대 10일입니다."
+            }
+          ]
+        }
+      ],
+      "human_approval": null
+    },
+    {
+      "id": "extract05",
+      "question": "시스템 장애 임시 기록이면 승인이 면제되나요?",
+      "fixed_answer": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않습니다.",
+      "answer_sha256": "df192eb69793e95dc9030a8091d1682102cf04bdf0123e3fdff3a39f48d096ec",
+      "tags": [
+        "conditional_relation",
+        "negation"
+      ],
+      "expected_claims": [
+        {
+          "id": "extract05-c1",
+          "text": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않습니다.",
+          "occurrences": [
+            {
+              "start": 0,
+              "end": 44,
+              "quote": "생일휴가 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인은 면제되지 않습니다."
+            }
+          ]
+        }
+      ],
+      "human_approval": null
+    },
+    {
+      "id": "extract06",
+      "question": "생일휴가 규정을 알려주세요.",
+      "fixed_answer": "확인해 드리겠습니다.",
+      "answer_sha256": "77ea468fb46a8b474bca0efc7f5ad22040eb92b1e98085e95f985b32008e6836",
+      "tags": [
+        "no_factual_claim"
+      ],
+      "expected_claims": [],
+      "human_approval": null
+    },
+    {
+      "id": "extract07",
+      "question": "생일 특별휴가는 누가 며칠 받고 언제 신청해서 사용하나요?",
+      "fixed_answer": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다. 생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다. 수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다. 생일 특별휴가는 생일이 속한 달에 사용해야 합니다. 생일 특별휴가는 근무일에 사용해야 합니다. 생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다.",
+      "answer_sha256": "b090c8bc42faf597fc9f038011979740138296fa6167e4f4527718ccd78d33f9",
+      "tags": [
+        "six_atomic_facts",
+        "scope_preservation"
+      ],
+      "expected_claims": [
+        {
+          "id": "extract07-c1",
+          "text": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다.",
+          "occurrences": [
+            {
+              "start": 0,
+              "end": 34,
+              "quote": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다."
+            }
+          ]
+        },
+        {
+          "id": "extract07-c2",
+          "text": "생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다.",
+          "occurrences": [
+            {
+              "start": 35,
+              "end": 66,
+              "quote": "생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다."
+            }
+          ]
+        },
+        {
+          "id": "extract07-c3",
+          "text": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+          "occurrences": [
+            {
+              "start": 67,
+              "end": 96,
+              "quote": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다."
+            }
+          ]
+        },
+        {
+          "id": "extract07-c4",
+          "text": "생일 특별휴가는 생일이 속한 달에 사용해야 합니다.",
+          "occurrences": [
+            {
+              "start": 97,
+              "end": 125,
+              "quote": "생일 특별휴가는 생일이 속한 달에 사용해야 합니다."
+            }
+          ]
+        },
+        {
+          "id": "extract07-c5",
+          "text": "생일 특별휴가는 근무일에 사용해야 합니다.",
+          "occurrences": [
+            {
+              "start": 126,
+              "end": 149,
+              "quote": "생일 특별휴가는 근무일에 사용해야 합니다."
+            }
+          ]
+        },
+        {
+          "id": "extract07-c6",
+          "text": "생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다.",
+          "occurrences": [
+            {
+              "start": 150,
+              "end": 181,
+              "quote": "생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다."
+            }
+          ]
+        }
+      ],
+      "human_approval": null
+    },
+    {
+      "id": "extract08",
+      "question": "생일휴가 사용에 팀장 승인이 필요한가요?",
+      "fixed_answer": "생일 특별휴가를 사용할 때 팀장 승인은 필요 없습니다.",
+      "answer_sha256": "6c9b84dd986410e17aab3ddfa577bfb1be2a8292557b95d67030f14bd6597283",
+      "tags": [
+        "preserve_false_negation"
+      ],
+      "expected_claims": [
+        {
+          "id": "extract08-c1",
+          "text": "생일 특별휴가를 사용할 때 팀장 승인은 필요 없습니다.",
+          "occurrences": [
+            {
+              "start": 0,
+              "end": 30,
+              "quote": "생일 특별휴가를 사용할 때 팀장 승인은 필요 없습니다."
+            }
+          ]
+        }
+      ],
+      "human_approval": null
+    }
+  ]
+}
