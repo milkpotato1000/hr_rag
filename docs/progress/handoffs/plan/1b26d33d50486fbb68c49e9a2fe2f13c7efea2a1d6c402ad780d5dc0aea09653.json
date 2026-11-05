@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "1308141b695708ab125c0a9ba1517156493d563b",
+  "document": "docs/planning/handoffs/P022.md",
+  "summary": "P022 atomic reference review READY: 45 to 57 claims, preserve run001/run002, no model calls",
+  "next_action": "Adopt exact READY plan; complete existing P021 C1, then implement and verify P022 run003",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T07:06:43.260241+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
