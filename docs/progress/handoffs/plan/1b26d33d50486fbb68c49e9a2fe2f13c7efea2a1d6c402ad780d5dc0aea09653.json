@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "1308141b695708ab125c0a9ba1517156493d563b",
+  "document": "docs/planning/handoffs/P022.md",
+  "summary": "P022 atomic reference review READY: 45 to 57 claims, preserve run001/run002, no model calls",
+  "next_action": "Adopt exact READY plan; complete existing P021 C1, then implement and verify P022 run003",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-05T07:06:43.260241+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-05T07:07:13.829429+00:00",
+      "evidence": "2026-11-05 host send_message_to_thread succeeded to verified existing HR dev with exact READY SHA 1308141b695708ab125c0a9ba1517156493d563b, P021 prerequisite and P022 run003 scope"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-05T07:10:07.713055+00:00",
+      "evidence": "2026-11-05 observed dev response confirming exact adoption and receipt.json/readme; committed adoption 4b47ecf9d2f8df1e5f829f892f27fe75b7a2ca54 points to READY 1308141b695708ab125c0a9ba1517156493d563b. P021 UI gate remains incomplete; run003 not created."
+    }
+  ]
+}
