@@ -26,7 +26,9 @@ python3 -B evaluation/project_b/preparation/prepare.py report --out evaluation/p
 
 기존 출력의 변경·알 수 없는 버전·동결 제안이나 부모 손상·schema 불일치를 거부합니다.
 run003에서 run/revise-ground는 모델 연결 전에 거부됩니다. 새 run003 자체의 실제
-화면/좁은 폭/키보드 확인은 아직 남아 있으며 run002의 사용자 관찰로 대신하지 않습니다.
+화면·좁은 폭·키보드 동작은2026-11-05 사용자가 직접 네 항목 모두 정상 확인했습니다.
+근거는 docs/verification/p022/run003-user-ui-observation.json이며, Codex 도구 검증이나
+정답 내용 승인으로 간주하지 않습니다. 이전 file URL 차단 증거는 보존합니다.
 
 ## 최신 검토본: P021 / run002
 

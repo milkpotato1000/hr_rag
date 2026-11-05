@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-05",
+  "observer": "human user",
+  "source": "Direct response to run003 UI observation question in this dev chat",
+  "reported_text": "run003을 직접 확인했고 네 항목 모두 정상",
+  "report": "evaluation/project_b/preparation/artifacts/run003/review.html",
+  "packet_sha256": "946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199",
+  "manifest_file_sha256": "aa7ac7eacb6e0b352b6df93c18146bc964debac3ab3f93c131609ef540d35184",
+  "checks": {
+    "question_navigation_57_claims_birthday_three_facts": "PASS",
+    "visible_source_quotes_initially_collapsed_experiment": "PASS",
+    "narrow_window_wrapping_no_horizontal_overflow": "PASS",
+    "tab_enter_space_disclosure": "PASS"
+  },
+  "observation_method": "Direct human observation; Codex did not perform browser UI verification",
+  "codex_browser_verification": false,
+  "run002_observation_reused": false,
+  "human_gt_approval": null,
+  "previous_policy_block_evidence": "docs/verification/p022/run003-ui-status.json",
+  "prior_failures_preserved": true
+}
