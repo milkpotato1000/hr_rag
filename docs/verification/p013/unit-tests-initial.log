@@ -1,0 +1,19 @@
+test_18_independent_arithmetic_fixtures (test_evaluator.EvaluatorTests) ... ok
+test_approved_bundle_offline_replay_and_tamper (test_evaluator.EvaluatorTests) ... ok
+test_extraction_semantics_not_self_approved (test_evaluator.EvaluatorTests) ... ok
+test_generation_export_snapshot_validation (test_evaluator.EvaluatorTests) ... ok
+test_html_escaping_and_no_fake_model_scores (test_evaluator.EvaluatorTests) ... ok
+test_input_isolation_and_full_reference_comparison (test_evaluator.EvaluatorTests) ... ok
+test_json_schema_and_span_failures (test_evaluator.EvaluatorTests) ... ok
+test_judge_context_only_and_label_rules (test_evaluator.EvaluatorTests) ... ok
+test_ledger_retry_pending_integrity_and_downstream_gate (test_evaluator.EvaluatorTests) ... ok
+test_matching_maximum_and_lexicographic_tie (test_evaluator.EvaluatorTests) ... ok
+test_policy_all_optional_missing_wrong_unknown_and_no_claims (test_evaluator.EvaluatorTests) ... ok
+test_scenarios_distinguish_context_and_answer_omission (test_evaluator.EvaluatorTests) ... ok
+test_tokenizer_30_historical_counts (test_evaluator.EvaluatorTests) ... ok
+test_zero_reference_and_scope_conflict (test_evaluator.EvaluatorTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.043s
+
+OK
