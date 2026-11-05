@@ -1,0 +1,24 @@
+{
+  "report": "evaluation/project_b/preparation/artifacts/run003/review.html",
+  "packet_sha256": "946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199",
+  "status": "NOT_OBSERVED_TOOL_FILE_URL_POLICY",
+  "actual_render": false,
+  "narrow_width": false,
+  "keyboard_disclosure": false,
+  "run002_user_observation_transferred": false,
+  "basis": "Existing P021 and 2026-11-05 attempts were blocked for file protocol, including an already-open run002 tab. No alternate surface/server/raw CDP workaround attempted. New run003 was not opened through the blocked route.",
+  "structural_only": {
+    "visible_claim_quotes": 57,
+    "visible_judgement_premises": 18,
+    "default_closed_details": 81,
+    "embedded_json_matches": true,
+    "question_navigation_and_previous_links": true
+  },
+  "required_human_check": [
+    "question navigation and 57 claims, including separate birthday tenure/annual day/probation facts",
+    "visible source quotes and initially collapsed experiment details",
+    "narrow window wrapping and no horizontal overflow",
+    "Tab focus and Enter/Space disclosure open/close"
+  ],
+  "human_gt_approval": null
+}

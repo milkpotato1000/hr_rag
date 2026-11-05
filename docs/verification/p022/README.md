@@ -1,3 +1,28 @@
+# P022 run003 구현과 검증 — 실제 새 화면 관찰 대기
+
+2026-11-05. P021은 사용자 본인의 run002 네 UI 동작 정상 확인으로 완료했다
+(관찰80be7d3, 완료61a6ef4). 이전 차단/미확인 기록은 아래에 보존한다.
+그 후 exact plan1308141b6957의 P022 구현을 진행했다.
+
+- run003의 schema2 / p022-atomic-v1과57개 후보,45개 구ID 전수 매핑을 생성했다.
+- keep33개는 text/source metadata 유지, split10개와 조건 복원2개는 전체 조항을 재검수해 정확한 조건 포함 인용/위치/페이지/hash를 생성했다.
+- `codex-source-recheck.json`: 45개 전수 대조·57개 문장/17개 조항 원문 검수. `atomic-delivery.json`: 새 보고서 절대 경로와 패킷·파일 hash, null 승인.
+- `unit-tests-final.log`: 기존24개 + 신규8개 =32개 PASS. ID/개수/조건·예외·기한/출처·answer/HTML·미승인·버전 경계·손상/덮어쓰기 거부/모델 전 조기 거부를 검사했다. 오프라인 테스트에서 소켓을 차단했다.
+- `offline-atomic-replay.json`: preparation만 독립 복사해 run001/run002/run003 verify/report, 새 sibling 생성까지 수행했다. 외부 plan/Git/모델 없이 세 기존 run과 신규 생성물의 byte 일치를 확인했다.
+- `preservation-before-implementation.json`, `preservation-final-implementation.json`: run001/run002 포함 기존1379파일/plan dirty4파일 hash 및 두 run의 파일 목록 동일. 모델 호출/다운로드/서버 변경0회.
+- `p013-atomic-handoff.md`: 정답 후보의 승인 대상/원자화 정책/분모 차이 인계. 실제 P013/P014/P020/Hybrid는 실행하지 않았다.
+
+새 HTML에는 질문 탐색→각 원자 주장→펼친 근거, 과거 버전/개정 내역 링크와 기본 접힌
+실험 기록이 있다. 구조 검사는 펼친 인용75개(주장57+판정18), 기본 닫힌 details81개와
+내장 JSON 일치를 확인했다. 이는 실제 UI 관찰을 대신하지 않는다.
+
+`run003-ui-status.json`에 새 화면/좁은 폭/Tab·Enter·Space가 미관찰임을 기록했다.
+기존 file URL 도구 정책 거부 이후 동일 차단 경로를 재시도하거나 임시 서버/다른 브라우저로
+우회하지 않았다. run002 사용자 관찰을 run003에 자동 적용하지 않았다.
+따라서 P022 C3의 실제 UI 검증과 전체 완료는 남겨 둔다. 새 후보 자체의 사람 승인도 null이다.
+
+## 초기 수신·선행 대기 기록 (보존)
+
 # P022 수신·채택과 선행 검증 대기
 
 2026-11-05. READY plan `1308141b695708ab125c0a9ba1517156493d563b`를

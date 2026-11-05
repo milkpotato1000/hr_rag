@@ -1,0 +1,25 @@
+{
+  "plan_commit": "1308141b695708ab125c0a9ba1517156493d563b",
+  "adoption_commit": "4b47ecf9d2f8df1e5f829f892f27fe75b7a2ca54",
+  "p021_completion_commit": "61a6ef4",
+  "status": "IMPLEMENTED_OFFLINE_VERIFIED_RUN003_UI_PENDING",
+  "report_absolute_path": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/evaluation/project_b/preparation/artifacts/run003/review.html",
+  "packet_sha256": "946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199",
+  "manifest": {
+    "version": "p022-atomic-v1",
+    "packet_sha256": "946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199",
+    "parent_packet_sha256": "e6a264387d3dd169168bcf1733156bf91bd4bdf76fc8bb70f5a704e3bc7a2b0e",
+    "atomicity_audit_file_sha256": "e9dd80869464b6e41d3e7f77482a2908702b9eb742a410c78a8c7bff337140ae",
+    "files": {
+      "packet.json": "fec84decf14335151162d9b168db366854a5b4a45d06092230e78f2e124e802b",
+      "revision-mapping.json": "d80a97011b3761b821fb30f6ba92a2cbd21c8a7be04034a288af6b4953448463",
+      "atomicity-audit.json": "e9dd80869464b6e41d3e7f77482a2908702b9eb742a410c78a8c7bff337140ae",
+      "review.html": "6bf1164adeebf199696758fdea62638008a36f8f351c4f3d967123e7424f39d8"
+    }
+  },
+  "new_model_calls": 0,
+  "human_approval": null,
+  "questions": 10,
+  "claims": 57,
+  "judgements": 18
+}

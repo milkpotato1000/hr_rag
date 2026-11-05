@@ -1,0 +1,595 @@
+{
+  "reviewer": "Codex",
+  "human_approval": null,
+  "status": "source_rechecked_unapproved",
+  "method": "Read all selected full canonical articles and all 57 resulting claim sentences; compare every old ID to pinned audit and new mapping",
+  "reviewed_article_ids": [
+    "AN-07",
+    "AN-10",
+    "BD-01",
+    "BD-02",
+    "BD-03",
+    "BD-05",
+    "ED-01",
+    "ED-02",
+    "ED-06",
+    "RM-01",
+    "RM-02",
+    "RM-03",
+    "TR-01",
+    "TR-02",
+    "TR-07",
+    "WF-01",
+    "WF-02"
+  ],
+  "old_claims": 45,
+  "new_claims": 57,
+  "split": 10,
+  "restore_scope": 2,
+  "keep": 33,
+  "source_canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "checks": [
+    "independent qualification/quantity/deadline/channel/approval/record-target facts split",
+    "annual quantity and point amount apply to eligible recipients, not all employees",
+    "TR-01 retains 5 business days before, not changed to until",
+    "BD-05 outage predicate and responsible person repeated in each recorded field",
+    "AN-10 partial cancellation and unconfirmed/delayed usage scope restored",
+    "comparison duties and conditional operations retained as relations, not word fragments",
+    "shared evidence and repeated context not counted as extra scored facts",
+    "no optional/required reclassification or added source-v4 rules"
+  ],
+  "items": [
+    {
+      "old_id": "gt01-c02",
+      "action": "split",
+      "new_ids": [
+        "gt01-c02-a1",
+        "gt01-c02-a2",
+        "gt01-c02-a3"
+      ],
+      "reason": "대상 재직 기간·연간 일수·수습 제외는 각각 독립적으로 누락/오류를 판단할 수 있는 세 사실이다.",
+      "article_ids": [
+        "BD-01"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt01-c04",
+      "action": "split",
+      "new_ids": [
+        "gt01-c04-a1",
+        "gt01-c04-a2"
+      ],
+      "reason": "사용 가능한 월과 근무일 여부를 각각 검증할 수 있다.",
+      "article_ids": [
+        "BD-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt01-c05",
+      "action": "split",
+      "new_ids": [
+        "gt01-c05-a1",
+        "gt01-c05-a2"
+      ],
+      "reason": "신청 기한과 신청 경로를 각각 검증할 수 있다.",
+      "article_ids": [
+        "BD-03"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt01-c06",
+      "action": "keep",
+      "new_ids": [
+        "gt01-c06"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "BD-03"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt01-c07",
+      "action": "keep",
+      "new_ids": [
+        "gt01-c07"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "BD-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt01-c08",
+      "action": "keep",
+      "new_ids": [
+        "gt01-c08"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "BD-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt02-c01",
+      "action": "keep",
+      "new_ids": [
+        "gt02-c01"
+      ],
+      "reason": "미사용 연차라는 대상·해당 연도/다음 해라는 이월 범위를 가진 하나의 한도 규칙이다. 연도와 숫자/단위를 문장 파편으로 분리하지 않는다.",
+      "article_ids": [
+        "AN-07"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt02-c02",
+      "action": "keep",
+      "new_ids": [
+        "gt02-c02"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "AN-07"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt02-c03",
+      "action": "keep",
+      "new_ids": [
+        "gt02-c03"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "AN-07"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt03-c01",
+      "action": "keep",
+      "new_ids": [
+        "gt03-c01"
+      ],
+      "reason": "재택 신청의 재직 기간 필요 요건 한 가지다. 이것만 충족하면 신청 가능하다는 충분조건으로 바꾸지 않는다.",
+      "article_ids": [
+        "RM-01"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt03-c02",
+      "action": "keep",
+      "new_ids": [
+        "gt03-c02"
+      ],
+      "reason": "재택 신청의 보안 교육 필요 요건 한 가지다. 다른 자격 요건을 삭제한 충분조건으로 바꾸지 않는다.",
+      "article_ids": [
+        "RM-01"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt03-c03",
+      "action": "keep",
+      "new_ids": [
+        "gt03-c03"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "RM-01"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt03-c04",
+      "action": "keep",
+      "new_ids": [
+        "gt03-c04"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "RM-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt03-c05",
+      "action": "split",
+      "new_ids": [
+        "gt03-c05-a1",
+        "gt03-c05-a2"
+      ],
+      "reason": "승인 주체와 승인 기한은 별도로 확인할 사실이다.",
+      "article_ids": [
+        "RM-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt03-c06",
+      "action": "keep",
+      "new_ids": [
+        "gt03-c06"
+      ],
+      "reason": "재택근무 상황의 회사 지급 기기 사용 의무 한 가지다. 회사 지급은 대상 기기의 제한으로 유지한다.",
+      "article_ids": [
+        "RM-03"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt03-c07",
+      "action": "keep",
+      "new_ids": [
+        "gt03-c07"
+      ],
+      "reason": "재택근무 상황의 회사 VPN 사용 의무 한 가지다.",
+      "article_ids": [
+        "RM-03"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt03-c08",
+      "action": "keep",
+      "new_ids": [
+        "gt03-c08"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "RM-03"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt04-c01",
+      "action": "keep",
+      "new_ids": [
+        "gt04-c01"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "WF-01"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt04-c02",
+      "action": "keep",
+      "new_ids": [
+        "gt04-c02"
+      ],
+      "reason": "사무실 출근일에 적용되는 식대 금액이라는 하나의 값이다. 적용 날짜 조건과 금액/단위를 함께 유지한다.",
+      "article_ids": [
+        "WF-01"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt04-c03",
+      "action": "split",
+      "new_ids": [
+        "gt04-c03-a1",
+        "gt04-c03-a2"
+      ],
+      "reason": "생일 포인트 지급 대상과 지급액을 별도 채점 사실로 정리한다.",
+      "article_ids": [
+        "WF-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt04-c04",
+      "action": "keep",
+      "new_ids": [
+        "gt04-c04"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "WF-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt04-c05",
+      "action": "keep",
+      "new_ids": [
+        "gt04-c05"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "WF-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt05-c02",
+      "action": "split",
+      "new_ids": [
+        "gt05-c02-a1",
+        "gt05-c02-a2"
+      ],
+      "reason": "교육휴가 신청 대상과 연간 일수를 분리한다. 대상자 조건을 모든 직원으로 일반화하지 않는다.",
+      "article_ids": [
+        "ED-01"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt05-c03",
+      "action": "keep",
+      "new_ids": [
+        "gt05-c03"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "ED-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt05-c04",
+      "action": "keep",
+      "new_ids": [
+        "gt05-c04"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "ED-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt06-c01",
+      "action": "split",
+      "new_ids": [
+        "gt06-c01-a1",
+        "gt06-c01-a2"
+      ],
+      "reason": "출장 승인 주체와 기한을 별도로 검증한다. 원문의 5영업일 전을 임의로 달력일이나 전까지로 바꾸지 않는다.",
+      "article_ids": [
+        "TR-01"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt06-c02",
+      "action": "keep",
+      "new_ids": [
+        "gt06-c02"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "TR-07"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt06-c03",
+      "action": "keep",
+      "new_ids": [
+        "gt06-c03"
+      ],
+      "reason": "시스템 장애 임시 기록이 있어도 승인 기한이 면제되지 않는다는 하나의 조건부 규칙이다.",
+      "article_ids": [
+        "TR-07"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt06-c04",
+      "action": "keep",
+      "new_ids": [
+        "gt06-c04"
+      ],
+      "reason": "시스템 장애 임시 기록이 있어도 팀장 승인 조건이 면제되지 않는다는 하나의 조건부 규칙이다.",
+      "article_ids": [
+        "TR-07"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt06-c05",
+      "action": "keep",
+      "new_ids": [
+        "gt06-c05"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "TR-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt06-c06",
+      "action": "keep",
+      "new_ids": [
+        "gt06-c06"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "TR-02"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt07-c01",
+      "action": "split",
+      "new_ids": [
+        "gt07-c01-a1",
+        "gt07-c01-a2",
+        "gt07-c01-a3"
+      ],
+      "reason": "시스템 장애 시 필수 기록 세 항목이 각각 누락될 수 있다. 세 주장 모두 같은 장애 조건·담당자를 유지한다.",
+      "article_ids": [
+        "BD-05"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt07-c02",
+      "action": "keep",
+      "new_ids": [
+        "gt07-c02"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "BD-05"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt07-c03",
+      "action": "keep",
+      "new_ids": [
+        "gt07-c03"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "BD-05"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt07-c04",
+      "action": "keep",
+      "new_ids": [
+        "gt07-c04"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "BD-05"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt07-c05",
+      "action": "keep",
+      "new_ids": [
+        "gt07-c05"
+      ],
+      "reason": "복구 후 기존 기록을 먼저 확인하는 하나의 절차 의무다. 복구 조건과 순서를 유지한다.",
+      "article_ids": [
+        "BD-05"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt07-c06",
+      "action": "keep",
+      "new_ids": [
+        "gt07-c06"
+      ],
+      "reason": "기존 기록이 없을 때만 임시 기록과 연결해 입력한다는 하나의 조건부 작업이다. 조건을 별도 사실로 떼지 않는다.",
+      "article_ids": [
+        "BD-05"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt08-c01",
+      "action": "split",
+      "new_ids": [
+        "gt08-c01-a1",
+        "gt08-c01-a2"
+      ],
+      "reason": "유지할 날짜와 취소할 날짜라는 두 기록 대상을 각각 검증하되 구분 기록이라는 관계를 유지한다.",
+      "article_ids": [
+        "AN-10"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt08-c02",
+      "action": "restore_scope",
+      "new_ids": [
+        "gt08-c02"
+      ],
+      "reason": "원문은 일부 취소 상황이다. 독립 주장에 그 조건이 빠져 전체 취소까지 금지하는 것으로 일반화될 수 있다.",
+      "article_ids": [
+        "AN-10"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt08-c03",
+      "action": "restore_scope",
+      "new_ids": [
+        "gt08-c03"
+      ],
+      "reason": "원문에서 실제 사용 미확인/반영 지연일 때의 처리 조건을 독립 주장에도 보존한다.",
+      "article_ids": [
+        "AN-10"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt08-c04",
+      "action": "keep",
+      "new_ids": [
+        "gt08-c04"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "AN-10"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt08-c05",
+      "action": "keep",
+      "new_ids": [
+        "gt08-c05"
+      ],
+      "reason": "시험 접수 취소와 휴가 취소의 범위를 구분하는 하나의 확인 의무다. 구분 대상들을 별개 주장으로 쪼개 관계를 잃게 하지 않는다.",
+      "article_ids": [
+        "ED-06"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt08-c06",
+      "action": "keep",
+      "new_ids": [
+        "gt08-c06"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "ED-06"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt08-c07",
+      "action": "split",
+      "new_ids": [
+        "gt08-c07-a1",
+        "gt08-c07-a2"
+      ],
+      "reason": "일괄 삭제 금지의 보호 대상 두 종류를 각각 보존한다.",
+      "article_ids": [
+        "ED-06"
+      ],
+      "source_rechecked": true
+    },
+    {
+      "old_id": "gt08-c08",
+      "action": "keep",
+      "new_ids": [
+        "gt08-c08"
+      ],
+      "reason": "대상·조건을 보존한 단일 요건/의무/기한/금지/제도 간 관계이며 독립적으로 추가 채점할 별도 사실은 확인하지 않았다.",
+      "article_ids": [
+        "ED-06"
+      ],
+      "source_rechecked": true
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "external_plan_required": false,
+  "git_required": false,
+  "model_required": false,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "verify",
+        "--out",
+        "artifacts/run001"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline verification PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "report",
+        "--out",
+        "artifacts/run001"
+      ],
+      "exit_code": 0,
+      "stdout": "Unapproved packet: 6f9b0b673b4b18e3739ac5038f048c00c8563ceaeab9dde105dedea9b1e13508\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "verify",
+        "--out",
+        "artifacts/run002"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision verification PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "report",
+        "--out",
+        "artifacts/run002"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision report replay PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "verify",
+        "--out",
+        "artifacts/run003"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision verification PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "report",
+        "--out",
+        "artifacts/run003"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision report replay PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "revise-atomic-review",
+        "--parent",
+        "artifacts/run002",
+        "--audit",
+        "artifacts/run003/atomicity-audit.json",
+        "--out",
+        "artifacts/run003-replay"
+      ],
+      "exit_code": 0,
+      "stdout": "Unapproved atomic review: 946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199\n",
+      "stderr": ""
+    }
+  ],
+  "original_runs_unchanged": true,
+  "new_run_replay_byte_identical": true
+}

@@ -1,5 +1,33 @@
 # P019 evaluator preparation
 
+## 최신 검토본: P022 / run003
+
+[원자 주장 검토 보고서](artifacts/run003/review.html)는 **57개 미승인 후보**입니다.
+run002의45개를 전수 검수해10개를 분리하고2개는 적용 조건을 복원했으며33개는 유지했습니다.
+생일휴가의 재직 기간·대상자의 연간1일·수습 제외를 독립 주장으로 나눕니다. 동일한 원문
+인용이 여러 독립 사실을 뒷받침할 수 있습니다. 반복한 대상/조건 자체를 추가 가산 사실로
+세지 않습니다. 원자화 전후 분모가 달라 기존 점수를 같은 버전의 개선으로 비교할 수 없습니다.
+
+각 질문의 새 주장 수는10,3,9,6,4,7,8,10,0,0개입니다. 구신ID/문장/사유/인용·조항·페이지·
+위치·hash는 [개정 매핑](artifacts/run003/revision-mapping.json)에 있습니다. split 자식은
+기존ID-a1/a2/a3, 유지/조건 복원은 기존ID입니다. 화면의 각 주장 상세에서도 이전 항목을
+확인할 수 있습니다. 새 버전은 schema_version2 / p022-atomic-v1이며 과거 모델 max8
+schema나 run001/run002는 바꾸지 않습니다. 새 작성 방법은 Codex의 원문 재검수이고
+모델 호출은0회입니다. 과거 Qwen/Codex 이력·실패, 판정18개와 금액 미명시 후보는 보존합니다.
+
+저장소 루트에서 생성하며, 이후 verify/report는 새 검토본 안에 동결된 감사 파일을 사용하므로
+별도 plan 작업폴더가 필요 없습니다. preparation 전체와 세 run의 상대 위치를 함께 보존하세요.
+
+```sh
+python3 -B evaluation/project_b/preparation/prepare.py revise-atomic-review --parent evaluation/project_b/preparation/artifacts/run002 --audit docs/planning/reviews/p022/run002-atomicity-audit.json --out evaluation/project_b/preparation/artifacts/run003
+python3 -B evaluation/project_b/preparation/prepare.py verify --out evaluation/project_b/preparation/artifacts/run003
+python3 -B evaluation/project_b/preparation/prepare.py report --out evaluation/project_b/preparation/artifacts/run003
+```
+
+기존 출력의 변경·알 수 없는 버전·동결 제안이나 부모 손상·schema 불일치를 거부합니다.
+run003에서 run/revise-ground는 모델 연결 전에 거부됩니다. 새 run003 자체의 실제
+화면/좁은 폭/키보드 확인은 아직 남아 있으며 run002의 사용자 관찰로 대신하지 않습니다.
+
 ## 최신 검토본: P021 / run002
 
 [새 검토 보고서](artifacts/run002/review.html)는 질문 → 정답 클레임 → 근거 원문
@@ -31,8 +59,10 @@ run001과 같은 부모 폴더의 새 경로에 생성합니다. 독립 복사 �
 부모 이력의 일부가 아니므로 개정 패킷 hash에서 제외하되 원본 파일은 건드리지 않습니다.
 `run`/`revise-ground`는 검토본에서 거부됩니다. 기존 run001 명령도 그대로 동작합니다.
 
-브라우저 도구의 file URL 정책 제한으로 P021의 실제 렌더링·좁은 폭·키보드 동작
-검증은 미완료입니다. HTML 구조 검사와 실제 화면 검증을 구분합니다.
+P021의 실제 화면·좁은 폭·키보드 동작은2026-11-05 사용자 본인이 네 항목 모두
+정상 확인했습니다. 관찰 출처는 docs/verification/p021/user-ui-observation.json입니다.
+Codex의 브라우저 도구는 file URL 정책으로 차단됐으며 그 실패 이력을 보존합니다.
+이 UI 확인은 정답 후보의 승인이나 새 run003의 화면 확인을 뜻하지 않습니다.
 
 Small standard-library CLI for frozen local-model compatibility experiments and
 an **unapproved** human review packet. No production scoring, serving, NLI model,

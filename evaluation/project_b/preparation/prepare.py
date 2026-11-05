@@ -142,18 +142,39 @@ def main():
     s = sub.add_parser('revise-review', help='Offline P021 review revision; no model calls')
     s.add_argument('--parent', type=Path, required=True)
     s.add_argument('--out', type=Path, required=True)
+    s = sub.add_parser('revise-atomic-review', help='Offline P022 atomic review; no model calls')
+    s.add_argument('--parent', type=Path, required=True)
+    s.add_argument('--audit', type=Path, required=True)
+    s.add_argument('--out', type=Path, required=True)
     args = p.parse_args()
+    if args.command == 'revise-atomic-review':
+        from atomic_review import create
+        create(args.parent, args.audit, args.out)
+        return
     if args.command == 'revise-review':
         from review_revision import create
         create(args.parent, args.out)
         return
-    if (args.out / 'revision-mapping.json').exists():
-        from review_revision import verify, create
+    saved = read(args.out / 'packet.json') if (args.out / 'packet.json').exists() else None
+    version = saved.get('review_version') if saved else None
+    if version not in (None, 'p021-review-v1', 'p022-atomic-v1'):
+        raise ValueError('Unknown review_version')
+    if saved and saved.get('schema_version') != (2 if version == 'p022-atomic-v1' else 1):
+        raise ValueError('Review schema/version mismatch')
+    if version or (args.out / 'revision-mapping.json').exists() or (args.out / 'atomicity-audit.json').exists():
+        if version == 'p022-atomic-v1':
+            from atomic_review import verify
+        elif version == 'p021-review-v1':
+            from review_revision import verify
+        else:
+            raise ValueError('Missing review packet/version')
         if args.command == 'verify':
             verify(args.out)
             print('Offline review revision verification PASS')
         elif args.command == 'report':
-            create(args.out.resolve().parent / 'run001', args.out)
+            # Saved revisions are immutable. Verify exact reproduction without writes.
+            verify(args.out)
+            print('Offline review revision report replay PASS')
         else:
             raise ValueError('Review revision is offline only; no model execution or prompt revision')
         return
