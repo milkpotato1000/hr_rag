@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-05",
+  "plan_commit": "1308141b695708ab125c0a9ba1517156493d563b",
+  "adoption_commit": "4b47ecf9d2f8df1e5f829f892f27fe75b7a2ca54",
+  "prerequisite": "P021 C1 actual rendered UI, narrow width and keyboard verification",
+  "status": "WAITING_FOR_P021_UI_EVIDENCE",
+  "p021_c1_pass": false,
+  "p022_implementation_started": false,
+  "run003_created": false,
+  "new_model_requests": 0,
+  "downloads": 0,
+  "server_changes": 0,
+  "existing_artifact_files_checked": 59,
+  "plan_dirty_files_preserved": 4,
+  "observation": {
+    "existing_tab": "iab tab 2: run002/review.html#gt01",
+    "inventory": "cua.getState observed already-open tab",
+    "attempt": "cua.getTab(\"2\", {browser:\"iab\"})",
+    "result": "Blocked browser navigation by Browser Use URL policy: file:///.../run002/review.html#gt01",
+    "render_verified": false,
+    "narrow_width_verified": false,
+    "keyboard_verified": false
+  },
+  "required_followup": "Actual user-observed rendering/narrow width/keyboard evidence; no server or alternate browser workaround"
+}
