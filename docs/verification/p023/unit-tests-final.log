@@ -1,0 +1,56 @@
+test_all_45_parents_map_to_exact_57_proposals_in_order (test_atomic_review.AtomicReviewTests) ... ok
+test_cli_unknown_versions_schema_mismatch_and_model_commands_fail_early (test_atomic_review.AtomicReviewTests) ... ok
+test_html_visible_quotes_collapsed_logs_links_and_escaping (test_atomic_review.AtomicReviewTests) ... ok
+test_independent_facts_retain_conditional_scope_and_exact_deadlines (test_atomic_review.AtomicReviewTests) ... ok
+test_offline_replay_preserves_parent_and_rejects_existing_mutations (test_atomic_review.AtomicReviewTests) ... ok
+test_saved_html_and_manifest_tampering_is_rejected (test_atomic_review.AtomicReviewTests) ... ok
+test_source_answer_spans_pages_and_unchanged_provenance (test_atomic_review.AtomicReviewTests) ... ok
+test_tampered_audit_or_parent_fails_without_output_or_model (test_atomic_review.AtomicReviewTests) ... ok
+test_approval_cannot_be_fabricated (test_preparation.PreparationTests) ... ok
+test_byte_bound_and_template_gate (test_preparation.PreparationTests) ... ok
+test_category_cap_includes_failed_attempts (test_preparation.PreparationTests) ... ok
+test_cumulative_cap_duplicate_and_artifact_tamper (test_preparation.PreparationTests) ... ok
+test_exact_offsets_and_answer_provenance (test_preparation.PreparationTests) ... ok
+test_extra_fields_and_wrong_types_rejected (test_preparation.PreparationTests) ... ok
+test_json_report_roundtrip_and_tamper (test_preparation.PreparationTests) ... ok
+test_partial_response_is_not_success (test_preparation.PreparationTests) ... Unapproved atomic review: 946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199
+Unapproved atomic review: 946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199
+partial failed semantic: None seconds: 0.0
+ok
+test_pending_restart_and_retry_limits (test_preparation.PreparationTests) ... ok
+test_prompt_revision_preserves_inputs_and_cumulative_ledger (test_preparation.PreparationTests) ... ok
+test_recorded_artifact_tamper_and_repeat_retry (test_preparation.PreparationTests) ... ok
+test_runtime_parameter_order_only_is_ignored (test_preparation.PreparationTests) ... ok
+test_semantics_separate_from_format (test_preparation.PreparationTests) ... ok
+test_source_tamper_and_truncation_fail (test_preparation.PreparationTests) ... ok
+test_timeout_saved_and_blocks_next_call (test_preparation.PreparationTests) ... Frozen prompt revision; cumulative calls retained: 1
+timeout failed semantic: None seconds: 0.0
+ok
+test_unknown_id_mismatch_duplicate_quote (test_preparation.PreparationTests) ... ok
+test_wall_time_cap (test_preparation.PreparationTests) ... ok
+test_cli_replay_and_model_run_rejected_on_revision (test_review_revision.ReviewRevisionTests) ... ok
+test_default_disclosures_visible_quotes_links_and_json (test_review_revision.ReviewRevisionTests) ... ok
+test_exact_evidence_answer_offsets_pages_and_absence (test_review_revision.ReviewRevisionTests) ... ok
+test_html_and_embedded_json_escape_untrusted_source (test_review_revision.ReviewRevisionTests) ... ok
+test_offline_replay_immutability_and_tamper_rejection (test_review_revision.ReviewRevisionTests) ... ok
+test_only_contracted_semantic_changes_and_stable_ids (test_review_revision.ReviewRevisionTests) ... ok
+test_source_mapping_mutations_are_rejected (test_review_revision.ReviewRevisionTests) ... ok
+test_57_original_claims_and_answers_are_unchanged_with_38_19_partition (test_scoped_review.ScopedReviewTests) ... ok
+test_bad_classification_or_derived_answer_is_rejected (test_scoped_review.ScopedReviewTests) ... ok
+test_corrupt_inputs_fail_before_output_and_do_not_overwrite (test_scoped_review.ScopedReviewTests) ... ok
+test_fixed_examples_preserve_policy_without_running_an_evaluator (test_scoped_review.ScopedReviewTests) ... ok
+test_historical_five_approvals_never_become_blanket_approval (test_scoped_review.ScopedReviewTests) ... ok
+test_html_order_reason_visible_quotes_collapsed_logs_and_json (test_scoped_review.ScopedReviewTests) ... ok
+test_saved_html_policy_and_manifest_tamper_is_rejected (test_scoped_review.ScopedReviewTests) ... ok
+test_specific_scope_decisions_intents_and_clarification (test_scoped_review.ScopedReviewTests) ... ok
+test_unknown_version_schema_and_model_path_fail_before_network (test_scoped_review.ScopedReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 3.673s
+
+OK
+Unapproved offline review revision: e6a264387d3dd169168bcf1733156bf91bd4bdf76fc8bb70f5a704e3bc7a2b0e
+Unapproved offline review revision: e6a264387d3dd169168bcf1733156bf91bd4bdf76fc8bb70f5a704e3bc7a2b0e
+Unapproved offline review revision: e6a264387d3dd169168bcf1733156bf91bd4bdf76fc8bb70f5a704e3bc7a2b0e
+Unapproved required/supplementary review: ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235
+Unapproved required/supplementary review: ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235

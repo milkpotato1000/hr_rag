@@ -146,7 +146,16 @@ def main():
     s.add_argument('--parent', type=Path, required=True)
     s.add_argument('--audit', type=Path, required=True)
     s.add_argument('--out', type=Path, required=True)
+    s = sub.add_parser('revise-scoped-review', help='Offline P023 required/supplementary review')
+    s.add_argument('--parent', type=Path, required=True)
+    s.add_argument('--audit', type=Path, required=True)
+    s.add_argument('--policy', type=Path, required=True)
+    s.add_argument('--out', type=Path, required=True)
     args = p.parse_args()
+    if args.command == 'revise-scoped-review':
+        from scoped_review import create
+        create(args.parent, args.audit, args.policy, args.out)
+        return
     if args.command == 'revise-atomic-review':
         from atomic_review import create
         create(args.parent, args.audit, args.out)
@@ -157,12 +166,15 @@ def main():
         return
     saved = read(args.out / 'packet.json') if (args.out / 'packet.json').exists() else None
     version = saved.get('review_version') if saved else None
-    if version not in (None, 'p021-review-v1', 'p022-atomic-v1'):
+    schemas = {None: 1, 'p021-review-v1': 1, 'p022-atomic-v1': 2, 'p023-core-supplement-v1': 3}
+    if version not in schemas:
         raise ValueError('Unknown review_version')
-    if saved and saved.get('schema_version') != (2 if version == 'p022-atomic-v1' else 1):
+    if saved and saved.get('schema_version') != schemas[version]:
         raise ValueError('Review schema/version mismatch')
-    if version or (args.out / 'revision-mapping.json').exists() or (args.out / 'atomicity-audit.json').exists():
-        if version == 'p022-atomic-v1':
+    if version or any((args.out / name).exists() for name in ['revision-mapping.json','atomicity-audit.json','scope-mapping.json','scope-audit.json']):
+        if version == 'p023-core-supplement-v1':
+            from scoped_review import verify
+        elif version == 'p022-atomic-v1':
             from atomic_review import verify
         elif version == 'p021-review-v1':
             from review_revision import verify

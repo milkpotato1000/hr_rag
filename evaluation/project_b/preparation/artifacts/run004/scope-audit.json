@@ -1,0 +1,1519 @@
+{
+  "schema_version": 1,
+  "policy_version": "p023-core-supplement-v1",
+  "author": "Codex plan source-based review under user delegation",
+  "source_packet_sha256": "946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199",
+  "source_file_sha256": "fec84decf14335151162d9b168db366854a5b4a45d06092230e78f2e124e802b",
+  "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "question_count": 10,
+  "claim_count": 57,
+  "required_count": 38,
+  "supplementary_count": 19,
+  "factual_approval": "Classification is delegated Codex review, not blanket direct human approval. Five gt01 approvals retain historical parent provenance only.",
+  "questions": [
+    {
+      "question_id": "gt01",
+      "question": "생일 특별휴가는 누가 며칠 받을 수 있고, 언제까지 신청해서 언제 사용해야 하나요?",
+      "answerability": "answerable",
+      "intents": [
+        {
+          "id": "eligible",
+          "text": "누가 받을 수 있나?",
+          "required_claim_ids": [
+            "gt01-c02-a1",
+            "gt01-c02-a3"
+          ]
+        },
+        {
+          "id": "days",
+          "text": "매년 며칠인가?",
+          "required_claim_ids": [
+            "gt01-c02-a2"
+          ]
+        },
+        {
+          "id": "apply_by",
+          "text": "언제까지 신청하나?",
+          "required_claim_ids": [
+            "gt01-c05-a1"
+          ]
+        },
+        {
+          "id": "use_when",
+          "text": "언제 사용하나?",
+          "required_claim_ids": [
+            "gt01-c04-a1",
+            "gt01-c04-a2"
+          ]
+        }
+      ],
+      "required_count": 6,
+      "supplementary_count": 4,
+      "claims": [
+        {
+          "claim_id": "gt01-c02-a1",
+          "text": "생일 특별휴가의 재직 기간 요건은 입사 후 3개월 경과입니다.",
+          "role": "required",
+          "intent_ids": [
+            "eligible"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 누가 받을 수 있나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-01",
+            "start": 272,
+            "end": 336,
+            "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상\n에서 제외한다.",
+            "quote_sha256": "dccf3e04159350821443439ac6708943ef0dc92215364e615ea7c0cf058f6d10",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt01-c02-a2",
+          "text": "생일 특별휴가 대상자는 매년 1일을 신청할 수 있습니다.",
+          "role": "required",
+          "intent_ids": [
+            "days"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 매년 며칠인가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-01",
+            "start": 272,
+            "end": 336,
+            "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상\n에서 제외한다.",
+            "quote_sha256": "dccf3e04159350821443439ac6708943ef0dc92215364e615ea7c0cf058f6d10",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt01-c02-a3",
+          "text": "수습 중인 직원은 생일 특별휴가 대상에서 제외됩니다.",
+          "role": "required",
+          "intent_ids": [
+            "eligible"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 누가 받을 수 있나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-01",
+            "start": 272,
+            "end": 336,
+            "quote": "입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상\n에서 제외한다.",
+            "quote_sha256": "dccf3e04159350821443439ac6708943ef0dc92215364e615ea7c0cf058f6d10",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt01-c04-a1",
+          "text": "생일 특별휴가는 생일이 속한 달에 사용해야 합니다.",
+          "role": "required",
+          "intent_ids": [
+            "use_when"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 언제 사용하나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-02",
+            "start": 483,
+            "end": 512,
+            "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다.",
+            "quote_sha256": "14dc283c1f709735ce5c5588084bdd752adaf73184408292efe19aaa485c07b4",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt01-c04-a2",
+          "text": "생일 특별휴가는 근무일에 사용해야 합니다.",
+          "role": "required",
+          "intent_ids": [
+            "use_when"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 언제 사용하나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-02",
+            "start": 483,
+            "end": 512,
+            "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다.",
+            "quote_sha256": "14dc283c1f709735ce5c5588084bdd752adaf73184408292efe19aaa485c07b4",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt01-c05-a1",
+          "text": "생일 특별휴가의 신청 기한은 사용 3영업일 전까지입니다.",
+          "role": "required",
+          "intent_ids": [
+            "apply_by"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 언제까지 신청하나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-03",
+            "start": 684,
+            "end": 734,
+            "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+            "quote_sha256": "4cd085e794167d84ba566976b5185ed36ba4f98bc65458b569e53126f989d9eb",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt01-c05-a2",
+          "text": "생일 특별휴가는 휴가 시스템에서 신청해야 합니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "질문은 신청 기한을 묻고 있어 신청 경로는 보충 절차다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-03",
+            "start": 684,
+            "end": 734,
+            "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+            "quote_sha256": "4cd085e794167d84ba566976b5185ed36ba4f98bc65458b569e53126f989d9eb",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt01-c06",
+          "text": "생일 특별휴가를 사용하려면 팀장의 승인을 받아야 합니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "질문에서 승인 절차를 직접 요구하지 않아 팀장 승인은 보충 안내로 둔다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-03",
+            "start": 684,
+            "end": 734,
+            "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+            "quote_sha256": "4cd085e794167d84ba566976b5185ed36ba4f98bc65458b569e53126f989d9eb",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt01-c07",
+          "text": "생일 특별휴가는 생일이 속한 달을 넘겨 이월할 수 없습니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "clarification",
+          "reason": "생일이 속한 달 사용이라는 필수 기한을 명확히 하는 설명이며 핵심 점수를 중복 가산하지 않는다.",
+          "clarifies_required_ids": [
+            "gt01-c04-a1"
+          ],
+          "source": {
+            "article_id": "BD-02",
+            "start": 483,
+            "end": 543,
+            "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다.",
+            "quote_sha256": "30acfd5d9eee089a61ba6ed3dbbe86c080631d4a2c99e2ab383911b501822365",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt01-c08",
+          "text": "생일 특별휴가는 현금으로 지급하지 않습니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "현금 대체 여부는 자격·일수·신청/사용 기한의 직접 답변 범위 밖이다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-02",
+            "start": 513,
+            "end": 543,
+            "quote": "해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다.",
+            "quote_sha256": "da869dc693981408a5ec3c6f3e3f0255fda91baa74272b66f8d85792b726a223",
+            "pages": [
+              1
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        }
+      ],
+      "unanswerable_policy": null
+    },
+    {
+      "question_id": "gt02",
+      "question": "미사용 연차는 최대 며칠 이월하며 언제까지 써야 하나요? 생일 특별휴가도 해당하나요?",
+      "answerability": "answerable",
+      "intents": [
+        {
+          "id": "carry_days",
+          "text": "최대 이월 일수",
+          "required_claim_ids": [
+            "gt02-c01"
+          ]
+        },
+        {
+          "id": "use_by",
+          "text": "이월 연차 사용 기한",
+          "required_claim_ids": [
+            "gt02-c02"
+          ]
+        },
+        {
+          "id": "birthday_scope",
+          "text": "생일휴가 적용 여부",
+          "required_claim_ids": [
+            "gt02-c03"
+          ]
+        }
+      ],
+      "required_count": 3,
+      "supplementary_count": 0,
+      "claims": [
+        {
+          "claim_id": "gt02-c01",
+          "text": "해당 연도 미사용 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다.",
+          "role": "required",
+          "intent_ids": [
+            "carry_days"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 최대 이월 일수에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "AN-07",
+            "start": 8464,
+            "end": 8507,
+            "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다.",
+            "quote_sha256": "a2bf932a4c304df3fb8e263efd95cac3540c771ddffe0a096e4e43c3a4921e8e",
+            "pages": [
+              6
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt02-c02",
+          "text": "이월 연차는 다음 해 3월 31일까지 사용해야 합니다.",
+          "role": "required",
+          "intent_ids": [
+            "use_by"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 이월 연차 사용 기한에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "AN-07",
+            "start": 8508,
+            "end": 8538,
+            "quote": "이월한 연차의 사용 \n기한은 다음 해 3월 31일이다.",
+            "quote_sha256": "f53fb582020b858e1936d9281415950d15fbf2857938e491b65a5ffd4c3a4815",
+            "pages": [
+              6
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt02-c03",
+          "text": "생일 특별휴가에는 미사용 연차의 이월 규정을 적용하지 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "birthday_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 생일휴가 적용 여부에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "AN-07",
+            "start": 8464,
+            "end": 8564,
+            "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 연차의 사용 \n기한은 다음 해 3월 31일이다. 생일 특별휴가에는 이 규정을 적용하지 않는다.",
+            "quote_sha256": "c05d8f064d7d940aaef55a8ff240f10c5173445c6d0f62cdacbf7fdffd3502e7",
+            "pages": [
+              6
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        }
+      ],
+      "unanswerable_policy": null
+    },
+    {
+      "question_id": "gt03",
+      "question": "재택근무 신청 자격·주당 횟수·승인 기한과 기기 사용 조건을 알려주세요.",
+      "answerability": "answerable",
+      "intents": [
+        {
+          "id": "eligibility",
+          "text": "재택근무 자격과 제외 조건",
+          "required_claim_ids": [
+            "gt03-c01",
+            "gt03-c02",
+            "gt03-c03"
+          ]
+        },
+        {
+          "id": "frequency",
+          "text": "주당 최대 일수",
+          "required_claim_ids": [
+            "gt03-c04"
+          ]
+        },
+        {
+          "id": "approval_by",
+          "text": "승인 기한",
+          "required_claim_ids": [
+            "gt03-c05-a2"
+          ]
+        },
+        {
+          "id": "device",
+          "text": "기기와 접근 조건",
+          "required_claim_ids": [
+            "gt03-c06",
+            "gt03-c07",
+            "gt03-c08"
+          ]
+        }
+      ],
+      "required_count": 8,
+      "supplementary_count": 1,
+      "claims": [
+        {
+          "claim_id": "gt03-c01",
+          "text": "재택근무 신청에는 입사 후 1개월 경과가 필요합니다.",
+          "role": "required",
+          "intent_ids": [
+            "eligibility"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 재택근무 자격과 제외 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "RM-01",
+            "start": 11922,
+            "end": 11938,
+            "quote": "입사 후 1개월이 지난 직원은",
+            "quote_sha256": "b83be81d092711002deb509f7fc76e9836a8f97bb5c82189d214cbc02c3f3f67",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt03-c02",
+          "text": "재택근무 신청에는 보안 교육 이수가 필요합니다.",
+          "role": "required",
+          "intent_ids": [
+            "eligibility"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 재택근무 자격과 제외 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "RM-01",
+            "start": 11939,
+            "end": 11966,
+            "quote": "보안 교육을 이수하면 재택근무를 신청할 수 있다.",
+            "quote_sha256": "bfd353ec825caf59b4ca5dc2b05f109713b0ab7090a4308a2d30249a37cd9fd0",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt03-c03",
+          "text": "현장 장비 운영 직무는 재택근무 대상에서 제외됩니다.",
+          "role": "required",
+          "intent_ids": [
+            "eligibility"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 재택근무 자격과 제외 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "RM-01",
+            "start": 11967,
+            "end": 11994,
+            "quote": "현장 장비 운영 \n직무는 재택 대상에서 제외한다.",
+            "quote_sha256": "17dd2999bdb0117d2b600b1a1b88a65cf1e2c0534edf3676efceace3515420e9",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt03-c04",
+          "text": "재택근무는 매주 최대 2일로 제한됩니다.",
+          "role": "required",
+          "intent_ids": [
+            "frequency"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 주당 최대 일수에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "RM-02",
+            "start": 12132,
+            "end": 12148,
+            "quote": "재택근무는 매주 최대 2일이며",
+            "quote_sha256": "15c0f422b6556951b41cbbf2feb823777ddeb9924d65d3af35c06d64a1aaaf67",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt03-c05-a1",
+          "text": "재택근무의 승인권자는 팀장입니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "승인 기한을 물었으며 승인 주체는 별도 보충 절차다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "RM-02",
+            "start": 12132,
+            "end": 12169,
+            "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다.",
+            "quote_sha256": "871ad61273400c1e9f6001f8a2ece6ba1d1d203c79b8f8fe57677e318d5713de",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt03-c05-a2",
+          "text": "재택근무의 승인 기한은 전주 금요일까지입니다.",
+          "role": "required",
+          "intent_ids": [
+            "approval_by"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 승인 기한에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "RM-02",
+            "start": 12132,
+            "end": 12169,
+            "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다.",
+            "quote_sha256": "871ad61273400c1e9f6001f8a2ece6ba1d1d203c79b8f8fe57677e318d5713de",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt03-c06",
+          "text": "재택근무 시 회사 지급 기기를 사용해야 합니다.",
+          "role": "required",
+          "intent_ids": [
+            "device"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 기기와 접근 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "RM-03",
+            "start": 12328,
+            "end": 12358,
+            "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다.",
+            "quote_sha256": "8aa8111f9cc179cf2d50b0e84a4f8464b3e34e6442e63e509627c7744f64d594",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt03-c07",
+          "text": "재택근무 시 회사 VPN을 사용해야 합니다.",
+          "role": "required",
+          "intent_ids": [
+            "device"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 기기와 접근 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "RM-03",
+            "start": 12328,
+            "end": 12383,
+            "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다. 공용 컴퓨터로 내부 문서에 접근할 수 없다.",
+            "quote_sha256": "643339aef6488043b7873e6f3544774c72663285105791822cb934955e1283d3",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt03-c08",
+          "text": "재택근무 시 공용 컴퓨터로 내부 문서에 접근할 수 없습니다.",
+          "role": "required",
+          "intent_ids": [
+            "device"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 기기와 접근 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "RM-03",
+            "start": 12359,
+            "end": 12383,
+            "quote": "공용 컴퓨터로 내부 문서에 접근할 수 없다.",
+            "quote_sha256": "0fd9350630321633933fcec861974d41d1cc1d3064e08584a873a5f1eb7400fa",
+            "pages": [
+              8
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        }
+      ],
+      "unanswerable_policy": null
+    },
+    {
+      "question_id": "gt04",
+      "question": "재택근무일에도 식대를 받을 수 있나요? 생일 포인트는 휴가 승인과 연결되나요?",
+      "answerability": "answerable",
+      "intents": [
+        {
+          "id": "meal",
+          "text": "재택근무일 식대 지급 여부",
+          "required_claim_ids": [
+            "gt04-c01"
+          ]
+        },
+        {
+          "id": "points_approval",
+          "text": "생일 포인트와 휴가 승인 관계",
+          "required_claim_ids": [
+            "gt04-c05"
+          ]
+        }
+      ],
+      "required_count": 2,
+      "supplementary_count": 4,
+      "claims": [
+        {
+          "claim_id": "gt04-c01",
+          "text": "재택근무일에는 사무실 출근일에 지급하는 식대를 지원하지 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "meal"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 재택근무일 식대 지급 여부에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "WF-01",
+            "start": 19080,
+            "end": 19134,
+            "quote": "사무실 출근일에는 식대 1만 원을 지원한다. 재택근무일과 휴가일에는 이 식대를 지원하지 \n않는다.",
+            "quote_sha256": "30b728283b0c1392b2ee438ef02e11ff2ca5556a7cf18a7cfede5c9f4a353de4",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt04-c02",
+          "text": "사무실 출근일의 식대는 1만 원입니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "재택근무일 식대 지급 여부를 물었으며 사무실 출근일의 금액은 묻지 않았다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "WF-01",
+            "start": 19080,
+            "end": 19104,
+            "quote": "사무실 출근일에는 식대 1만 원을 지원한다.",
+            "quote_sha256": "60434bc8cb00fa131015cbebf938922c45794b841ce3e4cf8ecd55b2ec56e3c3",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt04-c03-a1",
+          "text": "생일 축하 포인트의 지급 대상은 재직자입니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "생일 포인트와 휴가 승인의 관계를 물었으며 포인트의 지급 대상은 묻지 않았다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "WF-02",
+            "start": 19264,
+            "end": 19291,
+            "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다.",
+            "quote_sha256": "46eeccdb6da3077a5b04480957238188973f9c95c0857453199344e0dd9ceeec",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt04-c03-a2",
+          "text": "지급 대상자가 받는 생일 축하 포인트는 3만 점입니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "생일 포인트의 금액은 질문에서 요구하지 않았다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "WF-02",
+            "start": 19264,
+            "end": 19291,
+            "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다.",
+            "quote_sha256": "46eeccdb6da3077a5b04480957238188973f9c95c0857453199344e0dd9ceeec",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt04-c04",
+          "text": "생일 포인트는 휴가 신청 자격과 별개입니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "clarification",
+          "reason": "신청 자격과의 독립성은 도움이 되지만 질문의 직접 대상인 승인 여부와의 관계와는 구분한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "WF-02",
+            "start": 19292,
+            "end": 19322,
+            "quote": "이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.",
+            "quote_sha256": "055586d3678af2d4f25388284e556b637ba689b248a97291d064b208f42add09",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt04-c05",
+          "text": "생일 포인트는 휴가 승인 여부와도 별개입니다.",
+          "role": "required",
+          "intent_ids": [
+            "points_approval"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 생일 포인트와 휴가 승인 관계에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "WF-02",
+            "start": 19310,
+            "end": 19322,
+            "quote": "승인 여부와 별\n개다.",
+            "quote_sha256": "a7fbd8bf21783fe3f4061190ed490ccaeca0a92cf0a7cde77f152935665a90e5",
+            "pages": [
+              12
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        }
+      ],
+      "unanswerable_policy": null
+    },
+    {
+      "question_id": "gt05",
+      "question": "교육휴가의 대상과 연간 일수는 무엇이며 연차·생일휴가와 별도로 관리하나요?",
+      "answerability": "answerable",
+      "intents": [
+        {
+          "id": "eligible",
+          "text": "교육휴가 대상",
+          "required_claim_ids": [
+            "gt05-c02-a1"
+          ]
+        },
+        {
+          "id": "days",
+          "text": "연간 일수",
+          "required_claim_ids": [
+            "gt05-c02-a2"
+          ]
+        },
+        {
+          "id": "separation",
+          "text": "연차·생일휴가와 별도 관리",
+          "required_claim_ids": [
+            "gt05-c03",
+            "gt05-c04"
+          ]
+        }
+      ],
+      "required_count": 4,
+      "supplementary_count": 0,
+      "claims": [
+        {
+          "claim_id": "gt05-c02-a1",
+          "text": "교육휴가의 신청 대상은 직무 관련 자격시험 응시자입니다.",
+          "role": "required",
+          "intent_ids": [
+            "eligible"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 교육휴가 대상에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "ED-01",
+            "start": 24748,
+            "end": 24785,
+            "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.",
+            "quote_sha256": "5e121330661342c0cdc4b79edd81364b95c227a1852232804784d08e8ca7333f",
+            "pages": [
+              15
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt05-c02-a2",
+          "text": "교육휴가 대상자는 연 1일 교육휴가를 신청할 수 있습니다.",
+          "role": "required",
+          "intent_ids": [
+            "days"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연간 일수에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "ED-01",
+            "start": 24748,
+            "end": 24785,
+            "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.",
+            "quote_sha256": "5e121330661342c0cdc4b79edd81364b95c227a1852232804784d08e8ca7333f",
+            "pages": [
+              15
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt05-c03",
+          "text": "교육휴가는 생일 특별휴가와 별도로 관리합니다.",
+          "role": "required",
+          "intent_ids": [
+            "separation"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차·생일휴가와 별도 관리에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "ED-02",
+            "start": 24935,
+            "end": 24958,
+            "quote": "생일 특별휴가 및 연차와 별도로 관리한다.",
+            "quote_sha256": "85db7c2e81b699fdca67d9e562700e45bcedbd6da7bb803811d5dcdf20154eac",
+            "pages": [
+              15
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt05-c04",
+          "text": "교육휴가는 연차와도 별도로 관리합니다.",
+          "role": "required",
+          "intent_ids": [
+            "separation"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차·생일휴가와 별도 관리에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "ED-02",
+            "start": 24945,
+            "end": 24958,
+            "quote": "연차와 별도로 관리한다.",
+            "quote_sha256": "c00f5233cdf09fda37fc7d7b66048336155712dfec4d22baf584320077be3d1a",
+            "pages": [
+              15
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        }
+      ],
+      "unanswerable_policy": null
+    },
+    {
+      "question_id": "gt06",
+      "question": "출장 시스템 오류 시 임시 접수하면 팀장 승인 기한을 생략할 수 있나요? 휴가도 자동 승인되나요?",
+      "answerability": "answerable",
+      "intents": [
+        {
+          "id": "waiver",
+          "text": "시스템 장애 임시 기록이 기한·승인 조건을 없애는가?",
+          "required_claim_ids": [
+            "gt06-c03",
+            "gt06-c04"
+          ]
+        },
+        {
+          "id": "automatic_leave",
+          "text": "출장 승인으로 휴가도 자동 승인되는가?",
+          "required_claim_ids": [
+            "gt06-c05"
+          ]
+        }
+      ],
+      "required_count": 3,
+      "supplementary_count": 4,
+      "claims": [
+        {
+          "claim_id": "gt06-c01-a1",
+          "text": "출장의 승인권자는 팀장입니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "clarification",
+          "reason": "필수 c04가 팀장 승인 조건 유지까지 명시하므로 승인 주체의 배경 설명을 별도 필수로 가산하지 않는다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "TR-01",
+            "start": 30749,
+            "end": 30776,
+            "quote": "출장은 출발 5영업일 전에 팀장의 승인을 받는다.",
+            "quote_sha256": "4613a07057b02f95b98ff6cec81144e6ef18284080f3f503280715055e91447a",
+            "pages": [
+              19
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt06-c01-a2",
+          "text": "출장 승인은 출발 5영업일 전에 받아야 합니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "기존 승인 기한을 생략할 수 있는지가 질문이며 구체적인 5영업일 기준은 보충한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "TR-01",
+            "start": 30749,
+            "end": 30776,
+            "quote": "출장은 출발 5영업일 전에 팀장의 승인을 받는다.",
+            "quote_sha256": "4613a07057b02f95b98ff6cec81144e6ef18284080f3f503280715055e91447a",
+            "pages": [
+              19
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt06-c02",
+          "text": "출장 신청 시스템 장애 시 임시 기록은 출장 신청 내용을 보존하기 위한 것입니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "explanation",
+          "reason": "임시 기록의 목적은 이유 설명이며 승인 면제·자동 승인 여부의 직접 답변은 아니다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "TR-07",
+            "start": 35155,
+            "end": 35181,
+            "quote": "임시 기록은 신청 내용을 보존하기 위\n한 것이며",
+            "quote_sha256": "8b4d7b7fb513ff84b80653465b799e2e9250ae78e7c828cddeebe3f2a43403d0",
+            "pages": [
+              21
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt06-c03",
+          "text": "출장 신청 시스템 장애로 임시 기록을 남겨도 출장 승인 기한이 면제되지는 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "waiver"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시스템 장애 임시 기록이 기한·승인 조건을 없애는가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "TR-07",
+            "start": 35155,
+            "end": 35227,
+            "quote": "임시 기록은 신청 내용을 보존하기 위\n한 것이며 TR-01@v4의 승인 기한이나 팀장 승인 조건을 없애는 예외로 안내하지 않는다.",
+            "quote_sha256": "bcd080ada68cffacfd47a270a6b2416575da9799ba8cbec9715e09db6678d40d",
+            "pages": [
+              21
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt06-c04",
+          "text": "출장 신청 시스템 장애로 임시 기록을 남겨도 팀장 승인 조건이 면제되지는 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "waiver"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시스템 장애 임시 기록이 기한·승인 조건을 없애는가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "TR-07",
+            "start": 35182,
+            "end": 35227,
+            "quote": "TR-01@v4의 승인 기한이나 팀장 승인 조건을 없애는 예외로 안내하지 않는다.",
+            "quote_sha256": "70f368f7d7db0870a2f8106df0c176bbca43b1e5990085a15454f2a54c95d9c0",
+            "pages": [
+              21
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt06-c05",
+          "text": "출장 승인만으로 휴가가 자동 승인되지 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "automatic_leave"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 출장 승인으로 휴가도 자동 승인되는가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "TR-02",
+            "start": 30941,
+            "end": 30972,
+            "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.",
+            "quote_sha256": "0e30977c974a89cb39698228b17ac9ea92578daa17602c34ab308a8377ab5e5f",
+            "pages": [
+              19
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt06-c06",
+          "text": "출장 승인만으로 재택근무가 자동 승인되지도 않습니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "휴가 자동 승인 여부를 물었으며 재택근무 자동 승인 여부는 추가 주제다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "TR-02",
+            "start": 30953,
+            "end": 30972,
+            "quote": "재택근무가 자동 승인되지는 않는다.",
+            "quote_sha256": "3747985072be8bd01a2ea66df7b20703dd532010ebba41861a83dbaaacf1cf0d",
+            "pages": [
+              19
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        }
+      ],
+      "unanswerable_policy": null
+    },
+    {
+      "question_id": "gt07",
+      "question": "생일휴가 접수 확인이 안 되는 시스템 장애 때 무엇을 기록하며 승인 면제가 되나요?",
+      "answerability": "answerable",
+      "intents": [
+        {
+          "id": "record",
+          "text": "장애 시 임시 기록할 항목",
+          "required_claim_ids": [
+            "gt07-c01-a1",
+            "gt07-c01-a2",
+            "gt07-c01-a3"
+          ]
+        },
+        {
+          "id": "waiver",
+          "text": "승인이 면제되는가?",
+          "required_claim_ids": [
+            "gt07-c03"
+          ]
+        }
+      ],
+      "required_count": 4,
+      "supplementary_count": 4,
+      "claims": [
+        {
+          "claim_id": "gt07-c01-a1",
+          "text": "생일휴가 신청이 시스템 장애로 접수 확인되지 않으면 담당자는 신청자가 알린 시점을 임시 기록합니다.",
+          "role": "required",
+          "intent_ids": [
+            "record"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 장애 시 임시 기록할 항목에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-05",
+            "start": 2586,
+            "end": 2708,
+            "quote": "다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가 신청자가 알\n린 시점, 사용 희망일, 장애 상황을 임시 기록으로 남기고 이를 접수 확인용으로 안내한다.",
+            "quote_sha256": "2ec25a46d37bcaddaa271da587b2051ecb1ebbc8ee612403cc1ebae702ed1b4d",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt07-c01-a2",
+          "text": "생일휴가 신청이 시스템 장애로 접수 확인되지 않으면 담당자는 사용 희망일을 임시 기록합니다.",
+          "role": "required",
+          "intent_ids": [
+            "record"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 장애 시 임시 기록할 항목에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-05",
+            "start": 2586,
+            "end": 2708,
+            "quote": "다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가 신청자가 알\n린 시점, 사용 희망일, 장애 상황을 임시 기록으로 남기고 이를 접수 확인용으로 안내한다.",
+            "quote_sha256": "2ec25a46d37bcaddaa271da587b2051ecb1ebbc8ee612403cc1ebae702ed1b4d",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt07-c01-a3",
+          "text": "생일휴가 신청이 시스템 장애로 접수 확인되지 않으면 담당자는 장애 상황을 임시 기록합니다.",
+          "role": "required",
+          "intent_ids": [
+            "record"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 장애 시 임시 기록할 항목에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-05",
+            "start": 2586,
+            "end": 2708,
+            "quote": "다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가 신청자가 알\n린 시점, 사용 희망일, 장애 상황을 임시 기록으로 남기고 이를 접수 확인용으로 안내한다.",
+            "quote_sha256": "2ec25a46d37bcaddaa271da587b2051ecb1ebbc8ee612403cc1ebae702ed1b4d",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt07-c02",
+          "text": "생일휴가 장애 임시 기록은 새로운 생일휴가 자격을 부여하지 않습니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "장애 시 기록 항목과 승인 면제를 물었으며 새로운 휴가 자격 부여 여부는 묻지 않았다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-05",
+            "start": 2709,
+            "end": 2740,
+            "quote": "임시 기\n록은 새로운 휴가 자격이나 승인 면제가 아니며,",
+            "quote_sha256": "fcc5b6c68dd206d2ff21eac9ad53e654d5e16e7a152181f3895039965e3364f7",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt07-c03",
+          "text": "생일휴가 장애 임시 기록으로 생일휴가 승인이 면제되지 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "waiver"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 승인이 면제되는가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-05",
+            "start": 2709,
+            "end": 2782,
+            "quote": "임시 기\n록은 새로운 휴가 자격이나 승인 면제가 아니며, 원래 신청 시점과 이후 복구 입력 시점을 구별하기\n 위한 자료로 사용한다.",
+            "quote_sha256": "88d2ea41ceff44fe790e3f10cad5fa675510fbbd612499d7ed34e57e1d0879a2",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt07-c04",
+          "text": "생일휴가 장애 임시 기록만으로 생일휴가 신청 기한이 연장되지 않습니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "신청 기한 연장 여부는 유용한 주의사항이지만 승인 면제 여부와 구분한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-05",
+            "start": 2879,
+            "end": 2945,
+            "quote": "임시 기록의 작성만을 이유로 신청 기한\n이 연장되었다고 안내하거나 팀장 승인 없이 사용이 확정되었다고 통지하지 않는다.",
+            "quote_sha256": "4aa631ff53b59cdb6e719a2ffe127e9ed41cab9f8a5b48530ca3c56aafdfdc59",
+            "pages": [
+              3
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt07-c05",
+          "text": "생일휴가 신청 시스템이 복구되면 기존 신청 기록이 생성되어 있는지 먼저 확인합니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "장애 시 무엇을 기록하는지에 비해 복구 후 기존 기록 조회는 후속 절차다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-05",
+            "start": 2783,
+            "end": 2822,
+            "quote": "시스템이 복구되면 기존 기록이 실제로 생성되어 있는지를 먼저 찾아보고,",
+            "quote_sha256": "e59ec1ae07074f9668ec341ce42f93fa1c71a5073986bb1591db4d58dbfeb17f",
+            "pages": [
+              2
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt07-c06",
+          "text": "생일휴가 신청 시스템 복구 후 기존 신청 기록이 없는 경우에만 임시 기록과 연결해 입력합니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "복구 후 기존 기록이 없을 때 입력하는 단계는 질문에 직접 요구되지 않은 후속 절차다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "BD-05",
+            "start": 2848,
+            "end": 2878,
+            "quote": "존재하지 않는 경우에만 임시 기록과 연결하여 입력한다.",
+            "quote_sha256": "aae63991db45d050fb63dbc6e989cf1293ed5172c2b67904ae114f5c15e67f7d",
+            "pages": [
+              3
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        }
+      ],
+      "unanswerable_policy": null
+    },
+    {
+      "question_id": "gt08",
+      "question": "연차 일부 날짜와 교육휴가 응시 계획 취소를 함께 요청하면 어떤 범위를 구분해 기록해야 하나요?",
+      "answerability": "answerable",
+      "intents": [
+        {
+          "id": "annual_scope",
+          "text": "연차 유지·취소 날짜와 기존 사용 사실의 구분",
+          "required_claim_ids": [
+            "gt08-c01-a1",
+            "gt08-c01-a2",
+            "gt08-c02",
+            "gt08-c03"
+          ]
+        },
+        {
+          "id": "education_scope",
+          "text": "시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분",
+          "required_claim_ids": [
+            "gt08-c05",
+            "gt08-c06",
+            "gt08-c07-a1",
+            "gt08-c07-a2"
+          ]
+        }
+      ],
+      "required_count": 8,
+      "supplementary_count": 2,
+      "claims": [
+        {
+          "claim_id": "gt08-c01-a1",
+          "text": "연차 일부 날짜만 취소할 때에는 유지할 날짜를 구분하여 기록합니다.",
+          "role": "required",
+          "intent_ids": [
+            "annual_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차 유지·취소 날짜와 기존 사용 사실의 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "AN-10",
+            "start": 10535,
+            "end": 10610,
+            "quote": "여러 날짜의 요청 중 일부만 취소하려는 경우에는 유지하는 날짜와 취소하는 날짜를 \n나누어 기록하고, 전체 신청을 일괄 삭제하지 않는다.",
+            "quote_sha256": "77583d7e618c58950e337e10872b2439498cbb58cb4c2b5d0f446af7c5699d19",
+            "pages": [
+              7
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt08-c01-a2",
+          "text": "연차 일부 날짜만 취소할 때에는 취소할 날짜를 구분하여 기록합니다.",
+          "role": "required",
+          "intent_ids": [
+            "annual_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차 유지·취소 날짜와 기존 사용 사실의 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "AN-10",
+            "start": 10535,
+            "end": 10610,
+            "quote": "여러 날짜의 요청 중 일부만 취소하려는 경우에는 유지하는 날짜와 취소하는 날짜를 \n나누어 기록하고, 전체 신청을 일괄 삭제하지 않는다.",
+            "quote_sha256": "77583d7e618c58950e337e10872b2439498cbb58cb4c2b5d0f446af7c5699d19",
+            "pages": [
+              7
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt08-c02",
+          "text": "연차 일부 날짜만 취소할 때에는 전체 신청을 일괄 삭제하지 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "annual_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차 유지·취소 날짜와 기존 사용 사실의 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "AN-10",
+            "start": 10535,
+            "end": 10610,
+            "quote": "여러 날짜의 요청 중 일부만 취소하려는 경우에는 유지하는 날짜와 취소하는 날짜를 \n나누어 기록하고, 전체 신청을 일괄 삭제하지 않는다.",
+            "quote_sha256": "77583d7e618c58950e337e10872b2439498cbb58cb4c2b5d0f446af7c5699d19",
+            "pages": [
+              7
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt08-c03",
+          "text": "연차의 실제 사용 여부가 아직 확인되지 않았거나 사용 내역 반영이 지연되면, 신청 취소 의사와 기존 사용 사실의 확인을 구분해 처리합니다.",
+          "role": "required",
+          "intent_ids": [
+            "annual_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차 유지·취소 날짜와 기존 사용 사실의 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "AN-10",
+            "start": 10611,
+            "end": 10693,
+            "quote": "실제 사용 여부가 아직 확인되지 않았거나 사\n용 내역 반영이 지연되고 있으면 담당자는 신청 취소 의사와 기존 사용 사실의 확인을 구분해 처리\n한다.",
+            "quote_sha256": "4b3c4797c70b375b7ee2757d1a036dfb453736656f698ed1366af5a5df532410",
+            "pages": [
+              7
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt08-c04",
+          "text": "취소 접수만으로 연차 차감이 모두 복구되었다고 안내하지 않습니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "취소 기록 범위 질문에 대한 잔여/차감 복구 상태 안내는 보충 결과 설명이다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "AN-10",
+            "start": 10694,
+            "end": 10740,
+            "quote": "취소 요청이 접수되었다는 이유만으로 모든 차감이 이미 복구되었다고 안내하지 않으며,",
+            "quote_sha256": "f37e3277c8a8d0cd4a92cd7af1c0fcb059a376d5edb2eb1873de931f295bad6b",
+            "pages": [
+              7
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt08-c05",
+          "text": "교육휴가는 시험 접수만 취소하는지 휴가 신청도 취소하는지 구분합니다.",
+          "role": "required",
+          "intent_ids": [
+            "education_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "ED-06",
+            "start": 28207,
+            "end": 28245,
+            "quote": "시\n험 접수만 취소한 것인지 휴가 신청도 취소하려는 것인지 구분하고,",
+            "quote_sha256": "3c770d4073555a3db41643ba5648e44ea3da1e2558f3e005153a9b93abaedbd8",
+            "pages": [
+              17
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt08-c06",
+          "text": "교육휴가 취소 여부를 아직 결정하지 못한 문의를 확정된 취소로 기록하지 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "education_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "ED-06",
+            "start": 28246,
+            "end": 28284,
+            "quote": "신청자가 아직 결정하지 못한 \n문의를 확정된 취소로 기록하지 않는다.",
+            "quote_sha256": "485a583a2a00a14d048e58073f6aa8b7f9d3c83a55b0dd48d281ceab9783585d",
+            "pages": [
+              17
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt08-c07-a1",
+          "text": "교육휴가 요청을 취소할 때 다른 시험에 관한 요청까지 일괄 삭제하지 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "education_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "ED-06",
+            "start": 28157,
+            "end": 28361,
+            "quote": "응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다. 시\n험 접수만 취소한 것인지 휴가 신청도 취소하려는 것인지 구분하고, 신청자가 아직 결정하지 못한 \n문의를 확정된 취소로 기록하지 않는다. 확인된 취소 의사는 원래 신청과 연결하여 남기며, 다른 시\n험에 관한 요청이나 이미 별도로 관리되는 휴가 기록까지 일괄 삭제하지 않는다.",
+            "quote_sha256": "48b065eb445f654ca8dca1065d8a7982c3ab5cf799c8fc8c7fe9cdeebe1de3d2",
+            "pages": [
+              17
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt08-c07-a2",
+          "text": "교육휴가 요청을 취소할 때 별도로 관리되는 휴가 기록까지 일괄 삭제하지 않습니다.",
+          "role": "required",
+          "intent_ids": [
+            "education_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "ED-06",
+            "start": 28157,
+            "end": 28361,
+            "quote": "응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다. 시\n험 접수만 취소한 것인지 휴가 신청도 취소하려는 것인지 구분하고, 신청자가 아직 결정하지 못한 \n문의를 확정된 취소로 기록하지 않는다. 확인된 취소 의사는 원래 신청과 연결하여 남기며, 다른 시\n험에 관한 요청이나 이미 별도로 관리되는 휴가 기록까지 일괄 삭제하지 않는다.",
+            "quote_sha256": "48b065eb445f654ca8dca1065d8a7982c3ab5cf799c8fc8c7fe9cdeebe1de3d2",
+            "pages": [
+              17
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        },
+        {
+          "claim_id": "gt08-c08",
+          "text": "교육휴가도 취소 접수만으로 잔여 일수가 복구되었다고 안내하지 않습니다.",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "교육휴가 잔여 일수 복구 여부는 취소 대상 구분과 별도의 보충 결과 설명이다.",
+          "clarifies_required_ids": [],
+          "source": {
+            "article_id": "ED-06",
+            "start": 28576,
+            "end": 28645,
+            "quote": "취소 의사를 접수했다는 사실\n만으로 잔여 일수가 복구되었다고 안내하지 않으며, 반영된 기록을 확인한 후 그 결과를 설명한다.",
+            "quote_sha256": "384bd32b4e644e53883b87df9df4e6874aeca93108a354b83a3dff350abaefa9",
+            "pages": [
+              17
+            ],
+            "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298"
+          }
+        }
+      ],
+      "unanswerable_policy": null
+    },
+    {
+      "question_id": "gt09",
+      "question": "재택근무 전기요금의 월 지원 한도는 얼마인가요?",
+      "answerability": "unanswerable_candidate",
+      "intents": [],
+      "required_count": 0,
+      "supplementary_count": 0,
+      "claims": [],
+      "unanswerable_policy": "원문 미명시 후보 상태와 claim0을 유지; 금액을 만들지 않는 보류의 적절성을 별도 검증한다."
+    },
+    {
+      "question_id": "gt10",
+      "question": "개인 차량으로 출장할 때 킬로미터당 유류비 지급액은 얼마인가요?",
+      "answerability": "unanswerable_candidate",
+      "intents": [],
+      "required_count": 0,
+      "supplementary_count": 0,
+      "claims": [],
+      "unanswerable_policy": "원문 미명시 후보 상태와 claim0을 유지; 금액을 만들지 않는 보류의 적절성을 별도 검증한다."
+    }
+  ]
+}

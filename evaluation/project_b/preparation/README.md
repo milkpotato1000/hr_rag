@@ -1,6 +1,39 @@
 # P019 evaluator preparation
 
-## 최신 검토본: P022 / run003
+## 최신 검토본: P023 / run004
+
+[필수 답변과 보충 안내](artifacts/run004/review.html)는 기존57개 주장을 질문별
+**필수38개·보충19개**로 분류한 미승인 검토본입니다. 질문 의도 → 필수 답변/각 근거 →
+보충 안내/각 근거 순서로 읽고 각 항목의 분류 사유를 확인합니다. 원래 전체 answer와
+57개 ID/text/source/answer_span은 보존하며 required_answer/supplementary_answer를
+별도 파생합니다. gt09/10은 미명시·보류 검토 후보로 유지하며 claim0을100% 정답으로
+표시하지 않습니다.
+
+정확한 보충은 누락되어도 핵심 점수를 깎거나 가산하지 않습니다. 잘못된 보충은
+추가 사실 오류로 드러내며, 핵심 만점이라도 답변 전체 정답으로 요약하지 않습니다.
+핵심 P/R/F1과 전체 생성의 E/U/C 분모, 미확정/review_required·0분모·의도 진단과
+10개 고정 기대 예시는 동결 [정책](artifacts/run004/scoring-policy.md)과 보고서에 있습니다.
+이것은 정책 표시·인계이며 실제 모델 채점/매칭/집계 구현은 P013 후속 범위입니다.
+
+run003 gt01의 첫5개 직접 승인은 정확한 parent hash/ID/text/source와 함께 별도
+과거 이력으로 보존합니다. 위임된 Codex 분류 검토와 새 패킷 전체의 실제 사람 승인은
+구분하며 전체 human_approval은 null입니다. 새 run004 화면 자체의 실제 관찰도 별도로 필요합니다.
+
+```sh
+python3 -B evaluation/project_b/preparation/prepare.py revise-scoped-review --parent evaluation/project_b/preparation/artifacts/run003 --audit docs/planning/reviews/p023/run003-scope-audit.json --policy docs/planning/specs/P023-scoring-policy.md --out evaluation/project_b/preparation/artifacts/run004
+python3 -B evaluation/project_b/preparation/prepare.py verify --out evaluation/project_b/preparation/artifacts/run004
+python3 -B evaluation/project_b/preparation/prepare.py report --out evaluation/project_b/preparation/artifacts/run004
+```
+
+schema_version3 / p023-core-supplement-v1이며 기존 버전의 검증·결과·모델 schema를 유지합니다.
+생성 후 verify/report는 내부 scope-audit.json/scoring-policy.md만 사용해 외부 plan 없이
+독립 복사에서 재생됩니다. 모듈과 run001~004를 같은 상대 위치로 보존하세요. 기존 결과의
+다른 내용 덮어쓰기·손상 audit/정책/parent·미지정/미지원 버전·모델 실행을 거부합니다.
+scope-mapping.json은57개 분류와 원문 정보를 연결하고 packet-manifest.json이 파일 hash를
+기록합니다. inherited_revision_artifacts는 원래 atomic 메타데이터/질문별 개정 경로가
+가리키는 run003의 역사적 파일을 명시합니다. 과거 모델 경로는 run001을 계속 참조합니다.
+
+## 원자화 검토본: P022 / run003
 
 [원자 주장 검토 보고서](artifacts/run003/review.html)는 **57개 미승인 후보**입니다.
 run002의45개를 전수 검수해10개를 분리하고2개는 적용 조건을 복원했으며33개는 유지했습니다.

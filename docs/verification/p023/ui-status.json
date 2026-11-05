@@ -1,0 +1,20 @@
+{
+  "report": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/evaluation/project_b/preparation/artifacts/run004/review.html",
+  "packet_sha256": "ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235",
+  "status": "NOT_OBSERVED_FILE_PROTOCOL_TOOL_POLICY",
+  "actual_ui_observed": false,
+  "narrow_width_observed": false,
+  "keyboard_observed": false,
+  "prior_run003_observation_reused": false,
+  "basis": "Existing file URL navigation/read attempts were policy-blocked. No repeated blocked action, alternate browser surface, raw CDP or temporary server workaround attempted for run004.",
+  "structural_only": {
+    "visible_claim_quotes": 57,
+    "visible_judgement_premises": 18,
+    "default_closed_details": 84,
+    "embedded_json_matches": true,
+    "required_supplementary_groups_and_reasons": true,
+    "fixed_policy_examples": 10,
+    "prior_parent_approvals": 5
+  },
+  "human_gt_approval": null
+}

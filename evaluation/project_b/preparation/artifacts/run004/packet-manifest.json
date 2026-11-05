@@ -1,0 +1,15 @@
+{
+  "version": "p023-core-supplement-v1",
+  "parent_packet_sha256": "946d7181ecf8b45e633a347adbcc241f38dfd5976d80342e34e1da3bf2d87199",
+  "parent_file_sha256": "fec84decf14335151162d9b168db366854a5b4a45d06092230e78f2e124e802b",
+  "packet_sha256": "ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235",
+  "scope_audit_file_sha256": "437bcf0eafb6de063db66e992916b7b8c5cfd00ee150490f89e2e84a0b14d0f0",
+  "scoring_policy_file_sha256": "ea9c1d2da4cc02c5743a56e919e59ed86c6ac474172974e2e5f04640926a7ab8",
+  "files": {
+    "packet.json": "e081e372ff089b5ad6eae334b29924438359993fdfa534d67578af9785b1aa7b",
+    "scope-audit.json": "437bcf0eafb6de063db66e992916b7b8c5cfd00ee150490f89e2e84a0b14d0f0",
+    "scoring-policy.md": "ea9c1d2da4cc02c5743a56e919e59ed86c6ac474172974e2e5f04640926a7ab8",
+    "scope-mapping.json": "0618da2ad9bad43bbf7312951b2d5e8611120e2fe95c2c19924014f3ca41c4c3",
+    "review.html": "4af0b8e34de5a0cd8344047d32ef9ce2c23ffc02bf236f00523b52e54d0cf678"
+  }
+}

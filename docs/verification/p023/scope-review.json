@@ -1,0 +1,850 @@
+{
+  "reviewer": "Codex dev",
+  "method": "Compare all 57 preserved parent claim objects with pinned scope audit; check explicit question intents and source metadata, deterministic group derivation and historical approval boundary",
+  "human_approval": null,
+  "required": 38,
+  "supplementary": 19,
+  "total": 57,
+  "items": [
+    {
+      "question_id": "gt01",
+      "question": "생일 특별휴가는 누가 며칠 받을 수 있고, 언제까지 신청해서 언제 사용해야 하나요?",
+      "counts": {
+        "required": 6,
+        "supplementary": 4,
+        "total": 10
+      },
+      "intents": [
+        {
+          "id": "eligible",
+          "text": "누가 받을 수 있나?",
+          "required_claim_ids": [
+            "gt01-c02-a1",
+            "gt01-c02-a3"
+          ]
+        },
+        {
+          "id": "days",
+          "text": "매년 며칠인가?",
+          "required_claim_ids": [
+            "gt01-c02-a2"
+          ]
+        },
+        {
+          "id": "apply_by",
+          "text": "언제까지 신청하나?",
+          "required_claim_ids": [
+            "gt01-c05-a1"
+          ]
+        },
+        {
+          "id": "use_when",
+          "text": "언제 사용하나?",
+          "required_claim_ids": [
+            "gt01-c04-a1",
+            "gt01-c04-a2"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "claim_id": "gt01-c02-a1",
+          "role": "required",
+          "intent_ids": [
+            "eligible"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 누가 받을 수 있나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt01-c02-a2",
+          "role": "required",
+          "intent_ids": [
+            "days"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 매년 며칠인가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt01-c02-a3",
+          "role": "required",
+          "intent_ids": [
+            "eligible"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 누가 받을 수 있나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt01-c04-a1",
+          "role": "required",
+          "intent_ids": [
+            "use_when"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 언제 사용하나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt01-c04-a2",
+          "role": "required",
+          "intent_ids": [
+            "use_when"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 언제 사용하나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt01-c05-a1",
+          "role": "required",
+          "intent_ids": [
+            "apply_by"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 언제까지 신청하나?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt01-c05-a2",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "질문은 신청 기한을 묻고 있어 신청 경로는 보충 절차다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt01-c06",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "질문에서 승인 절차를 직접 요구하지 않아 팀장 승인은 보충 안내로 둔다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt01-c07",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "clarification",
+          "reason": "생일이 속한 달 사용이라는 필수 기한을 명확히 하는 설명이며 핵심 점수를 중복 가산하지 않는다.",
+          "clarifies_required_ids": [
+            "gt01-c04-a1"
+          ]
+        },
+        {
+          "claim_id": "gt01-c08",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "현금 대체 여부는 자격·일수·신청/사용 기한의 직접 답변 범위 밖이다.",
+          "clarifies_required_ids": []
+        }
+      ]
+    },
+    {
+      "question_id": "gt02",
+      "question": "미사용 연차는 최대 며칠 이월하며 언제까지 써야 하나요? 생일 특별휴가도 해당하나요?",
+      "counts": {
+        "required": 3,
+        "supplementary": 0,
+        "total": 3
+      },
+      "intents": [
+        {
+          "id": "carry_days",
+          "text": "최대 이월 일수",
+          "required_claim_ids": [
+            "gt02-c01"
+          ]
+        },
+        {
+          "id": "use_by",
+          "text": "이월 연차 사용 기한",
+          "required_claim_ids": [
+            "gt02-c02"
+          ]
+        },
+        {
+          "id": "birthday_scope",
+          "text": "생일휴가 적용 여부",
+          "required_claim_ids": [
+            "gt02-c03"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "claim_id": "gt02-c01",
+          "role": "required",
+          "intent_ids": [
+            "carry_days"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 최대 이월 일수에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt02-c02",
+          "role": "required",
+          "intent_ids": [
+            "use_by"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 이월 연차 사용 기한에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt02-c03",
+          "role": "required",
+          "intent_ids": [
+            "birthday_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 생일휴가 적용 여부에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        }
+      ]
+    },
+    {
+      "question_id": "gt03",
+      "question": "재택근무 신청 자격·주당 횟수·승인 기한과 기기 사용 조건을 알려주세요.",
+      "counts": {
+        "required": 8,
+        "supplementary": 1,
+        "total": 9
+      },
+      "intents": [
+        {
+          "id": "eligibility",
+          "text": "재택근무 자격과 제외 조건",
+          "required_claim_ids": [
+            "gt03-c01",
+            "gt03-c02",
+            "gt03-c03"
+          ]
+        },
+        {
+          "id": "frequency",
+          "text": "주당 최대 일수",
+          "required_claim_ids": [
+            "gt03-c04"
+          ]
+        },
+        {
+          "id": "approval_by",
+          "text": "승인 기한",
+          "required_claim_ids": [
+            "gt03-c05-a2"
+          ]
+        },
+        {
+          "id": "device",
+          "text": "기기와 접근 조건",
+          "required_claim_ids": [
+            "gt03-c06",
+            "gt03-c07",
+            "gt03-c08"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "claim_id": "gt03-c01",
+          "role": "required",
+          "intent_ids": [
+            "eligibility"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 재택근무 자격과 제외 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt03-c02",
+          "role": "required",
+          "intent_ids": [
+            "eligibility"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 재택근무 자격과 제외 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt03-c03",
+          "role": "required",
+          "intent_ids": [
+            "eligibility"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 재택근무 자격과 제외 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt03-c04",
+          "role": "required",
+          "intent_ids": [
+            "frequency"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 주당 최대 일수에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt03-c05-a1",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "승인 기한을 물었으며 승인 주체는 별도 보충 절차다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt03-c05-a2",
+          "role": "required",
+          "intent_ids": [
+            "approval_by"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 승인 기한에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt03-c06",
+          "role": "required",
+          "intent_ids": [
+            "device"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 기기와 접근 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt03-c07",
+          "role": "required",
+          "intent_ids": [
+            "device"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 기기와 접근 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt03-c08",
+          "role": "required",
+          "intent_ids": [
+            "device"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 기기와 접근 조건에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        }
+      ]
+    },
+    {
+      "question_id": "gt04",
+      "question": "재택근무일에도 식대를 받을 수 있나요? 생일 포인트는 휴가 승인과 연결되나요?",
+      "counts": {
+        "required": 2,
+        "supplementary": 4,
+        "total": 6
+      },
+      "intents": [
+        {
+          "id": "meal",
+          "text": "재택근무일 식대 지급 여부",
+          "required_claim_ids": [
+            "gt04-c01"
+          ]
+        },
+        {
+          "id": "points_approval",
+          "text": "생일 포인트와 휴가 승인 관계",
+          "required_claim_ids": [
+            "gt04-c05"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "claim_id": "gt04-c01",
+          "role": "required",
+          "intent_ids": [
+            "meal"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 재택근무일 식대 지급 여부에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt04-c02",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "재택근무일 식대 지급 여부를 물었으며 사무실 출근일의 금액은 묻지 않았다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt04-c03-a1",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "생일 포인트와 휴가 승인의 관계를 물었으며 포인트의 지급 대상은 묻지 않았다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt04-c03-a2",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "생일 포인트의 금액은 질문에서 요구하지 않았다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt04-c04",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "clarification",
+          "reason": "신청 자격과의 독립성은 도움이 되지만 질문의 직접 대상인 승인 여부와의 관계와는 구분한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt04-c05",
+          "role": "required",
+          "intent_ids": [
+            "points_approval"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 생일 포인트와 휴가 승인 관계에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        }
+      ]
+    },
+    {
+      "question_id": "gt05",
+      "question": "교육휴가의 대상과 연간 일수는 무엇이며 연차·생일휴가와 별도로 관리하나요?",
+      "counts": {
+        "required": 4,
+        "supplementary": 0,
+        "total": 4
+      },
+      "intents": [
+        {
+          "id": "eligible",
+          "text": "교육휴가 대상",
+          "required_claim_ids": [
+            "gt05-c02-a1"
+          ]
+        },
+        {
+          "id": "days",
+          "text": "연간 일수",
+          "required_claim_ids": [
+            "gt05-c02-a2"
+          ]
+        },
+        {
+          "id": "separation",
+          "text": "연차·생일휴가와 별도 관리",
+          "required_claim_ids": [
+            "gt05-c03",
+            "gt05-c04"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "claim_id": "gt05-c02-a1",
+          "role": "required",
+          "intent_ids": [
+            "eligible"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 교육휴가 대상에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt05-c02-a2",
+          "role": "required",
+          "intent_ids": [
+            "days"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연간 일수에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt05-c03",
+          "role": "required",
+          "intent_ids": [
+            "separation"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차·생일휴가와 별도 관리에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt05-c04",
+          "role": "required",
+          "intent_ids": [
+            "separation"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차·생일휴가와 별도 관리에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        }
+      ]
+    },
+    {
+      "question_id": "gt06",
+      "question": "출장 시스템 오류 시 임시 접수하면 팀장 승인 기한을 생략할 수 있나요? 휴가도 자동 승인되나요?",
+      "counts": {
+        "required": 3,
+        "supplementary": 4,
+        "total": 7
+      },
+      "intents": [
+        {
+          "id": "waiver",
+          "text": "시스템 장애 임시 기록이 기한·승인 조건을 없애는가?",
+          "required_claim_ids": [
+            "gt06-c03",
+            "gt06-c04"
+          ]
+        },
+        {
+          "id": "automatic_leave",
+          "text": "출장 승인으로 휴가도 자동 승인되는가?",
+          "required_claim_ids": [
+            "gt06-c05"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "claim_id": "gt06-c01-a1",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "clarification",
+          "reason": "필수 c04가 팀장 승인 조건 유지까지 명시하므로 승인 주체의 배경 설명을 별도 필수로 가산하지 않는다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt06-c01-a2",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "기존 승인 기한을 생략할 수 있는지가 질문이며 구체적인 5영업일 기준은 보충한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt06-c02",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "explanation",
+          "reason": "임시 기록의 목적은 이유 설명이며 승인 면제·자동 승인 여부의 직접 답변은 아니다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt06-c03",
+          "role": "required",
+          "intent_ids": [
+            "waiver"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시스템 장애 임시 기록이 기한·승인 조건을 없애는가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt06-c04",
+          "role": "required",
+          "intent_ids": [
+            "waiver"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시스템 장애 임시 기록이 기한·승인 조건을 없애는가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt06-c05",
+          "role": "required",
+          "intent_ids": [
+            "automatic_leave"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 출장 승인으로 휴가도 자동 승인되는가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt06-c06",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "휴가 자동 승인 여부를 물었으며 재택근무 자동 승인 여부는 추가 주제다.",
+          "clarifies_required_ids": []
+        }
+      ]
+    },
+    {
+      "question_id": "gt07",
+      "question": "생일휴가 접수 확인이 안 되는 시스템 장애 때 무엇을 기록하며 승인 면제가 되나요?",
+      "counts": {
+        "required": 4,
+        "supplementary": 4,
+        "total": 8
+      },
+      "intents": [
+        {
+          "id": "record",
+          "text": "장애 시 임시 기록할 항목",
+          "required_claim_ids": [
+            "gt07-c01-a1",
+            "gt07-c01-a2",
+            "gt07-c01-a3"
+          ]
+        },
+        {
+          "id": "waiver",
+          "text": "승인이 면제되는가?",
+          "required_claim_ids": [
+            "gt07-c03"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "claim_id": "gt07-c01-a1",
+          "role": "required",
+          "intent_ids": [
+            "record"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 장애 시 임시 기록할 항목에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt07-c01-a2",
+          "role": "required",
+          "intent_ids": [
+            "record"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 장애 시 임시 기록할 항목에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt07-c01-a3",
+          "role": "required",
+          "intent_ids": [
+            "record"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 장애 시 임시 기록할 항목에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt07-c02",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "장애 시 기록 항목과 승인 면제를 물었으며 새로운 휴가 자격 부여 여부는 묻지 않았다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt07-c03",
+          "role": "required",
+          "intent_ids": [
+            "waiver"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 승인이 면제되는가?에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt07-c04",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "신청 기한 연장 여부는 유용한 주의사항이지만 승인 면제 여부와 구분한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt07-c05",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "장애 시 무엇을 기록하는지에 비해 복구 후 기존 기록 조회는 후속 절차다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt07-c06",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "procedure",
+          "reason": "복구 후 기존 기록이 없을 때 입력하는 단계는 질문에 직접 요구되지 않은 후속 절차다.",
+          "clarifies_required_ids": []
+        }
+      ]
+    },
+    {
+      "question_id": "gt08",
+      "question": "연차 일부 날짜와 교육휴가 응시 계획 취소를 함께 요청하면 어떤 범위를 구분해 기록해야 하나요?",
+      "counts": {
+        "required": 8,
+        "supplementary": 2,
+        "total": 10
+      },
+      "intents": [
+        {
+          "id": "annual_scope",
+          "text": "연차 유지·취소 날짜와 기존 사용 사실의 구분",
+          "required_claim_ids": [
+            "gt08-c01-a1",
+            "gt08-c01-a2",
+            "gt08-c02",
+            "gt08-c03"
+          ]
+        },
+        {
+          "id": "education_scope",
+          "text": "시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분",
+          "required_claim_ids": [
+            "gt08-c05",
+            "gt08-c06",
+            "gt08-c07-a1",
+            "gt08-c07-a2"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "claim_id": "gt08-c01-a1",
+          "role": "required",
+          "intent_ids": [
+            "annual_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차 유지·취소 날짜와 기존 사용 사실의 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt08-c01-a2",
+          "role": "required",
+          "intent_ids": [
+            "annual_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차 유지·취소 날짜와 기존 사용 사실의 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt08-c02",
+          "role": "required",
+          "intent_ids": [
+            "annual_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차 유지·취소 날짜와 기존 사용 사실의 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt08-c03",
+          "role": "required",
+          "intent_ids": [
+            "annual_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 연차 유지·취소 날짜와 기존 사용 사실의 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt08-c04",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "취소 기록 범위 질문에 대한 잔여/차감 복구 상태 안내는 보충 결과 설명이다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt08-c05",
+          "role": "required",
+          "intent_ids": [
+            "education_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt08-c06",
+          "role": "required",
+          "intent_ids": [
+            "education_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt08-c07-a1",
+          "role": "required",
+          "intent_ids": [
+            "education_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt08-c07-a2",
+          "role": "required",
+          "intent_ids": [
+            "education_scope"
+          ],
+          "supplement_kind": null,
+          "reason": "질문의 시험 접수·휴가 신청·미결 의사 및 다른 요청의 범위 구분에 직접 답하거나 그 답의 조건·예외를 보존한다.",
+          "clarifies_required_ids": []
+        },
+        {
+          "claim_id": "gt08-c08",
+          "role": "supplementary",
+          "intent_ids": [],
+          "supplement_kind": "related",
+          "reason": "교육휴가 잔여 일수 복구 여부는 취소 대상 구분과 별도의 보충 결과 설명이다.",
+          "clarifies_required_ids": []
+        }
+      ]
+    },
+    {
+      "question_id": "gt09",
+      "question": "재택근무 전기요금의 월 지원 한도는 얼마인가요?",
+      "counts": {
+        "required": 0,
+        "supplementary": 0,
+        "total": 0
+      },
+      "intents": [],
+      "roles": []
+    },
+    {
+      "question_id": "gt10",
+      "question": "개인 차량으로 출장할 때 킬로미터당 유류비 지급액은 얼마인가요?",
+      "counts": {
+        "required": 0,
+        "supplementary": 0,
+        "total": 0
+      },
+      "intents": [],
+      "roles": []
+    }
+  ],
+  "policy_version": "p023-core-supplement-v1",
+  "policy_file_sha256": "ea9c1d2da4cc02c5743a56e919e59ed86c6ac474172974e2e5f04640926a7ab8",
+  "prior_parent_approvals_only": [
+    "gt01-c02-a1",
+    "gt01-c02-a2",
+    "gt01-c02-a3",
+    "gt01-c04-a1",
+    "gt01-c04-a2"
+  ],
+  "approval_ledger_mutations": 0
+}

@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "external_plan_required": false,
+  "model_required": false,
+  "git_required": false,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "verify",
+        "--out",
+        "artifacts/run001"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline verification PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "report",
+        "--out",
+        "artifacts/run001"
+      ],
+      "exit_code": 0,
+      "stdout": "Unapproved packet: 6f9b0b673b4b18e3739ac5038f048c00c8563ceaeab9dde105dedea9b1e13508\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "verify",
+        "--out",
+        "artifacts/run002"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision verification PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "report",
+        "--out",
+        "artifacts/run002"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision report replay PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "verify",
+        "--out",
+        "artifacts/run003"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision verification PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "report",
+        "--out",
+        "artifacts/run003"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision report replay PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "verify",
+        "--out",
+        "artifacts/run004"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision verification PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "report",
+        "--out",
+        "artifacts/run004"
+      ],
+      "exit_code": 0,
+      "stdout": "Offline review revision report replay PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "prepare.py",
+        "revise-scoped-review",
+        "--parent",
+        "artifacts/run003",
+        "--audit",
+        "artifacts/run004/scope-audit.json",
+        "--policy",
+        "artifacts/run004/scoring-policy.md",
+        "--out",
+        "artifacts/run004-replay"
+      ],
+      "exit_code": 0,
+      "stdout": "Unapproved required/supplementary review: ddbc3975cc2dd728bc6950fed1a507ed03223cbdea94987c572b6cc2f0bde235\n",
+      "stderr": ""
+    }
+  ],
+  "four_run_replay_byte_identical": true,
+  "fresh_creation_byte_identical": true
+}
