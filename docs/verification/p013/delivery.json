@@ -1,0 +1,22 @@
+{
+  "status": "INCOMPLETE_RESOURCE_STOP",
+  "plan_commit": "0cb6497a63c3c79e2b11615f6897f3f4f8f7eb85",
+  "adoption_commit": "9d7cb4b",
+  "implementation_commit": "600d7c4",
+  "frozen_input_commit": "cc7fab1",
+  "resource_evidence_commit": "b7d04f36476f2d23d470e98cb091deb9b6a46691",
+  "criteria": {
+    "C1": "PASS",
+    "C2": "FAIL_RESOURCE_STOP_INCOMPLETE_S2",
+    "C3": "NOT_EXECUTED",
+    "C4": "PENDING"
+  },
+  "model_requests": 1,
+  "s2_requests": 1,
+  "s3_requests": 0,
+  "s4_requests": 0,
+  "report": "evaluation/project_b/artifacts/p013-run001/review.html",
+  "manifest_sha256": "007f38f7c5ae6f6de30baff8762717db87b3e757218457b334bc14109e8fb514",
+  "new_report_actual_ui_observed": false,
+  "next_review": "docs/feedback/dev/P013-resource-stop.md"
+}
