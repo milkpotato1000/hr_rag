@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "source_commit": "pending_freeze",
+  "source_commit": "6921810b0414297358cffe3574ffa09ea03a305d",
   "wheel": {
     "filename": "milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl",
     "sha256": "1b8efcb9e4eb13377839be142edcd66b2dbae0e973240e8fc4ee2c2dcd0183fb",
@@ -114,5 +114,6 @@
   ],
   "source_free_cwd": true,
   "pythonpath_unset": true,
-  "actual_other_os_verified": false
+  "actual_other_os_verified": false,
+  "committed_build_inputs_byte_verified": true
 }

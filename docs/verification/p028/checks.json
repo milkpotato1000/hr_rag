@@ -10,7 +10,7 @@
   ],
   "resource_files": 13,
   "source_provenance_verified": true,
-  "links_checked": 97,
+  "links_checked": 106,
   "links": [
     {
       "file": "README.md",
@@ -27,6 +27,10 @@
     {
       "file": "README.md",
       "target": "docs/learning/rag-package/drive.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/learning/rag-package/install.md"
     },
     {
       "file": "README.md",
@@ -106,6 +110,10 @@
     },
     {
       "file": "docs/learning/rag-package/README.md",
+      "target": "install.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
       "target": "experiments.md"
     },
     {
@@ -182,6 +190,10 @@
     },
     {
       "file": "docs/learning/rag-package/document-rag.md",
+      "target": "install.md"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
       "target": "../../../examples/rag/sources.json"
     },
     {
@@ -231,6 +243,26 @@
     {
       "file": "docs/learning/rag-package/experiments.md",
       "target": "../../planning/specs/P013-execution-contract.md"
+    },
+    {
+      "file": "docs/learning/rag-package/install.md",
+      "target": "README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/install.md",
+      "target": "../../../PACKAGING.md"
+    },
+    {
+      "file": "docs/learning/rag-package/install.md",
+      "target": "../../verification/p028/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/install.md",
+      "target": "../../verification/p028/artifacts.json"
+    },
+    {
+      "file": "docs/learning/rag-package/install.md",
+      "target": "drive.md"
     },
     {
       "file": "docs/learning/rag-package/models-and-support.md",
@@ -287,6 +319,10 @@
     {
       "file": "docs/learning/rag-package/models-and-support.md",
       "target": "drive.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "install.md"
     },
     {
       "file": "docs/learning/rag-package/models-and-support.md",
