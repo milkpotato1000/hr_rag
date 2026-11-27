@@ -1,0 +1,37 @@
+dev는 채택한 plan 9be41de90ec3 기준. 이후 plan 초안은 자동 채택하지 않음.
+dev 다음 작업: 실행 가능한 승인 작업 없음
+plan 새 요구 검토 대기: 0건 (구현 승인과 별개)
+[완료] P024 공개 모델 기본·선택 LLM API 학습 경로와 설정 안내 — 4/4 (dev)
+[완료] P025 공통 LLM provider 설정과 로컬·API adapter 기반 — 3/3 (dev)
+[완료] P026 범용 문서 snapshot과 청킹·검색·선택 LLM 답변 연결 — 3/3 (dev)
+[완료] P027 Google Drive 문서 링크 수집과 버전 snapshot 연결 — 3/3 (dev)
+[완료] P028 설치 가능한 RAG 패키지와 독립 실습 프로젝트 — 3/3 (dev)
+[완료] P001 합성 HR 문서와 검색 평가 기반 구축 — 6/6 (dev)
+[차단] P029 범용 RAG 학습 화면과 실행·비교 연결 — 3/4 (dev)
+  BLOCKED on C4 allowed browser file-selection/upload observation. C1-C3 complete only; P029 and overall goal not complete. Preserve observations, failures, P013 hold, GT, grant. No reverse message.
+[완료] P002 BM25 검색 기준선과 평가 연결 — 8/8 (dev)
+[완료] P010 범용 Dense·BM25·Hybrid 검색 구현과 비교 — 4/4 (dev)
+[완료] P020 고정 후보 리랭커 구현과 독립 성능 비교 — 4/4 (dev)
+[완료] P030 범용 의미·LLM 청킹과 경계 비교 연결 — 3/3 (dev)
+[완료] P031 모델 준비와 최신 설치 실습 연결 — 3/3 (dev)
+[차단] P032 실제 모델과 단일 규정집의 RAG 통합 검증 — 0/3 (dev)
+  BLOCKED remaining actual LLM/generation/Drive decisions/READY only. S2c complete in evidence 606403c576adfba231c247d66d475fc33f104cdb: current learning entry/install/init/START_HERE/local-API spec/Hybrid-rerank/saved S1-S2b route aligned; P024 example_only retained as history. New wheel87744fba/sdist93e93e5d with resource manifest and allowlist payload checks; existing hash-locked build environment reused, new core-only --no-deps install/source-free cwd verified. Rule3 preview comparison6preview+3empty-context abstained rows, dispatch0; chunk replay3/local-API configure+validate/doctor expected3 PASS. Actual3 resource tests,18pages/174links,7279preservation hashes and previous experiment wheel9342add unchanged. Verification report filename/status assumptions and test invocation correction retained. Model/download/API/Ollama/Drive/evaluator/search reruns/key reads0. Existing runtime/SDK/defaults/GT/grant/P013-P014/P029 C4 preserved. Full C1~C3 unchecked; S2c is not overall P032/goal completion. Evidence docs/verification/p032-s2c/final-checks.json; normal personal/dev delivery only.
+[완료] P003 로컬 모델 실행 환경과 Dense 검색 비교 — 6/6 (dev)
+[완료] P004 Naive RAG 답변·인용·보류 연결 — 6/6 (dev)
+[완료] P005 Naive RAG 실행 화면·E2E 검증·학습 가이드 — 6/6 (dev)
+[완료] P006 원문 PDF·Markdown 추출과 자동 청킹 기준선 — 6/6 (dev)
+[완료] P009 근거 ID 선택과 코드 기반 원문 인용 — 6/6 (dev)
+[완료] P011 Naive RAG LangChain 리팩터링과 비교·채택 판정 — 6/6 (dev)
+[완료] P012 LangChain 기본 학습 화면과 별도 구현 비교 실험 — 4/4 (dev)
+[완료] P015 현실적인 가상 HR 규정 PDF 원문 재작성 — 5/5 (dev)
+[완료] P016 장문 가상 HR 규정집과 청킹 비교용 원문 확장 — 5/5 (dev)
+[완료] P018 정식 하네스 기준 업데이트와 plan/dev 역할·직접 인계 정비 — 4/4 (dev)
+[완료] P007 청킹·검색 품질 실험과 원문·청크·검색 비교 UI — 6/6 (dev)
+[완료] P017 청킹 실험의 방식 선택과 수치 직접 입력 분리 — 4/4 (dev)
+[완료] P019 P013 평가 모델 사전검증과 사람 검토용 정답 초안 — 4/4 (dev)
+[완료] P021 정답 검토 보고서 읽기 흐름 개선과 중복 주장 정리 — 4/4 (dev)
+[완료] P022 정답 후보 원자화 재검수와 새 검토본 개정 — 4/4 (dev)
+[완료] P023 질문별 필수·보충 정답 구분과 채점 정책·새 검토본 — 4/4 (dev)
+[차단] P013 Project B 내부 기본 LLM 답변 평가기와 검증 정답 — 1/4 (dev)
+  사용자 “일단 여기까지 두고”에 따른 P013 실행 보류 수신·즉시 적용. 2825d5b의 DRAFT 전환은 기존 실행 이력 보존 시 guard가 거부하여 merge 중단·기존 채택 유지. docs/feedback/dev/P013-user-hold-adoption.md에 원인 기록. 실행 차단으로 큐 제외; 서버 복구 시 자동 재개 금지. 새 모델 요청0/새4시간 미시작/grant 미소비·기존 성공1건 및 실패 보존. 별도 READY/명시 재개 전 상태 보존·대기.
+조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음
