@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P030.md",
   "summary": "P030 generic model chunking READY after P020 completion",
   "next_action": "Integrate exact READY, adopt with P030-readiness-20261128, implement C1-C3 preserving evaluator holds",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-27T16:49:38.439847+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T16:50:25.018747+00:00",
+      "evidence": "Host send succeeded to verified existing same-project dev; exact READY 0c2c5d0c5d8de16702a8cd188bed078081f4b181, scope, review and next action delivered. Receipt/adoption/completion not yet observed."
     }
   ]
 }
