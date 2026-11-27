@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/live.py", line 110, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/live.py", line 89, in run
+    control.operation('semantic-boundary',567,lambda:chunk_artifact.build(R/'input/snapshot',R/'input/semantic.json',R/'semantic',execute=True),semantic_validate,lambda _:checkpoint(R/'semantic',R/'checkpoints/semantic-boundary','chunks'))
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/control.py", line 79, in operation
+    result=call();validate(result);checkpoint(result);self.finish();return result
+                  ^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/live.py", line 51, in semantic_validate
+    require(result['status']=='ready','s2b_semantic_failed','s2b')
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/storage.py", line 20, in require
+    if not condition:raise RagError(code,stage)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: s2b_semantic_failed: s2b

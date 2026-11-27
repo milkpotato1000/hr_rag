@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "stored failure report and installed UI only",
+  "report_desktop": {
+    "width": 1280,
+    "scroll_width": 1280,
+    "details_initially_closed": true
+  },
+  "report_narrow": {
+    "width": 390,
+    "height": 844,
+    "scroll_width": 390
+  },
+  "keyboard": {
+    "Enter_opens": true,
+    "Space_closes": true,
+    "Tab_focus_next_summary": "실패·회수·원래 deadline 기록"
+  },
+  "installed_ui": {
+    "failed_job_visible": true,
+    "Enter_shows_error": "embedding_sdk_failed · semantic_boundary",
+    "ready_chunks": [
+      "fixed",
+      "recursive",
+      "structure"
+    ],
+    "semantic_ready": false,
+    "execution_permissions": "all off"
+  },
+  "model_calls": 0,
+  "filepicker_used": false,
+  "viewport_reset": true,
+  "screenshots": [
+    "report-desktop.jpg",
+    "report-narrow.jpg",
+    "installed-failure-ui.jpg"
+  ]
+}

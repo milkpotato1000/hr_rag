@@ -1,0 +1,11 @@
+{
+  "scope": "SDK import only, no model/embedding/worker retry",
+  "model_calls": 0,
+  "weight_reads": 0,
+  "network_calls": 0,
+  "status": "import_failed",
+  "exception_type": "ModuleNotFoundError",
+  "exception": "No module named 'typing_extensions'",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/diagnose_sdk.py\", line 14, in <module>\n    import torch\n  File \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/torch/__init__.py\", line 24, in <module>\n    import typing_extensions\nModuleNotFoundError: No module named 'typing_extensions'\n",
+  "events": []
+}

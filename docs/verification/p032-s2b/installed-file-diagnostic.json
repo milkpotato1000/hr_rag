@@ -1,0 +1,341 @@
+{
+  "scope": "read-only installed RECORD existence audit, no import/model call",
+  "installed_records_checked": 23029,
+  "missing_hashed_files": [],
+  "missing_count": 0,
+  "typing_extensions_metadata_present": false,
+  "typing_extensions_module_present": false,
+  "cause_of_missing_files": "unknown; no deletion or repair performed",
+  "SDK_versions_metadata_only_limitation": true,
+  "incomplete_dist_info": [
+    {
+      "directory": "annotated_types-0.8.0.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "anyio-4.16.0.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "certifi-2026.11.20.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "cffi-2.1.1.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "charset_normalizer-3.5.3.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "click-8.5.1.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "cryptography-50.0.2.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses",
+        "sboms"
+      ]
+    },
+    {
+      "directory": "h11-0.16.0.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "idna-3.20.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "markdown_it_py-4.3.0.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "mdurl-0.1.2.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED"
+      ]
+    },
+    {
+      "directory": "networkx-3.7.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "packaging-26.4.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "pycparser-3.12.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "pydantic-2.14.4.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "pydantic_core-2.50.5.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses",
+        "sboms"
+      ]
+    },
+    {
+      "directory": "pygments-2.21.0.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "pypdf-6.21.2.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "pyyaml-6.0.4.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "requests-2.34.2.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "rich-15.0.0.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "truststore-0.10.5.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "typing_extensions-4.16.0.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "typing_inspection-0.4.5.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    },
+    {
+      "directory": "urllib3-2.8.0.dist-info",
+      "missing": [
+        "METADATA",
+        "RECORD"
+      ],
+      "symlink": false,
+      "entries": [
+        "INSTALLER",
+        "REQUESTED",
+        "licenses"
+      ]
+    }
+  ],
+  "status": "environment_incomplete",
+  "incomplete_dist_info_count": 25,
+  "record_audit_limitation": "Only extant RECORD files could be checked. Zero missing files within those records is not a complete installation integrity PASS; 25 distributions lack METADATA/RECORD."
+}

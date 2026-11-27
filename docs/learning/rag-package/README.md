@@ -8,6 +8,8 @@
 
 [같은 원문의 청킹 경계 비교](chunk-boundaries-s2a.md)에서는 고정·재귀·제목/섹션의 실제 청크와 의미·LLM 방식의 미실행 preview를 구분해 봅니다. 어떤 사실이 한 청크에 담기고 어떤 사실이 두 청크를 요구하는지 확인하는 준비 단계이며, 검색 성능 비교는 후속입니다.
 
+후속 [실제 청킹 비교의 중단 기록](chunk-comparison-s2b.md)은 첫 SDK 오류와 미실행40건을 구분합니다. 환경 복구 검토 전까지 실제 비교는 중단 상태입니다.
+
 [단계별 비교 실습](experiments.md) → [모델과 지원 상태](models-and-support.md) → [로컬 예시](examples/local.json) / [API 예시](examples/api.json) 순서로 읽으세요. 전체 후속 순서는 [채택한 패키지 로드맵](../../planning/rag-package-roadmap.md)에 있습니다.
 
 ## 같은 흐름에서 LLM만 선택하기
