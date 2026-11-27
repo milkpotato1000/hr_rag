@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "commit": "7c88c5966697774eb8c307416098f010d422c951",
+      "path": "2. Document Chunking/scripts/bm25_core.py",
+      "sha256": "e52836efafd3f992f92b521cd28204ba9ccc054085de672ebad671cb2ee35ff1",
+      "destination": "rag_package/bm25.py",
+      "changes": "Copied text-only BM25; removed legacy exception namespace. No titles or GT indexed."
+    },
+    {
+      "commit": "7c88c5966697774eb8c307416098f010d422c951",
+      "path": "2. Document Chunking/scripts/chunk_core.py",
+      "sha256": "adc59a6662a8e155d9e41773afbed1dcc4e5d62626072724e94ee39c6d54a018",
+      "destination": "rag_package/chunks.py",
+      "changes": "Selected recursive boundary precedence; precomputed sorted boundaries, general document/heading detection, section-limited overlap. No model splitters or source-v4 globals copied."
+    },
+    {
+      "commit": "7c88c5966697774eb8c307416098f010d422c951",
+      "path": "2. Document Chunking/ingestion-requirements.lock",
+      "sha256": "c3f793c919ec790734762729cc0d68915b451d4da24c3d78edfd3fe1ac2b067f",
+      "destination": "rag_package/requirements-pdf.lock",
+      "changes": "Copied exact optional pypdf pin/hash; no package installation."
+    }
+  ]
+}

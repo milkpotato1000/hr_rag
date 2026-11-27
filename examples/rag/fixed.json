@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "chunking": {
+    "method": "fixed",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "retrieval": {
+    "method": "bm25",
+    "top_k": 5,
+    "context_budget_chars": 4000
+  },
+  "llm_config": "llm-local.json"
+}

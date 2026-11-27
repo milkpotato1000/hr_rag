@@ -1,6 +1,6 @@
 # 공통 LLM adapter 사용 안내
 
-P025는 **독립 LLM 호출 모듈과 CLI**를 구현했습니다. Ollama·OpenAI Chat Completions·Anthropic Messages의 요청/응답 변환을 가짜 응답과 loopback 테스트 서버로 검증했습니다. 실제 provider 호출·한국어 품질·메모리·과금은 미검증이며, 기존 RAG UI와 평가 runner의 연결은 후속 작업입니다. P013 보류는 계속됩니다.
+P025는 **독립 LLM 호출 모듈과 CLI**를 구현했습니다. Ollama·OpenAI Chat Completions·Anthropic Messages의 요청/응답 변환을 가짜 응답과 loopback 테스트 서버로 검증했습니다. 실제 provider 호출·한국어 품질·메모리·과금은 미검증이며, 새 [일반 문서 RAG CLI](document-rag.md)는 P026에서 연결했습니다. 기존 HR RAG UI와 평가 runner의 연결은 후속 작업입니다. P013 보류는 계속됩니다.
 
 [학습 시작점](README.md) · [지원 상태](models-and-support.md) · [구현](../../../rag_package/llm/core.py) · [검증 기록](../../verification/p025/README.md)
 

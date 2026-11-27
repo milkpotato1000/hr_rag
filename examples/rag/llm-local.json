@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "answer": {
+      "mode": "local",
+      "provider": "ollama",
+      "model": "qwen3:4b",
+      "base_url": "http://127.0.0.1:11434",
+      "max_output_tokens": 1024,
+      "timeout_seconds": 120,
+      "response_mode": "json_object",
+      "temperature": 0,
+      "num_ctx": 8192,
+      "seed": 42,
+      "identity": {
+        "expected_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "hf_id": "Qwen/Qwen3-4B-Thinking-2507",
+        "source_revision": null,
+        "conversion": "Ollama GGUF identity copied from existing lock; not newly verified",
+        "quantization": "Q4_K_M",
+        "license_url": "https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507/blob/main/LICENSE",
+        "validation_status": "P025_offline_only_P013_blocked"
+      }
+    },
+    "judge": {
+      "mode": "local",
+      "provider": "ollama",
+      "model": "qwen3:8b",
+      "base_url": "http://127.0.0.1:11434",
+      "max_output_tokens": 1024,
+      "timeout_seconds": 120,
+      "response_mode": "text",
+      "temperature": 0,
+      "num_ctx": 8192,
+      "seed": 42,
+      "identity": {
+        "expected_digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+        "hf_id": "Qwen/Qwen3-8B",
+        "source_revision": null,
+        "conversion": "Ollama GGUF identity copied from existing lock; not newly verified",
+        "quantization": "unknown",
+        "license_url": "https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE",
+        "validation_status": "P025_offline_only_P013_blocked"
+      }
+    }
+  },
+  "roles": {
+    "generation": "answer",
+    "evaluation": "judge"
+  }
+}

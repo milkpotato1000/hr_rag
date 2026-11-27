@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "documents": [
+    {
+      "document_id": "birthday",
+      "title": "가상 생일 휴가",
+      "path": "documents/birthday.md",
+      "format": "md",
+      "synthetic": true
+    },
+    {
+      "document_id": "annual",
+      "title": "가상 연차 이월",
+      "path": "documents/annual.txt",
+      "format": "txt",
+      "synthetic": true
+    }
+  ]
+}

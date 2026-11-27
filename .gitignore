@@ -12,3 +12,6 @@ venv/
 
 # Project-local runtimes, managed Python, models, indexes, processes and caches
 .runtime/
+
+# Private general-document RAG artifacts (P026)
+.rag-runs/
