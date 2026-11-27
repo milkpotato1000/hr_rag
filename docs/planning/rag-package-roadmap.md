@@ -65,3 +65,7 @@ BM25, RRF, 고정/재귀/구조 기반 청킹은 모델이 아닌 알고리즘�
 지원 저장소 링크와 권한을 넣고 공개 모델 또는 본인 API를 선택해 문서→답변을 실행할 수 있다. 청킹/임베딩/검색/리랭커의 지원 옵션을 바꿔 동일 데이터에서 비교 결과를 재현할 수 있다. 가짜 결과·미구현 버튼을 정상 기능처럼 노출하지 않는다. 설치 가이드, 실습 질문, 해석 방법, 제한과 실패 복구가 있고 코딩 도구 양쪽으로 같은 절차를 수행한다. 공개 저장소에 비밀키·실제 비공개 HR 문서·개인 데이터를 포함하지 않는다. main 승격은 별도 명시 요청 사항이다.
 
 P025/P026의 공통 경계와 기본 BM25 문서→답변 연결, P027 저장소 연결은 보류된 평가 모델 실행과 독립인 제품 기반 작업이다. P008 평가 UI/P010 Hybrid/P020 리랭킹의 기존 선행을 자동 해제하지 않는다. 실모델 검증 및 기능별 비교 완료가 남으면 전체 패키지를 완료로 표시하지 않는다.
+
+## Verified increment, 2026-11-27
+
+P024 learning guide: dev 7573c934c76aef493abb6dd1648393c025288d9c. P025 independent LLM adapters/CLI: dev d7406e2b6e2c611cc741ad823d59a90bcefd6043. Both delivered to personal/dev. P025 implements real provider HTTP paths with offline verification; it does not establish live API/model success or RAG integration. P026/P027 remain drafts. P013 model execution remains held.
