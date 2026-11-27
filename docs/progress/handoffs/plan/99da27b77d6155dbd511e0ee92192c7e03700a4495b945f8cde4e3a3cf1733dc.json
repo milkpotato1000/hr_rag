@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P028.md",
   "summary": "P028 updated install credential boundary; supersedes c09fa2f",
   "next_action": "Finish P027 then adopt latest 7e92000 P028; P029 remains DRAFT",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-27T09:06:14.512444+00:00",
       "evidence": "Host send succeeded to existing HR RAG dev: latest P028 READY 7e92000 supersedes c09fa2f after P027 completion, installed credential boundary added; P029 DRAFT excluded."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T12:22:23.731953+00:00",
+      "evidence": "Observed exact dev adoption48434cb of latest P028 READY7e92000 after P027 completion41a469d; dev response confirms transition to packaging. Completion not observed."
     }
   ]
 }
