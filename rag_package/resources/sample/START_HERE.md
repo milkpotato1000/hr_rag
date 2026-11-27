@@ -19,11 +19,37 @@ rag-lab compare --snapshot .rag-runs/snapshot-01 --configs fixed.json recursive.
 
 원문→청크→검색 후보→전달 예정 문맥을 산출물에서 대조하세요. 청킹 방식/크기/중첩을 한 번에 하나씩 바꾸고 새 경로를 쓰세요. 답변 생성과 품질 점수는 아직 미측정입니다. Dense/Hybrid RRF·CrossEncoder 리랭커·의미/LLM 청킹도 지원합니다. 아래 등록 설정과 명시 실행 권한이 필요하며, 실제 한국어 모델 품질은 미검증입니다.
 
-## 본인 모델 설정
+## 본인 모델 설정: spec에서 자동 생성
 
-llm-local.json은 EXAMPLE_OLLAMA_MODEL, 0으로 채운 digest, HF 후보만 들어 있습니다. 본인 모델명과 실제 digest, HF 원본/revision·변환 정보를 입력하고 identity.validation_status를 user_configured_unverified로 바꾸세요. 자동 모델 조회·교체·다운로드는 하지 않습니다. 잘못된 digest는 실행 시 거부됩니다. API를 선택하려면 llm-api.json의 실제 API model/requested_model과 validation_status를 바꾸고 RAG 설정의 llm_config를 그 파일로 지정하세요. 키 값은 파일/CLI/Git에 넣지 말고 api_key_env가 가리키는 환경 변수로 관리합니다. 코딩 도구 구독은 API 이용권이 아닙니다.
+먼저 llm-spec-local.json의 실제 local alias·HF 원본 정보를 입력하세요. API는 llm-spec-api.json의 provider/model과 키 환경 변수 이름을, 혼합은 llm-spec-mixed.json의 역할 매핑을 입력합니다. generation/evaluation/chunking이 모두 profile 이름을 가리켜야 합니다. 다음 기본 출력은 네트워크·키 읽기 0입니다.
 
-실제 답변은 전송 문서·provider·비용/호출 상한을 정한 사용자가 ask에 --execute를 추가할 때만 요청합니다. API에는 질문과 선택 문맥이 전송되며 비용은 미측정입니다. 자동 재시도/대체 모델은 없습니다. evaluation role은 이 실습에서 호출하지 않습니다.
+```sh
+rag-lab llm-configure --spec llm-spec-local.json --out my-llm-preview.json
+rag-lab doctor --llm-config my-llm-preview.json
+```
+
+local 기본 출력은 identity 미확인이므로 실행을 차단합니다. 로컬 서버와 alias가 이미 준비되었고 읽기 조회를 원할 때 새 경로에 다음을 실행합니다.
+
+```sh
+rag-lab llm-configure --spec llm-spec-local.json --out my-llm.json --inspect-local
+rag-lab doctor --llm-config my-llm.json
+```
+
+tags/show만 읽어 digest를 자동 입력하며 모델 실행·다운로드·서버 시작은 하지 않습니다. HF 원본·양자화는 사용자 입력이며 서버가 검증한 값으로 표시하지 않습니다. API는 --inspect-local 없이 설정을 생성하며 키 값은 파일/CLI/Git에 넣지 않습니다. API 이용권과 실제 추론·품질은 미검증입니다. 생성한 my-llm.json을 RAG/청킹 설정의 llm_config와 serve --llm-config로 연결하세요.
+
+기존 llm-local.json/llm-api.json 직접 편집은 고급 호환 경로입니다. 일반 실습은 spec→llm-configure→doctor를 사용하므로 digest와 validation_status를 수작업으로 채울 필요가 없습니다. 실제 답변은 전송 문서·provider·호출 상한을 정한 뒤 ask --execute를 명시해야 합니다. evaluation 역할을 설정해도 평가기는 실행하지 않습니다.
+
+## 공개 embedding/reranker 파일 준비
+
+```sh
+rag-lab model-catalog
+rag-lab model-plan --model intfloat/multilingual-e5-small --role embedding --out .rag-runs/e5-plan
+rag-lab model-prepare --plan .rag-runs/e5-plan --out .rag-runs/e5-ready
+```
+
+위 명령은 오프라인 계획과 preview입니다. 실제 다운로드를 원할 때만 마지막 명령에 --execute-download를 추가합니다. BGE-M3는 --execute-conversion도 필요합니다. 같은 계획의 원본 regular 폴더가 있으면 model-import --plan … --source … --out …를 사용할 수 있습니다. HF cache symlink는 거부하며 기존 결과는 덮어쓰지 않습니다.
+
+성공한 export의 profile.json은 파일 SHA256을 자동 작성합니다. model-check --profile …로 확인하고 RAG/semantic 설정의 embedding_config, 리랭커 profile, serve --embedding-config/--reranker-config에 연결하세요. UI 등록 profile은 workspace 안에 둡니다. 파일 크기는 메모리 실측값이 아니며 준비 기록은 추론·품질 통과가 아닙니다. doctor의 역할별 config 검사와 SDK 설치 상태도 구분합니다. 기존 embedding-e5.json/reranker-bge.json 직접 편집은 고급 호환 경로로 남겨둡니다.
 
 ## 문서·Drive와 보관
 
@@ -58,7 +84,7 @@ chunk-derive는 저장 단위/경계로 overlap 등을 바꾸며 모델 호출�
 
 ## 검색·리랭킹과 학습 화면
 
-rag-hybrid.json / embedding-e5.json은 공개 모델의 로컬 파일·revision·전체 SHA256 manifest 준비가 필요한 예시입니다. retrieval-preview는 모델을 읽지 않습니다. Dense/Hybrid build/ask는 --execute-retrieval, rerank는 --execute-reranking, 생성은 --execute가 각각 필요합니다. reranker-bge.json도 미설정 예시입니다. 자동 다운로드/서버 시작/유료 호출은 하지 않습니다.
+rag-hybrid.json의 embedding_config는 위 준비 도구가 만든 profile.json으로 연결합니다. embedding-e5.json은 미설정 placeholder입니다. retrieval-preview는 모델을 읽지 않습니다. Dense/Hybrid build/ask는 --execute-retrieval, rerank는 --execute-reranking, 생성은 --execute가 각각 필요합니다. reranker-bge.json도 미설정 예시입니다. 자동 다운로드/서버 시작/유료 호출은 하지 않습니다.
 
 ```sh
 rag-lab retrieval-preview --config rag-hybrid.json

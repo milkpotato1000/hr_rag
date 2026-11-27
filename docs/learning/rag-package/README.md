@@ -96,3 +96,5 @@ API 실패 시 조용히 로컬로, 로컬 실패 시 API로 바꾸지 않는 �
 
 
 다섯 방식의 저장 경계 생성·재생·파생·원문 fact 비교는 [모델 청킹 실습](model-chunking.md)을 참고하세요. 의미/LLM 청킹은 등록 설정과 별도 실행 권한으로 연결되며 실제 한국어 모델 품질은 미검증입니다.
+
+현재 설치는 [최신 dev 설치](install-current.md)와 [모델 준비](model-preparation.md)에서 시작합니다. 공개 embedding/reranker의 고정 파일 준비·자동 manifest와 local/API/mixed LLM spec을 사용합니다. 준비·추론·품질 상태는 구분합니다.

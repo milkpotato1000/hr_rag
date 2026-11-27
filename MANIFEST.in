@@ -38,6 +38,11 @@ include rag_package/chunk_policy.py
 include rag_package/chunk_artifact.py
 include rag_package/chunk_compare.py
 include rag_package/ui_chunking.py
+include rag_package/model_catalog.py
+include rag_package/model_preparation.py
+include rag_package/model_process.py
+include rag_package/model_worker.py
+include rag_package/llm_setup.py
 include rag_package/provenance.json
 include rag_package/requirements-pdf.lock
 include rag_package/requirements-drive.lock
@@ -69,6 +74,13 @@ include rag_package/resources/sample/llm-chunking.json
 include rag_package/resources/sample/chunk-recursive.json
 include rag_package/resources/sample/rag-frozen.json
 include rag_package/resources/sample/chunk-fixed.json
+include rag_package/resources/models/bge-reranker.json
+include rag_package/resources/models/bge.json
+include rag_package/resources/models/e5.json
+include rag_package/resources/models/mmini-reranker.json
+include rag_package/resources/sample/llm-spec-api.json
+include rag_package/resources/sample/llm-spec-local.json
+include rag_package/resources/sample/llm-spec-mixed.json
 include pyproject.toml
 include MANIFEST.in
 include PACKAGING.md

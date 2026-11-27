@@ -32,6 +32,15 @@ def main(argv=None):
         login=subs.add_parser('drive-login');login.add_argument('--client-secret-file',required=True);login.add_argument('--credentials-file',required=True);login.add_argument('--execute',action='store_true')
         init=subs.add_parser('init');init.add_argument('--out',required=True)
         doctor=subs.add_parser('doctor');doctor.add_argument('--config')
+        for name in ('llm','embedding','reranker','chunk'):doctor.add_argument('--'+name+'-config')
+        subs.add_parser('model-catalog')
+        mp=subs.add_parser('model-plan');mp.add_argument('--model',required=True);mp.add_argument('--role',choices=['embedding','reranker'],required=True);mp.add_argument('--out',required=True);mp.add_argument('--revision');mp.add_argument('--fetch-metadata',action='store_true')
+        for name in ('model-prepare','model-import'):
+            sub=subs.add_parser(name);sub.add_argument('--plan',required=True);sub.add_argument('--out',required=True);sub.add_argument('--execute-conversion',action='store_true')
+            if name=='model-prepare':sub.add_argument('--execute-download',action='store_true')
+            else:sub.add_argument('--source',required=True)
+        mc=subs.add_parser('model-check');mc.add_argument('--profile',required=True)
+        lc=subs.add_parser('llm-configure');lc.add_argument('--spec',required=True);lc.add_argument('--out',required=True);lc.add_argument('--inspect-local',action='store_true')
         server=subs.add_parser('serve');server.add_argument('--workspace',required=True);server.add_argument('--sources');server.add_argument('--llm-config',required=True,action='append');server.add_argument('--drive-config',action='append',default=[]);server.add_argument('--port',type=int,default=8765);server.add_argument('--allow-model-execution',action='store_true');server.add_argument('--allow-drive-download',action='store_true')
         server.add_argument('--embedding-config',action='append',default=[]);server.add_argument('--allow-retrieval-execution',action='store_true')
         for name in ('candidates','rerank','answer-from-rerank','rerank-compare','rerank-report'):
@@ -49,6 +58,14 @@ def main(argv=None):
         server.add_argument('--qrels',action='append',default=[]);server.add_argument('--facts',action='append',default=[])
         server.add_argument('--chunk-config',action='append',default=[]);server.add_argument('--allow-chunking-execution',action='store_true')
         args=p.parse_args(argv)
+        if args.command.startswith('model-') or args.command=='llm-configure':
+            from . import model_catalog,model_preparation,llm_setup
+            if args.command=='model-catalog':r=model_catalog.catalog()
+            elif args.command=='model-plan':r=model_catalog.plan(args.model,args.role,args.out,args.revision,args.fetch_metadata)
+            elif args.command=='model-check':r=model_preparation.model_check(args.profile)
+            elif args.command=='llm-configure':r=llm_setup.configure(args.spec,args.out,args.inspect_local)
+            else:r=model_preparation.prepare(args.plan,args.out,source=getattr(args,'source',None),execute_download=getattr(args,'execute_download',False),execute_conversion=args.execute_conversion)
+            print(json.dumps(r,ensure_ascii=False));return 1 if r.get('status') in ('failed','interrupted') else 0
         if args.command in ('chunk','chunk-replay','chunk-derive','chunk-report'):
             from . import chunk_artifact,chunk_compare
             if args.command=='chunk':r=chunk_artifact.build(args.snapshot,args.config,args.out,execute=args.execute_chunking)
@@ -74,7 +91,7 @@ def main(argv=None):
         if args.command in ('init','doctor'):
             from . import workspace
             if args.command=='init':result,code=workspace.init(args.out),0
-            else:result,code=workspace.doctor(args.config)
+            else:result,code=workspace.doctor(args.config,llm_config=args.llm_config,embedding_config=args.embedding_config,reranker_config=args.reranker_config,chunk_config=args.chunk_config)
             print(json.dumps(result,ensure_ascii=False));return code
         if args.command=='drive-preview':
             from .connectors.drive_config import preview
@@ -103,7 +120,7 @@ def main(argv=None):
         print(json.dumps({'status':'complete' if ok else 'needs_review_or_failed','command':args.command,'execution_kind':r.get('execution_kind','offline'),'artifact_written':True,'embedding_work':r.get('embedding_work'),'generation_requests':r.get('generation_requests',0)}))
         return 0 if ok else 1
     except (RagError,ValidationError) as e:
-        print(json.dumps({'status':'error','error':{'code':e.code,'stage':getattr(e,'stage','input')},'dispatch_attempted':getattr(e,'dispatch_attempted',False),'offending_ids':getattr(e,'offending_ids',[]),'requests':getattr(e,'requests',0),'request_stages':getattr(e,'request_stages',[]),'auth_refresh_attempted':getattr(e,'auth_refresh_attempted',False)}));return 2
+        print(json.dumps({'status':'error','error':{'code':e.code,'stage':getattr(e,'stage','input')},'dispatch_attempted':getattr(e,'dispatch_attempted',False),'work':getattr(e,'observation',None),'offending_ids':getattr(e,'offending_ids',[]),'requests':getattr(e,'requests',0),'request_stages':getattr(e,'request_stages',[]),'auth_refresh_attempted':getattr(e,'auth_refresh_attempted',False)}));return 2
     except Exception:
         print(json.dumps({'status':'error','error':{'code':'internal_error'}}));return 2
 

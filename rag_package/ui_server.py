@@ -3,7 +3,7 @@ import json,secrets,socket,threading
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from importlib.resources import files
 from urllib.parse import urlsplit,parse_qs,unquote_to_bytes
-from .ui_registry import Registry,exact,decode,contained
+from .ui_registry import Registry,exact,decode,contained,preparation_summary
 from .ui_jobs import Jobs
 from .storage import RagError,require,read_json,safe_path
 from .llm.config import ValidationError
@@ -32,8 +32,8 @@ class UI:
         return {'session_token':self.token,'inputs':r.input_summary(),'configs':[r.config_summary(k) for k in r.data['configs']],
             'drive_configs':[{'id':k,'auth_mode':v['config']['auth']['mode']} for k,v in r.drives.items()],
             'allow_model_execution':self.jobs.allow_model,'allow_drive_download':self.jobs.allow_drive,'execution_kind':'test_fixture' if self.jobs.fixture else 'preview_default',
-            'embedding_configs':[{'id':k,'model_id':v['config']['model_id'],'license':'MIT','configuration_required':not __import__('rag_package.embedding',fromlist=['configured']).configured(v['config']),'quality':'Korean pretrained quality unverified'} for k,v in r.embeddings.items()],'allow_retrieval_execution':self.jobs.allow_retrieval,
-            'reranker_configs':[{'id':k,'model_id':v['config']['model_id'],'configuration_required':not __import__('rag_package.reranker',fromlist=['configured']).configured(v['config'])} for k,v in r.rerankers.items()],
+            'embedding_configs':[{'id':k,'model_id':v['config']['model_id'],'license':'MIT','preparation':preparation_summary(v['config']),'configuration_required':not __import__('rag_package.embedding',fromlist=['configured']).configured(v['config']),'quality':'Korean pretrained quality unverified'} for k,v in r.embeddings.items()],'allow_retrieval_execution':self.jobs.allow_retrieval,
+            'reranker_configs':[{'id':k,'model_id':v['config']['model_id'],'preparation':preparation_summary(v['config']),'configuration_required':not __import__('rag_package.reranker',fromlist=['configured']).configured(v['config'])} for k,v in r.rerankers.items()],
             'allow_reranking_execution':self.jobs.allow_reranking,
             'labels':{kind:[{'id':k,'label':v['label']} for k,v in entries.items()] for kind,entries in r.labels.items()},
             'rerank_artifacts':[{'id':k,'kind':v['kind']} for k,v in r.data['artifacts'].items() if v['kind'] in ('candidates','rerank','rerank-comparison','rerank-answer')],

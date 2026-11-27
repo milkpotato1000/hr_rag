@@ -39,7 +39,12 @@
     "rag_package/chunk_policy.py",
     "rag_package/chunk_artifact.py",
     "rag_package/chunk_compare.py",
-    "rag_package/ui_chunking.py"
+    "rag_package/ui_chunking.py",
+    "rag_package/model_catalog.py",
+    "rag_package/model_preparation.py",
+    "rag_package/model_process.py",
+    "rag_package/model_worker.py",
+    "rag_package/llm_setup.py"
   ],
   "resources": [
     "rag_package/provenance.json",
@@ -72,7 +77,14 @@
     "rag_package/resources/sample/llm-chunking.json",
     "rag_package/resources/sample/chunk-recursive.json",
     "rag_package/resources/sample/rag-frozen.json",
-    "rag_package/resources/sample/chunk-fixed.json"
+    "rag_package/resources/sample/chunk-fixed.json",
+    "rag_package/resources/models/bge-reranker.json",
+    "rag_package/resources/models/bge.json",
+    "rag_package/resources/models/e5.json",
+    "rag_package/resources/models/mmini-reranker.json",
+    "rag_package/resources/sample/llm-spec-api.json",
+    "rag_package/resources/sample/llm-spec-local.json",
+    "rag_package/resources/sample/llm-spec-mixed.json"
   ],
   "sdist_extra": [
     "pyproject.toml",

@@ -119,9 +119,9 @@
     },
     {
       "path": "START_HERE.md",
-      "sha256": "cfb88d18e1552256cab3d43841ae986407d19388c59607bbc2d6d636b48ab13b",
+      "sha256": "e215c9ea83dd5096537cc7ea7b443144cfb9cf2bfd09b6dfef21e2653b84c5a3",
       "source": null,
-      "changes": "P030 current capabilities and five-method instructions; historical verification preserved"
+      "changes": "P031 latest installation and preparation guidance"
     },
     {
       "path": "chunk-structure.json",
@@ -182,6 +182,33 @@
       "sha256": "bf1ed1042a5370255f9cb299064f28531232fceaad502a13623b87fffc03a5f2",
       "source": null,
       "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "llm-spec-api.json",
+      "sha256": "2b82d45b7cff17a8cbdf4826867a093b959f165043ff559499ccd94a1dee733e",
+      "source": {
+        "contract": "P031",
+        "kind": "new_documentation_example"
+      },
+      "changes": "P031 LLM configuration spec; no live identity or credentials"
+    },
+    {
+      "path": "llm-spec-local.json",
+      "sha256": "7e9bf56d613d3a301158e9f51682df9d79e7ad71fe0a905a8877a2e96d1c8e44",
+      "source": {
+        "contract": "P031",
+        "kind": "new_documentation_example"
+      },
+      "changes": "P031 LLM configuration spec; no live identity or credentials"
+    },
+    {
+      "path": "llm-spec-mixed.json",
+      "sha256": "7475a2ab0ff9baad9b7ef4b45451e8f94c1c4729d27ae5f50bd5439794a24bac",
+      "source": {
+        "contract": "P031",
+        "kind": "new_documentation_example"
+      },
+      "changes": "P031 LLM configuration spec; no live identity or credentials"
     }
   ]
 }

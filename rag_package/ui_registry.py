@@ -43,6 +43,20 @@ def atomic_json(path,value):
     finally:
         if tmp is not None:tmp.unlink(missing_ok=True)
 
+def preparation_summary(config):
+    """Inspect only the manifest-pinned provenance sidecar, never load weights."""
+    root=Path(config['local_path'])
+    h=config['file_manifest'].get('source-provenance.json')
+    if not h:return {'status':'not_recorded','quality':'unverified','inference':'unverified'}
+    try:
+        if any(p.is_symlink() for p in (root,*root.parents,root/'source-provenance.json')):raise ValueError()
+        raw=bounded(root/'source-provenance.json',32*1024*1024)
+        if digest(raw)!=h:raise ValueError()
+        v=decode(raw)
+        if v.get('repo_id')!=config['model_id'] or v.get('revision')!=config['revision']:raise ValueError()
+        return {'status':'preparation_record_verified','execution_kind':v.get('execution_kind','unknown'),'inference':'unverified','quality':'unverified','weight_hashes':'run_model_check_to_verify_current_bytes'}
+    except (RagError,ValueError,OSError):return {'status':'preparation_record_invalid','inference':'unverified','quality':'unverified'}
+
 class Registry:
     def __init__(self,workspace,llm_configs,sources=None,drive_configs=(),embedding_configs=(),reranker_configs=(),qrels=(),facts=(),chunk_configs=()):
         original=Path(workspace).absolute()
