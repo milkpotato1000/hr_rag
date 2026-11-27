@@ -6,6 +6,6 @@
   "cards": [
     "P032"
   ],
-  "reason": "실제 semantic 첫 worker의 dependency import 실패와25개 불완전 dist-info가 관찰됨. 기존 실패/환경을 보존한 동일 lock의 독립 환경 복구와 누적46workers/2463items 후보를 P032 후속 계약으로 검토한다. 초안 연결은 재실행 승인이 아니며 커밋된 실패 증거와 READY가 필요하다.",
-  "review_reference": "docs/planning/specs/P032-s2b-environment-recovery-draft.md"
+  "reason": "실제 semantic 첫 worker의 dependency import 실패와25개 불완전 dist-info가 관찰됨. 기존 실패/환경을 보존한 동일 lock의 독립 환경 복구와 누적46workers/2463items 후보를 P032 후속 계약으로 검토한다. 초안 연결은 재실행 승인이 아니며 커밋된 실패 증거와 READY가 필요하다. 후속 READY 검토에서 동일 lock 격리 복구, 누적46/2463 및 원래 deadline 유지로 확정했다. 원래 초안 참조를 READY 검토로 갱신하며 접수 원문/hash는 보존한다.",
+  "review_reference": "docs/planning/reviews/P032-s2b-environment-recovery-readiness-20261128.md"
 }
