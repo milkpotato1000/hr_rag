@@ -22,6 +22,8 @@
 
 새 실행 전 독립 제어 시험과 환경 무결성 시험을 통과하고 runner/manifest를 커밋한다. 누락된 전체 distribution, 남아 있으나 내용이 변한 file, import 실패를 사전에 거부하는 시험을 추가한다. 기존 deadline/budget을 조용히 리셋하거나 같은 run을 재사용하지 않는다.
 
-성공 경로는 새 semantic1 + index4 + query40 = 추가45workers/최대1896items다. 최초 실패를 포함하면 총46workers/최대2463requested items이며 실패567items의 완료 건수는 null로 보존한다. 새로 시도할 전체 시간 한도와 설치 준비 시간을 분리해 READY에서 명시한다. 원래1시간 deadline도 이력으로 보존한다. 복구 후 추가 기술적 실패가 발생하면 자동 재설치·재시작 없이 다시 halted와 부분 증거만 남긴다.
+성공 경로는 새 semantic1 + index4 + query40 = 추가45workers/최대1896items다. 최초 실패를 포함하면 총46workers/최대2463requested items이며 실패567items의 완료 건수는 null로 보존한다. 검토 후보는 원래 deadline `1795808563.61378`을 연장하지 않는 방식이다. 새 환경 준비는 시작부터 최대900초이며 원래 deadline보다 늦어질 수 없다. 추가 실제45workers도 동일 원래 deadline 안에서만 진행한다. 시간 부족은 미실행/부분 실패로 기록하며 자동 새 시간창을 만들지 않는다. 복구 후 추가 기술적 실패가 발생하면 자동 재설치·재시작 없이 다시 halted와 부분 증거만 남긴다.
 
 미검증 환경을 고친다는 이유로 LLM/생성/API/Ollama/Drive/평가기·기존 grant를 실행하지 않는다. S2b4방식 비교·source fact 지표·UI/학습 안내·기존 보존 조건은 원래 계약을 유지한다. 준비 검토에는 커밋된 실패/진단/접수 기록과 정확 변경 범위가 필요하다. 계획 검토 없이 이 초안을 dev가 스스로 READY로 바꾸거나 실행하지 않는다.
+
+설치 후보는 같은 wheel9342add625a9ed633dffb2fccb3bad27379e8cddaf9a06836ea5a224fe9f280a, retrieval lock SHA f7988bdf801f51e27ce7538805bd9c9ca8202c0d714c13901e53f9365891b32f다. 새 환경 준비 전 여유디스크8GiB 이상을 확인하고 runtime의2GiB 최소 여유도 유지한다. SDK 설치는 한 환경·한 고정 lock을 대상으로 하며 pip 자동 재시도0/단일 설치 프로세스·준비 deadline을 적용한다. pip 실패 시 몰래 버전/인덱스를 바꿔 반복하지 않는다. 이 후보도 READY 전에는 실행하지 않는다.
