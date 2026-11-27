@@ -1,0 +1,15 @@
+{
+  "status": "ready",
+  "active": null,
+  "started_at": null,
+  "jobs": [],
+  "reservations": {
+    "embedding_smoke": 0,
+    "embedding_full": 0,
+    "reranker_smoke": 0,
+    "reranker_full": 0
+  },
+  "reranker_smoke_pairs": 0,
+  "reranker_full_pairs": 0,
+  "download_attempts": []
+}

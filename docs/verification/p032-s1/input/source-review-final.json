@@ -1,0 +1,72 @@
+{
+  "status": "frozen_before_ranking",
+  "author": "Codex dev",
+  "reviewer": "Codex dev same-agent source review; human GT approval separate",
+  "source_pages_read": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "approved_required": 38,
+  "approved_supplementary": 19,
+  "new_canonical_characters": 38582,
+  "new_canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "chunk_count": 201,
+  "judgment_count": 2010,
+  "retrieval_results_seen": false,
+  "model_calls": 0,
+  "snapshot_replay_identical": true,
+  "chunk_review": "entire canonical corpus read; every fixed chunk mapped; nonzero boundaries reread; three semantically empty tails explicitly excluded",
+  "zero_overrides": [
+    {
+      "question_id": "gt03",
+      "chunk_index": 85,
+      "reason": "Only ending 제시하지 않는다 remains; neither VPN nor public-computer condition is stated."
+    },
+    {
+      "question_id": "gt08",
+      "chunk_index": 149,
+      "reason": "Only ending of already-truncated supplementary sentence; following text is cancellation withdrawal, not requested cancellation scope."
+    },
+    {
+      "question_id": "gt06",
+      "chunk_index": 171,
+      "reason": "Only 그 항목들의 결과로 전파하지 않는다 remains without subject; following notification steps do not answer requested exception."
+    }
+  ],
+  "all_chunk_judgments_reviewed": true,
+  "judgments_complete": true,
+  "limitations": [
+    "One synthetic public training corpus, 10 exposed questions, no independent blind annotation",
+    "Conservative exact span coverage is not semantic LLM correctness",
+    "PDF running headers/footers remain in canonical source and may affect retrieval"
+  ],
+  "files": {
+    "facts.json": "526808f5fedeff1d4a389c8664c24e46885a4f0fe1722e1f5ba6087e6a32b916",
+    "qrels.json": "c1db416c44024d3cbaaeb5bd4300cc7ba39bca5e012571a9069666e2902bfa1f",
+    "qrels-audit.json": "f5a53219b99069401257cb450f7a0905cce40a0e6e2bbd604dcbeb735c098cab",
+    "questions.json": "b502377b79dc640409889ec9dff723d1b8b42356f4bad8d42e61308ad193ed4d",
+    "claims-mapping.json": "d023ada9f00b35c6ba7d8685a87b646241bed4670eadb6dff6a3762148dc0e0d"
+  }
+}

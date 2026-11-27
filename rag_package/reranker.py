@@ -129,16 +129,13 @@ def score(p, question, rows, *, backend=None):
                 response = backend(payload)
             else:
                 check_files(p); versions()
-                env = {'PATH': os.defpath, 'HF_HUB_OFFLINE': '1', 'TRANSFORMERS_OFFLINE': '1', 'HF_HUB_DISABLE_TELEMETRY': '1', 'TOKENIZERS_PARALLELISM': 'false', 'OMP_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1'}
-                proc = subprocess.Popen([sys.executable, '-m', 'rag_package.reranker_worker'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=env)
-                work.update(workers=1, attempted_pairs=len(rows), queries=1, worker_exited=False, pairs=None)
-                try: stdout, _ = proc.communicate(json.dumps(payload), timeout=p['timeout_seconds'])
-                except subprocess.TimeoutExpired:
-                    proc.kill(); proc.communicate(); work['worker_exited'] = proc.poll() is not None
-                    require(work['worker_exited'], 'worker_not_stopped', 'reranking')
-                    raise RagError('reranker_timeout', 'reranking') from None
-                work['worker_exited'] = proc.poll() is not None
-                require(proc.returncode == 0, 'reranker_worker_failed', 'reranking')
+                from .owned_worker import invoke
+                monitor={};work['monitor']=monitor
+                def on_started():work.update(workers=1,attempted_pairs=len(rows),queries=1,worker_exited=False,pairs=None)
+                try:
+                    stdout,_,returncode=invoke('rag_package.reranker_worker',payload,p['timeout_seconds'],observation=monitor,on_started=on_started,stage='reranking',timeout_code='reranker_timeout')
+                finally:work['worker_exited']=monitor.get('worker_exited')
+                require(returncode==0,'reranker_worker_failed','reranking')
                 try: response = json.loads(stdout)
                 except ValueError: raise RagError('reranker_worker_failed', 'reranking') from None
             require(isinstance(response, dict), 'invalid_scores', 'reranking')
@@ -148,6 +145,8 @@ def score(p, question, rows, *, backend=None):
             scores = validate_scores(response, ids)
             work.update({k: response.get(k) for k in ('load_ms','score_ms','peak_rss_bytes','sdk_versions','pair_tokens','applied_limit','preprocessing_hash')})
             work['rss_method'] = response.get('rss_method','unavailable'); work['pairs'] = len(rows)
+    except (KeyboardInterrupt,SystemExit) as e:
+        work['elapsed_ms']=(time.monotonic()-started)*1000;e.work=work;raise
     except (RagError,OSError,UnicodeError) as e:
         err = e if isinstance(e,RagError) else RagError('reranker_io_failed','reranking')
         work['elapsed_ms'] = (time.monotonic()-started)*1000

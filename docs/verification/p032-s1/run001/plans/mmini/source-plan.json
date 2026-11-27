@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "origin": "packaged_metadata",
+  "recipe_id": "mmini-reranker-v1",
+  "repo_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "role": "reranker",
+  "revision": "1427fd652930e4ba29e8149678df786c240d8825",
+  "files": [
+    {
+      "path": "config.json",
+      "size": 891,
+      "git_blob_oid": "43ac97f1bef372d4f1d30a32f9a84baffcf6575d",
+      "lfs_sha256": null
+    },
+    {
+      "path": "model.safetensors",
+      "size": 470592698,
+      "git_blob_oid": "28b465f76ad713413a03db9d865baa6c70449ca4",
+      "lfs_sha256": "5daeca2481a76b5976a2bdc32f0a78532b6716da4f8cd3ff59460ef8d2f359b4"
+    },
+    {
+      "path": "sentencepiece.bpe.model",
+      "size": 5069051,
+      "git_blob_oid": "7a3f40a75f870bc1f21700cd414dc2acc431583c",
+      "lfs_sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "size": 239,
+      "git_blob_oid": "2ea7ad0e45a9d1d1591782ba7e29a703d0758831",
+      "lfs_sha256": null
+    },
+    {
+      "path": "tokenizer.json",
+      "size": 17082660,
+      "git_blob_oid": "b77624b6c85b399b6d11c581617e579ce832af28",
+      "lfs_sha256": "62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size": 435,
+      "git_blob_oid": "b59159d44c6bd4b1d9f7ae4f8da028da4238e06e",
+      "lfs_sha256": null
+    }
+  ],
+  "conversion": "native-copy",
+  "license": "Apache-2.0",
+  "source_observed_at": "2026-11-28",
+  "metadata_sdk": {
+    "huggingface-hub": "2.5.0"
+  },
+  "total_bytes": 492745974,
+  "plan_sha256": "b1f49b40478dfdd2d1980d805f2ef5eb7bda7af490b927c272c128fbfb53256b"
+}

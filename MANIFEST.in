@@ -84,3 +84,4 @@ include rag_package/resources/sample/llm-spec-mixed.json
 include pyproject.toml
 include MANIFEST.in
 include PACKAGING.md
+include rag_package/owned_worker.py

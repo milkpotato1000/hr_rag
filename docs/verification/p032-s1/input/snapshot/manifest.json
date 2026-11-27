@@ -1,0 +1,292 @@
+{
+  "identity": {
+    "schema_version": 1,
+    "kind": "snapshot",
+    "status": "ready",
+    "normalization": "NFC/LF",
+    "page_separator": "\n\n",
+    "offset_unit": "Unicode code point [start,end)",
+    "documents": [
+      {
+        "document_id": "hr-handbook",
+        "title": "가상 HR 규정집 v4",
+        "format": "pdf",
+        "synthetic": true,
+        "original_path": "hr-handbook/original.pdf",
+        "original_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+        "bytes": 227474,
+        "parser": {
+          "name": "pypdf",
+          "version": "6.21.2",
+          "required_version": "6.21.2"
+        },
+        "normalization": "NFC/LF",
+        "pages": [
+          {
+            "page": 1,
+            "start": 0,
+            "end": 959,
+            "raw_path": "hr-handbook/page-1-raw.txt",
+            "text_path": "hr-handbook/page-1.txt",
+            "raw_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28",
+            "text_sha256": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28"
+          },
+          {
+            "page": 2,
+            "start": 961,
+            "end": 2846,
+            "raw_path": "hr-handbook/page-2-raw.txt",
+            "text_path": "hr-handbook/page-2.txt",
+            "raw_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d",
+            "text_sha256": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d"
+          },
+          {
+            "page": 3,
+            "start": 2848,
+            "end": 4393,
+            "raw_path": "hr-handbook/page-3-raw.txt",
+            "text_path": "hr-handbook/page-3.txt",
+            "raw_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+            "text_sha256": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e"
+          },
+          {
+            "page": 4,
+            "start": 4395,
+            "end": 6221,
+            "raw_path": "hr-handbook/page-4-raw.txt",
+            "text_path": "hr-handbook/page-4.txt",
+            "raw_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2",
+            "text_sha256": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2"
+          },
+          {
+            "page": 5,
+            "start": 6223,
+            "end": 8118,
+            "raw_path": "hr-handbook/page-5-raw.txt",
+            "text_path": "hr-handbook/page-5.txt",
+            "raw_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d",
+            "text_sha256": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d"
+          },
+          {
+            "page": 6,
+            "start": 8120,
+            "end": 9831,
+            "raw_path": "hr-handbook/page-6-raw.txt",
+            "text_path": "hr-handbook/page-6.txt",
+            "raw_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b",
+            "text_sha256": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b"
+          },
+          {
+            "page": 7,
+            "start": 9833,
+            "end": 11748,
+            "raw_path": "hr-handbook/page-7-raw.txt",
+            "text_path": "hr-handbook/page-7.txt",
+            "raw_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177",
+            "text_sha256": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177"
+          },
+          {
+            "page": 8,
+            "start": 11750,
+            "end": 13104,
+            "raw_path": "hr-handbook/page-8-raw.txt",
+            "text_path": "hr-handbook/page-8.txt",
+            "raw_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7",
+            "text_sha256": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7"
+          },
+          {
+            "page": 9,
+            "start": 13106,
+            "end": 14969,
+            "raw_path": "hr-handbook/page-9-raw.txt",
+            "text_path": "hr-handbook/page-9.txt",
+            "raw_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361",
+            "text_sha256": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361"
+          },
+          {
+            "page": 10,
+            "start": 14971,
+            "end": 16778,
+            "raw_path": "hr-handbook/page-10-raw.txt",
+            "text_path": "hr-handbook/page-10.txt",
+            "raw_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9",
+            "text_sha256": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9"
+          },
+          {
+            "page": 11,
+            "start": 16780,
+            "end": 18638,
+            "raw_path": "hr-handbook/page-11-raw.txt",
+            "text_path": "hr-handbook/page-11.txt",
+            "raw_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545",
+            "text_sha256": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545"
+          },
+          {
+            "page": 12,
+            "start": 18640,
+            "end": 19953,
+            "raw_path": "hr-handbook/page-12-raw.txt",
+            "text_path": "hr-handbook/page-12.txt",
+            "raw_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+            "text_sha256": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6"
+          },
+          {
+            "page": 13,
+            "start": 19955,
+            "end": 21833,
+            "raw_path": "hr-handbook/page-13-raw.txt",
+            "text_path": "hr-handbook/page-13.txt",
+            "raw_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3",
+            "text_sha256": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3"
+          },
+          {
+            "page": 14,
+            "start": 21835,
+            "end": 23684,
+            "raw_path": "hr-handbook/page-14-raw.txt",
+            "text_path": "hr-handbook/page-14.txt",
+            "raw_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673",
+            "text_sha256": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673"
+          },
+          {
+            "page": 15,
+            "start": 23686,
+            "end": 25124,
+            "raw_path": "hr-handbook/page-15-raw.txt",
+            "text_path": "hr-handbook/page-15.txt",
+            "raw_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+            "text_sha256": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2"
+          },
+          {
+            "page": 16,
+            "start": 25126,
+            "end": 27038,
+            "raw_path": "hr-handbook/page-16-raw.txt",
+            "text_path": "hr-handbook/page-16.txt",
+            "raw_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582",
+            "text_sha256": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582"
+          },
+          {
+            "page": 17,
+            "start": 27040,
+            "end": 28886,
+            "raw_path": "hr-handbook/page-17-raw.txt",
+            "text_path": "hr-handbook/page-17.txt",
+            "raw_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b",
+            "text_sha256": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b"
+          },
+          {
+            "page": 18,
+            "start": 28888,
+            "end": 30680,
+            "raw_path": "hr-handbook/page-18-raw.txt",
+            "text_path": "hr-handbook/page-18.txt",
+            "raw_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778",
+            "text_sha256": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778"
+          },
+          {
+            "page": 19,
+            "start": 30682,
+            "end": 32205,
+            "raw_path": "hr-handbook/page-19-raw.txt",
+            "text_path": "hr-handbook/page-19.txt",
+            "raw_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+            "text_sha256": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd"
+          },
+          {
+            "page": 20,
+            "start": 32207,
+            "end": 34177,
+            "raw_path": "hr-handbook/page-20-raw.txt",
+            "text_path": "hr-handbook/page-20.txt",
+            "raw_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d",
+            "text_sha256": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d"
+          },
+          {
+            "page": 21,
+            "start": 34179,
+            "end": 35901,
+            "raw_path": "hr-handbook/page-21-raw.txt",
+            "text_path": "hr-handbook/page-21.txt",
+            "raw_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab",
+            "text_sha256": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab"
+          },
+          {
+            "page": 22,
+            "start": 35903,
+            "end": 37872,
+            "raw_path": "hr-handbook/page-22-raw.txt",
+            "text_path": "hr-handbook/page-22.txt",
+            "raw_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c",
+            "text_sha256": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c"
+          },
+          {
+            "page": 23,
+            "start": 37874,
+            "end": 38582,
+            "raw_path": "hr-handbook/page-23-raw.txt",
+            "text_path": "hr-handbook/page-23.txt",
+            "raw_sha256": "92215736d3b6307012d975c434f5af9a41cadb0d637ebdbfd094e6096edb2542",
+            "text_sha256": "92215736d3b6307012d975c434f5af9a41cadb0d637ebdbfd094e6096edb2542"
+          }
+        ],
+        "canonical_path": "hr-handbook/canonical.txt",
+        "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+        "status": "ready",
+        "reason": null
+      }
+    ],
+    "files": {
+      "hr-handbook/canonical.txt": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+      "hr-handbook/original.pdf": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "hr-handbook/page-1-raw.txt": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28",
+      "hr-handbook/page-1.txt": "2e29bddfdf83587408f77bb073b07e41dcad05a58f54c72bfc34cff9b3b07d28",
+      "hr-handbook/page-10-raw.txt": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9",
+      "hr-handbook/page-10.txt": "e80bca444f0313b5de4cb416aac5547f9be873e5607156006605a53612cec9b9",
+      "hr-handbook/page-11-raw.txt": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545",
+      "hr-handbook/page-11.txt": "5d27a9aa99aed37b278ac55069303ed31536c233d926c90a9c7da474b89d0545",
+      "hr-handbook/page-12-raw.txt": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+      "hr-handbook/page-12.txt": "0a7ddb5ad9d592013bf63ca817a891d551d35acaef5ade97ba4ca960e2e56ac6",
+      "hr-handbook/page-13-raw.txt": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3",
+      "hr-handbook/page-13.txt": "30c2fbe96b2ac2b9f58115ea2c333bde1dbed4e918dff959525e76d6cdb6a8a3",
+      "hr-handbook/page-14-raw.txt": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673",
+      "hr-handbook/page-14.txt": "655ee75b9f667675d6637ccf97bd4643b356f601e42784d4804fb4ae4bece673",
+      "hr-handbook/page-15-raw.txt": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+      "hr-handbook/page-15.txt": "740a63c08bcb77e3a3c78e11e0f24f3267624a086e5f06b145ed65f7b18279c2",
+      "hr-handbook/page-16-raw.txt": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582",
+      "hr-handbook/page-16.txt": "e69a6d6cd93a50256a2539b7ea96853eced1987cd85e50f045786fb2ac960582",
+      "hr-handbook/page-17-raw.txt": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b",
+      "hr-handbook/page-17.txt": "fbffc0fa12d38aad07a6319feefb654b99534f1724da927569cdb1332852fb5b",
+      "hr-handbook/page-18-raw.txt": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778",
+      "hr-handbook/page-18.txt": "cf26c625adf30721add07f8da9ca95ea2432fca70169228eb935b1b9ace31778",
+      "hr-handbook/page-19-raw.txt": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+      "hr-handbook/page-19.txt": "f763770d975b7d16590e638e14c5ff2299667942fc2365d1aa7fcd24a9f305bd",
+      "hr-handbook/page-2-raw.txt": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d",
+      "hr-handbook/page-2.txt": "05a8bc80d72f646e568ae887b18994bd77b7b6c3e2d48f784f38bcb2c7dde94d",
+      "hr-handbook/page-20-raw.txt": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d",
+      "hr-handbook/page-20.txt": "43098c9dcf22e450d3629b446c39a41d18f60014beab22e979fae40ec1c5bb2d",
+      "hr-handbook/page-21-raw.txt": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab",
+      "hr-handbook/page-21.txt": "a6997dda7c46dc87cb3d65ae07c00392a7a464316699b2d6875bcea1c1d528ab",
+      "hr-handbook/page-22-raw.txt": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c",
+      "hr-handbook/page-22.txt": "58b21fbff3044a3051116ff53cdcc9595a90dba5ce2697e7fce8f3226f8a136c",
+      "hr-handbook/page-23-raw.txt": "92215736d3b6307012d975c434f5af9a41cadb0d637ebdbfd094e6096edb2542",
+      "hr-handbook/page-23.txt": "92215736d3b6307012d975c434f5af9a41cadb0d637ebdbfd094e6096edb2542",
+      "hr-handbook/page-3-raw.txt": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+      "hr-handbook/page-3.txt": "d23d5fa90695a902c20f6d8630a5c4863511230ab9e6048843b93f6ac998734e",
+      "hr-handbook/page-4-raw.txt": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2",
+      "hr-handbook/page-4.txt": "6cb3eccdea94b692c498cc5b0009e56d460f9d3f6412abe7b7d8c62000db89b2",
+      "hr-handbook/page-5-raw.txt": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d",
+      "hr-handbook/page-5.txt": "6f22e91913c8895741b18ef841a8dedb4b8d679e6a3682abb56b2af1600fe10d",
+      "hr-handbook/page-6-raw.txt": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b",
+      "hr-handbook/page-6.txt": "2f99cca2c311b962d126e2a0a74b4b6596d387ceefb44675a9c6db57842cf86b",
+      "hr-handbook/page-7-raw.txt": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177",
+      "hr-handbook/page-7.txt": "01fa936eca2417e6d98efeba488019a796b1e15ba32585f9e3b4626b08d8a177",
+      "hr-handbook/page-8-raw.txt": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7",
+      "hr-handbook/page-8.txt": "0448d436ae47d7d93dbc0b6179cef3f86533cf4710f979737c22465d93b14ef7",
+      "hr-handbook/page-9-raw.txt": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361",
+      "hr-handbook/page-9.txt": "ad91de262c052b8d445e0a641d553413d55fa66aa2042f7e7f091a60dd03a361"
+    }
+  },
+  "fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "elapsed_ms": 1165.321
+}

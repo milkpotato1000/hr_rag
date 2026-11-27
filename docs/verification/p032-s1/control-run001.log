@@ -1,0 +1,9 @@
+test_caps_download_and_unresolved (__main__.Tests.test_caps_download_and_unresolved) ... ok
+test_deadline_survives_restart_and_blocks (__main__.Tests.test_deadline_survives_restart_and_blocks) ... ok
+test_persist_failure_prevents_dispatch (__main__.Tests.test_persist_failure_prevents_dispatch) ... ok
+test_reservation_before_worker_and_no_retry (__main__.Tests.test_reservation_before_worker_and_no_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.007s
+
+OK

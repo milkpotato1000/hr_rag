@@ -205,9 +205,11 @@ class ChunkTests(unittest.TestCase):
     if self.returncode is None:raise subprocess.TimeoutExpired('owned',1)
     return '',''
    def poll(self):return self.returncode
+   def wait(self,**kwargs):return self.returncode
+   pid=123
    def kill(self):self.returncode=-9
   proc=Process()
-  with patch.object(embedding,'check_files'),patch.object(embedding,'versions',return_value=SDK_VERSIONS),patch.object(embedding.subprocess,'Popen',return_value=proc):
+  with patch.object(embedding,'check_files'),patch.object(embedding,'versions',return_value=SDK_VERSIONS),patch.object(embedding.subprocess,'Popen',return_value=proc),patch('rag_package.owned_worker.pressure',return_value={'pressure':'normal'}),patch('rag_package.owned_worker.rss',return_value=1):
    r=a.build(self.ws/'snapshot',cfg,self.ws/'timeout',execute=True)
   self.assertEqual(r['error']['code'],'embedding_timeout');self.assertEqual(r['work']['boundary_model_jobs'],1);self.assertTrue(r['work']['unit_observation']['worker_exited']);self.assertIsNone(r['work']['unit_observation']['completed_items'])
  def test_rule_chunk_cap_before_large_materialization(self):

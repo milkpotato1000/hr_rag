@@ -105,19 +105,13 @@ def encode(p,texts,ids,kind,*,execute=False,backend=None,allow_whitespace=False,
         else:
             check_files(p);sdk=versions()
             if expected_sdk is not None:require(sdk==expected_sdk,'embedding_sdk_mismatch','embedding')
-            # An explicit minimal environment never inherits provider tokens or HF credentials.
-            env={'PATH':os.defpath,'HF_HUB_OFFLINE':'1','TRANSFORMERS_OFFLINE':'1','HF_HUB_DISABLE_TELEMETRY':'1','TOKENIZERS_PARALLELISM':'false','OMP_NUM_THREADS':'1','MKL_NUM_THREADS':'1'}
-            proc=subprocess.Popen([sys.executable,'-m','rag_package.embedding_worker'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,env=env)
-            observed.update(workers_started=1,completed_items=None,worker_exited=False)
-            try:stdout,_=proc.communicate(json.dumps({'profile':p,'texts':texts,'ids':ids,'kind':kind}),timeout=p['timeout_seconds'])
-            except subprocess.TimeoutExpired:
-                proc.kill();proc.communicate();observed['worker_exited']=proc.poll() is not None;require(proc.poll() is not None,'worker_not_stopped','embedding');raise RagError('embedding_timeout','embedding') from None
-            except BaseException:
-                if proc.poll() is None:proc.kill()
-                proc.communicate();observed['worker_exited']=proc.poll() is not None
-                raise
-            observed['worker_exited']=proc.poll() is not None
-            require(proc.returncode==0,'embedding_worker_failed','embedding')
+            from .owned_worker import invoke
+            monitor={};observed['monitor']=monitor
+            def on_started():observed.update(workers_started=1,completed_items=None,worker_exited=False)
+            try:
+                stdout,_,returncode=invoke('rag_package.embedding_worker',{'profile':p,'texts':texts,'ids':ids,'kind':kind},p['timeout_seconds'],observation=monitor,on_started=on_started,stage='embedding',timeout_code='embedding_timeout')
+            finally:observed['worker_exited']=monitor.get('worker_exited')
+            require(returncode==0,'embedding_worker_failed','embedding')
             try:response=json.loads(stdout)
             except (ValueError,TypeError):raise RagError('embedding_worker_failed','embedding') from None
             if response.get('error'):
@@ -126,5 +120,5 @@ def encode(p,texts,ids,kind,*,execute=False,backend=None,allow_whitespace=False,
         vectors=normalize(response['vectors'],len(texts),CATALOG[p['model_id']]['dimension'])
         observed['completed_items']=len(texts)
     return vectors,{'jobs':1,'documents':len(texts) if kind=='document' else 0,'queries':len(texts) if kind=='query' else 0,'elapsed_ms':(time.monotonic()-started)*1000,
-                    'sdk_versions':response.get('sdk_versions',{}),'peak_rss_bytes':response.get('peak_rss_bytes'),'rss_method':response.get('rss_method','unavailable'),'sampling_interval_ms':None,
+                    'sdk_versions':response.get('sdk_versions',{}),'peak_rss_bytes':response.get('peak_rss_bytes'),'rss_method':response.get('rss_method','unavailable'),'sampling_interval_ms':250 if backend is None else None,'monitor':observed.get('monitor'),
                     'execution_kind':'test_fixture' if backend is not None else 'local_hf','worker_exited':True}

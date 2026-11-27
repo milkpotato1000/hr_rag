@@ -20,7 +20,10 @@ def pressure():
     try:
         if sys.platform=='darwin':
             n=int(subprocess.check_output(['sysctl','-n','kern.memorystatus_vm_pressure_level'],text=True,timeout=2).strip())
-            check(n==1,'memory_pressure');return {'platform':'darwin','pressure':'normal'}
+            state={'platform':'darwin','pressure_level':n,'pressure':{1:'normal',2:'warning',4:'critical'}.get(n,'unknown')}
+            if n!=1:
+                err=RagError('memory_pressure','model_preparation');err.measurement=state;raise err
+            return state
         if sys.platform.startswith('linux'):
             mem={line.split(':')[0]:int(line.split()[1])*1024 for line in Path('/proc/meminfo').read_text().splitlines()}
             check(mem['MemAvailable']>=1024**3,'memory_pressure')
@@ -52,6 +55,8 @@ def disk_bytes(root):
 
 
 def run_worker(payload, directory, *, timeout, observation=None, monitor=pressure, rss_reader=rss):
+    from .owned_worker import check_scope
+    check_scope()
     op=payload['operation'];obs=observation if observation is not None else {}
     obs.update(attempted_jobs=1,workers_started=0,worker_exited=None,completed=False,peak_rss_bytes=None,rss_samples=0,retry_count=0)
     proc=None;start=time.monotonic();directory=Path(directory)
@@ -64,9 +69,11 @@ def run_worker(payload, directory, *, timeout, observation=None, monitor=pressur
         write_json(inp,payload)
         env={'PATH':os.defpath,'HF_HUB_DISABLE_TELEMETRY':'1','HF_HUB_DISABLE_IMPLICIT_TOKEN':'1','HF_HUB_DISABLE_XET':'1','HF_HUB_ETAG_TIMEOUT':'20','HF_HUB_DOWNLOAD_TIMEOUT':'20','OMP_NUM_THREADS':'1','MKL_NUM_THREADS':'1','TOKENIZERS_PARALLELISM':'false','HF_HOME':str(directory/'hf-cache'),'HF_TOKEN_PATH':str(directory/'absent-token')}
         if op=='conversion':env.update(HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1')
+        check_scope()
         proc=subprocess.Popen([sys.executable,'-m','rag_package.model_worker',str(inp),str(out)],stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,env=env)
         obs.update(workers_started=1,worker_exited=False)
         while proc.poll() is None:
+            check_scope()
             check(time.monotonic()-start<timeout,'preparation_timeout')
             if op=='conversion':
                 obs['memory_latest']=monitor()

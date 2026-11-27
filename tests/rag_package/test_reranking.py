@@ -67,8 +67,10 @@ class RerankTests(unittest.TestCase):
     return ('','')
    def kill(self):self.returncode=-9
    def poll(self):return self.returncode
+   def wait(self,**kwargs):return self.returncode
+   pid=123
   proc=Process()
-  with patch.object(reranker,'check_files'),patch.object(reranker,'versions'),patch.object(reranker.subprocess,'Popen',return_value=proc):
+  with patch.object(reranker,'check_files'),patch.object(reranker,'versions'),patch.object(reranker.subprocess,'Popen',return_value=proc),patch('rag_package.owned_worker.pressure',return_value={'pressure':'normal'}),patch('rag_package.owned_worker.rss',return_value=1):
    r=reranking.run(self.ws/'candidates','cross-encoder',self.ws/'timeout',profile=self.p,execute=True)
   self.assertEqual(r['error']['code'],'reranker_timeout');self.assertEqual(r['work']['workers'],1);self.assertIsNone(r['work']['pairs']);self.assertTrue(r['work']['worker_exited'])
  def test_compare_replay_and_mapping_tamper(self):

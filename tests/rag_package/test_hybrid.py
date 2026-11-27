@@ -72,8 +72,10 @@ class HybridTests(unittest.TestCase):
     return ('','')
    def kill(self):self.killed=True;self.returncode=-9
    def poll(self):return self.returncode
+   def wait(self,**kwargs):return self.returncode
+   pid=123
   proc=FakeProcess()
-  with patch.object(embedding,'check_files'),patch.object(embedding,'versions',return_value={}),patch.object(embedding.subprocess,'Popen',return_value=proc):
+  with patch.object(embedding,'check_files'),patch.object(embedding,'versions',return_value={}),patch.object(embedding.subprocess,'Popen',return_value=proc),patch('rag_package.owned_worker.pressure',return_value={'pressure':'normal'}),patch('rag_package.owned_worker.rss',return_value=1):
    with self.assertRaisesRegex(RagError,'embedding_timeout'):embedding.encode(self.p,['x'],['a'],'document',execute=True)
   self.assertTrue(proc.killed)
  def test_single_worker_and_bm25_zero_embeddings(self):

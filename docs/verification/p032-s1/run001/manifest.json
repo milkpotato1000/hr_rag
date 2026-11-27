@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "scope": "P032 S1 only",
+  "adopted_plan": "3f727c9ce0cd59fdac1337b7bf25acca8bb87c0a",
+  "execution_kind": "live_public_hf_cpu",
+  "installation": {
+    "status": "PASS",
+    "base": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-catdnd8v",
+    "python": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-catdnd8v/env/bin/python",
+    "wheel": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-catdnd8v/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl",
+    "wheel_sha256": "2d87d78b74664470802db089a29fce9ae9e1151de99b796d73bb3822da303fc1",
+    "sdist_sha256": "07cf64315ea1d667396d39b844bc5344fdbb8475021053c9483de21424121429",
+    "wheel_inventory": [
+      "rag_package/__init__.py",
+      "rag_package/__main__.py",
+      "rag_package/_version.py",
+      "rag_package/bm25.py",
+      "rag_package/candidates.py",
+      "rag_package/chunk_artifact.py",
+      "rag_package/chunk_compare.py",
+      "rag_package/chunk_policy.py",
+      "rag_package/chunks.py",
+      "rag_package/documents.py",
+      "rag_package/drive_auth.py",
+      "rag_package/embedding.py",
+      "rag_package/embedding_worker.py",
+      "rag_package/fact_metrics.py",
+      "rag_package/llm_setup.py",
+      "rag_package/model_catalog.py",
+      "rag_package/model_preparation.py",
+      "rag_package/model_process.py",
+      "rag_package/model_worker.py",
+      "rag_package/owned_worker.py",
+      "rag_package/pdf_worker.py",
+      "rag_package/provenance.json",
+      "rag_package/rag.py",
+      "rag_package/requirements-drive.lock",
+      "rag_package/requirements-pdf.lock",
+      "rag_package/requirements-retrieval.lock",
+      "rag_package/rerank_compare.py",
+      "rag_package/reranker.py",
+      "rag_package/reranker_worker.py",
+      "rag_package/reranking.py",
+      "rag_package/retrieval.py",
+      "rag_package/search_metrics.py",
+      "rag_package/storage.py",
+      "rag_package/ui_chunking.py",
+      "rag_package/ui_jobs.py",
+      "rag_package/ui_registry.py",
+      "rag_package/ui_reranking.py",
+      "rag_package/ui_server.py",
+      "rag_package/workspace.py",
+      "rag_package/connectors/__init__.py",
+      "rag_package/connectors/drive_config.py",
+      "rag_package/connectors/drive_http.py",
+      "rag_package/connectors/google_drive.py",
+      "rag_package/connectors/origin.py",
+      "rag_package/llm/__init__.py",
+      "rag_package/llm/__main__.py",
+      "rag_package/llm/config.py",
+      "rag_package/llm/core.py",
+      "rag_package/llm/transport.py",
+      "rag_package/resources/manifest.json",
+      "rag_package/resources/models/bge-reranker.json",
+      "rag_package/resources/models/bge.json",
+      "rag_package/resources/models/e5.json",
+      "rag_package/resources/models/mmini-reranker.json",
+      "rag_package/resources/sample/.gitignore",
+      "rag_package/resources/sample/START_HERE.md",
+      "rag_package/resources/sample/chunk-fixed.json",
+      "rag_package/resources/sample/chunk-llm.json",
+      "rag_package/resources/sample/chunk-recursive.json",
+      "rag_package/resources/sample/chunk-semantic.json",
+      "rag_package/resources/sample/chunk-structure.json",
+      "rag_package/resources/sample/drive-oauth-file.json",
+      "rag_package/resources/sample/drive-token-env.json",
+      "rag_package/resources/sample/embedding-e5.json",
+      "rag_package/resources/sample/fixed.json",
+      "rag_package/resources/sample/llm-api.json",
+      "rag_package/resources/sample/llm-chunking.json",
+      "rag_package/resources/sample/llm-local.json",
+      "rag_package/resources/sample/llm-spec-api.json",
+      "rag_package/resources/sample/llm-spec-local.json",
+      "rag_package/resources/sample/llm-spec-mixed.json",
+      "rag_package/resources/sample/questions.json",
+      "rag_package/resources/sample/rag-frozen.json",
+      "rag_package/resources/sample/rag-hybrid.json",
+      "rag_package/resources/sample/recursive.json",
+      "rag_package/resources/sample/reranker-bge.json",
+      "rag_package/resources/sample/sources.json",
+      "rag_package/resources/sample/structure.json",
+      "rag_package/resources/sample/documents/annual.txt",
+      "rag_package/resources/sample/documents/birthday.md",
+      "rag_package/ui/app.js",
+      "rag_package/ui/index.html",
+      "rag_package/ui/style.css",
+      "milkpotato_rag_lab-0.1.0.dev1.dist-info/METADATA",
+      "milkpotato_rag_lab-0.1.0.dev1.dist-info/WHEEL",
+      "milkpotato_rag_lab-0.1.0.dev1.dist-info/entry_points.txt",
+      "milkpotato_rag_lab-0.1.0.dev1.dist-info/top_level.txt",
+      "milkpotato_rag_lab-0.1.0.dev1.dist-info/RECORD"
+    ],
+    "sdist_inventory": [
+      "MANIFEST.in",
+      "PACKAGING.md",
+      "PKG-INFO",
+      "milkpotato_rag_lab.egg-info/SOURCES.txt",
+      "pyproject.toml",
+      "rag_package/__init__.py",
+      "rag_package/__main__.py",
+      "rag_package/_version.py",
+      "rag_package/bm25.py",
+      "rag_package/candidates.py",
+      "rag_package/chunk_artifact.py",
+      "rag_package/chunk_compare.py",
+      "rag_package/chunk_policy.py",
+      "rag_package/chunks.py",
+      "rag_package/connectors/__init__.py",
+      "rag_package/connectors/drive_config.py",
+      "rag_package/connectors/drive_http.py",
+      "rag_package/connectors/google_drive.py",
+      "rag_package/connectors/origin.py",
+      "rag_package/documents.py",
+      "rag_package/drive_auth.py",
+      "rag_package/embedding.py",
+      "rag_package/embedding_worker.py",
+      "rag_package/fact_metrics.py",
+      "rag_package/llm/__init__.py",
+      "rag_package/llm/__main__.py",
+      "rag_package/llm/config.py",
+      "rag_package/llm/core.py",
+      "rag_package/llm/transport.py",
+      "rag_package/llm_setup.py",
+      "rag_package/model_catalog.py",
+      "rag_package/model_preparation.py",
+      "rag_package/model_process.py",
+      "rag_package/model_worker.py",
+      "rag_package/owned_worker.py",
+      "rag_package/pdf_worker.py",
+      "rag_package/provenance.json",
+      "rag_package/rag.py",
+      "rag_package/requirements-drive.lock",
+      "rag_package/requirements-pdf.lock",
+      "rag_package/requirements-retrieval.lock",
+      "rag_package/rerank_compare.py",
+      "rag_package/reranker.py",
+      "rag_package/reranker_worker.py",
+      "rag_package/reranking.py",
+      "rag_package/resources/manifest.json",
+      "rag_package/resources/models/bge-reranker.json",
+      "rag_package/resources/models/bge.json",
+      "rag_package/resources/models/e5.json",
+      "rag_package/resources/models/mmini-reranker.json",
+      "rag_package/resources/sample/.gitignore",
+      "rag_package/resources/sample/START_HERE.md",
+      "rag_package/resources/sample/chunk-fixed.json",
+      "rag_package/resources/sample/chunk-llm.json",
+      "rag_package/resources/sample/chunk-recursive.json",
+      "rag_package/resources/sample/chunk-semantic.json",
+      "rag_package/resources/sample/chunk-structure.json",
+      "rag_package/resources/sample/documents/annual.txt",
+      "rag_package/resources/sample/documents/birthday.md",
+      "rag_package/resources/sample/drive-oauth-file.json",
+      "rag_package/resources/sample/drive-token-env.json",
+      "rag_package/resources/sample/embedding-e5.json",
+      "rag_package/resources/sample/fixed.json",
+      "rag_package/resources/sample/llm-api.json",
+      "rag_package/resources/sample/llm-chunking.json",
+      "rag_package/resources/sample/llm-local.json",
+      "rag_package/resources/sample/llm-spec-api.json",
+      "rag_package/resources/sample/llm-spec-local.json",
+      "rag_package/resources/sample/llm-spec-mixed.json",
+      "rag_package/resources/sample/questions.json",
+      "rag_package/resources/sample/rag-frozen.json",
+      "rag_package/resources/sample/rag-hybrid.json",
+      "rag_package/resources/sample/recursive.json",
+      "rag_package/resources/sample/reranker-bge.json",
+      "rag_package/resources/sample/sources.json",
+      "rag_package/resources/sample/structure.json",
+      "rag_package/retrieval.py",
+      "rag_package/search_metrics.py",
+      "rag_package/storage.py",
+      "rag_package/ui/app.js",
+      "rag_package/ui/index.html",
+      "rag_package/ui/style.css",
+      "rag_package/ui_chunking.py",
+      "rag_package/ui_jobs.py",
+      "rag_package/ui_registry.py",
+      "rag_package/ui_reranking.py",
+      "rag_package/ui_server.py",
+      "rag_package/workspace.py",
+      "setup.cfg"
+    ],
+    "developer_source_removed": true
+  },
+  "sdk": {
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0",
+    "transformers": "5.24.1",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0"
+  },
+  "source": {
+    "status": "frozen_before_rankings",
+    "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+    "chunk_fingerprint": "acdcd8466dae5203f4e025675dcfb7bc6593b80557a4f10090503acef243a2c8",
+    "questions_hash": "2063d6e4f30c649c1ea1a4ed362827e765838cc0e90d4ebb33fb96847cb50c69",
+    "files": {
+      "facts.json": "526808f5fedeff1d4a389c8664c24e46885a4f0fe1722e1f5ba6087e6a32b916",
+      "qrels.json": "c1db416c44024d3cbaaeb5bd4300cc7ba39bca5e012571a9069666e2902bfa1f",
+      "qrels-audit.json": "f5a53219b99069401257cb450f7a0905cce40a0e6e2bbd604dcbeb735c098cab",
+      "questions.json": "b502377b79dc640409889ec9dff723d1b8b42356f4bad8d42e61308ad193ed4d",
+      "claims-mapping.json": "d023ada9f00b35c6ba7d8685a87b646241bed4670eadb6dff6a3762148dc0e0d",
+      "source-review-final.json": "c62d89cd622507bf031d39fa3e10a9f8d452348a144635debc52421eaf48a0f5"
+    },
+    "generation_calls": 0,
+    "retrieval_rankings_observed": 0
+  },
+  "plans": {
+    "e5": {
+      "schema_version": 1,
+      "status": "ready",
+      "origin": "packaged_metadata",
+      "recipe_id": "e5-v1",
+      "repo_id": "intfloat/multilingual-e5-small",
+      "role": "embedding",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "files": [
+        {
+          "path": "1_Pooling/config.json",
+          "size": 200,
+          "git_blob_oid": "acbd4014202bf4dbc6c03229bcbeef7c4feafb58",
+          "lfs_sha256": null
+        },
+        {
+          "path": "config.json",
+          "size": 655,
+          "git_blob_oid": "60a2a84020f1d74cc53ea9e8c4e91cf4af6c2b68",
+          "lfs_sha256": null
+        },
+        {
+          "path": "model.safetensors",
+          "size": 470641600,
+          "git_blob_oid": "fe4cbb2a14318b79019748874f6ca4a61a02c6f6",
+          "lfs_sha256": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477"
+        },
+        {
+          "path": "modules.json",
+          "size": 387,
+          "git_blob_oid": "ac2039abdf6ff023b27c919bb9675cfe378cb10f",
+          "lfs_sha256": null
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "size": 57,
+          "git_blob_oid": "4eca68d85ecd3034cf4174d8a4033a75344ea62d",
+          "lfs_sha256": null
+        },
+        {
+          "path": "sentencepiece.bpe.model",
+          "size": 5069051,
+          "git_blob_oid": "7a3f40a75f870bc1f21700cd414dc2acc431583c",
+          "lfs_sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 167,
+          "git_blob_oid": "e0b1d18ecd0ae4ff1d47bd297d910c0cf83e504b",
+          "lfs_sha256": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17082730,
+          "git_blob_oid": "c9b2fea3119ca8886380e5f47bffc5ea7a6e0ffa",
+          "lfs_sha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 443,
+          "git_blob_oid": "059214673d9d6d2ee319411e2ffec8c024b816d5",
+          "lfs_sha256": null
+        }
+      ],
+      "conversion": "native-copy",
+      "license": "MIT",
+      "source_observed_at": "2026-11-28",
+      "metadata_sdk": {
+        "huggingface-hub": "2.5.0"
+      },
+      "total_bytes": 492795290,
+      "plan_sha256": "c7e9e1914e2d66dad0cba6f47bc0728d6534614400e8e6819008df1c44b6e77f"
+    },
+    "mmini": {
+      "schema_version": 1,
+      "status": "ready",
+      "origin": "packaged_metadata",
+      "recipe_id": "mmini-reranker-v1",
+      "repo_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "role": "reranker",
+      "revision": "1427fd652930e4ba29e8149678df786c240d8825",
+      "files": [
+        {
+          "path": "config.json",
+          "size": 891,
+          "git_blob_oid": "43ac97f1bef372d4f1d30a32f9a84baffcf6575d",
+          "lfs_sha256": null
+        },
+        {
+          "path": "model.safetensors",
+          "size": 470592698,
+          "git_blob_oid": "28b465f76ad713413a03db9d865baa6c70449ca4",
+          "lfs_sha256": "5daeca2481a76b5976a2bdc32f0a78532b6716da4f8cd3ff59460ef8d2f359b4"
+        },
+        {
+          "path": "sentencepiece.bpe.model",
+          "size": 5069051,
+          "git_blob_oid": "7a3f40a75f870bc1f21700cd414dc2acc431583c",
+          "lfs_sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 239,
+          "git_blob_oid": "2ea7ad0e45a9d1d1591782ba7e29a703d0758831",
+          "lfs_sha256": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17082660,
+          "git_blob_oid": "b77624b6c85b399b6d11c581617e579ce832af28",
+          "lfs_sha256": "62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 435,
+          "git_blob_oid": "b59159d44c6bd4b1d9f7ae4f8da028da4238e06e",
+          "lfs_sha256": null
+        }
+      ],
+      "conversion": "native-copy",
+      "license": "Apache-2.0",
+      "source_observed_at": "2026-11-28",
+      "metadata_sdk": {
+        "huggingface-hub": "2.5.0"
+      },
+      "total_bytes": 492745974,
+      "plan_sha256": "b1f49b40478dfdd2d1980d805f2ef5eb7bda7af490b927c272c128fbfb53256b"
+    },
+    "bge": {
+      "schema_version": 1,
+      "status": "ready",
+      "origin": "packaged_metadata",
+      "recipe_id": "bge-v1",
+      "repo_id": "BAAI/bge-m3",
+      "role": "embedding",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "files": [
+        {
+          "path": "1_Pooling/config.json",
+          "size": 191,
+          "git_blob_oid": "9bd85925f325e25246d94c4918dc02ab98f2a1b7",
+          "lfs_sha256": null
+        },
+        {
+          "path": "config.json",
+          "size": 687,
+          "git_blob_oid": "e6eda1c72da8f9dc30fdd9b69c73d35af3b7a7ad",
+          "lfs_sha256": null
+        },
+        {
+          "path": "config_sentence_transformers.json",
+          "size": 123,
+          "git_blob_oid": "1fba91c78a6c8e17227058ab6d4d3acb5d8630a9",
+          "lfs_sha256": null
+        },
+        {
+          "path": "modules.json",
+          "size": 349,
+          "git_blob_oid": "952a9b81c0bfd99800fabf352f69c7ccd46c5e43",
+          "lfs_sha256": null
+        },
+        {
+          "path": "pytorch_model.bin",
+          "size": 2271145830,
+          "git_blob_oid": "88e71f33b1af45aa960f3fbf6883edc6f014452a",
+          "lfs_sha256": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38"
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "size": 54,
+          "git_blob_oid": "0140ba1eac83a3c9b857d64baba91969d988624b",
+          "lfs_sha256": null
+        },
+        {
+          "path": "sentencepiece.bpe.model",
+          "size": 5069051,
+          "git_blob_oid": "7a3f40a75f870bc1f21700cd414dc2acc431583c",
+          "lfs_sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 964,
+          "git_blob_oid": "b1879d702821e753ffe4245048eee415d54a9385",
+          "lfs_sha256": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17098108,
+          "git_blob_oid": "c8fd8778874b9aa8bdafaa3bbd760f236d237dd6",
+          "lfs_sha256": "21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 444,
+          "git_blob_oid": "dc69ac559dcba2694012009aaa108c614541789a",
+          "lfs_sha256": null
+        }
+      ],
+      "conversion": "tensor-only-bin-to-safetensors",
+      "license": "MIT",
+      "source_observed_at": "2026-11-28",
+      "metadata_sdk": {
+        "huggingface-hub": "2.5.0"
+      },
+      "total_bytes": 2293315801,
+      "plan_sha256": "42e22a66029a53af99416527f77d6ae8455f9ab73e85abc2a215f32d96616619"
+    },
+    "bge-reranker": {
+      "schema_version": 1,
+      "status": "ready",
+      "origin": "packaged_metadata",
+      "recipe_id": "bge-reranker-v1",
+      "repo_id": "BAAI/bge-reranker-v2-m3",
+      "role": "reranker",
+      "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+      "files": [
+        {
+          "path": "config.json",
+          "size": 795,
+          "git_blob_oid": "9f62673cb00ec41dcec8947b9ed16f6f2eb23ba2",
+          "lfs_sha256": null
+        },
+        {
+          "path": "model.safetensors",
+          "size": 2271071852,
+          "git_blob_oid": "773a0a7d7cc8a010835938a3a82a87eac8b21909",
+          "lfs_sha256": "d9e3e081faff1eefb84019509b2f5558fd74c1a05a2c7db22f74174fcedb5286"
+        },
+        {
+          "path": "sentencepiece.bpe.model",
+          "size": 5069051,
+          "git_blob_oid": "7a3f40a75f870bc1f21700cd414dc2acc431583c",
+          "lfs_sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 964,
+          "git_blob_oid": "b1879d702821e753ffe4245048eee415d54a9385",
+          "lfs_sha256": null
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 17098273,
+          "git_blob_oid": "1c98a28b19c084901b2622d8e8b15e85eed13bff",
+          "lfs_sha256": "69564b696052886ed0ac63fa393e928384e0f8caada38c1f4864a9bfbf379c15"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 1173,
+          "git_blob_oid": "328a00a9a560aadcf2a3064f917517359eb3cc26",
+          "lfs_sha256": null
+        }
+      ],
+      "conversion": "native-copy",
+      "license": "Apache-2.0",
+      "source_observed_at": "2026-11-28",
+      "metadata_sdk": {
+        "huggingface-hub": "2.5.0"
+      },
+      "total_bytes": 2293242108,
+      "plan_sha256": "93d8d28300523702ac1e0229f90b65340e1787a74945fc76279a11f407aa9736"
+    }
+  },
+  "limits": {
+    "wall_seconds": 7200,
+    "worker_seconds": 300,
+    "inference_workers": 72,
+    "reservations": {
+      "embedding_smoke": 6,
+      "embedding_full": 42,
+      "reranker_smoke": 4,
+      "reranker_full": 20
+    },
+    "reranker_pairs": 480,
+    "download_jobs_per_model": 1,
+    "upper_retry": 0,
+    "rss_bytes": 4294967296,
+    "required_disk_free_bytes": 14511255971
+  },
+  "settings": {
+    "chunk_size": 256,
+    "overlap": 64,
+    "N": 20,
+    "K": 5,
+    "context_chars": 2000,
+    "RRF": 60,
+    "dtype": "float32",
+    "device": "cpu",
+    "batch": 1,
+    "tokens": 512
+  },
+  "script_hashes": {
+    "live_run.py": "5661c58178b175334e179f5b49ac3b792151b75ecad3831f57e9a6803f0c6ac4",
+    "live_control.py": "800872ad51341045eb61b68a35db4ee2bc5e00f6cb05bc67cb6a513526143fe2"
+  },
+  "excluded_calls": {
+    "LLM": 0,
+    "Ollama": 0,
+    "Drive": 0,
+    "evaluator": 0,
+    "P013_grant": 0
+  }
+}

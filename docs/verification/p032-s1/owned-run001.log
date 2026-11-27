@@ -1,0 +1,12 @@
+test_measurement_latency_counts_toward_timeout (test_owned_worker.OwnedTests.test_measurement_latency_counts_toward_timeout) ... ok
+test_normal_and_large_pipes (test_owned_worker.OwnedTests.test_normal_and_large_pipes) ... ok
+test_preflight_cancel_and_interrupt_after_spawn (test_owned_worker.OwnedTests.test_preflight_cancel_and_interrupt_after_spawn) ... ok
+test_pressure_limit_measurement_failure_and_nonzero (test_owned_worker.OwnedTests.test_pressure_limit_measurement_failure_and_nonzero) ... ok
+test_scope_deadline_and_durable_before_spawn (test_owned_worker.OwnedTests.test_scope_deadline_and_durable_before_spawn) ... ok
+test_scope_not_applied_to_unowned_process (test_owned_worker.OwnedTests.test_scope_not_applied_to_unowned_process) ... ok
+test_timeout_owned_process_reaped (test_owned_worker.OwnedTests.test_timeout_owned_process_reaped) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.106s
+
+OK
