@@ -1,0 +1,19 @@
+test_cli_and_files (test_llm.ContractTests.test_cli_and_files) ... ok
+test_config_rejection (test_llm.ContractTests.test_config_rejection) ... ok
+test_envelope_and_json_errors (test_llm.ContractTests.test_envelope_and_json_errors) ... ok
+test_identity_gates (test_llm.ContractTests.test_identity_gates) ... ok
+test_inline_thinking_rejected_not_repaired (test_llm.ContractTests.test_inline_thinking_rejected_not_repaired) ... ok
+test_messages (test_llm.ContractTests.test_messages) ... ok
+test_missing_key_and_errors_no_retry_or_leak (test_llm.ContractTests.test_missing_key_and_errors_no_retry_or_leak) ... ok
+test_non_success_finishes (test_llm.ContractTests.test_non_success_finishes) ... ok
+test_preview_no_keys_no_network_and_json_hash (test_llm.ContractTests.test_preview_no_keys_no_network_and_json_hash) ... ok
+test_routing_and_roles (test_llm.ContractTests.test_routing_and_roles) ... ok
+test_urls (test_llm.ContractTests.test_urls) ... ok
+test_usage_missing_and_hidden_thinking (test_llm.ContractTests.test_usage_missing_and_hidden_thinking) ... ok
+test_http_invoke_cli_and_no_proxy (test_llm.HTTPTests.test_http_invoke_cli_and_no_proxy) ... ok
+test_real_transport_errors (test_llm.HTTPTests.test_real_transport_errors) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.142s
+
+OK

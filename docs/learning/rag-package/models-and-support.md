@@ -27,7 +27,8 @@ HF ID는 원본 저장소 식별자이고 Ollama 태그는 실행 환경의 이�
 | 기존 구현 | 장문 가상 PDF, 추출, 5종 청킹, BM25/Dense 비교·문맥 시뮬레이션 | [청킹 안내](<../../../2. Document Chunking/README.md>). 규칙·의미·LLM 청킹의 호출 조건이 서로 다름 |
 | 설정 예시만 제공 | local/api 공통 JSON, 생성·평가 역할별 선택 | [local](examples/local.json) / [api](examples/api.json). example_only=true, 실제 CLI 스키마 아님 |
 | 일부 구현·미완료 | claim 추출·판정·Python 집계와 실제 RAG 평가 연결 | [평가 모듈](../../../evaluation/project_b/README.md). 오프라인 모듈 검증과 전체 모델 검증은 별개. P013 BLOCKED |
-| 후속 계획 | LLM API adapter, 임의 임베딩 교체, Hybrid RRF, 리랭커 | [로드맵](../../planning/rag-package-roadmap.md). API 모드 실행 버튼이나 provider 지원 목록 없음 |
+| 독립 구현·오프라인 검증 | Ollama/OpenAI Chat/Anthropic Messages adapter와 CLI | [provider 안내](providers.md). 실제 호출·기존 RAG 연결 미검증 |
+| 후속 계획 | 임의 임베딩 교체, Hybrid RRF, 리랭커 | [로드맵](../../planning/rag-package-roadmap.md). RAG UI의 API 선택은 후속이며 지원 protocol은 독립 모듈에 한정 |
 | 후속 계획 | Google Drive 실제 연결·변경 반영 | 현재 Drive fixture는 로컬 샘플. 개인 계정 인증·문서 동기화 미구현 |
 | 후속 계획·미검증 | 통합 UI/CLI·설치 패키지, 깨끗한 환경의 양쪽 코딩 도구 E2E | 기존 개별 단계의 완료를 범용 패키지 완료로 표시하지 않음 |
 

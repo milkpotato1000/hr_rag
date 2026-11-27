@@ -1,6 +1,6 @@
 # hr_rag
 
-새 학습 경로는 [공개 모델 기본·선택 LLM API 안내](docs/learning/rag-package/README.md)에서 시작합니다. 현재 지원 범위와 비실행 설정 예시를 구분하며, P013 모델 실험은 보류 상태입니다. 아래 단계별 실행 안내는 기존 기능의 재현용입니다.
+새 학습 경로는 [공개 모델 기본·선택 LLM API 안내](docs/learning/rag-package/README.md)에서 시작합니다. 현재 지원 범위와 비실행 설정 예시를 구분하며, P013 모델 실험은 보류 상태입니다. 독립 [LLM provider CLI](docs/learning/rag-package/providers.md)는 오프라인 검증까지 구현했고 실제 API/RAG 연결은 미검증입니다. 아래 단계별 실행 안내는 기존 기능의 재현용입니다.
 
 현재 학습 시작점은 **http://127.0.0.1:8001/** (LangChain)이다. `1. Naive RAG/variants/langchain/`에서 `.venv/bin/python scripts/serve_compare.py --port 8001`을 실행한다. **실험 → 구현 비교**는 http://127.0.0.1:8001/experiments/implementation 이다. 기존8000과 아래 기존 명령은 Direct 기준선 재현용이다. P012 다음은 별도 설치형 plan-dev 하네스 제작이며 Hybrid는 이후 준비·채택한다.
 

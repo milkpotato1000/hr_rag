@@ -1,0 +1,54 @@
+test_cli_and_files (test_llm.ContractTests) ... FAIL
+test_config_rejection (test_llm.ContractTests) ... ok
+test_envelope_and_json_errors (test_llm.ContractTests) ... ok
+test_identity_gates (test_llm.ContractTests) ... ok
+test_messages (test_llm.ContractTests) ... ok
+test_missing_key_and_errors_no_retry_or_leak (test_llm.ContractTests) ... ok
+test_non_success_finishes (test_llm.ContractTests) ... ok
+test_preview_no_keys_no_network_and_json_hash (test_llm.ContractTests) ... ok
+test_routing_and_roles (test_llm.ContractTests) ... ok
+test_urls (test_llm.ContractTests) ... ok
+test_usage_missing_and_hidden_thinking (test_llm.ContractTests) ... ok
+test_http_invoke_cli_and_no_proxy (test_llm.HTTPTests) ... ERROR
+test_real_transport_errors (test_llm.HTTPTests) ... ERROR
+
+======================================================================
+ERROR: test_http_invoke_cli_and_no_proxy (test_llm.HTTPTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_llm.py", line 230, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_real_transport_errors (test_llm.HTTPTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_llm.py", line 230, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+FAIL: test_cli_and_files (test_llm.ContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_llm.py", line 188, in test_cli_and_files
+    self.assertEqual(main(args),0)
+AssertionError: 2 != 0
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.014s
+
+FAILED (failures=1, errors=2)

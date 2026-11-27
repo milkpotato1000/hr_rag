@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "selected": {
+      "mode": "api",
+      "provider": "anthropic_messages",
+      "model": "REPLACE_WITH_PROVIDER_MODEL_ID",
+      "base_url": "https://api.anthropic.com/v1",
+      "max_output_tokens": 1024,
+      "timeout_seconds": 120,
+      "response_mode": "json_object",
+      "api_key_env": "RAG_ANTHROPIC_API_KEY",
+      "temperature": null,
+      "identity": {
+        "requested_model": "REPLACE_WITH_PROVIDER_MODEL_ID",
+        "revision_pinned": false,
+        "revision": null,
+        "validation_status": "offline_adapter_only_live_unverified"
+      }
+    }
+  },
+  "roles": {
+    "generation": "selected",
+    "evaluation": "selected"
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "local_links": [
+    {
+      "file": "README.md",
+      "target": "docs/learning/rag-package/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/learning/rag-package/providers.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/planning/project-brief.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/architecture/system-design.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/planning/plans/P001.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/process/work-queue.md"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/data/source-v2/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/data/synthetic/chunks.jsonl"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/data/source-v2/fixed-400-80/chunks.jsonl"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p002/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p001/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p003/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/planning/naive-rag-roadmap.md"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/LEARNING_GUIDE.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p004/final-review.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p005/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "providers.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "experiments.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "models-and-support.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "examples/local.json"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "examples/api.json"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../planning/rag-package-roadmap.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../2. Document Chunking/data/source-v4/output/pdf/hr-handbook.pdf"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../2. Document Chunking/data/source-v4/extracted/canonical/hr-v4-handbook.txt"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../2. Document Chunking/LEARNING.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../1. Naive RAG/LEARNING_GUIDE.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../1. Naive RAG/variants/langchain/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../verification/p013/recovery-20261127/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/experiments.md",
+      "target": "README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/experiments.md",
+      "target": "../../../2. Document Chunking/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/experiments.md",
+      "target": "../../planning/specs/P013-execution-contract.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../1. Naive RAG/variants/langchain/generation-lock.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../2. Document Chunking/runtime-lock.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p019/model-lock.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../1. Naive RAG/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p011/adoption-decision.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../2. Document Chunking/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "examples/local.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "examples/api.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../evaluation/project_b/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "providers.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../planning/rag-package-roadmap.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p013/resource-stop.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p013/recovery-20261127/runtime-unreachable.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "models-and-support.md"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../rag_package/llm/core.py"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../verification/p025/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../examples/llm/local.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../examples/llm/openai.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../examples/llm/anthropic.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../examples/llm/messages.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "examples/local.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "examples/api.json"
+    }
+  ],
+  "link_count": 57,
+  "examples_validated": 3,
+  "messages_validated": 1,
+  "source_digest_examples_match_locks": true,
+  "preserved_files": 1470,
+  "mismatches": [],
+  "p013_blocked_unchanged": true,
+  "syntax_target": "3.10",
+  "secret_check": "bounded key/private-key patterns and no credential-value JSON field",
+  "commands": [
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/2. Document Chunking/.venv/bin/python",
+        "-m",
+        "rag_package.llm",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: __main__.py [-h] {validate,preview,invoke} ...\n\nIndependent LLM adapters. Preview may contain private prompt text;\nproxies/retries/fallback are disabled.\n\npositional arguments:\n  {validate,preview,invoke}\n\noptions:\n  -h, --help            show this help message and exit\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/2. Document Chunking/.venv/bin/python",
+        "-m",
+        "rag_package.llm",
+        "validate",
+        "--config",
+        "examples/llm/local.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"schema_version\": 1, \"status\": \"valid\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/2. Document Chunking/.venv/bin/python",
+        "-m",
+        "rag_package.llm",
+        "preview",
+        "--config",
+        "examples/llm/local.json",
+        "--role",
+        "generation",
+        "--messages",
+        "examples/llm/messages.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"schema_version\": 1, \"provider\": \"ollama\", \"role\": \"generation\", \"method\": \"POST\", \"url\": \"http://127.0.0.1:11434/api/chat\", \"body\": {\"model\": \"qwen3:4b\", \"messages\": [{\"role\": \"system\", \"content\": \"가상 학습 예시입니다. 알려진 내용만 간단히 답하세요.\"}, {\"role\": \"user\", \"content\": \"RAG에서 검색 근거를 답변과 함께 보여주는 이유는 무엇인가요?\"}], \"stream\": false, \"think\": false, \"keep_alive\": 0, \"options\": {\"num_predict\": 1024, \"temperature\": 0, \"num_ctx\": 8192, \"seed\": 42}}, \"original_messages_hash\": \"635e970fb4b2ab50efae90958bbab9b3109204ac1511279970c4b120d3ed88a6\", \"actual_messages_hash\": \"635e970fb4b2ab50efae90958bbab9b3109204ac1511279970c4b120d3ed88a6\", \"request_fingerprint\": \"c659f3dbfad077c35c32cab439bae65bd0ceb55cd397187f22211fa36f4c8936\", \"notice\": \"Preview includes prompt text. Review private document content before sharing. No keys read; no HTTP sent.\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/2. Document Chunking/.venv/bin/python",
+        "-m",
+        "rag_package.llm",
+        "validate",
+        "--config",
+        "examples/llm/openai.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"schema_version\": 1, \"status\": \"valid\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/2. Document Chunking/.venv/bin/python",
+        "-m",
+        "rag_package.llm",
+        "preview",
+        "--config",
+        "examples/llm/openai.json",
+        "--role",
+        "generation",
+        "--messages",
+        "examples/llm/messages.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"schema_version\": 1, \"provider\": \"openai_chat\", \"role\": \"generation\", \"method\": \"POST\", \"url\": \"https://api.openai.com/v1/chat/completions\", \"body\": {\"model\": \"REPLACE_WITH_PROVIDER_MODEL_ID\", \"messages\": [{\"role\": \"system\", \"content\": \"가상 학습 예시입니다. 알려진 내용만 간단히 답하세요.\\n\\nReturn only one valid JSON object, without Markdown fences or other text.\"}, {\"role\": \"user\", \"content\": \"RAG에서 검색 근거를 답변과 함께 보여주는 이유는 무엇인가요?\"}], \"stream\": false, \"max_completion_tokens\": 1024, \"response_format\": {\"type\": \"json_object\"}}, \"original_messages_hash\": \"635e970fb4b2ab50efae90958bbab9b3109204ac1511279970c4b120d3ed88a6\", \"actual_messages_hash\": \"e88f92769bf5868a8b7bcd072b1c6fbda4fd79f970815339e5795a1f45e8718f\", \"request_fingerprint\": \"9a60b2c07da3cca58e9b691675a5d87dd21adc5573f5c2078d867639ceb0212a\", \"notice\": \"Preview includes prompt text. Review private document content before sharing. No keys read; no HTTP sent.\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/2. Document Chunking/.venv/bin/python",
+        "-m",
+        "rag_package.llm",
+        "validate",
+        "--config",
+        "examples/llm/anthropic.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"schema_version\": 1, \"status\": \"valid\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/2. Document Chunking/.venv/bin/python",
+        "-m",
+        "rag_package.llm",
+        "preview",
+        "--config",
+        "examples/llm/anthropic.json",
+        "--role",
+        "generation",
+        "--messages",
+        "examples/llm/messages.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"schema_version\": 1, \"provider\": \"anthropic_messages\", \"role\": \"generation\", \"method\": \"POST\", \"url\": \"https://api.anthropic.com/v1/messages\", \"body\": {\"model\": \"REPLACE_WITH_PROVIDER_MODEL_ID\", \"messages\": [{\"role\": \"user\", \"content\": \"RAG에서 검색 근거를 답변과 함께 보여주는 이유는 무엇인가요?\"}], \"stream\": false, \"max_tokens\": 1024, \"system\": \"가상 학습 예시입니다. 알려진 내용만 간단히 답하세요.\\n\\nReturn only one valid JSON object, without Markdown fences or other text.\"}, \"original_messages_hash\": \"635e970fb4b2ab50efae90958bbab9b3109204ac1511279970c4b120d3ed88a6\", \"actual_messages_hash\": \"e88f92769bf5868a8b7bcd072b1c6fbda4fd79f970815339e5795a1f45e8718f\", \"request_fingerprint\": \"0d79745ae41da9806381e5d7908aba47d38f28a2d8eb008242d3eea5de0e34dc\", \"notice\": \"Preview includes prompt text. Review private document content before sharing. No keys read; no HTTP sent.\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/2. Document Chunking/.venv/bin/python",
+        "scripts/contract_guard.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: contracts match adopted plan 0f7ce86a3eb2\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "actual_provider_calls": 0,
+  "actual_user_key_reads": 0,
+  "model_server_starts": 0,
+  "model_downloads": 0,
+  "paid_api_calls": 0,
+  "render_observed": false
+}
