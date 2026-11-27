@@ -1,0 +1,36 @@
+{
+  "status": "PARTIAL_BLOCKED",
+  "parent_ledger_sha256": "6345ebcd8d53f507418d98dfebdc036116aed44f42fe8a9e27b49c9fbf102ec2",
+  "inference_workers_started": 25,
+  "inference_jobs_complete": 24,
+  "inference_jobs_failed": 1,
+  "all_started_workers_exited": true,
+  "download_jobs": 2,
+  "search_results": 30,
+  "none_model_free_results": 10,
+  "BGE_preparation_or_inference": 0,
+  "LLM_API_Drive_OAuth_Ollama_evaluator_calls": 0,
+  "package_tests": 134,
+  "harness_tests": 35,
+  "preserved_files": 1513,
+  "installed_core_and_sdist": "PASS",
+  "browser": {
+    "installed_ui": "PASS",
+    "report_desktop": "PASS",
+    "narrow_width": 390,
+    "narrow_scroll_width": 390,
+    "source_page_offset": "PASS",
+    "keyboard_enter_space": "PASS",
+    "tab_navigation": "observed",
+    "generation_disabled": true,
+    "filepicker": "not attempted; P029 C4 remains BLOCKED",
+    "servers_closed": [
+      55727,
+      56750
+    ],
+    "viewport_reset": true
+  },
+  "P032_complete": false,
+  "followup_request": "R20261127-94452f98",
+  "followup_READY_received_not_yet_adopted": "b6b57a9e11ac68e55b0bb475343a4df4092b5586"
+}

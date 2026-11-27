@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "question_id": "gt10",
+  "question": "개인 차량으로 출장할 때 킬로미터당 유류비 지급액은 얼마인가요?",
+  "query_hash": "ac6ce3ebef9ea5314377ff3810b7a9217a3a6589f98f7848e94d318a47bfc325",
+  "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "chunk_fingerprint": "acdcd8466dae5203f4e025675dcfb7bc6593b80557a4f10090503acef243a2c8",
+  "index_fingerprint": "3bffa0482285557958f228d9781dc5989400dc93b724ef0f9c012785e1b41348",
+  "execution_kind": "preview",
+  "settings": {
+    "schema_version": 2,
+    "retrieval": {
+      "method": "hybrid",
+      "candidate_k": 20,
+      "top_k": 5,
+      "context_budget_chars": 2000,
+      "rrf_k": 60
+    },
+    "llm": {
+      "schema_version": 1,
+      "profiles": {
+        "answer": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        },
+        "judge": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        }
+      },
+      "roles": {
+        "generation": "answer",
+        "evaluation": "judge"
+      }
+    },
+    "chunking": {
+      "method": "fixed",
+      "size_chars": 256,
+      "overlap_chars": 64
+    },
+    "embedding": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "file_manifest": {
+        "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+        "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+        "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+        "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+        "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+        "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+      },
+      "device": "cpu",
+      "dtype": "float32",
+      "max_input_tokens": 512,
+      "catalog": {
+        "dimension": 384,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "pooling": "mean",
+        "limit": 512,
+        "license": "MIT",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      "normalization": "l2",
+      "algorithm": "exact-cosine-v1"
+    }
+  },
+  "parent_result_fingerprint": "9b12118a4707b01161cd6ac18b1646dad11d499be9fd951025502783d81a770a",
+  "requested_n": 20,
+  "actual_n": 20,
+  "candidate_depth": 20,
+  "shortage_reason": null,
+  "original_retrieval_ms": 4906.2872500071535,
+  "rows": [
+    {
+      "chunk_id": "c-e9ef2836370d7327d17c786540fabc87f7024de83345c11d55ee89a62f0dd305",
+      "document_id": "hr-handbook",
+      "start": 6336,
+      "end": 6592,
+      "text": "자가 확인할 수 있게 제시한다.\nAN-05 검토 내용의 연결과 처리 통지\n담당자는 접수된 연차 신청을 해당 직원의 사용 기록과 연결할 때 기록 번호, 사용 날짜, 사용 단위\n를 차례로 대조한다. 같은 직원이 같은 날 다른 종류의 휴가를 문의한 경우에도 문의 기록을 곧바\n로 사용 기록으로 옮기지 않는다. 이미 반영된 신청과 새 요청이 겹치면 중복 제출인지 날짜 변경\n인지 구분하기 위해 신청자에게 현재 의사를 확인한다. 확인 과정에서는 어떤 기록을 비교하고 ",
+      "pages": [
+        {
+          "page": 5,
+          "canonical_start": 6336,
+          "canonical_end": 6592,
+          "page_start": 113,
+          "page_end": 369
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 1,
+      "retrieval_score": 0.029709507042253523,
+      "text_hash": "6dbee5db22da772767051e067026a119b32dfd599f0d4d5acb89b3a5ce14157f"
+    },
+    {
+      "chunk_id": "c-75f678b75e5f15dfe8dc27a37a45b7a368426e19088baae0083823c549c0d724",
+      "document_id": "hr-handbook",
+      "start": 12288,
+      "end": 12544,
+      "text": " 승인된 근무일로 등록하지 \n않는다.\nRM-03 기기와 내부 문서 접근\n재택근무 시 회사 지급 기기와 회사 VPN을 사용한다. 공용 컴퓨터로 내부 문서에 접근할 수 없다.\n기기 정보의 확인은 회사 지급 기기와 신청자의 현재 사용 기기가 연결되어 있는지를 대조하는 과\n정으로 기록한다. 연결 정보가 잘못 표시되었다는 문의를 받으면 오류가 있는 항목과 실제 확인 결\n과를 구별해 남기고, 단순한 정보 정정 문의를 개인 기기 사용 허용 요청으로 처리하지 않는다.\n",
+      "pages": [
+        {
+          "page": 8,
+          "canonical_start": 12288,
+          "canonical_end": 12544,
+          "page_start": 538,
+          "page_end": 794
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 2,
+      "retrieval_score": 0.028991596638655463,
+      "text_hash": "1db302c711a183ad3b3a25b8d3f2cff9d8422b63a11a2893c0718acc40748f89"
+    },
+    {
+      "chunk_id": "c-950785f5c17bd7e1e7a99f14f2cb5f830a7a49fb7c107e3fd69c4326e98157e5",
+      "document_id": "hr-handbook",
+      "start": 31488,
+      "end": 31744,
+      "text": "\n다. 신청 내용의 확인에 직접 필요하지 않은 개인 일정은 업무 목적과 섞어 기록하지 않도록 안내\n한다. 같은 방문 목적을 가진 과거 출장 기록을 참고하더라도 이번 방문지와 날짜를 새로 대조하고\n 과거 승인을 현재 신청의 승인으로 복사하지 않는다. 작성 중인 내용에 대한 문의와 실제 신청 제\n출은 구분하여 남기며, 문의가 접수되었다는 사실을 신청 완료로 안내하지 않는다. TR-01@v4의 \n승인 기한을 확인할 때에는 실제로 제출된 요청의 출발 예정일과 제",
+      "pages": [
+        {
+          "page": 19,
+          "canonical_start": 31488,
+          "canonical_end": 31744,
+          "page_start": 806,
+          "page_end": 1062
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 3,
+      "retrieval_score": 0.028006267136701922,
+      "text_hash": "5a34057fdbc7c142ef6a862fc3269035e9419c6b2b072c7112fabd3887d664ff"
+    },
+    {
+      "chunk_id": "c-75329f255c4926886d15ce44d13ded9b1ee49d6d0c0446924a205eaf5412de67",
+      "document_id": "hr-handbook",
+      "start": 5760,
+      "end": 6016,
+      "text": "2영업일 전까지 휴가 시스템에서 신청한다. 긴급 사유가 있으면 당일 팀장에게 알린 \n후 신청할 수 있다.\n연차 신청을 접수하면 사용 예정일, 하루 또는 반차 구분, 원래 제출 기록을 식별할 수 있는 정보를 \n연결한다. 신청자가 작성한 자유 서술의 개인 사유를 사용 일수 계산 항목과 혼합하지 않는다. 시\n스템에 기재된 기간과 신청자가 설명한 기간이 다르면 달력상 시작일과 종료일, 실제 사용하려는 \n날짜를 먼저 확인한다. 표시된 기간 전체를 임의로 근무일로 ",
+      "pages": [
+        {
+          "page": 4,
+          "canonical_start": 5760,
+          "canonical_end": 6016,
+          "page_start": 1365,
+          "page_end": 1621
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 4,
+      "retrieval_score": 0.027972027972027972,
+      "text_hash": "e730bd39a2f805e061c116ea4f5c54b5f3075be6be8ef6279b0164aaee80c564"
+    },
+    {
+      "chunk_id": "c-d5671c27291574f3d37620c914bebf7d2320bfbecc8e71442888169d89461f47",
+      "document_id": "hr-handbook",
+      "start": 3648,
+      "end": 3904,
+      "text": "별개로 식별한다. 포인트를 받았다는 \n문의가 휴가 승인 확인으로 접수되면 문의 목적을 먼저 구분하고, 휴가에 관한 내용은 BD-03@v4\n의 승인 기록에서 확인한다. 지급 내역 화면을 휴가 승인서 대신 첨부하거나 두 상태를 같은 항목\n으로 합치지 않는다.\n제2장 연차의 사용과 기록 관리 [AN]\n제1절 발생과 사용 단위 [AN-S1]\nAN-01 발생 기준\n1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 ",
+      "pages": [
+        {
+          "page": 3,
+          "canonical_start": 3648,
+          "canonical_end": 3904,
+          "page_start": 800,
+          "page_end": 1056
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 5,
+      "retrieval_score": 0.01639344262295082,
+      "text_hash": "4581e9db968fc8576bb7d33235ea81f0346f22309ae0b54f20e6cb4f18d4fc14"
+    },
+    {
+      "chunk_id": "c-ed5997aa8c0ff221758a2404f87bb8a5080c91a90e0dd278a70fa647a202df2e",
+      "document_id": "hr-handbook",
+      "start": 20160,
+      "end": 20416,
+      "text": "액은 같은 합계\n로 더하지 않으며, 둘을 함께 묻는 문의라도 확인 결과는 항목별로 구분한다. 확인한 자료가 어느 \n시점에 생성되었는지 기록하여 이후 값이 갱신되었을 때 이전 안내와 차이가 나는 이유를 확인할 \n수 있게 한다. 지급 내역과 근무 형태의 자료가 서로 다른 시점에 조회된 경우에는 그 차이를 먼저 \n기록하고, 가능한 범위에서 같은 기준 시점으로 대조한다. 담당자가 확인할 수 없는 원자료가 있으\n면 해당 항목을 미확인으로 남기며, 화면의 빈칸을 지",
+      "pages": [
+        {
+          "page": 13,
+          "canonical_start": 20160,
+          "canonical_end": 20416,
+          "page_start": 205,
+          "page_end": 461
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 6,
+      "retrieval_score": 0.01639344262295082,
+      "text_hash": "d99bf3e49efd9254c093b1e06eec5c366efcc4f86cac67d36a2ddf59624c3a2e"
+    },
+    {
+      "chunk_id": "c-2fcf0f5cdf6b47b4607765498e23906fe4f13d1bace89f8c0dfceb957c361c6c",
+      "document_id": "hr-handbook",
+      "start": 24576,
+      "end": 24832,
+      "text": "의 문의 번호로 접수되었더라도 확인 결과가 항목별로 나뉘는\n 이유가 여기에 있다. 이 사례는 서로 다른 지급 내역을 대조할 때 필요한 구분을 설명하며 새 지원 \n항목이나 환산 비율을 제시하지 않는다.\n제5장 교육휴가의 신청과 변경 [ED]\n제1절 대상과 신청 정보 [ED-S1]\nED-01 신청 대상과 일수\n직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.\n신청 정보에는 어떤 자격시험 응시를 위한 요청인지 식별할 수 있는 설명을 연결한다.",
+      "pages": [
+        {
+          "page": 15,
+          "canonical_start": 24576,
+          "canonical_end": 24832,
+          "page_start": 890,
+          "page_end": 1146
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 7,
+      "retrieval_score": 0.016129032258064516,
+      "text_hash": "196c4ff7c9b14e6eb769f8a687b05d48453468697c5aeee2d8973d19685aaff5"
+    },
+    {
+      "chunk_id": "c-da37ad6c347dde013f6113a626db6676c5fa1a8ed0d1e0aa7dec626dcb6b4876",
+      "document_id": "hr-handbook",
+      "start": 8256,
+      "end": 8512,
+      "text": ". 당일 접수가 가능하다는 안내를 모든 연차 \n신청의 일반 기한으로 바꾸지 않으며, 긴급성이 확인되지 않은 문의에는 통상 기한과 확인 중인 사\n항을 나누어 설명한다. 같은 직원의 다른 날짜 신청까지 긴급 신청으로 일괄 변경하거나, 긴급 신청\n을 했다는 이유로 차감 단위를 다르게 적용하지 않는다.\n제3절 이월과 변경 이력 [AN-S3]\nAN-07 미사용 연차의 이월 기준\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 ",
+      "pages": [
+        {
+          "page": 6,
+          "canonical_start": 8256,
+          "canonical_end": 8512,
+          "page_start": 136,
+          "page_end": 392
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 8,
+      "retrieval_score": 0.016129032258064516,
+      "text_hash": "c8ae0d52f87e02cca261243829c04b1358baf19cc1df81c5f40a55a8102b3580"
+    },
+    {
+      "chunk_id": "c-6dfb27dc9c27e8fb2396d838c32b546b4be2d7b619896c2de0acd779bd9f856d",
+      "document_id": "hr-handbook",
+      "start": 11136,
+      "end": 11392,
+      "text": "접속 장애와 자료 불일치의 분리 처리\n시스템 장애로 신청 내용이나 접수 결과를 볼 수 없는 경우에는 담당자가 사용 희망일, 사용 단위, \n신청자가 알린 상황과 시점을 임시 기록으로 남긴다. 이는 AN-04@v4의 통상 신청 방식이 정상 \n작동하지 않을 때 기록의 연속성을 유지하기 위한 예외이며, 원래 신청 기한이나 긴급 사유 조건을 \n없애는 절차가 아니다. 복구 후에는 이미 생성된 신청을 먼저 찾아 중복 입력을 피하고, 임시 기록\n으로만 남아 있는 경우에",
+      "pages": [
+        {
+          "page": 7,
+          "canonical_start": 11136,
+          "canonical_end": 11392,
+          "page_start": 1303,
+          "page_end": 1559
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 9,
+      "retrieval_score": 0.015873015873015872,
+      "text_hash": "173065384b48c81dd35b60b169bf082684593a8fe915c81177077aee7d6b7c08"
+    },
+    {
+      "chunk_id": "c-f8546a22a1ebe929c3363025a59677ee62daa424af8643fe5c0f5e4be387e5fe",
+      "document_id": "hr-handbook",
+      "start": 3840,
+      "end": 4096,
+      "text": "1 발생 기준\n1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 \n기준으로 별도 산정한다.\n연차 내역을 확인할 때에는 발생 기준에 관한 정보와 실제 사용 기록을 구분하여 표시한다. 특정 \n직원의 계산 결과를 안내할 경우에는 적용한 재직 기간과 확인한 기록의 범위를 함께 남긴다.\nAN-02 발생 내역의 확인과 정정\n연차 발생 내역을 문의받은 담당자는 먼저 문의가 발생 일수에 관한 것인지 사용 후 남은 일수에",
+      "pages": [
+        {
+          "page": 3,
+          "canonical_start": 3840,
+          "canonical_end": 4096,
+          "page_start": 992,
+          "page_end": 1248
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 10,
+      "retrieval_score": 0.015873015873015872,
+      "text_hash": "452780dbeb829c95f23bd82cff0fd2a676e765e41691bf8180f8eef4b8ad25ff"
+    },
+    {
+      "chunk_id": "c-a1246adb35925d19582e623b11c2aad0cd4a58557eae37e0beb5354ce7f5cd6b",
+      "document_id": "hr-handbook",
+      "start": 15360,
+      "end": 15616,
+      "text": "는지를 확인한 뒤 정정 범위를 정한다. 정보 확인을 위해 문의한 내용은 재택 신청의 해당 항목\n과 연결하되, 기기의 비밀번호나 내부 문서 내용을 신청 설명에 적게 하지 않는다. RM-03@v4의 \n회사 지급 기기 사용 조건은 정보 정정 과정에서도 유지하며, 지급 여부를 확인하지 못한 기기를 임\n의로 확인 완료 상태로 바꾸지 않는다. 문의자가 기기 정보의 정정만 요청한 경우에는 이를 새로운\n 재택 날짜 신청이나 기존 승인 취소로 처리하지 않는다.\n기기 정보",
+      "pages": [
+        {
+          "page": 10,
+          "canonical_start": 15360,
+          "canonical_end": 15616,
+          "page_start": 389,
+          "page_end": 645
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 11,
+      "retrieval_score": 0.015625,
+      "text_hash": "4f67015780b9853105e08f88c4de4603268576d5a70fb24f7a249afe4b634fa1"
+    },
+    {
+      "chunk_id": "c-4f7ba592f5c3158e81d0b59198874809ea468e779cca1d0f3a9a5b582ccdc89e",
+      "document_id": "hr-handbook",
+      "start": 5952,
+      "end": 6208,
+      "text": "간이 다르면 달력상 시작일과 종료일, 실제 사용하려는 \n날짜를 먼저 확인한다. 표시된 기간 전체를 임의로 근무일로 가정하여 차감 일수를 계산하지 않으\n며, 이 규정집에 없는 개인 근무표를 추정해 입력하지 않는다. 작성 도중 남은 임시 저장본은 최종 \n제출본과 구분하고, 임시 저장 화면을 확인했다는 안내가 제출 완료로 오인되지 않도록 기록 상태\n를 함께 적는다. 신청자가 같은 요청의 제목만 바꾸어 다시 제출했다면 제목의 차이만으로 별도 사\nHR-V4-HAN",
+      "pages": [
+        {
+          "page": 4,
+          "canonical_start": 5952,
+          "canonical_end": 6208,
+          "page_start": 1557,
+          "page_end": 1813
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 12,
+      "retrieval_score": 0.015384615384615385,
+      "text_hash": "3c5a76c77166a53aacfc0270952fb1506876f3867467f1a4bf8d8c2d571cbaa3"
+    },
+    {
+      "chunk_id": "c-628277f8a505587077ba522aae35338600d6d0dbb06d2260996121ab7d562892",
+      "document_id": "hr-handbook",
+      "start": 8448,
+      "end": 8704,
+      "text": "7 미사용 연차의 이월 기준\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 연차의 사용 \n기한은 다음 해 3월 31일이다. 생일 특별휴가에는 이 규정을 적용하지 않는다.\n이월 기록에는 원래 연도와 사용 기한을 구별하여 표시한다. 다른 휴가 종류의 잔여 표시를 이월할\n 연차에 포함하지 않고, 종류가 불분명한 내역은 합산하기 전에 확인 대상으로 남긴다.\nAN-08 연도를 넘긴 내역의 대조\n전년도에서 넘어온 연차와 해당 ",
+      "pages": [
+        {
+          "page": 6,
+          "canonical_start": 8448,
+          "canonical_end": 8704,
+          "page_start": 328,
+          "page_end": 584
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 13,
+      "retrieval_score": 0.015384615384615385,
+      "text_hash": "199787c226e48f08a873b976b8260682562679d80cff0e603c88e16213805610"
+    },
+    {
+      "chunk_id": "c-48c8bcd9c2da208701ba9ff61ecc4f90dacce5f6692b7097c18a9bbacf1b0088",
+      "document_id": "hr-handbook",
+      "start": 15168,
+      "end": 15424,
+      "text": "시되었다는 문의가 있으면 담당자는 화면의 기기 \n식별 정보와 확인 가능한 지급 내역을 비교한다. 같은 직원에게 연결된 예전 기기가 표시되는 경우\n에는 현재 사용하는 기기와 과거 기록을 구분하고, 예전 기록을 단순히 지워 지급 이력을 알 수 없\n게 하지 않는다. 기기 교체가 있었는지, 표시 이름만 달라졌는지, 다른 직원의 항목이 잘못 연결되\n었는지를 확인한 뒤 정정 범위를 정한다. 정보 확인을 위해 문의한 내용은 재택 신청의 해당 항목\n과 연결하되, 기기의",
+      "pages": [
+        {
+          "page": 10,
+          "canonical_start": 15168,
+          "canonical_end": 15424,
+          "page_start": 197,
+          "page_end": 453
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 14,
+      "retrieval_score": 0.015151515151515152,
+      "text_hash": "f8408dc5614206fe1de74d249e5073542d3e03dbb2bf6bcb363b42f9786a82cc"
+    },
+    {
+      "chunk_id": "c-45644448c8f1869328c85a3a5eda40575c166973e15a0e7bf472c303a170963c",
+      "document_id": "hr-handbook",
+      "start": 21504,
+      "end": 21760,
+      "text": "지 않는다.\nWF-05 근무 형태 기록이 다른 경우\n식대 문의의 통상 대조 자료는 WF-01@v4의 날짜별 근무 형태와 지급 표시다. 다만 신청 화면과 \n집계 화면에서 같은 날짜의 근무 형태가 서로 다르면 어느 값이 먼저 등록되었고 어떤 정정이 진행 \n중인지 확인한 뒤 지급 내역과 연결한다. 담당자는 서로 다른 화면 중 지급액이 기대와 일치하는 \n화면만 골라 근거로 사용하지 않는다. 사무실 출근, 재택근무, 휴가의 구분이 바뀐 이유를 확인할 \n수 있으면 ",
+      "pages": [
+        {
+          "page": 13,
+          "canonical_start": 21504,
+          "canonical_end": 21760,
+          "page_start": 1549,
+          "page_end": 1805
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 15,
+      "retrieval_score": 0.014925373134328358,
+      "text_hash": "c98d69cd785f0b722a06fe61a92cf7114c1e0a4d2b714d97e64db1260f61d8f1"
+    },
+    {
+      "chunk_id": "c-c480b7a48b117d65673eff0b6b44cd6668d20482115c14f03762fbd45366fe60",
+      "document_id": "hr-handbook",
+      "start": 25344,
+      "end": 25600,
+      "text": " 않고 문의인지 실제 신청인지 먼저 구분\n한다. 응시하려는 시험이 변경되었다는 설명과 시험 명칭의 오입력을 바로잡는 설명은 다른 변경 \n사유로 남긴다. 신청자가 자발적으로 전달한 안내 자료가 있으면 어떤 내용을 확인하는 데 사용했\n는지 연결하되, 이 규정집에서 정하지 않은 추가 증빙을 제출하지 않았다는 이유로 새로운 자격 제\n한을 만들지 않는다. 담당자는 시험 접수 번호나 개인 결과처럼 휴가 내역 확인과 직접 관계가 없\n는 정보가 과도하게 반복 입력되지 ",
+      "pages": [
+        {
+          "page": 16,
+          "canonical_start": 25344,
+          "canonical_end": 25600,
+          "page_start": 218,
+          "page_end": 474
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 16,
+      "retrieval_score": 0.014925373134328358,
+      "text_hash": "3c89cbf0a94893446aa6dceee70df9f7b585cd7c6e0937a2a38262bbc22483e7"
+    },
+    {
+      "chunk_id": "c-dd1746967d29400b2e3681e1192b350f58a6c23a58e63590e46e9174256d4e3c",
+      "document_id": "hr-handbook",
+      "start": 37248,
+      "end": 37504,
+      "text": "의 지급 가능 여부를 확인하지 않았다면 그 사실을 명시한다.\nTR-10 대상이 불분명한 비용 자료의 보완\n출장을 식별할 수 없는 비용 자료가 먼저 도착한 경우에는 TR-09@v4의 통상 연결을 바로 완료하\n지 않고 확인 대기 항목으로 남긴다. 담당자는 자료에 이미 표시된 날짜와 항목을 확인한 후 필요\n한 연결 정보만 문의한다. 유사한 날짜에 등록된 다른 출장과 자동으로 연결하거나 자료 발신자의 \n이름만으로 대상 요청을 결정하지 않는다. 신청자가 기존 요청",
+      "pages": [
+        {
+          "page": 22,
+          "canonical_start": 37248,
+          "canonical_end": 37504,
+          "page_start": 1345,
+          "page_end": 1601
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 17,
+      "retrieval_score": 0.014705882352941176,
+      "text_hash": "e8e6d91c0d79fcae65f7ccb1bae2497c5184927ec80986d8a73aa2b041e6f699"
+    },
+    {
+      "chunk_id": "c-7e9de44d963dcb22db239536c2e9e32660d60a5785964b707f322eb8877f75a1",
+      "document_id": "hr-handbook",
+      "start": 19008,
+      "end": 19264,
+      "text": "구분해 확인한다.\n제4장 복지 지원 내역의 확인 [WF]\n제1절 지급 기준과 문의 구분 [WF-S1]\nWF-01 식대 지원 기준\n사무실 출근일에는 식대 1만 원을 지원한다. 재택근무일과 휴가일에는 이 식대를 지원하지 \n않는다.\n식대 내역에 대한 문의는 해당 날짜의 근무 형태와 지급 표시를 연결해 확인한다. 지급 화면의 항\n목 이름만으로 사무실 출근 여부를 판단하지 않고, 날짜나 근무 형태가 불명확한 항목은 별도로 확\n인한다.\nWF-02 생일 축하 포인트\n",
+      "pages": [
+        {
+          "page": 12,
+          "canonical_start": 19008,
+          "canonical_end": 19264,
+          "page_start": 368,
+          "page_end": 624
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 18,
+      "retrieval_score": 0.014492753623188406,
+      "text_hash": "ec71b30dcc2623313da1c2b71aa597bbcad7b1a37f07b3812fc0e0db1565436f"
+    },
+    {
+      "chunk_id": "c-f5dddd3eb9c75dedb799b0506aa4cb5482e25a2aac005683bd61adb82fe122bc",
+      "document_id": "hr-handbook",
+      "start": 31296,
+      "end": 31552,
+      "text": "를 잘못 적용하지 않도록 한다. 확정된 일정과 아직 협의 \n중인 일정이 함께 들어 있으면 각각의 상태를 표시하며, 담당자가 임의의 날짜를 넣어 확정된 것처\n럼 보이게 하지 않는다. 예약 화면이나 일정표가 자발적으로 첨부된 경우에는 신청 설명과 일치하\n는 부분을 확인하고, 첨부 자료가 있다는 사실만으로 출장 승인까지 완료된 것으로 처리하지 않는\n다. 신청 내용의 확인에 직접 필요하지 않은 개인 일정은 업무 목적과 섞어 기록하지 않도록 안내\n한다. 같은 방문",
+      "pages": [
+        {
+          "page": 19,
+          "canonical_start": 31296,
+          "canonical_end": 31552,
+          "page_start": 614,
+          "page_end": 870
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 19,
+      "retrieval_score": 0.014285714285714285,
+      "text_hash": "a7a48f1b22eaccf4b08a07f88a2026bfe0d73ec2944e590a0fbd12da2466cb7e"
+    },
+    {
+      "chunk_id": "c-228e9f7506c89bc90c95af811e40bae1ed2779698623a1cc3247a44480167982",
+      "document_id": "hr-handbook",
+      "start": 6528,
+      "end": 6784,
+      "text": "복 제출인지 날짜 변경\n인지 구분하기 위해 신청자에게 현재 의사를 확인한다. 확인 과정에서는 어떤 기록을 비교하고 있\n는지 신청자가 알 수 있도록 대상 날짜와 요청의 식별 정보를 제시하며, 개인 사유의 상세한 설명을\n 새 자격 조건으로 요구하지 않는다. 요청에 누락된 정보가 발견되면 누락 항목과 확인 방법을 안\n내하고, 내용 확인을 기다리는 상태와 신청이 없었던 상태를 구분한다. 최초 제출 사실이 남아 있는\n데 단순 보완을 이유로 그 시점을 지우거나, 보",
+      "pages": [
+        {
+          "page": 5,
+          "canonical_start": 6528,
+          "canonical_end": 6784,
+          "page_start": 305,
+          "page_end": 561
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 20,
+      "retrieval_score": 0.014084507042253521,
+      "text_hash": "2ec815138ed3700abe161c30ab29a1e69d557f76b02d49db8a3ea584cb7ba7af"
+    }
+  ],
+  "candidate_fingerprint": "d086226ff2cdc677afc1866a0c435ffac99638705b6ac40c3b78e91359a1f6e1"
+}

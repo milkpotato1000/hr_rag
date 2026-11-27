@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "question_id": "gt07",
+  "question": "생일휴가 접수 확인이 안 되는 시스템 장애 때 무엇을 기록하며 승인 면제가 되나요?",
+  "query_hash": "25b7508726f4dacac3b273a6f60056930635d0762c5fdd6008d07e01a7ac210d",
+  "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "chunk_fingerprint": "acdcd8466dae5203f4e025675dcfb7bc6593b80557a4f10090503acef243a2c8",
+  "index_fingerprint": "3bffa0482285557958f228d9781dc5989400dc93b724ef0f9c012785e1b41348",
+  "execution_kind": "preview",
+  "settings": {
+    "schema_version": 2,
+    "retrieval": {
+      "method": "hybrid",
+      "candidate_k": 20,
+      "top_k": 5,
+      "context_budget_chars": 2000,
+      "rrf_k": 60
+    },
+    "llm": {
+      "schema_version": 1,
+      "profiles": {
+        "answer": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        },
+        "judge": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        }
+      },
+      "roles": {
+        "generation": "answer",
+        "evaluation": "judge"
+      }
+    },
+    "chunking": {
+      "method": "fixed",
+      "size_chars": 256,
+      "overlap_chars": 64
+    },
+    "embedding": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "file_manifest": {
+        "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+        "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+        "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+        "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+        "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+        "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+      },
+      "device": "cpu",
+      "dtype": "float32",
+      "max_input_tokens": 512,
+      "catalog": {
+        "dimension": 384,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "pooling": "mean",
+        "limit": 512,
+        "license": "MIT",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      "normalization": "l2",
+      "algorithm": "exact-cosine-v1"
+    }
+  },
+  "parent_result_fingerprint": "0e1ed89027384bce89d5ccb78386e88aff71cd84feb650a0eeb417e2e0f9424f",
+  "requested_n": 20,
+  "actual_n": 20,
+  "candidate_depth": 20,
+  "shortage_reason": null,
+  "original_retrieval_ms": 4904.015957989031,
+  "rows": [
+    {
+      "chunk_id": "c-98383d8afa41e1c5d96bd7f607dee384566e5d1ba7ef52d5df00415deeccb83f",
+      "document_id": "hr-handbook",
+      "start": 2496,
+      "end": 2752,
+      "text": " 하지 \n않고 기존 기록을 이어서 확인할 수 있게 한다.\nBD-05 시스템 장애와 중복 접수\n통상적인 접수는 BD-04@v4의 시스템 기록을 기준으로 정리한다. 다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가 신청자가 알\n린 시점, 사용 희망일, 장애 상황을 임시 기록으로 남기고 이를 접수 확인용으로 안내한다. 임시 기\n록은 새로운 휴가 자격이나 승인 면제가 아니며, 원래 신청 시점과 이",
+      "pages": [
+        {
+          "page": 2,
+          "canonical_start": 2496,
+          "canonical_end": 2752,
+          "page_start": 1535,
+          "page_end": 1791
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 1,
+      "retrieval_score": 0.03278688524590164,
+      "text_hash": "985416a981bf36e18043937203cb856600d4dafb1629baa5b4936f4552f404c7"
+    },
+    {
+      "chunk_id": "c-fbea364167054752013cd74104023bb90f9a31f53f6036c37e5fe52d7dd27902",
+      "document_id": "hr-handbook",
+      "start": 28800,
+      "end": 29056,
+      "text": "구 후 연결\n신청 화면을 사용할 수 없거나 제출 후 접수 여부가 표시되지 않는 경우에는 ED-04@v4의 통상 \nHR-V4-HANDBOOK / v4\n17\n\n\n접수 기록을 즉시 확인하기 어려울 수 있다. 이때 담당자는 신청자가 전달한 희망일, 시험을 식별하\n는 설명, 전달 시점을 임시 기록하고 시스템 확인이 필요한 항목을 구분한다. 장애가 있었다는 설명\n을 확인되지 않은 승인 사실로 바꾸지 않으며, 임시 기록의 목적이 신청 내용의 유실을 막기 위한 \n것임을",
+      "pages": [
+        {
+          "page": 17,
+          "canonical_start": 28800,
+          "canonical_end": 28886,
+          "page_start": 1760,
+          "page_end": 1846
+        },
+        {
+          "page": 18,
+          "canonical_start": 28888,
+          "canonical_end": 29056,
+          "page_start": 0,
+          "page_end": 168
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 2,
+      "retrieval_score": 0.03128054740957967,
+      "text_hash": "ffe2ebb818761b1428bca4b5eecbf16b19f49c30e32928a17c5206d5af63fe6c"
+    },
+    {
+      "chunk_id": "c-e6d21dd5c3bbc5eb9aa1a7318e2453426a4650e4c639eb86a2d55bba9a34fcd9",
+      "document_id": "hr-handbook",
+      "start": 28992,
+      "end": 29248,
+      "text": "다는 설명\n을 확인되지 않은 승인 사실로 바꾸지 않으며, 임시 기록의 목적이 신청 내용의 유실을 막기 위한 \n것임을 안내한다. 화면이 복구되면 기존 접수 기록이 생성되었는지 먼저 조회하고, 같은 내용이 이\n미 있으면 임시 기록을 그 요청에 연결한다. 별도의 접수 기록이 없는 경우에는 전달받은 내용을 \n확인하여 시스템 반영 기록과 연결하고, 실제 전달 시점과 복구 후 입력 시점을 각각 남긴다. 장애 \n기간에 신청자가 내용을 수정한 경우에는 가장 최근의 의사",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 28992,
+          "canonical_end": 29248,
+          "page_start": 104,
+          "page_end": 360
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 3,
+      "retrieval_score": 0.03125763125763126,
+      "text_hash": "dd1cb9def27592d9ca9f8edce530d831ed5ee4a2af874711738eeb603649a336"
+    },
+    {
+      "chunk_id": "c-2b8eb8158e573e4e1c531c251042232cc3b1affaf56662e1867f220f90b255df",
+      "document_id": "hr-handbook",
+      "start": 34944,
+      "end": 35200,
+      "text": "아 있음을 알린다.\n제3절 예외 접수와 출장 이후의 기록 [TR-S3]\nTR-07 신청 시스템 장애 시의 임시 기록\n신청 시스템이 열리지 않거나 제출 직후 오류가 발생하여 접수 여부를 알 수 없는 경우에는 TR-04\n@v4의 통상 기록을 바로 확인하기 어려울 수 있다. 이때 담당자는 전달받은 출장 목적, 출발 예정\n일, 전달 시점과 접수 확인이 필요한 사유를 임시 기록한다. 임시 기록은 신청 내용을 보존하기 위\n한 것이며 TR-01@v4의 승인 기한이나 ",
+      "pages": [
+        {
+          "page": 21,
+          "canonical_start": 34944,
+          "canonical_end": 35200,
+          "page_start": 765,
+          "page_end": 1021
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 4,
+      "retrieval_score": 0.031024531024531024,
+      "text_hash": "13ae6540b08bae41ba87c6bc4d51120671fbceeb501b0b39da31bf53f5f53e4b"
+    },
+    {
+      "chunk_id": "c-9a005f633b531328f505edda5f06a4852d9c6b0dd2e1bc8c5fdfe65ef721afe8",
+      "document_id": "hr-handbook",
+      "start": 15744,
+      "end": 16000,
+      "text": "신청에도 나타나면 관련 기록을 찾아 연결하되, 각\n 신청의 승인 내용을 한꺼번에 변경하지 않는다. 사용 가능한 회사 기기가 확인되었다는 사실만으\n로 VPN 사용 여부도 확인된 것으로 기록하지 않고 두 항목을 분리한다. 기기 확인이 끝났다는 안\n내에 근무 장소나 날짜까지 승인되었다는 의미를 덧붙이지 않는다.\n제3절 변경과 장애의 기록 [RM-S3]\nRM-07 VPN 연결 확인과 장애 접수\nVPN 사용에 문제가 있다는 연락을 받으면 담당자는 연결이 되지 않는",
+      "pages": [
+        {
+          "page": 10,
+          "canonical_start": 15744,
+          "canonical_end": 16000,
+          "page_start": 773,
+          "page_end": 1029
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 5,
+      "retrieval_score": 0.02964254577157803,
+      "text_hash": "0e9075fbf6c7cc3f096f75fbbe4eb3a830488594aa0975ee931680b827bab438"
+    },
+    {
+      "chunk_id": "c-33d7873548801dc8050d50c3def7189f2b8bfab90a9b67bbc014916074124b3b",
+      "document_id": "hr-handbook",
+      "start": 35328,
+      "end": 35584,
+      "text": "이 있는지 먼저 조\n회하고, 같은 요청이 확인되면 임시 기록을 연결하여 중복 신청을 만들지 않는다. 시스템에 기록이 \n없다면 전달받은 내용과 현재 신청자의 의사를 확인하여 반영하며 실제 전달 시점과 시스템 입력 \n시점을 구분한다. 장애 기간에 일정이 수정되었다면 이전 임시 기록이 현재 요청으로 잘못 반영되\n지 않도록 변경 이력을 함께 확인한다.\n복구 과정에서 승인 안내가 먼저 도착하고 신청 화면은 아직 조회되지 않는 경우에는 승인 안내의 \n대상과 임시 기",
+      "pages": [
+        {
+          "page": 21,
+          "canonical_start": 35328,
+          "canonical_end": 35584,
+          "page_start": 1149,
+          "page_end": 1405
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 6,
+      "retrieval_score": 0.028814262023217248,
+      "text_hash": "daa2fcc4659baf1eb196f34117a5c680194681cc247118dff0958af781145d84"
+    },
+    {
+      "chunk_id": "c-98e8b77eed0b225a9698fe8bb78b65edbe870b559c3981b8c9f7e5eb13a82e01",
+      "document_id": "hr-handbook",
+      "start": 17664,
+      "end": 17920,
+      "text": "하지 않고, 기존 결과가 어떤 요청에 관한 것인지 먼저 확인한다. 통상적으로\n는 확인된 기록을 같은 요청에 연결하여 안내하지만 알림 시스템 장애로 발송 이력이 확인되지 않\n는 경우에는 현재 확인할 수 있는 결과와 알림 확인의 한계를 구별해 전달한다. 이 경우에도 새 안\n내가 원래 승인 시점을 대신하지 않도록 원래 기록과 연결한다. 다른 사람의 요청에 관한 메시지가\n 잘못 연결된 것으로 보이면 해당 신청의 결과를 그대로 적용하지 않고 잘못된 연결을 정정한다",
+      "pages": [
+        {
+          "page": 11,
+          "canonical_start": 17664,
+          "canonical_end": 17920,
+          "page_start": 884,
+          "page_end": 1140
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 7,
+      "retrieval_score": 0.02797339593114241,
+      "text_hash": "cc64f3f5236699b92ac5f24d743eaec91c4d9633617d489eccf4a0a59a428d09"
+    },
+    {
+      "chunk_id": "c-84ffac7f22e6186f6c747c7c9835b6b6b59363758da2f2adbbf6cc5351c4e71a",
+      "document_id": "hr-handbook",
+      "start": 29184,
+      "end": 29440,
+      "text": "제 전달 시점과 복구 후 입력 시점을 각각 남긴다. 장애 \n기간에 신청자가 내용을 수정한 경우에는 가장 최근의 의사를 확인하여 이전 임시 기록이 최종 요\n청으로 잘못 반영되지 않게 한다. 복구 안내에서는 어떤 요청을 찾아 연결했는지와 아직 확인되지 \n않은 사항을 구분한다. 장애 해소 여부와 휴가 요청의 처리 완료 여부는 별도로 확인하며, 화면이 \n다시 열린 사실만으로 요청 처리가 끝났다고 안내하지 않는다. 임시 기록과 시스템 기록의 식별 정\n보가 달라 연",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 29184,
+          "canonical_end": 29440,
+          "page_start": 296,
+          "page_end": 552
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 8,
+      "retrieval_score": 0.02761904761904762,
+      "text_hash": "ad887c10e576a0ed6a04ff6536a0414e6dc54749c458594c1227109feabb8c1e"
+    },
+    {
+      "chunk_id": "c-f9f903633d17d85c06fe113e31329eece82e3d05dae37f29517564f49751cbe8",
+      "document_id": "hr-handbook",
+      "start": 34752,
+      "end": 35008,
+      "text": "기록과 같은 날짜를 포함하더라도 두 기록의 관계는 TR-02@v4의 구분에 따라 확인하며, 일\n정의 중복만으로 한쪽을 삭제하지 않는다. 신청자가 한 번에 여러 요청의 상태를 문의하면 각 요청\n별로 확인한 결과를 정리한다. 일부 요청의 승인 사실을 나머지 요청의 결과로 일반화하지 않고, 확\n인되지 않은 요청은 따로 표시하여 후속 확인 대상이 남아 있음을 알린다.\n제3절 예외 접수와 출장 이후의 기록 [TR-S3]\nTR-07 신청 시스템 장애 시의 임시 기록",
+      "pages": [
+        {
+          "page": 21,
+          "canonical_start": 34752,
+          "canonical_end": 35008,
+          "page_start": 573,
+          "page_end": 829
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 9,
+      "retrieval_score": 0.027598020555767037,
+      "text_hash": "b24b97116b1005fe68f04f1dab06bc5aa6de0f830daa9d1e2241d41261cbabb2"
+    },
+    {
+      "chunk_id": "c-c915b29eb2ee034f23f0a2c2a8bf9392a593180d183fa1f195cc19f7008ea3c0",
+      "document_id": "hr-handbook",
+      "start": 16320,
+      "end": 16576,
+      "text": " 제시하지 않는다. 확인 과정에 필요한 기기\n 구분은 RM-06@v4의 기기 정보와 연결하고, 신청자에게 비밀번호나 업무 문서의 실제 내용을 재\n택 신청란에 옮겨 적도록 요구하지 않는다. 장애 접수는 기술적인 상태 확인에 관한 기록이며 팀장\n 승인이나 근무 장소 등록을 대신하지 않는다.\n연결이 복구되었다는 연락을 받으면 복구 확인 시점과 최초 장애 접수 시점을 구분하고, 어느 문제\n가 해결되었는지 기록한다. 다른 문제가 남아 있다면 전체 장애가 해소된 것",
+      "pages": [
+        {
+          "page": 10,
+          "canonical_start": 16320,
+          "canonical_end": 16576,
+          "page_start": 1349,
+          "page_end": 1605
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 10,
+      "retrieval_score": 0.027479766610201392,
+      "text_hash": "4f0c198299e023afcd059fdcbfd31b932e18c4fc3d560d1f8b7327d60529ee4a"
+    },
+    {
+      "chunk_id": "c-89747e2ff6cb64e14d100cfef66988eefd4b4078689f87d7834783a046af8d56",
+      "document_id": "hr-handbook",
+      "start": 13440,
+      "end": 13696,
+      "text": "경이나 \n승인 날짜 변경을 뜻하는지 별도로 확인한다. 담당자는 기록을 정리하는 내부 검토를 팀장의 승인\n과 혼합하지 않으며, 접수 화면에서 처리 단계가 이동했다는 사실만으로 승인 완료 통지를 보내지 \n않는다. 여러 담당자가 일부 항목씩 확인하는 경우에는 확인한 항목의 범위와 남은 확인 사항을 같\n은 요청에 모아 중복 문의를 줄인다.\n승인 내용이 확인되면 신청자에게 대상 날짜, 해당 주, 처리 대상 신청을 식별할 수 있는 정보를 안\n내한다. 일부 날짜만 확",
+      "pages": [
+        {
+          "page": 9,
+          "canonical_start": 13440,
+          "canonical_end": 13696,
+          "page_start": 334,
+          "page_end": 590
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 11,
+      "retrieval_score": 0.026992753623188405,
+      "text_hash": "3676cfcf7a3eda54e276b47b2ebb61d9b3f978a3b7d8c8f574bf579430bb8f5f"
+    },
+    {
+      "chunk_id": "c-739e5126a371a4243eaad2c50afd839c8aa33e14a051920a98def7fd94dec9aa",
+      "document_id": "hr-handbook",
+      "start": 12864,
+      "end": 13120,
+      "text": "지 않도록 한다. 담당자는 RM-01@v4의 적용 조건과 RM-02@v4의 주간 한도 및 승인 기한을 \n각각 점검 항목으로 남긴다. 어느 하나의 조건이 충족되었다는 사실로 다른 조건까지 확인된 것으\n로 표시하지 않는다. 신청 화면에 교육 이수 정보가 아직 반영되지 않았으면 실제 확인이 끝난 항\n목과 시스템 반영을 기다리는 항목을 나누어 기록하고, 신청자에게는 무엇을 확인하고 있는지 알 \nHR-V4-HANDBOOK / v4\n8\n\n\n수 있도록 안내한다.\n확인",
+      "pages": [
+        {
+          "page": 8,
+          "canonical_start": 12864,
+          "canonical_end": 13104,
+          "page_start": 1114,
+          "page_end": 1354
+        },
+        {
+          "page": 9,
+          "canonical_start": 13106,
+          "canonical_end": 13120,
+          "page_start": 0,
+          "page_end": 14
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 12,
+      "retrieval_score": 0.015625,
+      "text_hash": "bee4a27666a2c175df025480bab68b8f36814590c4a75a27ea4980b6753a45c2"
+    },
+    {
+      "chunk_id": "c-8995879337447e7bbea700cde2c44e026ac44b209d3625781ab40f8082b2dc01",
+      "document_id": "hr-handbook",
+      "start": 768,
+      "end": 1024,
+      "text": " 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n제2절 신청 정보의 처리 [BD-S2]\nBD-04 접수부터 결과 통지까지\n휴가 시스템에서 접수한 생일 특별휴가 신",
+      "pages": [
+        {
+          "page": 1,
+          "canonical_start": 768,
+          "canonical_end": 959,
+          "page_start": 768,
+          "page_end": 959
+        },
+        {
+          "page": 2,
+          "canonical_start": 961,
+          "canonical_end": 1024,
+          "page_start": 0,
+          "page_end": 63
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 13,
+      "retrieval_score": 0.015625,
+      "text_hash": "5e8b85f8c2c35e6077a1548bc12d81ca5ca9c7bf9e184bc60725fac3becb8da9"
+    },
+    {
+      "chunk_id": "c-43d14122926948bbae746eb569ad8c654c6308640ea8fda321e2666e0e022b66",
+      "document_id": "hr-handbook",
+      "start": 1152,
+      "end": 1408,
+      "text": "대상으로 표시한다. \n신청자가 설명을 덧붙인 경우에는 설명의 내용과 원래 시스템 값을 구별해 보관한다. 내용이 비어 \n있는 칸이 있더라도 어떤 정보가 필요한지 확인하기 전에 자격이 없다고 표시하지 않는다. 담당자\n는 접수된 요청을 찾을 수 있도록 신청자에게 기록 번호나 식별 가능한 제목을 안내하고, 접수 확인\n이 팀장 승인과는 다른 단계임을 알린다. 사용 예정일이 잘못 입력된 것으로 보이면 임의로 생일 \n당일이나 다음 근무일로 바꾸지 않고 원래 희망일을 ",
+      "pages": [
+        {
+          "page": 2,
+          "canonical_start": 1152,
+          "canonical_end": 1408,
+          "page_start": 191,
+          "page_end": 447
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 14,
+      "retrieval_score": 0.015384615384615385,
+      "text_hash": "997c7a6db6ae8583dd43df2c5750de6b5f264a05802d0135bd7d0dadab048e9b"
+    },
+    {
+      "chunk_id": "c-f284d666c846670dcd65b89ab193a74622cf0d2ce92f31f196a0cd6bbf5362f6",
+      "document_id": "hr-handbook",
+      "start": 2688,
+      "end": 2944,
+      "text": "기고 이를 접수 확인용으로 안내한다. 임시 기\n록은 새로운 휴가 자격이나 승인 면제가 아니며, 원래 신청 시점과 이후 복구 입력 시점을 구별하기\n 위한 자료로 사용한다. 시스템이 복구되면 기존 기록이 실제로 생성되어 있는지를 먼저 찾아보고, \nHR-V4-HANDBOOK / v4\n2\n\n\n존재하지 않는 경우에만 임시 기록과 연결하여 입력한다. 임시 기록의 작성만을 이유로 신청 기한\n이 연장되었다고 안내하거나 팀장 승인 없이 사용이 확정되었다고 통지하지 않는다",
+      "pages": [
+        {
+          "page": 2,
+          "canonical_start": 2688,
+          "canonical_end": 2846,
+          "page_start": 1727,
+          "page_end": 1885
+        },
+        {
+          "page": 3,
+          "canonical_start": 2848,
+          "canonical_end": 2944,
+          "page_start": 0,
+          "page_end": 96
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 15,
+      "retrieval_score": 0.014925373134328358,
+      "text_hash": "5c7468a19f754b32e2c14cc8c9c0002b40bbc8edc5c657a9caa49356e7c94cc6"
+    },
+    {
+      "chunk_id": "c-6dfb27dc9c27e8fb2396d838c32b546b4be2d7b619896c2de0acd779bd9f856d",
+      "document_id": "hr-handbook",
+      "start": 11136,
+      "end": 11392,
+      "text": "접속 장애와 자료 불일치의 분리 처리\n시스템 장애로 신청 내용이나 접수 결과를 볼 수 없는 경우에는 담당자가 사용 희망일, 사용 단위, \n신청자가 알린 상황과 시점을 임시 기록으로 남긴다. 이는 AN-04@v4의 통상 신청 방식이 정상 \n작동하지 않을 때 기록의 연속성을 유지하기 위한 예외이며, 원래 신청 기한이나 긴급 사유 조건을 \n없애는 절차가 아니다. 복구 후에는 이미 생성된 신청을 먼저 찾아 중복 입력을 피하고, 임시 기록\n으로만 남아 있는 경우에",
+      "pages": [
+        {
+          "page": 7,
+          "canonical_start": 11136,
+          "canonical_end": 11392,
+          "page_start": 1303,
+          "page_end": 1559
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 16,
+      "retrieval_score": 0.014705882352941176,
+      "text_hash": "173065384b48c81dd35b60b169bf082684593a8fe915c81177077aee7d6b7c08"
+    },
+    {
+      "chunk_id": "c-ca05d758b63bde892a3d06952559d9cd3177f07a0ed27929206ddfa6d22ed4b9",
+      "document_id": "hr-handbook",
+      "start": 576,
+      "end": 832,
+      "text": "짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의\n로 연차로 바꾸지 않고 선택 오류인지 신청 의도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 ",
+      "pages": [
+        {
+          "page": 1,
+          "canonical_start": 576,
+          "canonical_end": 832,
+          "page_start": 576,
+          "page_end": 832
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 17,
+      "retrieval_score": 0.014705882352941176,
+      "text_hash": "d26b00452e73e682c314ab451f53e4178f7a234f1b719d06d04781e752c6db27"
+    },
+    {
+      "chunk_id": "c-44753fb9cfde14ea548f9ca9e0d3d9e34b0cbd9c8c0a19feb2ea63f68bf205b6",
+      "document_id": "hr-handbook",
+      "start": 15936,
+      "end": 16192,
+      "text": "3]\nRM-07 VPN 연결 확인과 장애 접수\nVPN 사용에 문제가 있다는 연락을 받으면 담당자는 연결이 되지 않는 상황인지, 연결 상태가 화면\n에 잘못 표시되는 상황인지, 접속하려는 문서를 찾지 못하는 상황인지 구분하여 기록한다. 서로 다\n른 문제를 하나의 장애로 묶으면 회사 지급 기기의 확인과 VPN 연결 확인이 뒤섞일 수 있으므로 \n어떤 항목을 확인했는지 남긴다. 통상적인 상태 확인으로 문제를 파악할 수 없을 때에는 발생 시점\n과 화면에 나타난 현상",
+      "pages": [
+        {
+          "page": 10,
+          "canonical_start": 15936,
+          "canonical_end": 16192,
+          "page_start": 965,
+          "page_end": 1221
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 18,
+      "retrieval_score": 0.014285714285714285,
+      "text_hash": "75bc9093fa6a3de1ce50023fbf6b3d5781bcdf494ef6b65706c895d25a7d5cef"
+    },
+    {
+      "chunk_id": "c-8ebda5ea693391cc66db9981e554c80fa431684e3dee57eea4666a875306cd48",
+      "document_id": "hr-handbook",
+      "start": 32256,
+      "end": 32512,
+      "text": ". 접수된\n 시점, 내용이 정정된 시점, 검토를 위해 전달된 시점은 서로 구분하여 기록하며 TR-01@v4의 승\n인 기한과 승인 주체를 유지한다.\n팀장의 검토 결과를 받으면 어떤 신청과 어떤 일정에 대한 결과인지 확인한다. 승인 또는 추가 확\n인 요청이 여러 날짜의 신청과 함께 전달된 경우에는 각 결과의 적용 대상을 식별하고 다른 출장에 \n같은 결과를 복사하지 않는다. 승인 내용에서 확인되지 않은 방문지나 날짜는 자동으로 승인 범위\n에 포함하지 않으며, ",
+      "pages": [
+        {
+          "page": 20,
+          "canonical_start": 32256,
+          "canonical_end": 32512,
+          "page_start": 49,
+          "page_end": 305
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 19,
+      "retrieval_score": 0.0136986301369863,
+      "text_hash": "60499b73bfa327c6082f6db89689a72ecb92b63c3fd8482ae68d5b010bcb0619"
+    },
+    {
+      "chunk_id": "c-e3c17df30ee91e9a10858f700e6d1724569e4fb601e8f1eb5e4043aee580c568",
+      "document_id": "hr-handbook",
+      "start": 23040,
+      "end": 23296,
+      "text": "장애로 내역이 보이지 않는다는 사실을\n 곧바로 미지급의 증거로 취급하지 않고, 화면이 복구되면 실제 내역과 대조할 항목을 정리한다. 복\n구 후 기존 문의 기록이 생성되어 있는지 먼저 확인하여 같은 문의를 중복 접수하지 않으며, 임시 \n기록과 정식 문의의 연결을 남긴다. 문의 중 생일 특별휴가 승인에 관한 질문이 함께 들어오면 포\n인트 내역의 조회 장애와 휴가 승인 여부를 분리해 안내한다. WF-02@v4의 포인트와 휴가의 구\n분은 화면 장애 상황에서도 유",
+      "pages": [
+        {
+          "page": 14,
+          "canonical_start": 23040,
+          "canonical_end": 23296,
+          "page_start": 1205,
+          "page_end": 1461
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 20,
+      "retrieval_score": 0.0136986301369863,
+      "text_hash": "e77d534d10b3b732cedbb57c3b62de60f0bf9857111dd7397b1e8f8cb367d46a"
+    }
+  ],
+  "candidate_fingerprint": "eae9eea463ebe5f7882f113f75a8704d9011b6693bf48db43da11761c7df79ad"
+}

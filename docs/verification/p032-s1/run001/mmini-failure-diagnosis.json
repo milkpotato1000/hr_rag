@@ -1,0 +1,30 @@
+{
+  "status": "read_only_diagnosis",
+  "failure": "model_weights_mismatch",
+  "file_hash_verified_during_preparation": true,
+  "stored_tensor_count": 202,
+  "stored_position_ids": {
+    "dtype": "I64",
+    "shape": [
+      1,
+      514
+    ],
+    "data_offsets": [
+      0,
+      4112
+    ]
+  },
+  "sdk_version": "5.24.1",
+  "sdk_source_sha256": "ae6d99cd4aaf236912bed70f8731cc3f76ad068991132d95326c33b7626cab49",
+  "sdk_source_lines": {
+    "67": "        # position_ids (1, len position emb) is contiguous in memory and exported when serialized",
+    "68": "        self.position_ids = nn.Buffer(torch.arange(config.max_position_embeddings).expand((1, -1)), persistent=False)",
+    "69": "        self.token_type_ids = nn.Buffer(torch.zeros(self.position_ids.size(), dtype=torch.long), persistent=False)"
+  },
+  "cause": "Pinned checkpoint includes persistent roberta.embeddings.position_ids; locked SDK constructs that buffer persistent=False, so strict stored==state_dict shape-key comparison cannot pass. Other potential mismatches were not separately observed.",
+  "scope": "Read safetensors JSON header only; no tensor weight load, no model instantiation, no prediction, no network.",
+  "next": "Plan review of narrowly validated legacy buffer compatibility; no model/file/SDK substitution or blanket ignoring of mismatch.",
+  "worker_reaped": true,
+  "pretrained_model_calls_after_failure": 0,
+  "BGE_downloads": 0
+}

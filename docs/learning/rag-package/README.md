@@ -4,7 +4,7 @@
 
 이 안내는 P024의 첫 문서 증분입니다. 기본 방향은 Hugging Face(HF)의 공개 모델을 로컬에서 사용하는 것이며, 유료 LLM API는 후속 선택 기능입니다. **아래 두 JSON은 실행할 수 없는 설계 예시입니다. 현재 CLI에 전달하지 마세요.** 독립 API adapter와 validate/preview/invoke CLI는 P025에서 오프라인 검증까지 구현했습니다. [provider 안내](providers.md)를 참고하세요. [일반 문서 RAG CLI](document-rag.md)는 P026에서 연결해 오프라인 검증했습니다. [Drive 단일 문서 연결](drive.md)은 P027에서 구현하고 가짜 인증/HTTP로 검증했습니다. 실제 계정 연결은 미검증이며 [wheel 설치·독립 실습](install.md)은 P028에서 새 venv로 검증했습니다. [일반 문서 학습 UI](ui.md)는 실제 코어에 연결했고 합성 backend로 화면을 검증했습니다. 파일 선택창의 도구 정책 차단으로 브라우저 업로드 검증은 남아 있습니다. 기존 HR 평가 runner 통합은 후속입니다. P013 모델 실험은 사용자 요청으로 보류 중이며 이 안내가 재개 권한을 부여하지 않습니다.
 
-[Hybrid 검색](hybrid.md)과 [고정 후보 리랭킹](reranking.md)은 설치 패키지·CLI/UI에 연결했습니다. 수기 fixture/tiny SDK/합성 화면을 검증했으며 실제 사전학습 품질은 미검증입니다.
+[Hybrid 검색](hybrid.md)과 [고정 후보 리랭킹](reranking.md)은 설치 패키지·CLI/UI에 연결했습니다. 수기 fixture/tiny SDK/합성 화면을 검증했습니다. 이후 [E5 실제 검색 사례](live-retrieval-s1.md)를 추가했습니다. mMiniLM은 로더 검사에서 중단했고 BGE와 실제 리랭커 품질은 미검증입니다.
 
 [단계별 비교 실습](experiments.md) → [모델과 지원 상태](models-and-support.md) → [로컬 예시](examples/local.json) / [API 예시](examples/api.json) 순서로 읽으세요. 전체 후속 순서는 [채택한 패키지 로드맵](../../planning/rag-package-roadmap.md)에 있습니다.
 
@@ -92,7 +92,7 @@ Claude Code에 복사할 요청:
 
 API 실패 시 조용히 로컬로, 로컬 실패 시 API로 바꾸지 않는 것이 설계 원칙입니다. 선택한 provider와 오류를 기록하고 비교를 중단해야 비용과 재현 조건을 알 수 있습니다. 독립 adapter의 실패 처리는 오프라인 검증했으며 실제 API 연결은 미검증입니다. 일반 문서 연결은 [P026 안내](document-rag.md)를 따릅니다. 측정하지 않은 토큰·비용·메모리는 `미측정`으로 표시하며 0으로 간주하지 않습니다.
 
-[BM25/Dense/Hybrid 비교](hybrid.md)는 별도 검색 실행 허용과 공개 HF 설정을 사용합니다. 실제 SDK tiny 모델·합성 검색 검증까지 완료했으며 사전학습 한국어 품질은 미검증입니다.
+[BM25/Dense/Hybrid 비교](hybrid.md)는 별도 검색 실행 허용과 공개 HF 설정을 사용합니다. 실제 SDK tiny 모델·합성 검색 검증과 [한 규정집의 E5 검색 실험](live-retrieval-s1.md)을 완료했습니다. 일반적인 한국어 품질을 보장하는 결과는 아닙니다.
 
 
 다섯 방식의 저장 경계 생성·재생·파생·원문 fact 비교는 [모델 청킹 실습](model-chunking.md)을 참고하세요. 의미/LLM 청킹은 등록 설정과 별도 실행 권한으로 연결되며 실제 한국어 모델 품질은 미검증입니다.

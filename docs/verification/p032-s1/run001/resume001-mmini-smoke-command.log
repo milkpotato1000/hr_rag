@@ -1,0 +1,17 @@
+{"status": "halted", "action": "smoke", "key": "mmini", "error": "model_weights_mismatch", "automatic_retry": false}
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s1/live_run.py", line 114, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s1/live_run.py", line 111, in main
+    {'prepare':prepare,'smoke':smoke,'search':search,'rank':rank}[action](control,key)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s1/live_run.py", line 70, in smoke
+    scores,w=reranker.score(p,q['question'],smoke_rows);results.append({'question':q,'scores':scores,'work':w})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-catdnd8v/env/lib/python3.12/site-packages/rag_package/reranker.py", line 153, in score
+    err.work = work; err.dispatch_attempted = bool(work['workers'] or work['fixture_calls']); raise err from None
+                                                                                              ^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-catdnd8v/env/lib/python3.12/site-packages/rag_package/reranker.py", line 144, in score
+    err = RagError(response['error'], 'reranking'); err.offending_ids = response.get('offending_ids', []); raise err
+                                                                                                           ^^^^^^^^^
+rag_package.storage.RagError: model_weights_mismatch: reranking

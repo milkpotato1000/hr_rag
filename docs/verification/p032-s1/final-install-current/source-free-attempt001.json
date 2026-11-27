@@ -1,0 +1,14 @@
+[
+  {
+    "args": [
+      "uv",
+      "venv",
+      "--python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-dsva6ppv/env/bin/python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-dsva6ppv/verify-21k8f31_/core"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "error: Failed to initialize cache at `/Users/milkpotato/.cache/uv`\n  cause: failed to open file `/Users/milkpotato/.cache/uv/sdists-v9/.git`: Operation not permitted (os error 1)\n"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "ui_url": "http://127.0.0.1:65097",
+  "report_url": "http://127.0.0.1:65099/report.html",
+  "pid": 56750,
+  "workspace": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-ui-replay-fozrbadu/workspace",
+  "registered_artifacts": {
+    "candidates/gt01": "c007cb83b03f41639ed7653efa9d8fbf",
+    "none/gt01": "831ac18428cc43f8a5d8264c2b66b003",
+    "candidates/gt02": "c4f9bc3a6c8945ce868c5d89cd24576d",
+    "none/gt02": "6da0d224727947a8b5deda3883f903e7",
+    "bm25/gt01": "379b7a9c4ea64315bb5ef44d469a10d5",
+    "e5-dense/gt01": "43999184f7a241c195f598789b0f99bf",
+    "e5-hybrid/gt01": "8d00728d5bb14ff8aebb92b1590d60b0"
+  },
+  "execution_flags": "all off",
+  "replay_new_model_calls": 0,
+  "original_results": "live E5 search; none model-free; mMiniLM failed, no BGE"
+}
