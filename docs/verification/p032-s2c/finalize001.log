@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2c/finalize.py", line 16, in <module>
+    comparison=json.loads((work/'.rag-runs/compare-01/comparison.json').read_text());assert all(r['status']=='preview' and not r['dispatch_attempted'] for r in comparison['rows'])
+AssertionError

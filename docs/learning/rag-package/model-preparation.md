@@ -69,6 +69,6 @@ semantic/LLM chunk 설정의 참조도 생성한 profile/config 경로로 바꿉
 
 Codex와 Claude Code 모두 다음 순서를 요청할 수 있습니다. 두 도구 UI를 실제 사용했다는 검증은 아닙니다.
 
-> 이 프로젝트 AGENTS.md/CLAUDE.md와 현재 plan/dev 규칙을 먼저 읽어 주세요. 기존 상태를 보존하고 지원 catalog로 모델 준비 계획을 만드세요. 기본 preview에서 필요한 파일·변환·자원을 설명하고, 명시한 다운로드/변환만 실행하세요. 생성 profile을 doctor/model-check로 확인한 뒤 기존 RAG 설정과 UI 등록 인자로 연결하세요. 추론은 별도 preview 후 명시한 범위에서만 실행하며 평가기 보류는 유지하세요. 파일 hash와 registry는 수작업으로 채우지 마세요.
+> 현재 실습 폴더와 상위 AGENTS.md/CLAUDE.md의 기존 규칙을 먼저 읽어 주세요. 기존 상태를 보존하고 지원 catalog로 모델 준비 계획을 만드세요. 기본 preview에서 필요한 파일·변환·자원을 설명하고, 명시한 다운로드/변환만 실행하세요. 생성 profile을 doctor/model-check로 확인한 뒤 기존 RAG 설정과 UI 등록 인자로 연결하세요. 추론은 별도 preview 후 명시한 범위에서만 실행하며 평가기 보류는 유지하세요. 파일 hash와 registry는 수작업으로 채우지 마세요.
 
 [검증 기록](../../verification/p031/README.md)에는 실제 tiny SDK와 fake transport, 실제 사전학습 모델 미검증을 구분합니다.

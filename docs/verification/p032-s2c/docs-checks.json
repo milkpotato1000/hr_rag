@@ -1,0 +1,766 @@
+{
+  "status": "PASS",
+  "pages": 18,
+  "relative_links": 174,
+  "broken_links": [],
+  "entry_reaches": [
+    "install-current.md",
+    "model-preparation.md",
+    "document-rag.md",
+    "model-chunking.md",
+    "hybrid.md",
+    "reranking.md",
+    "live-retrieval-s1.md",
+    "chunk-comparison-live.md",
+    "providers.md",
+    "ui.md"
+  ],
+  "links": [
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/install-current.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/model-preparation.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/document-rag.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/model-chunking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/hybrid.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/reranking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/ui.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/chunk-comparison-live.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/experiments.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/verification/p032-s2c/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/providers.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/document-rag.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/chunk-boundaries-s2a.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/chunk-comparison-live.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/chunk-comparison-s2b.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/models-and-support.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/drive.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "1. Naive RAG/LEARNING_GUIDE.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "1. Naive RAG/variants/langchain/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "2. Document Chunking/LEARNING.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/examples/local.json"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/learning/rag-package/examples/api.json"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/verification/p013/recovery-20261127/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/README.md",
+      "to": "docs/planning/rag-package-roadmap.md"
+    },
+    {
+      "from": "docs/learning/rag-package/chunk-boundaries-s2a.md",
+      "to": "docs/verification/p032-s2a/report.html"
+    },
+    {
+      "from": "docs/learning/rag-package/chunk-boundaries-s2a.md",
+      "to": "docs/learning/rag-package/chunk-comparison-s2b.md"
+    },
+    {
+      "from": "docs/learning/rag-package/chunk-boundaries-s2a.md",
+      "to": "docs/learning/rag-package/chunk-comparison-live.md"
+    },
+    {
+      "from": "docs/learning/rag-package/chunk-comparison-live.md",
+      "to": "docs/verification/p032-s2b-recovery001/report.html"
+    },
+    {
+      "from": "docs/learning/rag-package/chunk-comparison-live.md",
+      "to": "docs/learning/rag-package/chunk-comparison-s2b.md"
+    },
+    {
+      "from": "docs/learning/rag-package/chunk-comparison-s2b.md",
+      "to": "docs/learning/rag-package/chunk-comparison-live.md"
+    },
+    {
+      "from": "docs/learning/rag-package/chunk-comparison-s2b.md",
+      "to": "docs/verification/p032-s2b/report.html"
+    },
+    {
+      "from": "docs/learning/rag-package/chunk-comparison-s2b.md",
+      "to": "docs/learning/rag-package/chunk-boundaries-s2a.md"
+    },
+    {
+      "from": "docs/learning/rag-package/chunk-comparison-s2b.md",
+      "to": "docs/verification/p032-s2b/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/learning/rag-package/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/learning/rag-package/providers.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/learning/rag-package/experiments.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/verification/p026/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "rag_package/requirements-pdf.lock"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/learning/rag-package/drive.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/learning/rag-package/model-chunking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/learning/rag-package/hybrid.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/learning/rag-package/reranking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "2. Document Chunking/LEARNING.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/learning/rag-package/install.md"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "examples/rag/sources.json"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "examples/rag/sources-pdf.json"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "examples/rag/fixed.json"
+    },
+    {
+      "from": "docs/learning/rag-package/document-rag.md",
+      "to": "docs/learning/rag-package/model-chunking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/drive.md",
+      "to": "docs/learning/rag-package/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/drive.md",
+      "to": "docs/learning/rag-package/document-rag.md"
+    },
+    {
+      "from": "docs/learning/rag-package/drive.md",
+      "to": "docs/verification/p027/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/drive.md",
+      "to": "rag_package/requirements-drive.lock"
+    },
+    {
+      "from": "docs/learning/rag-package/drive.md",
+      "to": "rag_package/requirements-pdf.lock"
+    },
+    {
+      "from": "docs/learning/rag-package/drive.md",
+      "to": "examples/drive/token-env.json"
+    },
+    {
+      "from": "docs/learning/rag-package/drive.md",
+      "to": "examples/drive/oauth-file.json"
+    },
+    {
+      "from": "docs/learning/rag-package/experiments.md",
+      "to": "docs/learning/rag-package/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/experiments.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/experiments.md",
+      "to": "docs/learning/rag-package/chunk-comparison-live.md"
+    },
+    {
+      "from": "docs/learning/rag-package/experiments.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/experiments.md",
+      "to": "docs/learning/rag-package/model-chunking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/experiments.md",
+      "to": "docs/learning/rag-package/ui.md"
+    },
+    {
+      "from": "docs/learning/rag-package/experiments.md",
+      "to": "docs/planning/specs/P013-execution-contract.md"
+    },
+    {
+      "from": "docs/learning/rag-package/hybrid.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/hybrid.md",
+      "to": "3. Hybrid RAG/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/hybrid.md",
+      "to": "docs/learning/rag-package/ui.md"
+    },
+    {
+      "from": "docs/learning/rag-package/hybrid.md",
+      "to": "docs/verification/p010/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/hybrid.md",
+      "to": "rag_package/requirements-retrieval.lock"
+    },
+    {
+      "from": "docs/learning/rag-package/hybrid.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/hybrid.md",
+      "to": "docs/learning/rag-package/reranking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/hybrid.md",
+      "to": "docs/verification/p010/installation.json"
+    },
+    {
+      "from": "docs/learning/rag-package/hybrid.md",
+      "to": "docs/verification/p010/delivery.json"
+    },
+    {
+      "from": "docs/learning/rag-package/install-current.md",
+      "to": "docs/learning/rag-package/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install-current.md",
+      "to": "docs/verification/p032-s2c/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install-current.md",
+      "to": "docs/learning/rag-package/install.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install-current.md",
+      "to": "docs/verification/p031/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install-current.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install-current.md",
+      "to": "docs/learning/rag-package/chunk-comparison-live.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install-current.md",
+      "to": "docs/learning/rag-package/model-preparation.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install-current.md",
+      "to": "docs/learning/rag-package/model-preparation.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/learning/rag-package/install-current.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/learning/rag-package/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "PACKAGING.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/verification/p028/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/verification/p028/artifacts.json"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/learning/rag-package/hybrid.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/learning/rag-package/reranking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/verification/p020/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/learning/rag-package/model-chunking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/verification/p030/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/learning/rag-package/ui.md"
+    },
+    {
+      "from": "docs/learning/rag-package/install.md",
+      "to": "docs/learning/rag-package/drive.md"
+    },
+    {
+      "from": "docs/learning/rag-package/live-retrieval-s1.md",
+      "to": "docs/verification/p032-s1/continuation001/report-final/report.html"
+    },
+    {
+      "from": "docs/learning/rag-package/live-retrieval-s1.md",
+      "to": "docs/verification/p032-s1/continuation001/report-final/report.html"
+    },
+    {
+      "from": "docs/learning/rag-package/live-retrieval-s1.md",
+      "to": "docs/verification/p032-s1/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/live-retrieval-s1.md",
+      "to": "docs/learning/rag-package/chunk-boundaries-s2a.md"
+    },
+    {
+      "from": "docs/learning/rag-package/model-chunking.md",
+      "to": "docs/learning/rag-package/chunk-comparison-live.md"
+    },
+    {
+      "from": "docs/learning/rag-package/model-chunking.md",
+      "to": "docs/learning/rag-package/install.md"
+    },
+    {
+      "from": "docs/learning/rag-package/model-chunking.md",
+      "to": "docs/learning/rag-package/providers.md"
+    },
+    {
+      "from": "docs/learning/rag-package/model-chunking.md",
+      "to": "docs/learning/rag-package/reranking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/model-chunking.md",
+      "to": "docs/learning/rag-package/hybrid.md"
+    },
+    {
+      "from": "docs/learning/rag-package/model-chunking.md",
+      "to": "docs/learning/rag-package/ui.md"
+    },
+    {
+      "from": "docs/learning/rag-package/model-preparation.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/model-preparation.md",
+      "to": "docs/learning/rag-package/install-current.md"
+    },
+    {
+      "from": "docs/learning/rag-package/model-preparation.md",
+      "to": "docs/verification/p031/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "1. Naive RAG/variants/langchain/generation-lock.json"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "2. Document Chunking/runtime-lock.json"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/verification/p019/model-lock.json"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "1. Naive RAG/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/verification/p011/adoption-decision.json"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "2. Document Chunking/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/examples/local.json"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/examples/api.json"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/model-preparation.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "evaluation/project_b/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/providers.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/document-rag.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/planning/rag-package-roadmap.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/drive.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/install-current.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/ui.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/verification/p013/resource-stop.json"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/verification/p013/recovery-20261127/runtime-unreachable.json"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/hybrid.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/chunk-comparison-live.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/hybrid.md"
+    },
+    {
+      "from": "docs/learning/rag-package/models-and-support.md",
+      "to": "docs/learning/rag-package/reranking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "docs/learning/rag-package/document-rag.md"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "docs/learning/rag-package/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "docs/learning/rag-package/models-and-support.md"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "rag_package/llm/core.py"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "docs/verification/p025/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "examples/llm/local.json"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "examples/llm/openai.json"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "examples/llm/anthropic.json"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "examples/llm/messages.json"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "docs/learning/rag-package/examples/local.json"
+    },
+    {
+      "from": "docs/learning/rag-package/providers.md",
+      "to": "docs/learning/rag-package/examples/api.json"
+    },
+    {
+      "from": "docs/learning/rag-package/reranking.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/reranking.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/reranking.md",
+      "to": "docs/learning/rag-package/hybrid.md"
+    },
+    {
+      "from": "docs/learning/rag-package/reranking.md",
+      "to": "docs/learning/rag-package/hybrid.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/live-retrieval-s1.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/chunk-comparison-live.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/install-current.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/verification/p029/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/document-rag.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/drive.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/verification/p029/installation.json"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/verification/p032-s2c/README.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/model-preparation.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/drive.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/hybrid.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/reranking.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "2. Document Chunking/LEARNING.md"
+    },
+    {
+      "from": "docs/learning/rag-package/ui.md",
+      "to": "docs/learning/rag-package/model-chunking.md"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/learning/rag-package/README.md"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/learning/rag-package/install-current.md"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/installation.json"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/build-environment.json"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/commands.json"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/installed-lock-path.json"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/resource-regression.log"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/preservation.json"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/final-checks.json"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/verify.py"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/offline_cli.py"
+    },
+    {
+      "from": "docs/verification/p032-s2c/README.md",
+      "to": "docs/verification/p032-s2c/finalize.py"
+    }
+  ],
+  "previous_entry_targets": [
+    "providers.md",
+    "document-rag.md",
+    "drive.md",
+    "install.md",
+    "ui.md",
+    "hybrid.md",
+    "reranking.md",
+    "live-retrieval-s1.md",
+    "chunk-boundaries-s2a.md",
+    "chunk-comparison-live.md",
+    "chunk-comparison-s2b.md",
+    "experiments.md",
+    "models-and-support.md",
+    "examples/local.json",
+    "examples/api.json",
+    "../../planning/rag-package-roadmap.md",
+    "<../../../2. Document Chunking/data/source-v4/output/pdf/hr-handbook.pdf>",
+    "<../../../2. Document Chunking/data/source-v4/extracted/canonical/hr-v4-handbook.txt>",
+    "<../../../2. Document Chunking/LEARNING.md>",
+    "<../../../1. Naive RAG/LEARNING_GUIDE.md>",
+    "<../../../1. Naive RAG/variants/langchain/README.md>",
+    "../../verification/p013/recovery-20261127/README.md",
+    "document-rag.md",
+    "hybrid.md",
+    "live-retrieval-s1.md",
+    "model-chunking.md",
+    "install-current.md",
+    "model-preparation.md"
+  ],
+  "resource_files": 26,
+  "help_commands": [
+    "init",
+    "doctor",
+    "snapshot",
+    "build",
+    "ask",
+    "compare",
+    "chunk",
+    "chunk-replay",
+    "chunk-report",
+    "llm-configure",
+    "model-plan",
+    "model-prepare",
+    "serve",
+    "rerank"
+  ],
+  "markdown_anchors": "No new fragment links; existing fragments not revalidated",
+  "mermaid": "No Mermaid added or changed",
+  "serve_and_execute_options": "Checked in installed help only; no server or model execution"
+}

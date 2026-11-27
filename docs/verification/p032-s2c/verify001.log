@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2c/verify.py", line 117, in <module>
+    comparison=json.loads((work/'.rag-runs/compare-01/summary.json').read_text())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1256, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1242, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1110, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s2c-installed-4cdxst09/practice/.rag-runs/compare-01/summary.json'
