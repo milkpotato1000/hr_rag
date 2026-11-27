@@ -102,3 +102,15 @@ source의 NFC/LF canonical text에서 `[start,end)`가 정확 quote와 일치해
 ## READY 전 남은 확인
 
 P010 tiny SDK 증거는 Sentence Transformers6.3.0/torch2.15.0/transformers5.24.1/tokenizers0.23.3/safetensors0.8.0의 실제 임베딩 호출을 보였지만 CrossEncoder 지원 증거는 아니다. P020는 이 잠금을 그대로 쓸 수 있는지 해당 설치 코드/API를 읽고 tiny sequence classifier로 별도 확인하도록 계약한다. 라이브 가중치 실행을 tiny 성공으로 갈음하지 않는다. P010 전체 회귀·설치·화면·완료 SHA가 확보된 뒤 위 입력/출력·CLI·모델 목록·기대값을 최종 계약으로 검토한다.
+
+## 설치된 SDK 정적 검토 — 2026-11-28
+P010 격리 venv의 Sentence Transformers6.3.0 소스를 읽었다. import/모델 실행은 하지 않았다. 최종 P020 SDK 시험의 대체 근거가 아니다.
+- `cross_encoder/model.py` SHA256 `267a18efadad67255f6c63faea589ed72a253a0f05e1aa945f9db1f5f35f5545`.
+- `cross_encoder/modules/logit_score.py` SHA256 `9658a52c6f0797bf3f4f6fc361be5552ae58bf543e2e8966720769e6ffeed728`.
+- `base/modules/transformer.py` SHA256 `e8de322b60c9a358cd5919c30635a1abc09360987006feec039e56ca32c60f3f`.
+
+`CrossEncoder.__init__`에는 local_files_only/token/trust_remote_code, model/processor/config kwargs, torch backend, max_length, activation_fn을 전달할 수 있다. `predict`는 pair 입력과 activation_fn/apply_softmax 설정을 받는다. 기본 활성화 함수를 추측하지 않고 두 sequence-classifier 후보에는 명시적인 Identity를 적용해 raw 단일 logit을 순위에 사용한다. softmax로 후보 간 점수를 합1로 바꾸지 않는다.
+
+SDK 내부 Transformer의 기본 text 전처리는 longest_first truncation을 포함한다. 따라서 설정상 max_pair_tokens만 전달하는 것으로 길이 초과 거부가 보장되지 않는다. 실제 scoring에 전달할 정확 query/passage와 prompt 정책을 먼저 고정하고 동일 tokenizer의 special tokens 포함 길이를 truncation=False로 검사한다. tokenizer/model 유효 한도와 사용자 제한 중 낮은 값을 초과하면 scoring 전에 실패한다. tiny SDK 시험은 경계 길이/초과 pair, 빈/하나/여러 pair의 score shape, batch 간 순서, raw finite score, timeout 이후 worker 종료까지 확인한다.
+
+SDK에 causal LM의 yes/no logit 차이를 계산하는 LogitScore 경로가 존재함을 확인했다. 이것만으로 Qwen instruction template·yes/no 토큰·padding·최종 토큰 위치의 정확성을 검증한 것은 아니다. 초기 READY 지원 범위는 BGE와 mMiniLM 두 sequence classifier를 우선하며 Qwen은 별도 template/fixture 계약이 없으면 미지원 후보로 표시한다. 미래 adapter 확장은 모델 ID 문자열만 교체해 활성화하지 않는다.
