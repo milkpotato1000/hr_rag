@@ -22,9 +22,9 @@ semantic 추가 필드는 embedding_config/distance_threshold(유한0..2)/minimu
 
 P010 E5/BGE profile과 실제 encode worker를 재사용한다. 경계용 unit는 document prefix/preprocessing/길이 검사로 인코딩하고 finite/nonzero/차원·수/순서·정규화를 검증한다. unit 개수는 profile max_chunks와 본 계약 상한 중 낮은 값 이내다. 기본값을 우회해 대량 실행하지 않는다. 실제 SDK tiny 모델 시험과 주입 vector 산술 시험은 별도 증거다.
 
-semantic 알고리즘은 인접 unit의 `1-cosine` 거리이다. 현재 base 길이가 minimum_chars 이상이며 거리>=threshold이거나 다음 unit를 포함하면 base_max를 넘을 때 경계를 고른다. 거리와 각 결정 이유를 기록한다. 문서 간 거리를 계산하지 않는다. 동일 unit/model/preprocessing/SDK일 때만 저장 float32 unit vectors를 재사용한다. vectors byte hash와 순서 hash를 포함하고 dtype 정밀도로 인한 재생 결과가 달라지지 않도록 **저장 정밀도로 고정한 벡터**로 최초 경계를 계산한다. threshold/길이 변경으로 unit 최대가 달라지면 unit map이 변하므로 reuse 불가다. source text 또는 모델 변경도 reuse 불가다.
+semantic 알고리즘은 인접 unit의 `1-cosine` 거리이다. 현재 base 길이가 minimum_chars 이상이며 거리>=threshold이거나 다음 unit를 포함하면 base_max를 넘을 때 경계를 고른다. 거리와 각 결정 이유를 기록한다. 문서 간 거리를 계산하지 않는다. 동일 unit/model/preprocessing/SDK일 때만 저장 float32 unit vectors를 재사용한다. vectors byte hash와 순서 hash를 포함하고 dtype 정밀도로 인한 재생 결과가 달라지지 않도록 **저장 정밀도로 고정한 벡터**로 최초 경계를 계산한다. 파생 작업은 저장된 unit map/단위화 정책을 그대로 사용한다. 새 base_max가 저장 unit 하나보다 작으면 reuse 불가이며 새 단위화가 필요하다. source text 또는 모델 변경도 reuse 불가다.
 
-오버랩 파생은 unit/base 경계를 유지하고 emitted interval만 바꾼다. 원 경계와 새 경계 모델 실행을 혼동하지 않는다. 새로운 청크 text/ID에는 새 검색 index가 필요하며 unit vector를 최종 chunk embedding인 것처럼 쓰지 않는다.
+오버랩 파생은 unit/base 경계를 유지하고 emitted interval만 바꾼다. 모든 파생 청크가 새 size_chars 안에 들어오는지 먼저 검사하고 초과하면 derived_size_exceeded로 거부한다. 모델을 다시 불러 분할하거나 조용히 overlap을 줄이지 않는다. 사용자는 size를 늘리거나 명시 새 경계 생성을 선택한다. 파생 artifact는 parent의 unitization/base policy와 새 emission policy를 각각 기록한다. LLM derive는 source/model/prompt/window/end IDs를 바꾸지 않는 overlap 및 충분한 emission size 변경만 허용한다. Semantic derive는 저장 unit가 들어가는 범위의 base_max/minimum/threshold/overlap 변경까지 가능하고 저장 정밀도 vector로 경계를 다시 계산한다. 원 경계와 새 경계 모델 실행을 혼동하지 않는다. 새로운 청크 text/ID에는 새 검색 index가 필요하며 unit vector를 최종 chunk embedding인 것처럼 쓰지 않는다.
 
 ## LLM 역할·요청·검증
 

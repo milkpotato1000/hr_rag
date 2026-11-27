@@ -93,3 +93,7 @@ LLM window 한도는 raw 원문 글자·unit 수와 실제 prompt/JSON bytes를 
 - `rag_package/chunks.py`: SHA256 `8aa924d3ab7693027d96302edefd7dedbdff7e16de8caf2229afe64083f6db52`.
 - `rag_package/llm/config.py`: SHA256 `a67983910667cfbcf76e4adbbe1aa777e62395039e9775fd52dbc9db59a7817a`.
 - `rag_package/llm/core.py`: SHA256 `d18fc650f4ab72e1db351615e7e05056675f57544243bff5c17b045e3998e8e7`.
+
+## 파생 크기 충돌 검토 — 2026-11-28
+
+동일 base 경계에 overlap을 추가하면 최종 size를 넘을 수 있다. 실행 계약 초안은 이를 derived_size_exceeded로 거부하고 size 확대 또는 명시 새 경계 생성으로 구분한다. 저장된 단위화 정책과 파생 emission 정책을 분리하므로 overlap만 바꿨다는 이유로 모델을 재호출하지 않는다. semantic 재생은 저장 unit가 새 base_max에 들어갈 때만 가능하며, LLM 경계/모델/prompt/window 변경은 파생으로 위장하지 않는다.
