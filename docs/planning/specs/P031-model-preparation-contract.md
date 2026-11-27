@@ -23,13 +23,17 @@ CLI와 한국어 가이드는 다음 단계로 이어진다. 정확 option 이�
 
 공개 non-gated 모델만 token=False로 조회한다. repo ID/역할/catalog recipe, full revision, 파일별 relative path·size·LFS SHA256 또는 Git blob OID, 총 bytes, 원본 license 표시·조회 시간과 SDK 버전을 계획 hash에 넣는다. remote 파일 이름을 임의 경로로 쓰지 않으며 절대/상위 탈출/중복/잘못된 타입을 거부한다. HTTP 오류나 불완전 metadata에서 ready plan을 만들지 않는다. 부유 tag 갱신은 새 계획으로만 수행한다.
 
+source-plan v1은 schema_version/status/origin/recipe_id/repo_id/role/revision/files/total_bytes/conversion/license/source_observed_at/metadata_sdk/plan_sha256으로 구성한다. files는 path로 정렬한 고유 목록이고 각 항목은 path/size/git_blob_oid/lfs_sha256을 가진다. LFS가 아닌 파일의 lfs_sha256은 null이며 Git blob OID는 단순 파일 SHA1과 혼동하지 않고 `blob <byte length>\\0` 헤더를 포함해 검증한다. conversion은 native-copy 또는 tensor-only-bin-to-safetensors다. plan_sha256은 자신을 제외한 strict JSON을 UTF-8·sort_keys·공백 없는 separator·allow_nan=False로 직렬화한 SHA256이다. 출력 디렉터리·실행 PID 등 환경별 값은 계획 identity에 넣지 않는다. source_observed_at과 SDK 출처는 관찰 기록에서 가져오며, 오프라인으로 기존 metadata를 복사한 시각을 새 원격 관찰 시각으로 바꾸지 않는다.
+
+prepare/import는 읽은 계획의 hash뿐 아니라 catalog 역할·허용 recipe·파일 집합·원본 hash 형식·합계·변환 방식을 다시 검증한다. 자체 계산한 hash가 맞는다는 이유만으로 알 수 없는 파일/역할/변환을 허용하지 않는다. status=ready인 계획만 실행 가능하며 미해소 ref의 preview는 실행 불가다. import와 기본 preview는 metadata 재조회 없이 고정 계획과 로컬 bytes를 사용한다. download는 고정 revision의 파일만 요청하고, SDK가 metadata를 다시 조회하더라도 계획의 revision/파일 identity와 불일치하면 실패한다. 갱신은 명시 model-plan --fetch-metadata로 새 계획을 만드는 경로로만 수행한다.
+
 각 recipe는 config/tokenizer/pooling/필요 가중치만 고른다. native safetensors가 있으면 bin을 함께 받지 않는다. 일반 README/license는 별도 출처 기록에 보존하며 이미지/ONNX/OpenVINO/학습 코드·불필요 head 파일은 제외한다. max100파일, 원본 합4GiB/export 합4GiB를 상한으로 한다. 준비 전 여유 디스크에 원본·export·변환 임시 공간을 모두 반영하고 실제 bytes도 계속 검사한다. 새 작업 timeout·중단과 atomic publication을 마련하며 불완전 파일을 ready profile로 등록하지 않는다. 동일한 원본 캐시/다른 작업 폴더를 삭제하는 정리는 하지 않는다.
 
 download는 고정 원본 파일과 크기/hash를 확인한 뒤 export한다. LFS는 SHA256, 일반 Git 파일은 원본 Git blob OID와 로컬 SHA256을 구분하여 검증한다. ETag를 무조건 SHA256으로 해석하지 않는다. .cache/huggingface는 export에 넣지 않는다. 일치 여부 검증이 끝나기 전 inference worker를 시작하지 않는다. 다운로드·metadata request·변환·추론 통계를 분리하고 실패 시 같은 호출을 숨겨 재실행하지 않는다. SDK의 내부 retry 정책과 실제 관찰 가능한 작업 수는 별도로 설명한다.
 
 ## BGE-M3 Dense 변환
 
-공식 BGE-M3 main5617a9f61b028005a4858fdac845db406aefb181의 목록에는 pytorch_model.bin이 있고 safetensors는 없다. 이 모델의 Dense 기본 transformer 가중치만 선택하고 sparse_linear.pt/colbert_linear.pt는 가져오지 않는다. 변환 단계가 필요한 이유를 사용자에게 표시한다. 이 SHA는 조사 시점의 근거이며 실제 준비 계획에서 다시 metadata를 확인한다.
+공식 BGE-M3 revision5617a9f61b028005a4858fdac845db406aefb181의 목록에는 pytorch_model.bin이 있고 safetensors는 없다. 이 모델의 Dense 기본 transformer 가중치만 선택하고 sparse_linear.pt/colbert_linear.pt는 가져오지 않는다. 변환 단계가 필요한 이유를 사용자에게 표시한다. 이 SHA는 조사 시점의 고정 근거이며 metadata 갱신은 명시적인 새 준비 계획에서 수행한다.
 
 변환은 별도 소유 subprocess에서 고정 torch/safetensors 버전으로 수행한다. `torch.load(..., weights_only=True, map_location='cpu', mmap=True)`처럼 제한된 tensor loader를 명시하고 unrestricted pickle 또는 allowlist에 custom class를 추가하는 fallback은 금지한다. 모델 forward/custom source 실행 없이 문자열 key→지원 tensor state만 허용하여 safetensors로 저장한다. 공유 tensor storage·contiguous 처리·dtype·값/형상을 보존하는 방법과 원본/변환 후 tensor hash 검증을 구현 검토에서 고정한다. 알 수 없는 state 형식은 명시 실패다.
 
@@ -63,8 +67,12 @@ API 설정은 supported provider·base URL·model·max output·timeout·response
 
 최신 dev의 검증된 source/artifact를 선택하는 설치 안내와 독립 init 실습을 제공한다. 현재 가이드의 고정 P028 명령은 역사적 baseline으로 표시하고 최신 기능 설치 경로와 구분한다. START_HERE/doctor/UI 등록은 현재 패키지와 같은 config schema를 사용한다. 두 코딩 도구 요청 예시는 먼저 규칙을 읽고 모델 준비→실행 preview→명시 실행을 구분하며, 사람이 hash/내부 registry를 직접 편집하게 하지 않는다. 두 제품을 실제 사용하지 않은 시험을 양쪽 UI 검증으로 주장하지 않는다.
 
+doctor의 기존 `--config`·exit0/2/3 의미를 보존하고 `--llm-config`, `--embedding-config`, `--reranker-config`, `--chunk-config` 검사를 추가한다. 요청된 역할별 설정 유효/placeholder/미설정과 관련 선택 의존성의 설치/버전 상태를 분리한다. v2 chunking 역할을 누락해서 검사하지 않으며, evaluation 설정 상태가 곧 평가기를 실행한다는 뜻은 아니다. 기본 doctor는 HTTP·키·가중치 load0이며 파일 hash 전수 검사는 명시 model-check에 맡긴다. ready_for_offline을 live-ready 또는 품질 통과로 바꾸지 않는다. 상대 모델 경로는 profile 기준으로 해석하고 내부 registry JSON을 직접 수정하는 절차를 요구하지 않는다.
+
+생성된 embedding/reranker profile과 LLM v2 설정은 기존 serve 등록 인자로 UI에 연결한다. 작은 SDK 테스트 export를 설치물의 새 준비 도구로 만들고 registry에 등록하여 실제 선택 목록과 준비/미검증 표식을 확인한다. 테스트용 경로·가중치·응답 backend는 배포 기본 예제에 넣지 않는다. 현재 P029 파일 선택창 차단은 그대로 두며 이 준비 경로의 성공으로 그 항목을 완료 처리하지 않는다.
+
 ## 개발 검증과 남은 결정
 
 원격 metadata/파일 transport fixture는 production 다운로드 코어를 통과시키며, 새로운 테스트 전용 endpoint를 배포 기본값으로 노출하지 않는다. actual SDK의 tiny safetensors 및 tiny tensor-only bin 변환·파일 hash/shape/value 일치, manifest/role/revision/symlink/path·크기/다운로드 실패/중단/출력 충돌·변환 실패·no fallback·no inference·설정 비밀값0을 검증한다. source-free 설치에서 생성한 profile을 기존 worker의 tiny 시험과 UI registry에 연결한다.
 
-네 모델의 pinned file recipe/metadata와 변환 worker 자원·시간 초기 기준, LLM 설정 spec은 위에 구체화했다. 고정 metadata의 준비 도구 소비 방식 및 P030 최종 artifact·resource·doctor 연결은 준비 검토가 남아 있다. 현재 초안의 조사/작업은 모델을 다운로드하거나 실행하지 않는다. 실제 사전학습 모델과 합성 문서로 수행할 제품 E2E는 별도 계약으로 남기며 평가기 보류를 우회하지 않는다.
+네 모델의 pinned file recipe/metadata와 준비 계획 소비 방식, 변환 worker 자원·시간 초기 기준, LLM 설정 spec은 위에 구체화했다. P030 최종 artifact·resource·doctor 연결은 준비 검토가 남아 있다. 현재 초안의 조사/작업은 모델을 다운로드하거나 실행하지 않는다. 실제 사전학습 모델과 합성 문서로 수행할 제품 E2E는 별도 계약으로 남기며 평가기 보류를 우회하지 않는다.
