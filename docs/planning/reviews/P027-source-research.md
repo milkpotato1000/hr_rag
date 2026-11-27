@@ -23,3 +23,9 @@ P027은 아직 DRAFT다. 이 문서는 P026 구현과 독립적으로 확인한 
 P026 snapshot schema 완료를 관찰한 뒤 단일 PDF/TXT/MD 링크와 Google Docs export 지원, folder/shortcut/shared-drive 포함 여부, OAuth helper와 token 입력, version 충돌/다운로드 크기/timeout·총 요청 한도, P026 연결 방식을 READY 계약으로 확정한다. URL preview는 인증/다운로드 없이 분석만 하고 실제 connect는 명시 명령에서 수행한다.
 
 새 connector는 실제 API 코드를 구현하되 개발 검증은 synthetic metadata/bytes와 fake transport부터 진행할 수 있다. 실제 Google 계정/문서 E2E는 지정 입력과 사람의 로그인으로 별도 검증한다. fixture 통과를 Drive live 연결 완료라고 보고하지 않는다. 특정 개인 문서가 아직 없어도 코드/fixture/설치 안내 준비는 진행할 수 있다.
+
+## Additional verified details
+
+The official PyPI release page lists google-auth-oauthlib 1.5.0 (2026-09-29); wheel SHA256 is 71625fdea21c6c03217eb9ff13741c3096e6d257ebca0ad084dbd6e9f4aa4ef4. This is a candidate pin, not an installed or tested dependency. Transitive resolution/hashes and isolated installation still require the implementation contract. The current google-auth reference identifies version 2.63.1. Do not infer a complete compatible lock from two version labels.
+
+The Drive download guide explicitly limits Workspace file export to 10 MB. drive.readonly is a restricted scope allowing view/download of all accessible Drive files; it is not a per-file scope. User consent, app mode and applicable verification requirements must be explained in the eventual OAuth guide.
