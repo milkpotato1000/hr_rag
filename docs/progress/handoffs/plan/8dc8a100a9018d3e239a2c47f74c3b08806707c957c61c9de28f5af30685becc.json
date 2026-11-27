@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "P032 S2c READY: current learner entry, local/API configuration and packaged START_HERE alignment; evaluator hold preserved",
   "next_action": "Integrate and exactly adopt 9be41de90ec370d67db4e2af4bf70e5636d5c2bf; update learning docs/resources only, validate new core-only install with zero model calls, commit evidence and push personal/dev",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-27T19:08:23.816735+00:00",
       "evidence": "2026-11-28 host send_message_to_thread succeeded to verified existing same-project dev chat; exact READY 9be41de90ec370d67db4e2af4bf70e5636d5c2bf, documentation/resource-only scope and zero-model limits delivered. Receipt/adoption/completion not yet observed."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T19:08:48.482711+00:00",
+      "evidence": "2026-11-28 observed dev acknowledgement of S2c document/resource-only work and committed exact adoption c12b2e2 of READY 9be41de90ec370d67db4e2af4bf70e5636d5c2bf; host turn inProgress. Implementation and completion remain pending."
     }
   ]
 }
