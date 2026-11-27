@@ -24,13 +24,15 @@ S2a 현재 workload에서 보수적 최대45 embedding workers다: semantic unit
 
 ## 비교 지표와 검토
 
-source facts의 후보N20/topK/문맥 recall·all_required·fulfilled ID·유효 분모를 보고한다. gt09/gt10의 fact recall은 N/A다. 다른 청크 fingerprint의 S1 qrels를 재사용하지 않으므로 새 chunk relevance 주석이 없는 이번 비교의 Recall@K/MRR/nDCG는 N/A로 둔다. source fact recall과 chunk Recall@K를 같은 이름으로 표시하지 않는다. Faithfulness/Correctness·답변 품질도 미측정이다.
+source facts의 후보N20/topK/문맥 recall·all_required·fulfilled ID·유효 분모를 보고한다. 현재 chunk_compare.facts_for의 `candidate`는 Hybrid branch union 전체(최대40개)이므로 이를N20이라고 바꿔 부르지 않는다. 원래 필드는 branch_union으로 해설하고, 보고서에서 저장된 합친 순위의 앞20개로 candidate_N20을 별도로 계산한다. 패키지의 기존 지표 의미를 몰래 변경하지 않는다. gt09/gt10의 fact recall은 N/A다. 다른 청크 fingerprint의 S1 qrels를 재사용하지 않으므로 새 chunk relevance 주석이 없는 이번 비교의 Recall@K/MRR/nDCG는 N/A로 둔다. source fact recall과 chunk Recall@K를 같은 이름으로 표시하지 않는다. Faithfulness/Correctness·답변 품질도 미측정이다.
 
 각 방식의 chunk 수/길이/중복·경계 원인, model boundary 비용과 색인/query 비용, cold latency·관측 RSS, 새 요청과 저장 재생0호출을 구분한다. gt01·gt03·gt06의 조건/예외·다중 구간 근거와 목차/heading 혼입을 같은 원문에서 대조한다. semantic 방식이 규칙보다 낫다는 결론을 미리 정하지 않는다. 경계가 길이 한도로 강제되는 비율도 공개하여 모델이 실제 결정한 부분을 설명한다.
 
 ## 구현·검증 준비 항목
 
 기존 설치 CLI/코어/owned-worker 관찰을 사용한다. stage별 새 ledger와 dispatch 전 예약, 항목/worker/시간/실패/미확정 관리가 필요하면 별도 runner로 구현하며 S1 runner/evidence는 불변으로 둔다. 초과 요청·deadline·불명확한 worker·source/profile/artifact 변조·일부 실패 후 자동 재개 거부를 모델 없는 독립 시험으로 검증한다. 기존 source-free 설치물과 SDK·실제 model 파일 hash를 재검증한다. 이 초안 때문에 모델을 추가 다운로드하거나 설치 버전을 바꾸지 않는다.
+
+현재 rag.compare는 variant/질문별 오류를 저장하고 반복을 계속할 수 있다. 실험 runner는 worker exit0만 성공으로 보지 말고 SDK JSON 오류·실패 결과·저장 오류에서도 영구 halted를 기록해 이후 dispatch를 거부해야 한다. 상위 compare가 실패 행을 추가 기록하는 것과 실제 worker가 재시작되는 것을 구분한다. 거부 뒤 실제 호출0을 독립 시험으로 확인한다. 앞2질문 검토·나머지8질문 진행과 설치 comparison/replay를 같은45회 안에 연결할 방법을 READY 검토에서 확정하며, CLI 검증 때문에 전체 호출을 다시 반복하지 않는다.
 
 결과는 저장된 실제4방식 비교 보고서와 설치 UI에서 원문→단위/경계→청크→후보→전달 문맥으로 읽을 수 있어야 한다. source 없는 설치 경로와 입력 fingerprint, 모델0 replay, 허용 desktop/narrow/keyboard 관찰 및 학습 안내를 남긴다. P029 filepicker 차단은 우회하지 않는다. 기존1513보존 파일과 S1/S2a 전체 산출물 hash를 검사하고 정상 personal/dev에 전달한다.
 
