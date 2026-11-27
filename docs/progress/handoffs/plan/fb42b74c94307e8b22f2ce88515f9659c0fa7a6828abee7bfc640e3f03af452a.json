@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "61499e4971731fbb95c41ad670ffa8a48fc30ce3",
+  "document": "docs/planning/handoffs/P031.md",
+  "summary": "P031 model preparation READY after P030 completion",
+  "next_action": "Integrate exact READY, adopt and commit, verify guard/queue, implement C1-C3 within tiny/fake validation scope; preserve evaluator and P029 holds",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T17:15:00.830778+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
