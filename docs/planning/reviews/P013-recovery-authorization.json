@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "P013-recovery-20261127-v1",
+  "status": "READY_AFTER_EXACT_ADOPTION",
+  "human_source": "Direct human instruction in HR RAG plan chat",
+  "date": "2026-11-27",
+  "instruction": "좋아 그 방향으로 P013 재개 플랜 잡고 dev에 전달해줘. 8B 단독 실행 메모리부터 확인하고, 4B 답변 생성 후 8B로 평가하는 순서로 진행하자.",
+  "contract": "docs/planning/specs/P013-resource-recovery-v1.md",
+  "contract_sha256": "d6c8b78bb738b16aa6feeadf3ca86bd68af555610cbb36c9854a7c0c6fa1aa0b",
+  "parent_dev_commit": "6cad4c6d1ee36ef0c9ae864a84b8299fd069bd11",
+  "parent_manifest_digest": "007f38f7c5ae6f6de30baff8762717db87b3e757218457b334bc14109e8fb514",
+  "parent_ledger_file_sha256": "ff1ea3dbb31f946c717b35549229d4cd878278ed04cb2e9b4673c5e025b519ca",
+  "parent_consumed_case": "extract01-r1",
+  "first_resume_case": "extract01-r2",
+  "single_use": true,
+  "new_wall_seconds": 14400,
+  "remaining_work_requests": {
+    "extraction": 15,
+    "judge": 68,
+    "query_embedding": 20,
+    "generation_4b": 20,
+    "evaluation_8b": 180
+  },
+  "max_remaining_work_requests": 303,
+  "max_work_requests_including_parent": 304,
+  "max_unload_control_requests": 4,
+  "max_new_provider_operations": 307,
+  "parallel": 1,
+  "automatic_retries": 0,
+  "approval_boundary": "Only the recorded completed-request resource stop and expired execution window; never clears an ambiguous provider request, unrelated stop or changes approved data/model/scoring."
+}
