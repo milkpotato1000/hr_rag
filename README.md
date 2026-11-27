@@ -112,3 +112,5 @@ http://127.0.0.1:8000 에서 검색→문맥→답변·인용·보류를 관찰�
 [학습 가이드](<1. Naive RAG/LEARNING_GUIDE.md>)는 구현 숙제 대신 예상·실패 분류·한 변수 실험·평가 해석을 안내합니다.
 종료는 UI 터미널 Ctrl+C와 `.venv/bin/python scripts/runtime.py stop`입니다.
 실제 답변의 조건 누락/과도보류가 남아 있으며 [P004 의미 검토](docs/verification/p004/final-review.md)와 [P005 검증](docs/verification/p005/README.md)에 공개합니다.
+
+범용 패키지의 [Hybrid 검색 실습](docs/learning/rag-package/hybrid.md)과 [3. Hybrid RAG](<3. Hybrid RAG/README.md>)는 BM25/Dense/RRF를 비교합니다. 실제 한국어 모델 품질·평가기 실험은 별도 후속입니다.

@@ -25,7 +25,10 @@
     "rag_package/ui_jobs.py",
     "rag_package/ui_registry.py",
     "rag_package/ui_server.py",
-    "rag_package/workspace.py"
+    "rag_package/workspace.py",
+    "rag_package/embedding.py",
+    "rag_package/embedding_worker.py",
+    "rag_package/search_metrics.py"
   ],
   "resources": [
     "rag_package/provenance.json",
@@ -47,7 +50,8 @@
     "rag_package/resources/sample/START_HERE.md",
     "rag_package/ui/index.html",
     "rag_package/ui/app.js",
-    "rag_package/ui/style.css"
+    "rag_package/ui/style.css",
+    "rag_package/requirements-retrieval.lock"
   ],
   "sdist_extra": [
     "pyproject.toml",

@@ -18,13 +18,20 @@ def main(argv=None):
         a=subs.add_parser('ask');a.add_argument('--run',required=True);a.add_argument('--config',required=True);a.add_argument('--question',required=True);a.add_argument('--execute',action='store_true')
         c=subs.add_parser('compare');c.add_argument('--snapshot',required=True);c.add_argument('--configs',nargs='+',required=True);c.add_argument('--questions',required=True);c.add_argument('--execute',action='store_true')
         for sub in (s,b,a,c):sub.add_argument('--out',required=True)
+        for sub in (b,a,c):sub.add_argument('--execute-retrieval',action='store_true')
+        c.add_argument('--qrels')
+        preview=subs.add_parser('retrieval-preview');preview.add_argument('--config',required=True)
         dp=subs.add_parser('drive-preview');dp.add_argument('--config',required=True)
         dl=subs.add_parser('drive-pull');dl.add_argument('--config',required=True);dl.add_argument('--out',required=True);dl.add_argument('--execute',action='store_true')
         login=subs.add_parser('drive-login');login.add_argument('--client-secret-file',required=True);login.add_argument('--credentials-file',required=True);login.add_argument('--execute',action='store_true')
         init=subs.add_parser('init');init.add_argument('--out',required=True)
         doctor=subs.add_parser('doctor');doctor.add_argument('--config')
         server=subs.add_parser('serve');server.add_argument('--workspace',required=True);server.add_argument('--sources');server.add_argument('--llm-config',required=True,action='append');server.add_argument('--drive-config',action='append',default=[]);server.add_argument('--port',type=int,default=8765);server.add_argument('--allow-model-execution',action='store_true');server.add_argument('--allow-drive-download',action='store_true')
+        server.add_argument('--embedding-config',action='append',default=[]);server.add_argument('--allow-retrieval-execution',action='store_true')
         args=p.parse_args(argv)
+        if args.command=='retrieval-preview':
+            from .retrieval import dry_run
+            print(json.dumps(dry_run(args.config),ensure_ascii=False));return 0
         if args.command=='serve':
             from .ui_server import serve
             return serve(args)
@@ -47,16 +54,20 @@ def main(argv=None):
             print(json.dumps(r,ensure_ascii=False));return 0
         elif args.command=='snapshot':
             r=snapshot(args.sources,args.out);ok=r['identity']['status']=='ready'
-        elif args.command=='build':r=build(args.snapshot,args.config,args.out);ok=True
+        elif args.command=='build':r=build(args.snapshot,args.config,args.out,execute_retrieval=args.execute_retrieval);ok=True
         elif args.command=='ask':
-            r=ask(args.run,args.config,args.question,args.out,execute=args.execute);ok=r['status'] in ('preview','answered','abstained')
+            r=ask(args.run,args.config,args.question,args.out,execute=args.execute,execute_retrieval=args.execute_retrieval);ok=r['status'] in ('preview','answered','abstained')
         else:
-            r=compare(args.snapshot,args.configs,args.questions,args.out,execute=args.execute);ok=not any(x['status']=='failed' for x in r['rows'])
+            r=compare(args.snapshot,args.configs,args.questions,args.out,execute=args.execute,execute_retrieval=args.execute_retrieval,qrels=args.qrels);ok=not any(x['status']=='failed' for x in r['rows'])
+        if args.command=='build':
+            from .storage import read_json
+            from pathlib import Path
+            r['embedding_work']=read_json(Path(args.out)/'embedding-work.json')
         # Full private content remains in the requested artifact, not generic console logs.
-        print(json.dumps({'status':'complete' if ok else 'needs_review_or_failed','command':args.command,'execution_kind':r.get('execution_kind','offline'),'artifact_written':True}))
+        print(json.dumps({'status':'complete' if ok else 'needs_review_or_failed','command':args.command,'execution_kind':r.get('execution_kind','offline'),'artifact_written':True,'embedding_work':r.get('embedding_work'),'generation_requests':r.get('generation_requests',0)}))
         return 0 if ok else 1
     except (RagError,ValidationError) as e:
-        print(json.dumps({'status':'error','error':{'code':e.code,'stage':getattr(e,'stage','input')},'dispatch_attempted':getattr(e,'dispatch_attempted',False),'requests':getattr(e,'requests',0),'request_stages':getattr(e,'request_stages',[]),'auth_refresh_attempted':getattr(e,'auth_refresh_attempted',False)}));return 2
+        print(json.dumps({'status':'error','error':{'code':e.code,'stage':getattr(e,'stage','input')},'dispatch_attempted':getattr(e,'dispatch_attempted',False),'offending_ids':getattr(e,'offending_ids',[]),'requests':getattr(e,'requests',0),'request_stages':getattr(e,'request_stages',[]),'auth_refresh_attempted':getattr(e,'auth_refresh_attempted',False)}));return 2
     except Exception:
         print(json.dumps({'status':'error','error':{'code':'internal_error'}}));return 2
 

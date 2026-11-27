@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "sdk": {
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0",
+    "transformers": "5.24.1",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0"
+  },
+  "pretrained_models_loaded": 0,
+  "actual_network_calls": 0,
+  "results": [
+    {
+      "label": "tiny_random_sdk_not_pretrained",
+      "catalog_contract": "intfloat/multilingual-e5-small",
+      "parameters": 965792,
+      "dimension": 384,
+      "stats": {
+        "jobs": 1,
+        "documents": 2,
+        "queries": 0,
+        "elapsed_ms": 3349.0173749887617,
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "peak_rss_bytes": 426000384,
+        "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
+        "sampling_interval_ms": null,
+        "execution_kind": "local_hf",
+        "worker_exited": true
+      },
+      "length_rejected": true,
+      "prefix_pooling_normalization_matches_manual": true,
+      "profile_path": ".rag-runs/p010-sdk/tiny/e5/profile.json"
+    },
+    {
+      "label": "tiny_random_sdk_not_pretrained",
+      "catalog_contract": "BAAI/bge-m3",
+      "parameters": 5852192,
+      "dimension": 1024,
+      "stats": {
+        "jobs": 1,
+        "documents": 2,
+        "queries": 0,
+        "elapsed_ms": 3571.2280000007013,
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "peak_rss_bytes": 448249856,
+        "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
+        "sampling_interval_ms": null,
+        "execution_kind": "local_hf",
+        "worker_exited": true
+      },
+      "length_rejected": true,
+      "prefix_pooling_normalization_matches_manual": true,
+      "profile_path": ".rag-runs/p010-sdk/tiny/bge/profile.json"
+    }
+  ]
+}

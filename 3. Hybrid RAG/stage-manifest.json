@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "stage": "3. Hybrid RAG",
+  "P": "P010",
+  "implementation": "installed rag_package; no hidden previous-stage paths",
+  "copied_sources": [
+    {
+      "source_commit": "78b85c8dbd4c34ec06a429384a3910d5fbd8625e",
+      "source_path": "rag_package/resources/sample/sources.json",
+      "path": "sources.json",
+      "sha256": "f73bf97f59fd4106ec4f433f675d4524467864903fdd064905366732159acb56"
+    },
+    {
+      "source_commit": "78b85c8dbd4c34ec06a429384a3910d5fbd8625e",
+      "source_path": "rag_package/resources/sample/questions.json",
+      "path": "questions.json",
+      "sha256": "c57b49f6ebf673a9380673fe0e01676856a219ec30af397ba6cf0175989921a5"
+    },
+    {
+      "source_commit": "78b85c8dbd4c34ec06a429384a3910d5fbd8625e",
+      "source_path": "rag_package/resources/sample/llm-local.json",
+      "path": "llm-local.json",
+      "sha256": "bab989af741a76d1ddba7cb56e678c6d124cd4420c3c832aa6212ed013ef6dd4"
+    },
+    {
+      "source_commit": "78b85c8dbd4c34ec06a429384a3910d5fbd8625e",
+      "source_path": "rag_package/resources/sample/llm-api.json",
+      "path": "llm-api.json",
+      "sha256": "a16c07f73b21a8ae55429f4f8f6a0a88314a084cb16fc63baab5542f3d9a10b2"
+    },
+    {
+      "source_commit": "78b85c8dbd4c34ec06a429384a3910d5fbd8625e",
+      "source_path": "rag_package/resources/sample/documents/birthday.md",
+      "path": "documents/birthday.md",
+      "sha256": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71"
+    },
+    {
+      "source_commit": "78b85c8dbd4c34ec06a429384a3910d5fbd8625e",
+      "source_path": "rag_package/resources/sample/documents/annual.txt",
+      "path": "documents/annual.txt",
+      "sha256": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6"
+    },
+    {
+      "source_commit": "78b85c8dbd4c34ec06a429384a3910d5fbd8625e",
+      "source_path": "rag_package/resources/sample/.gitignore",
+      "path": ".gitignore",
+      "sha256": "a43ffcd36c18c6efe135879b35adb3164348e2998b39e10476acce1690e1e8c0"
+    }
+  ],
+  "pretrained_quality": "not_verified",
+  "examples": "placeholder; no weight download or model call"
+}

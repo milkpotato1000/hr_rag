@@ -2,7 +2,7 @@
 import copy
 from pathlib import Path
 import time
-from . import llm
+from . import llm,embedding
 from .llm.config import fields, ValidationError, read_json as input_json
 from .storage import RagError,require,fingerprint,write_json,staging,seal,new_output
 from .retrieval import config,effective,build,load_build,select
@@ -43,15 +43,16 @@ def business_answer(value,contexts):
     except ValidationError:raise RagError('invalid_answer_schema','answer_validation') from None
 
 
-def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver=None):
+def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver=None,execute_retrieval=False,embedding_backend=None,qrels=None,question_id=None,questions_hash=None):
     started=time.monotonic();new_output(out)
     require(type(execute) is bool,'invalid_execute','config')
     c,lc=config(config_path);p=lc['profiles'][lc['roles']['generation']]
     require(p['response_mode']=='json_object','json_object_required','config')
     bm,docs,chunks=load_build(run,c);loaded=time.monotonic()
-    candidates,contexts,excluded=select(chunks,question,c['retrieval']);searched=time.monotonic()
+    trace={};ep=embedding.read_profile(c['embedding_config']) if c.get('embedding_config') else None
+    candidates,contexts,excluded=select(chunks,question,c['retrieval'],run=run,embedding_profile=ep,execute_retrieval=execute_retrieval,embedding_backend=embedding_backend,trace=trace);searched=time.monotonic()
     messages=messages_for(question,contexts,docs);preview=llm.preview(lc,'generation',messages)
-    result={'schema_version':1,'status':'preview','execution_kind':'test_fixture' if transport is not None else ('live' if execute else 'preview'),
+    result={'schema_version':1,'status':'preview','execution_kind':'test_fixture' if transport is not None or embedding_backend is not None else ('live' if execute else 'preview'),
             'source_fingerprint':bm['identity']['source_fingerprint'],'chunk_fingerprint':bm['identity']['chunk_fingerprint'],
             'index_fingerprint':bm['identity']['index_fingerprint'],'config_hash':fingerprint(effective(c,lc)),
             'query_hash':fingerprint(question),'question':question,'prompt_version':PROMPT_VERSION,'messages_hash':fingerprint(messages),
@@ -61,6 +62,13 @@ def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver
             'usage':None,'cost':None,'cost_status':'unmeasured','latency_ms':{'load_build':(loaded-started)*1000,'retrieval':(searched-loaded)*1000,'provider':None},
             'generation_request_upper_bound':1 if contexts else 0,
             'context_budget_note':'Sum of whole chunk text characters; excludes prompt overhead and is not a model token budget.'}
+    result['retrieval_trace']=trace;result['embedding_work']=trace['embedding_work'];result['generation_requests']=0
+    if qrels is not None:
+        from .search_metrics import validate_qrels,validate_corpus,metrics
+        qr=validate_qrels(qrels,bm['identity']['source_fingerprint'],questions_hash)
+        require(qr['chunk_fingerprint']==bm['identity']['chunk_fingerprint'] and question_id in qr['judgments'],'qrels_chunk_mismatch','evaluation')
+        require(all(set(gs)<={x['chunk_id'] for x in chunks} for gs in qr['judgments'].values()),'qrels_unknown_chunk','evaluation')
+        result['metrics']['retrieval']=metrics(candidates,qr['judgments'][question_id],c['retrieval']['top_k'],qr['judgments_complete'])
     if any('origin' in d for d in docs):
         result['source_origins']={d['document_id']:d['origin'] for d in docs if 'origin' in d}
     try:
@@ -71,7 +79,7 @@ def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver
                 response=llm.invoke(lc,'generation',messages,transport=transport,key_resolver=key_resolver)
                 # Retain metadata, never retain raw/nonvalidated model content in final artifacts.
                 result['provider_result']={k:v for k,v in response.items() if k not in ('content','parsed_json')}
-                result['dispatch_attempted']=response['dispatch_attempted'];result['usage']=response['usage'];result['latency_ms']['provider']=response['elapsed_ms']
+                result['dispatch_attempted']=response['dispatch_attempted'];result['generation_requests']=int(response['dispatch_attempted']);result['usage']=response['usage'];result['latency_ms']['provider']=response['elapsed_ms']
                 if response['status']!='complete':
                     result.update(status='failed',failed_stage='provider',error={'code':'provider_'+response['status']})
                 else:
@@ -104,19 +112,23 @@ def question_set(path):
 def changed_axes(a,b):
     changes=[]
     for section in ('chunking','retrieval'):
-        changes += [section+'.'+k for k in a[section] if a[section][k]!=b[section][k]]
+        changes += [section+'.'+k for k in sorted(set(a[section])|set(b[section])) if a[section].get(k)!=b[section].get(k)]
     if a['llm']!=b['llm']:changes.append('llm')
+    if a.get('embedding')!=b.get('embedding'):changes.append('embedding')
     return changes
 
 
-def compare(snapshot_dir,configs,questions,out,*,execute=False,transport=None,key_resolver=None):
+def compare(snapshot_dir,configs,questions,out,*,execute=False,transport=None,key_resolver=None,execute_retrieval=False,embedding_backend=None,qrels=None):
     started=time.monotonic();new_output(out)
     require(2<=len(configs)<=4,'config_count','compare')
     qs=question_set(questions);sm,_=load_snapshot(snapshot_dir)
     checked=[config(p) for p in configs]  # Validate every setting before any generation.
     for c,lc in checked:require(lc['profiles'][lc['roles']['generation']]['response_mode']=='json_object','json_object_required','config')
     settings=[effective(c,lc) for c,lc in checked]
-    rows=[];builds=[]
+    rows=[];builds=[];reuse_cache={};embedding_totals={'jobs':0,'documents':0,'queries':0}
+    if qrels is not None:
+        from .search_metrics import validate_qrels
+        qrels=validate_qrels(qrels,sm['fingerprint'],fingerprint(qs))
     try:
         with staging(out) as tmp:
             for n,path in enumerate(configs):
@@ -125,28 +137,40 @@ def compare(snapshot_dir,configs,questions,out,*,execute=False,transport=None,ke
                 c,lc=checked[n];write_json(frozen/'provider.json',lc)
                 write_json(frozen/'rag.json',dict(c,llm_config='provider.json'));path=frozen/'rag.json'
                 try:
-                    bm=build(snapshot_dir,path,run)
+                    cache_key=fingerprint({'source':sm['fingerprint'],'chunking':c['chunking'],'embedding':settings[n].get('embedding')})
+                    bm=build(snapshot_dir,path,run,execute_retrieval=execute_retrieval,embedding_backend=embedding_backend,reuse=reuse_cache.get(cache_key) if c['retrieval']['method']!='bm25' else None)
+                    if c['retrieval']['method']!='bm25':reuse_cache[cache_key]=run
+                    from .storage import read_json
+                    work=read_json(run/'embedding-work.json')
+                    for key in embedding_totals:embedding_totals[key]+=work[key]
+                    if qrels is not None:
+                        from .search_metrics import validate_corpus
+                        validate_corpus(qrels,bm,read_json(run/'chunks.json'),qs)
                     require(bm['identity']['source_fingerprint']==sm['fingerprint'],'source_changed_during_compare','compare')
                     builds.append({'config_id':label,'status':'ready','chunk_fingerprint':bm['identity']['chunk_fingerprint'],'index_fingerprint':bm['identity']['index_fingerprint'],'build_ms':bm['elapsed_ms']})
-                except (RagError,ValidationError) as e:
+                except (RagError,ValidationError,OSError,UnicodeError) as e:
                     code=getattr(e,'code','invalid_input');builds.append({'config_id':label,'status':'failed','error':code})
-                    for q in qs:rows.append({'config_id':label,'question_id':q['id'],'status':'failed','failed_stage':'build','error':code,'dispatch_attempted':getattr(e,'dispatch_attempted',False),'execution_kind':'test_fixture' if transport is not None else ('live' if execute else 'preview'),'source_fingerprint':sm['fingerprint'],'usage':None,'metrics':copy.deepcopy(METRICS),'cost':None})
+                    for q in qs:rows.append({'config_id':label,'question_id':q['id'],'status':'failed','failed_stage':'build','error':code,'dispatch_attempted':getattr(e,'dispatch_attempted',False),'execution_kind':'test_fixture' if transport is not None or embedding_backend is not None else ('live' if execute else 'preview'),'source_fingerprint':sm['fingerprint'],'usage':None,'metrics':copy.deepcopy(METRICS),'cost':None})
                     continue
                 for q in qs:
                     answer_dir=tmp/label/'answers'/q['id']
                     try:
-                        r=ask(run,path,q['question'],answer_dir,execute=execute,transport=transport,key_resolver=key_resolver)
+                        r=ask(run,path,q['question'],answer_dir,execute=execute,transport=transport,key_resolver=key_resolver,execute_retrieval=execute_retrieval,embedding_backend=embedding_backend,qrels=qrels,question_id=q['id'],questions_hash=fingerprint(qs))
+                        for key in embedding_totals:embedding_totals[key]+=r['embedding_work'][key]
                         rows.append({'config_id':label,'question_id':q['id'],'status':r['status'],'failed_stage':r['failed_stage'],'error':r['error'],
                                      'dispatch_attempted':r['dispatch_attempted'],'execution_kind':r['execution_kind'],'source_fingerprint':r['source_fingerprint'],
                                      'result_path':str((answer_dir/'result.json').relative_to(tmp)),'metrics':r['metrics'],'usage':r['usage'],'cost':None,'latency_ms':r['latency_ms']})
-                    except (RagError,ValidationError) as e:
-                        rows.append({'config_id':label,'question_id':q['id'],'status':'failed','failed_stage':getattr(e,'stage','input'),'error':getattr(e,'code','invalid_input'),'dispatch_attempted':getattr(e,'dispatch_attempted',False),'execution_kind':'test_fixture' if transport is not None else ('live' if execute else 'preview'),'source_fingerprint':sm['fingerprint'],'usage':None,'metrics':copy.deepcopy(METRICS),'cost':None})
-            summary={'schema_version':1,'execution_kind':'test_fixture' if transport is not None else ('live' if execute else 'preview'),
+                    except (RagError,ValidationError,OSError,UnicodeError) as e:
+                        rows.append({'config_id':label,'question_id':q['id'],'status':'failed','failed_stage':getattr(e,'stage','input'),'error':getattr(e,'code','invalid_input'),'dispatch_attempted':getattr(e,'dispatch_attempted',False),'execution_kind':'test_fixture' if transport is not None or embedding_backend is not None else ('live' if execute else 'preview'),'source_fingerprint':sm['fingerprint'],'usage':None,'metrics':copy.deepcopy(METRICS),'cost':None})
+            summary={'schema_version':1,'execution_kind':'test_fixture' if transport is not None or embedding_backend is not None else ('live' if execute else 'preview'),
                      'source_fingerprint':sm['fingerprint'],'questions_hash':fingerprint(qs),'questions':qs,
                      'configs':[{'id':f'config-{n+1}','hash':fingerprint(s),'settings':s,'changed_axes_vs_first':changed_axes(settings[0],s)} for n,s in enumerate(settings)],
                      'generation_request_upper_bound':len(configs)*len(qs),'retry_count':0,'builds':builds,'rows':rows,
                      'status_counts':{status:sum(r['status']==status for r in rows) for status in sorted({r['status'] for r in rows})},
-                     'cost':None,'cost_status':'unmeasured','metrics':copy.deepcopy(METRICS),'source_parse_ms':sm['elapsed_ms'],'total_ms':(time.monotonic()-started)*1000}
+                     'embedding_work':embedding_totals,'generation_requests':sum(int(r.get('dispatch_attempted') is True) for r in rows),'cost':None,'cost_status':'unmeasured','metrics':copy.deepcopy(METRICS),'source_parse_ms':sm['elapsed_ms'],'total_ms':(time.monotonic()-started)*1000}
+            if qrels is not None:
+                from .search_metrics import aggregate
+                summary['search_metrics']=aggregate(rows)
             write_json(tmp/'comparison.json',summary)
             lines=['# RAG 비교','',f"실행 종류: {summary['execution_kind']}. 비용 미측정. 품질 지표 N/A; 평가기/정답 미연결.",'',f"생성 요청 상한: {summary['generation_request_upper_bound']}; 자동 재시도 0.",'','| 설정 | 질문 ID | 상태 | 실패 단계 |','| --- | --- | --- | --- |']
             lines.extend(f"| {r['config_id']} | {r['question_id']} | {r['status']} | {r.get('failed_stage') or '-'} |" for r in rows)

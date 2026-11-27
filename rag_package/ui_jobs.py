@@ -7,6 +7,7 @@ from .llm.config import number,ValidationError
 from .llm.core import configuration_required
 from .documents import snapshot,load_snapshot,safe_id
 from .retrieval import build
+from . import embedding
 from .rag import ask,compare
 from .connectors.google_drive import pull_memory
 from .connectors.drive_config import validate_memory,preview_memory
@@ -14,20 +15,22 @@ from .connectors.drive_config import validate_memory,preview_memory
 TERMINAL={'completed','needs_review','failed','interrupted'}
 
 def settings(chunking,retrieval):
-    exact(chunking,('method','size_chars','overlap_chars'));exact(retrieval,('method','top_k','context_budget_chars'))
-    require(chunking['method'] in ('fixed','recursive','structure'),'unsupported_chunking','input');require(retrieval['method']=='bm25','unsupported_retrieval','input')
+    exact(chunking,('method','size_chars','overlap_chars'));exact(retrieval,('method','top_k','context_budget_chars'),('candidate_k','rrf_k'))
+    require(chunking['method'] in ('fixed','recursive','structure'),'unsupported_chunking','input');require(retrieval['method'] in ('bm25','dense','hybrid'),'unsupported_retrieval','input')
     try:
         number(chunking['size_chars'],100,4000,'size',True);number(chunking['overlap_chars'],0,min(400,chunking['size_chars']-1),'overlap',True)
+        if 'candidate_k' in retrieval or 'rrf_k' in retrieval or retrieval['method']!='bm25':
+            number(retrieval.get('candidate_k'),retrieval['top_k'],1000,'candidate_k',True);number(retrieval.get('rrf_k'),1,1000,'rrf_k',True)
         number(retrieval['top_k'],1,100,'top_k',True);number(retrieval['context_budget_chars'],1,64000,'budget',True)
     except (ValidationError,TypeError):raise RagError('invalid_settings','input') from None
 
 def question(text):require(isinstance(text,str) and text.strip() and len(text)<=2000,'invalid_question','input')
 
 class Jobs:
-    def __init__(self,registry,allow_model=False,allow_drive=False,*,transport=None,key_resolver=None,drive_transport=None,auth_backend=None,env_resolver=None):
-        self.registry=registry;self.allow_model=allow_model;self.allow_drive=allow_drive
+    def __init__(self,registry,allow_model=False,allow_drive=False,*,transport=None,key_resolver=None,drive_transport=None,auth_backend=None,env_resolver=None,allow_retrieval=False,embedding_backend=None):
+        self.registry=registry;self.allow_model=allow_model;self.allow_drive=allow_drive;self.allow_retrieval=allow_retrieval;self.embedding_backend=embedding_backend
         self.transport=transport;self.key_resolver=key_resolver;self.drive_transport=drive_transport;self.auth_backend=auth_backend;self.env_resolver=env_resolver
-        self.fixture=any(x is not None for x in (transport,key_resolver,drive_transport,auth_backend,env_resolver));self.lock=threading.RLock();self.active=None;self.records={};self.thread=None
+        self.fixture=any(x is not None for x in (transport,key_resolver,drive_transport,auth_backend,env_resolver,embedding_backend));self.lock=threading.RLock();self.active=None;self.records={};self.thread=None
         for p in (registry.root/'jobs').glob('*.json'):
             contained(registry.workspace,p);r=read_json(p);check_id(r['id']);self.records[r['request_id']]=r
             if r['status'] not in TERMINAL:
@@ -44,6 +47,12 @@ class Jobs:
         if execute:
             require(self.allow_model,'model_execution_disabled','permission');require(not configuration_required(p),'configuration_required','config')
         return c
+    def _embedding(self,v,retrieval):
+        enabled=v.get('execute_retrieval',False);require(type(enabled) is bool,'invalid_execute_retrieval','input')
+        if retrieval['method']=='bm25':
+            require(not v.get('embedding_config_id'),'unexpected_embedding_config','input');return None
+        require(self.allow_retrieval and enabled,'retrieval_execution_required','permission')
+        p=self.registry.embedding(v.get('embedding_config_id'));require(embedding.configured(p),'embedding_configuration_required','input');return p
     def prepare(self,v):
         kind=v['kind'];r=self.registry;plan={};summary=copy.deepcopy(v)
         if kind=='snapshot':
@@ -53,24 +62,24 @@ class Jobs:
             if kind=='drive_pull':require(self.allow_drive,'drive_download_disabled','permission')
             parsed=validate_memory(c);plan['drive']=c;summary.pop('url');summary['link_identity_hash']=fingerprint({'file_id':parsed['file_id'],'resource_key':parsed['resource_key']});plan['fingerprints']=[fingerprint(c)]
         elif kind=='build':
-            exact(v,('request_id','kind','snapshot_id','chunking','retrieval','llm_config_id'));settings(v['chunking'],v['retrieval'])
+            exact(v,('request_id','kind','snapshot_id','chunking','retrieval','llm_config_id'),('embedding_config_id','execute_retrieval'));settings(v['chunking'],v['retrieval'])
             p,e,m=r.artifact(v['snapshot_id']);require(e['kind']=='snapshot','wrong_artifact_kind','input');load_snapshot(p)
-            plan.update(source=str(p),source_fingerprint=m['fingerprint'],llm=self._llm(v['llm_config_id'],False),chunking=v['chunking'],retrieval=v['retrieval'])
+            plan.update(source=str(p),source_fingerprint=m['fingerprint'],llm=self._llm(v['llm_config_id'],False),chunking=v['chunking'],retrieval=v['retrieval'],embedding=self._embedding(v,v['retrieval']))
         elif kind=='ask':
-            exact(v,('request_id','kind','build_id','llm_config_id','question','top_k','context_budget_chars','execute'));question(v['question']);require(type(v['execute']) is bool,'invalid_execute','input')
+            exact(v,('request_id','kind','build_id','llm_config_id','question','top_k','context_budget_chars','execute'),('embedding_config_id','execute_retrieval','retrieval'));question(v['question']);require(type(v['execute']) is bool,'invalid_execute','input')
             p,e,m=r.artifact(v['build_id']);require(e['kind']=='build','wrong_artifact_kind','input')
-            retrieval={'method':'bm25','top_k':v['top_k'],'context_budget_chars':v['context_budget_chars']};chunking=m['identity']['chunk_identity']['config'];settings(chunking,retrieval)
-            plan.update(source=str(p),source_fingerprint=m['fingerprint'],llm=self._llm(v['llm_config_id'],v['execute']),chunking=chunking,retrieval=retrieval,snapshot_id=e['snapshot_id'])
+            retrieval=v.get('retrieval',{'method':'bm25','top_k':v['top_k'],'context_budget_chars':v['context_budget_chars']});chunking=m['identity']['chunk_identity']['config'];settings(chunking,retrieval)
+            plan.update(source=str(p),source_fingerprint=m['fingerprint'],llm=self._llm(v['llm_config_id'],v['execute']),chunking=chunking,retrieval=retrieval,snapshot_id=e['snapshot_id'],embedding=self._embedding(v,retrieval))
         elif kind=='compare':
-            exact(v,('request_id','kind','snapshot_id','variants','questions','execute'));require(type(v['execute']) is bool,'invalid_execute','input')
+            exact(v,('request_id','kind','snapshot_id','variants','questions','execute'),('execute_retrieval',));require(type(v['execute']) is bool,'invalid_execute','input')
             variants=v['variants'];qs=v['questions'];require(isinstance(variants,list) and 2<=len(variants)<=4 and isinstance(qs,list) and 1<=len(qs)<=20,'comparison_limit','input')
             ids=set()
             for q in qs:
                 exact(q,('id','question'));require(safe_id(q['id']) and q['id'] not in ids,'invalid_question_id','input');ids.add(q['id']);question(q['question'])
             ps=[]
             for x in variants:
-                exact(x,('label','chunking','retrieval','llm_config_id'));require(isinstance(x['label'],str) and 1<=len(x['label'])<=100,'invalid_label','input');settings(x['chunking'],x['retrieval'])
-                ps.append({'llm':self._llm(x['llm_config_id'],v['execute']),'chunking':x['chunking'],'retrieval':x['retrieval']})
+                exact(x,('label','chunking','retrieval','llm_config_id'),('embedding_config_id',));require(isinstance(x['label'],str) and 1<=len(x['label'])<=100,'invalid_label','input');settings(x['chunking'],x['retrieval'])
+                ps.append({'llm':self._llm(x['llm_config_id'],v['execute']),'chunking':x['chunking'],'retrieval':x['retrieval'],'embedding':self._embedding(dict(x,execute_retrieval=v.get('execute_retrieval',False)),x['retrieval'])})
             p,e,m=r.artifact(v['snapshot_id']);require(e['kind']=='snapshot','wrong_artifact_kind','input');load_snapshot(p);plan.update(source=str(p),source_fingerprint=m['fingerprint'],variants=ps)
         else:raise RagError('unsupported_job','input')
         return plan,summary
@@ -89,7 +98,11 @@ class Jobs:
             self.persist(r);self.records[rid]=r;self.active=key
             self.thread=threading.Thread(target=self.run,args=(r,v,plan),daemon=True);self.thread.start();return copy.deepcopy(r),True
     def _config(self,work,plan,name='settings'):
-        p=work/name;p.mkdir();write_json(p/'llm.json',plan['llm']);write_json(p/'rag.json',{'schema_version':1,'chunking':plan['chunking'],'retrieval':plan['retrieval'],'llm_config':'llm.json'});return p/'rag.json'
+        p=work/name;p.mkdir();write_json(p/'llm.json',plan['llm']);c={'schema_version':1,'chunking':plan['chunking'],'retrieval':plan['retrieval'],'llm_config':'llm.json'}
+        if 'candidate_k' in plan['retrieval']:
+            c.update(schema_version=2,embedding_config='embedding.json' if plan.get('embedding') else None)
+            if plan.get('embedding'):write_json(p/'embedding.json',plan['embedding'])
+        write_json(p/'rag.json',c);return p/'rag.json'
     def run(self,r,v,plan):
         registry=self.registry;work=registry.root/'artifacts'/r['id'];kind=v['kind'];ids=[]
         try:
@@ -109,13 +122,13 @@ class Jobs:
                 result=pull_memory(plan['drive'],work/'result',execute=True,transport=self.drive_transport,auth_backend=self.auth_backend,env_resolver=self.env_resolver)
                 r['dispatch_attempted']=result['requests']>0;ids=[registry.add_artifact(work/'result/snapshot','snapshot')];state='completed' if result['status']=='ready' else 'needs_review'
             elif kind=='build':
-                path=self._config(work,plan);m=build(plan['source'],path,work/'result');ids=[registry.add_artifact(work/'result','build',snapshot_id=v['snapshot_id'])];state='completed';r['dispatch_attempted']=False
+                path=self._config(work,plan);m=build(plan['source'],path,work/'result',execute_retrieval=v.get('execute_retrieval',False),embedding_backend=self.embedding_backend);ids=[registry.add_artifact(work/'result','build',snapshot_id=v['snapshot_id'])];state='completed';r['dispatch_attempted']=False
             elif kind=='ask':
-                path=self._config(work,plan);result=ask(plan['source'],path,v['question'],work/'result',execute=v['execute'],transport=self.transport,key_resolver=self.key_resolver)
+                path=self._config(work,plan);result=ask(plan['source'],path,v['question'],work/'result',execute=v['execute'],transport=self.transport,key_resolver=self.key_resolver,execute_retrieval=v.get('execute_retrieval',False),embedding_backend=self.embedding_backend)
                 r['dispatch_attempted']=result['dispatch_attempted'];ids=[registry.add_artifact(work/'result','answer',snapshot_id=plan['snapshot_id'],build_id=v['build_id'])];state='failed' if result['status']=='failed' else 'completed';r['error']=result['error']
             else:
                 paths=[self._config(work,p,'settings-'+str(n)) for n,p in enumerate(plan['variants'])];write_json(work/'questions.json',v['questions'])
-                result=compare(plan['source'],paths,work/'questions.json',work/'result',execute=v['execute'],transport=self.transport,key_resolver=self.key_resolver)
+                result=compare(plan['source'],paths,work/'questions.json',work/'result',execute=v['execute'],transport=self.transport,key_resolver=self.key_resolver,execute_retrieval=v.get('execute_retrieval',False),embedding_backend=self.embedding_backend)
                 r['dispatch_attempted']=any(x['dispatch_attempted'] for x in result['rows']);children={}
                 for n in range(len(paths)):
                     b=work/'result'/('config-'+str(n+1))/'build'

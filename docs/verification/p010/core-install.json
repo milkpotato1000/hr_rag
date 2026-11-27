@@ -1,0 +1,37 @@
+[
+  {
+    "args": [
+      "uv",
+      "venv",
+      "--python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/env/bin/python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/core"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Using CPython 3.12.14 interpreter at: /private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/env/bin/python\nCreating virtual environment at: /private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/core\nActivate with: source /private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/core/bin/activate\n"
+  },
+  {
+    "args": [
+      "uv",
+      "pip",
+      "install",
+      "--python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/core/bin/python",
+      "--no-deps",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Using Python 3.12.14 environment at: /private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/core\nResolved 1 package in 0.61ms\nInstalled 1 package in 2ms\n + milkpotato-rag-lab==0.1.0.dev1 (from file:///private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl)\n"
+  },
+  {
+    "args": [
+      "core_probe.py",
+      "core"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"mode\": \"core\", \"status\": \"PASS\", \"installed_path\": \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-xosuoth4/core/lib/python3.12/site-packages/rag_package/__init__.py\"}\n",
+    "stderr": ""
+  }
+]

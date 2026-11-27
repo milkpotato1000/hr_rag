@@ -32,12 +32,13 @@ class UI:
         return {'session_token':self.token,'inputs':r.input_summary(),'configs':[r.config_summary(k) for k in r.data['configs']],
             'drive_configs':[{'id':k,'auth_mode':v['config']['auth']['mode']} for k,v in r.drives.items()],
             'allow_model_execution':self.jobs.allow_model,'allow_drive_download':self.jobs.allow_drive,'execution_kind':'test_fixture' if self.jobs.fixture else 'preview_default',
-            'capabilities':{'chunking':['fixed','recursive','structure'],'retrieval':['bm25'],'unsupported':['Dense/Hybrid','임베딩 선택','리랭커','semantic/LLM 청킹','평가기']},
+            'embedding_configs':[{'id':k,'model_id':v['config']['model_id'],'license':'MIT','configuration_required':not __import__('rag_package.embedding',fromlist=['configured']).configured(v['config']),'quality':'Korean pretrained quality unverified'} for k,v in r.embeddings.items()],'allow_retrieval_execution':self.jobs.allow_retrieval,
+            'capabilities':{'chunking':['fixed','recursive','structure'],'retrieval':['bm25','dense','hybrid'],'unsupported':['리랭커','semantic/LLM 청킹','평가기']},
             'limits':{'inputs':20,'configs':8,'upload_bytes':20*1024*1024,'concurrent_jobs':1,'comparison_requests':80},'jobs':self.jobs.summaries()}
     def artifact(self,key):
         p,e,m=self.registry.artifact(key);kind=e['kind'];out={'id':key,'kind':kind,'manifest':m,'snapshot_id':e.get('snapshot_id',key)}
         if kind=='snapshot':out['documents']=[{k:v for k,v in d.items() if k!='text'} for d in load_snapshot(p,ready=False)[1]]
-        elif kind=='build':out.update(chunks_count=len(read_json(p/'chunks.json')),coverage=read_json(p/'coverage.json'))
+        elif kind=='build':out.update(chunks_count=len(read_json(p/'chunks.json')),coverage=read_json(p/'coverage.json'),embedding_work=read_json(p/'embedding-work.json') if (p/'embedding-work.json').exists() else {'jobs':0,'documents':0,'queries':0})
         elif kind=='answer':
             result=read_json(p/'result.json')
             from .retrieval import load_build
@@ -136,11 +137,11 @@ class Handler(BaseHTTPRequestHandler):
             try:self.reply(500,error={'code':'internal_error','stage':'http'})
             except OSError:pass
 
-def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,**test_injection):
-    r=Registry(workspace,llm_configs,sources,drive_configs);jobs=Jobs(r,allow_model,allow_drive,**test_injection);return Server(port,UI(r,jobs))
+def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,**test_injection):
+    r=Registry(workspace,llm_configs,sources,drive_configs,embedding_configs);jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,**test_injection);return Server(port,UI(r,jobs))
 
 def serve(args):
-    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download)
+    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution)
     print(json.dumps({'status':'serving','url':server.origin,'execution_kind':'preview_default','model_execution_allowed':args.allow_model_execution,'drive_download_allowed':args.allow_drive_download}),flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass

@@ -1,0 +1,11 @@
+test_arithmetic (test_hybrid.HybridTests.test_arithmetic) ... ok
+test_flags_reuse_and_identity (test_hybrid.HybridTests.test_flags_reuse_and_identity) ... ok
+test_manifest_and_worker_timeout (test_hybrid.HybridTests.test_manifest_and_worker_timeout) ... ok
+test_metrics_and_compare_replay (test_hybrid.HybridTests.test_metrics_and_compare_replay) ... ok
+test_sdk_and_model_mismatch (test_hybrid.HybridTests.test_sdk_and_model_mismatch) ... ok
+test_single_worker_and_bm25_zero_embeddings (test_hybrid.HybridTests.test_single_worker_and_bm25_zero_embeddings) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.328s
+
+OK

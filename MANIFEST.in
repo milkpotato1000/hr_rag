@@ -47,3 +47,8 @@ include rag_package/ui/style.css
 include pyproject.toml
 include MANIFEST.in
 include PACKAGING.md
+
+include rag_package/embedding.py
+include rag_package/embedding_worker.py
+include rag_package/search_metrics.py
+include rag_package/requirements-retrieval.lock

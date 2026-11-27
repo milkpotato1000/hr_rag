@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "model_id": "BAAI/bge-m3",
+  "revision": "0000000000000000000000000000000000000000",
+  "local_path": "EXAMPLE_EXPORTED_MODEL_DIRECTORY",
+  "file_manifest": {},
+  "device": "cpu",
+  "dtype": "float32",
+  "max_input_tokens": 512,
+  "batch_size": 1,
+  "timeout_seconds": 120,
+  "max_chunks": 2000
+}

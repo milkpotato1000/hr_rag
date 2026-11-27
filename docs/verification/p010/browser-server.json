@@ -1,0 +1,50 @@
+{
+  "url": "http://127.0.0.1:57955",
+  "pid": 85499,
+  "installed_import": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-r5ylatli/env/lib/python3.12/site-packages/rag_package/__init__.py",
+  "execution_kind": "test_fixture",
+  "pretrained_model_llm_drive_calls": 0,
+  "stopped": true,
+  "embedding_fixture_calls": [
+    {
+      "kind": "document",
+      "count": 3,
+      "model": "intfloat/multilingual-e5-small"
+    },
+    {
+      "kind": "query",
+      "count": 1,
+      "model": "intfloat/multilingual-e5-small"
+    },
+    {
+      "kind": "document",
+      "count": 3,
+      "model": "intfloat/multilingual-e5-small"
+    },
+    {
+      "kind": "query",
+      "count": 1,
+      "model": "intfloat/multilingual-e5-small"
+    },
+    {
+      "kind": "query",
+      "count": 1,
+      "model": "intfloat/multilingual-e5-small"
+    },
+    {
+      "kind": "document",
+      "count": 3,
+      "model": "BAAI/bge-m3"
+    },
+    {
+      "kind": "query",
+      "count": 1,
+      "model": "BAAI/bge-m3"
+    },
+    {
+      "kind": "query",
+      "count": 1,
+      "model": "BAAI/bge-m3"
+    }
+  ]
+}

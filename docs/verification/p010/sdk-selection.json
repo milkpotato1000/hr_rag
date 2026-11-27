@@ -1,0 +1,14 @@
+{
+  "index": "https://pypi.org/simple",
+  "lock_sha256": "f7988bdf801f51e27ce7538805bd9c9ca8202c0d714c13901e53f9365891b32f",
+  "resolved_before_install": true,
+  "python": "3.12",
+  "platform": "macOS-26.6.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "pretrained_weights_downloaded": 0,
+  "official_sources": [
+    "https://www.sbert.net/docs/package_reference/sentence_transformer/model.html",
+    "https://huggingface.co/intfloat/multilingual-e5-small",
+    "https://huggingface.co/BAAI/bge-m3"
+  ]
+}

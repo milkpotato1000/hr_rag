@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "chunking": {
+    "method": "structure",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "retrieval": {
+    "method": "hybrid",
+    "top_k": 5,
+    "context_budget_chars": 4000,
+    "candidate_k": 20,
+    "rrf_k": 60
+  },
+  "embedding_config": "bge-embedding.json",
+  "llm_config": "llm-local.json"
+}

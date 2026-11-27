@@ -14,7 +14,8 @@ dependencies = []
 [project.optional-dependencies]
 pdf = ["pypdf==6.21.2"]
 drive = ["google-auth-oauthlib==1.5.0", "google-auth==2.63.1"]
-all = ["pypdf==6.21.2", "google-auth-oauthlib==1.5.0", "google-auth==2.63.1"]
+retrieval = ["sentence-transformers==6.3.0", "torch==2.15.0", "transformers==5.24.1"]
+all = ["sentence-transformers==6.3.0", "torch==2.15.0", "transformers==5.24.1", "pypdf==6.21.2", "google-auth-oauthlib==1.5.0", "google-auth==2.63.1"]
 
 [project.scripts]
 rag-lab = "rag_package.__main__:main"
@@ -27,4 +28,4 @@ include-package-data = false
 version = {attr = "rag_package._version.__version__"}
 
 [tool.setuptools.package-data]
-rag_package = ["provenance.json", "requirements-pdf.lock", "requirements-drive.lock", "resources/manifest.json", "resources/sample/sources.json", "resources/sample/questions.json", "resources/sample/documents/birthday.md", "resources/sample/documents/annual.txt", "resources/sample/fixed.json", "resources/sample/recursive.json", "resources/sample/structure.json", "resources/sample/llm-local.json", "resources/sample/llm-api.json", "resources/sample/drive-token-env.json", "resources/sample/drive-oauth-file.json", "resources/sample/.gitignore", "resources/sample/START_HERE.md", "ui/index.html", "ui/app.js", "ui/style.css"]
+rag_package = ["provenance.json", "requirements-retrieval.lock", "requirements-pdf.lock", "requirements-drive.lock", "resources/manifest.json", "resources/sample/sources.json", "resources/sample/questions.json", "resources/sample/documents/birthday.md", "resources/sample/documents/annual.txt", "resources/sample/fixed.json", "resources/sample/recursive.json", "resources/sample/structure.json", "resources/sample/llm-local.json", "resources/sample/llm-api.json", "resources/sample/drive-token-env.json", "resources/sample/drive-oauth-file.json", "resources/sample/.gitignore", "resources/sample/START_HERE.md", "ui/index.html", "ui/app.js", "ui/style.css"]

@@ -44,7 +44,7 @@ def atomic_json(path,value):
         if tmp is not None:tmp.unlink(missing_ok=True)
 
 class Registry:
-    def __init__(self,workspace,llm_configs,sources=None,drive_configs=()):
+    def __init__(self,workspace,llm_configs,sources=None,drive_configs=(),embedding_configs=()):
         original=Path(workspace).absolute()
         require(original.is_dir() and not any(p.is_symlink() for p in [original,*original.parents]),'invalid_workspace','registry')
         self.workspace=original.resolve();self.root=contained(self.workspace,'.rag-runs/ui');self.root.mkdir(parents=True,exist_ok=True)
@@ -54,7 +54,12 @@ class Registry:
         contained(self.workspace,self.path)
         self.data=read_json(self.path) if self.path.exists() else {'schema_version':1,'configs':{},'artifacts':{}}
         require(self.data.get('schema_version')==1 and isinstance(self.data.get('configs'),dict) and isinstance(self.data.get('artifacts'),dict),'invalid_registry','registry')
-        self.inputs={};self.drives={};self.sources_file=None
+        self.inputs={};self.drives={};self.embeddings={};self.sources_file=None
+        require(len(embedding_configs)<=4,'embedding_config_count','registry')
+        from .embedding import read_profile
+        for path in embedding_configs:
+            p=contained(self.workspace,path);raw=bounded(p);cfg=read_profile(p)
+            self.embeddings[uid()]={'config':cfg,'path':p,'sha256':digest(raw)}
         require(1<=len(llm_configs)<=8 and len(drive_configs)<=4,'config_count','registry')
         for path in llm_configs:self.register_llm(path)
         for path in drive_configs:
@@ -158,3 +163,8 @@ class Registry:
         if e['kind']=='snapshot':return p,key
         require('snapshot_id' in e,'artifact_has_no_source','registry')
         return self.snapshot_for(e['snapshot_id'])
+
+    def embedding(self,key):
+        check_id(key);entry=self.embeddings.get(key);require(entry is not None,'unknown_embedding','registry')
+        require(digest(bounded(contained(self.workspace,entry['path'])))==entry['sha256'],'stale_embedding_config','registry')
+        return copy.deepcopy(entry['config'])

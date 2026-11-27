@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "method": "actual IAB; installed wheel; injected vectors; no real model",
+  "desktop_width": 1280,
+  "desktop_document_width": 1280,
+  "narrow_width": 390,
+  "narrow_document_width": 390,
+  "selected_primary": "Hybrid RRF / E5",
+  "candidates": 3,
+  "contexts": 1,
+  "budget_excluded": 2,
+  "rrf_contributions_visible": true,
+  "negative_cosine_preserved": true,
+  "source_locate": "page1 / offset0 / NFC-LF",
+  "comparison": {
+    "rows": 4,
+    "statuses": {
+      "preview": 4
+    },
+    "variants": [
+      "E5 Hybrid",
+      "BGE Dense"
+    ],
+    "changed_axes": [
+      "retrieval.method",
+      "embedding"
+    ],
+    "generation_calls": 0
+  },
+  "keyboard": "Tab from RRF to execute-retrieval; Space toggles checkbox; Enter opens ranking details and Space closes",
+  "checkbox_setChecked_attempt": "first action did not change checked state; read DOM confirmed false; focused Space succeeded",
+  "P029_upload": "not attempted; previous policy denial unchanged",
+  "initial_tool_recovery": "inactive REPL and missing prior tab; new allowed IAB tab; no policy denial or bypass",
+  "screenshots": [
+    "desktop-hybrid.jpg",
+    "narrow-comparison.jpg"
+  ]
+}

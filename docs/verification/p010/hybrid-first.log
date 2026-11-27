@@ -1,0 +1,24 @@
+test_arithmetic (test_hybrid.HybridTests.test_arithmetic) ... ok
+test_flags_reuse_and_identity (test_hybrid.HybridTests.test_flags_reuse_and_identity) ... FAIL
+test_manifest_and_worker_timeout (test_hybrid.HybridTests.test_manifest_and_worker_timeout) ... ok
+test_metrics_and_compare_replay (test_hybrid.HybridTests.test_metrics_and_compare_replay) ... ok
+test_sdk_and_model_mismatch (test_hybrid.HybridTests.test_sdk_and_model_mismatch) ... ok
+test_single_worker_and_bm25_zero_embeddings (test_hybrid.HybridTests.test_single_worker_and_bm25_zero_embeddings) ... ok
+
+======================================================================
+FAIL: test_flags_reuse_and_identity (test_hybrid.HybridTests.test_flags_reuse_and_identity)
+----------------------------------------------------------------------
+rag_package.storage.RagError: stale_embedding_sdk: retrieval
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_hybrid.py", line 38, in test_flags_reuse_and_identity
+    with self.assertRaisesRegex(RagError,'retrieval_execution_required'):ask(self.ws/'build',self.ws/'query.json','생일 휴가',self.ws/'missing')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "retrieval_execution_required" does not match "stale_embedding_sdk: retrieval"
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.267s
+
+FAILED (failures=1)

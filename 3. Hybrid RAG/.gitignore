@@ -1,0 +1,8 @@
+.rag-runs/
+.venv/
+.env
+.env.*
+credentials*.json
+client_secret*.json
+*.pem
+*.key

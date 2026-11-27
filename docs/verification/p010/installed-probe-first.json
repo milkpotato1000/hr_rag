@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "label": "tiny_random_local_SDK_not_pretrained_quality",
+  "installed_import": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p010-installed-zybrk69g/env/lib/python3.12/site-packages/rag_package/__init__.py",
+  "network_calls": 0,
+  "pretrained_models_loaded": 0,
+  "generation_calls": 0,
+  "calls": [
+    {
+      "args": [
+        "snapshot",
+        "--sources",
+        "stage/sources.json",
+        "--out",
+        "stage/.rag-runs/snapshot"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"snapshot\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": null, \"generation_requests\": 0}\n"
+    },
+    {
+      "args": [
+        "retrieval-preview",
+        "--config",
+        "stage/e5-hybrid.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"preview\", \"retrieval\": {\"method\": \"hybrid\", \"top_k\": 5, \"context_budget_chars\": 4000, \"candidate_k\": 20, \"rrf_k\": 60}, \"embedding\": {\"model_id\": \"intfloat/multilingual-e5-small\", \"revision\": \"0000000000000000000000000000000000000000\", \"file_manifest\": {}, \"device\": \"cpu\", \"dtype\": \"float32\", \"max_input_tokens\": 512, \"catalog\": {\"dimension\": 384, \"query_prefix\": \"query: \", \"document_prefix\": \"passage: \", \"pooling\": \"mean\", \"limit\": 512, \"license\": \"MIT\", \"url\": \"https://huggingface.co/intfloat/multilingual-e5-small\"}, \"normalization\": \"l2\", \"algorithm\": \"exact-cosine-v1\"}, \"configured\": false, \"execution_required\": true, \"expected_work\": {\"build\": \"document embeddings\", \"ask\": \"query embedding even with stored document vectors\", \"generation_requests\": 0}}\n"
+    },
+    {
+      "args": [
+        "build",
+        "--snapshot",
+        "stage/.rag-runs/snapshot",
+        "--config",
+        "stage/e5-hybrid.json",
+        "--out",
+        "stage/.rag-runs/disallowed"
+      ],
+      "exit_code": 2,
+      "stdout": "{\"status\": \"error\", \"error\": {\"code\": \"retrieval_execution_required\", \"stage\": \"embedding\"}, \"dispatch_attempted\": false, \"offending_ids\": [], \"requests\": 0, \"request_stages\": [], \"auth_refresh_attempted\": false}\n"
+    },
+    {
+      "args": [
+        "build",
+        "--snapshot",
+        "stage/.rag-runs/snapshot",
+        "--config",
+        "stage/bm25.json",
+        "--out",
+        "stage/.rag-runs/bm25"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"build\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": null, \"generation_requests\": 0}\n"
+    },
+    {
+      "args": [
+        "ask",
+        "--run",
+        "stage/.rag-runs/bm25",
+        "--config",
+        "stage/bm25.json",
+        "--question",
+        "생일 휴가",
+        "--out",
+        "stage/.rag-runs/bm25-answer"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"ask\", \"execution_kind\": \"preview\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 0, \"documents\": 0, \"queries\": 0}, \"generation_requests\": 0}\n"
+    },
+    {
+      "args": [
+        "build",
+        "--snapshot",
+        "stage/.rag-runs/snapshot",
+        "--config",
+        "stage/e5-hybrid.json",
+        "--out",
+        "stage/.rag-runs/hybrid",
+        "--execute-retrieval"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"build\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": null, \"generation_requests\": 0}\n"
+    },
+    {
+      "args": [
+        "ask",
+        "--run",
+        "stage/.rag-runs/hybrid",
+        "--config",
+        "stage/e5-hybrid.json",
+        "--question",
+        "birthday leave",
+        "--out",
+        "stage/.rag-runs/hybrid-answer",
+        "--execute-retrieval"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"ask\", \"execution_kind\": \"preview\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 1, \"documents\": 0, \"queries\": 1, \"elapsed_ms\": 4011.918500007596, \"sdk_versions\": {\"sentence-transformers\": \"6.3.0\", \"torch\": \"2.15.0\", \"transformers\": \"5.24.1\", \"tokenizers\": \"0.23.3\", \"safetensors\": \"0.8.0\"}, \"peak_rss_bytes\": 428425216, \"rss_method\": \"OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode\", \"sampling_interval_ms\": null, \"execution_kind\": \"local_hf\", \"worker_exited\": true}, \"generation_requests\": 0}\n"
+    }
+  ]
+}
