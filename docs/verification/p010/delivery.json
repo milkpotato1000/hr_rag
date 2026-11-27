@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-11-28T01:23:36.864007+09:00",
+  "plan": "7ad76bdad4bd4c3aa2f08b9c5077d9e9b8bc4f5f",
+  "implementation_commit": "8e7ef784377043c9b8653ef87a254015c4eb90eb",
+  "verified_remote": "personal/dev",
+  "remote_sha": "8e7ef784377043c9b8653ef87a254015c4eb90eb",
+  "criteria": {
+    "C1": "PASS",
+    "C2": "PASS",
+    "C3": "PASS",
+    "C4": "PASS"
+  },
+  "pretrained_llm_api_drive_calls": 0,
+  "P013": "BLOCKED; grant unused",
+  "P029": "BLOCKED C4 preserved",
+  "P020": "DRAFT; not started",
+  "full_product_goal_complete": false
+}
