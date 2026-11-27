@@ -1,5 +1,7 @@
 # Project B — HR RAG → Agentic RAG 프로젝트 기획
 
+> 2026-11-27 확장 목표와 최신 순서는 [공개 모델 기반 RAG 패키지 로드맵](rag-package-roadmap.md)을 우선합니다. P024 완료, P025 모델 연결 구현 진행, P013 실모델 검증 보류입니다. 아래는 기존 단계의 설계 이력이며 현재 완료 여부는 dev 증거/큐로 확인합니다. 공개 모델이 기본이고 유료 LLM API는 선택이며 Jev/CDM 등은 필수 의존성이 아닙니다.
+
 HR 규정 문서에서 근거를 찾아 질문에 답하고, 근거가 부족하면 담당자에게 연결하는 에이전트를 만든다. 같은 문서와 평가 질문으로 검색 방식, 에이전트 흐름, 모델 서빙 설정을 비교하며 각 계층의 역할을 학습한다.
 
 기획 출처는 사용자가 2026-10-22 지정한 [HR RAG 에이전트 설계 대화](https://chatgpt.com/share/6ad97a1c-ef84-83ee-bb65-982dda568ead)다. 당시 “프로젝트 B” 원기획은 공유 범위에 없었으나 2026-10-29 사용자가 RAG Generation Evaluation 설계를 제공했다. 후속 A/B/C 정의에 따라 현재 HR RAG 전체가 Project B이며, Generation Evaluation은 [B 내부의 별도 평가 모듈](../architecture/project-b-generation-evaluation.md)이다. Project A는 NL2SQL + Tool Calling, Project C는 Multi-Agent Orchestration이며 [프로젝트 구분](project-map.md)을 따른다. 아래 단계와 P001 세부 계약은 이 대화를 실행 가능한 작업으로 구체화한 것이다.

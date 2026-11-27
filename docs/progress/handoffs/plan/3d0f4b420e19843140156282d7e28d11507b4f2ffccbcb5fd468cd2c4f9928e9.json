@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "0f7ce86a3eb2c41fbd9bd6f3a03f5acb37f3621f",
+  "document": "docs/planning/handoffs/P025.md",
+  "summary": "P025 actual LLM provider implementation; offline verification only",
+  "next_action": "Integrate/adopt exact SHA; implement three adapters and tests; preserve P013 hold",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T08:29:35.829513+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T08:30:04.880145+00:00",
+      "evidence": "Host send_message_to_thread succeeded to verified existing HR RAG dev with exact 0f7ce86a3eb2c41fbd9bd6f3a03f5acb37f3621f; actual adapters, offline-only verification, P013 hold retained."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T08:31:42.704071+00:00",
+      "evidence": "Observed dev accepting P025 on 2026-11-27: independent module/CLI, fake response and local test-server verification, no real key/model/API; hold retained. Completion separately checked."
+    }
+  ]
+}
