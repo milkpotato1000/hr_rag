@@ -59,3 +59,9 @@ P010의 격리된 설치 소스를 읽었다. requirements-retrieval.lock은 hug
 | mMiniLM reranker | 1427fd652930e4ba29e8149678df786c240d8825 | 6 / 492745974 | [metadata](../reviews/p031-mmini-reranker-source-metadata.json) |
 
 이 원본 크기는 실행 메모리가 아니다. BGE-M3는 앞선10파일 기록 및 변환 recipe를 사용하고 나머지 세 모델은 native safetensors를 선택한다. bin/onnx/학습 코드를 함께 내려받지 않는다. download가 실제로 이 목록만 받고 bytes를 검증하는지는 dev의 독립 fixture와 후속 live 증거로 확인한다.
+
+## 고정 설정 파일 대조 — 2026-11-28
+
+[설정 원문·hash 관찰](../reviews/p031-config-source-verification.json)에 네 revision의 config와 embedding modules/pooling/sequence 설정을 저장했다. 공개 JSON만 읽어 metadata의 크기 및 Git blob OID와 대조했으며 가중치 다운로드/모델 load는0이다. 웹 도구에서 일부 raw URL이 내부 접근 오류여서 공개 resolve URL을 read-only HTTP로 확인했다.
+
+E5는 hidden_size384·mean pooling·max_seq512, BGE-M3는 hidden_size1024·CLS pooling·max_seq8192이며 둘 다 Transformer/Pooling/Normalize 모듈이다. 두 reranker는 XLMRobertaForSequenceClassification·xlm-roberta·단일 id2label 구조로 기존 check_files의 classifier 조건과 일치한다. 이는 설정 호환 근거이며 tokenizer/weight 실제 load·공유 tensor 변환·품질의 성공 증거가 아니다. BGE-M3 조사 role=embedding_dense는 준비 도구의 embedding 역할로 매핑한다. 기본 생성 profile은 CPU/float32/batch1과512토큰으로 시작하고, 모델 원본 최대 길이를 기본 메모리 예산으로 오인하지 않는다.

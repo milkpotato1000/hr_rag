@@ -17,6 +17,8 @@ CLI와 한국어 가이드는 다음 단계로 이어진다. 정확 option 이�
 
 출력물은 `source-plan.json`, `preparation.json`, `model/`, `profile.json`을 분리한다. profile의 model directory에는 runtime이 요구하는 파일만 포함한다. 모델 준비 진단·HF cache metadata·계획은 model/ 밖에 둔다. manifest는 실제 export bytes의 SHA256으로 생성하며 사용자에게 수동 hash 계산을 요구하지 않는다. 기존 profile 직접 등록도 계속 지원한다. runtime profile v1의 허용 필드를 임의 확장하지 않는다. export 안의 source-provenance.json에 원본 ID/revision/파일 hash와 native-copy 또는 변환 tool/options·출력 weight hash를 저장하고 file_manifest에 그 파일 hash도 포함한다. 이 sidecar는 자신의 hash나 전체 export manifest를 포함하지 않아 순환 참조를 피한다. 준비 진단의 경로·PID·키·HTTP header는 sidecar에 넣지 않는다. 따라서 기존 runtime identity의 manifest로 변환 출처까지 고정된다.
 
+생성 profile의 local_path는 같은 export의 `model` 상대 경로이며 CPU/float32/batch1을 기본으로 한다. embedding은 max_input_tokens512/timeout_seconds120/max_chunks5000, reranker는 기존 DEFAULTS의 max_pair_tokens512/timeout_seconds120을 사용한다. 원본의 더 긴 한도를 곧 기본 실행 길이로 사용하지 않는다. 이 값은 profile에 명시되며 기존 validator 범위 안에서 사용자가 별도 설정으로 조정할 수 있다. BGE 조사 자료의 role=embedding_dense는 준비 schema의 embedding으로 명시 매핑하며 sparse/ColBERT 지원으로 확대하지 않는다. model-check는 해당 역할의 기존 profile 및 check_files를 재사용하되 SDK import/forward는 하지 않는다.
+
 ## HF 준비 계획과 파일 검증
 
 현재 검색 lock의 huggingface-hub2.5.0 설치 소스에서 model_info(files_metadata=True), snapshot_download의 revision/local_dir/dry_run/token 인자를 확인했다. 구현은 이 버전 또는 따로 검토한 고정 준비 의존성을 사용한다. 글로벌 venv를 업그레이드하지 않는다. core-only 설치는 선택 의존성 미설치를 명확히 표시하고 오프라인 catalog/설정 작성은 가능해야 한다.
