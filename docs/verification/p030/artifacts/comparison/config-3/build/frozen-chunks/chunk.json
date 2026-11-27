@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+  "config": {
+    "schema_version": 1,
+    "method": "structure",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "unit_policy": {
+    "version": "source-units-v1",
+    "maximum": 400
+  },
+  "base_policy": {
+    "schema_version": 1,
+    "method": "structure",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "base": [],
+  "details": {},
+  "work": {
+    "execution_kind": "offline",
+    "boundary_model_jobs": 0,
+    "boundary_attempts": 0,
+    "unit_observation": {},
+    "requested_windows": 0,
+    "dispatches": 0,
+    "successful_windows": 0,
+    "failed_windows": 0,
+    "unknown_windows": 0,
+    "retry_count": 0,
+    "cost": null,
+    "cost_status": "unmeasured",
+    "unit_embedding": null,
+    "usage": {
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    "elapsed_ms": 0.27704100648406893
+  },
+  "parent_fingerprint": null,
+  "statistics": {
+    "chunk_count": 7,
+    "unit_count": 38,
+    "lengths": [
+      47,
+      189,
+      191,
+      226,
+      44,
+      169,
+      172
+    ],
+    "min": 44,
+    "max": 226,
+    "mean": 148.28571428571428,
+    "emitted_chars": 1038,
+    "unique_chars": 1038,
+    "duplicate_chars": 0,
+    "forced_units": 0,
+    "token_count": null,
+    "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+  },
+  "units_hash": "9fbd326acfd71a3a480607f08971a544a69f51321fe883cf0e5fcc2cd6d9dacb",
+  "chunks_hash": "0021836f62e82c848bcd5c5ade5811b06fc27007b4eb3807cdcf07dc24d4ad60",
+  "coverage_hash": "c02f1d212d6471ec69092b344acc0c28152360b3af83d409efe4e2897666c68c",
+  "vectors_hash": null,
+  "unit_order_hash": "1548aefa115bb193dabe576379f9e477e2316ae7f730d2ce80038088ca247829",
+  "algorithm": "source-model-boundaries-v1",
+  "chunk_fingerprint": "75fae1b5535ea7239799595c88d6e9b3eb332039c2679d9c3f8b8e314cf5eb06"
+}

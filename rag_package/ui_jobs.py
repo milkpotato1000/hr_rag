@@ -27,7 +27,8 @@ def settings(chunking,retrieval):
 def question(text):require(isinstance(text,str) and text.strip() and len(text)<=2000,'invalid_question','input')
 
 class Jobs:
-    def __init__(self,registry,allow_model=False,allow_drive=False,*,transport=None,key_resolver=None,drive_transport=None,auth_backend=None,env_resolver=None,allow_retrieval=False,embedding_backend=None,allow_reranking=False,reranker_backend=None):
+    def __init__(self,registry,allow_model=False,allow_drive=False,*,transport=None,key_resolver=None,drive_transport=None,auth_backend=None,env_resolver=None,allow_retrieval=False,embedding_backend=None,allow_reranking=False,reranker_backend=None,allow_chunking=False):
+        self.allow_chunking=allow_chunking
         self.allow_reranking=allow_reranking;self.reranker_backend=reranker_backend
         self.registry=registry;self.allow_model=allow_model;self.allow_drive=allow_drive;self.allow_retrieval=allow_retrieval;self.embedding_backend=embedding_backend
         self.transport=transport;self.key_resolver=key_resolver;self.drive_transport=drive_transport;self.auth_backend=auth_backend;self.env_resolver=env_resolver
@@ -56,6 +57,9 @@ class Jobs:
         p=self.registry.embedding(v.get('embedding_config_id'));require(embedding.configured(p),'embedding_configuration_required','input');return p
     def prepare(self,v):
         kind=v['kind'];r=self.registry;plan={};summary=copy.deepcopy(v)
+        if kind in ('chunk','chunk_derive','chunk_build','chunk_compare'):
+            from .ui_chunking import prepare
+            return prepare(self,v),summary
         if kind in ('candidates','rerank','rerank_compare','rerank_answer'):
             from .ui_reranking import prepare
             return prepare(self,v),summary
@@ -72,8 +76,10 @@ class Jobs:
         elif kind=='ask':
             exact(v,('request_id','kind','build_id','llm_config_id','question','top_k','context_budget_chars','execute'),('embedding_config_id','execute_retrieval','retrieval'));question(v['question']);require(type(v['execute']) is bool,'invalid_execute','input')
             p,e,m=r.artifact(v['build_id']);require(e['kind']=='build','wrong_artifact_kind','input')
-            retrieval=v.get('retrieval',{'method':'bm25','top_k':v['top_k'],'context_budget_chars':v['context_budget_chars']});chunking=m['identity']['chunk_identity']['config'];settings(chunking,retrieval)
+            retrieval=v.get('retrieval',{'method':'bm25','top_k':v['top_k'],'context_budget_chars':v['context_budget_chars']});chunking=m['identity']['chunk_identity']['config'];frozen=m['identity']['chunk_identity']['algorithm']=='frozen-chunks-v1'
+            settings({'method':'fixed','size_chars':100,'overlap_chars':0} if frozen else chunking,retrieval)
             plan.update(source=str(p),source_fingerprint=m['fingerprint'],llm=self._llm(v['llm_config_id'],v['execute']),chunking=chunking,retrieval=retrieval,snapshot_id=e['snapshot_id'],embedding=self._embedding(v,retrieval))
+            if frozen:plan['chunk_artifact']=str(p/'frozen-chunks')
         elif kind=='compare':
             exact(v,('request_id','kind','snapshot_id','variants','questions','execute'),('execute_retrieval',));require(type(v['execute']) is bool,'invalid_execute','input')
             variants=v['variants'];qs=v['questions'];require(isinstance(variants,list) and 2<=len(variants)<=4 and isinstance(qs,list) and 1<=len(qs)<=20,'comparison_limit','input')
@@ -106,6 +112,8 @@ class Jobs:
         if 'candidate_k' in plan['retrieval']:
             c.update(schema_version=2,embedding_config='embedding.json' if plan.get('embedding') else None)
             if plan.get('embedding'):write_json(p/'embedding.json',plan['embedding'])
+        if plan.get('chunk_artifact'):
+            c.pop('chunking');c.update(schema_version=3,chunk_artifact=plan['chunk_artifact'],embedding_config='embedding.json' if plan.get('embedding') else None)
         write_json(p/'rag.json',c);return p/'rag.json'
     def run(self,r,v,plan):
         registry=self.registry;work=registry.root/'artifacts'/r['id'];kind=v['kind'];ids=[]
@@ -113,7 +121,10 @@ class Jobs:
             r.update(status='running',stage=kind,dispatch_attempted='unknown' if v.get('execute') or kind=='drive_pull' else False);self.persist(r);work.mkdir()
             if 'source' in plan:
                 m=verify(plan['source'],'build' if kind=='ask' else 'snapshot');require(m['fingerprint']==plan['source_fingerprint'],'stale_artifact','jobs')
-            if kind in ('candidates','rerank','rerank_compare','rerank_answer'):
+            if kind in ('chunk','chunk_derive','chunk_build','chunk_compare'):
+                from .ui_chunking import execute
+                ids,state,result=execute(self,v,plan,work);r['dispatch_attempted']=result.get('dispatch_attempted',False);r['error']=result.get('error')
+            elif kind in ('candidates','rerank','rerank_compare','rerank_answer'):
                 from .ui_reranking import execute
                 ids,state,result=execute(self,v,plan,work)
                 r['dispatch_attempted']=result.get('dispatch_attempted',False);r['error']=result.get('error')

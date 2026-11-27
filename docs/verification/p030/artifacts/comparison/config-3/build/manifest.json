@@ -1,0 +1,55 @@
+{
+  "identity": {
+    "schema_version": 1,
+    "kind": "build",
+    "status": "ready",
+    "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+    "chunk_identity": {
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+      "algorithm": "frozen-chunks-v1",
+      "config": {
+        "schema_version": 1,
+        "method": "structure",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "chunks_hash": "0021836f62e82c848bcd5c5ade5811b06fc27007b4eb3807cdcf07dc24d4ad60",
+      "coverage_hash": "c02f1d212d6471ec69092b344acc0c28152360b3af83d409efe4e2897666c68c",
+      "frozen_fingerprint": "75fae1b5535ea7239799595c88d6e9b3eb332039c2679d9c3f8b8e314cf5eb06"
+    },
+    "chunk_fingerprint": "75fae1b5535ea7239799595c88d6e9b3eb332039c2679d9c3f8b8e314cf5eb06",
+    "index_fingerprint": "cd799745364f9a1b67e0ad920d5e7f77cc5649f7546125d86e6a5f6a01ac690b",
+    "retrieval_method": "bm25",
+    "files": {
+      "chunks.json": "3d714445cc2ad7e011f550a0be5b2fa3733dd49419383e9c0219e1779b550652",
+      "coverage.json": "c2e65623a896f4a7127966e577828f1671ba7c515fe9a612c8cfbab3ee68e8be",
+      "embedding-work.json": "1d2ecab46bd1cc2d7547ae52028d378ca16f1cce7c722cff68c3b97e38a5302d",
+      "frozen-chunks/chunk.json": "afc79ee234d22e87dcc1b27158568b78a2bfe85e7ee4ad13be895faac7cf15c4",
+      "frozen-chunks/chunks.json": "3d714445cc2ad7e011f550a0be5b2fa3733dd49419383e9c0219e1779b550652",
+      "frozen-chunks/coverage.json": "c2e65623a896f4a7127966e577828f1671ba7c515fe9a612c8cfbab3ee68e8be",
+      "frozen-chunks/manifest.json": "e955b4657444cd3b367d9463fc6c3a84680b76c354a9af6588f594ca7ca5df58",
+      "frozen-chunks/snapshot/annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/birthday/canonical.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/original.md": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/page-1-raw.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/page-1.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/manifest.json": "1f02020a1bf1822be660605f598df2d0e2b5a92f9644e667885bf80274222fbe",
+      "frozen-chunks/units.json": "3460834b84638e09261d4fb27f3d701d7ee38b334b0a0d1bf988dac51be138a3",
+      "index.json": "fb91f280a096deafb799a4965f2968bfe4b8bb401f524a191f74946e16c75381",
+      "snapshot/annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/birthday/canonical.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/original.md": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/page-1-raw.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/page-1.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/manifest.json": "1f02020a1bf1822be660605f598df2d0e2b5a92f9644e667885bf80274222fbe"
+    }
+  },
+  "fingerprint": "1aa7d68bf357548b279d40c64dab5be7f22fa0e48ef93c714bc693348c10c9f8",
+  "elapsed_ms": 29.36
+}

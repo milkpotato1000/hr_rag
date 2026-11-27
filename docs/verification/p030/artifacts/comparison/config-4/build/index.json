@@ -1,0 +1,23 @@
+{
+  "identity": {
+    "chunk_fingerprint": "4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e",
+    "parameters": {
+      "tokenizer": "unicode-word-v1",
+      "k1": 1.2,
+      "b": 0.75,
+      "text": "canonical_slice_only"
+    }
+  },
+  "fingerprint": "5a6bd9412a6b13f2c05169aba566849046170c06d6d22836bb2020a1c34d399b",
+  "document_ids": [
+    "birthday",
+    "annual"
+  ],
+  "chunk_ids": [
+    "c-b2d10fbfc0238fa2bed483429f799ec976f6e165b048bbe33a97a7a093f82bc7",
+    "c-6df94c9d2764ca37fcc75da66669c355e86f8af2ac3e31dd46694d3702ac9791",
+    "c-d21bc00f5d721c9daf0592cb11246a6985c1057d28617e3542be43d801fcbf85",
+    "c-7e8358cdc669b323e157c1beed3fb5bac22348f7d1898d5959f2b447cee0374c",
+    "c-dcf86b585e645a1397527a69ae9428218a43092f7f033936b6a3dcb0a4cd5d84"
+  ]
+}

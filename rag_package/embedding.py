@@ -91,28 +91,40 @@ def normalize(vectors,count,dimension):
         norm=math.sqrt(sum(x*x for x in row));require(math.isfinite(norm) and norm>0,'zero_vector','embedding');result.append([x/norm for x in row])
     return result
 
-def encode(p,texts,ids,kind,*,execute=False,backend=None):
+def encode(p,texts,ids,kind,*,execute=False,backend=None,allow_whitespace=False, observation=None,expected_sdk=None):
     profile(p);require(kind in ('query','document') and len(texts)==len(ids),'invalid_embedding_input','embedding')
-    require(len(texts)<=p['max_chunks'] and all(isinstance(x,str) and x.strip() for x in texts),'embedding_input_limit','embedding')
+    require(len(texts)<=p['max_chunks'] and all(isinstance(x,str) and (bool(x) if allow_whitespace else bool(x.strip())) for x in texts),'embedding_input_limit','embedding')
     require(execute,'retrieval_execution_required','embedding')
     started=time.monotonic()
+    observed=observation if observation is not None else {}
+    observed.update(requested_items=len(texts), attempted_jobs=1, workers_started=0, backend_calls=0, completed_items=0, worker_exited=None)
     with LOCK:
         if backend is not None:
+            observed.update(backend_calls=1,completed_items=None)
             response=backend(p,texts,ids,kind)
         else:
-            check_files(p);versions()
+            check_files(p);sdk=versions()
+            if expected_sdk is not None:require(sdk==expected_sdk,'embedding_sdk_mismatch','embedding')
             # An explicit minimal environment never inherits provider tokens or HF credentials.
             env={'PATH':os.defpath,'HF_HUB_OFFLINE':'1','TRANSFORMERS_OFFLINE':'1','HF_HUB_DISABLE_TELEMETRY':'1','TOKENIZERS_PARALLELISM':'false','OMP_NUM_THREADS':'1','MKL_NUM_THREADS':'1'}
             proc=subprocess.Popen([sys.executable,'-m','rag_package.embedding_worker'],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,env=env)
+            observed.update(workers_started=1,completed_items=None,worker_exited=False)
             try:stdout,_=proc.communicate(json.dumps({'profile':p,'texts':texts,'ids':ids,'kind':kind}),timeout=p['timeout_seconds'])
             except subprocess.TimeoutExpired:
-                proc.kill();proc.communicate();require(proc.poll() is not None,'worker_not_stopped','embedding');raise RagError('embedding_timeout','embedding') from None
+                proc.kill();proc.communicate();observed['worker_exited']=proc.poll() is not None;require(proc.poll() is not None,'worker_not_stopped','embedding');raise RagError('embedding_timeout','embedding') from None
+            except BaseException:
+                if proc.poll() is None:proc.kill()
+                proc.communicate();observed['worker_exited']=proc.poll() is not None
+                raise
+            observed['worker_exited']=proc.poll() is not None
             require(proc.returncode==0,'embedding_worker_failed','embedding')
             try:response=json.loads(stdout)
             except (ValueError,TypeError):raise RagError('embedding_worker_failed','embedding') from None
             if response.get('error'):
                 err=RagError(response['error'],'embedding');err.offending_ids=response.get('offending_ids',[]);raise err
+        if backend is None and expected_sdk is not None:require(response.get('sdk_versions')==expected_sdk,'embedding_sdk_mismatch','embedding')
         vectors=normalize(response['vectors'],len(texts),CATALOG[p['model_id']]['dimension'])
+        observed['completed_items']=len(texts)
     return vectors,{'jobs':1,'documents':len(texts) if kind=='document' else 0,'queries':len(texts) if kind=='query' else 0,'elapsed_ms':(time.monotonic()-started)*1000,
                     'sdk_versions':response.get('sdk_versions',{}),'peak_rss_bytes':response.get('peak_rss_bytes'),'rss_method':response.get('rss_method','unavailable'),'sampling_interval_ms':None,
                     'execution_kind':'test_fixture' if backend is not None else 'local_hf','worker_exited':True}

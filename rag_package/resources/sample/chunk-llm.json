@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "method": "llm",
+  "size_chars": 400,
+  "overlap_chars": 80,
+  "unit_max_chars": 120,
+  "llm_config": "llm-chunking.json",
+  "window_max_chars": 1200,
+  "window_max_units": 20,
+  "max_windows": 64,
+  "max_prompt_bytes": 16384,
+  "total_timeout_seconds": 1800
+}

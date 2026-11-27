@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "method": "semantic",
+  "size_chars": 400,
+  "overlap_chars": 80,
+  "unit_max_chars": 120,
+  "minimum_chars": 120,
+  "distance_threshold": 0.35,
+  "embedding_config": "embedding-e5.json"
+}

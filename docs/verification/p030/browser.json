@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:61976/",
+  "execution_kind": "synthetic_test_fixture",
+  "desktop": [
+    1280,
+    900
+  ],
+  "narrow": [
+    390,
+    844
+  ],
+  "narrow_document_width": 390,
+  "keyboard": {
+    "enter_open": true,
+    "space_close": true,
+    "tab_next_summary": true
+  },
+  "five_way_compare": true,
+  "source_view": true,
+  "fixture_candidate_to_none": true,
+  "llm_preview_zero": true,
+  "explicit_fake_llm_windows": 3,
+  "unicode_codepoints": {
+    "expected": 82,
+    "observed": 82
+  },
+  "derive": "저장된 경계 · 검색에 사용 가능\n\nllm · derived · 경계 모델 작업 0 · 토큰/비용 미측정\n\n단위 38 · 청크 38 · 길이 10~83 / 평균 52.9자 · 중복 971자 · 강제 단위 분할 0\n\n원문 단위와 강제 분할\n오버랩 이전 기본 경계\n모델 선택·거리·window 경계\nbirthday · 0–17\n\n제목 경로: 가상 회사 생일 휴가 안내 · 17자\n\n# 가상 회사 생",
+  "console_errors": [],
+  "blocked_upload_retries": 0
+}

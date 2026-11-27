@@ -1,0 +1,55 @@
+{
+  "identity": {
+    "schema_version": 1,
+    "kind": "build",
+    "status": "ready",
+    "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+    "chunk_identity": {
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+      "algorithm": "frozen-chunks-v1",
+      "config": {
+        "schema_version": 1,
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "chunks_hash": "d3b8444c325015ebae348616aacfb53a4e47d2bb9f6beafc1af12ebe91c88ca3",
+      "coverage_hash": "ad119edff46ddab487d928bf41b89bc1bdddd688407e94a2a6fa02b6dea69684",
+      "frozen_fingerprint": "e4d06afe574893464ac0dce5300c1a7afe7bfc7aafa8dab4931bfaf1b267843f"
+    },
+    "chunk_fingerprint": "e4d06afe574893464ac0dce5300c1a7afe7bfc7aafa8dab4931bfaf1b267843f",
+    "index_fingerprint": "cd03db47e62f31b484daeff88c810197de2d26f4a2dc46641d91ae20db9bd6ce",
+    "retrieval_method": "bm25",
+    "files": {
+      "chunks.json": "efe947f4283c430b9eb00ca91c3c78bfa8774d2f40c678a61983887822a8f53a",
+      "coverage.json": "874976fa093e5d8fe9d2627f8109eb6c88d5feea7ed7570562f3fa7615f5f46f",
+      "embedding-work.json": "1d2ecab46bd1cc2d7547ae52028d378ca16f1cce7c722cff68c3b97e38a5302d",
+      "frozen-chunks/chunk.json": "dbd7d1d0602a6e6712e43d3a79d1611b3349fa8cfc5e83cc78d64ec3d5fe6eeb",
+      "frozen-chunks/chunks.json": "efe947f4283c430b9eb00ca91c3c78bfa8774d2f40c678a61983887822a8f53a",
+      "frozen-chunks/coverage.json": "874976fa093e5d8fe9d2627f8109eb6c88d5feea7ed7570562f3fa7615f5f46f",
+      "frozen-chunks/manifest.json": "8e9d233af7682a159499fc945a6a9d814dceb79cbd756f13f8f01ecf161c78e5",
+      "frozen-chunks/snapshot/annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/birthday/canonical.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/original.md": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/page-1-raw.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/page-1.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/manifest.json": "1f02020a1bf1822be660605f598df2d0e2b5a92f9644e667885bf80274222fbe",
+      "frozen-chunks/units.json": "3460834b84638e09261d4fb27f3d701d7ee38b334b0a0d1bf988dac51be138a3",
+      "index.json": "d614438a6e641414e7dc4045c8fcea6b62595a82c1ddfa7223581bf49e5f106e",
+      "snapshot/annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/birthday/canonical.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/original.md": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/page-1-raw.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/page-1.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/manifest.json": "1f02020a1bf1822be660605f598df2d0e2b5a92f9644e667885bf80274222fbe"
+    }
+  },
+  "fingerprint": "ae47823c974d1ec8288058ff6bfb5177603134693908b11e9d3aecf876ec0a05",
+  "elapsed_ms": 20.564
+}

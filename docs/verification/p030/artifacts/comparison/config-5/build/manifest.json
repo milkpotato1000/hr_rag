@@ -1,0 +1,79 @@
+{
+  "identity": {
+    "schema_version": 1,
+    "kind": "build",
+    "status": "ready",
+    "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+    "chunk_identity": {
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+      "algorithm": "frozen-chunks-v1",
+      "config": {
+        "window_max_chars": 1200,
+        "window_max_units": 20,
+        "max_windows": 64,
+        "max_prompt_bytes": 16384,
+        "total_timeout_seconds": 1800,
+        "schema_version": 1,
+        "method": "llm",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "unit_max_chars": 120,
+        "model": {
+          "role": "chunking",
+          "profile": {
+            "mode": "local",
+            "provider": "ollama",
+            "model": "fixture-model",
+            "base_url": "http://127.0.0.1:1",
+            "max_output_tokens": 256,
+            "timeout_seconds": 1,
+            "response_mode": "json_object",
+            "identity": {
+              "expected_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "hf_id": "fixture/model",
+              "conversion": "synthetic"
+            }
+          },
+          "prompt_version": "source-unit-ends-v1"
+        }
+      },
+      "chunks_hash": "bea05675a7640c6a0690907a161ee2e0a28538d03c343937321b1378e16fb64f",
+      "coverage_hash": "d58186d1ae44d0f31b2ffce331a70fb21cccc467a40d0747cd93664959e21cd1",
+      "frozen_fingerprint": "5fc0be8d8b1a3e27c964262322d54cdb72aa446d93d3e780e69edd845b8f0eff"
+    },
+    "chunk_fingerprint": "5fc0be8d8b1a3e27c964262322d54cdb72aa446d93d3e780e69edd845b8f0eff",
+    "index_fingerprint": "04ad5a454991095956f26a1f475ea57406d00bc29990cfe2feb95ab3f4c7e379",
+    "retrieval_method": "bm25",
+    "files": {
+      "chunks.json": "0a10d211823a81c6c06b683dca71ca6aff0830dc9a404e5a9d3bbc55654c50ca",
+      "coverage.json": "12176b1ff88d6817220f5992fb81f60cf977f0fedc9b8348ccf986ed196baa74",
+      "embedding-work.json": "1d2ecab46bd1cc2d7547ae52028d378ca16f1cce7c722cff68c3b97e38a5302d",
+      "frozen-chunks/chunk.json": "e7b141fe83772db7b3878f002072b3c7634fe1f67eeb82deac146b36ff227784",
+      "frozen-chunks/chunks.json": "0a10d211823a81c6c06b683dca71ca6aff0830dc9a404e5a9d3bbc55654c50ca",
+      "frozen-chunks/coverage.json": "12176b1ff88d6817220f5992fb81f60cf977f0fedc9b8348ccf986ed196baa74",
+      "frozen-chunks/manifest.json": "a7ff66889bd1384a7ce85704453c60a9aed50756ac8fcb2b0a9943e7e3cc776e",
+      "frozen-chunks/snapshot/annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/birthday/canonical.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/original.md": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/page-1-raw.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/page-1.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/manifest.json": "1f02020a1bf1822be660605f598df2d0e2b5a92f9644e667885bf80274222fbe",
+      "frozen-chunks/units.json": "342be9178183038eddbd3b2d4e644c35c743e2a5a9bc3a39eb8f2f1497d199f0",
+      "index.json": "49eea1665a4bfdc7622136e44f6903ae2b0a70fd829f51069f84666b931f261a",
+      "snapshot/annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/birthday/canonical.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/original.md": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/page-1-raw.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/page-1.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/manifest.json": "1f02020a1bf1822be660605f598df2d0e2b5a92f9644e667885bf80274222fbe"
+    }
+  },
+  "fingerprint": "08256a5403876d383a761407de49981dc8b8a43658fe622dcfcb6c84573b3831",
+  "elapsed_ms": 28.53
+}

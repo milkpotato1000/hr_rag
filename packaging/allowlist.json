@@ -35,7 +35,11 @@
     "rag_package/fact_metrics.py",
     "rag_package/reranking.py",
     "rag_package/rerank_compare.py",
-    "rag_package/ui_reranking.py"
+    "rag_package/ui_reranking.py",
+    "rag_package/chunk_policy.py",
+    "rag_package/chunk_artifact.py",
+    "rag_package/chunk_compare.py",
+    "rag_package/ui_chunking.py"
   ],
   "resources": [
     "rag_package/provenance.json",
@@ -58,7 +62,17 @@
     "rag_package/ui/index.html",
     "rag_package/ui/app.js",
     "rag_package/ui/style.css",
-    "rag_package/requirements-retrieval.lock"
+    "rag_package/requirements-retrieval.lock",
+    "rag_package/resources/sample/chunk-structure.json",
+    "rag_package/resources/sample/embedding-e5.json",
+    "rag_package/resources/sample/chunk-llm.json",
+    "rag_package/resources/sample/reranker-bge.json",
+    "rag_package/resources/sample/chunk-semantic.json",
+    "rag_package/resources/sample/rag-hybrid.json",
+    "rag_package/resources/sample/llm-chunking.json",
+    "rag_package/resources/sample/chunk-recursive.json",
+    "rag_package/resources/sample/rag-frozen.json",
+    "rag_package/resources/sample/chunk-fixed.json"
   ],
   "sdist_extra": [
     "pyproject.toml",

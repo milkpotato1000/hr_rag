@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "installed_path": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/core/lib/python3.12/site-packages/rag_package/__init__.py",
+  "sdk_absent": true,
+  "SDK_imports": 0,
+  "commands": [
+    {
+      "args": [
+        "init",
+        "--out",
+        "ws"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"execution_kind\": \"offline\", \"files\": 23, \"network_requests\": 0, \"secrets_read\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "snapshot",
+        "--sources",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/sources.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/snapshot"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"snapshot\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunk-fixed.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-fixed"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"ad66b24ab807ab322f50c1e432bd5710c23a148eaf0059a069bfc6371dff70de\", \"statistics\": {\"chunk_count\": 3, \"unit_count\": 37, \"lengths\": [400, 300, 385], \"min\": 300, \"max\": 400, \"mean\": 361.6666666666667, \"emitted_chars\": 1085, \"unique_chars\": 1005, \"duplicate_chars\": 80, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.31654100166633725}, \"invocation_path\": \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-fixed.invocation-3df0539ac5a64b5c94d91faa93b732e0\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunk-recursive.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-recursive"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"b19b2649ad0d1c411bc6c0a17f83387051620b80f253f383055552cf084fd73f\", \"statistics\": {\"chunk_count\": 5, \"unit_count\": 37, \"lengths\": [246, 271, 263, 213, 252], \"min\": 213, \"max\": 271, \"mean\": 249.0, \"emitted_chars\": 1245, \"unique_chars\": 1005, \"duplicate_chars\": 240, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.43162499787285924}, \"invocation_path\": \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-recursive.invocation-399be8c0201a48e29c641342586ee844\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunk-structure.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-structure"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"ebeb55eeece683000ebcfff1d97dbd4c50ea99bcc19207c92f58be86d87b947f\", \"statistics\": {\"chunk_count\": 7, \"unit_count\": 37, \"lengths\": [47, 189, 191, 193, 44, 169, 172], \"min\": 44, \"max\": 193, \"mean\": 143.57142857142858, \"emitted_chars\": 1005, \"unique_chars\": 1005, \"duplicate_chars\": 0, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.41783299820963293}, \"invocation_path\": \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-structure.invocation-49c42528302647a6844b93ea12b72844\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunk-semantic.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-semantic"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"source_fingerprint\": \"183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf\", \"expected_unit_embeddings\": 37, \"work\": {\"execution_kind\": \"preview\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0}, \"token_count\": null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunk-llm.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-llm"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"source_fingerprint\": \"183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf\", \"expected_unit_embeddings\": 0, \"work\": {\"execution_kind\": \"preview\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 3, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0}, \"token_count\": null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk-replay",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-fixed"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"ad66b24ab807ab322f50c1e432bd5710c23a148eaf0059a069bfc6371dff70de\", \"model_calls\": 0, \"statistics\": {\"chunk_count\": 3, \"unit_count\": 37, \"lengths\": [400, 300, 385], \"min\": 300, \"max\": 400, \"mean\": 361.6666666666667, \"emitted_chars\": 1085, \"unique_chars\": 1005, \"duplicate_chars\": 80, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.31654100166633725}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk-replay",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-recursive"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"b19b2649ad0d1c411bc6c0a17f83387051620b80f253f383055552cf084fd73f\", \"model_calls\": 0, \"statistics\": {\"chunk_count\": 5, \"unit_count\": 37, \"lengths\": [246, 271, 263, 213, 252], \"min\": 213, \"max\": 271, \"mean\": 249.0, \"emitted_chars\": 1245, \"unique_chars\": 1005, \"duplicate_chars\": 240, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.43162499787285924}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk-replay",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/chunks-structure"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"ebeb55eeece683000ebcfff1d97dbd4c50ea99bcc19207c92f58be86d87b947f\", \"model_calls\": 0, \"statistics\": {\"chunk_count\": 7, \"unit_count\": 37, \"lengths\": [47, 189, 191, 193, 44, 169, 172], \"min\": 44, \"max\": 193, \"mean\": 143.57142857142858, \"emitted_chars\": 1005, \"unique_chars\": 1005, \"duplicate_chars\": 0, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.41783299820963293}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "compare",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/snapshot",
+        "--configs",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/v3-0.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/v3-1.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/v3-2.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/v3-3.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/v3-4.json",
+        "--questions",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/compare-questions.json",
+        "--facts",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/ws/facts.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/comparison"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"compare\", \"execution_kind\": \"preview\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 0, \"documents\": 0, \"queries\": 0}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk-report",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/comparison",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/report"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"model_calls\": 0, \"fact_aggregates\": {\"config-1\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}, \"config-2\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}, \"config-3\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}, \"config-4\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}, \"config-5\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "candidates",
+        "--build",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/comparison/config-4/build",
+        "--result",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/comparison/config-4/answers/q1",
+        "--question-id",
+        "q1",
+        "--n",
+        "20",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/candidate"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"candidates\", \"artifact_written\": true, \"reason\": null, \"error\": null, \"work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rerank",
+        "--candidates",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/candidate",
+        "--method",
+        "none",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-j_5vr0gm/verify-x6ccz8s7/none"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"rerank\", \"artifact_written\": true, \"reason\": null, \"error\": null, \"work\": {\"pairs\": 0, \"queries\": 0, \"workers\": 0, \"fixture_calls\": 0, \"retry_count\": 0, \"worker_exited\": true, \"execution_kind\": \"none\", \"elapsed_ms\": 0, \"peak_rss_bytes\": null, \"rss_method\": \"unavailable\"}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    }
+  ],
+  "fake_boundary_calls": [
+    "document",
+    "boundary POST",
+    "boundary POST",
+    "boundary POST"
+  ],
+  "five_way_compare_rows": 10,
+  "real_calls": 0
+}

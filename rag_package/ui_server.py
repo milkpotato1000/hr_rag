@@ -37,11 +37,19 @@ class UI:
             'allow_reranking_execution':self.jobs.allow_reranking,
             'labels':{kind:[{'id':k,'label':v['label']} for k,v in entries.items()] for kind,entries in r.labels.items()},
             'rerank_artifacts':[{'id':k,'kind':v['kind']} for k,v in r.data['artifacts'].items() if v['kind'] in ('candidates','rerank','rerank-comparison','rerank-answer')],
-            'capabilities':{'chunking':['fixed','recursive','structure'],'retrieval':['bm25','dense','hybrid'],'unsupported':['Qwen instruction 리랭커','semantic/LLM 청킹','평가기']},
+            'chunk_configs':[{'id':k,'method':v['config']['method'],'size_chars':v['config']['size_chars'],'overlap_chars':v['config']['overlap_chars']} for k,v in r.chunk_configs.items()],
+            'allow_chunking_execution':self.jobs.allow_chunking,
+            'chunk_artifacts':[r.chunk_summary(k) for k,v in r.data['artifacts'].items() if v['kind'] in ('chunks','chunk-preview')],
+            'capabilities':{'chunking':['fixed','recursive','structure','semantic','llm'],'retrieval':['bm25','dense','hybrid'],'unsupported':['Qwen instruction 리랭커','평가기']},
             'limits':{'inputs':20,'configs':8,'upload_bytes':20*1024*1024,'concurrent_jobs':1,'comparison_requests':80},'jobs':self.jobs.summaries()}
     def artifact(self,key):
         p,e,m=self.registry.artifact(key);kind=e['kind'];out={'id':key,'kind':kind,'manifest':m,'snapshot_id':e.get('snapshot_id',key)}
         if kind=='snapshot':out['documents']=[{k:v for k,v in d.items() if k!='text'} for d in load_snapshot(p,ready=False)[1]]
+        elif kind in ('chunks','chunk-preview'):
+            if kind=='chunks':
+                from .chunk_artifact import load
+                cr,_,cs,coverage=load(p);out.update(result=cr,units=read_json(p/'units.json'),chunks=cs,coverage=coverage)
+            else:out['result']=read_json(p/'preview.json')
         elif kind=='build':out.update(chunks_count=len(read_json(p/'chunks.json')),coverage=read_json(p/'coverage.json'),embedding_work=read_json(p/'embedding-work.json') if (p/'embedding-work.json').exists() else {'jobs':0,'documents':0,'queries':0})
         elif kind=='answer':
             result=read_json(p/'result.json')
@@ -123,8 +131,8 @@ class Handler(BaseHTTPRequestHandler):
                 if len(parts)==3:require(not q,'invalid_query','http');self.reply(200,ui.artifact(key));return
                 operation=parts[3]
                 if operation=='chunks':
-                    require(set(q)<={'offset','limit'},'invalid_query','http');p,e,_=r.artifact(key);require(e['kind']=='build','wrong_artifact_kind','input')
-                    offset=integer(q,'offset',0,0,1000000);limit=integer(q,'limit',50,1,100);chunks=read_json(p/'chunks.json');self.reply(200,{'items':chunks[offset:offset+limit],'next_offset':offset+limit if offset+limit<len(chunks) else None,'total':len(chunks),'snapshot_id':e['snapshot_id']});return
+                    require(set(q)<={'offset','limit'},'invalid_query','http');p,e,_=r.artifact(key);require(e['kind'] in ('build','chunks'),'wrong_artifact_kind','input')
+                    offset=integer(q,'offset',0,0,1000000);limit=integer(q,'limit',50,1,100);chunks=read_json(p/'chunks.json');self.reply(200,{'items':chunks[offset:offset+limit],'next_offset':offset+limit if offset+limit<len(chunks) else None,'total':len(chunks),'snapshot_id':e.get('snapshot_id',key)});return
                 require(operation in ('pages','original'),'unknown_route','http');require(set(q)<=({'document_id','page','offset','limit'} if operation=='pages' else {'document_id'}),'invalid_query','http')
                 p,snapshot_id=r.snapshot_for(key);m,docs=load_snapshot(p,ready=False);d=next((d for d in docs if d['document_id']==q.get('document_id',[None])[0]),None);require(d is not None,'unknown_document','http')
                 if operation=='original':self.raw(200,safe_path(p,d['original_path']).read_bytes(),'application/octet-stream','original.'+d['format']);return
@@ -144,11 +152,11 @@ class Handler(BaseHTTPRequestHandler):
             try:self.reply(500,error={'code':'internal_error','stage':'http'})
             except OSError:pass
 
-def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,reranker_configs=(),allow_reranking=False,qrels=(),facts=(),**test_injection):
-    r=Registry(workspace,llm_configs,sources,drive_configs,embedding_configs,reranker_configs,qrels,facts);jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,allow_reranking=allow_reranking,**test_injection);return Server(port,UI(r,jobs))
+def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,reranker_configs=(),allow_reranking=False,qrels=(),facts=(),chunk_configs=(),allow_chunking=False,**test_injection):
+    r=Registry(workspace,llm_configs,sources,drive_configs,embedding_configs,reranker_configs,qrels,facts,chunk_configs);jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,allow_reranking=allow_reranking,allow_chunking=allow_chunking,**test_injection);return Server(port,UI(r,jobs))
 
 def serve(args):
-    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution,reranker_configs=args.reranker_config,allow_reranking=args.allow_reranking_execution,qrels=args.qrels,facts=args.facts)
+    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution,reranker_configs=args.reranker_config,allow_reranking=args.allow_reranking_execution,qrels=args.qrels,facts=args.facts,chunk_configs=args.chunk_config,allow_chunking=args.allow_chunking_execution)
     print(json.dumps({'status':'serving','url':server.origin,'execution_kind':'preview_default','model_execution_allowed':args.allow_model_execution,'drive_download_allowed':args.allow_drive_download}),flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass

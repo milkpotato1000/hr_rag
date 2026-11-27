@@ -1,0 +1,26 @@
+{
+  "baseline": "d8724cb6b356703c8fa0d09b6d86d8e3782fdc98",
+  "sources": [
+    {
+      "path": "2. Document Chunking/scripts/chunk_core.py",
+      "sha256": "adc59a6662a8e155d9e41773afbed1dcc4e5d62626072724e94ee39c6d54a018"
+    },
+    {
+      "path": "rag_package/chunks.py",
+      "sha256": "8aa924d3ab7693027d96302edefd7dedbdff7e16de8caf2229afe64083f6db52"
+    },
+    {
+      "path": "rag_package/llm/core.py",
+      "sha256": "d18fc650f4ab72e1db351615e7e05056675f57544243bff5c17b045e3998e8e7"
+    },
+    {
+      "path": "rag_package/llm/config.py",
+      "sha256": "a67983910667cfbcf76e4adbbe1aa777e62395039e9775fd52dbc9db59a7817a"
+    },
+    {
+      "path": "rag_package/requirements-retrieval.lock",
+      "sha256": "f7988bdf801f51e27ce7538805bd9c9ca8202c0d714c13901e53f9365891b32f"
+    }
+  ],
+  "selected": "boundary_units, unit_windows, semantic, extend and boundary validation principles selected from chunk_core; generic source IDs/strict protocol replace frozen HR runtime/ledger/retry. Old numbered stages remain unchanged. P026 rule output stays identical for v1/v2; P030 adds an optional bounded span cap before large materialization."
+}

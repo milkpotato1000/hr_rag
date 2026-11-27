@@ -93,7 +93,7 @@ def url(value, mode):
 
 def validate_config(config):
     fields(config, {'schema_version','profiles','roles'}, set(), 'config')
-    if type(config['schema_version']) is not int or config['schema_version'] != 1:
+    if type(config['schema_version']) is not int or config['schema_version'] not in (1,2):
         raise ValidationError('schema_version')
     profiles = config['profiles']
     if not isinstance(profiles, dict) or not profiles:
@@ -135,8 +135,9 @@ def validate_config(config):
             if k == 'revision_pinned': continue
             if v is None and k in ('source_revision','revision'): continue
             string(v, 'identity.'+k)
-    fields(config['roles'], {'generation','evaluation'}, set(), 'roles')
-    for role in ('generation','evaluation'):
+    roles={'generation','evaluation'} | ({'chunking'} if config['schema_version']==2 else set())
+    fields(config['roles'], roles, set(), 'roles')
+    for role in roles:
         name = config['roles'][role]
         if not isinstance(name,str) or name not in profiles:
             raise ValidationError('roles.'+role)

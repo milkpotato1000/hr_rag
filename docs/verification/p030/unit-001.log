@@ -1,0 +1,26 @@
+test_independent_boundaries_overlap_fact (test_chunk_artifact.ChunkTests.test_independent_boundaries_overlap_fact) ... ERROR
+test_journal_failure_before_and_after_publication (test_chunk_artifact.ChunkTests.test_journal_failure_before_and_after_publication) ... ok
+test_rules_v3_candidate_replay (test_chunk_artifact.ChunkTests.test_rules_v3_candidate_replay) ... ok
+test_semantic_derive_and_preflight_counts (test_chunk_artifact.ChunkTests.test_semantic_derive_and_preflight_counts) ... ok
+test_three_llm_providers_and_tamper (test_chunk_artifact.ChunkTests.test_three_llm_providers_and_tamper) ... ok
+test_windows_second_failure_unknown_no_resume (test_chunk_artifact.ChunkTests.test_windows_second_failure_unknown_no_resume) ... ok
+
+======================================================================
+ERROR: test_independent_boundaries_overlap_fact (test_chunk_artifact.ChunkTests.test_independent_boundaries_overlap_fact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 44, in test_independent_boundaries_overlap_fact
+    self.assertEqual(a.stats(cs,m,us)['duplicate_chars'],2)
+                     ^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/chunk_artifact.py", line 32, in stats
+    'forced_units':sum(u['reason']=='forced_unit_split' for u in units),'token_count':None,'token_status':'unmeasured; character/byte limits do not guarantee model context window'}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/chunk_artifact.py", line 32, in <genexpr>
+    'forced_units':sum(u['reason']=='forced_unit_split' for u in units),'token_count':None,'token_status':'unmeasured; character/byte limits do not guarantee model context window'}
+                       ~^^^^^^^^^^
+KeyError: 'reason'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.808s
+
+FAILED (errors=1)

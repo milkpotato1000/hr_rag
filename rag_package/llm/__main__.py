@@ -35,7 +35,7 @@ def main(argv=None):
             sub=subs.add_parser(name)
             sub.add_argument('--config',required=True)
             if name!='validate':
-                sub.add_argument('--role',choices=('generation','evaluation'),required=True)
+                sub.add_argument('--role',choices=('generation','evaluation','chunking'),required=True)
                 sub.add_argument('--messages',required=True)
             if name=='invoke': sub.add_argument('--output',required=True)
         a=parser.parse_args(argv)

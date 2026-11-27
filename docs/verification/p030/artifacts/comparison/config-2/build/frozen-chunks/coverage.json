@@ -1,0 +1,57 @@
+{
+  "coverage": [
+    {
+      "document_id": "birthday",
+      "base_start": 0,
+      "base_end": 246,
+      "start": 0,
+      "end": 246,
+      "excluded": null
+    },
+    {
+      "document_id": "birthday",
+      "base_start": 246,
+      "base_end": 437,
+      "start": 166,
+      "end": 437,
+      "excluded": null
+    },
+    {
+      "document_id": "birthday",
+      "base_start": 437,
+      "base_end": 653,
+      "start": 357,
+      "end": 653,
+      "excluded": null
+    },
+    {
+      "document_id": "annual",
+      "base_start": 0,
+      "base_end": 213,
+      "start": 0,
+      "end": 213,
+      "excluded": null
+    },
+    {
+      "document_id": "annual",
+      "base_start": 213,
+      "base_end": 385,
+      "start": 133,
+      "end": 385,
+      "excluded": null
+    }
+  ],
+  "detection": [
+    {
+      "document_id": "birthday",
+      "headings_detected": 4,
+      "fallback": null
+    },
+    {
+      "document_id": "annual",
+      "headings_detected": 2,
+      "fallback": null
+    }
+  ],
+  "whitespace_policy": "excluded from search but retained in coverage spans"
+}

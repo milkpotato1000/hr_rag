@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "retrieval": {
+    "method": "bm25",
+    "top_k": 5,
+    "context_budget_chars": 4000,
+    "candidate_k": 20,
+    "rrf_k": 60
+  },
+  "llm_config": "provider.json",
+  "embedding_config": null,
+  "chunk_artifact": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-2msizrvo/ui-workspace/ready-semantic"
+}

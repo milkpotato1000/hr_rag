@@ -1,0 +1,17 @@
+test_compare_facts_replay_and_mapping_tamper (test_chunk_artifact.ChunkTests.test_compare_facts_replay_and_mapping_tamper) ... ok
+test_independent_boundaries_overlap_fact (test_chunk_artifact.ChunkTests.test_independent_boundaries_overlap_fact) ... ok
+test_journal_failure_before_and_after_publication (test_chunk_artifact.ChunkTests.test_journal_failure_before_and_after_publication) ... ok
+test_llm_deadline_transport_timeout_and_hidden_thinking (test_chunk_artifact.ChunkTests.test_llm_deadline_transport_timeout_and_hidden_thinking) ... ok
+test_preflight_all_windows_and_limits (test_chunk_artifact.ChunkTests.test_preflight_all_windows_and_limits) ... ok
+test_prepublication_failure_and_identity_mutations (test_chunk_artifact.ChunkTests.test_prepublication_failure_and_identity_mutations) ... ok
+test_rules_v3_candidate_replay (test_chunk_artifact.ChunkTests.test_rules_v3_candidate_replay) ... ok
+test_semantic_derive_and_preflight_counts (test_chunk_artifact.ChunkTests.test_semantic_derive_and_preflight_counts) ... ok
+test_three_llm_providers_and_tamper (test_chunk_artifact.ChunkTests.test_three_llm_providers_and_tamper) ... ok
+test_ui_registered_chunking_and_role_clone (test_chunk_artifact.ChunkTests.test_ui_registered_chunking_and_role_clone) ... ok
+test_unit_unicode_whitespace_and_llm_bad_output (test_chunk_artifact.ChunkTests.test_unit_unicode_whitespace_and_llm_bad_output) ... ok
+test_windows_second_failure_unknown_no_resume (test_chunk_artifact.ChunkTests.test_windows_second_failure_unknown_no_resume) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.172s
+
+OK

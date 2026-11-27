@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "label": "tiny_random_sdk_not_pretrained",
+  "parameters": 965792,
+  "sdk": {
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0",
+    "transformers": "5.24.1",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0"
+  },
+  "pretrained_loads": 0,
+  "network_calls": 0,
+  "manual_document_prefix_vectors_match": true,
+  "float32_replay": true,
+  "whitespace_encoded": true,
+  "model_free_derive": true,
+  "work": {
+    "execution_kind": "local_hf",
+    "boundary_model_jobs": 1,
+    "boundary_attempts": 1,
+    "unit_observation": {
+      "requested_items": 43,
+      "attempted_jobs": 1,
+      "workers_started": 1,
+      "backend_calls": 0,
+      "completed_items": 43,
+      "worker_exited": true
+    },
+    "requested_windows": 0,
+    "dispatches": 0,
+    "successful_windows": 0,
+    "failed_windows": 0,
+    "unknown_windows": 0,
+    "retry_count": 0,
+    "cost": null,
+    "cost_status": "unmeasured",
+    "unit_embedding": {
+      "jobs": 1,
+      "documents": 43,
+      "queries": 0,
+      "elapsed_ms": 3483.556083010626,
+      "sdk_versions": {
+        "sentence-transformers": "6.3.0",
+        "torch": "2.15.0",
+        "transformers": "5.24.1",
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "peak_rss_bytes": 427409408,
+      "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
+      "sampling_interval_ms": null,
+      "execution_kind": "local_hf",
+      "worker_exited": true
+    },
+    "elapsed_ms": 3486.018875002628
+  }
+}

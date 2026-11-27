@@ -5,7 +5,7 @@ import shutil
 from .storage import require, fingerprint, digest, read_json, write_json, verify, seal, staging
 from .documents import load_snapshot, safe_id
 from .chunks import make_chunks, ALGORITHM
-from .retrieval import load_build, rrf
+from .retrieval import load_build, rrf, validate_chunks
 from .reranker import integer
 
 
@@ -54,9 +54,11 @@ def freeze(build, result, question_id, n, out):
           'candidate_depth':depth,'shortage_reason':'available_retrieval_candidates_below_n' if len(rows)<n else None,
           'original_retrieval_ms':r['latency_ms']['retrieval'],
           'rows':[dict(byid[row['chunk_id']], original_rank=i+1,retrieval_score=row['score'],text_hash=digest(byid[row['chunk_id']]['text'].encode())) for i,row in enumerate(rows[:n])]}
+    if 'chunking_provenance' in r:data['chunking_provenance']=r['chunking_provenance']
     data['candidate_fingerprint']=fingerprint(data)
     with staging(out) as tmp:
         copy_artifact(Path(build)/'snapshot',tmp/'snapshot','snapshot')
+        if r['effective_settings']['schema_version']==3:copy_artifact(Path(build)/'frozen-chunks',tmp/'frozen-chunks','chunks')
         write_json(tmp/'corpus.json',chunks); write_json(tmp/'coverage.json',read_json(Path(build)/'coverage.json'))
         write_json(tmp/'chunk-identity.json',bm['identity']['chunk_identity'])
         write_json(tmp/'index-identity.json',read_json(Path(build)/'index.json')['identity'])
@@ -74,14 +76,13 @@ def load(root):
     require(isinstance(data,dict) and data.get('candidate_fingerprint')==fingerprint({k:v for k,v in data.items() if k!='candidate_fingerprint'})==m['identity']['candidate_fingerprint'], 'stale_candidates','candidates')
     integer(data['requested_n'],1,100);require(safe_id(data['question_id']),'invalid_question_id','candidates')
     sm,docs=load_snapshot(root/'snapshot');chunks=read_json(root/'corpus.json');ci=read_json(root/'chunk-identity.json')
-    expected,mapping=make_chunks(docs,sm['fingerprint'],data['settings']['chunking'])
-    require(chunks==expected and mapping==read_json(root/'coverage.json'), 'stale_corpus','candidates')
-    require(ci=={'source_fingerprint':sm['fingerprint'],'algorithm':ALGORITHM,'config':data['settings']['chunking'],'chunks_hash':fingerprint(chunks),'coverage_hash':fingerprint(mapping)} and fingerprint(ci)==data['chunk_fingerprint'], 'stale_chunk_identity','candidates')
+    validate_chunks(root,sm,data['settings'],chunks,read_json(root/'coverage.json'),ci,data['chunk_fingerprint'])
     ii=read_json(root/'index-identity.json');require(fingerprint(ii)==data['index_fingerprint'] and ii['chunk_fingerprint']==data['chunk_fingerprint'],'stale_index_identity','candidates')
     require(sm['fingerprint']==data['source_fingerprint'] and data['query_hash']==fingerprint(data['question']), 'stale_candidate_source','candidates')
     parent=read_json(root/'parent-result.json');pm=read_json(root/'parent-manifest.json')
     require(fingerprint(pm['identity'])==pm['fingerprint']==data['parent_result_fingerprint'] and digest((root/'parent-result.json').read_bytes())==pm['identity']['files']['result.json'], 'stale_parent','candidates')
     require(all(parent[k]==data[k] for k in ('query_hash','question','source_fingerprint','chunk_fingerprint','index_fingerprint','execution_kind')) and parent['effective_settings']==data['settings'], 'stale_parent','candidates')
+    require(data.get('chunking_provenance')==parent.get('chunking_provenance'),'stale_chunk_provenance','candidates')
     rows=ranking(parent,chunks);byid={c['chunk_id']:c for c in chunks};n=data['requested_n']
     expected=[dict(byid[r['chunk_id']], original_rank=i+1,retrieval_score=r['score'],text_hash=digest(byid[r['chunk_id']]['text'].encode())) for i,r in enumerate(rows[:n])]
     require(data['candidate_depth']==parent['effective_settings']['retrieval']['candidate_k'] and data['candidate_depth']>=n and data['actual_n']==len(expected) and data['rows']==expected,'stale_candidate_order','candidates')

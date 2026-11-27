@@ -24,6 +24,20 @@ include rag_package/ui_jobs.py
 include rag_package/ui_registry.py
 include rag_package/ui_server.py
 include rag_package/workspace.py
+include rag_package/embedding.py
+include rag_package/embedding_worker.py
+include rag_package/search_metrics.py
+include rag_package/reranker.py
+include rag_package/reranker_worker.py
+include rag_package/candidates.py
+include rag_package/fact_metrics.py
+include rag_package/reranking.py
+include rag_package/rerank_compare.py
+include rag_package/ui_reranking.py
+include rag_package/chunk_policy.py
+include rag_package/chunk_artifact.py
+include rag_package/chunk_compare.py
+include rag_package/ui_chunking.py
 include rag_package/provenance.json
 include rag_package/requirements-pdf.lock
 include rag_package/requirements-drive.lock
@@ -44,20 +58,17 @@ include rag_package/resources/sample/START_HERE.md
 include rag_package/ui/index.html
 include rag_package/ui/app.js
 include rag_package/ui/style.css
+include rag_package/requirements-retrieval.lock
+include rag_package/resources/sample/chunk-structure.json
+include rag_package/resources/sample/embedding-e5.json
+include rag_package/resources/sample/chunk-llm.json
+include rag_package/resources/sample/reranker-bge.json
+include rag_package/resources/sample/chunk-semantic.json
+include rag_package/resources/sample/rag-hybrid.json
+include rag_package/resources/sample/llm-chunking.json
+include rag_package/resources/sample/chunk-recursive.json
+include rag_package/resources/sample/rag-frozen.json
+include rag_package/resources/sample/chunk-fixed.json
 include pyproject.toml
 include MANIFEST.in
 include PACKAGING.md
-
-include rag_package/embedding.py
-include rag_package/embedding_worker.py
-include rag_package/search_metrics.py
-include rag_package/requirements-retrieval.lock
-
-include rag_package/reranker.py
-include rag_package/reranker_worker.py
-include rag_package/candidates.py
-include rag_package/fact_metrics.py
-include rag_package/reranking.py
-include rag_package/rerank_compare.py
-
-include rag_package/ui_reranking.py

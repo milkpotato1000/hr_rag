@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "chunking": {
+    "method": "recursive",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "retrieval": {
+    "method": "hybrid",
+    "top_k": 5,
+    "candidate_k": 20,
+    "rrf_k": 60,
+    "context_budget_chars": 4000
+  },
+  "embedding_config": "embedding-e5.json",
+  "llm_config": "llm-local.json"
+}

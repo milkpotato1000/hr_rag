@@ -13,10 +13,10 @@ Python 3.10+가 필요합니다. TXT/Markdown·청킹·BM25는 표준 라이브�
 | 구성 | 현재 새 경로에서 지원 | 아직 지원하지 않는 기능 |
 | --- | --- | --- |
 | 입력 | 명시한 로컬 PDF/TXT/MD 파일 목록, 다중 문서; [Drive connector](drive.md)의 단일 문서 snapshot | 폴더 동기화, OCR, 암호 PDF, 표 구조 복원 |
-| 청킹 | fixed / recursive / structure | semantic / LLM 청킹 |
+| 청킹 | fixed / recursive / structure 및 [semantic / LLM](model-chunking.md) 저장 경계 | 임의 모델/custom code |
 | 검색 | BM25, [Dense/Hybrid](hybrid.md), 별도 [고정 후보 리랭커](reranking.md) | 임의 모델/custom code |
 | 생성 | P025 generation 역할, json_object 응답 | 기존 HR UI·평가 runner로의 자동 연결 |
-| 비교 | 같은 snapshot·질문으로 설정 2~4개 비교, 기본 preview | 정답 없는 품질 점수 자동 산출 |
+| 비교 | 기존 설정 2~4개, v3 저장 청크 2~5개 비교, 기본 preview | 정답 없는 품질 점수 자동 산출 |
 
 미지원 옵션은 오류이며 BM25나 다른 모델로 조용히 대체하지 않습니다. 기존 [P007 청킹 실습](<../../../2. Document Chunking/LEARNING.md>)의 다섯 방식은 별도 구현으로 보존되어 있습니다. 새로운 경로의 지원 범위와 혼동하지 마세요. 디렉터리 공개는 OS의 원자적 no-clobber 기능을 사용합니다. 현재 macOS에서 검증했고 Linux는 대응 renameat2 경로가 있으나 미검증이며, 해당 기능 없는 환경은 명확히 실패합니다. [wheel 설치 실습](install.md)은 같은 Mac 새 venv에서 검증했습니다. 다른 컴퓨터/OS는 미검증입니다.
 
@@ -79,3 +79,6 @@ LLM·top_k·문맥 예산만 바꾸면 청크/index identity는 유지됩니다.
 입력은 문서 20개, 파일당 20MiB, PDF 100페이지/30초, canonical 문서당 100만자·전체 200만자까지입니다. 큰 파일/잘못된 UTF-8/중복 ID/불필요 옵션을 거부합니다.
 
 Faithfulness는 evaluator_not_connected, Correctness와 Recall/MRR/nDCG는 ground_truth_not_configured로 null입니다. 실패를 0점으로 바꾸지 않습니다. 비용은 null/unmeasured이며 누락 usage도 0이 아닙니다. 같은 문맥에서 모델을 비교할 때와 청킹을 바꿔 검색부터 비교할 때는 바뀐 조건이 다르므로 한 축씩 변경하고 변경축 표를 확인하세요. 파싱/청킹/검색/생성 지연도 별개로 봅니다.
+
+
+다섯 방식의 저장 경계 생성·재생·파생·원문 fact 비교는 [모델 청킹 실습](model-chunking.md)을 참고하세요. 의미/LLM 청킹은 등록 설정과 별도 실행 권한으로 연결되며 실제 한국어 모델 품질은 미검증입니다.

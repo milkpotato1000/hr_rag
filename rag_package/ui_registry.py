@@ -44,7 +44,7 @@ def atomic_json(path,value):
         if tmp is not None:tmp.unlink(missing_ok=True)
 
 class Registry:
-    def __init__(self,workspace,llm_configs,sources=None,drive_configs=(),embedding_configs=(),reranker_configs=(),qrels=(),facts=()):
+    def __init__(self,workspace,llm_configs,sources=None,drive_configs=(),embedding_configs=(),reranker_configs=(),qrels=(),facts=(),chunk_configs=()):
         original=Path(workspace).absolute()
         require(original.is_dir() and not any(p.is_symlink() for p in [original,*original.parents]),'invalid_workspace','registry')
         self.workspace=original.resolve();self.root=contained(self.workspace,'.rag-runs/ui');self.root.mkdir(parents=True,exist_ok=True)
@@ -55,6 +55,15 @@ class Registry:
         self.data=read_json(self.path) if self.path.exists() else {'schema_version':1,'configs':{},'artifacts':{}}
         require(self.data.get('schema_version')==1 and isinstance(self.data.get('configs'),dict) and isinstance(self.data.get('artifacts'),dict),'invalid_registry','registry')
         self.inputs={};self.drives={};self.embeddings={};self.sources_file=None
+        self.chunk_configs={}
+        require(len(chunk_configs)<=20,'chunk_config_count','registry')
+        from .chunk_policy import read_config as read_chunk_config
+        for path in chunk_configs:
+            cp=contained(self.workspace,path);raw=bounded(cp);cfg,model=read_chunk_config(cp);refs={}
+            for key in ('embedding_config','llm_config'):
+                if key in cfg:
+                    ref=contained(self.workspace,cfg[key]);refs[str(ref)]=digest(bounded(ref))
+            self.chunk_configs[uid()]={'path':cp,'sha256':digest(raw),'config':cfg,'model':model,'references':refs}
         self.rerankers={};self.labels={'qrels':{},'facts':{}}
         require(len(reranker_configs)<=4,'reranker_config_count','registry')
         from .reranker import read_profile as reranker_profile
@@ -113,7 +122,7 @@ class Registry:
             else:
                 require('local_identity' not in value,'local_identity_not_allowed','config')
                 p['identity']={'requested_model':model,'revision_pinned':False,'revision':None,'validation_status':'user_configured_unverified'}
-            if name==c['roles']['evaluation']:
+            if any(name==v for k,v in c['roles'].items() if k!='generation'):
                 name='generation-'+uid();c['roles']['generation']=name
             c['profiles'][name]=p;validate_config(c)
             key=uid();dest=self.root/'configs'/(key+'.json');atomic_json(dest,c)
@@ -172,6 +181,7 @@ class Registry:
     def snapshot_for(self,key):
         p,e,m=self.artifact(key)
         if e['kind']=='snapshot':return p,key
+        if e['kind'] in ('chunks','chunk-preview'):return p/'snapshot',key
         if e['kind'] in ('candidates','rerank','rerank-answer'):
             suffix={'candidates':'snapshot','rerank':'candidates/snapshot','rerank-answer':'rerank/candidates/snapshot'}[e['kind']]
             return p/suffix,key
@@ -191,3 +201,17 @@ class Registry:
         if key is None:return None
         check_id(key);entry=self.labels[kind].get(key);require(entry is not None,'unknown_labels','registry')
         return read_json(self.file(entry))
+
+    def chunk_config(self,key):
+        check_id(key);entry=self.chunk_configs.get(key);require(entry is not None,'unknown_chunk_config','registry')
+        require(digest(bounded(entry['path']))==entry['sha256'],'stale_chunk_config','registry')
+        for path,h in entry['references'].items():require(digest(bounded(contained(self.workspace,path)))==h,'stale_chunk_model_config','registry')
+        return copy.deepcopy(entry['config']),copy.deepcopy(entry['model'])
+
+    def chunk_summary(self,key):
+        p,e,_=self.artifact(key)
+        if e['kind']=='chunks':
+            from .chunk_artifact import load
+            cr,_,_,_=load(p)
+        else:cr=read_json(p/'preview.json')
+        c=cr['config'];return {'id':key,'kind':e['kind'],'method':c['method'],'size_chars':c['size_chars'],'overlap_chars':c['overlap_chars'],'execution_kind':cr['work'].get('origin_execution_kind',cr['work']['execution_kind'])}

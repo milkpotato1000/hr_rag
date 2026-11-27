@@ -18,7 +18,8 @@ def hash_json(value):
 def preview(config, role, messages):
     validate_config(config)
     validate_messages(messages)
-    if role not in ('generation','evaluation'): raise ValidationError('role')
+    if role not in ('generation','evaluation','chunking'): raise ValidationError('role')
+    if role not in config['roles']: raise ValidationError('roles.'+role,'role_not_configured')
     p = config['profiles'][config['roles'][role]]
     actual = copy.deepcopy(messages)
     if p['response_mode'] == 'json_object':

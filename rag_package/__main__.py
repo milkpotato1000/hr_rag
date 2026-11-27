@@ -19,7 +19,13 @@ def main(argv=None):
         c=subs.add_parser('compare');c.add_argument('--snapshot',required=True);c.add_argument('--configs',nargs='+',required=True);c.add_argument('--questions',required=True);c.add_argument('--execute',action='store_true')
         for sub in (s,b,a,c):sub.add_argument('--out',required=True)
         for sub in (b,a,c):sub.add_argument('--execute-retrieval',action='store_true')
-        c.add_argument('--qrels')
+        c.add_argument('--qrels');c.add_argument('--facts')
+        for name in ('chunk','chunk-replay','chunk-derive','chunk-report'):
+            sub=subs.add_parser(name)
+            if name=='chunk':sub.add_argument('--snapshot',required=True);sub.add_argument('--execute-chunking',action='store_true')
+            else:sub.add_argument('--run',required=True)
+            if name in ('chunk','chunk-derive'):sub.add_argument('--config',required=True)
+            if name!='chunk-replay':sub.add_argument('--out',required=True)
         preview=subs.add_parser('retrieval-preview');preview.add_argument('--config',required=True)
         dp=subs.add_parser('drive-preview');dp.add_argument('--config',required=True)
         dl=subs.add_parser('drive-pull');dl.add_argument('--config',required=True);dl.add_argument('--out',required=True);dl.add_argument('--execute',action='store_true')
@@ -41,7 +47,15 @@ def main(argv=None):
             else:sub.add_argument('--run',required=True)
         server.add_argument('--reranker-config',action='append',default=[]);server.add_argument('--allow-reranking-execution',action='store_true')
         server.add_argument('--qrels',action='append',default=[]);server.add_argument('--facts',action='append',default=[])
+        server.add_argument('--chunk-config',action='append',default=[]);server.add_argument('--allow-chunking-execution',action='store_true')
         args=p.parse_args(argv)
+        if args.command in ('chunk','chunk-replay','chunk-derive','chunk-report'):
+            from . import chunk_artifact,chunk_compare
+            if args.command=='chunk':r=chunk_artifact.build(args.snapshot,args.config,args.out,execute=args.execute_chunking)
+            elif args.command=='chunk-replay':r=chunk_artifact.replay(args.run)
+            elif args.command=='chunk-derive':r=chunk_artifact.derive(args.run,args.config,args.out)
+            else:r=chunk_compare.report(args.run,args.out)
+            print(json.dumps({k:v for k,v in r.items() if k not in ('units','requests','config')},ensure_ascii=False));return 1 if r.get('status') in ('failed','interrupted') else 0
         if args.command in ('candidates','rerank','answer-from-rerank','rerank-compare','rerank-report'):
             from . import candidates,reranking,rerank_compare
             if args.command=='candidates':r=candidates.freeze(args.build,args.result,args.question_id,args.n,args.out)
@@ -80,7 +94,7 @@ def main(argv=None):
         elif args.command=='ask':
             r=ask(args.run,args.config,args.question,args.out,execute=args.execute,execute_retrieval=args.execute_retrieval);ok=r['status'] in ('preview','answered','abstained')
         else:
-            r=compare(args.snapshot,args.configs,args.questions,args.out,execute=args.execute,execute_retrieval=args.execute_retrieval,qrels=args.qrels);ok=not any(x['status']=='failed' for x in r['rows'])
+            r=compare(args.snapshot,args.configs,args.questions,args.out,execute=args.execute,execute_retrieval=args.execute_retrieval,qrels=args.qrels,facts=args.facts);ok=not any(x['status']=='failed' for x in r['rows'])
         if args.command=='build':
             from .storage import read_json
             from pathlib import Path

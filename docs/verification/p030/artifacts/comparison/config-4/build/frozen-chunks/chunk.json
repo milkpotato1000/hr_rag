@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+  "config": {
+    "schema_version": 1,
+    "method": "semantic",
+    "size_chars": 400,
+    "overlap_chars": 80,
+    "unit_max_chars": 120,
+    "minimum_chars": 120,
+    "distance_threshold": 0.35,
+    "model": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "file_manifest": {
+        "config.json": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "device": "cpu",
+      "dtype": "float32",
+      "max_input_tokens": 512,
+      "catalog": {
+        "dimension": 384,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "pooling": "mean",
+        "limit": 512,
+        "license": "MIT",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      "normalization": "l2",
+      "algorithm": "exact-cosine-v1"
+    }
+  },
+  "unit_policy": {
+    "version": "source-units-v1",
+    "maximum": 120
+  },
+  "base_policy": {
+    "schema_version": 1,
+    "method": "semantic",
+    "size_chars": 400,
+    "overlap_chars": 80,
+    "unit_max_chars": 120,
+    "minimum_chars": 120,
+    "distance_threshold": 0.35,
+    "model": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "file_manifest": {
+        "config.json": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "device": "cpu",
+      "dtype": "float32",
+      "max_input_tokens": 512,
+      "catalog": {
+        "dimension": 384,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "pooling": "mean",
+        "limit": 512,
+        "license": "MIT",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      "normalization": "l2",
+      "algorithm": "exact-cosine-v1"
+    }
+  },
+  "base": [
+    {
+      "document_id": "birthday",
+      "start": 0,
+      "end": 296,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "birthday",
+      "start": 296,
+      "end": 571,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "birthday",
+      "start": 571,
+      "end": 653,
+      "reason": "document_end"
+    },
+    {
+      "document_id": "annual",
+      "start": 0,
+      "end": 320,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "annual",
+      "start": 320,
+      "end": 385,
+      "reason": "document_end"
+    }
+  ],
+  "details": {
+    "distances": [
+      {
+        "unit_id": "u-83f1f76bcceb9646687d0ba36a329fb89c107cb5c749ff1f09246eb7a9416362",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a1565c3102d94be3ad75b0a1e94ad778f5856b00e53a9f584458485ffb3f76c9",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a580e933e55b75bd6f46048a2417a53762b45a5ab899890948800dbcdc065d11",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-daa5f55919b744562f1d6743605d5990b628e9527bc79ff079eec124dbe1bd5a",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d54379430ba31fe9c1ee36d9a1ff3d6c1f470ee55f8852139eff92486846a517",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e91bdac79b26f1a18824453a06ea0efd8c42306ba1804174a34e1d447d0e0b76",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e9b46b2bea55e38ca9f15c35454c44dfe90d3cfc13e2496d1d23f3727690bf91",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-46f1c167443d629d82c3eae1cc3d2e66a17e40714ae7b5b831a9af68f2c111b6",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f8fefcbabf4225679022aa60591d7215402d8bd0dc51b53eed7bd9787d8d49c6",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-adfdc3b987aa728b5ef639cff4d4ff72a38f71aeeff572b4f891435cfa752ca2",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d716120fae012a5ff12251946cbddc58d08c8f87ae550e35f4126ea112f09b94",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c79855a9801a425559a5b4dacb00084cedeaa5593ea3aa721ded23cbf4f86f1e",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f6abbaa4a04831a7e1da150309668414b23dd276c4053982a5e89df940f56c6f",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-414b46e3823b49f5d9ccc9be91094c246d4837c70184eb45cfe4b04ddd1661c9",
+        "distance": 0.29289321881345254,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-19d3c95559ad768bd42c67f84d228cc62ba558c91900dfd6b623c1ff2f87d246",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-8340a56caad55abe83972ee7e8f5e3323f21e14ab2b6ab3554cf9865871d2bfd",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-aad2e6c6c7cad89ded5ca8ed87de4b33f84cdc9209ec8fd72d96e07362372aea",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-982222021d4d64d34a88399555ea77d1c089660ca03f772d516e145e82fd6f91",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d302a73b222fa13cdd02b40fa5828cc902cf57ac2bcb18db7933cfeda77f8de3",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ce8aee216458740a15c1717b7c181c9a488d0cd61abea24c282820da61f96ada",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-9eda7addfe4defd6579193e3be531c8c427239e75f676a03cad7e6f32a845c71",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-89b753426001c1fa927fe40d92d3f9f51243a4dfcc7ca7cab6e5593e2eaa884e",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-78f7e37ac55efccd7999bf5b6c16cdf492d394b99287e09c02d69b2bcf40c71f",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-183481766404c7d29c379136064841f906341aebcea19e5b937cfc3a39128456",
+        "distance": 0.29289321881345254,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-d2af520b15a51a618074a972b09e3f30386feb16cdc60eb3e97a1f554c1d1107",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-84879d0578523d5696bc1e031a51a53cedc87dba99bf39d98870775b4878ce4e",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-7ea06558d2f39ac0a43f6cf955cc0b0f14c76f8497b889f3c2e9d3366e0dd043",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4cc3c893d773dc8a845c6fcc818f46b50230bd57b651d6951590dc54fb664096",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d46b8ce51637dc330aae9095043122f26f7a6a9921e7584b32c7fcc47cd3e11b",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-22e5e99b4304b93e21cae92296a8c63f1dfcf38d1760bd60cf9ce822a0860337",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-eccab8397c2fc3c2b1c88881f8481a0370a5edc2dd12ccd3a4262cc6f105bd5d",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ac31fd4181ee91cdb4d8d2ef4cf57cbbd140ce646d2c23d6908a1b7857c648de",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-74d7a84c655d6defa4110f0b65edd95d21c35be65d1f677a8bde10048f6ed88b",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f0042dec9bd636f1f395cbff6b2d47fb25f1d9f87708276aed9440839c46494f",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6798299f0573e3298a90b96a9ed12a89933e19799f3d2c5867b741d306198351",
+        "distance": 0.29289321881345254,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-63f631055650c4092cb7198700ec56e99590af34a253d3da34cf5065dc5a6699",
+        "distance": 0.29289321881345254,
+        "boundary": false,
+        "reason": null
+      }
+    ],
+    "dimension": 384,
+    "sdk_versions": {
+      "synthetic": "1"
+    },
+    "unit_vector_execution_kind": "test_fixture"
+  },
+  "work": {
+    "execution_kind": "test_fixture",
+    "boundary_model_jobs": 1,
+    "boundary_attempts": 1,
+    "unit_observation": {
+      "requested_items": 38,
+      "attempted_jobs": 1,
+      "workers_started": 0,
+      "backend_calls": 1,
+      "completed_items": 38,
+      "worker_exited": null
+    },
+    "requested_windows": 0,
+    "dispatches": 0,
+    "successful_windows": 0,
+    "failed_windows": 0,
+    "unknown_windows": 0,
+    "retry_count": 0,
+    "cost": null,
+    "cost_status": "unmeasured",
+    "unit_embedding": {
+      "jobs": 1,
+      "documents": 38,
+      "queries": 0,
+      "elapsed_ms": 1.7237499996554106,
+      "sdk_versions": {
+        "synthetic": "1"
+      },
+      "peak_rss_bytes": null,
+      "rss_method": "unavailable",
+      "sampling_interval_ms": null,
+      "execution_kind": "test_fixture",
+      "worker_exited": true
+    },
+    "usage": {
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    "elapsed_ms": 3.8440839998656884
+  },
+  "parent_fingerprint": null,
+  "statistics": {
+    "chunk_count": 5,
+    "unit_count": 38,
+    "lengths": [
+      296,
+      355,
+      162,
+      320,
+      145
+    ],
+    "min": 145,
+    "max": 355,
+    "mean": 255.6,
+    "emitted_chars": 1278,
+    "unique_chars": 1038,
+    "duplicate_chars": 240,
+    "forced_units": 0,
+    "token_count": null,
+    "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+  },
+  "units_hash": "455b0fd76ed39f3450888f9a7ca05946091105b89242648bfb9323917c7c16dd",
+  "chunks_hash": "22a2641d9df898d040568eadc35033f5e0f322bcb857458c85424b95338c1410",
+  "coverage_hash": "d3dd883e257ae39639a6cdfa0ea76b50dec3ab527aca69914e85f0e674b6b1aa",
+  "vectors_hash": "e397542f33a05000cf9566b9d69a2184ce1ca8b5656855235e08639cf8ebc648",
+  "unit_order_hash": "9dbc85c041996aa2c4757cc7ac2e4a172dd9f2008860b024be5898175f6a2140",
+  "algorithm": "source-model-boundaries-v1",
+  "chunk_fingerprint": "4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e"
+}

@@ -20,13 +20,18 @@ def config(path):
         c=input_json(path)
         require(isinstance(c,dict),'invalid_config','config')
         require('reranker' not in c,'unsupported_reranker','config')
-        fields(c,{'schema_version','chunking','retrieval','llm_config'}|({'embedding_config'} if c.get('schema_version')==2 else set()),set(),'config')
-        require(type(c['schema_version']) is int and c['schema_version'] in (1,2),'invalid_schema','config')
-        fields(c['chunking'],{'method','size_chars','overlap_chars'},set(),'chunking')
-        fields(c['retrieval'],{'method','top_k','context_budget_chars'}|({'candidate_k','rrf_k'} if c['schema_version']==2 else set()),set(),'retrieval')
-        require(c['chunking']['method'] in ('fixed','recursive','structure'),'unsupported_chunking','config')
+        fields(c,{'schema_version','retrieval','llm_config',('chunk_artifact' if c.get('schema_version')==3 else 'chunking')}|({'embedding_config'} if c.get('schema_version') in (2,3) else set()),set(),'config')
+        require(type(c['schema_version']) is int and c['schema_version'] in (1,2,3),'invalid_schema','config')
+        if c['schema_version']==3:
+            from . import chunk_artifact
+            require(isinstance(c['chunk_artifact'],str) and c['chunk_artifact'],'chunk_artifact_required','config')
+            cp=Path(c['chunk_artifact']);cp=cp if cp.is_absolute() else path.absolute().parent/cp
+            c=dict(c,chunk_artifact=str(cp));chunk_artifact.load(cp)
+        else:fields(c['chunking'],{'method','size_chars','overlap_chars'},set(),'chunking')
+        fields(c['retrieval'],{'method','top_k','context_budget_chars'}|({'candidate_k','rrf_k'} if c['schema_version'] in (2,3) else set()),set(),'retrieval')
+        if c['schema_version']!=3:require(c['chunking']['method'] in ('fixed','recursive','structure'),'unsupported_chunking','config')
         require(c['retrieval']['method'] in (('bm25',) if c['schema_version']==1 else ('bm25','dense','hybrid')),'unsupported_retrieval','config')
-        if c['schema_version']==2:
+        if c['schema_version'] in (2,3):
             number(c['retrieval']['candidate_k'],c['retrieval']['top_k'],1000,'candidate_k',True);number(c['retrieval']['rrf_k'],1,1000,'rrf_k',True)
             if c['retrieval']['method']=='bm25':require(c['embedding_config'] is None,'unexpected_embedding_config','config')
             else:
@@ -34,8 +39,9 @@ def config(path):
                 ep=Path(c['embedding_config']);ep=ep if ep.is_absolute() else path.parent/ep
                 c=dict(c,embedding_config=str(ep.absolute()))
                 embedding.read_profile(ep)
-        number(c['chunking']['size_chars'],100,4000,'size',True)
-        number(c['chunking']['overlap_chars'],0,min(400,c['chunking']['size_chars']-1),'overlap',True)
+        if c['schema_version']!=3:
+            number(c['chunking']['size_chars'],100,4000,'size',True)
+            number(c['chunking']['overlap_chars'],0,min(400,c['chunking']['size_chars']-1),'overlap',True)
         number(c['retrieval']['top_k'],1,100,'top_k',True);number(c['retrieval']['context_budget_chars'],1,64000,'budget',True)
         require(isinstance(c['llm_config'],str) and c['llm_config'].strip(),'invalid_llm_config','config')
         p=Path(c['llm_config']);p=p if p.is_absolute() else path.parent/p
@@ -45,16 +51,27 @@ def config(path):
 
 
 def effective(c,llm):
-    result={'schema_version':c['schema_version'],'chunking':c['chunking'],'retrieval':c['retrieval'],'llm':llm}
-    if c['schema_version']==2:result['embedding']=embedding.identity(embedding.read_profile(c['embedding_config'])) if c['embedding_config'] else None
+    result={'schema_version':c['schema_version'],'retrieval':c['retrieval'],'llm':llm}
+    if c['schema_version']==3:
+        from . import chunk_artifact
+        r,_,_,_=chunk_artifact.load(c['chunk_artifact'])
+        result['chunk_artifact']={'fingerprint':r['chunk_fingerprint'],'config':r['config']}
+    else:result['chunking']=c['chunking']
+    if c['schema_version'] in (2,3):result['embedding']=embedding.identity(embedding.read_profile(c['embedding_config'])) if c['embedding_config'] else None
     return result
 
 
 def build(snapshot_dir,config_path,out,*,execute_retrieval=False,embedding_backend=None,reuse=None):
     started=time.monotonic();c,llm=config(config_path);sm,docs=load_snapshot(snapshot_dir)
-    chunks,maps=make_chunks(docs,sm['fingerprint'],c['chunking'])
-    ci={'source_fingerprint':sm['fingerprint'],'algorithm':ALGORITHM,'config':c['chunking'],'chunks_hash':fingerprint(chunks),'coverage_hash':fingerprint(maps)}
-    chunk_fp=fingerprint(ci);ii={'chunk_fingerprint':chunk_fp,'parameters':PARAMETERS};vector_bytes=None;stats={'jobs':0,'documents':0,'queries':0};method=c['retrieval']['method']
+    if c['schema_version']==3:
+        from . import chunk_artifact
+        r,_,chunks,maps=chunk_artifact.load(c['chunk_artifact']);require(r['source_fingerprint']==sm['fingerprint'],'stale_chunk_source','build')
+        ci=frozen_identity(r);chunk_fp=r['chunk_fingerprint']
+    else:
+        chunks,maps=make_chunks(docs,sm['fingerprint'],c['chunking'])
+        ci={'source_fingerprint':sm['fingerprint'],'algorithm':ALGORITHM,'config':c['chunking'],'chunks_hash':fingerprint(chunks),'coverage_hash':fingerprint(maps)}
+        chunk_fp=fingerprint(ci)
+    ii={'chunk_fingerprint':chunk_fp,'parameters':PARAMETERS};vector_bytes=None;stats={'jobs':0,'documents':0,'queries':0};method=c['retrieval']['method']
     if method!='bm25':
         ep=embedding.read_profile(c['embedding_config']);require(len(chunks)<=ep['max_chunks'],'embedding_chunk_limit','build')
         model_identity=embedding.identity(ep)
@@ -67,6 +84,9 @@ def build(snapshot_dir,config_path,out,*,execute_retrieval=False,embedding_backe
     index_fp=fingerprint(ii)
     if chunks:BM25Index({x['chunk_id']:x for x in chunks})
     with staging(out) as tmp:
+        if c['schema_version']==3:
+            from .candidates import copy_artifact
+            copy_artifact(c['chunk_artifact'],tmp/'frozen-chunks','chunks')
         (tmp/'snapshot').mkdir()
         for name in list(sm['identity']['files'])+['manifest.json']:
             dest=safe_path(tmp/'snapshot',name);dest.parent.mkdir(parents=True,exist_ok=True)
@@ -84,13 +104,10 @@ def build(snapshot_dir,config_path,out,*,execute_retrieval=False,embedding_backe
 def load_build(root,c):
     root=Path(root);m=verify(root,'build');i=m['identity']
     require(i.get('status')=='ready','build_not_ready','build')
-    require(i['chunk_identity']['config']==c['chunking'] and (i['retrieval_method']==c['retrieval']['method'] or {i['retrieval_method'],c['retrieval']['method']}<= {'dense','hybrid'}),'stale_build_config','build')
+    require((i['retrieval_method']==c['retrieval']['method'] or {i['retrieval_method'],c['retrieval']['method']}<= {'dense','hybrid'}),'stale_build_config','build')
     sm,docs=load_snapshot(root/'snapshot');require(sm['fingerprint']==i['source_fingerprint'],'stale_snapshot','build')
     chunks=read_json(root/'chunks.json');maps=read_json(root/'coverage.json');index=read_json(root/'index.json')
-    expected,mapping=make_chunks(docs,sm['fingerprint'],c['chunking'])
-    require(chunks==expected and maps==mapping,'stale_chunks','build')
-    ci={'source_fingerprint':sm['fingerprint'],'algorithm':ALGORITHM,'config':c['chunking'],'chunks_hash':fingerprint(chunks),'coverage_hash':fingerprint(maps)}
-    require(ci==i['chunk_identity'] and fingerprint(ci)==i['chunk_fingerprint'],'stale_chunk_identity','build')
+    validate_chunks(root,sm,c,chunks,maps,i['chunk_identity'],i['chunk_fingerprint'])
     ii={'chunk_fingerprint':i['chunk_fingerprint'],'parameters':PARAMETERS}
     if c['retrieval']['method']!='bm25':
         model_identity=c.get('embedding') or embedding.identity(embedding.read_profile(c['embedding_config']))
@@ -151,3 +168,23 @@ def rrf(bm,dense,k):
 def dry_run(path):
     c,lc=config(path);p=embedding.read_profile(c['embedding_config']) if c.get('embedding_config') else None
     return {'status':'preview','retrieval':c['retrieval'],'embedding':embedding.identity(p) if p else None,'configured':embedding.configured(p) if p else True,'execution_required':p is not None,'expected_work':{'build':'document embeddings' if p else 'BM25 only','ask':'query embedding even with stored document vectors' if p else 'BM25 only','generation_requests':0}}
+
+
+def frozen_identity(r):
+    return {'source_fingerprint':r['source_fingerprint'],'algorithm':'frozen-chunks-v1','config':r['config'],'chunks_hash':r['chunks_hash'],'coverage_hash':r['coverage_hash'],'frozen_fingerprint':r['chunk_fingerprint']}
+
+
+def validate_chunks(root,sm,c,chunks,maps,ci,chunk_fp):
+    if c['schema_version']==3:
+        from . import chunk_artifact
+        r,_,expected,mapping=chunk_artifact.load(Path(root)/'frozen-chunks')
+        requested=c['chunk_artifact']
+        if isinstance(requested,str):
+            external,_,_,_=chunk_artifact.load(requested);requested={'fingerprint':external['chunk_fingerprint'],'config':external['config']}
+        require(requested=={'fingerprint':r['chunk_fingerprint'],'config':r['config']} and r['source_fingerprint']==sm['fingerprint'] and ci==frozen_identity(r) and chunk_fp==r['chunk_fingerprint'],'stale_chunk_identity','build')
+    else:
+        _,docs=load_snapshot(Path(root)/'snapshot')
+        expected,mapping=make_chunks(docs,sm['fingerprint'],c['chunking'])
+        expected_ci={'source_fingerprint':sm['fingerprint'],'algorithm':ALGORITHM,'config':c['chunking'],'chunks_hash':fingerprint(chunks),'coverage_hash':fingerprint(maps)}
+        require(ci==expected_ci and fingerprint(ci)==chunk_fp,'stale_chunk_identity','build')
+    require(chunks==expected and maps==mapping,'stale_chunks','build')

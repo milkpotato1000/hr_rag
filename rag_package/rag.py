@@ -43,7 +43,7 @@ def business_answer(value,contexts):
     except ValidationError:raise RagError('invalid_answer_schema','answer_validation') from None
 
 
-def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver=None,execute_retrieval=False,embedding_backend=None,qrels=None,question_id=None,questions_hash=None):
+def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver=None,execute_retrieval=False,embedding_backend=None,qrels=None,question_id=None,questions_hash=None,facts=None,questions=None):
     started=time.monotonic();new_output(out)
     require(type(execute) is bool,'invalid_execute','config')
     c,lc=config(config_path);p=lc['profiles'][lc['roles']['generation']]
@@ -69,6 +69,14 @@ def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver
         require(qr['chunk_fingerprint']==bm['identity']['chunk_fingerprint'] and question_id in qr['judgments'],'qrels_chunk_mismatch','evaluation')
         require(all(set(gs)<={x['chunk_id'] for x in chunks} for gs in qr['judgments'].values()),'qrels_unknown_chunk','evaluation')
         result['metrics']['retrieval']=metrics(candidates,qr['judgments'][question_id],c['retrieval']['top_k'],qr['judgments_complete'])
+    if facts is not None:
+        from .chunk_compare import facts_for
+        result['metrics']['facts']=facts_for(result,chunks,docs,facts,questions,question_id)
+    if c['schema_version']==3:
+        from .chunk_artifact import load as load_chunks
+        cr,_,_,_=load_chunks(Path(run)/'frozen-chunks')
+        if cr['work'].get('origin_execution_kind',cr['work']['execution_kind'])=='test_fixture':result['execution_kind']='test_fixture'
+        result['chunking_provenance']={'work':cr['work'],'chunk_fingerprint':cr['chunk_fingerprint'],'boundary_inference_calls_this_request':0}
     if any('origin' in d for d in docs):
         result['source_origins']={d['document_id']:d['origin'] for d in docs if 'origin' in d}
     try:
@@ -111,41 +119,55 @@ def question_set(path):
 
 def changed_axes(a,b):
     changes=[]
+    if a.get('chunk_artifact')!=b.get('chunk_artifact'):changes.append('chunk_artifact')
     for section in ('chunking','retrieval'):
+        if section not in a or section not in b:continue
         changes += [section+'.'+k for k in sorted(set(a[section])|set(b[section])) if a[section].get(k)!=b[section].get(k)]
     if a['llm']!=b['llm']:changes.append('llm')
     if a.get('embedding')!=b.get('embedding'):changes.append('embedding')
     return changes
 
 
-def compare(snapshot_dir,configs,questions,out,*,execute=False,transport=None,key_resolver=None,execute_retrieval=False,embedding_backend=None,qrels=None):
+def compare(snapshot_dir,configs,questions,out,*,execute=False,transport=None,key_resolver=None,execute_retrieval=False,embedding_backend=None,qrels=None,facts=None):
     started=time.monotonic();new_output(out)
-    require(2<=len(configs)<=4,'config_count','compare')
+    require(2<=len(configs)<=5,'config_count','compare')
     qs=question_set(questions);sm,_=load_snapshot(snapshot_dir)
     checked=[config(p) for p in configs]  # Validate every setting before any generation.
     for c,lc in checked:require(lc['profiles'][lc['roles']['generation']]['response_mode']=='json_object','json_object_required','config')
     settings=[effective(c,lc) for c,lc in checked]
+    v3=all(c['schema_version']==3 for c,_ in checked)
+    require(v3 or (len(configs)<=4 and all(c['schema_version']!=3 for c,_ in checked)),'mixed_comparison_schema','compare')
+    from . import chunk_compare
+    if v3:chunk_compare.preflight(snapshot_dir,checked,settings,qs,facts)
+    else:require(facts is None,'facts_require_frozen_chunks','compare')
     rows=[];builds=[];reuse_cache={};embedding_totals={'jobs':0,'documents':0,'queries':0}
-    if qrels is not None:
+    if v3:qrel_map=chunk_compare.qrels_map(qrels,checked,qs,sm['fingerprint'])
+    elif qrels is not None:
         from .search_metrics import validate_qrels
         qrels=validate_qrels(qrels,sm['fingerprint'],fingerprint(qs))
     try:
         with staging(out) as tmp:
+            if v3:
+                from .candidates import copy_artifact
+                copy_artifact(snapshot_dir,tmp/'snapshot','snapshot')
+                write_json(tmp/'facts.json',input_json(facts) if isinstance(facts,(str,Path)) else facts)
+                write_json(tmp/'qrels.json',qrel_map)
             for n,path in enumerate(configs):
                 label=f'config-{n+1}';run=tmp/label/'build'
                 frozen=tmp/label/'settings';frozen.mkdir(parents=True)
-                c,lc=checked[n];write_json(frozen/'provider.json',lc)
+                c,lc=checked[n];active_qrels=qrel_map.get(settings[n]['chunk_artifact']['fingerprint']) if v3 else qrels
+                write_json(frozen/'provider.json',lc)
                 write_json(frozen/'rag.json',dict(c,llm_config='provider.json'));path=frozen/'rag.json'
                 try:
-                    cache_key=fingerprint({'source':sm['fingerprint'],'chunking':c['chunking'],'embedding':settings[n].get('embedding')})
+                    cache_key=fingerprint({'source':sm['fingerprint'],'chunking':settings[n].get('chunk_artifact',c.get('chunking')),'embedding':settings[n].get('embedding')})
                     bm=build(snapshot_dir,path,run,execute_retrieval=execute_retrieval,embedding_backend=embedding_backend,reuse=reuse_cache.get(cache_key) if c['retrieval']['method']!='bm25' else None)
                     if c['retrieval']['method']!='bm25':reuse_cache[cache_key]=run
                     from .storage import read_json
                     work=read_json(run/'embedding-work.json')
                     for key in embedding_totals:embedding_totals[key]+=work[key]
-                    if qrels is not None:
+                    if active_qrels is not None:
                         from .search_metrics import validate_corpus
-                        validate_corpus(qrels,bm,read_json(run/'chunks.json'),qs)
+                        validate_corpus(active_qrels,bm,read_json(run/'chunks.json'),qs)
                     require(bm['identity']['source_fingerprint']==sm['fingerprint'],'source_changed_during_compare','compare')
                     builds.append({'config_id':label,'status':'ready','chunk_fingerprint':bm['identity']['chunk_fingerprint'],'index_fingerprint':bm['identity']['index_fingerprint'],'build_ms':bm['elapsed_ms']})
                 except (RagError,ValidationError,OSError,UnicodeError) as e:
@@ -155,7 +177,7 @@ def compare(snapshot_dir,configs,questions,out,*,execute=False,transport=None,ke
                 for q in qs:
                     answer_dir=tmp/label/'answers'/q['id']
                     try:
-                        r=ask(run,path,q['question'],answer_dir,execute=execute,transport=transport,key_resolver=key_resolver,execute_retrieval=execute_retrieval,embedding_backend=embedding_backend,qrels=qrels,question_id=q['id'],questions_hash=fingerprint(qs))
+                        r=ask(run,path,q['question'],answer_dir,execute=execute,transport=transport,key_resolver=key_resolver,execute_retrieval=execute_retrieval,embedding_backend=embedding_backend,qrels=active_qrels,question_id=q['id'],questions_hash=fingerprint(qs),facts=facts,questions=qs)
                         for key in embedding_totals:embedding_totals[key]+=r['embedding_work'][key]
                         rows.append({'config_id':label,'question_id':q['id'],'status':r['status'],'failed_stage':r['failed_stage'],'error':r['error'],
                                      'dispatch_attempted':r['dispatch_attempted'],'execution_kind':r['execution_kind'],'source_fingerprint':r['source_fingerprint'],
@@ -171,6 +193,9 @@ def compare(snapshot_dir,configs,questions,out,*,execute=False,transport=None,ke
             if qrels is not None:
                 from .search_metrics import aggregate
                 summary['search_metrics']=aggregate(rows)
+            if v3:
+                summary.update(comparison_axis='frozen_chunk_artifact',boundary_inference_calls=0,fact_aggregates=chunk_compare.aggregate(rows,[x['id'] for x in summary['configs']]),
+                    chunk_artifacts=[chunk_compare.describe(c['chunk_artifact']) for c,_ in checked])
             write_json(tmp/'comparison.json',summary)
             lines=['# RAG 비교','',f"실행 종류: {summary['execution_kind']}. 비용 미측정. 품질 지표 N/A; 평가기/정답 미연결.",'',f"생성 요청 상한: {summary['generation_request_upper_bound']}; 자동 재시도 0.",'','| 설정 | 질문 ID | 상태 | 실패 단계 |','| --- | --- | --- | --- |']
             lines.extend(f"| {r['config_id']} | {r['question_id']} | {r['status']} | {r.get('failed_stage') or '-'} |" for r in rows)

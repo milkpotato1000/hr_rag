@@ -7,7 +7,7 @@ from .storage import fingerprint, require
 ALGORITHM='general-rules-v1'
 
 
-def recursive(text,start,end,maximum):
+def recursive(text,start,end,maximum,max_spans=None):
     patterns=(r'\n\s*\n',r'[.?!。！？](?=\s|$)\s*',r'\s+')
     boundaries=[]
     for pattern in patterns:
@@ -21,6 +21,7 @@ def recursive(text,start,end,maximum):
                 idx=bisect_right(ends,limit)-1
                 if idx>=0 and matches[idx][0]>=start and matches[idx][1]>start:
                     stop=matches[idx][1];break
+        if max_spans is not None:require(len(spans)<max_spans,'chunk_limit','chunking')
         spans.append((start,stop));start=stop
     return spans
 
@@ -35,7 +36,7 @@ def headings(text):
     return nodes
 
 
-def make_chunks(docs,source_fp,cfg):
+def make_chunks(docs,source_fp,cfg,*,max_chunks=None):
     emitted=[];coverage=[];details=[]
     size,overlap=cfg['size_chars'],cfg['overlap_chars']
     for d in docs:
@@ -52,11 +53,12 @@ def make_chunks(docs,source_fp,cfg):
             if method=='fixed':
                 start=begin
                 while start<end:
+                    if max_chunks is not None:require(len(coverage)+len(spans)<max_chunks,'chunk_limit','chunking')
                     stop=min(start+size,end);spans.append((start,stop,start,stop,path))
                     if stop==end:break
                     start=stop-overlap
             else:
-                for a,b in recursive(text,begin,end,size-overlap):
+                for a,b in recursive(text,begin,end,size-overlap,None if max_chunks is None else max_chunks-len(coverage)-len(spans)):
                     spans.append((a,b,max(begin,a-overlap),b,path))
         for a,b,start,end,path in spans:
             require(0<=start<end<=len(text) and end-start<=size,'chunk_bounds','chunking')

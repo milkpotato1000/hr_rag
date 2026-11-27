@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "observed_wheel": "61915194fc2b083230b7a5fbcc5ca8fe8d3b297af5595b9be954ddf73786d830",
+  "final_wheel": "f230f9978d0f7e47ef9e743554dcc99c654a55fadae0c6d61b9e602d98851bb1",
+  "unchanged_ui_assets_and_handlers": [
+    "rag_package/ui_chunking.py",
+    "rag_package/ui_jobs.py",
+    "rag_package/ui_registry.py",
+    "rag_package/ui_reranking.py",
+    "rag_package/ui_server.py",
+    "rag_package/ui/app.js",
+    "rag_package/ui/index.html",
+    "rag_package/ui/style.css"
+  ],
+  "later_change": "Rule-only span cap; normal output identical, no UI changes; regression and source-free rerun"
+}

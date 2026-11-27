@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+  "questions_hash": "88d69a30d3cafae50e5a64edc3598c58f3edb4ffe9e7bd65fc9f2eedc0c9ba34",
+  "offset_unit": "unicode_codepoint",
+  "questions": [
+    {
+      "question_id": "q1",
+      "required_facts": [
+        {
+          "fact_id": "birthday",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "birthday",
+                  "start": 8,
+                  "end": 10,
+                  "quote": "생일"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

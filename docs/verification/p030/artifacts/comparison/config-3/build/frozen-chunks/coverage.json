@@ -1,0 +1,73 @@
+{
+  "coverage": [
+    {
+      "document_id": "birthday",
+      "base_start": 0,
+      "base_end": 47,
+      "start": 0,
+      "end": 47,
+      "excluded": null
+    },
+    {
+      "document_id": "birthday",
+      "base_start": 47,
+      "base_end": 236,
+      "start": 47,
+      "end": 236,
+      "excluded": null
+    },
+    {
+      "document_id": "birthday",
+      "base_start": 236,
+      "base_end": 427,
+      "start": 236,
+      "end": 427,
+      "excluded": null
+    },
+    {
+      "document_id": "birthday",
+      "base_start": 427,
+      "base_end": 653,
+      "start": 427,
+      "end": 653,
+      "excluded": null
+    },
+    {
+      "document_id": "annual",
+      "base_start": 0,
+      "base_end": 44,
+      "start": 0,
+      "end": 44,
+      "excluded": null
+    },
+    {
+      "document_id": "annual",
+      "base_start": 44,
+      "base_end": 213,
+      "start": 44,
+      "end": 213,
+      "excluded": null
+    },
+    {
+      "document_id": "annual",
+      "base_start": 213,
+      "base_end": 385,
+      "start": 213,
+      "end": 385,
+      "excluded": null
+    }
+  ],
+  "detection": [
+    {
+      "document_id": "birthday",
+      "headings_detected": 4,
+      "fallback": null
+    },
+    {
+      "document_id": "annual",
+      "headings_detected": 2,
+      "fallback": null
+    }
+  ],
+  "whitespace_policy": "excluded from search but retained in coverage spans"
+}

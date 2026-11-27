@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "chunk_artifact": ".rag-runs/chunk-fixed",
+  "retrieval": {
+    "method": "bm25",
+    "top_k": 5,
+    "candidate_k": 20,
+    "rrf_k": 60,
+    "context_budget_chars": 4000
+  },
+  "embedding_config": null,
+  "llm_config": "llm-local.json"
+}

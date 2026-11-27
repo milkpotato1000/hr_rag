@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "installed_path": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/core/lib/python3.12/site-packages/rag_package/__init__.py",
+  "sdk_absent": true,
+  "SDK_imports": 0,
+  "commands": [
+    {
+      "args": [
+        "init",
+        "--out",
+        "ws"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"execution_kind\": \"offline\", \"files\": 23, \"network_requests\": 0, \"secrets_read\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "snapshot",
+        "--sources",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/sources.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/snapshot"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"snapshot\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunk-fixed.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-fixed"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"71d437373ca5c6b2a276d81f6debf487ea34f15d6158bc3d98cfaf3094d6cf7e\", \"statistics\": {\"chunk_count\": 3, \"unit_count\": 37, \"lengths\": [400, 300, 385], \"min\": 300, \"max\": 400, \"mean\": 361.6666666666667, \"emitted_chars\": 1085, \"unique_chars\": 1005, \"duplicate_chars\": 80, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.3527910012053326}, \"invocation_path\": \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-fixed.invocation-c0ee49de71d4430bb629fbd85f10067d\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunk-recursive.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-recursive"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"13d64ba12656593f5ec64635c9433d872a3500d4f029d501a38fbe4732b8bbc4\", \"statistics\": {\"chunk_count\": 5, \"unit_count\": 37, \"lengths\": [246, 271, 263, 213, 252], \"min\": 213, \"max\": 271, \"mean\": 249.0, \"emitted_chars\": 1245, \"unique_chars\": 1005, \"duplicate_chars\": 240, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.4702079895650968}, \"invocation_path\": \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-recursive.invocation-2be283d6ecfc4a8f8baaf742241afe18\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunk-structure.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-structure"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"f5d424b58530f375b07a8db3925236c2b6c388e6f6ff30cde67e8c7f53f51c31\", \"statistics\": {\"chunk_count\": 7, \"unit_count\": 37, \"lengths\": [47, 189, 191, 193, 44, 169, 172], \"min\": 44, \"max\": 193, \"mean\": 143.57142857142858, \"emitted_chars\": 1005, \"unique_chars\": 1005, \"duplicate_chars\": 0, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.36991699016653}, \"invocation_path\": \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-structure.invocation-b32a6a99b3194dd0ac0da57ac09437c4\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunk-semantic.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-semantic"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"source_fingerprint\": \"183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf\", \"expected_unit_embeddings\": 37, \"work\": {\"execution_kind\": \"preview\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0}, \"token_count\": null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunk-llm.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-llm"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"source_fingerprint\": \"183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf\", \"expected_unit_embeddings\": 0, \"work\": {\"execution_kind\": \"preview\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 3, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0}, \"token_count\": null}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk-replay",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-fixed"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"71d437373ca5c6b2a276d81f6debf487ea34f15d6158bc3d98cfaf3094d6cf7e\", \"model_calls\": 0, \"statistics\": {\"chunk_count\": 3, \"unit_count\": 37, \"lengths\": [400, 300, 385], \"min\": 300, \"max\": 400, \"mean\": 361.6666666666667, \"emitted_chars\": 1085, \"unique_chars\": 1005, \"duplicate_chars\": 80, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.3527910012053326}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk-replay",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-recursive"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"13d64ba12656593f5ec64635c9433d872a3500d4f029d501a38fbe4732b8bbc4\", \"model_calls\": 0, \"statistics\": {\"chunk_count\": 5, \"unit_count\": 37, \"lengths\": [246, 271, 263, 213, 252], \"min\": 213, \"max\": 271, \"mean\": 249.0, \"emitted_chars\": 1245, \"unique_chars\": 1005, \"duplicate_chars\": 240, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.4702079895650968}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk-replay",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/chunks-structure"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"f5d424b58530f375b07a8db3925236c2b6c388e6f6ff30cde67e8c7f53f51c31\", \"model_calls\": 0, \"statistics\": {\"chunk_count\": 7, \"unit_count\": 37, \"lengths\": [47, 189, 191, 193, 44, 169, 172], \"min\": 44, \"max\": 193, \"mean\": 143.57142857142858, \"emitted_chars\": 1005, \"unique_chars\": 1005, \"duplicate_chars\": 0, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.36991699016653}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "compare",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/snapshot",
+        "--configs",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/v3-0.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/v3-1.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/v3-2.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/v3-3.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/v3-4.json",
+        "--questions",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/compare-questions.json",
+        "--facts",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/ws/facts.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/comparison"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"compare\", \"execution_kind\": \"preview\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 0, \"documents\": 0, \"queries\": 0}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "chunk-report",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/comparison",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/report"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"model_calls\": 0, \"fact_aggregates\": {\"config-1\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}, \"config-2\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}, \"config-3\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}, \"config-4\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}, \"config-5\": {\"candidate\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"top_k\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}, \"contexts\": {\"macro\": 0.5, \"micro\": 0.5, \"all_required_rate\": 0.5, \"fulfilled\": 1, \"total_facts\": 2, \"valid\": 2, \"questions\": 2, \"failed\": 0, \"no_required_facts\": 0, \"excluded\": 0}}}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "candidates",
+        "--build",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/comparison/config-4/build",
+        "--result",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/comparison/config-4/answers/q1",
+        "--question-id",
+        "q1",
+        "--n",
+        "20",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/candidate"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"candidates\", \"artifact_written\": true, \"reason\": null, \"error\": null, \"work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rerank",
+        "--candidates",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/candidate",
+        "--method",
+        "none",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/verify-nzsczzza/none"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"rerank\", \"artifact_written\": true, \"reason\": null, \"error\": null, \"work\": {\"pairs\": 0, \"queries\": 0, \"workers\": 0, \"fixture_calls\": 0, \"retry_count\": 0, \"worker_exited\": true, \"execution_kind\": \"none\", \"elapsed_ms\": 0, \"peak_rss_bytes\": null, \"rss_method\": \"unavailable\"}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    }
+  ],
+  "fake_boundary_calls": [
+    "document",
+    "boundary POST",
+    "boundary POST",
+    "boundary POST"
+  ],
+  "five_way_compare_rows": 10,
+  "real_calls": 0
+}

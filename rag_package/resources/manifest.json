@@ -119,9 +119,69 @@
     },
     {
       "path": "START_HERE.md",
-      "sha256": "09f722e345cd474610ed21d6aff353ffa3409cf5e47e52609936c4080bc0995c",
+      "sha256": "cfb88d18e1552256cab3d43841ae986407d19388c59607bbc2d6d636b48ab13b",
       "source": null,
-      "changes": "Created for P028 offline sample"
+      "changes": "P030 current capabilities and five-method instructions; historical verification preserved"
+    },
+    {
+      "path": "chunk-structure.json",
+      "sha256": "b4bdc4f3e5cc2f98dbd32ef1744a1c89239228f1a825661c6f6ccbe77e4f7a1e",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "embedding-e5.json",
+      "sha256": "20b55c7188ca2fa4bc3ac49499ee281e30c39b8382f24f1f88488cfe87dc5059",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "chunk-llm.json",
+      "sha256": "4694875305e3e116e4dd60dd1ad7d30210b6db900a6aab5c06f074c71506e088",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "reranker-bge.json",
+      "sha256": "e7850ac2c9aa06ca3aada2a9a77a15aaea0e53dc689e2fdfaf6733de92c65df2",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "chunk-semantic.json",
+      "sha256": "54cda11629cfcc7ef9bdd346259d734becb87ccd94992da9096a2d659b86f01f",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "rag-hybrid.json",
+      "sha256": "7645f3c76b3db29fee009079d84d204446fe4b095ee09310587660114956c15f",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "llm-chunking.json",
+      "sha256": "990f3f18261a0d73d9691570ad4c611acd40d239c1549d5c58d004c35b05f939",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "chunk-recursive.json",
+      "sha256": "f39b329fe66dbdced04d5feec6eaaaaff8a98992e87348e9fa19ad8ddde515c4",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "rag-frozen.json",
+      "sha256": "0a53181ac0d656cbf65ed6475e24bdeb395676179f389fe7c9fb7e3e8c940918",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
+    },
+    {
+      "path": "chunk-fixed.json",
+      "sha256": "bf1ed1042a5370255f9cb299064f28531232fceaad502a13623b87fffc03a5f2",
+      "source": null,
+      "changes": "P030 installed sample: explicit preview defaults; placeholders never invoke"
     }
   ]
 }

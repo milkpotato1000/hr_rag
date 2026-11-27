@@ -1,0 +1,80 @@
+{
+  "identity": {
+    "schema_version": 1,
+    "kind": "build",
+    "status": "ready",
+    "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+    "chunk_identity": {
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+      "algorithm": "frozen-chunks-v1",
+      "config": {
+        "schema_version": 1,
+        "method": "semantic",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "unit_max_chars": 120,
+        "minimum_chars": 120,
+        "distance_threshold": 0.35,
+        "model": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "file_manifest": {
+            "config.json": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          },
+          "device": "cpu",
+          "dtype": "float32",
+          "max_input_tokens": 512,
+          "catalog": {
+            "dimension": 384,
+            "query_prefix": "query: ",
+            "document_prefix": "passage: ",
+            "pooling": "mean",
+            "limit": 512,
+            "license": "MIT",
+            "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+          },
+          "normalization": "l2",
+          "algorithm": "exact-cosine-v1"
+        }
+      },
+      "chunks_hash": "22a2641d9df898d040568eadc35033f5e0f322bcb857458c85424b95338c1410",
+      "coverage_hash": "d3dd883e257ae39639a6cdfa0ea76b50dec3ab527aca69914e85f0e674b6b1aa",
+      "frozen_fingerprint": "4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e"
+    },
+    "chunk_fingerprint": "4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e",
+    "index_fingerprint": "5a6bd9412a6b13f2c05169aba566849046170c06d6d22836bb2020a1c34d399b",
+    "retrieval_method": "bm25",
+    "files": {
+      "chunks.json": "4124b7dc7845b18b4796389dd7d6436e8a7f5fb2f5c4a86d0cf6133d90ca7b21",
+      "coverage.json": "893b8656b804bad67dfb48050b7f9b353966241142ebfe1bdb907421d64addf6",
+      "embedding-work.json": "1d2ecab46bd1cc2d7547ae52028d378ca16f1cce7c722cff68c3b97e38a5302d",
+      "frozen-chunks/chunk.json": "4f520eb32753c1612302f6d632e2e5bc5d05df7bd7d127d7ed944800cf20a4b2",
+      "frozen-chunks/chunks.json": "4124b7dc7845b18b4796389dd7d6436e8a7f5fb2f5c4a86d0cf6133d90ca7b21",
+      "frozen-chunks/coverage.json": "893b8656b804bad67dfb48050b7f9b353966241142ebfe1bdb907421d64addf6",
+      "frozen-chunks/manifest.json": "abaf2b9eb07db921320445219603b5b965aaced595f92865b593d90c634e332d",
+      "frozen-chunks/snapshot/annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "frozen-chunks/snapshot/birthday/canonical.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/original.md": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/page-1-raw.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/birthday/page-1.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "frozen-chunks/snapshot/manifest.json": "1f02020a1bf1822be660605f598df2d0e2b5a92f9644e667885bf80274222fbe",
+      "frozen-chunks/unit-vectors.f32": "e397542f33a05000cf9566b9d69a2184ce1ca8b5656855235e08639cf8ebc648",
+      "frozen-chunks/units.json": "342be9178183038eddbd3b2d4e644c35c743e2a5a9bc3a39eb8f2f1497d199f0",
+      "index.json": "331a56e6f4d35ee6b2369dd1496efbc47c96a594137ec6cf8a2eca2ecb9ef118",
+      "snapshot/annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "snapshot/birthday/canonical.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/original.md": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/page-1-raw.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/birthday/page-1.txt": "efd70a024e282822060ef688fdfa7a34f35bb049330da80511637d53dfaa74b1",
+      "snapshot/manifest.json": "1f02020a1bf1822be660605f598df2d0e2b5a92f9644e667885bf80274222fbe"
+    }
+  },
+  "fingerprint": "23896feb8b65becc928fe35d861dade4f3765ef5265c1b98448f2e8325ec3fdc",
+  "elapsed_ms": 26.638
+}

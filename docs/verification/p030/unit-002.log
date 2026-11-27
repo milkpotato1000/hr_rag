@@ -1,0 +1,11 @@
+test_independent_boundaries_overlap_fact (test_chunk_artifact.ChunkTests.test_independent_boundaries_overlap_fact) ... ok
+test_journal_failure_before_and_after_publication (test_chunk_artifact.ChunkTests.test_journal_failure_before_and_after_publication) ... ok
+test_rules_v3_candidate_replay (test_chunk_artifact.ChunkTests.test_rules_v3_candidate_replay) ... ok
+test_semantic_derive_and_preflight_counts (test_chunk_artifact.ChunkTests.test_semantic_derive_and_preflight_counts) ... ok
+test_three_llm_providers_and_tamper (test_chunk_artifact.ChunkTests.test_three_llm_providers_and_tamper) ... ok
+test_windows_second_failure_unknown_no_resume (test_chunk_artifact.ChunkTests.test_windows_second_failure_unknown_no_resume) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.824s
+
+OK

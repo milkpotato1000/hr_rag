@@ -29,7 +29,7 @@ HF ID는 원본 저장소 식별자이고 Ollama 태그는 실행 환경의 이�
 | 설정 예시만 제공 | local/api 공통 JSON, 생성·평가 역할별 선택 | [local](examples/local.json) / [api](examples/api.json). example_only=true, 실제 CLI 스키마 아님 |
 | 일부 구현·미완료 | claim 추출·판정·Python 집계와 실제 RAG 평가 연결 | [평가 모듈](../../../evaluation/project_b/README.md). 오프라인 모듈 검증과 전체 모델 검증은 별개. P013 BLOCKED |
 | 독립 구현·오프라인 검증 | Ollama/OpenAI Chat/Anthropic Messages adapter와 CLI | [provider 안내](providers.md). 실제 호출·기존 HR UI/평가 runner 연결 미검증 |
-| 신규 구현·오프라인 E2E 검증 | 일반 PDF/TXT/MD snapshot·규칙3종·BM25·선택 LLM·원문 인용·비교 CLI | [일반 문서 안내](document-rag.md). 실모델/실 API/개인 문서 품질 미검증 |
+| 신규 구현·오프라인 E2E 검증 | 일반 PDF/TXT/MD snapshot·청킹5종·BM25/Dense/Hybrid·고정 후보 리랭커·선택 LLM·원문 인용·비교 CLI | [일반 문서 안내](document-rag.md). 실모델/실 API/개인 문서 품질 미검증 |
 | 후속 계획 | 임의 임베딩 교체, Qwen instruction 리랭커 | [로드맵](../../planning/rag-package-roadmap.md). 새 범용 UI는 등록 API 설정 선택을 지원하며 실제 호출 품질은 미검증 |
 | 신규 구현·오프라인 검증 | Google Drive 단일 파일 REST/OAuth→snapshot | [Drive 안내](drive.md). 실제 계정 미검증. 명시 재수집/rebuild 지원, 폴더·자동 동기화는 후속 |
 | 신규 구현·독립 설치 검증 | wheel/sdist·rag-lab·init/doctor·샘플 preview | [설치 안내](install.md). 같은 Mac 새 venv/core·extras·재빌드 검증. 다른 OS/두 제품 UI/실서비스 미검증 |

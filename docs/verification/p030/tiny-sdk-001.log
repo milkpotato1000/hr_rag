@@ -1,0 +1,7 @@
+W1128 02:01:28.213000 19108 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p030/tiny_sdk.py:9: DeprecationWarning: Importing from 'sentence_transformers.models' is deprecated and will be removed in a future version. Please use 'sentence_transformers.sentence_transformer.modules' instead.
+  from sentence_transformers import SentenceTransformer,models
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p030/tiny_sdk.py", line 10, in <module>
+    from rag_package import embedding,chunk_artifact
+ModuleNotFoundError: No module named 'rag_package'
