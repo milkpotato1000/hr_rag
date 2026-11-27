@@ -1,10 +1,10 @@
-# P028 설치 패키지 계약 초안
+# P028 설치 패키지 계약 v1
 
-DRAFT. P027 완료와 실제 dependency lock 확인 후 READY 검토한다. 사용자 goal의 설치·코딩 도구 공통 실습을 위한 증분이며 P013/Hybrid 순서를 우회하는 작업이 아니다.
+READY. P027 완료 후에만 실행한다. P027의 현재 SDK 설치/import 증거를 확인했으며 최종 완료 lock을 구현 시작 시 다시 확인한다. 사용자 goal의 설치·코딩 도구 공통 실습을 위한 증분이며 P013/Hybrid 순서를 우회하는 작업이 아니다.
 
 ## 배포물과 범위
 
-현재 저장소에는 pyproject와 LICENSE 파일이 없다. root pyproject.toml과 필요한 packaging 설정을 추가하되 자동 전체 repository 탐색을 쓰지 않는다. distribution 이름은 `milkpotato-rag-lab`, import 이름 `rag_package`, 초기 개발 버전 `0.1.0.dev1`, console command `rag-lab`로 제안한다. 이름은 PyPI 등록을 보장하지 않으며 이번 범위에서 PyPI/GitHub release/main 승격을 하지 않는다. 저장소의 권리 조건을 임의 MIT 등으로 선언하거나 기존 소스의 라이선스를 바꾸지 않는다. 모델 라이선스와 패키지 소스의 라이선스를 별개로 안내한다.
+현재 저장소에는 pyproject와 LICENSE 파일이 없다. root pyproject.toml과 필요한 packaging 설정을 추가하되 자동 전체 repository 탐색을 쓰지 않는다. distribution 이름은 `milkpotato-rag-lab`, import 이름 `rag_package`, 초기 개발 버전 `0.1.0.dev1`, console command `rag-lab`로 고정한다. 이름은 PyPI 등록을 보장하지 않으며 이번 범위에서 PyPI/GitHub release/main 승격을 하지 않는다. 저장소의 권리 조건을 임의 MIT 등으로 선언하거나 기존 소스의 라이선스를 바꾸지 않는다. 모델 라이선스와 패키지 소스의 라이선스를 별개로 안내한다.
 
 wheel에는 rag_package 실제 모듈·명시한 resource·필요 package metadata만, sdist에는 그 파일과 명시한 build 설정·패키지 안내만 포함한다. `.git`, worktree/harness/GT/evaluation/기존 단계 corpus, tests/fake 응답, venv/cache, credentials, private 산출물, docs/verification, .rag-runs는 포함하지 않는다. 경로 allowlist와 wheel/sdist inventory를 증거로 남긴다. 기존 source provenance는 필요한 metadata만 포함하고 local absolute path에 의존하지 않는다.
 
@@ -20,9 +20,18 @@ Python>=3.10, 현재 지원 storage primitive가 있는 macOS 및 Linux 대상�
 
 resource에서 선택한 합성 TXT/MD 문서2개, local/API별 LLM 설정 예시, 규칙청킹3종 RAG 설정, questions, 가짜 Drive config 예시, 한국어 START_HERE.md, `.gitignore`(.rag-runs와 local credentials)를 복사한다. 원본 선택 SHA/path/hash와 변경 내역을 package resource manifest에 기록한다. 기존 23페이지 HR PDF 전체를 wheel에 넣지 않는다. 최소 합성 PDF를 포함한다면 생성/파싱 근거와 가상자료 표시를 남긴다. 상대 경로가 생성 디렉터리 안에서 완결되어야 한다.
 
-샘플 LLM 설정은 preview 가능한 schema를 따르되 기존 개인 Ollama alias/digest를 누구에게나 설치된 표준 모델로 표현하지 않는다. local/API 구분과 사용자가 바꿀 모델·HF ID·revision/digest·key env를 안내한다. example validation_status는 미검증 예시다. json_object가 generation profile의 기본이며 evaluation role이 샘플 실습에서 호출되지 않는다. 예시 digest가 runtime 실제값과 다르면 fail-closed이며 자동 lookup/교체/다운로드하지 않는다. placeholder 또는 과거 lock 예시 때문에 live 실행 준비가 완료됐다고 표시하지 않는다.
+샘플 LLM 설정은 preview 가능한 schema를 따르되 기존 개인 Ollama alias/digest를 누구에게나 설치된 표준 모델로 표현하지 않는다. local/API 구분과 사용자가 바꿀 모델·HF ID·revision/digest·key env를 안내한다. example validation_status는 미검증 예시다. json_object가 generation profile의 기본이며 evaluation role이 샘플 실습에서 호출되지 않는다. 예시 표식이 남아 있으면 실행 전 configuration_required로 거부하고, 사용자가 설정한 digest가 runtime 실제값과 다르면 기존 fail-closed 동작을 유지하며 자동 lookup/교체/다운로드하지 않는다. placeholder 또는 과거 lock 예시 때문에 live 실행 준비가 완료됐다고 표시하지 않는다.
 
-`rag-lab doctor [--config RAG_CONFIG]`는 Python/platform/package version, optional dependency 설치/정확 pin, storage primitive 지원, config 존재/schema 및 명시 설정상 지원 여부를 JSON 또는 읽기 쉬운 출력으로 제공한다. secret 값/키 존재 여부/전체환경/credential 파일 원문/문서 본문을 읽지 않는다. 서버/모델 가용성·API key·Drive 접근은 not_checked이며 doctor PASS를 live ready로 표현하지 않는다. missing optional dependency는 관련 기능 unavailable로 표시하고 core 텍스트 실습을 차단하지 않는다. 잘못된 config/필수 runtime 불충족은 nonzero, optional 미설치만으로는 core 실패하지 않는다. printout의 정확 JSON schema/exit codes는 READY에서 고정한다.
+`rag-lab doctor [--config RAG_CONFIG]`는 Python/platform/package version, optional dependency 설치/정확 pin, storage primitive 지원, config 존재/schema 및 명시 설정상 지원 여부를 JSON 또는 읽기 쉬운 출력으로 제공한다. secret 값/키 존재 여부/전체환경/credential 파일 원문/문서 본문을 읽지 않는다. 서버/모델 가용성·API key·Drive 접근은 not_checked이며 doctor PASS를 live ready로 표현하지 않는다. missing optional dependency는 관련 기능 unavailable로 표시하고 core 텍스트 실습을 차단하지 않는다. 잘못된 config/필수 runtime 불충족은 nonzero, optional 미설치만으로는 core 실패하지 않는다. 아래 JSON schema/exit code를 따른다.
+
+
+### doctor와 예시 설정의 확정 계약
+
+출력 schema_version=1, package={name,version}, python={version,supported}, platform={name,storage_supported}, optional_dependencies={pdf:{installed_version,required_version,status},drive:{packages:[{name,installed_version,required_version}],status}}, config={status,reasons}, live_checks="not_checked", network_requests=0, secrets_read=0, status 필드를 반환한다. dependency status는 available/missing/version_mismatch, config status는 not_supplied/valid/example_requires_configuration/invalid다. status는 ready_for_offline/needs_configuration/unsupported/error. exit0은 필수 runtime/core와 제공 config가 유효한 경우(선택 extras 미설치 가능), exit3은 예시 설정을 실제 모델값으로 바꿔야 하는 경우, exit2는 잘못된 입력/필수 runtime 실패다. 추가 human-readable 설명은 JSON 안에 넣으며 raw exception/path secrets는 출력하지 않는다. live_checks는 항상 not_checked다.
+
+init의 local profile은 모델명 `EXAMPLE_OLLAMA_MODEL`, HF 후보 Qwen/Qwen3-8B, expected_digest 64자리 0으로 만들고 검증된 모델로 표현하지 않는다. API profile은 `EXAMPLE_API_MODEL`과 key env 이름만 둔다. 양쪽 identity.validation_status="example_requires_configuration"을 넣는다. P025 validate/preview는 schema로 받아 실습이 가능하되 invoke는 실제 env/transport 조회 전에 해당 generation/evaluation profile의 이 표식 또는 EXAMPLE_ model을 `configuration_required` 오류로 거부한다. 이미 존재하는 실제 사용자 설정/기존 예시의 의미를 변경하지 않는다. 학습자는 본인 모델·실제 digest/HF 출처·API model을 설정하고 validation_status="user_configured_unverified"로 바꾼다. 이를 live 검증 완료로 주장하지 않는다. doctor는 이 예시 표식을 명시적으로 알려 주고, 샘플 기본 실습은 preview만 수행한다.
+
+optional dependency metadata 검사는 importlib.metadata로 수행하고 설치되지 않은 SDK를 import하거나 인증정보를 읽지 않는다. storage_supported는 OS와 primitive 존재를 검사한 결과이며 실제 source 파싱 성공이나 디스크 전체 쓰기 권한 보장은 아니다. package 버전은 단일 버전 파일/metadata에서 일관되게 공급하며 `rag-lab --version`과 module CLI가 같은 값을 표시한다.
 
 ## 안내와 실제 사용
 
