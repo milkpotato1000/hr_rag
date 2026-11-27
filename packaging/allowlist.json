@@ -28,7 +28,14 @@
     "rag_package/workspace.py",
     "rag_package/embedding.py",
     "rag_package/embedding_worker.py",
-    "rag_package/search_metrics.py"
+    "rag_package/search_metrics.py",
+    "rag_package/reranker.py",
+    "rag_package/reranker_worker.py",
+    "rag_package/candidates.py",
+    "rag_package/fact_metrics.py",
+    "rag_package/reranking.py",
+    "rag_package/rerank_compare.py",
+    "rag_package/ui_reranking.py"
   ],
   "resources": [
     "rag_package/provenance.json",

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p020/install_verify.py", line 14, in <module>
+    with tarfile.open(sd) as t:t.extractall(rebuild,filter='data')
+TypeError: extractall() got an unexpected keyword argument 'filter'

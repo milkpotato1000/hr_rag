@@ -1,0 +1,30 @@
+{
+  "identity": {
+    "schema_version": 1,
+    "kind": "rerank",
+    "status": "complete",
+    "candidate_fingerprint": "8c1c26309875e38dece8ff62d5a1c890b193c94cba54e5f2722938cc6f587939",
+    "files": {
+      "candidates/candidates.json": "cf34b6d23555dac811dc7ebd961a867d42c10fcfc0b285d3b78f36334ed1190c",
+      "candidates/chunk-identity.json": "131d2f99a563d5dc7e904032fe8da37d1352705f48815c26ed6e30e406197509",
+      "candidates/corpus.json": "8f4893b9b441d552c483715a4cd2891e70b7c10b8279496fa339a670e731c5c5",
+      "candidates/coverage.json": "7d74d64d1f1592b04be943eac817261279ac7f31edf86a84050210747ea63c9d",
+      "candidates/index-identity.json": "57930c7fffc09fc6be2e5f79221c099f5fb0a79fedb24faf6d8cb6b2d390a1c1",
+      "candidates/manifest.json": "811514d2362425c23593696d254603b44c9b3f740c221399e8216ca5db9db364",
+      "candidates/parent-manifest.json": "34b1258d3b87d425d6a8f3e7b3433d5e44b5f24c6053268e9d59ede9d64e8b50",
+      "candidates/parent-result.json": "4ceb4d4a05eccc6205db13fd802f187b706cb22e4af8ff3780202eba35d980bc",
+      "candidates/snapshot/annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "candidates/snapshot/annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "candidates/snapshot/annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "candidates/snapshot/annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "candidates/snapshot/birthday/canonical.txt": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+      "candidates/snapshot/birthday/original.md": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+      "candidates/snapshot/birthday/page-1-raw.txt": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+      "candidates/snapshot/birthday/page-1.txt": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+      "candidates/snapshot/manifest.json": "44b6aa40b31f824f4149488617991b809f11b5883223efb46e3f380537c6d65b",
+      "result.json": "7f3ed562cfe2341c072d827967f43cae22d95d6f5e5b9357c0efde2a40302bfe"
+    }
+  },
+  "fingerprint": "73e841f5cf1c54f65e55330cdb214210990879f2879bc62a11c3547dc308ab04",
+  "elapsed_ms": 0
+}

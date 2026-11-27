@@ -1,0 +1,33 @@
+[
+  {
+    "id": "111e4ae7009c4bbdba57b7f9b55f1ef4",
+    "request_id": "fdc49803-6f6d-4034-8e54-b212b6833b41",
+    "payload_hash": "08f5b38b293f668b06910ad83bc31d0ddcff4ac573fcc1a20820f3ada6846832",
+    "input_fingerprint": "01856daf3d15f435bb875e89ad31f9b79eb63d89bf29023ce9773e2bda0176fa",
+    "kind": "rerank_compare",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "fdc49803-6f6d-4034-8e54-b212b6833b41",
+      "kind": "rerank_compare",
+      "candidate_ids": [
+        "fcf4c82a3c2c48ca895ce9f77dd721f2"
+      ],
+      "top_k": 2,
+      "context_budget_chars": 4000,
+      "execute_reranking": true,
+      "qrels_id": "5ec78549b5e04e76be82f2693421ffa9",
+      "facts_id": "e802efa0efb34c2d9d4e33b7e7643524",
+      "reranker_ids": [
+        "97c67eb32baa4e8b914b0aa19182cddc",
+        "94e8427a770745b3b44eeb9b5f1c3f1c"
+      ]
+    },
+    "artifact_ids": [
+      "c5ca3e46a5884991b2f15663085dc5f8"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  }
+]

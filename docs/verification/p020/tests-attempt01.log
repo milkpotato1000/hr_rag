@@ -1,0 +1,13 @@
+test_bad_scores_and_no_retry (test_reranking.RerankTests.test_bad_scores_and_no_retry) ... ok
+test_compare_replay_and_mapping_tamper (test_reranking.RerankTests.test_compare_replay_and_mapping_tamper) ... ok
+test_freeze_no_search_and_tamper (test_reranking.RerankTests.test_freeze_no_search_and_tamper) ... ok
+test_independent_arithmetic (test_reranking.RerankTests.test_independent_arithmetic) ... ok
+test_none_preview_scores_budget (test_reranking.RerankTests.test_none_preview_scores_budget) ... ok
+test_preflight_and_timeout_observation (test_reranking.RerankTests.test_preflight_and_timeout_observation) ... ok
+test_qrels_facts_strict_and_metrics (test_reranking.RerankTests.test_qrels_facts_strict_and_metrics) ... ok
+test_ui_jobs (test_reranking.RerankTests.test_ui_jobs) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.792s
+
+OK

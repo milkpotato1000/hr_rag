@@ -67,7 +67,7 @@ rag-lab compare --snapshot .rag-runs/snapshot-01 --configs fixed.json recursive.
 | exit2 / error 또는 unsupported | 잘못된 config 또는 Python/platform/storage 지원 문제 |
 | live_checks=not_checked | 서버/모델/API key/Drive 권한을 확인하지 않음 |
 
-원문→청크 경계→검색 후보→전달/제외 문맥을 비교하세요. fixed/recursive/structure와 overlap을 한 변수씩 바꿉니다. 답변 생성·품질 평가·비용은 preview에서 미측정입니다. 현재 범용 경로는 BM25와 규칙3종이며 Dense/Hybrid/리랭커/의미·LLM 청킹은 후속입니다. [통합 UI](ui.md)는 이후 P029 소스에 추가되어 아래 고정 P028 빌드와 구분합니다.
+원문→청크 경계→검색 후보→전달/제외 문맥을 비교하세요. fixed/recursive/structure와 overlap을 한 변수씩 바꿉니다. 답변 생성·품질 평가·비용은 preview에서 미측정입니다. 아래 고정 P028 빌드는 BM25·규칙3종 기준입니다. 최신 dev는 [Hybrid](hybrid.md)와 [리랭커](reranking.md)를 추가했으며 [P020 설치 증거](../../verification/p020/README.md)를 따릅니다. 의미·LLM 청킹은 이 범용 경로의 후속입니다. [통합 UI](ui.md)는 이후 P029 소스에 추가되어 아래 고정 P028 빌드와 구분합니다.
 
 ## 실제 답변으로 넘어가기
 

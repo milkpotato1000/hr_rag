@@ -27,10 +27,11 @@ def settings(chunking,retrieval):
 def question(text):require(isinstance(text,str) and text.strip() and len(text)<=2000,'invalid_question','input')
 
 class Jobs:
-    def __init__(self,registry,allow_model=False,allow_drive=False,*,transport=None,key_resolver=None,drive_transport=None,auth_backend=None,env_resolver=None,allow_retrieval=False,embedding_backend=None):
+    def __init__(self,registry,allow_model=False,allow_drive=False,*,transport=None,key_resolver=None,drive_transport=None,auth_backend=None,env_resolver=None,allow_retrieval=False,embedding_backend=None,allow_reranking=False,reranker_backend=None):
+        self.allow_reranking=allow_reranking;self.reranker_backend=reranker_backend
         self.registry=registry;self.allow_model=allow_model;self.allow_drive=allow_drive;self.allow_retrieval=allow_retrieval;self.embedding_backend=embedding_backend
         self.transport=transport;self.key_resolver=key_resolver;self.drive_transport=drive_transport;self.auth_backend=auth_backend;self.env_resolver=env_resolver
-        self.fixture=any(x is not None for x in (transport,key_resolver,drive_transport,auth_backend,env_resolver,embedding_backend));self.lock=threading.RLock();self.active=None;self.records={};self.thread=None
+        self.fixture=any(x is not None for x in (transport,key_resolver,drive_transport,auth_backend,env_resolver,embedding_backend,reranker_backend));self.lock=threading.RLock();self.active=None;self.records={};self.thread=None
         for p in (registry.root/'jobs').glob('*.json'):
             contained(registry.workspace,p);r=read_json(p);check_id(r['id']);self.records[r['request_id']]=r
             if r['status'] not in TERMINAL:
@@ -55,6 +56,9 @@ class Jobs:
         p=self.registry.embedding(v.get('embedding_config_id'));require(embedding.configured(p),'embedding_configuration_required','input');return p
     def prepare(self,v):
         kind=v['kind'];r=self.registry;plan={};summary=copy.deepcopy(v)
+        if kind in ('candidates','rerank','rerank_compare','rerank_answer'):
+            from .ui_reranking import prepare
+            return prepare(self,v),summary
         if kind=='snapshot':
             exact(v,('request_id','kind','input_ids'));plan['inputs']=r.freeze_inputs(v['input_ids']);plan['fingerprints']=[x['sha256'] for x in plan['inputs']]
         elif kind in ('drive_preview','drive_pull'):
@@ -109,7 +113,11 @@ class Jobs:
             r.update(status='running',stage=kind,dispatch_attempted='unknown' if v.get('execute') or kind=='drive_pull' else False);self.persist(r);work.mkdir()
             if 'source' in plan:
                 m=verify(plan['source'],'build' if kind=='ask' else 'snapshot');require(m['fingerprint']==plan['source_fingerprint'],'stale_artifact','jobs')
-            if kind=='snapshot':
+            if kind in ('candidates','rerank','rerank_compare','rerank_answer'):
+                from .ui_reranking import execute
+                ids,state,result=execute(self,v,plan,work)
+                r['dispatch_attempted']=result.get('dispatch_attempted',False);r['error']=result.get('error')
+            elif kind=='snapshot':
                 docs=[];src=work/'input';src.mkdir()
                 for d in plan['inputs']:
                     path=contained(registry.workspace,d['path']);raw=bounded(path,20*1024*1024);require(digest(raw)==d['sha256'],'stale_source','snapshot')
@@ -138,10 +146,14 @@ class Jobs:
                     if 'result_path' in row:
                         p=work/'result'/row['result_path'];rows[row['config_id']+'/'+row['question_id']]=registry.add_artifact(p.parent,'answer',snapshot_id=v['snapshot_id'],build_id=children[row['config_id']])
                 ids=[registry.add_artifact(work/'result','comparison',snapshot_id=v['snapshot_id'],build_ids=children,answer_ids=rows,labels=[x['label'] for x in v['variants']])];state='completed'
-            r.update(status=state,stage='finished',artifact_ids=ids);self.persist(r)
+            with self.lock:
+                r.update(status=state,stage='finished',artifact_ids=ids);self.persist(r);self.active=None
         except Exception as e:
-            r.update(status='failed',stage=getattr(e,'stage','publish'),error={'code':e.code if isinstance(e,(RagError,ValidationError)) else 'job_failed','stage':getattr(e,'stage','publish')},artifact_ids=ids,dispatch_attempted=getattr(e,'dispatch_attempted',r['dispatch_attempted']))
-            try:self.persist(r)
-            except OSError:r['error']={'code':'job_state_write_failed','stage':'publish'}
+            with self.lock:
+                r.update(status='failed',stage=getattr(e,'stage','publish'),error={'code':e.code if isinstance(e,(RagError,ValidationError)) else 'job_failed','stage':getattr(e,'stage','publish')},artifact_ids=ids,dispatch_attempted=getattr(e,'dispatch_attempted',r['dispatch_attempted']))
+                try:self.persist(r)
+                except OSError:r['error']={'code':'job_state_write_failed','stage':'publish'}
+                self.active=None
         finally:
-            with self.lock:self.active=None
+            with self.lock:
+                if self.active==r['id']:self.active=None

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "prior_wheel": "f819bcc45c6331aed9a6b16dce0b9f8909d61cb7d892939390e4d0aceb5a4d33",
+  "final_wheel": "3b39ba2bba9a5a989668315e81fb7f8394b72dd7d5431c818f2d7f9457eda4d2",
+  "changed": [
+    "rag_package/ui/app.js",
+    "rag_package/ui/style.css"
+  ],
+  "all_python_bytes_equal": true
+}

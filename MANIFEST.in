@@ -52,3 +52,12 @@ include rag_package/embedding.py
 include rag_package/embedding_worker.py
 include rag_package/search_metrics.py
 include rag_package/requirements-retrieval.lock
+
+include rag_package/reranker.py
+include rag_package/reranker_worker.py
+include rag_package/candidates.py
+include rag_package/fact_metrics.py
+include rag_package/reranking.py
+include rag_package/rerank_compare.py
+
+include rag_package/ui_reranking.py

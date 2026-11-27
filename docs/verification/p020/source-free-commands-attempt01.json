@@ -1,0 +1,37 @@
+[
+  {
+    "args": [
+      "uv",
+      "venv",
+      "--python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p020-installed-nqbemxxa/env/bin/python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p020-installed-nqbemxxa/core"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Using CPython 3.12.14 interpreter at: env/bin/python\nCreating virtual environment at: core\nActivate with: source core/bin/activate\n"
+  },
+  {
+    "args": [
+      "uv",
+      "pip",
+      "install",
+      "--python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p020-installed-nqbemxxa/core/bin/python",
+      "--no-deps",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p020-installed-nqbemxxa/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Using Python 3.12.14 environment at: core\nResolved 1 package in 0.64ms\nInstalled 1 package in 3ms\n + milkpotato-rag-lab==0.1.0.dev1 (from file:///private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p020-installed-nqbemxxa/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl)\n"
+  },
+  {
+    "args": [
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p020-installed-nqbemxxa/core/bin/python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p020-installed-nqbemxxa/probe.py"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"installed_path\": \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p020-installed-nqbemxxa/core/lib/python3.12/site-packages/rag_package/__init__.py\",\n  \"sdk_absent\": true,\n  \"SDK_imports\": 0,\n  \"commands\": [\n    {\n      \"args\": [\n        \"snapshot\",\n        \"--sources\",\n        \"stage/sources.json\",\n        \"--out\",\n        \"snap\"\n      ],\n      \"exit\": 0,\n      \"stdout\": \"{\\\"status\\\": \\\"complete\\\", \\\"command\\\": \\\"snapshot\\\", \\\"execution_kind\\\": \\\"offline\\\", \\\"artifact_written\\\": true, \\\"embedding_work\\\": null, \\\"generation_requests\\\": 0}\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"args\": [\n        \"build\",\n        \"--snapshot\",\n        \"snap\",\n        \"--config\",\n        \"stage/bm25.json\",\n        \"--out\",\n        \"build\"\n      ],\n      \"exit\": 0,\n      \"stdout\": \"{\\\"status\\\": \\\"complete\\\", \\\"command\\\": \\\"build\\\", \\\"execution_kind\\\": \\\"offline\\\", \\\"artifact_written\\\": true, \\\"embedding_work\\\": {\\\"jobs\\\": 0, \\\"documents\\\": 0, \\\"queries\\\": 0}, \\\"generation_requests\\\": 0}\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"args\": [\n        \"ask\",\n        \"--run\",\n        \"build\",\n        \"--config\",\n        \"stage/bm25.json\",\n        \"--question\",\n        \"생일 휴가 자격은?\",\n        \"--out\",\n        \"answer\"\n      ],\n      \"exit\": 0,\n      \"stdout\": \"{\\\"status\\\": \\\"complete\\\", \\\"command\\\": \\\"ask\\\", \\\"execution_kind\\\": \\\"preview\\\", \\\"artifact_written\\\": true, \\\"embedding_work\\\": {\\\"jobs\\\": 0, \\\"documents\\\": 0, \\\"queries\\\": 0}, \\\"generation_requests\\\": 0}\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"args\": [\n        \"candidates\",\n        \"--build\",\n        \"build\",\n        \"--result\",\n        \"answer\",\n        \"--question-id\",\n        \"q1\",\n        \"--n\",\n        \"20\",\n        \"--out\",\n        \"candidates\"\n      ],\n      \"exit\": 0,\n      \"stdout\": \"{\\\"status\\\": \\\"complete\\\", \\\"command\\\": \\\"candidates\\\", \\\"artifact_written\\\": true, \\\"reason\\\": null, \\\"error\\\": null, \\\"work\\\": null, \\\"generation_requests\\\": 0}\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"args\": [\n        \"rerank\",\n        \"--candidates\",\n        \"candidates\",\n        \"--method\",\n        \"none\",\n        \"--top-k\",\n        \"5\",\n        \"--out\",\n        \"none\"\n      ],\n      \"exit\": 0,\n      \"stdout\": \"{\\\"status\\\": \\\"complete\\\", \\\"command\\\": \\\"rerank\\\", \\\"artifact_written\\\": true, \\\"reason\\\": null, \\\"error\\\": null, \\\"work\\\": {\\\"pairs\\\": 0, \\\"queries\\\": 0, \\\"workers\\\": 0, \\\"fixture_calls\\\": 0, \\\"retry_count\\\": 0, \\\"worker_exited\\\": true, \\\"execution_kind\\\": \\\"none\\\", \\\"elapsed_ms\\\": 0, \\\"peak_rss_bytes\\\": null, \\\"rss_method\\\": \\\"unavailable\\\"}, \\\"generation_requests\\\": 0}\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"args\": [\n        \"rerank\",\n        \"--candidates\",\n        \"candidates\",\n        \"--method\",\n        \"cross-encoder\",\n        \"--profile\",\n        \"stage/bge-reranker.json\",\n        \"--out\",\n        \"preview\"\n      ],\n      \"exit\": 0,\n      \"stdout\": \"{\\\"status\\\": \\\"preview\\\", \\\"command\\\": \\\"rerank\\\", \\\"artifact_written\\\": true, \\\"reason\\\": \\\"execution_not_enabled\\\", \\\"error\\\": null, \\\"work\\\": {\\\"pairs\\\": 0, \\\"queries\\\": 0, \\\"workers\\\": 0, \\\"fixture_calls\\\": 0, \\\"retry_count\\\": 0, \\\"worker_exited\\\": true, \\\"execution_kind\\\": \\\"preview\\\", \\\"elapsed_ms\\\": 0, \\\"peak_rss_bytes\\\": null, \\\"rss_method\\\": \\\"unavailable\\\"}, \\\"generation_requests\\\": 0}\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"args\": [\n        \"rerank-compare\",\n        \"--candidates-set\",\n        \"set.json\",\n        \"--variants\",\n        \"variants.json\",\n        \"--out\",\n        \"comparison\"\n      ],\n      \"exit\": 0,\n      \"stdout\": \"{\\\"status\\\": \\\"complete\\\", \\\"command\\\": \\\"rerank-compare\\\", \\\"artifact_written\\\": true, \\\"reason\\\": null, \\\"error\\\": null, \\\"work\\\": null, \\\"generation_requests\\\": 0}\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"args\": [\n        \"rerank-report\",\n        \"--run\",\n        \"comparison\",\n        \"--out\",\n        \"report\"\n      ],\n      \"exit\": 0,\n      \"stdout\": \"{\\\"status\\\": \\\"complete\\\", \\\"command\\\": \\\"rerank-report\\\", \\\"artifact_written\\\": true, \\\"reason\\\": null, \\\"error\\\": null, \\\"work\\\": null, \\\"generation_requests\\\": 0}\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"args\": [\n        \"answer-from-rerank\",\n        \"--run\",\n        \"none\",\n        \"--llm-config\",\n        \"stage/llm-local.json\",\n        \"--out\",\n        \"generation\"\n      ],\n      \"exit\": 0,\n      \"stdout\": \"{\\\"status\\\": \\\"preview\\\", \\\"command\\\": \\\"answer-from-rerank\\\", \\\"artifact_written\\\": true, \\\"reason\\\": null, \\\"error\\\": null, \\\"work\\\": null, \\\"generation_requests\\\": 0}\\n\",\n      \"stderr\": \"\"\n    }\n  ],\n  \"ui_assets_and_server\": \"PASS\",\n  \"generation_requests\": 0\n}\n",
+    "stderr": ""
+  }
+]

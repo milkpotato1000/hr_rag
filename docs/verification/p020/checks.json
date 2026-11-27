@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "adopted_plan": "f6800d0bd60b6345917533efd831fe2892dfb751",
+  "adoption_commit": "e2bd76eca2b6ab73d0451e03b64ff4e15177cad4",
+  "package_tests": 89,
+  "harness_tests": 35,
+  "new_reranking_tests": 20,
+  "tiny_sdk": "PASS: 11121 parameters, direct logits, two profiles, pair length, bad head, actual worker timeout",
+  "core_only_and_sdist": "PASS; Python3.12 source-free; package bytes equal",
+  "browser": "PASS; synthetic candidates; 1280/390; keyboard/source/errors/preview; final UI observed",
+  "prior_files_preserved": 1534,
+  "P013": "BLOCKED/grant unused/0 new requests",
+  "P029": "C4 BLOCKED preserved; no blocked UI retries",
+  "actual_pretrained_or_llm_api_drive_calls": 0,
+  "owned_ui_servers": "both exited0 after SIGINT",
+  "worker_processes": "communicate/poll confirmed exit; timeout kill+wait; tiny SDK test passed",
+  "automatic_retries": 0,
+  "reverse_messages": 0,
+  "delivery": "pending committed source normal personal/dev push; see delivery.json after completion"
+}

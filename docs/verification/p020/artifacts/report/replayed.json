@@ -1,0 +1,834 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "q1",
+      "question": "생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요."
+    }
+  ],
+  "questions_hash": "8ea4920da84d922e6af9aafbb08c8d116d824a10fa27b1f643001d7ac45d1770",
+  "variants": [
+    {
+      "id": "none",
+      "label": "none 기준선",
+      "method": "none",
+      "profile": null,
+      "top_k": 2,
+      "context_budget_chars": 4000
+    },
+    {
+      "id": "model-1",
+      "label": "BAAI/bge-reranker-v2-m3",
+      "method": "cross-encoder",
+      "profile": {
+        "model_id": "BAAI/bge-reranker-v2-m3",
+        "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "file_manifest": {
+          "config.json": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "device": "cpu",
+        "dtype": "float32",
+        "max_pair_tokens": 512,
+        "pair_policy": {
+          "scorer": "raw-single-logit-v1",
+          "activation": "identity",
+          "softmax": false,
+          "prompt": "",
+          "truncation": false,
+          "special_tokens": true,
+          "korean_quality": "unverified"
+        }
+      },
+      "top_k": 2,
+      "context_budget_chars": 4000
+    },
+    {
+      "id": "model-2",
+      "label": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "method": "cross-encoder",
+      "profile": {
+        "model_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+        "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "file_manifest": {
+          "config.json": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "device": "cpu",
+        "dtype": "float32",
+        "max_pair_tokens": 512,
+        "pair_policy": {
+          "scorer": "raw-single-logit-v1",
+          "activation": "identity",
+          "softmax": false,
+          "prompt": "",
+          "truncation": false,
+          "special_tokens": true,
+          "korean_quality": "unverified"
+        }
+      },
+      "top_k": 2,
+      "context_budget_chars": 4000
+    }
+  ],
+  "source_fingerprint": "183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf",
+  "chunk_fingerprint": "1b567a80c06196119d114c0975c89a01da7e2e9be68cc5ef18f548ffc0ea75ab",
+  "qrels": {
+    "schema_version": 1,
+    "source_fingerprint": "183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf",
+    "chunk_fingerprint": "1b567a80c06196119d114c0975c89a01da7e2e9be68cc5ef18f548ffc0ea75ab",
+    "questions_hash": "8ea4920da84d922e6af9aafbb08c8d116d824a10fa27b1f643001d7ac45d1770",
+    "judgments_complete": true,
+    "judgments": {
+      "q1": {
+        "c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903": 2,
+        "c-e22a7004f9c43cdd3663f7f7919ac3e46af16083c3dce3867669d56930de3784": 2
+      }
+    }
+  },
+  "facts": {
+    "schema_version": 1,
+    "source_fingerprint": "183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf",
+    "questions_hash": "8ea4920da84d922e6af9aafbb08c8d116d824a10fa27b1f643001d7ac45d1770",
+    "offset_unit": "unicode_codepoint",
+    "questions": [
+      {
+        "question_id": "q1",
+        "required_facts": [
+          {
+            "fact_id": "birthday",
+            "alternatives": [
+              {
+                "spans": [
+                  {
+                    "document_id": "birthday",
+                    "start": 0,
+                    "end": 400,
+                    "quote": "# 가상 회사 생일 휴가 안내\n\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n## 자격과 제외\n\n생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.\n\n## 신청 절차\n\n생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 "
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "rows": [
+    {
+      "variant_id": "none",
+      "question_id": "q1",
+      "candidate_fingerprint": "8c1c26309875e38dece8ff62d5a1c890b193c94cba54e5f2722938cc6f587939",
+      "candidate_execution_kind": "test_fixture",
+      "result_path": "none/q1",
+      "status": "complete",
+      "error": null,
+      "reason": null,
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "retrieval": {
+          "k": 2,
+          "returned": 2,
+          "group": "answerable",
+          "reason": null,
+          "values": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          }
+        },
+        "candidate_recall": 1.0,
+        "context_recall": 0.5,
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "work": {
+        "pairs": 0,
+        "queries": 0,
+        "workers": 0,
+        "fixture_calls": 0,
+        "retry_count": 0,
+        "worker_exited": true,
+        "execution_kind": "none",
+        "elapsed_ms": 0,
+        "peak_rss_bytes": null,
+        "rss_method": "unavailable"
+      },
+      "original_retrieval_ms": 0.1010000123642385
+    },
+    {
+      "variant_id": "model-1",
+      "question_id": "q1",
+      "candidate_fingerprint": "8c1c26309875e38dece8ff62d5a1c890b193c94cba54e5f2722938cc6f587939",
+      "candidate_execution_kind": "test_fixture",
+      "result_path": "model-1/q1",
+      "status": "complete",
+      "error": null,
+      "reason": null,
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "retrieval": {
+          "k": 2,
+          "returned": 2,
+          "group": "answerable",
+          "reason": null,
+          "values": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          }
+        },
+        "candidate_recall": 1.0,
+        "context_recall": 0.5,
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.0,
+            "all_required": false,
+            "fulfilled": 0,
+            "total": 1,
+            "fulfilled_ids": [],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.0,
+            "all_required": false,
+            "fulfilled": 0,
+            "total": 1,
+            "fulfilled_ids": [],
+            "reason": null
+          }
+        }
+      },
+      "work": {
+        "requested_pairs": 3,
+        "attempted_pairs": 3,
+        "pairs": 3,
+        "queries": 1,
+        "workers": 0,
+        "fixture_calls": 1,
+        "worker_exited": null,
+        "retry_count": 0,
+        "execution_kind": "test_fixture",
+        "load_ms": null,
+        "score_ms": null,
+        "peak_rss_bytes": null,
+        "rss_method": "unavailable",
+        "sdk_versions": null,
+        "pair_tokens": null,
+        "applied_limit": null,
+        "preprocessing_hash": null,
+        "benchmark": "cold owned worker; not warm latency",
+        "elapsed_ms": 0.017917001969181
+      },
+      "original_retrieval_ms": 0.1010000123642385
+    },
+    {
+      "variant_id": "model-2",
+      "question_id": "q1",
+      "candidate_fingerprint": "8c1c26309875e38dece8ff62d5a1c890b193c94cba54e5f2722938cc6f587939",
+      "candidate_execution_kind": "test_fixture",
+      "result_path": "model-2/q1",
+      "status": "complete",
+      "error": null,
+      "reason": null,
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "retrieval": {
+          "k": 2,
+          "returned": 2,
+          "group": "answerable",
+          "reason": null,
+          "values": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          }
+        },
+        "candidate_recall": 1.0,
+        "context_recall": 0.5,
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "work": {
+        "requested_pairs": 3,
+        "attempted_pairs": 3,
+        "pairs": 3,
+        "queries": 1,
+        "workers": 0,
+        "fixture_calls": 1,
+        "worker_exited": null,
+        "retry_count": 0,
+        "execution_kind": "test_fixture",
+        "load_ms": null,
+        "score_ms": null,
+        "peak_rss_bytes": null,
+        "rss_method": "unavailable",
+        "sdk_versions": null,
+        "pair_tokens": null,
+        "applied_limit": null,
+        "preprocessing_hash": null,
+        "benchmark": "cold owned worker; not warm latency",
+        "elapsed_ms": 0.022375010303221643
+      },
+      "original_retrieval_ms": 0.1010000123642385
+    }
+  ],
+  "aggregates": {
+    "retrieval": {
+      "model-1": {
+        "precision": {
+          "value": 0.5,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "recall": {
+          "value": 0.5,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "mrr": {
+          "value": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "ndcg": {
+          "value": 0.6131471927654584,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "groups": {
+          "answerable": {
+            "precision": {
+              "value": 0.5,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            },
+            "recall": {
+              "value": 0.5,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            },
+            "mrr": {
+              "value": 1.0,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            },
+            "ndcg": {
+              "value": 0.6131471927654584,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            }
+          },
+          "no_answer": {}
+        }
+      },
+      "model-2": {
+        "precision": {
+          "value": 0.5,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "recall": {
+          "value": 0.5,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "mrr": {
+          "value": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "ndcg": {
+          "value": 0.6131471927654584,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "groups": {
+          "answerable": {
+            "precision": {
+              "value": 0.5,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            },
+            "recall": {
+              "value": 0.5,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            },
+            "mrr": {
+              "value": 1.0,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            },
+            "ndcg": {
+              "value": 0.6131471927654584,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            }
+          },
+          "no_answer": {}
+        }
+      },
+      "none": {
+        "precision": {
+          "value": 0.5,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "recall": {
+          "value": 0.5,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "mrr": {
+          "value": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "ndcg": {
+          "value": 0.6131471927654584,
+          "valid": 1,
+          "excluded": 0,
+          "exclusion_reasons": {}
+        },
+        "groups": {
+          "answerable": {
+            "precision": {
+              "value": 0.5,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            },
+            "recall": {
+              "value": 0.5,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            },
+            "mrr": {
+              "value": 1.0,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            },
+            "ndcg": {
+              "value": 0.6131471927654584,
+              "valid": 1,
+              "excluded": 0,
+              "exclusion_reasons": {}
+            }
+          },
+          "no_answer": {}
+        }
+      }
+    },
+    "facts": {
+      "none": {
+        "candidate": {
+          "macro": 1.0,
+          "micro": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "fulfilled": 1,
+          "total_facts": 1
+        },
+        "top_k": {
+          "macro": 1.0,
+          "micro": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "fulfilled": 1,
+          "total_facts": 1
+        },
+        "contexts": {
+          "macro": 1.0,
+          "micro": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "fulfilled": 1,
+          "total_facts": 1
+        }
+      },
+      "model-1": {
+        "candidate": {
+          "macro": 1.0,
+          "micro": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "fulfilled": 1,
+          "total_facts": 1
+        },
+        "top_k": {
+          "macro": 0.0,
+          "micro": 0.0,
+          "valid": 1,
+          "excluded": 0,
+          "fulfilled": 0,
+          "total_facts": 1
+        },
+        "contexts": {
+          "macro": 0.0,
+          "micro": 0.0,
+          "valid": 1,
+          "excluded": 0,
+          "fulfilled": 0,
+          "total_facts": 1
+        }
+      },
+      "model-2": {
+        "candidate": {
+          "macro": 1.0,
+          "micro": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "fulfilled": 1,
+          "total_facts": 1
+        },
+        "top_k": {
+          "macro": 1.0,
+          "micro": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "fulfilled": 1,
+          "total_facts": 1
+        },
+        "contexts": {
+          "macro": 1.0,
+          "micro": 1.0,
+          "valid": 1,
+          "excluded": 0,
+          "fulfilled": 1,
+          "total_facts": 1
+        }
+      }
+    },
+    "paired": {
+      "model-1": {
+        "precision": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "recall": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "mrr": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "ndcg": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "context_recall": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "candidate_recall": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "fact_top_k": {
+          "delta": -1.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": -1.0,
+              "outcome": "worse"
+            }
+          ]
+        },
+        "fact_contexts": {
+          "delta": -1.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": -1.0,
+              "outcome": "worse"
+            }
+          ]
+        }
+      },
+      "model-2": {
+        "precision": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "recall": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "mrr": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "ndcg": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "context_recall": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "candidate_recall": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "fact_top_k": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        },
+        "fact_contexts": {
+          "delta": 0.0,
+          "paired_valid": 1,
+          "total": 1,
+          "exclusion_reasons": {},
+          "questions": [
+            {
+              "question_id": "q1",
+              "delta": 0.0,
+              "outcome": "same"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "retry_count": 0,
+  "generation_requests": 0,
+  "latency_note": "Original search recorded earlier; new reranking uses sequential cold workers. Not a simultaneous warm benchmark."
+}

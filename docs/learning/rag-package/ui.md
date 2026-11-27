@@ -43,7 +43,7 @@ Drive는 workspace 안에 인증 참조 config를 준비하고 `--drive-config /
 
 한 번에 작업 하나만 실행됩니다. 같은 요청 ID는 재실행하지 않으며 새로고침은 이력을 조회합니다. 서버가 중단되면 진행 작업은 다음 시작에 `interrupted`로 남고 자동 재개하지 않습니다. 입력·설정 파일이 바뀌면 stale 오류가 나므로 새 서버에서 명시적으로 등록합니다. 원문 위치 조회도 저장된 hash를 검사합니다.
 
-지원은 규칙 청킹 3종·BM25/Dense/Hybrid·등록 LLM·단일 Drive입니다. 등록된 E5-small/BGE-M3의 Dense/Hybrid와 검색 실행 옵션은 [Hybrid 안내](hybrid.md)를 따릅니다. 리랭커·의미/LLM 청킹·평가기 연결은 아직 미지원입니다. 기존 HR 청킹 전용 실습은 [별도 안내](<../../../2. Document Chunking/LEARNING.md>)를 따르며 이 화면에서 자동 실행하지 않습니다. 기존 평가 모델 실험 보류는 유지됩니다.
+지원은 규칙 청킹 3종·BM25/Dense/Hybrid·등록 LLM·단일 Drive입니다. 등록된 E5-small/BGE-M3의 Dense/Hybrid와 검색 실행 옵션은 [Hybrid 안내](hybrid.md)를 따릅니다. [고정 후보 리랭커](reranking.md)는 화면 06에서 비교하며, 의미/LLM 청킹·평가기 연결은 미지원입니다. 기존 HR 청킹 전용 실습은 [별도 안내](<../../../2. Document Chunking/LEARNING.md>)를 따르며 이 화면에서 자동 실행하지 않습니다. 기존 평가 모델 실험 보류는 유지됩니다.
 
 Codex 또는 Claude Code에는 다음처럼 요청할 수 있습니다.
 

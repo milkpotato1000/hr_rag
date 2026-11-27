@@ -1,0 +1,1349 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>리랭커 비교</title><style>body{max-width:1100px;margin:auto;padding:24px;font:16px system-ui;color:#142b34;background:#f4f7f8}section{background:white;padding:20px;margin:24px 0;border:1px solid #d7e2e5;border-radius:12px}pre,blockquote{white-space:pre-wrap;overflow-wrap:anywhere}summary{cursor:pointer;padding:12px}table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px solid #ccd;padding:8px;text-align:left;overflow-wrap:anywhere}.table{overflow:auto}details{margin-top:12px}</style><h1>고정 후보 리랭커 비교</h1><p>후보 N은 검색의 회수 범위, K는 재정렬 후 선택 범위입니다. 문맥 예산으로 제외된 청크는 답변 모델에 전달되지 않습니다.</p><p>Original search recorded earlier; new reranking uses sequential cold workers. Not a simultaneous warm benchmark.</p><p>합성·주입 후보와 tiny 모델 시험은 실제 한국어 품질 증거가 아닙니다. 답변 평가 N/A · 실제 품질 미검증.</p><h2>질문별 결과</h2><div class="table"><table><thead><tr><th>설정</th><th>질문</th><th>상태</th><th>후보 Recall</th><th>Recall@K</th><th>nDCG@K</th><th>문맥 Recall</th><th>필수 fact@K</th></tr></thead><tbody><tr><td>none 기준선</td><td>q1</td><td>complete</td><td>1.0000</td><td>0.5000</td><td>0.6131</td><td>0.5000</td><td>1.0000</td></tr><tr><td>BAAI/bge-reranker-v2-m3</td><td>q1</td><td>complete</td><td>1.0000</td><td>0.5000</td><td>0.6131</td><td>0.5000</td><td>0.0000</td></tr><tr><td>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1</td><td>q1</td><td>complete</td><td>1.0000</td><td>0.5000</td><td>0.6131</td><td>0.5000</td><td>1.0000</td></tr></tbody></table></div><h2>none 대비 변화와 유효 분모</h2><div class="table"><table><thead><tr><th>설정</th><th>지표</th><th>평균 차이</th><th>paired 유효/전체</th><th>제외 이유</th></tr></thead><tbody><tr><td>BAAI/bge-reranker-v2-m3</td><td>recall</td><td>0.0000</td><td>1 / 1</td><td>{}</td></tr><tr><td>BAAI/bge-reranker-v2-m3</td><td>ndcg</td><td>0.0000</td><td>1 / 1</td><td>{}</td></tr><tr><td>BAAI/bge-reranker-v2-m3</td><td>fact_top_k</td><td>-1.0000</td><td>1 / 1</td><td>{}</td></tr><tr><td>BAAI/bge-reranker-v2-m3</td><td>fact_contexts</td><td>-1.0000</td><td>1 / 1</td><td>{}</td></tr><tr><td>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1</td><td>recall</td><td>0.0000</td><td>1 / 1</td><td>{}</td></tr><tr><td>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1</td><td>ndcg</td><td>0.0000</td><td>1 / 1</td><td>{}</td></tr><tr><td>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1</td><td>fact_top_k</td><td>0.0000</td><td>1 / 1</td><td>{}</td></tr><tr><td>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1</td><td>fact_contexts</td><td>0.0000</td><td>1 / 1</td><td>{}</td></tr></tbody></table></div><details><summary>전체 집계 · macro/micro 및 분모</summary><pre>{
+  &quot;retrieval&quot;: {
+    &quot;model-1&quot;: {
+      &quot;precision&quot;: {
+        &quot;value&quot;: 0.5,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;recall&quot;: {
+        &quot;value&quot;: 0.5,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;mrr&quot;: {
+        &quot;value&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;ndcg&quot;: {
+        &quot;value&quot;: 0.6131471927654584,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;groups&quot;: {
+        &quot;answerable&quot;: {
+          &quot;precision&quot;: {
+            &quot;value&quot;: 0.5,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          },
+          &quot;recall&quot;: {
+            &quot;value&quot;: 0.5,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          },
+          &quot;mrr&quot;: {
+            &quot;value&quot;: 1.0,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          },
+          &quot;ndcg&quot;: {
+            &quot;value&quot;: 0.6131471927654584,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          }
+        },
+        &quot;no_answer&quot;: {}
+      }
+    },
+    &quot;model-2&quot;: {
+      &quot;precision&quot;: {
+        &quot;value&quot;: 0.5,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;recall&quot;: {
+        &quot;value&quot;: 0.5,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;mrr&quot;: {
+        &quot;value&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;ndcg&quot;: {
+        &quot;value&quot;: 0.6131471927654584,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;groups&quot;: {
+        &quot;answerable&quot;: {
+          &quot;precision&quot;: {
+            &quot;value&quot;: 0.5,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          },
+          &quot;recall&quot;: {
+            &quot;value&quot;: 0.5,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          },
+          &quot;mrr&quot;: {
+            &quot;value&quot;: 1.0,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          },
+          &quot;ndcg&quot;: {
+            &quot;value&quot;: 0.6131471927654584,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          }
+        },
+        &quot;no_answer&quot;: {}
+      }
+    },
+    &quot;none&quot;: {
+      &quot;precision&quot;: {
+        &quot;value&quot;: 0.5,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;recall&quot;: {
+        &quot;value&quot;: 0.5,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;mrr&quot;: {
+        &quot;value&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;ndcg&quot;: {
+        &quot;value&quot;: 0.6131471927654584,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;exclusion_reasons&quot;: {}
+      },
+      &quot;groups&quot;: {
+        &quot;answerable&quot;: {
+          &quot;precision&quot;: {
+            &quot;value&quot;: 0.5,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          },
+          &quot;recall&quot;: {
+            &quot;value&quot;: 0.5,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          },
+          &quot;mrr&quot;: {
+            &quot;value&quot;: 1.0,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          },
+          &quot;ndcg&quot;: {
+            &quot;value&quot;: 0.6131471927654584,
+            &quot;valid&quot;: 1,
+            &quot;excluded&quot;: 0,
+            &quot;exclusion_reasons&quot;: {}
+          }
+        },
+        &quot;no_answer&quot;: {}
+      }
+    }
+  },
+  &quot;facts&quot;: {
+    &quot;none&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1
+      }
+    },
+    &quot;model-1&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: 0.0,
+        &quot;micro&quot;: 0.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 1
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: 0.0,
+        &quot;micro&quot;: 0.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 1
+      }
+    },
+    &quot;model-2&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;valid&quot;: 1,
+        &quot;excluded&quot;: 0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1
+      }
+    }
+  },
+  &quot;paired&quot;: {
+    &quot;model-1&quot;: {
+      &quot;precision&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;recall&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;mrr&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;ndcg&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;context_recall&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;candidate_recall&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;fact_top_k&quot;: {
+        &quot;delta&quot;: -1.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: -1.0,
+            &quot;outcome&quot;: &quot;worse&quot;
+          }
+        ]
+      },
+      &quot;fact_contexts&quot;: {
+        &quot;delta&quot;: -1.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: -1.0,
+            &quot;outcome&quot;: &quot;worse&quot;
+          }
+        ]
+      }
+    },
+    &quot;model-2&quot;: {
+      &quot;precision&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;recall&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;mrr&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;ndcg&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;context_recall&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;candidate_recall&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;fact_top_k&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      },
+      &quot;fact_contexts&quot;: {
+        &quot;delta&quot;: 0.0,
+        &quot;paired_valid&quot;: 1,
+        &quot;total&quot;: 1,
+        &quot;exclusion_reasons&quot;: {},
+        &quot;questions&quot;: [
+          {
+            &quot;question_id&quot;: &quot;q1&quot;,
+            &quot;delta&quot;: 0.0,
+            &quot;outcome&quot;: &quot;same&quot;
+          }
+        ]
+      }
+    }
+  }
+}</pre></details><section><h2>none 기준선 / q1</h2><p>후보 출처: test_fixture · scorer: none</p><p>생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.</p><p>후보 N 20 (실제 3) → K 2 → 문자 예산 4000</p><div class="table"><table><thead><tr><th>청크</th><th>원래 순위</th><th>새 순위</th><th>raw score</th><th>전달 여부</th></tr></thead><tbody><tr><td>c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903</td><td>1</td><td>1</td><td>N/A</td><td>포함</td></tr><tr><td>c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8</td><td>2</td><td>2</td><td>N/A</td><td>포함</td></tr><tr><td>c-e22a7004f9c43cdd3663f7f7919ac3e46af16083c3dce3867669d56930de3784</td><td>3</td><td>3</td><td>N/A</td><td>top K 밖</td></tr></tbody></table></div><details><summary>birthday · 0–400 원문 청크</summary><blockquote># 가상 회사 생일 휴가 안내
+
+학습용 가상 문서이며 실제 회사 정책이 아닙니다.
+
+## 자격과 제외
+
+생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.
+
+## 신청 절차
+
+생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 </blockquote></details><details><summary>annual · 0–385 원문 청크</summary><blockquote>가상 회사 연차 이월 안내
+학습용 가상 문서이며 실제 회사 정책이 아닙니다.
+
+제1장 이월 범위
+해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.
+
+제1조 확인 절차
+연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.
+</blockquote></details><details><summary>birthday · 320–620 원문 청크</summary><blockquote>니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 보이지 않는다면 신청자에게 확인을 요청합니다.
+
+## 사용 기간
+
+생일 휴가는 생일이 속한 달의 근무일에 사용합니다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다. 신청자가 날짜를 바꿀 때도 사용 가능한 달과 근무일 조건을 다시 확인합니다. 담당자는 이전 날짜와 변경한 날짜를 구분해 기록합니다. 다음 달의 일반 연차 신청과 생일 휴가 신청을 혼동하지 않도록 휴가 종류를 확인합니다.
+</blockquote></details><details><summary>실험 기록 · JSON</summary><pre>{
+  &quot;row&quot;: {
+    &quot;variant_id&quot;: &quot;none&quot;,
+    &quot;question_id&quot;: &quot;q1&quot;,
+    &quot;candidate_fingerprint&quot;: &quot;8c1c26309875e38dece8ff62d5a1c890b193c94cba54e5f2722938cc6f587939&quot;,
+    &quot;candidate_execution_kind&quot;: &quot;test_fixture&quot;,
+    &quot;result_path&quot;: &quot;none/q1&quot;,
+    &quot;status&quot;: &quot;complete&quot;,
+    &quot;error&quot;: null,
+    &quot;reason&quot;: null,
+    &quot;metrics&quot;: {
+      &quot;faithfulness&quot;: {
+        &quot;value&quot;: null,
+        &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+      },
+      &quot;correctness&quot;: {
+        &quot;value&quot;: null,
+        &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+      },
+      &quot;retrieval&quot;: {
+        &quot;k&quot;: 2,
+        &quot;returned&quot;: 2,
+        &quot;group&quot;: &quot;answerable&quot;,
+        &quot;reason&quot;: null,
+        &quot;values&quot;: {
+          &quot;precision&quot;: 0.5,
+          &quot;recall&quot;: 0.5,
+          &quot;mrr&quot;: 1.0,
+          &quot;ndcg&quot;: 0.6131471927654584
+        }
+      },
+      &quot;candidate_recall&quot;: 1.0,
+      &quot;context_recall&quot;: 0.5,
+      &quot;facts&quot;: {
+        &quot;candidate&quot;: {
+          &quot;fact_recall&quot;: 1.0,
+          &quot;all_required&quot;: true,
+          &quot;fulfilled&quot;: 1,
+          &quot;total&quot;: 1,
+          &quot;fulfilled_ids&quot;: [
+            &quot;birthday&quot;
+          ],
+          &quot;reason&quot;: null
+        },
+        &quot;top_k&quot;: {
+          &quot;fact_recall&quot;: 1.0,
+          &quot;all_required&quot;: true,
+          &quot;fulfilled&quot;: 1,
+          &quot;total&quot;: 1,
+          &quot;fulfilled_ids&quot;: [
+            &quot;birthday&quot;
+          ],
+          &quot;reason&quot;: null
+        },
+        &quot;contexts&quot;: {
+          &quot;fact_recall&quot;: 1.0,
+          &quot;all_required&quot;: true,
+          &quot;fulfilled&quot;: 1,
+          &quot;total&quot;: 1,
+          &quot;fulfilled_ids&quot;: [
+            &quot;birthday&quot;
+          ],
+          &quot;reason&quot;: null
+        }
+      }
+    },
+    &quot;work&quot;: {
+      &quot;pairs&quot;: 0,
+      &quot;queries&quot;: 0,
+      &quot;workers&quot;: 0,
+      &quot;fixture_calls&quot;: 0,
+      &quot;retry_count&quot;: 0,
+      &quot;worker_exited&quot;: true,
+      &quot;execution_kind&quot;: &quot;none&quot;,
+      &quot;elapsed_ms&quot;: 0,
+      &quot;peak_rss_bytes&quot;: null,
+      &quot;rss_method&quot;: &quot;unavailable&quot;
+    },
+    &quot;original_retrieval_ms&quot;: 0.1010000123642385
+  },
+  &quot;selection&quot;: {
+    &quot;ranking&quot;: [
+      {
+        &quot;chunk_id&quot;: &quot;c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 400,
+        &quot;text&quot;: &quot;# 가상 회사 생일 휴가 안내\n\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n## 자격과 제외\n\n생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.\n\n## 신청 절차\n\n생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 &quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 400,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 400
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 1,
+        &quot;retrieval_score&quot;: 2.5797572524277697,
+        &quot;text_hash&quot;: &quot;3b5158322a036750dd2cfe799b4f504322af91154d03c9d7f12875c3ecd3198c&quot;,
+        &quot;rank&quot;: 1,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: null
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8&quot;,
+        &quot;document_id&quot;: &quot;annual&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 385,
+        &quot;text&quot;: &quot;가상 회사 연차 이월 안내\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n제1장 이월 범위\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.\n\n제1조 확인 절차\n연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 385,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 385
+          }
+        ],
+        &quot;heading_path&quot;: [],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 2,
+        &quot;retrieval_score&quot;: 1.57599336703883,
+        &quot;text_hash&quot;: &quot;ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6&quot;,
+        &quot;rank&quot;: 2,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: null
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-e22a7004f9c43cdd3663f7f7919ac3e46af16083c3dce3867669d56930de3784&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 320,
+        &quot;end&quot;: 620,
+        &quot;text&quot;: &quot;니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 보이지 않는다면 신청자에게 확인을 요청합니다.\n\n## 사용 기간\n\n생일 휴가는 생일이 속한 달의 근무일에 사용합니다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다. 신청자가 날짜를 바꿀 때도 사용 가능한 달과 근무일 조건을 다시 확인합니다. 담당자는 이전 날짜와 변경한 날짜를 구분해 기록합니다. 다음 달의 일반 연차 신청과 생일 휴가 신청을 혼동하지 않도록 휴가 종류를 확인합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 320,
+            &quot;canonical_end&quot;: 620,
+            &quot;page_start&quot;: 320,
+            &quot;page_end&quot;: 620
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;,
+          &quot;신청 절차&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 3,
+        &quot;retrieval_score&quot;: 0.8761813316757011,
+        &quot;text_hash&quot;: &quot;32fbd5ce104ae9aa2f3a7232bdb2c1c3f514bfe59cc77665bd03affd767f02a5&quot;,
+        &quot;rank&quot;: 3,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: null
+      }
+    ],
+    &quot;top_k&quot;: [
+      {
+        &quot;chunk_id&quot;: &quot;c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 400,
+        &quot;text&quot;: &quot;# 가상 회사 생일 휴가 안내\n\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n## 자격과 제외\n\n생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.\n\n## 신청 절차\n\n생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 &quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 400,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 400
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 1,
+        &quot;retrieval_score&quot;: 2.5797572524277697,
+        &quot;text_hash&quot;: &quot;3b5158322a036750dd2cfe799b4f504322af91154d03c9d7f12875c3ecd3198c&quot;,
+        &quot;rank&quot;: 1,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: null
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8&quot;,
+        &quot;document_id&quot;: &quot;annual&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 385,
+        &quot;text&quot;: &quot;가상 회사 연차 이월 안내\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n제1장 이월 범위\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.\n\n제1조 확인 절차\n연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 385,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 385
+          }
+        ],
+        &quot;heading_path&quot;: [],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 2,
+        &quot;retrieval_score&quot;: 1.57599336703883,
+        &quot;text_hash&quot;: &quot;ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6&quot;,
+        &quot;rank&quot;: 2,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: null
+      }
+    ],
+    &quot;contexts&quot;: [
+      {
+        &quot;chunk_id&quot;: &quot;c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 400,
+        &quot;text&quot;: &quot;# 가상 회사 생일 휴가 안내\n\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n## 자격과 제외\n\n생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.\n\n## 신청 절차\n\n생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 &quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 400,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 400
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 1,
+        &quot;retrieval_score&quot;: 2.5797572524277697,
+        &quot;text_hash&quot;: &quot;3b5158322a036750dd2cfe799b4f504322af91154d03c9d7f12875c3ecd3198c&quot;,
+        &quot;rank&quot;: 1,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: null
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8&quot;,
+        &quot;document_id&quot;: &quot;annual&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 385,
+        &quot;text&quot;: &quot;가상 회사 연차 이월 안내\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n제1장 이월 범위\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.\n\n제1조 확인 절차\n연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 385,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 385
+          }
+        ],
+        &quot;heading_path&quot;: [],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 2,
+        &quot;retrieval_score&quot;: 1.57599336703883,
+        &quot;text_hash&quot;: &quot;ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6&quot;,
+        &quot;rank&quot;: 2,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: null
+      }
+    ],
+    &quot;excluded&quot;: [],
+    &quot;used_chars&quot;: 785
+  }
+}</pre></details></section><section><h2>BAAI/bge-reranker-v2-m3 / q1</h2><p>후보 출처: test_fixture · scorer: test_fixture</p><p>생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.</p><p>후보 N 20 (실제 3) → K 2 → 문자 예산 4000</p><div class="table"><table><thead><tr><th>청크</th><th>원래 순위</th><th>새 순위</th><th>raw score</th><th>전달 여부</th></tr></thead><tbody><tr><td>c-e22a7004f9c43cdd3663f7f7919ac3e46af16083c3dce3867669d56930de3784</td><td>3</td><td>1</td><td>2.0000</td><td>포함</td></tr><tr><td>c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8</td><td>2</td><td>2</td><td>1.0000</td><td>포함</td></tr><tr><td>c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903</td><td>1</td><td>3</td><td>0.0000</td><td>top K 밖</td></tr></tbody></table></div><details><summary>birthday · 320–620 원문 청크</summary><blockquote>니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 보이지 않는다면 신청자에게 확인을 요청합니다.
+
+## 사용 기간
+
+생일 휴가는 생일이 속한 달의 근무일에 사용합니다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다. 신청자가 날짜를 바꿀 때도 사용 가능한 달과 근무일 조건을 다시 확인합니다. 담당자는 이전 날짜와 변경한 날짜를 구분해 기록합니다. 다음 달의 일반 연차 신청과 생일 휴가 신청을 혼동하지 않도록 휴가 종류를 확인합니다.
+</blockquote></details><details><summary>annual · 0–385 원문 청크</summary><blockquote>가상 회사 연차 이월 안내
+학습용 가상 문서이며 실제 회사 정책이 아닙니다.
+
+제1장 이월 범위
+해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.
+
+제1조 확인 절차
+연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.
+</blockquote></details><details><summary>birthday · 0–400 원문 청크</summary><blockquote># 가상 회사 생일 휴가 안내
+
+학습용 가상 문서이며 실제 회사 정책이 아닙니다.
+
+## 자격과 제외
+
+생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.
+
+## 신청 절차
+
+생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 </blockquote></details><details><summary>실험 기록 · JSON</summary><pre>{
+  &quot;row&quot;: {
+    &quot;variant_id&quot;: &quot;model-1&quot;,
+    &quot;question_id&quot;: &quot;q1&quot;,
+    &quot;candidate_fingerprint&quot;: &quot;8c1c26309875e38dece8ff62d5a1c890b193c94cba54e5f2722938cc6f587939&quot;,
+    &quot;candidate_execution_kind&quot;: &quot;test_fixture&quot;,
+    &quot;result_path&quot;: &quot;model-1/q1&quot;,
+    &quot;status&quot;: &quot;complete&quot;,
+    &quot;error&quot;: null,
+    &quot;reason&quot;: null,
+    &quot;metrics&quot;: {
+      &quot;faithfulness&quot;: {
+        &quot;value&quot;: null,
+        &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+      },
+      &quot;correctness&quot;: {
+        &quot;value&quot;: null,
+        &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+      },
+      &quot;retrieval&quot;: {
+        &quot;k&quot;: 2,
+        &quot;returned&quot;: 2,
+        &quot;group&quot;: &quot;answerable&quot;,
+        &quot;reason&quot;: null,
+        &quot;values&quot;: {
+          &quot;precision&quot;: 0.5,
+          &quot;recall&quot;: 0.5,
+          &quot;mrr&quot;: 1.0,
+          &quot;ndcg&quot;: 0.6131471927654584
+        }
+      },
+      &quot;candidate_recall&quot;: 1.0,
+      &quot;context_recall&quot;: 0.5,
+      &quot;facts&quot;: {
+        &quot;candidate&quot;: {
+          &quot;fact_recall&quot;: 1.0,
+          &quot;all_required&quot;: true,
+          &quot;fulfilled&quot;: 1,
+          &quot;total&quot;: 1,
+          &quot;fulfilled_ids&quot;: [
+            &quot;birthday&quot;
+          ],
+          &quot;reason&quot;: null
+        },
+        &quot;top_k&quot;: {
+          &quot;fact_recall&quot;: 0.0,
+          &quot;all_required&quot;: false,
+          &quot;fulfilled&quot;: 0,
+          &quot;total&quot;: 1,
+          &quot;fulfilled_ids&quot;: [],
+          &quot;reason&quot;: null
+        },
+        &quot;contexts&quot;: {
+          &quot;fact_recall&quot;: 0.0,
+          &quot;all_required&quot;: false,
+          &quot;fulfilled&quot;: 0,
+          &quot;total&quot;: 1,
+          &quot;fulfilled_ids&quot;: [],
+          &quot;reason&quot;: null
+        }
+      }
+    },
+    &quot;work&quot;: {
+      &quot;requested_pairs&quot;: 3,
+      &quot;attempted_pairs&quot;: 3,
+      &quot;pairs&quot;: 3,
+      &quot;queries&quot;: 1,
+      &quot;workers&quot;: 0,
+      &quot;fixture_calls&quot;: 1,
+      &quot;worker_exited&quot;: null,
+      &quot;retry_count&quot;: 0,
+      &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+      &quot;load_ms&quot;: null,
+      &quot;score_ms&quot;: null,
+      &quot;peak_rss_bytes&quot;: null,
+      &quot;rss_method&quot;: &quot;unavailable&quot;,
+      &quot;sdk_versions&quot;: null,
+      &quot;pair_tokens&quot;: null,
+      &quot;applied_limit&quot;: null,
+      &quot;preprocessing_hash&quot;: null,
+      &quot;benchmark&quot;: &quot;cold owned worker; not warm latency&quot;,
+      &quot;elapsed_ms&quot;: 0.017917001969181
+    },
+    &quot;original_retrieval_ms&quot;: 0.1010000123642385
+  },
+  &quot;selection&quot;: {
+    &quot;ranking&quot;: [
+      {
+        &quot;chunk_id&quot;: &quot;c-e22a7004f9c43cdd3663f7f7919ac3e46af16083c3dce3867669d56930de3784&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 320,
+        &quot;end&quot;: 620,
+        &quot;text&quot;: &quot;니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 보이지 않는다면 신청자에게 확인을 요청합니다.\n\n## 사용 기간\n\n생일 휴가는 생일이 속한 달의 근무일에 사용합니다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다. 신청자가 날짜를 바꿀 때도 사용 가능한 달과 근무일 조건을 다시 확인합니다. 담당자는 이전 날짜와 변경한 날짜를 구분해 기록합니다. 다음 달의 일반 연차 신청과 생일 휴가 신청을 혼동하지 않도록 휴가 종류를 확인합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 320,
+            &quot;canonical_end&quot;: 620,
+            &quot;page_start&quot;: 320,
+            &quot;page_end&quot;: 620
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;,
+          &quot;신청 절차&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 3,
+        &quot;retrieval_score&quot;: 0.8761813316757011,
+        &quot;text_hash&quot;: &quot;32fbd5ce104ae9aa2f3a7232bdb2c1c3f514bfe59cc77665bd03affd767f02a5&quot;,
+        &quot;rank&quot;: 1,
+        &quot;rank_delta&quot;: 2,
+        &quot;reranker_score&quot;: 2.0
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8&quot;,
+        &quot;document_id&quot;: &quot;annual&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 385,
+        &quot;text&quot;: &quot;가상 회사 연차 이월 안내\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n제1장 이월 범위\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.\n\n제1조 확인 절차\n연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 385,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 385
+          }
+        ],
+        &quot;heading_path&quot;: [],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 2,
+        &quot;retrieval_score&quot;: 1.57599336703883,
+        &quot;text_hash&quot;: &quot;ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6&quot;,
+        &quot;rank&quot;: 2,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: 1.0
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 400,
+        &quot;text&quot;: &quot;# 가상 회사 생일 휴가 안내\n\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n## 자격과 제외\n\n생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.\n\n## 신청 절차\n\n생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 &quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 400,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 400
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 1,
+        &quot;retrieval_score&quot;: 2.5797572524277697,
+        &quot;text_hash&quot;: &quot;3b5158322a036750dd2cfe799b4f504322af91154d03c9d7f12875c3ecd3198c&quot;,
+        &quot;rank&quot;: 3,
+        &quot;rank_delta&quot;: -2,
+        &quot;reranker_score&quot;: 0.0
+      }
+    ],
+    &quot;top_k&quot;: [
+      {
+        &quot;chunk_id&quot;: &quot;c-e22a7004f9c43cdd3663f7f7919ac3e46af16083c3dce3867669d56930de3784&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 320,
+        &quot;end&quot;: 620,
+        &quot;text&quot;: &quot;니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 보이지 않는다면 신청자에게 확인을 요청합니다.\n\n## 사용 기간\n\n생일 휴가는 생일이 속한 달의 근무일에 사용합니다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다. 신청자가 날짜를 바꿀 때도 사용 가능한 달과 근무일 조건을 다시 확인합니다. 담당자는 이전 날짜와 변경한 날짜를 구분해 기록합니다. 다음 달의 일반 연차 신청과 생일 휴가 신청을 혼동하지 않도록 휴가 종류를 확인합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 320,
+            &quot;canonical_end&quot;: 620,
+            &quot;page_start&quot;: 320,
+            &quot;page_end&quot;: 620
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;,
+          &quot;신청 절차&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 3,
+        &quot;retrieval_score&quot;: 0.8761813316757011,
+        &quot;text_hash&quot;: &quot;32fbd5ce104ae9aa2f3a7232bdb2c1c3f514bfe59cc77665bd03affd767f02a5&quot;,
+        &quot;rank&quot;: 1,
+        &quot;rank_delta&quot;: 2,
+        &quot;reranker_score&quot;: 2.0
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8&quot;,
+        &quot;document_id&quot;: &quot;annual&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 385,
+        &quot;text&quot;: &quot;가상 회사 연차 이월 안내\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n제1장 이월 범위\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.\n\n제1조 확인 절차\n연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 385,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 385
+          }
+        ],
+        &quot;heading_path&quot;: [],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 2,
+        &quot;retrieval_score&quot;: 1.57599336703883,
+        &quot;text_hash&quot;: &quot;ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6&quot;,
+        &quot;rank&quot;: 2,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: 1.0
+      }
+    ],
+    &quot;contexts&quot;: [
+      {
+        &quot;chunk_id&quot;: &quot;c-e22a7004f9c43cdd3663f7f7919ac3e46af16083c3dce3867669d56930de3784&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 320,
+        &quot;end&quot;: 620,
+        &quot;text&quot;: &quot;니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 보이지 않는다면 신청자에게 확인을 요청합니다.\n\n## 사용 기간\n\n생일 휴가는 생일이 속한 달의 근무일에 사용합니다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다. 신청자가 날짜를 바꿀 때도 사용 가능한 달과 근무일 조건을 다시 확인합니다. 담당자는 이전 날짜와 변경한 날짜를 구분해 기록합니다. 다음 달의 일반 연차 신청과 생일 휴가 신청을 혼동하지 않도록 휴가 종류를 확인합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 320,
+            &quot;canonical_end&quot;: 620,
+            &quot;page_start&quot;: 320,
+            &quot;page_end&quot;: 620
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;,
+          &quot;신청 절차&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 3,
+        &quot;retrieval_score&quot;: 0.8761813316757011,
+        &quot;text_hash&quot;: &quot;32fbd5ce104ae9aa2f3a7232bdb2c1c3f514bfe59cc77665bd03affd767f02a5&quot;,
+        &quot;rank&quot;: 1,
+        &quot;rank_delta&quot;: 2,
+        &quot;reranker_score&quot;: 2.0
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8&quot;,
+        &quot;document_id&quot;: &quot;annual&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 385,
+        &quot;text&quot;: &quot;가상 회사 연차 이월 안내\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n제1장 이월 범위\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.\n\n제1조 확인 절차\n연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 385,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 385
+          }
+        ],
+        &quot;heading_path&quot;: [],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 2,
+        &quot;retrieval_score&quot;: 1.57599336703883,
+        &quot;text_hash&quot;: &quot;ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6&quot;,
+        &quot;rank&quot;: 2,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: 1.0
+      }
+    ],
+    &quot;excluded&quot;: [],
+    &quot;used_chars&quot;: 685
+  }
+}</pre></details></section><section><h2>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1 / q1</h2><p>후보 출처: test_fixture · scorer: test_fixture</p><p>생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.</p><p>후보 N 20 (실제 3) → K 2 → 문자 예산 4000</p><div class="table"><table><thead><tr><th>청크</th><th>원래 순위</th><th>새 순위</th><th>raw score</th><th>전달 여부</th></tr></thead><tbody><tr><td>c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903</td><td>1</td><td>1</td><td>-0.0000</td><td>포함</td></tr><tr><td>c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8</td><td>2</td><td>2</td><td>-1.0000</td><td>포함</td></tr><tr><td>c-e22a7004f9c43cdd3663f7f7919ac3e46af16083c3dce3867669d56930de3784</td><td>3</td><td>3</td><td>-2.0000</td><td>top K 밖</td></tr></tbody></table></div><details><summary>birthday · 0–400 원문 청크</summary><blockquote># 가상 회사 생일 휴가 안내
+
+학습용 가상 문서이며 실제 회사 정책이 아닙니다.
+
+## 자격과 제외
+
+생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.
+
+## 신청 절차
+
+생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 </blockquote></details><details><summary>annual · 0–385 원문 청크</summary><blockquote>가상 회사 연차 이월 안내
+학습용 가상 문서이며 실제 회사 정책이 아닙니다.
+
+제1장 이월 범위
+해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.
+
+제1조 확인 절차
+연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.
+</blockquote></details><details><summary>birthday · 320–620 원문 청크</summary><blockquote>니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 보이지 않는다면 신청자에게 확인을 요청합니다.
+
+## 사용 기간
+
+생일 휴가는 생일이 속한 달의 근무일에 사용합니다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다. 신청자가 날짜를 바꿀 때도 사용 가능한 달과 근무일 조건을 다시 확인합니다. 담당자는 이전 날짜와 변경한 날짜를 구분해 기록합니다. 다음 달의 일반 연차 신청과 생일 휴가 신청을 혼동하지 않도록 휴가 종류를 확인합니다.
+</blockquote></details><details><summary>실험 기록 · JSON</summary><pre>{
+  &quot;row&quot;: {
+    &quot;variant_id&quot;: &quot;model-2&quot;,
+    &quot;question_id&quot;: &quot;q1&quot;,
+    &quot;candidate_fingerprint&quot;: &quot;8c1c26309875e38dece8ff62d5a1c890b193c94cba54e5f2722938cc6f587939&quot;,
+    &quot;candidate_execution_kind&quot;: &quot;test_fixture&quot;,
+    &quot;result_path&quot;: &quot;model-2/q1&quot;,
+    &quot;status&quot;: &quot;complete&quot;,
+    &quot;error&quot;: null,
+    &quot;reason&quot;: null,
+    &quot;metrics&quot;: {
+      &quot;faithfulness&quot;: {
+        &quot;value&quot;: null,
+        &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+      },
+      &quot;correctness&quot;: {
+        &quot;value&quot;: null,
+        &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+      },
+      &quot;retrieval&quot;: {
+        &quot;k&quot;: 2,
+        &quot;returned&quot;: 2,
+        &quot;group&quot;: &quot;answerable&quot;,
+        &quot;reason&quot;: null,
+        &quot;values&quot;: {
+          &quot;precision&quot;: 0.5,
+          &quot;recall&quot;: 0.5,
+          &quot;mrr&quot;: 1.0,
+          &quot;ndcg&quot;: 0.6131471927654584
+        }
+      },
+      &quot;candidate_recall&quot;: 1.0,
+      &quot;context_recall&quot;: 0.5,
+      &quot;facts&quot;: {
+        &quot;candidate&quot;: {
+          &quot;fact_recall&quot;: 1.0,
+          &quot;all_required&quot;: true,
+          &quot;fulfilled&quot;: 1,
+          &quot;total&quot;: 1,
+          &quot;fulfilled_ids&quot;: [
+            &quot;birthday&quot;
+          ],
+          &quot;reason&quot;: null
+        },
+        &quot;top_k&quot;: {
+          &quot;fact_recall&quot;: 1.0,
+          &quot;all_required&quot;: true,
+          &quot;fulfilled&quot;: 1,
+          &quot;total&quot;: 1,
+          &quot;fulfilled_ids&quot;: [
+            &quot;birthday&quot;
+          ],
+          &quot;reason&quot;: null
+        },
+        &quot;contexts&quot;: {
+          &quot;fact_recall&quot;: 1.0,
+          &quot;all_required&quot;: true,
+          &quot;fulfilled&quot;: 1,
+          &quot;total&quot;: 1,
+          &quot;fulfilled_ids&quot;: [
+            &quot;birthday&quot;
+          ],
+          &quot;reason&quot;: null
+        }
+      }
+    },
+    &quot;work&quot;: {
+      &quot;requested_pairs&quot;: 3,
+      &quot;attempted_pairs&quot;: 3,
+      &quot;pairs&quot;: 3,
+      &quot;queries&quot;: 1,
+      &quot;workers&quot;: 0,
+      &quot;fixture_calls&quot;: 1,
+      &quot;worker_exited&quot;: null,
+      &quot;retry_count&quot;: 0,
+      &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+      &quot;load_ms&quot;: null,
+      &quot;score_ms&quot;: null,
+      &quot;peak_rss_bytes&quot;: null,
+      &quot;rss_method&quot;: &quot;unavailable&quot;,
+      &quot;sdk_versions&quot;: null,
+      &quot;pair_tokens&quot;: null,
+      &quot;applied_limit&quot;: null,
+      &quot;preprocessing_hash&quot;: null,
+      &quot;benchmark&quot;: &quot;cold owned worker; not warm latency&quot;,
+      &quot;elapsed_ms&quot;: 0.022375010303221643
+    },
+    &quot;original_retrieval_ms&quot;: 0.1010000123642385
+  },
+  &quot;selection&quot;: {
+    &quot;ranking&quot;: [
+      {
+        &quot;chunk_id&quot;: &quot;c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 400,
+        &quot;text&quot;: &quot;# 가상 회사 생일 휴가 안내\n\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n## 자격과 제외\n\n생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.\n\n## 신청 절차\n\n생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 &quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 400,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 400
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 1,
+        &quot;retrieval_score&quot;: 2.5797572524277697,
+        &quot;text_hash&quot;: &quot;3b5158322a036750dd2cfe799b4f504322af91154d03c9d7f12875c3ecd3198c&quot;,
+        &quot;rank&quot;: 1,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: -0.0
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8&quot;,
+        &quot;document_id&quot;: &quot;annual&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 385,
+        &quot;text&quot;: &quot;가상 회사 연차 이월 안내\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n제1장 이월 범위\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.\n\n제1조 확인 절차\n연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 385,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 385
+          }
+        ],
+        &quot;heading_path&quot;: [],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 2,
+        &quot;retrieval_score&quot;: 1.57599336703883,
+        &quot;text_hash&quot;: &quot;ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6&quot;,
+        &quot;rank&quot;: 2,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: -1.0
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-e22a7004f9c43cdd3663f7f7919ac3e46af16083c3dce3867669d56930de3784&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 320,
+        &quot;end&quot;: 620,
+        &quot;text&quot;: &quot;니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 보이지 않는다면 신청자에게 확인을 요청합니다.\n\n## 사용 기간\n\n생일 휴가는 생일이 속한 달의 근무일에 사용합니다. 해당 월을 넘겨 이월하거나 현금으로 지급하지 않습니다. 신청자가 날짜를 바꿀 때도 사용 가능한 달과 근무일 조건을 다시 확인합니다. 담당자는 이전 날짜와 변경한 날짜를 구분해 기록합니다. 다음 달의 일반 연차 신청과 생일 휴가 신청을 혼동하지 않도록 휴가 종류를 확인합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 320,
+            &quot;canonical_end&quot;: 620,
+            &quot;page_start&quot;: 320,
+            &quot;page_end&quot;: 620
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;,
+          &quot;신청 절차&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 3,
+        &quot;retrieval_score&quot;: 0.8761813316757011,
+        &quot;text_hash&quot;: &quot;32fbd5ce104ae9aa2f3a7232bdb2c1c3f514bfe59cc77665bd03affd767f02a5&quot;,
+        &quot;rank&quot;: 3,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: -2.0
+      }
+    ],
+    &quot;top_k&quot;: [
+      {
+        &quot;chunk_id&quot;: &quot;c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 400,
+        &quot;text&quot;: &quot;# 가상 회사 생일 휴가 안내\n\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n## 자격과 제외\n\n생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.\n\n## 신청 절차\n\n생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 &quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 400,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 400
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 1,
+        &quot;retrieval_score&quot;: 2.5797572524277697,
+        &quot;text_hash&quot;: &quot;3b5158322a036750dd2cfe799b4f504322af91154d03c9d7f12875c3ecd3198c&quot;,
+        &quot;rank&quot;: 1,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: -0.0
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8&quot;,
+        &quot;document_id&quot;: &quot;annual&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 385,
+        &quot;text&quot;: &quot;가상 회사 연차 이월 안내\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n제1장 이월 범위\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.\n\n제1조 확인 절차\n연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 385,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 385
+          }
+        ],
+        &quot;heading_path&quot;: [],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 2,
+        &quot;retrieval_score&quot;: 1.57599336703883,
+        &quot;text_hash&quot;: &quot;ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6&quot;,
+        &quot;rank&quot;: 2,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: -1.0
+      }
+    ],
+    &quot;contexts&quot;: [
+      {
+        &quot;chunk_id&quot;: &quot;c-c8c184103fc401d0da157afecb9fa61adb9b101912a89be47af5f71ecd577903&quot;,
+        &quot;document_id&quot;: &quot;birthday&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 400,
+        &quot;text&quot;: &quot;# 가상 회사 생일 휴가 안내\n\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n## 자격과 제외\n\n생일 휴가 대상은 입사 후 3개월이 지난 재직자입니다. 수습 중인 직원은 대상에서 제외합니다. 생일 휴가는 매년 1일 신청할 수 있습니다. 입사일과 수습 여부는 신청 전에 인사 기록에서 확인합니다. 담당자는 확인한 기준일을 신청 기록에 남깁니다. 정보가 서로 다르면 자동 승인하지 않고 기록을 확인한 뒤 처리합니다.\n\n## 신청 절차\n\n생일 휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 합니다. 직원은 사용하려는 날짜와 휴가 종류를 확인합니다. 잘못된 종류로 접수했다면 기존 신청을 정정한 뒤 승인 요청을 보냅니다. 팀장은 승인 여부와 처리 시간을 기록합니다. 화면에 승인 완료가 &quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 400,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 400
+          }
+        ],
+        &quot;heading_path&quot;: [
+          &quot;가상 회사 생일 휴가 안내&quot;
+        ],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 1,
+        &quot;retrieval_score&quot;: 2.5797572524277697,
+        &quot;text_hash&quot;: &quot;3b5158322a036750dd2cfe799b4f504322af91154d03c9d7f12875c3ecd3198c&quot;,
+        &quot;rank&quot;: 1,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: -0.0
+      },
+      {
+        &quot;chunk_id&quot;: &quot;c-f800bbd316b881d1270fc478cef589fb3044a2e49c01bc4661c791d6fb17a8c8&quot;,
+        &quot;document_id&quot;: &quot;annual&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: 385,
+        &quot;text&quot;: &quot;가상 회사 연차 이월 안내\n학습용 가상 문서이며 실제 회사 정책이 아닙니다.\n\n제1장 이월 범위\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있습니다. 이월한 연차의 사용 기한은 다음 해 3월 31일입니다. 2026년의 미사용 연차 중 이월한 일수는 2027년 3월 31일까지 사용한다는 의미입니다. 5일은 날짜가 아니라 이월 가능한 휴가 일수입니다.\n\n제1조 확인 절차\n연차 이월 신청자는 해당 연도의 미사용 일수를 확인합니다. 담당자는 이월할 일수와 새 사용 기한을 함께 기록합니다. 기록을 확인할 때는 일반 연차와 이월 연차를 구분합니다. 직원은 잔여 일수뿐 아니라 만료 날짜도 확인합니다. 기록에 누락이 보이면 원래 신청 내역과 처리 기록을 대조합니다.\n&quot;,
+        &quot;pages&quot;: [
+          {
+            &quot;page&quot;: 1,
+            &quot;canonical_start&quot;: 0,
+            &quot;canonical_end&quot;: 385,
+            &quot;page_start&quot;: 0,
+            &quot;page_end&quot;: 385
+          }
+        ],
+        &quot;heading_path&quot;: [],
+        &quot;source_fingerprint&quot;: &quot;183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf&quot;,
+        &quot;original_rank&quot;: 2,
+        &quot;retrieval_score&quot;: 1.57599336703883,
+        &quot;text_hash&quot;: &quot;ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6&quot;,
+        &quot;rank&quot;: 2,
+        &quot;rank_delta&quot;: 0,
+        &quot;reranker_score&quot;: -1.0
+      }
+    ],
+    &quot;excluded&quot;: [],
+    &quot;used_chars&quot;: 785
+  }
+}</pre></details></section></html>

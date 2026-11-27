@@ -1,0 +1,282 @@
+[
+  {
+    "id": "173b873cea9d451db0b35aa0c560688e",
+    "request_id": "1f5858c1-711c-4fbc-9bd8-3a4e8bb8bc2f",
+    "payload_hash": "c1302bab9a46e173f9e30b8e1712e1059d9c8d295cb2abf60207030c63154456",
+    "input_fingerprint": "51ee6e95054049f31e1b123196f5c2731e19a4bf58d6c0b0bff363546f9ab0b1",
+    "kind": "ask",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "1f5858c1-711c-4fbc-9bd8-3a4e8bb8bc2f",
+      "kind": "ask",
+      "build_id": "579fc2d4cc1c423599af8a916e30dcba",
+      "llm_config_id": "f4da8ba2fb3f4000ab6587251ab443df",
+      "question": "생일 휴가의 자격과 신청 기한, 사용 기간을 함께 알려 주세요.",
+      "top_k": 5,
+      "context_budget_chars": 4000,
+      "execute": false,
+      "retrieval": {
+        "method": "bm25",
+        "top_k": 5,
+        "context_budget_chars": 4000,
+        "candidate_k": 20,
+        "rrf_k": 60
+      },
+      "embedding_config_id": null,
+      "execute_retrieval": false
+    },
+    "artifact_ids": [
+      "ee8cd1b04ed9472a97ecafb5b1f823e6"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  },
+  {
+    "id": "16fc3c12885948d3aefe4528f4ba752d",
+    "request_id": "fefe5e76-ead0-4e91-b160-59ed84cb4c14",
+    "payload_hash": "d0b2a2f93744459cf506fe77ea2a54630257b1f4e9a00ea365f544d6948f0a39",
+    "input_fingerprint": "004ef729ebfed48efd29cdab42f97229ee6bf04f0a3036033cb4828e3f32384e",
+    "kind": "rerank_answer",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "fefe5e76-ead0-4e91-b160-59ed84cb4c14",
+      "kind": "rerank_answer",
+      "rerank_id": "b47e7697bf004fd3b1af7262e5b3fd4f",
+      "llm_config_id": "f4da8ba2fb3f4000ab6587251ab443df",
+      "execute": false
+    },
+    "artifact_ids": [
+      "2bdf6a78c7a04e03a8e84cb83adda6a8"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  },
+  {
+    "id": "0ed85af3de0e4cfab892a81ed36fcdb7",
+    "request_id": "c791372c-ef02-400d-a2a7-6ff2af28eddf",
+    "payload_hash": "c1d7eef5cdd0caf0b9cd2dc9f14c6bc167700f60ee40fcc25d3b72ca04e91637",
+    "input_fingerprint": "a7c27dfb2fed90f53f8e006fe092c6c3b7dd0180554396f6231a8c9cc4dc1853",
+    "kind": "rerank",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "c791372c-ef02-400d-a2a7-6ff2af28eddf",
+      "kind": "rerank",
+      "candidate_ids": [
+        "72a6569f40da4bcaa08111694fa569d7"
+      ],
+      "top_k": 2,
+      "context_budget_chars": 1000,
+      "execute_reranking": true,
+      "qrels_id": "946ec518a9994a899b6772b078da4b9e",
+      "facts_id": "9d27266a5a7f405995306fc23cb251c6",
+      "method": "cross-encoder",
+      "reranker_id": "0036cfe925ce4b1eaed94b8bc6ff1f3f"
+    },
+    "artifact_ids": [
+      "b47e7697bf004fd3b1af7262e5b3fd4f"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  },
+  {
+    "id": "5e63cbc21a104628938fe884bac4cdeb",
+    "request_id": "60fe090d-d789-48c7-99f2-f822ea3e5de0",
+    "payload_hash": "607d807ff2bc6857f164a33ef9a918696fc5caab5f60d874f3d6df928b80407a",
+    "input_fingerprint": "d0964daa966b91e55f619f0801c1141fb4962cc30cbc6daea20faeb8faa3afcc",
+    "kind": "rerank_answer",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "60fe090d-d789-48c7-99f2-f822ea3e5de0",
+      "kind": "rerank_answer",
+      "rerank_id": "037a3ab888514b9789f2010e004d1ac1",
+      "llm_config_id": "f4da8ba2fb3f4000ab6587251ab443df",
+      "execute": false
+    },
+    "artifact_ids": [
+      "0b1ad2d1825a477aa5a4c284d63d3d95"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  },
+  {
+    "id": "121771ae74cb4130b3512e47c3df52c6",
+    "request_id": "33df2abd-7753-4e63-9d3e-7b46a527d2ea",
+    "payload_hash": "bf1f5d7bb6606b456b22a168b7ff422b44d5c3eb47b83ce34fa6916503ffd907",
+    "input_fingerprint": "318ce706bd8a429acc999bc5d71eafa2f7bf38641afdb87f5fdf6f28258d3d51",
+    "kind": "rerank_compare",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "33df2abd-7753-4e63-9d3e-7b46a527d2ea",
+      "kind": "rerank_compare",
+      "candidate_ids": [
+        "72a6569f40da4bcaa08111694fa569d7"
+      ],
+      "top_k": 5,
+      "context_budget_chars": 4000,
+      "execute_reranking": false,
+      "qrels_id": "946ec518a9994a899b6772b078da4b9e",
+      "facts_id": "9d27266a5a7f405995306fc23cb251c6",
+      "reranker_ids": [
+        "0036cfe925ce4b1eaed94b8bc6ff1f3f",
+        "c9408aad3c6a4f36ab24771809ce94a3"
+      ]
+    },
+    "artifact_ids": [
+      "e9db5470791849718a1698cbd16faebc"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  },
+  {
+    "id": "304ee73955da48febd6b9240fd2a3b7a",
+    "request_id": "1a690171-6b6d-49ef-aeb4-977270aefc3a",
+    "payload_hash": "126e1d7630dc6c2f3d2240edd924fafe9ac28f24ff984bb21ed0b18c6a426558",
+    "input_fingerprint": "ffb1ff198e9f61bf0d6477740dc8b1467f9cbaab40dad735972d14c181b6e7e2",
+    "kind": "candidates",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "1a690171-6b6d-49ef-aeb4-977270aefc3a",
+      "kind": "candidates",
+      "answer_id": "ee8cd1b04ed9472a97ecafb5b1f823e6",
+      "question_id": "q1",
+      "n": 20
+    },
+    "artifact_ids": [
+      "3c9e652eeb4146f68f2cb9e7104df1f9"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  },
+  {
+    "id": "a5dedc8ed51741a78c63cf25ecabc006",
+    "request_id": "e7c94790-b3d4-45cc-9fc7-f8a3402bec6d",
+    "payload_hash": "ac203f026cffbaf082ef19426191a831a84da339ed8c205a758177f0ab2e3666",
+    "input_fingerprint": "318ce706bd8a429acc999bc5d71eafa2f7bf38641afdb87f5fdf6f28258d3d51",
+    "kind": "rerank_compare",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "e7c94790-b3d4-45cc-9fc7-f8a3402bec6d",
+      "kind": "rerank_compare",
+      "candidate_ids": [
+        "72a6569f40da4bcaa08111694fa569d7"
+      ],
+      "top_k": 2,
+      "context_budget_chars": 150,
+      "execute_reranking": true,
+      "qrels_id": "946ec518a9994a899b6772b078da4b9e",
+      "facts_id": "9d27266a5a7f405995306fc23cb251c6",
+      "reranker_ids": [
+        "0036cfe925ce4b1eaed94b8bc6ff1f3f",
+        "c9408aad3c6a4f36ab24771809ce94a3"
+      ]
+    },
+    "artifact_ids": [
+      "41a674365f924f92820eccbdc4b455e8"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  },
+  {
+    "id": "da53b2bcf4534929b5eb91c01abaa6f9",
+    "request_id": "34b75ecc-d8ee-4909-a295-39e6921ffcae",
+    "payload_hash": "aac2bf3d04e0186d38b901a342e624f1d49dcf8b734cf57905bcb63f30b6f743",
+    "input_fingerprint": "4403b0b9159895685ff03134c2953193c6105acb4a2a60580771210b30e8f74b",
+    "kind": "build",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "34b75ecc-d8ee-4909-a295-39e6921ffcae",
+      "kind": "build",
+      "snapshot_id": "73f3c27a95c642519ce51011982870dd",
+      "chunking": {
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "retrieval": {
+        "method": "bm25",
+        "top_k": 5,
+        "context_budget_chars": 4000,
+        "candidate_k": 20,
+        "rrf_k": 60
+      },
+      "embedding_config_id": null,
+      "execute_retrieval": false,
+      "llm_config_id": "f4da8ba2fb3f4000ab6587251ab443df"
+    },
+    "artifact_ids": [
+      "579fc2d4cc1c423599af8a916e30dcba"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  },
+  {
+    "id": "a85f3cc01e904a73b8bc4e3fa8f31c49",
+    "request_id": "a4291bcd-67f3-4df9-9fdb-e9d88e2e9b10",
+    "payload_hash": "433910d94860a1216a06bbbba91384daef1a3d9f4abf77604074244339e40dea",
+    "input_fingerprint": "73afc83c5b4771eeab1468fd0a3aa8f04b549b8975887b207edcd67ee90fdcd3",
+    "kind": "snapshot",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "a4291bcd-67f3-4df9-9fdb-e9d88e2e9b10",
+      "kind": "snapshot",
+      "input_ids": [
+        "c14f243ac5bd46859260db9bc2cfd444",
+        "c1a9a448e3414a4eb0f9ff5d4a91bdbf"
+      ]
+    },
+    "artifact_ids": [
+      "73f3c27a95c642519ce51011982870dd"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  },
+  {
+    "id": "e568f6a8e5c04308a4115d7c14b2fd5d",
+    "request_id": "982d2603-4321-4fce-b9f2-a34094a9247e",
+    "payload_hash": "7bb247af15b4c02b94cd29a41c2776ef1c58060e595a582aeac2172ddc581b56",
+    "input_fingerprint": "2fe4f514907bf200ccbff1bba7915100a4554b3bd317a92e9f788cde657a1636",
+    "kind": "rerank_compare",
+    "status": "completed",
+    "stage": "finished",
+    "request": {
+      "request_id": "982d2603-4321-4fce-b9f2-a34094a9247e",
+      "kind": "rerank_compare",
+      "candidate_ids": [
+        "3c9e652eeb4146f68f2cb9e7104df1f9"
+      ],
+      "top_k": 2,
+      "context_budget_chars": 1000,
+      "execute_reranking": true,
+      "qrels_id": "946ec518a9994a899b6772b078da4b9e",
+      "facts_id": "9d27266a5a7f405995306fc23cb251c6",
+      "reranker_ids": [
+        "0036cfe925ce4b1eaed94b8bc6ff1f3f",
+        "c9408aad3c6a4f36ab24771809ce94a3"
+      ]
+    },
+    "artifact_ids": [
+      "62e55b3d8a944fefbdd5b03025ffbfa9"
+    ],
+    "error": null,
+    "dispatch_attempted": false,
+    "execution_kind": "test_fixture"
+  }
+]

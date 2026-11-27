@@ -59,6 +59,6 @@ CLI compare의 `--qrels 파일.json`은 같은 source/chunk/questions fingerprin
 
 지표는 개별 answer artifact를 봉인하기 전에 계산하여 compare 행과 상세 result.json에 동일하게 저장합니다. 답변의 Faithfulness/Correctness는 여전히 N/A입니다. 개발 fixture의 수기 qrels는 승인 HR GT·독립 holdout이 아닙니다. 현재 화면에는 qrels 업로드가 없으며 CLI에서 지정합니다.
 
-실습 기록에는 예상 순위, 실제 순위, 누락된 근거, 바꾼 변수, latency, 문서/query 작업 수를 남기세요. RSS는 worker의 OS peak 관측이며 모델 상주 메모리만을 뜻하지 않습니다. 비용과 실제 한국어 품질·사전학습 모델 메모리는 미검증입니다. 다음 구현은 리랭커이며 평가기 실험 보류는 유지됩니다.
+실습 기록에는 예상 순위, 실제 순위, 누락된 근거, 바꾼 변수, latency, 문서/query 작업 수를 남기세요. RSS는 worker의 OS peak 관측이며 모델 상주 메모리만을 뜻하지 않습니다. 비용과 실제 한국어 품질·사전학습 모델 메모리는 미검증입니다. 다음 실습은 [고정 후보 리랭커](reranking.md)이며 평가기 실험 보류는 유지됩니다.
 
 검증한 패키지 소스: `8e7ef784377043c9b8653ef87a254015c4eb90eb` (personal/dev). 설치 안내의 P028 고정 checkout 대신 이 SHA를 사용해 빌드합니다. 같은 0.1.0.dev1 이름이라도 wheel hash로 배포물을 구분하세요. [최종 배포물 hash](../../verification/p010/installation.json)와 [전달 기록](../../verification/p010/delivery.json)을 함께 확인합니다.

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "variants": [
+    {
+      "id": "none",
+      "label": "none",
+      "method": "none",
+      "profile": null,
+      "top_k": 5,
+      "context_budget_chars": 4000
+    },
+    {
+      "id": "bge",
+      "label": "bge",
+      "method": "cross-encoder",
+      "profile": "bge-reranker.json",
+      "top_k": 5,
+      "context_budget_chars": 4000
+    },
+    {
+      "id": "mmini",
+      "label": "mmini",
+      "method": "cross-encoder",
+      "profile": "mmini-reranker.json",
+      "top_k": 5,
+      "context_budget_chars": 4000
+    }
+  ]
+}

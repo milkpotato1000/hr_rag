@@ -1,0 +1,25 @@
+test_bad_scores_and_no_retry (test_reranking.RerankTests.test_bad_scores_and_no_retry) ... ok
+test_compare_replay_and_mapping_tamper (test_reranking.RerankTests.test_compare_replay_and_mapping_tamper) ... ok
+test_fact_macro_and_micro_are_distinct (test_reranking.RerankTests.test_fact_macro_and_micro_are_distinct) ... ok
+test_fixture_candidate_provenance (test_reranking.RerankTests.test_fixture_candidate_provenance) ... ok
+test_freeze_dense_hybrid_no_reencoding (test_reranking.RerankTests.test_freeze_dense_hybrid_no_reencoding) ... ok
+test_freeze_no_search_and_tamper (test_reranking.RerankTests.test_freeze_no_search_and_tamper) ... ok
+test_generation_failure_and_zero_recompute (test_reranking.RerankTests.test_generation_failure_and_zero_recompute) ... ok
+test_generation_three_providers_and_empty_invalid (test_reranking.RerankTests.test_generation_three_providers_and_empty_invalid) ... ok
+test_independent_arithmetic (test_reranking.RerankTests.test_independent_arithmetic) ... ok
+test_label_preflight_all_before_workers (test_reranking.RerankTests.test_label_preflight_all_before_workers) ... ok
+test_multiple_questions_swapped_summary (test_reranking.RerankTests.test_multiple_questions_swapped_summary) ... ok
+test_no_relevant_zero_facts_and_report_escape (test_reranking.RerankTests.test_no_relevant_zero_facts_and_report_escape) ... ok
+test_none_preview_scores_budget (test_reranking.RerankTests.test_none_preview_scores_budget) ... ok
+test_partial_failure_groups_and_sequential (test_reranking.RerankTests.test_partial_failure_groups_and_sequential) ... ok
+test_preflight_and_timeout_observation (test_reranking.RerankTests.test_preflight_and_timeout_observation) ... ok
+test_profiles_types_duplicate_json_and_empty_candidates (test_reranking.RerankTests.test_profiles_types_duplicate_json_and_empty_candidates) ... ok
+test_qrels_facts_strict_and_metrics (test_reranking.RerankTests.test_qrels_facts_strict_and_metrics) ... ok
+test_scores_rounding_duplicate_dimensions (test_reranking.RerankTests.test_scores_rounding_duplicate_dimensions) ... ok
+test_sdk_preflight_failure_zero_workers (test_reranking.RerankTests.test_sdk_preflight_failure_zero_workers) ... ok
+test_ui_jobs (test_reranking.RerankTests.test_ui_jobs) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.022s
+
+OK

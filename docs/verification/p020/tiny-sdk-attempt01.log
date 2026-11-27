@@ -1,0 +1,108 @@
+W1128 01:29:24.201000 92595 .rag-runs/p010-sdk/.venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 487.09it/s]
+{
+  "status": "PASS",
+  "kind": "locally_generated_random_not_pretrained",
+  "parameters": 11121,
+  "bytes": 49434,
+  "results": [
+    {
+      "profile_id": "BAAI/bge-reranker-v2-m3",
+      "scores": [
+        {
+          "chunk_id": "a",
+          "score": 0.004449312575161457
+        },
+        {
+          "chunk_id": "b",
+          "score": 0.0044321343302726746
+        }
+      ],
+      "direct_logits": [
+        0.004449313040822744,
+        0.0044321343302726746
+      ],
+      "work": {
+        "load_ms": 3018.5329999949317,
+        "score_ms": 2.9750840039923787,
+        "peak_rss_bytes": 422232064,
+        "rss_method": "OS process-lifetime ru_maxrss; includes imports/load; no periodic sampling",
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "pair_tokens": [
+          9,
+          8
+        ],
+        "applied_limit": 64,
+        "preprocessing_hash": "8f2d247b02461b55c8c68ece66894727f5cd620e74a15a90f28e5c96c1c853c1",
+        "pairs": 2,
+        "queries": 1,
+        "workers": 1,
+        "fixture_calls": 0,
+        "worker_exited": true,
+        "retry_count": 0,
+        "elapsed_ms": 3553.5010829917155,
+        "execution_kind": "local_hf",
+        "benchmark": "cold owned worker; not warm latency"
+      }
+    },
+    {
+      "profile_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "scores": [
+        {
+          "chunk_id": "a",
+          "score": 0.004449312575161457
+        },
+        {
+          "chunk_id": "b",
+          "score": 0.0044321343302726746
+        }
+      ],
+      "direct_logits": [
+        0.004449313040822744,
+        0.0044321343302726746
+      ],
+      "work": {
+        "load_ms": 2947.3929579980904,
+        "score_ms": 2.1242499933578074,
+        "peak_rss_bytes": 422821888,
+        "rss_method": "OS process-lifetime ru_maxrss; includes imports/load; no periodic sampling",
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "pair_tokens": [
+          9,
+          8
+        ],
+        "applied_limit": 64,
+        "preprocessing_hash": "8f2d247b02461b55c8c68ece66894727f5cd620e74a15a90f28e5c96c1c853c1",
+        "pairs": 2,
+        "queries": 1,
+        "workers": 1,
+        "fixture_calls": 0,
+        "worker_exited": true,
+        "retry_count": 0,
+        "elapsed_ms": 3456.739083005232,
+        "execution_kind": "local_hf",
+        "benchmark": "cold owned worker; not warm latency"
+      }
+    }
+  ],
+  "overlength": "PASS",
+  "sdk": {
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0",
+    "transformers": "5.24.1",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0"
+  }
+}

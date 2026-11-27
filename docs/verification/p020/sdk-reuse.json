@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "lock": "rag_package/requirements-retrieval.lock",
+  "sha256": "f7988bdf801f51e27ce7538805bd9c9ca8202c0d714c13901e53f9365891b32f",
+  "source": "P010 approved exact SDK lock reused without changes",
+  "versions": {
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0",
+    "transformers": "5.24.1",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0"
+  },
+  "pretrained_weights": 0,
+  "tiny_parameters": 11121,
+  "tiny_bytes": 49434
+}

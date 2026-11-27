@@ -28,7 +28,29 @@ def main(argv=None):
         doctor=subs.add_parser('doctor');doctor.add_argument('--config')
         server=subs.add_parser('serve');server.add_argument('--workspace',required=True);server.add_argument('--sources');server.add_argument('--llm-config',required=True,action='append');server.add_argument('--drive-config',action='append',default=[]);server.add_argument('--port',type=int,default=8765);server.add_argument('--allow-model-execution',action='store_true');server.add_argument('--allow-drive-download',action='store_true')
         server.add_argument('--embedding-config',action='append',default=[]);server.add_argument('--allow-retrieval-execution',action='store_true')
+        for name in ('candidates','rerank','answer-from-rerank','rerank-compare','rerank-report'):
+            sub=subs.add_parser(name);sub.add_argument('--out',required=True)
+            if name=='candidates':
+                sub.add_argument('--build',required=True);sub.add_argument('--result',required=True);sub.add_argument('--question-id',required=True);sub.add_argument('--n',type=int,default=20)
+            elif name=='rerank':
+                sub.add_argument('--candidates',required=True);sub.add_argument('--method',choices=['none','cross-encoder'],required=True);sub.add_argument('--profile');sub.add_argument('--top-k',type=int,default=5);sub.add_argument('--context-budget-chars',type=int,default=4000);sub.add_argument('--execute-reranking',action='store_true')
+            elif name=='answer-from-rerank':
+                sub.add_argument('--run',required=True);sub.add_argument('--llm-config',required=True);sub.add_argument('--execute',action='store_true')
+            elif name=='rerank-compare':
+                sub.add_argument('--candidates-set',required=True);sub.add_argument('--variants',required=True);sub.add_argument('--qrels');sub.add_argument('--facts');sub.add_argument('--execute-reranking',action='store_true')
+            else:sub.add_argument('--run',required=True)
+        server.add_argument('--reranker-config',action='append',default=[]);server.add_argument('--allow-reranking-execution',action='store_true')
+        server.add_argument('--qrels',action='append',default=[]);server.add_argument('--facts',action='append',default=[])
         args=p.parse_args(argv)
+        if args.command in ('candidates','rerank','answer-from-rerank','rerank-compare','rerank-report'):
+            from . import candidates,reranking,rerank_compare
+            if args.command=='candidates':r=candidates.freeze(args.build,args.result,args.question_id,args.n,args.out)
+            elif args.command=='rerank':r=reranking.run(args.candidates,args.method,args.out,profile=args.profile,top_k=args.top_k,context_budget_chars=args.context_budget_chars,execute=args.execute_reranking)
+            elif args.command=='answer-from-rerank':r=reranking.answer(args.run,args.llm_config,args.out,execute=args.execute)
+            elif args.command=='rerank-compare':r=rerank_compare.compare(args.candidates_set,args.variants,args.out,qrels=args.qrels,facts=args.facts,execute=args.execute_reranking)
+            else:r=rerank_compare.report(args.run,args.out)
+            failed=r.get('status')=='failed' or any(row['status']=='failed' for row in r.get('rows',[]) if 'status' in row)
+            print(json.dumps({'status':r.get('status','complete'),'command':args.command,'artifact_written':True,'reason':r.get('reason'),'error':r.get('error'),'work':r.get('work'),'generation_requests':r.get('generation_requests',0)}));return 1 if failed else 0
         if args.command=='retrieval-preview':
             from .retrieval import dry_run
             print(json.dumps(dry_run(args.config),ensure_ascii=False));return 0

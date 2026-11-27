@@ -14,7 +14,7 @@ Python 3.10+가 필요합니다. TXT/Markdown·청킹·BM25는 표준 라이브�
 | --- | --- | --- |
 | 입력 | 명시한 로컬 PDF/TXT/MD 파일 목록, 다중 문서; [Drive connector](drive.md)의 단일 문서 snapshot | 폴더 동기화, OCR, 암호 PDF, 표 구조 복원 |
 | 청킹 | fixed / recursive / structure | semantic / LLM 청킹 |
-| 검색 | BM25, unicode-word-v1 | Dense / Hybrid / 리랭커 |
+| 검색 | BM25, [Dense/Hybrid](hybrid.md), 별도 [고정 후보 리랭커](reranking.md) | 임의 모델/custom code |
 | 생성 | P025 generation 역할, json_object 응답 | 기존 HR UI·평가 runner로의 자동 연결 |
 | 비교 | 같은 snapshot·질문으로 설정 2~4개 비교, 기본 preview | 정답 없는 품질 점수 자동 산출 |
 

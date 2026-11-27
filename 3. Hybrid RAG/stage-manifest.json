@@ -1,7 +1,10 @@
 {
   "schema_version": 1,
   "stage": "3. Hybrid RAG",
-  "P": "P010",
+  "P": [
+    "P010",
+    "P020"
+  ],
   "implementation": "installed rag_package; no hidden previous-stage paths",
   "copied_sources": [
     {
@@ -50,5 +53,14 @@
   "pretrained_quality": "not_verified",
   "examples": "placeholder; no weight download or model call",
   "package_source_commit": "8e7ef784377043c9b8653ef87a254015c4eb90eb",
-  "package_version": "0.1.0.dev1"
+  "package_version": "0.1.0.dev1",
+  "reranking": {
+    "models": [
+      "BAAI/bge-reranker-v2-m3",
+      "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
+    ],
+    "contract_commit": "f6800d0bd60b6345917533efd831fe2892dfb751",
+    "baseline_package_commit": "3d99353b5aef3b683b24d0f7fa06b8a757dc1f83",
+    "execution": "none or explicit local CrossEncoder; examples preview only"
+  }
 }

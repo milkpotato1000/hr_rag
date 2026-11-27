@@ -33,7 +33,11 @@ class UI:
             'drive_configs':[{'id':k,'auth_mode':v['config']['auth']['mode']} for k,v in r.drives.items()],
             'allow_model_execution':self.jobs.allow_model,'allow_drive_download':self.jobs.allow_drive,'execution_kind':'test_fixture' if self.jobs.fixture else 'preview_default',
             'embedding_configs':[{'id':k,'model_id':v['config']['model_id'],'license':'MIT','configuration_required':not __import__('rag_package.embedding',fromlist=['configured']).configured(v['config']),'quality':'Korean pretrained quality unverified'} for k,v in r.embeddings.items()],'allow_retrieval_execution':self.jobs.allow_retrieval,
-            'capabilities':{'chunking':['fixed','recursive','structure'],'retrieval':['bm25','dense','hybrid'],'unsupported':['리랭커','semantic/LLM 청킹','평가기']},
+            'reranker_configs':[{'id':k,'model_id':v['config']['model_id'],'configuration_required':not __import__('rag_package.reranker',fromlist=['configured']).configured(v['config'])} for k,v in r.rerankers.items()],
+            'allow_reranking_execution':self.jobs.allow_reranking,
+            'labels':{kind:[{'id':k,'label':v['label']} for k,v in entries.items()] for kind,entries in r.labels.items()},
+            'rerank_artifacts':[{'id':k,'kind':v['kind']} for k,v in r.data['artifacts'].items() if v['kind'] in ('candidates','rerank','rerank-comparison','rerank-answer')],
+            'capabilities':{'chunking':['fixed','recursive','structure'],'retrieval':['bm25','dense','hybrid'],'unsupported':['Qwen instruction 리랭커','semantic/LLM 청킹','평가기']},
             'limits':{'inputs':20,'configs':8,'upload_bytes':20*1024*1024,'concurrent_jobs':1,'comparison_requests':80},'jobs':self.jobs.summaries()}
     def artifact(self,key):
         p,e,m=self.registry.artifact(key);kind=e['kind'];out={'id':key,'kind':kind,'manifest':m,'snapshot_id':e.get('snapshot_id',key)}
@@ -45,6 +49,9 @@ class UI:
             b,_,_=self.registry.artifact(e['build_id']);_,_,chunks=load_build(b,result['effective_settings'])
             wanted={c['chunk_id'] for c in result['candidates']}
             out.update(result=result,build_id=e['build_id'],candidate_chunks=[c for c in chunks if c['chunk_id'] in wanted])
+        elif kind in ('candidates','rerank','rerank-comparison','rerank-answer'):
+            from .ui_reranking import artifact
+            out.update(artifact(p,e))
         else:out.update(result=read_json(p/'comparison.json'),answer_ids=e['answer_ids'],build_ids=e['build_ids'],labels=e['labels'])
         return out
 
@@ -137,11 +144,11 @@ class Handler(BaseHTTPRequestHandler):
             try:self.reply(500,error={'code':'internal_error','stage':'http'})
             except OSError:pass
 
-def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,**test_injection):
-    r=Registry(workspace,llm_configs,sources,drive_configs,embedding_configs);jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,**test_injection);return Server(port,UI(r,jobs))
+def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,reranker_configs=(),allow_reranking=False,qrels=(),facts=(),**test_injection):
+    r=Registry(workspace,llm_configs,sources,drive_configs,embedding_configs,reranker_configs,qrels,facts);jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,allow_reranking=allow_reranking,**test_injection);return Server(port,UI(r,jobs))
 
 def serve(args):
-    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution)
+    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution,reranker_configs=args.reranker_config,allow_reranking=args.allow_reranking_execution,qrels=args.qrels,facts=args.facts)
     print(json.dumps({'status':'serving','url':server.origin,'execution_kind':'preview_default','model_execution_allowed':args.allow_model_execution,'drive_download_allowed':args.allow_drive_download}),flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass

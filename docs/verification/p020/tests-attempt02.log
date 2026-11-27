@@ -1,0 +1,18 @@
+test_bad_scores_and_no_retry (test_reranking.RerankTests.test_bad_scores_and_no_retry) ... ok
+test_compare_replay_and_mapping_tamper (test_reranking.RerankTests.test_compare_replay_and_mapping_tamper) ... ok
+test_fixture_candidate_provenance (test_reranking.RerankTests.test_fixture_candidate_provenance) ... ok
+test_freeze_no_search_and_tamper (test_reranking.RerankTests.test_freeze_no_search_and_tamper) ... ok
+test_generation_three_providers_and_empty_invalid (test_reranking.RerankTests.test_generation_three_providers_and_empty_invalid) ... ok
+test_independent_arithmetic (test_reranking.RerankTests.test_independent_arithmetic) ... ok
+test_multiple_questions_swapped_summary (test_reranking.RerankTests.test_multiple_questions_swapped_summary) ... ok
+test_none_preview_scores_budget (test_reranking.RerankTests.test_none_preview_scores_budget) ... ok
+test_partial_failure_groups_and_sequential (test_reranking.RerankTests.test_partial_failure_groups_and_sequential) ... ok
+test_preflight_and_timeout_observation (test_reranking.RerankTests.test_preflight_and_timeout_observation) ... ok
+test_profiles_types_duplicate_json_and_empty_candidates (test_reranking.RerankTests.test_profiles_types_duplicate_json_and_empty_candidates) ... ok
+test_qrels_facts_strict_and_metrics (test_reranking.RerankTests.test_qrels_facts_strict_and_metrics) ... ok
+test_ui_jobs (test_reranking.RerankTests.test_ui_jobs) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.434s
+
+OK

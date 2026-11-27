@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "model_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "revision": "0000000000000000000000000000000000000000",
+  "local_path": "EXAMPLE_LOCAL_CLASSIFIER",
+  "file_manifest": {},
+  "device": "cpu",
+  "dtype": "float32",
+  "max_pair_tokens": 512,
+  "batch_size": 1,
+  "timeout_seconds": 120
+}

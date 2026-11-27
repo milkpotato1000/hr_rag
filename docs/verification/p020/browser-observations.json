@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "tool": "cua_repl / IAB",
+  "fixture": "registered synthetic candidate + injected score backend; actual model/API/Drive calls 0",
+  "viewports": [
+    [
+      1280,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "workflow": [
+    "snapshot/build/ask through UI",
+    "freeze current result N20 actual3",
+    "none complete vs two model preview before flag",
+    "two model fixture comparison after explicit flag",
+    "rank3 to rank1; original/source pages verified",
+    "budget150 excludes both K2 chunks; empty context abstains without dispatch",
+    "budget1000 retains2 /685 codepoints; generation preview",
+    "K21>N20 explicit error",
+    "qrels and facts registered ID selection",
+    "Tab focus, Enter opens and Space closes details",
+    "no horizontal document overflow; console errors[]",
+    "final model names/nDCG/fact metrics visible; 06 title width corrected"
+  ],
+  "restrictions": "P029 blocked filepicker/native app path not retried. P013 grant unused.",
+  "screenshots": [
+    "browser-desktop-final.jpg",
+    "browser-narrow-final.jpg",
+    "browser-narrow-controls.jpg"
+  ],
+  "owned_servers": [
+    {
+      "pid": 99899,
+      "port": 59861,
+      "exit": "SIGINT; owned_server_closed, exec exit0"
+    },
+    {
+      "pid": 2884,
+      "port": 60144,
+      "exit": "SIGINT; owned_server_closed, exec exit0"
+    }
+  ],
+  "viewport_override": "reset"
+}

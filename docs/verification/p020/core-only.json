@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "installed_path": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p020-installed-qek77yzv/verify-ggpl6ryg/core/lib/python3.12/site-packages/rag_package/__init__.py",
+  "sdk_absent": true,
+  "SDK_imports": 0,
+  "commands": [
+    {
+      "args": [
+        "snapshot",
+        "--sources",
+        "stage/sources.json",
+        "--out",
+        "snap"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"snapshot\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "build",
+        "--snapshot",
+        "snap",
+        "--config",
+        "stage/bm25.json",
+        "--out",
+        "build"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"build\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 0, \"documents\": 0, \"queries\": 0}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "ask",
+        "--run",
+        "build",
+        "--config",
+        "stage/bm25.json",
+        "--question",
+        "생일 휴가 자격은?",
+        "--out",
+        "answer"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"ask\", \"execution_kind\": \"preview\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 0, \"documents\": 0, \"queries\": 0}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "candidates",
+        "--build",
+        "build",
+        "--result",
+        "answer",
+        "--question-id",
+        "q1",
+        "--n",
+        "20",
+        "--out",
+        "candidates"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"candidates\", \"artifact_written\": true, \"reason\": null, \"error\": null, \"work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rerank",
+        "--candidates",
+        "candidates",
+        "--method",
+        "none",
+        "--top-k",
+        "5",
+        "--out",
+        "none"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"rerank\", \"artifact_written\": true, \"reason\": null, \"error\": null, \"work\": {\"pairs\": 0, \"queries\": 0, \"workers\": 0, \"fixture_calls\": 0, \"retry_count\": 0, \"worker_exited\": true, \"execution_kind\": \"none\", \"elapsed_ms\": 0, \"peak_rss_bytes\": null, \"rss_method\": \"unavailable\"}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rerank",
+        "--candidates",
+        "candidates",
+        "--method",
+        "cross-encoder",
+        "--profile",
+        "stage/bge-reranker.json",
+        "--out",
+        "preview"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"command\": \"rerank\", \"artifact_written\": true, \"reason\": \"execution_not_enabled\", \"error\": null, \"work\": {\"pairs\": 0, \"queries\": 0, \"workers\": 0, \"fixture_calls\": 0, \"retry_count\": 0, \"worker_exited\": true, \"execution_kind\": \"preview\", \"elapsed_ms\": 0, \"peak_rss_bytes\": null, \"rss_method\": \"unavailable\"}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rerank-compare",
+        "--candidates-set",
+        "set.json",
+        "--variants",
+        "variants.json",
+        "--out",
+        "comparison"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"rerank-compare\", \"artifact_written\": true, \"reason\": null, \"error\": null, \"work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "rerank-report",
+        "--run",
+        "comparison",
+        "--out",
+        "report"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"rerank-report\", \"artifact_written\": true, \"reason\": null, \"error\": null, \"work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "answer-from-rerank",
+        "--run",
+        "none",
+        "--llm-config",
+        "stage/llm-local.json",
+        "--out",
+        "generation"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"command\": \"answer-from-rerank\", \"artifact_written\": true, \"reason\": null, \"error\": null, \"work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    }
+  ],
+  "ui_assets_and_server": "PASS",
+  "generation_requests": 0
+}

@@ -1,0 +1,82 @@
+{
+  "identity": {
+    "schema_version": 1,
+    "kind": "snapshot",
+    "status": "ready",
+    "normalization": "NFC/LF",
+    "page_separator": "\n\n",
+    "offset_unit": "Unicode code point [start,end)",
+    "documents": [
+      {
+        "document_id": "birthday",
+        "title": "가상 생일 휴가",
+        "format": "md",
+        "synthetic": true,
+        "original_path": "birthday/original.md",
+        "original_sha256": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+        "bytes": 1486,
+        "parser": {
+          "name": "utf8",
+          "version": "1"
+        },
+        "normalization": "NFC/LF",
+        "pages": [
+          {
+            "page": 1,
+            "start": 0,
+            "end": 620,
+            "raw_path": "birthday/page-1-raw.txt",
+            "text_path": "birthday/page-1.txt",
+            "raw_sha256": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+            "text_sha256": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71"
+          }
+        ],
+        "canonical_path": "birthday/canonical.txt",
+        "canonical_sha256": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+        "status": "ready",
+        "reason": null
+      },
+      {
+        "document_id": "annual",
+        "title": "가상 연차 이월",
+        "format": "txt",
+        "synthetic": true,
+        "original_path": "annual/original.txt",
+        "original_sha256": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+        "bytes": 901,
+        "parser": {
+          "name": "utf8",
+          "version": "1"
+        },
+        "normalization": "NFC/LF",
+        "pages": [
+          {
+            "page": 1,
+            "start": 0,
+            "end": 385,
+            "raw_path": "annual/page-1-raw.txt",
+            "text_path": "annual/page-1.txt",
+            "raw_sha256": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+            "text_sha256": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6"
+          }
+        ],
+        "canonical_path": "annual/canonical.txt",
+        "canonical_sha256": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+        "status": "ready",
+        "reason": null
+      }
+    ],
+    "files": {
+      "annual/canonical.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "annual/original.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "annual/page-1-raw.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "annual/page-1.txt": "ce1ecf8c31c1f42d968436fdf2da3f0004da606b269a29a1bd33ae2d1a96d8f6",
+      "birthday/canonical.txt": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+      "birthday/original.md": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+      "birthday/page-1-raw.txt": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
+      "birthday/page-1.txt": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71"
+    }
+  },
+  "fingerprint": "183980f1aa4b7c302b9582913e304590432b2c101701e26bfc70bb335f2ddecf",
+  "elapsed_ms": 1.154
+}

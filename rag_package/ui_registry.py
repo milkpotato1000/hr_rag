@@ -44,7 +44,7 @@ def atomic_json(path,value):
         if tmp is not None:tmp.unlink(missing_ok=True)
 
 class Registry:
-    def __init__(self,workspace,llm_configs,sources=None,drive_configs=(),embedding_configs=()):
+    def __init__(self,workspace,llm_configs,sources=None,drive_configs=(),embedding_configs=(),reranker_configs=(),qrels=(),facts=()):
         original=Path(workspace).absolute()
         require(original.is_dir() and not any(p.is_symlink() for p in [original,*original.parents]),'invalid_workspace','registry')
         self.workspace=original.resolve();self.root=contained(self.workspace,'.rag-runs/ui');self.root.mkdir(parents=True,exist_ok=True)
@@ -55,6 +55,17 @@ class Registry:
         self.data=read_json(self.path) if self.path.exists() else {'schema_version':1,'configs':{},'artifacts':{}}
         require(self.data.get('schema_version')==1 and isinstance(self.data.get('configs'),dict) and isinstance(self.data.get('artifacts'),dict),'invalid_registry','registry')
         self.inputs={};self.drives={};self.embeddings={};self.sources_file=None
+        self.rerankers={};self.labels={'qrels':{},'facts':{}}
+        require(len(reranker_configs)<=4,'reranker_config_count','registry')
+        from .reranker import read_profile as reranker_profile
+        for path in reranker_configs:
+            p=contained(self.workspace,path);raw=bounded(p);cfg=reranker_profile(p)
+            self.rerankers[uid()]={'config':cfg,'path':p,'sha256':digest(raw)}
+        for kind,paths in (('qrels',qrels),('facts',facts)):
+            require(len(paths)<=8,'label_config_count','registry')
+            for path in paths:
+                p=contained(self.workspace,path);raw=bounded(p,16*1024*1024);decode(raw)
+                self.labels[kind][uid()]={'path':self.relative(p),'sha256':digest(raw),'label':p.name}
         require(len(embedding_configs)<=4,'embedding_config_count','registry')
         from .embedding import read_profile
         for path in embedding_configs:
@@ -161,6 +172,9 @@ class Registry:
     def snapshot_for(self,key):
         p,e,m=self.artifact(key)
         if e['kind']=='snapshot':return p,key
+        if e['kind'] in ('candidates','rerank','rerank-answer'):
+            suffix={'candidates':'snapshot','rerank':'candidates/snapshot','rerank-answer':'rerank/candidates/snapshot'}[e['kind']]
+            return p/suffix,key
         require('snapshot_id' in e,'artifact_has_no_source','registry')
         return self.snapshot_for(e['snapshot_id'])
 
@@ -168,3 +182,12 @@ class Registry:
         check_id(key);entry=self.embeddings.get(key);require(entry is not None,'unknown_embedding','registry')
         require(digest(bounded(contained(self.workspace,entry['path'])))==entry['sha256'],'stale_embedding_config','registry')
         return copy.deepcopy(entry['config'])
+
+    def reranker(self,key):
+        check_id(key);entry=self.rerankers.get(key);require(entry is not None,'unknown_reranker','registry')
+        require(digest(bounded(contained(self.workspace,entry['path'])))==entry['sha256'],'stale_reranker_config','registry')
+        return copy.deepcopy(entry['config'])
+    def label(self,kind,key):
+        if key is None:return None
+        check_id(key);entry=self.labels[kind].get(key);require(entry is not None,'unknown_labels','registry')
+        return read_json(self.file(entry))
