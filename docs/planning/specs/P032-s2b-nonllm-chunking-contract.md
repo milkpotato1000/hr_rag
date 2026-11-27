@@ -1,24 +1,24 @@
-# P032 S2b 실제 청킹 4방식 비교 초안
+# P032 S2b 실제 청킹 4방식 비교 계약
 
-2026-11-28 DRAFT. S2a의 커밋된 완료 증거와 최종 수치/설치 identity를 검토한 뒤 별도 READY·정확 채택이 필요하다. 이번 문서는 실제 모델 호출 허가가 아니다. LLM 청킹과 답변 생성의 사용자 선택 대기를 우회하지 않는다.
+2026-11-28 READY. S2a 완료17ea6305bb483409b9cd593d62e2e64c50c10625와 [준비 검토](../reviews/P032-s2b-readiness-20261128.md)를 확인했다. 이 계약의 정확 채택 후 runner/독립 검증·동결을 완료하고 아래 실제 E5 작업만 수행한다. LLM 청킹과 답변 생성의 사용자 선택 대기를 우회하지 않는다.
 
 ## 비교 목적
 
 같은 원문에서 fixed/recursive/structure/semantic의 실제 경계를 만들고, 동일 E5 Hybrid 검색으로 질문별 필요한 근거가 후보→top K→전달 문맥의 어느 단계에서 빠지는지 비교한다. 이4방식의 완료가 전체5방식/LLM 답변/Drive 목표 완료는 아니다. S1 검색·리랭커 검증은 보존하고 별도 실행으로 관리한다.
 
-## 입력·통제 조건 후보
+## 고정 입력·통제 조건
 
 - S2a와 S1의 동일23쪽 규정집 snapshot/source fingerprint·10질문·38필수 fact/span을 hash로 고정한다. 파싱/원문/GT를 수정하지 않는다.
-- 규칙3종은 S2a 저장 artifact를 그대로 사용한다: fixed201, recursive257, structure264개. 현재 관찰값이며 커밋된 완료본에서 재확인한다.
+- 규칙3종은 S2a 저장 artifact를 그대로 사용한다: fixed201, recursive257, structure264개. 커밋된 완료본의 manifest/file hash를 실행 전 재확인한다.
 - semantic은 S2a의567개 unit, unit_max120/minimum120/threshold0.35, size256/overlap64 설정과 고정 E5-small profile을 사용한다. 저장 float32 unit vectors로 최초 경계를 계산하고 경계 이유/거리/강제 분할을 표시한다. 최종 chunk 상한567개다. 실제 품질을 본 뒤 임계값을 바꾸지 않는다.
 - 검색은 E5 Hybrid/RRF60, branch top20/최종 후보N20, K5, 문맥2000문자, 같은 질문을 사용한다. 리랭커는 실행하지 않고 생성은 preview다. embedding CPUfloat32/batch1/token512, worker300초는 S1과 같다.
 - 네 방식 모두 새 v3 입력으로 구성한다. S2a fixed의 chunk bytes는 S1과 같지만 frozen artifact fingerprint가 다르므로 S1 index/query/qrels를 자동 이식하지 않는다. 같은 새 v3 경로를 검증하는 fixed control을 포함하여 비교한다. S1 결과는 별도의 과거 참고선으로 유지한다.
 
-## 후보 실행량과 한도
+## 실행량과 한도
 
 S2a 현재 workload에서 보수적 최대45 embedding workers다: semantic unit 경계1 + 최종 chunk index4 + query40. 항목 수 상한은 semantic unit567, index합1289(201+257+264+567), query40으로 총1896이다. 실제 semantic chunk가 줄면 index항목도 줄어들지만 worker 예산을 다른 실험으로 전용하지 않는다. 다운로드/변환0, reranker0, LLM/API/Ollama/Drive/평가기0, 키읽기0, 자동재시도0이다.
 
-새 run의 최초 실제 작업 전에 별도 시작 시각과 전체1시간 deadline을 고정하는 안을 검토한다. 단일 owned worker, RSS4GiB, OS pressure normal, 작업 디스크 여유2GiB 이상을 사전 확인한다. 기존 관찰 불가·warning/critical·timeout·취소 시 owned worker 종료/회수와 추가 작업 중단을 유지한다. S1의 원래 deadline과73회 기록을 수정하거나 새 예산으로 덮지 않는다. 실제 실행 범위/최종 한도는 READY에서 확정한다.
+새 run의 최초 실제 작업 직전에 별도 시작 시각과 전체1시간 deadline을 기록한다. 단일 owned worker, RSS4GiB, OS pressure normal, 작업 디스크 여유2GiB 이상을 사전 확인한다. 기존 관찰 불가·warning/critical·timeout·취소 시 owned worker 종료/회수와 추가 작업 중단을 유지한다. S1의 원래 deadline과73회 기록을 수정하거나 새 예산으로 덮지 않는다. 시간·항목·worker 한도 증가는 새 검토 전 불가다.
 
 새 semantic 경계가 저장되면 모델0 검증(원문 보존·unit/vector/경계 identity·거리/강제 분할·최대길이·replay)을 먼저 통과한다. 이후 각 variant의 index와 gt01/gt02를 먼저 실행하고, 그 결과의 구조/자원/identity/성공을 확인한 후 나머지8질문을 진행한다. 앞의2질문은 전체10개에 포함하며 중복 재호출하지 않는다. 품질이 낮다는 이유만으로 결과를 버리거나 좋은 variant만 전체 비교하는 선택은 하지 않는다. 기술적 실패/한도 초과는 그대로 보존하고 실제 후속 호출을 멈춘다.
 
@@ -30,9 +30,9 @@ source facts의 후보N20/topK/문맥 recall·all_required·fulfilled ID·유효
 
 ## 구현·검증 준비 항목
 
-기존 설치 CLI/코어/owned-worker 관찰을 사용한다. stage별 새 ledger와 dispatch 전 예약, 항목/worker/시간/실패/미확정 관리가 필요하면 별도 runner로 구현하며 S1 runner/evidence는 불변으로 둔다. 초과 요청·deadline·불명확한 worker·source/profile/artifact 변조·일부 실패 후 자동 재개 거부를 모델 없는 독립 시험으로 검증한다. 기존 source-free 설치물과 SDK·실제 model 파일 hash를 재검증한다. 이 초안 때문에 모델을 추가 다운로드하거나 설치 버전을 바꾸지 않는다.
+기존 설치 CLI/코어/owned-worker 관찰을 사용한다. stage별 새 ledger와 dispatch 전 예약, 항목/worker/시간/실패/미확정 관리가 필요하면 별도 runner로 구현하며 S1 runner/evidence는 불변으로 둔다. 초과 요청·deadline·불명확한 worker·source/profile/artifact 변조·일부 실패 후 자동 재개 거부를 모델 없는 독립 시험으로 검증한다. 기존 source-free 설치물과 SDK·실제 model 파일 hash를 재검증한다. 이 단계에서 모델을 추가 다운로드하거나 설치 버전을 바꾸지 않는다.
 
-현재 rag.compare는 variant/질문별 오류를 저장하고 반복을 계속할 수 있다. 실험 runner는 worker exit0만 성공으로 보지 말고 SDK JSON 오류·실패 결과·저장 오류에서도 영구 halted를 기록해 이후 dispatch를 거부해야 한다. 상위 compare가 실패 행을 추가 기록하는 것과 실제 worker가 재시작되는 것을 구분한다. 거부 뒤 실제 호출0을 독립 시험으로 확인한다. 앞2질문 검토·나머지8질문 진행과 설치 comparison/replay를 같은45회 안에 연결할 방법을 READY 검토에서 확정하며, CLI 검증 때문에 전체 호출을 다시 반복하지 않는다.
+현재 rag.compare는 variant/질문별 오류를 저장하고 반복을 계속할 수 있다. 실험 runner는 worker exit0만 성공으로 보지 말고 SDK JSON 오류·실패 결과·저장 오류에서도 영구 halted를 기록해 이후 dispatch를 거부해야 한다. 상위 compare가 실패 행을 추가 기록하는 것과 실제 worker가 재시작되는 것을 구분한다. 거부 뒤 실제 호출0을 독립 시험으로 확인한다. 아래 단일 비교 invocation 경계 검증으로 앞2질문과 나머지8질문을 같은45회 안에 연결하며, CLI 검증 때문에 전체 호출을 다시 반복하지 않는다.
 
 구체 연결은 새 source-free evidence runner에서 설치된 `rag-lab compare`의 코어를 그대로 호출하고 원래 build/ask 경계를 감싸는 방식을 우선한다. 원래 계산을 대체하는 fixture/backend를 주입하지 않는다. 각 실제 build/ask의 기술적 성공·identity를 검증한 뒤 현재 variant의 gt01/gt02 완료를 gate로 기록하여 gt03부터 허용한다. 질문은 고정 순서를 유지하고 하나의 비교 invocation 안에서 각 질문을 한 번만 처리한다. semantic boundary는 비교 전에1회 실행/검증하며 compare 안에서 재실행하지 않는다.
 
@@ -40,4 +40,6 @@ compare가 최종 seal 전 임시 디렉터리를 정리할 수 있으므로, wr
 
 결과는 저장된 실제4방식 비교 보고서와 설치 UI에서 원문→단위/경계→청크→후보→전달 문맥으로 읽을 수 있어야 한다. source 없는 설치 경로와 입력 fingerprint, 모델0 replay, 허용 desktop/narrow/keyboard 관찰 및 학습 안내를 남긴다. P029 filepicker 차단은 우회하지 않는다. 기존1513보존 파일과 S1/S2a 전체 산출물 hash를 검사하고 정상 personal/dev에 전달한다.
 
-S2a 완료본에서 수치·실패·조건을 대조하고 이 초안을 실행 계약/준비 검토로 확정하기 전에는 dev에 실제 실행을 시작시키지 않는다. LLM34window 실행·답변 모델 비교·사용자 Drive 문서는 별도 선택/계약으로 남긴다. 이 단계의 완료 조건을 전체 goal로 축소하지 않는다.
+첫 실제 호출 전에 새 runner/control, 독립 시험 PASS, 설치/원문/model/설정/순서 hash와 누적 항목 예산을 커밋·동결한다. 실행 중 runner 변경·기존 출력 덮어쓰기·부분 성공 후 새 invocation 자동 재시작은 금지한다. 실패 시 추가 실제 호출을 멈추고 모델0 진단·저장 결과 보고만 수행한다. 계획 범위 안의 제어/검증 결함 수정은 실제 실행 전에 끝내고 제품 변경이 필요한 경우 intake한다.
+
+완료 증거는 실제 semantic 경계1개, 규칙3종을 포함한40개 질문 결과 또는 보존된 기술적 실패/미실행, 단계별 항목/worker/시간/자원·0금지호출, 독립 원문/fact 산술 대조, 설치 comparison/replay/UI·학습 안내, 기존 산출물 보존, 커밋과 정상 personal/dev 전달이다. 실패한 축은 실행 완료 성공으로 표시하지 않으며 새 검토 없이 재시도하지 않는다. LLM34window 실행·답변 모델 비교·사용자 Drive 문서는 별도 선택/계약으로 남긴다. 이 단계의 완료 조건을 전체 goal로 축소하지 않는다.
