@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P031.md",
   "summary": "P031 model preparation READY after P030 completion",
   "next_action": "Integrate exact READY, adopt and commit, verify guard/queue, implement C1-C3 within tiny/fake validation scope; preserve evaluator and P029 holds",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-27T17:15:42.112368+00:00",
       "evidence": "Host send succeeded to verified existing same-project dev; exact READY 61499e4971731fbb95c41ad670ffa8a48fc30ce3, scope, verification limits and adoption/implementation action delivered. Receipt and adoption not yet observed."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T17:16:32.452633+00:00",
+      "evidence": "Observed dev acknowledgment of P031 scope and adoption commit c997493 selecting exact READY 61499e4971731fbb95c41ad670ffa8a48fc30ce3 with P031 readiness reference. Implementation is active; completion is not claimed."
     }
   ]
 }
