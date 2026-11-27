@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "compare",
+    "--snapshot",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/snapshot",
+    "--configs",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/configs/fixed.json",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/configs/recursive.json",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/configs/structure.json",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/configs/semantic.json",
+    "--questions",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/questions.json",
+    "--facts",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/facts.json",
+    "--execute-retrieval",
+    "--out",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/comparison"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"complete\", \"command\": \"compare\", \"execution_kind\": \"preview\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 44, \"documents\": 972, \"queries\": 40}, \"generation_requests\": 0}\n",
+  "invocations": 1
+}

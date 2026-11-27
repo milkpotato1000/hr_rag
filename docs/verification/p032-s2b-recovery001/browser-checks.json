@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "report": {
+    "desktop_width": 1280,
+    "desktop_scroll_width": 1280,
+    "narrow_width": 390,
+    "narrow_scroll_width": 390,
+    "initial_details_closed": true,
+    "Enter_opens_gt06": true,
+    "Space_closes_gt06": true,
+    "Tab_reaches_gt07": true,
+    "gt06_counts_visible": "fixed3/3; recursive/structure/semantic1/3; all candidate_N20=3/3",
+    "branch_union_separate_from_N20": true,
+    "N_A_and_parent_unknown_visible": true
+  },
+  "installed_UI": {
+    "saved_comparison_cards": 40,
+    "preview_has_no_generated_answer": true,
+    "selected_context_count": 5,
+    "budget_excluded": 0,
+    "source_meta": "가상 HR 규정집 v4 · 1페이지 · 페이지 offset 384 · canonical 384 · NFC/LF",
+    "source_text_visible": true,
+    "narrow_width": 390,
+    "narrow_scroll_width": 390,
+    "all_execution_flags_off": true,
+    "page_reload_model_calls": 0
+  },
+  "filepicker_used": false,
+  "viewport_reset": true,
+  "screenshots": [
+    "report-desktop.jpg",
+    "report-narrow.jpg",
+    "installed-comparison.jpg",
+    "installed-source-narrow.jpg"
+  ]
+}

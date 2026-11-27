@@ -8,7 +8,7 @@
 
 [같은 원문의 청킹 경계 비교](chunk-boundaries-s2a.md)에서는 고정·재귀·제목/섹션의 실제 청크와 의미·LLM 방식의 미실행 preview를 구분해 봅니다. 어떤 사실이 한 청크에 담기고 어떤 사실이 두 청크를 요구하는지 확인하는 준비 단계이며, 검색 성능 비교는 후속입니다.
 
-후속 [실제 청킹 비교의 중단 기록](chunk-comparison-s2b.md)은 첫 SDK 오류와 미실행40건을 구분합니다. 환경 복구 검토 전까지 실제 비교는 중단 상태입니다.
+[실제 청킹 4방식 비교](chunk-comparison-live.md)는 환경 복구 후40개 검색 결과를 제공합니다. [최초 중단 기록](chunk-comparison-s2b.md)은 별도 실패 이력으로 보존합니다. 의미 방식의 후보20 회수38/38과 전달 문맥29/38의 차이, 길이 제한으로 결정된 경계를 함께 확인하세요.
 
 [단계별 비교 실습](experiments.md) → [모델과 지원 상태](models-and-support.md) → [로컬 예시](examples/local.json) / [API 예시](examples/api.json) 순서로 읽으세요. 전체 후속 순서는 [채택한 패키지 로드맵](../../planning/rag-package-roadmap.md)에 있습니다.
 
@@ -99,6 +99,6 @@ API 실패 시 조용히 로컬로, 로컬 실패 시 API로 바꾸지 않는 �
 [BM25/Dense/Hybrid 비교](hybrid.md)는 별도 검색 실행 허용과 공개 HF 설정을 사용합니다. 실제 SDK tiny 모델·합성 검색 검증과 [한 규정집의 실제 검색 실험](live-retrieval-s1.md)을 완료했습니다. 일반적인 한국어 품질을 보장하는 결과는 아닙니다.
 
 
-다섯 방식의 저장 경계 생성·재생·파생·원문 fact 비교는 [모델 청킹 실습](model-chunking.md)을 참고하세요. 의미/LLM 청킹은 등록 설정과 별도 실행 권한으로 연결되며 실제 한국어 모델 품질은 미검증입니다.
+다섯 방식의 저장 경계 생성·재생·파생·원문 fact 비교는 [모델 청킹 실습](model-chunking.md)을 참고하세요. 의미/LLM 청킹은 등록 설정과 별도 실행 권한으로 연결됩니다. 의미 방식은 위 고정 규정집에서 실제 검색을 비교했으며 일반 품질은 미보장입니다. LLM 청킹의 실제 실행은 아직 미검증입니다.
 
 현재 설치는 [최신 dev 설치](install-current.md)와 [모델 준비](model-preparation.md)에서 시작합니다. 공개 embedding/reranker의 고정 파일 준비·자동 manifest와 local/API/mixed LLM spec을 사용합니다. 준비·추론·품질 상태는 구분합니다.

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "live_workers_complete": 45,
+  "cumulative_workers": 46,
+  "cumulative_requested_items": 2146,
+  "known_completed_items": 1579,
+  "unknown_parent_requested_items": 567,
+  "all40_search_rows_complete": true,
+  "budget_exclusions": 0,
+  "original_deadline_preserved": true,
+  "frozen_scripts_unchanged": true,
+  "ledger_unchanged_by_reporting": true,
+  "owned_servers_closed": true,
+  "blocked_UI_calls": 0,
+  "local_links": 45,
+  "credentials_pattern_scan": "PASS",
+  "pretrained_weights_not_in_evidence": true,
+  "note": "Exact source whitespace and raw failed-log whitespace retained; no canonical normalization"
+}

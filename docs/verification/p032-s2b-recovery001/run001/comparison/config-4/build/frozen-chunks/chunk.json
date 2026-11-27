@@ -1,0 +1,6154 @@
+{
+  "schema_version": 1,
+  "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "config": {
+    "schema_version": 1,
+    "method": "semantic",
+    "size_chars": 256,
+    "overlap_chars": 64,
+    "unit_max_chars": 120,
+    "minimum_chars": 120,
+    "distance_threshold": 0.35,
+    "model": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "file_manifest": {
+        "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+        "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+        "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+        "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+        "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+        "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+      },
+      "device": "cpu",
+      "dtype": "float32",
+      "max_input_tokens": 512,
+      "catalog": {
+        "dimension": 384,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "pooling": "mean",
+        "limit": 512,
+        "license": "MIT",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      "normalization": "l2",
+      "algorithm": "exact-cosine-v1"
+    }
+  },
+  "unit_policy": {
+    "version": "source-units-v1",
+    "maximum": 120
+  },
+  "base_policy": {
+    "schema_version": 1,
+    "method": "semantic",
+    "size_chars": 256,
+    "overlap_chars": 64,
+    "unit_max_chars": 120,
+    "minimum_chars": 120,
+    "distance_threshold": 0.35,
+    "model": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "file_manifest": {
+        "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+        "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+        "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+        "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+        "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+        "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+      },
+      "device": "cpu",
+      "dtype": "float32",
+      "max_input_tokens": 512,
+      "catalog": {
+        "dimension": 384,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "pooling": "mean",
+        "limit": 512,
+        "license": "MIT",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      "normalization": "l2",
+      "algorithm": "exact-cosine-v1"
+    }
+  },
+  "base": [
+    {
+      "document_id": "hr-handbook",
+      "start": 0,
+      "end": 191,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 191,
+      "end": 376,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 376,
+      "end": 563,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 563,
+      "end": 735,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 735,
+      "end": 851,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 851,
+      "end": 961,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 961,
+      "end": 1073,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 1073,
+      "end": 1210,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 1210,
+      "end": 1349,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 1349,
+      "end": 1509,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 1509,
+      "end": 1681,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 1681,
+      "end": 1830,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 1830,
+      "end": 2016,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 2016,
+      "end": 2132,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 2132,
+      "end": 2291,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 2291,
+      "end": 2460,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 2460,
+      "end": 2586,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 2586,
+      "end": 2709,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 2709,
+      "end": 2879,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 2879,
+      "end": 3011,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 3011,
+      "end": 3125,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 3125,
+      "end": 3265,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 3265,
+      "end": 3428,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 3428,
+      "end": 3595,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 3595,
+      "end": 3741,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 3741,
+      "end": 3919,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 3919,
+      "end": 4111,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 4111,
+      "end": 4280,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 4280,
+      "end": 4462,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 4462,
+      "end": 4639,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 4639,
+      "end": 4757,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 4757,
+      "end": 4851,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 4851,
+      "end": 5034,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 5034,
+      "end": 5219,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 5219,
+      "end": 5348,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 5348,
+      "end": 5512,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 5512,
+      "end": 5615,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 5615,
+      "end": 5784,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 5784,
+      "end": 5928,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 5928,
+      "end": 6071,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 6071,
+      "end": 6254,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 6254,
+      "end": 6445,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 6445,
+      "end": 6571,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 6571,
+      "end": 6742,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 6742,
+      "end": 6910,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 6910,
+      "end": 7055,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 7055,
+      "end": 7240,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 7240,
+      "end": 7432,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 7432,
+      "end": 7607,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 7607,
+      "end": 7770,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 7770,
+      "end": 7951,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 7951,
+      "end": 8140,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 8140,
+      "end": 8258,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 8258,
+      "end": 8422,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 8422,
+      "end": 8598,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 8598,
+      "end": 8772,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 8772,
+      "end": 8932,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 8932,
+      "end": 9123,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 9123,
+      "end": 9246,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 9246,
+      "end": 9376,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 9376,
+      "end": 9505,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 9505,
+      "end": 9677,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 9677,
+      "end": 9853,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 9853,
+      "end": 10028,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 10028,
+      "end": 10200,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 10200,
+      "end": 10378,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 10378,
+      "end": 10535,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 10535,
+      "end": 10694,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 10694,
+      "end": 10847,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 10847,
+      "end": 10976,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 10976,
+      "end": 11130,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 11130,
+      "end": 11242,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 11242,
+      "end": 11423,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 11423,
+      "end": 11567,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 11567,
+      "end": 11750,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 11750,
+      "end": 11885,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 11885,
+      "end": 12037,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 12037,
+      "end": 12226,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 12226,
+      "end": 12384,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 12384,
+      "end": 12544,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 12544,
+      "end": 12714,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 12714,
+      "end": 12874,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 12874,
+      "end": 12987,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 12987,
+      "end": 13118,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 13118,
+      "end": 13260,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 13260,
+      "end": 13397,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 13397,
+      "end": 13557,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 13557,
+      "end": 13739,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 13739,
+      "end": 13886,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 13886,
+      "end": 14046,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 14046,
+      "end": 14218,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 14218,
+      "end": 14338,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 14338,
+      "end": 14523,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 14523,
+      "end": 14674,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 14674,
+      "end": 14839,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 14839,
+      "end": 15010,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 15010,
+      "end": 15119,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 15119,
+      "end": 15222,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 15222,
+      "end": 15382,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 15382,
+      "end": 15547,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 15547,
+      "end": 15730,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 15730,
+      "end": 15916,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 15916,
+      "end": 16066,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 16066,
+      "end": 16227,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 16227,
+      "end": 16331,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 16331,
+      "end": 16481,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 16481,
+      "end": 16668,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 16668,
+      "end": 16855,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 16855,
+      "end": 17044,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 17044,
+      "end": 17183,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 17183,
+      "end": 17327,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 17327,
+      "end": 17481,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 17481,
+      "end": 17627,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 17627,
+      "end": 17804,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 17804,
+      "end": 17923,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 17923,
+      "end": 18062,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 18062,
+      "end": 18216,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 18216,
+      "end": 18353,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 18353,
+      "end": 18510,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 18510,
+      "end": 18702,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 18702,
+      "end": 18880,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 18880,
+      "end": 19040,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 19040,
+      "end": 19180,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 19180,
+      "end": 19359,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 19359,
+      "end": 19530,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 19530,
+      "end": 19717,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 19717,
+      "end": 19883,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 19883,
+      "end": 20062,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 20062,
+      "end": 20212,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 20212,
+      "end": 20365,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 20365,
+      "end": 20512,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 20512,
+      "end": 20691,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 20691,
+      "end": 20843,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 20843,
+      "end": 21005,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 21005,
+      "end": 21195,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 21195,
+      "end": 21371,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 21371,
+      "end": 21511,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 21511,
+      "end": 21668,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 21668,
+      "end": 21835,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 21835,
+      "end": 21969,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 21969,
+      "end": 22139,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 22139,
+      "end": 22296,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 22296,
+      "end": 22443,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 22443,
+      "end": 22581,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 22581,
+      "end": 22715,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 22715,
+      "end": 22874,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 22874,
+      "end": 23037,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 23037,
+      "end": 23191,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 23191,
+      "end": 23369,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 23369,
+      "end": 23528,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 23528,
+      "end": 23686,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 23686,
+      "end": 23827,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 23827,
+      "end": 24002,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 24002,
+      "end": 24156,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 24156,
+      "end": 24284,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 24284,
+      "end": 24448,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 24448,
+      "end": 24622,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 24622,
+      "end": 24786,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 24786,
+      "end": 24959,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 24959,
+      "end": 25126,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 25126,
+      "end": 25300,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 25300,
+      "end": 25429,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 25429,
+      "end": 25539,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 25539,
+      "end": 25669,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 25669,
+      "end": 25799,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 25799,
+      "end": 25987,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 25987,
+      "end": 26124,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 26124,
+      "end": 26284,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 26284,
+      "end": 26439,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 26439,
+      "end": 26612,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 26612,
+      "end": 26782,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 26782,
+      "end": 26933,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 26933,
+      "end": 27106,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 27106,
+      "end": 27260,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 27260,
+      "end": 27429,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 27429,
+      "end": 27604,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 27604,
+      "end": 27703,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 27703,
+      "end": 27875,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 27875,
+      "end": 28040,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 28040,
+      "end": 28207,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 28207,
+      "end": 28362,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 28362,
+      "end": 28503,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 28503,
+      "end": 28647,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 28647,
+      "end": 28783,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 28783,
+      "end": 28913,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 28913,
+      "end": 29063,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 29063,
+      "end": 29213,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 29213,
+      "end": 29337,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 29337,
+      "end": 29487,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 29487,
+      "end": 29655,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 29655,
+      "end": 29792,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 29792,
+      "end": 29934,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 29934,
+      "end": 30095,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 30095,
+      "end": 30287,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 30287,
+      "end": 30471,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 30471,
+      "end": 30657,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 30657,
+      "end": 30819,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 30819,
+      "end": 30973,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 30973,
+      "end": 31094,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 31094,
+      "end": 31249,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 31249,
+      "end": 31397,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 31397,
+      "end": 31547,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 31547,
+      "end": 31697,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 31697,
+      "end": 31871,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 31871,
+      "end": 32015,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 32015,
+      "end": 32207,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 32207,
+      "end": 32381,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 32381,
+      "end": 32556,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 32556,
+      "end": 32697,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 32697,
+      "end": 32853,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 32853,
+      "end": 32987,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 32987,
+      "end": 33151,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 33151,
+      "end": 33306,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 33306,
+      "end": 33447,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 33447,
+      "end": 33606,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 33606,
+      "end": 33735,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 33735,
+      "end": 33887,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 33887,
+      "end": 34022,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 34022,
+      "end": 34193,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 34193,
+      "end": 34327,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 34327,
+      "end": 34468,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 34468,
+      "end": 34614,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 34614,
+      "end": 34741,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 34741,
+      "end": 34876,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 34876,
+      "end": 34955,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 34955,
+      "end": 35095,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 35095,
+      "end": 35228,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 35228,
+      "end": 35384,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 35384,
+      "end": 35522,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 35522,
+      "end": 35661,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 35661,
+      "end": 35843,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 35843,
+      "end": 35996,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 35996,
+      "end": 36138,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 36138,
+      "end": 36286,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 36286,
+      "end": 36427,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 36427,
+      "end": 36590,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 36590,
+      "end": 36719,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 36719,
+      "end": 36853,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 36853,
+      "end": 36979,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 36979,
+      "end": 37108,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 37108,
+      "end": 37282,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 37282,
+      "end": 37432,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 37432,
+      "end": 37587,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 37587,
+      "end": 37715,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 37715,
+      "end": 37893,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 37893,
+      "end": 38040,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 38040,
+      "end": 38195,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 38195,
+      "end": 38343,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 38343,
+      "end": 38479,
+      "reason": "maximum"
+    },
+    {
+      "document_id": "hr-handbook",
+      "start": 38479,
+      "end": 38582,
+      "reason": "document_end"
+    }
+  ],
+  "details": {
+    "distances": [
+      {
+        "unit_id": "u-3034fe6db8a9bba9bff7361c2c71e28fe11e4fb696a968477861fc60fddc3c3b",
+        "distance": 0.10521495009734039,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e8e4d2fdf18f9a7ffa89d73fc6976fb719cb89dd4c0f2af1fff872069ff28cb1",
+        "distance": 0.1235142605089492,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-54460665fc7610b345d8119869ff0f5b757bb36c0996b2040347ac0d6ce6f778",
+        "distance": 0.14097324120327526,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-95f25315c9ca4c0e1834090a9dcca1fc62b17007574c920575e5f7f0bc4b2034",
+        "distance": 0.08381724800972556,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-07367fe03766823831bb3fc9a5a252766dc05052021358372bccbbfd5ac8f745",
+        "distance": 0.08372561454529048,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-0173056d375b44d8d51a149fb1b82212d745dfb296245a278cd1e2ea0f6b4a3c",
+        "distance": 0.0853198248815965,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-075220dbbb35185e40eb22453a2dba3137e830f8916baa4e50d78c7ae9f7361c",
+        "distance": 0.07213005385339044,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-4649199bbddccae47af5050f6a1dc8b9aa4a610a98193811ddc77516b2a5627a",
+        "distance": 0.08386668887952275,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ec82765a2b92195dfb1e42b806d9eab85792165b0a4b894f7057d9272ec3424d",
+        "distance": 0.10006378216657796,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d05f81a3de99a5c8e8856c397be4ba710975fa715243199d369720a34c47c3cd",
+        "distance": 0.14420068652297147,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a478b1747261139dbed90328f41c09999d796ddc1866ababe09257177cc6c1de",
+        "distance": 0.09078668627491537,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a8978d2e26dcc6c854d709db16509cbb12b8e1930869db67b7980555dbe2d971",
+        "distance": 0.12391074942410041,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-0e113c802d88e9e6ceabd30c7629f89b4ace213eaf35e4e9b4f8a8d40f487fda",
+        "distance": 0.191621959396575,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-89525cdf9b6797f3ba988dbc64f51c4a2333eed20c22bd0b8a97cbf8196fa724",
+        "distance": 0.1483604634983804,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2b10c7840c82ede3f69ebde9b3ac6e211910ab6c980475acb859827488b6714b",
+        "distance": 0.08846752446923489,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b2962f4e2f53568aaebf302c62abece8afde3beed8e48eac005c5222c8141dd8",
+        "distance": 0.12772190531170746,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-70b2a8e90650841e2257d058449ee89e62611749bf0eec64cadc852a078b58ce",
+        "distance": 0.11255936255082799,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-531d2b1c7148ff59734baac23e6b6b5167439cb1d80c0a284836a45e2c40efea",
+        "distance": 0.1520205944989963,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a24fcffbeb7fa5dfbe2a838c1207c6557d54e9b54c5e719ddc39db276d750604",
+        "distance": 0.1390746614039593,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-063e2c0de4c793b8706042f82f79cff4459fe51cbe072921802a98132ddf8962",
+        "distance": 0.08363898948764692,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-7c5c5ef4eca0ba494eb09900588f21889cefc9638fcf95c09d0dd19ec80c87a3",
+        "distance": 0.11506186227750959,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b49f37305747450e42e39a8a1265dbd83e310c0d828c155e22d741b8a196b3c9",
+        "distance": 0.13436717275861287,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-30f785a5df07d5aa0520040cce416ece7abbfdb7189f604d154dbbe30b406f5f",
+        "distance": 0.22060388701431988,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6fe57409199b1356cb4a432bb71170df137897ad0143a440792f3f13540adfd7",
+        "distance": 0.21439503312574704,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-eba35f4fc0acb21f9647569ae11852ede92213d3a7aee8586cfca5c496b774dc",
+        "distance": 0.1256216543231804,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8c30d98b6843c8b4a09e484f3962c5ecb2c326fc80b0f484fc93e98d3de560e2",
+        "distance": 0.09024666268344583,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-bf58fe28b8f47d5c8b4450e9be7313bb2cba56fb7f6bb4347bc9dd41c2ff1f81",
+        "distance": 0.120870768447496,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-4f0895c002a0dec8f8ae1ec5de5b07b2ac08d1db711af4ed260929614e989b04",
+        "distance": 0.14246985820980496,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-84e186c58591768e9f2c299e14b8f693caa1c4e6c4eeda963d852c5df101a23d",
+        "distance": 0.13880662475842598,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-93a9bff07c4da377f43e2ee16122585b2db38b84f3b494094b897e6f22e7b65e",
+        "distance": 0.09119226536240876,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-cc0aa0232936c66783270de56e0fc7577e4aeee679526f5ce3b3341a85a5cbb3",
+        "distance": 0.12129120916633263,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-976504f437f960b0493a52e3063fa9bfa059431126086d078e8907e8c8195ffb",
+        "distance": 0.13401901388676996,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-dfed015f0881a58a57275279358ed3a771a0d218e827a98f4818cfcc43b96cf7",
+        "distance": 0.13360010212362738,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-172e5a6aff729a2cfe9453a54c92a352df9bf50cb68c914120adb95caeb5e7c2",
+        "distance": 0.11036620882360715,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a31c899a7555cb6fc955ba3159e3f09afe11f3fe5bd48d401d98c854b9df35b6",
+        "distance": 0.131849550604897,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-b67b46f4bc083152d11cd21ed66b8af28cffd150056a75818c7bd070db3a21b1",
+        "distance": 0.10571988984283542,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-5c02365646ed0c624d7f2824e95486576b5e809aeaa3d9345242d4a4cb26cf5f",
+        "distance": 0.11214644471361546,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2f7e7aa6fb8616f71752fefa6d6a56e48c40fb44f6764fcbb2e6381d2a4d182d",
+        "distance": 0.1278064331893849,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-8911ace11e29d6d2e142e36c1a7edd67c86b4682903a2140a81dfadb0e1297e0",
+        "distance": 0.12117180814014561,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ac1ded8f2ddc5a8a7caf458b5b446a38fb27b688d7402fdf0a3d999aa57610ca",
+        "distance": 0.11593071916197939,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-90deb35a064bca4f3cf7dd1beb1b9e4939a1dbc4507e1f91835e5b712b1ad79a",
+        "distance": 0.1413235694408278,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-d19e64dfe448dc4d2a2bf19dd0147d678d48c3f4b6a56abed16a9824e27cd746",
+        "distance": 0.09902351783436736,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c8fa7243390581ee0d9f0372bbe38bef32631cb0d158b478d94d35a4cdf737a9",
+        "distance": 0.14302452477281236,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-1b1fe523e190b2d05db663c9896f7940914b744a672b79b82eaca96808171790",
+        "distance": 0.12345456009501576,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-67aae6d4a6b9a9997a5afdba2155e757fb23139bde0420f2cee53f66b086dfdc",
+        "distance": 0.16107460865689993,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-fd7ee994a702e0d3978943a6bc5deaae03a8291465dfc025a7e38d2de66ca978",
+        "distance": 0.10621985128603406,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-bd891d5ee840b2a711ccc2924093633379b2d941969e60e43b7debf635776a6e",
+        "distance": 0.17090258947083126,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a30f31d7e33d26e682c05f922a351422c3547fb10a04144b1f5b7f795d7ec465",
+        "distance": 0.2161022184794349,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9c5beb95aac73a392395d5cdf0f1de77d0885efc892a2cef67c3f5c45c276657",
+        "distance": 0.13952871851968696,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-675180ef2637802521246c1fd30d34ce2746620b3bf7524ac9f6a21b8096dee8",
+        "distance": 0.10179193838372713,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-634fbefaeaf85c6c161ec05bf5606ce4d2b138b61df11ddeabb9b4d4b98f0160",
+        "distance": 0.08950221144658899,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ff6f387bace3350bd3890d8cac1a056f89fc271b2bcacceab653c7e22545f93f",
+        "distance": 0.12853182601496704,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-dd26750ab68ccce0553ee0d892171484617b73ff3fca56603274be71327e518c",
+        "distance": 0.14717530622275088,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-1599b124c3f78c13775f17cfed15ac2a7e55f8f57c94019899b6975e81838d9b",
+        "distance": 0.12125670682316625,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-3ec717d10ac8e4cdae8be935e616a88d6a87d7750e0aeebd34448824b2ecc95e",
+        "distance": 0.12320563473741464,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b280e7f4c93a1025260ce28312e7c0f6fd2022b2691439595d7d247b3ea5f76a",
+        "distance": 0.11870787011965389,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c1c8e4cb30630c49fd3801d7246fcbbe2e7572ffc40147d3b339d2498e46b130",
+        "distance": 0.11741724577433599,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a31840bcf73f9aadd27657607a8884638c1943cdd5f07ba0330f9bc66923f040",
+        "distance": 0.14388982101289582,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-019babb316e150f72dbcacfe2f27717c948f07477f32a0ffc973768af4c3aaee",
+        "distance": 0.08626849363957512,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b9b25352baa069182fe8807a6845a37e843b00ef19b15ec7ec33e74624e00f54",
+        "distance": 0.16187424075867607,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2e02df418c9f7816f97cdc642b949a14a7ba76f87a908cab28a4074591078e75",
+        "distance": 0.12319850522675269,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-51fcdb1a7867b711df104d6670c5185c2549df3cdd822abd6cf22303b9db822f",
+        "distance": 0.11870122069064726,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-79ce8069b6c32db42c47a70b3a6d974106963b62001a17ab85614fdb449a41ed",
+        "distance": 0.1400579559368509,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-1e26e6c7f0ff0d8e6926f366ad29acab91adf97f61c3ac2defdd97f3ade52db1",
+        "distance": 0.12789838494161776,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-efa258c1d59c7ac405e4c905dcbe1f0dbe7cd6a566190c833a7139b0852a9416",
+        "distance": 0.08594149650851435,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-900f2274bb08f3f83b9d63262f36992629813af56e58c6ee21c786eabdb11f5b",
+        "distance": 0.137062850474736,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ece0ba0f7788cd3fc6c7ada2d9b00f90f63f9ddef60f0ef71b53e81be779611f",
+        "distance": 0.12843248592163992,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-cb834ba76074bf169fcf4f74a550d6b9debbd6ceb6bb7ce6a4082d11e7f233d5",
+        "distance": 0.1374417858734368,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2ad91e4e88835073011711fdb6e4c8648d61912e6acfe4cda22598ea44eefec4",
+        "distance": 0.09309451035736183,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9ac1223a37450f045e0b3f991217a1465832398a2cceac2555d0225f880c115d",
+        "distance": 0.1401090996107549,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-acba0eb139ea03b5bb5b1d3f0af214923318d2ff034ee2a4cdd9ef80aceabed2",
+        "distance": 0.08678424704044618,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-942d4bb7ababf7663fec8c8e717e06ce22786841b76aa771cdbefed9abcbc94e",
+        "distance": 0.12870579131294546,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b16a1622a9b661455f253b73474e46a212ba60f359f6f09e37747a534a9b7119",
+        "distance": 0.12614114169624024,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-995a05e0e95b231e16aa9468ba712170d95db8ae42f8f83f064c7e5df0f66cb1",
+        "distance": 0.11579724334489772,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-aba297bc200110418207e2f808d43ac20adb2a33f45c59e429c971eab8dbff40",
+        "distance": 0.10911107021166278,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d91bac3f07cfd89f02993919171639f4fba1eb2be6b9aa7f7c25f870dfbe25ba",
+        "distance": 0.16371593922523497,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-089afd5fe65dd07249d297e34ca0a3102ef2608f725932b04cdccec1557da7cb",
+        "distance": 0.13800904310379458,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e9b655cfbf3989233c2653797378629f0850f2599a78ff0d25da87fa0555aa43",
+        "distance": 0.09622049114748188,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c6ff90d91a07cd0b0dcebc19be6e6019e3f43ab0060d5297be89afa07616193d",
+        "distance": 0.07459978171044424,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-b195e2459e1bb34cb8422b7ad9d2f92d01898eef6a7753d660c1e5366294bc42",
+        "distance": 0.1225185684694261,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2ad6a922a8a312f808b59f16d783ccb81f3c4c07d6f04d88e798f4c31305e48d",
+        "distance": 0.1082785340054202,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-7c6cb8d814f7eeab64b82915df79db6b79379f55d0af26f9e1e86babaa9f1978",
+        "distance": 0.1486164875126108,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b10a58bf955c60cfd0eb0e8933e7107cfb55b6aebcdad8c9ae4f595a36dd5236",
+        "distance": 0.12820596123692762,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-196d984c3799be382648bcd3a7c08b33f885f43d971f14c033c8808bddc125d8",
+        "distance": 0.11111234190038177,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c84f81553c3df0988a0a8543d38e4149525edc99ef7e8e5cd02a5dfd3de0c7ed",
+        "distance": 0.11048643569661432,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-27f80e8533a9287841e6ad5ce1503540b03c927c730bc15aff1d3055127be845",
+        "distance": 0.11877839508413168,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-0163ca0e25b01555b365e0b9fcecfa8168d75eb50db81504b34b028e41e3617e",
+        "distance": 0.1179028495769856,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6f481a029cdde7a290a352b0b2f71ae4d1565e064dcec19abe98a38f840dd930",
+        "distance": 0.19943224350701771,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2a7ff6751eac156c14f0247de4736d92e72c94d27fe968cdc3d6db1670260944",
+        "distance": 0.13276402431937007,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6029e326586d2e60401c3bd5ec0a90fc08cff2cbdfc07f3bfab9475ee4a5a1d2",
+        "distance": 0.11065927231378292,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-81b2f70728eae61febd6ed3467c47b8b30dd4602e88e611a290e6306bbce9b44",
+        "distance": 0.11110632620996863,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-463aa7b0f5bee55eca410ecce81f7b51f21f7fd1803e83e3f56e2123033d7bfb",
+        "distance": 0.1375625000372952,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-efef7f8c3165f2d427238a3ec78f3d23462dcf7533e7bb568d3f79441b216139",
+        "distance": 0.1271462777126331,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-50842fd1f93a6ffa130cce8fc7ab8443e583632cd01b2872233c026f62d18d94",
+        "distance": 0.12380950883886144,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4c405c790c968b178526e98f0158da5f9a47266c78aff57ef930fee74476eb71",
+        "distance": 0.15726886129293283,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b22f39c714880feb985641c7e94a3f38093a569777902b3fe25ee4f433484b8a",
+        "distance": 0.16018046065285618,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-a63970f2dcfa1479736218e465ce1a08776ccea7d319f3e29a749bba6a37b32d",
+        "distance": 0.154511997029665,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-cfadbed3e07a23ea6abf66eb9aa8ba0d954f4bba4e603e185a1734876f233367",
+        "distance": 0.13153248826096264,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-3141f4797af11f59fe645d7ad674d90478eb44d9453da188b0df36aee0f403a3",
+        "distance": 0.14986641880338925,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-329e72cdf989fb2a0f957f4f20bac4e72acc3bf845d578ed3d64dc8f594bc702",
+        "distance": 0.14464754390644496,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b71d206e21dfc9b7a5633b1ef5666685628d9bd84f55ab875d5699f0b4402c4d",
+        "distance": 0.1561918567188445,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-edb60f6b00c9777bc0db36089a4bc38cec3367f767db8bcb31751b6a08c303d1",
+        "distance": 0.1336254122949203,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2853a5d1de5308ce24f87c02ac7a31d5010de9ae45d8bcaef7de2fc7254cad30",
+        "distance": 0.12065065536066844,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-13ec3cb3fb007d7542e859cb8feb9f96d63cd159946ba5e08eeec3c8957f6067",
+        "distance": 0.12327288947003956,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-3a3b1864b0ee80a23faee6acbeb3d8ae7d6440e0b468f0575694fef0f9904178",
+        "distance": 0.08349863573969585,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-faab9b5b258c0bc45fbef472ee6dd096f5b65dc086bd93223bab2519e7d92ff2",
+        "distance": 0.11320587452331887,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6240afe63a115e2cbaff89daff18c2a09bf65d13ad208b26eb9b9d14d8411a7e",
+        "distance": 0.11289780957347484,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f91365fc2bdef8c30b43839329740dc8bc0ead3e22c8eb0441df0ef7fbd4a13c",
+        "distance": 0.1465186259977913,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-11389793fa98496f0f34837347a377d08fd0ff3a160c4a8fdafc067cc586dad6",
+        "distance": 0.14227191664415273,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-0bd4e0828e14af8a7abeeada48e5cda0e477f7fbd8c683a182fbd1f2be4db120",
+        "distance": 0.1122067299572751,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9dc1fcc16f38bf102ebb0ab2f35861e46daee43fe138cfd1394f37617eb42f08",
+        "distance": 0.1497793542341881,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6fe207056b49e77e9116a69891022aac1cc4da457b08ffc73ad71063dd960a52",
+        "distance": 0.11694711681300696,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-698b483b9411045f75a8e40358ebc23e97a7c20b6da1438baf9d99b06a09cc47",
+        "distance": 0.12554416350169129,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a71aa0f8844864aa25198a55d073474a81e3a5ca5eb6849813a64e7ae52fc7ec",
+        "distance": 0.07660160928826798,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d489171bb956e28029dff39a27d0e81ea947a0cf605a8951045ec3d71081c354",
+        "distance": 0.1317492963254433,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-38c6c4eb62e3c6cb6328c2278953d05264f4b6da7432dcb3f715ca98652c7f69",
+        "distance": 0.11309065393415618,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-cf72fd22304de669431ef09b563b7dfa1d727877619a205f14d31ee063d1ab6d",
+        "distance": 0.13043626571359312,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-8fc998b83dd2ff2f05672f620a3008f0e626572db902af815f67623f61da94b5",
+        "distance": 0.11012448667353436,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-38183f0b90e2a8a067aa5733a99bc847c9b6eae1a94684518074728cd97e2d05",
+        "distance": 0.11315418934708343,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-7f0013f83764f377b0d416dc86d635976a3564afbed78918e27f7208d95970bf",
+        "distance": 0.14205936927830487,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a2bcce28c26664c35bd519ecd49061162fa231a4b53d7874a68b239988bb6cc4",
+        "distance": 0.14593035697391887,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-a6a2691179716aa43692b45cee7d6b0a0d04209d8c42e4566be573d92b582177",
+        "distance": 0.12048049546451522,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d6d8a846d145d464a7c0390fbc7c3d90f4e1f22760964e3ae8cc085ba9d49a22",
+        "distance": 0.1002489678747861,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-bba621f8c28cf9135d5d58644c2da1a384c36ed20a490ac1d8ac9a55e9e67db7",
+        "distance": 0.13104694565051533,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c9675b3bf9cbbd863d76845c1921be87dfc8295c5da666bc048454970a077e3f",
+        "distance": 0.11297780632826993,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-93aef6eeedf4c1a03c0a441aa3e0904321ae66497d3d229a4987d3387e5e58e8",
+        "distance": 0.1341382434855346,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b3cda6f6398f52c196919125f1cb1be1978fffa18e203b898932c98b4dba8359",
+        "distance": 0.11276744022350282,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f4f225809b11864f6df6ba82196355c083f9c2d8168cf6f34bf4bbe0f250be67",
+        "distance": 0.131787417330826,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c18bebe7e4d9dc113986fb5b28c7e52777609984e6b58788b92b755c35f5dfc3",
+        "distance": 0.15437573766730717,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2e94217b63bce9ac61ad6673d8cc71f3a41571a1248672e754de4c26da45d7c9",
+        "distance": 0.13214113997161936,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-bd276dc2a2b7ccb312c280f75e10b11259463cd47ed94b7e78a4edb59276e965",
+        "distance": 0.132975335620658,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ed47e8e5d0122d2a44ec55da42558e8a36d1965e74b2be27fd35186c7256191e",
+        "distance": 0.1561541000609884,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-18eaa11a96bf51dd200625e9d73d386e77590cce0498b175dd4965a39d07e205",
+        "distance": 0.08453029641242804,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e6fc6ce8741b3622906c6c85fec356eb5c95bbadca917ed07c53c084b50497f8",
+        "distance": 0.18792240988199072,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-00119718158eaace6c110b319ab7fd64aba5f9818a4c1514916cfd63b9677193",
+        "distance": 0.1615147855007223,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-8567949e11c5761a9fada811b363d06251a584d9534531f4f8eb0bb3cd341174",
+        "distance": 0.11202548955064306,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-7023229daf6a57a2fa91bf6a586e64a4d3c711e4b8e57b1acedef1b1441c4135",
+        "distance": 0.12116919833339179,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ba2d1d6f3c57cf32a6989512d5ea74d629bc4a53eb2238184283b6e5b33186db",
+        "distance": 0.11825840707230884,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8b5a8b374dbe689814535da643b2dfd2c22a8dff2e85d398e25973868ab50159",
+        "distance": 0.1296184530326001,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e8525a14b30d1269b5b301a1c5fa19f188a104c2a3480008e830cecf04bdda12",
+        "distance": 0.14743832746611663,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-383685f71780455ee522096e091d4f86b0a793aa92808bc43ebd395bb8f0d50b",
+        "distance": 0.15489820677723776,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-668b162b4cb0ad4f4e69fe6a1af8fdfdf6d76d244f3bfa515c29e7fc44861b0b",
+        "distance": 0.10629709290313027,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-dffd45271eaa5563ccf0a22adf80974d0f7f3ba7f50566080bdb57e922799270",
+        "distance": 0.1253242172931779,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-eb5bf9ff54c11d59be2c56e7fb5672fd060ff04f133146c61f8640095997a52b",
+        "distance": 0.11327759006851468,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-1d5db4d02bf19a0b75269cd9101524ce9827d0b635374d3fae10a672c7d81d7a",
+        "distance": 0.1117317941807584,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ccbe0b8445ae442f9b912017acf08e815674391076b0790359b793955adaef70",
+        "distance": 0.14842307317138181,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-3b03d71978914064b55990b5be33264e160c29f25241025f1164c78436f8c692",
+        "distance": 0.14039272376047363,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-3f9d487b71ddfff582ccda38ffe409a6df6f65371afa9062976268be94ca7a37",
+        "distance": 0.13082604238653617,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f3cba227dd2256d67a9a961bef326161321f610edca56066210ca368af4cfec4",
+        "distance": 0.15191233290716677,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-887560ab795cda18309380b56131b5b0aed2338054d38f9f70de3410900b00f5",
+        "distance": 0.16174175792973244,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-45c168f6cea9016a1a2c4014bd7f3179f171813e831b280bd00d17cfffbecb41",
+        "distance": 0.09581405919744634,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b01719cc21f2657cb2100a1a314a88fb6e71df3f4f651f0213d0af5567aab3bb",
+        "distance": 0.17415222576860956,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-5b236f22c59009a8d8f2bf4775ded7da71cea4c543bc356c5b4d9a25389b227a",
+        "distance": 0.12950735500833777,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c7065981841bcb6b5d405d2cb9c90fc1e6bf7df620d037c5dbddce83a80fb697",
+        "distance": 0.13475436445066558,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c4d2d335c9dd95f37145c5558a410af50cd9c4f35edfda8f8919a889bc6cb47c",
+        "distance": 0.12557804135525674,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f63f3e76667ff81a0a8d2231aca4f43191a869391e0259be74a11161949f3e61",
+        "distance": 0.11334143992561996,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-02b121c986c8a44f260a169369de8eb9b9cc4ff8c8670a71f044b0637ce270c0",
+        "distance": 0.11828610469824496,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-4431300ff8990298b4e97f62d7c240187523ef647a4931e6f373280f5671e2be",
+        "distance": 0.10957110338909115,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b9406c8c5d361a4ae7947d6376c9642afa270b714d2917d208785f1ba325ac03",
+        "distance": 0.10770470942679389,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-36889d10a5e3ed2a37b0cc2a1c690626667058df555d849fc646136a3a17639a",
+        "distance": 0.12425898940014979,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-b3d4c9165b5232c326ede3ef2073e2f6e92e73ab0636730511614e1bf15b8887",
+        "distance": 0.13508021474786902,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4fd1a6adc464195d5e9d8ecd6f60cbd9befdf3e27a90eb5e0fe339a747c40a37",
+        "distance": 0.0950487544512646,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8da3b15cea22cb6ba649c12c75f85058355bd40cb4cda3e6154130011e3833a3",
+        "distance": 0.1209502169454395,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-869eace5448e3ac4005f7a6fd75bd734f8b692f9ede03c68e69105023b2f6097",
+        "distance": 0.12418013307038178,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-7c8d847beab499c739bebed2c265da688b1e273f3a1487ca0595311755076d00",
+        "distance": 0.12138301808586238,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a4e3b484cfaab5d6b73fcedeae7f45a6b883da871537a8641488d72ef6523ce9",
+        "distance": 0.0689411850575452,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c1f99c9907931d3fd8206ec4d9797ec2239beafef62ad0bebd007a818c14510d",
+        "distance": 0.11991443931528811,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6b1c6a09ca8a68e64fb8538278ea2fd3e1646a438542c91e54d10c014956b40a",
+        "distance": 0.08057343459881461,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c611410e544a8e4e5b23f5e4ce19f0b362fcdf3720b1b8b81a2ccd694ca7a046",
+        "distance": 0.06979347272699099,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-529b21c4033d1b434caf90525c76c126ee4da6e069404a690f3b8b32273b876e",
+        "distance": 0.10843089121835459,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-236459b3d2a52367c2f2c7a1536e3b00b91704df68fe0d719286f2b50b5145dd",
+        "distance": 0.11520622430036132,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-7387bde46fd4464833f678f48b9ef1182e9cc5731a658548b60c0bb3bf1aae53",
+        "distance": 0.128410002805026,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-48dbc935d4570eb60f41213089580d11395b824ce2f6fe7d9f92f83fc01ee253",
+        "distance": 0.12635078629251761,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9cfa8c9981fd299184394e85d50166c6e1b4c65bb98a4a5021a98e7e08432995",
+        "distance": 0.122556761013626,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c665813121bcf40d7e7af4e460fb90733625a69aed29d888df59f432a4483982",
+        "distance": 0.1434013079260772,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-036d1b2157fbe60bd5a0bccbf202ffc87aaea0713937282672d1e1b1f988ea1a",
+        "distance": 0.17212484484458523,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-9b30983a04e82f3e28ecf70a4c056cc9a2c14d06b35d947d4af52414f2ab61ba",
+        "distance": 0.13589935968869715,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-9c3b05523924d557bfc09392e57ce3413e7cefd0a4ef6fbcf40d988d0b587bbb",
+        "distance": 0.14097385975405985,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-e759959238f6cd136c237dc5db234390dcaef51c5e47337049c4c27afff3fe5b",
+        "distance": 0.13863807849316134,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-45ba8797014a2742e2989069d95662582bd0995ad0e9feed61775431e130e09e",
+        "distance": 0.15554531272365524,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-5484cb8843e16f9831e111a819b38cabb953ea194e68644ca7e7cb66e1579a6b",
+        "distance": 0.10724209872018187,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-0303592888a3fc3ed1968c8cb832a1df4c0154aa82dc3e3c0d600c8cefa49746",
+        "distance": 0.1296922732439194,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-215afd8494d1ea30e011a2784e1d9af179478cde0f870b08367f2e323d83b3ac",
+        "distance": 0.11372500633628868,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-5e2d239289e35fbdcdc62eaab245ae3875e613cf22ada667f173b8a34b145e42",
+        "distance": 0.1071037059227049,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f410e944b95050f5acf9fd0355802464c691e896d877ad131c8d02ba1a600085",
+        "distance": 0.17957138875209733,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f72f99314804d60cb7dd216f7dead9374c0962b6cfc914a7eaab0c8d816eb7c4",
+        "distance": 0.10229873620675245,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-fae8b573cb86f7062d6bb10029996c97a69d40b58211c2d1f5508274cc1d24c6",
+        "distance": 0.16288545748474015,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-0f227d102f2f489e32849e959c8bf83c04aa1aed84fc8c7b172a6f675872abf6",
+        "distance": 0.1106916654643949,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-743ce8b10a881fff5e8c14adcd6afd36147fcca8c816ef315d8f919d7eaf5a04",
+        "distance": 0.1863866926162343,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-41dd1b9885cbc6ad1cf8aed79c9532d8ce6f0fdb62a3ebe67337c6de6276e862",
+        "distance": 0.12863067422063368,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-120e22bb05c13a2e059872eb916d4bd41430193948f395cea461557e30263662",
+        "distance": 0.15599607527828696,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9d410a0f331215b42771bebfb70dbb9552ee4028f5df830d3dad0c687cce2312",
+        "distance": 0.10671498315649652,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-652efb08537db1973bfc73b5dc1c5793196f48b415e2874e7f7778236a24c35e",
+        "distance": 0.16913455744931483,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-a5abf53fc6c64407bf035bccc12ea05b57223ac4b88c3ea36ee978d2bad312ec",
+        "distance": 0.1241426796133851,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d5f374a42bc3c8b1d3527b643f9aa1f56674fc1668c93a6d4c6517bb29551f03",
+        "distance": 0.09780055379440711,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-172fc68fca55c5ad26fce6166ed8419c332b30873412b0e21d6a4e05c51698ef",
+        "distance": 0.10943986570155217,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c3b158f20887ee4509fe8be51a475f3ea97946c76bbe44bab4ec7e9f6aea7d12",
+        "distance": 0.12498691339733348,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-7f7f94c129ef3904c49616b8d6aef0f3b05ef945a80a283ea0bb29924995253c",
+        "distance": 0.1430367085202,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-65f0e25634e72e81f0290f532a869211757f4ef371b78b50f34186680d2f9e94",
+        "distance": 0.134653937906967,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c1ff405c2ec7a920054de51a33367f8d6c3237834d7ce0e7f4f94711f4a5ef80",
+        "distance": 0.1353127732796776,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-af0b00a0586f2f03982f725be556b66eea2aed4c86e506c225a589f6aa4d528a",
+        "distance": 0.1485760932730138,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ad9cc6879ea6b8397bc708da032f018b3a9bb0a79dd1e7544c0dbecbec2d2577",
+        "distance": 0.10445583060505259,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-01121de422c60afa60bc6562f340fa352e8ff7d962a004d36e33494c14900e85",
+        "distance": 0.1497156799705126,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8be3a36606999f9ac205d8332616fc2ba0d4f6d7d07bfe77e6f14e70feea4e2f",
+        "distance": 0.08699768238481198,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e242b25df29022aeef36f375f905e4636d94c5d4c2f5e5a32b1ea062a6cb0646",
+        "distance": 0.1163276832583382,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-6db7280ee71475c81e0f56b4c7891a41c6a893e839b16e26ce4e2d2ee49d6613",
+        "distance": 0.14141073359047218,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-18bd080a809afcd9627d11534169296a51d7af3b503c8303a54ad58297cf49f1",
+        "distance": 0.12057409262064167,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-5f8dba5faabac209e534f9515f25c4a85336bcaf4d6f11556796aa046d3aa027",
+        "distance": 0.13036658886140673,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-aee94c52ebb8ddbfbfee02a39ae63ada22da805f2623dd7f4bb1528526a2877d",
+        "distance": 0.10572516827329914,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a7967eef9667791e5ce1f170f9333a1ac20f0b7060a0dfced4f8cac6dee05789",
+        "distance": 0.11694009822334916,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ab3d7a0fd262c9e0d23faeb593375a8190f704d6cc26737b09772d5c8a463f57",
+        "distance": 0.096991118733594,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-335ba7b964cea3cd9f59596f51c9d89618cbb21ccf8316587d49a8f2b7dd50a7",
+        "distance": 0.18328459891354243,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2c96fea3d6f0ae189942d380bac503efea26f008ec5633aaf29080447b50e44e",
+        "distance": 0.12783418919336087,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-970014f57d9db12065a6c0721a3cf585ce004672f7633f1c5bcaf13b479b4852",
+        "distance": 0.10836141466561966,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ae82bba7e0e9965d55d28a22e336f3121bfd7278403b714602632a717333267f",
+        "distance": 0.1715007722712123,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-9dc0633f3e35dc4febfbbaa1c441d27ad682d53db7454cbb05c112b801807e99",
+        "distance": 0.10823574535052105,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-cbfaca60636655dcd33b2dad2c7e4f3759424978dc36aa54f7dff8cdb725f6a9",
+        "distance": 0.0717774593534859,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-dcce6de2a7e5f844c0f3368cb5baf8bd3c5644ff168e386c2d5c0d7b708fb988",
+        "distance": 0.06693654009271588,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-91bbfdb989a16c2b7c1b9dae57c6547f51ff2ec8b4b240705edc1679e0d9d414",
+        "distance": 0.1351826135334162,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-1c43ba14a0fe5b33a99d8664768cb829a5196a9a2408c8a65f1df77fc0fcc578",
+        "distance": 0.10075257269112026,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-3d833bdb0275a0ee27cd0ec2a1585838a90f2b7fc3622f56c6cc2bf0de0313ab",
+        "distance": 0.1170607845509477,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2ed7c0eaa570daa69688a61962e45a76ce663e888721056f645ef11529cbd432",
+        "distance": 0.10980787509744783,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-421e1ef3f72cb9f660dd423357ba19a165f086d942276643e33a6b1565b2c7da",
+        "distance": 0.07197968407811428,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-6897ae79c95c2043c57380d01b2916cdfe4d6130a27f15775f1d8748eff29829",
+        "distance": 0.10342582231545228,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-88517def7b92dc1d39920ed60e6c452b1b54de1aa500354ffd14634aa82f7852",
+        "distance": 0.13682736398355966,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-bcd836a627f5f2db481507e50184728f43e93a631aec7e244867c75efb7f6f11",
+        "distance": 0.13199146284406382,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c07ea58ed189a1ae4deb23f65713d2c46c276fefc2ca7d6edba29e8a415bb87b",
+        "distance": 0.12326262536803945,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ccecc741465ca65c2dd68c338c8b6cd77c2824f673259ae42bd473f337319276",
+        "distance": 0.10676581474393343,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-5f85efe901f575b403f01445a13e276384b8db445e84abc9d4379a883ee411e4",
+        "distance": 0.10437476603045459,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b5f0c03ac8466119f13ef54ea81f348da304c9b649636d269a9fa64b90b788d7",
+        "distance": 0.12166914870739642,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8225da3a41f81f5080b41273e8d6f5636d99697a0a079ebbeec2da7d623ee97c",
+        "distance": 0.10427600880156296,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c3fba3503521f1e64555e92b094ed1cd8caa8f56e56fc43e966b133c7e745395",
+        "distance": 0.11845811964646058,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-136b57cd37442816ea35d5a7016b44ce1f5fbef08a919a21784c41e3dfc39d72",
+        "distance": 0.11993360150022359,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-046b3d0d29bb51e93bef8fd58c19ec585fd547df7d513aa6a4f2e40f33230e33",
+        "distance": 0.11484998358943921,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a2a49b885e6035f54d512b3cd4b6d1c6db916c0413716c259443013acdee95ed",
+        "distance": 0.09959716436151889,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-3939c2a82e72e9dbb0d8919e105227b7bcdd5a01e8c0e797c858bbc24df321ed",
+        "distance": 0.09960495666818447,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6580d5f1f9abda727255fa40e12de20eb979cea4804432566465499c5657731c",
+        "distance": 0.13272228208727144,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-eb34fe27a58615ecf00b6ccd5e626efe18e6389fcac66694cf7bdcdd884d4f7d",
+        "distance": 0.14817716067596876,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-350c392b7c144c50c280f9d74d4d9959878ee90b3cff1754b99060d22a72631a",
+        "distance": 0.13909101112404354,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-0d43f59861b4b9995f35de8b0004987e26ff987ec5c4c52492a883c4f304b941",
+        "distance": 0.11584041485679175,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ec7991720ec05811ab5046d1555add680b2b69e7ee0639c9d45158d80c9419e5",
+        "distance": 0.15426381731516525,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-e0ed44fc21696f7e3dd2b65fc75e540e2dd7fa17034c3a4cddd6a8a4cb245b04",
+        "distance": 0.15038679064443372,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c534e4ce196f694b9dae1d1651fc10fd171ace531f8862398b7c2d29a7a20a8e",
+        "distance": 0.14080645762939492,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-56c729a7a98d85a346991678b545510c73d6093ff5c93350b96361188c2034c1",
+        "distance": 0.11581641457118053,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-0256dafda1e02c9e3d98dc54c8e006d327c168f78c9904dec620e6fa90c75f6c",
+        "distance": 0.1626689977879311,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f8a4d8ed096c79679871463c0308f0f6de3ad3e4a739ab3c5d143c2c5106477b",
+        "distance": 0.12648102212663836,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9a43444e1f48c0d139d193752f04e14407432ebfe20303ee7d2c69932dbdac41",
+        "distance": 0.15281761043933817,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-36ff96b22b3206e9eb0f5bd993781233e594b3607e95a1139f6c474dea6a9493",
+        "distance": 0.11429317828392349,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-d8ffe7a8f823dfba9f1180f5742062cbfed50b169e23985599feaacc62367a4e",
+        "distance": 0.11825071096530271,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2fdcf273d0c496bd62d946c87c50ffae00d71052ec532b494b3009c6a70efb51",
+        "distance": 0.11588003585021445,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e263583783d5b08ccda0cb108dd9ed820f770a7f97cdb3bcfe32adae3fa2623e",
+        "distance": 0.10920377475862642,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-59df52fac7017e5cb0d5a40937d5273d584b3b718e502533843d7ff709549462",
+        "distance": 0.21789424898565746,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b5638ab7697b681bf6f4e00ee690f916c4a984f526890f20d924ee72acf30077",
+        "distance": 0.21991428129706658,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-802fa7218bf06335414dd49efb8e7b2c92f69452a84645aa94a203a19d6b550a",
+        "distance": 0.11467853446089982,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-1c5bdf786e4bc61db5f26925aaeacf8b5af9a81567890cb0f6b88ac384e19905",
+        "distance": 0.1061021200533836,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f629f7d15a4a8011d25b1d06dbddc2dcc55ac42e9ef9da45461f34551364247b",
+        "distance": 0.12728096021420665,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ba26c84239f40372d467d51505e83d2cd657b9149514b201ac553494891f91c7",
+        "distance": 0.13918622167424566,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-5c6177557f75b38a33107eface44cd55e8ebfdf94523512847d045aa95dc6485",
+        "distance": 0.12512314239315858,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ad17dbe2a90699a83b3e930254bc460c5f929f90067b13e1a0a499d647a96f6e",
+        "distance": 0.14997811302695996,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4cdb99b0eafbfbd5c47b58e2e5a2c9db4359cb8c8c471a246c1d8c5017a8d7cd",
+        "distance": 0.10563933840418283,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8fc510c164ff767e8792d76e972571a99178bb514b2aab12d184117e9f9b27fa",
+        "distance": 0.09720001812019097,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-0a1eb93e3652293462d0f987b3ac452d621bb9690023e728050d01663974ebfe",
+        "distance": 0.13903767716814808,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f8c587a2adf01bcb51fba3a0973028aa88861a8a4078ca6e9d5bd17744fd9cda",
+        "distance": 0.16316027917753306,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2adefd3c0c2950b5d74b0e6d12c969e1d672fa6a39afef5944d03b8feeb69161",
+        "distance": 0.10828263779357905,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-b8b303f77a836ece3b5ab53829bcfbe23843134b6d25aa685bb1ad0f777f2213",
+        "distance": 0.09870786950889443,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-560eed9357efce8f08c8121ad20fc9d15c491a812f190d6fe46ddf8c57c4ee6f",
+        "distance": 0.12774732975075054,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-86a1a47d7dec087a682b86f8cd777df253a3ef9749b1cd6890266aacb0fb1666",
+        "distance": 0.10762610877535206,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6eebdb7b49827707fb2f7d7081db981ce4e7e7251d645548f09f7febdd7585d5",
+        "distance": 0.1335571342403391,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-1305314816d9c42bff3b59c0eb6e16d92cc966984de961994ebf4ca510de7a03",
+        "distance": 0.155125587441856,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-068502509ab18c96fc2759b416fffdecdd036b0aeeee1375dfa17cc9da12e704",
+        "distance": 0.0820546087411349,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-7418293741449001a6b60bf2fdbda738fdc725c368a98a3249c528beaade60b6",
+        "distance": 0.08294898511195181,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2b047dc907dbd69ba2984950aa4fa701b8e7b40a6d6c8043a50a134542205738",
+        "distance": 0.11134278873281811,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9346097a66a957eff1d5f117dba4479057cd1c9958be9d643a10dcfce86f713d",
+        "distance": 0.13404651200518158,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b2c6cd0c40d1557f19d1be6397bc402e813eb74037fc612784e8975d3727e43a",
+        "distance": 0.09590840231955466,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-76e6395409de46f78907b75f51ae32c8b5081e301ea4aef05eff26c2c6f701b1",
+        "distance": 0.0920846711308172,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-dc65ef3f8e7d412e6fa3eb280d3d769e162bfa0bd6a393000d97e582498ff462",
+        "distance": 0.1247790151164937,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-082926f1ba86bf0e4e7a460a5b9a31a25e32fb462b19cfeb7d6c7a1ff6802515",
+        "distance": 0.15582542117282705,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-5160fe281ed686931133ca28c9357b438f5e1094928d9adb23f03905ff6f8f75",
+        "distance": 0.14550066931595584,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6ab6c5ea658d87909594599b647d101f6bf0ffef3ff5bf855ee9f989093e22c9",
+        "distance": 0.15931904979279143,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-711a849bd3c8ea5307351696ff40b55e58dd4912fbbd3872af30e3ac1d53c589",
+        "distance": 0.13519176734812743,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2c5fe5b2e6ff92c48abc91438d5e0557893331446cd03cb8bc111b30b10230ec",
+        "distance": 0.11519267401850375,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-914841fa1d857c9455c28f80175554e5adf8e243afb5ccdae7338a40deeca707",
+        "distance": 0.10133773057489981,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c45b58c23ccafa7910a43d594e4e93970f684a4f2c7a1a45b28448435dc62c72",
+        "distance": 0.13394600348226682,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-8bb516516c415a989004fef3e4f6edbfb9a8607d89cd0da3a4f9126902868cc4",
+        "distance": 0.17718933537648096,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ae54f9de5b346a25795b451b007824563e15ad841322c3fb50af0ee99ec20598",
+        "distance": 0.14489926273043574,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9afaedeeed4432939c04300b8f16fa467c16a25b3c8db52d18c5289532ef7e56",
+        "distance": 0.10794414503829064,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-75a5805b887274f9899b881c75a9b048cba498154f7a1f6306ede72d6082aa04",
+        "distance": 0.10686839751434785,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-57cb3e9870f12bde95911edae6aa4d4386eb1442d7b99245776ef3052299a818",
+        "distance": 0.12119454844291588,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-61d8bf7c77438b79a9970b3b09ce887801b1c24127908c561e8b2d460510a990",
+        "distance": 0.18769890636222375,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-bf80b92e74618186c48e59143278032d4ba476493049e0c94a4a7ab68fa99812",
+        "distance": 0.12070068877338846,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-26fc050a560f4af412669df3a0fa5934ba3445ffd61c1a64768ff86987b6250c",
+        "distance": 0.06671171159910605,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e87ad8a25d5fca7c4609abe6894a677b3483ff8bd4dd0195e4ff8ca672ba37e8",
+        "distance": 0.08863198197948963,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-5b7c0947dbee276225db8a9ebf98b98e972c95266475926fa6db7b8b3c89b4a0",
+        "distance": 0.12143232270232385,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-af6d156ae2f6a522a8f158e7e26725120d32d47bfea5d528adc3efa80012ac10",
+        "distance": 0.11986476093792897,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-73b2723221fb9a852b49db45946823450e80032ded6178f63fe63aed55b883b5",
+        "distance": 0.0906148770029166,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-10ebfc7274dad61f3406fc19665593e2aeb126b71f084b3c76a436c69dfed721",
+        "distance": 0.10261556647926551,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c033a6b292d52dc3a748ddf9cda66a6c68ffb06fbcb6eb62ad2ad7905f2c6988",
+        "distance": 0.1066820479603543,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-09c87c5eb301f34a846b958e2880d56dc591085b6038cc5162cafef4c5bd710c",
+        "distance": 0.1756852007080818,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-0391e663710f853223693ed02fe728f81b7b81185f1ae03afe16b35121ca3e6c",
+        "distance": 0.16439256507006994,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-dd79abf5b0b766bba554e564288e78db3bee2b121dbcbe4d86a696d4f43b2ef6",
+        "distance": 0.22063058896534027,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e621ced969839f9da687437991e31ad7ea83b161fc7cd4a1f70ed96593b3e245",
+        "distance": 0.19889256392522958,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-68971c09cc88485e2359c08fbade3b5a43ddfa53f446dfe6649904fc78b0b201",
+        "distance": 0.13039407254951096,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-a678588a5a94be447f65134f7b7e7f5a3aa59d97139f1af058cc89d64b3d13c4",
+        "distance": 0.13275158725423508,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-45cb7007f0cb5fbc5efd691f5b6f2917eff2a2aa5afe42a1c636068976001493",
+        "distance": 0.14853063216107587,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-798aa29133a3b086009030bea76e78ffadaa93256acacfb7f898b2d0fdfbf4ed",
+        "distance": 0.10416239822188433,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-898f6942698f9dcfa955970630bb8db93a135ac315ed6cf8afab105453fdeb85",
+        "distance": 0.14821847065906013,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c7913871c6a77ef6c8a9d8a84fd7cf986460e50c4759249d4c4f2de1625c3415",
+        "distance": 0.11757118016693402,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a10a71fc1c0eeef7aef33f2f1247e48148e3501402e137727ca0a9f78622fbbe",
+        "distance": 0.12524973472929346,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-d7ac06f8c5e0d5cddb2690e564e3e0b1377b70e5ae3ce8ad3a65123d79aee3ee",
+        "distance": 0.12468097551438118,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-3ee5a98fc2dd6783e3cc09126351e6b171893bd7ad511ff4eb3cd98cd8d196d7",
+        "distance": 0.12046860659293201,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d45df13af90dbf9b5323538517de133605d3383e6b8535df9ffe08197d24ce7f",
+        "distance": 0.09831875995110917,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c89b36cd573decc5e2e8548bd3f654d8b1c6ce2e415a7fd7f6e1a50f5b899cc3",
+        "distance": 0.13287292002097129,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4057e1563e521b77844a57d47d6b0960e17c57f88d6a832e827d32cf8bc871d8",
+        "distance": 0.10577236701746928,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-04d12c58ffb08a2cf3eb67942826cd554b411e61a00d812c4681247202728fde",
+        "distance": 0.1292257599444594,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-9720b1e00f5b1177540ed77e527cb656ba43c20cd9e73482671be3f9bc7eaa1d",
+        "distance": 0.14309131212083936,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-3d5ed40af3764b017825e035089c4312e292d6d5eb7759414270aef91c6fb460",
+        "distance": 0.10336345804112823,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-04740ef8220d58a6881d45d74861eb53922224b5ad25b5e029672f148cc3f249",
+        "distance": 0.10829641009966418,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-7131ed9c26acb327acf18e8ddca1cf10ac98e8bfb243bcccc26e8974c9125bdf",
+        "distance": 0.14184704903787115,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6903273cbd3b3956ec5c68dca01bad5f324aff881438e76ac829ed3fcb588689",
+        "distance": 0.11628357015053947,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-312ae1cd31d424c9e4abb4bc521a49ad8bd23c74884d0b441c64253c9ac3f8a6",
+        "distance": 0.08709924353766707,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f1d06c3fe2a089162132811c7d472d20d59529abe5859cf4752cdb8254c190e9",
+        "distance": 0.14920648697420347,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-152f330960fb594423121790e2eee83316f28f6d8440a39c2e58f8476f35d0fd",
+        "distance": 0.1402509217647825,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-075df8119a3112a0ac7a72ed053ef6725820164a4c1352a4205a1b7b089a3e22",
+        "distance": 0.1435599433670196,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c02f8fc79e40717a73de93f942e3ce7fc6d359e258c36c7b705b5979a4ebc604",
+        "distance": 0.12530427049950832,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-daffd6b7589980d7e66eec1e8253adc15458d21d15025ffb5e885b5075048e2e",
+        "distance": 0.09452082700553277,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-bda48594b1600e14a03b365021e9f6f71fe26b2d2ca30524e8ed197ca52b856b",
+        "distance": 0.13024079061791716,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b0cf4a981ee184f7c1c62ec615d2790d1a4e6de1b4b060be945e6eb80a4abd39",
+        "distance": 0.15006016251962018,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6c8eca698f582ddb4f4f7b6d5a55e0731fc4bc03d00e7809a4195b937ffc3005",
+        "distance": 0.1752170542778484,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-19443ed42aee09be2c40ac03bbb840d9739e5a6c3ad50ef2e2d1da2da46ab4c2",
+        "distance": 0.1348304308331696,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-aa35a78dd0fcb5ebe2092e171960fb929cf0a61aa4d7e176868732c13095862e",
+        "distance": 0.14207027282494888,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-baeb5757b158ec08646d9c48775871afedc0fe95577e3daefbfc5047ffbd22ce",
+        "distance": 0.1633609219125055,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e5395567c443c8071b5f53f8c95d87506eb4b92f01942c4a36ee290b3dc9eb49",
+        "distance": 0.16618166190587813,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-a6de96b34ff698690c2a4b35cb6441053befe82651c8c7d09621666f29a96632",
+        "distance": 0.10754062576649648,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-fe473a0d872fc53febf38d1fa67b9d3d2557a87b8d291009b5dd6d23c499edb2",
+        "distance": 0.1531331949319792,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-474ded1f667c645387f661d3b4275bb0f9273f733b95d1949e016e10deb90a4b",
+        "distance": 0.15843410302706562,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-a26fa76d071f9cc3cc1fdcaa1d76c87e3146d579d681dc409ef26c111ab549de",
+        "distance": 0.14775502465753554,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-48196f092eff637378ab6f8b9f50c362d9030ef9ff5262c1c6be2795cbeb14ae",
+        "distance": 0.11776843714320118,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-25ac501512778d81fd0822cd044e3f6803bd6b46111c9966347af402f277282c",
+        "distance": 0.13413804638544358,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f92b714d95216c7db1bd4077844192c197549b5ce2b0808ecac83234ddce8c55",
+        "distance": 0.08208422695583284,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-d4e6391b074f118fff0fcccee2479db7f36ee4409b4ef6f3dc73f547eb7d331a",
+        "distance": 0.126574256214541,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f9aaa089bf3fa6182a5920e1b6e49bb021c7f048fb5c695dbd9d4acc07468ce9",
+        "distance": 0.14810544122596014,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-b44652702075f660e0d63816547f3a01d92a60d3f35da387ced35eea07279c75",
+        "distance": 0.14994261174297174,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ae791cf910e571a6ccf92531ec1ea49084be1b225f4f87b38a7654832ddffbdf",
+        "distance": 0.13348948078838274,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-b945ed1652963283d2045b9f736277ce07aedab8ab4f9b46e477227495087ad4",
+        "distance": 0.1256880239848508,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4c5484e0f5813e1f769a4cce31b16323ff04a732ab8cac9e530422014e4c88cf",
+        "distance": 0.1112457159461906,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2d7494cec8795cfadd472780d01ec89eb97a20ef778c1e28f19d31a0f6a54399",
+        "distance": 0.1290274090605289,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-22750508e02718b3ce5eabfa2aca4c0eabe631072f5c904907807b9ff0279ce1",
+        "distance": 0.12108768616214116,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-62a1ad2456d819b75d201ae8ca5ee70f1605e3fd5f1909a79cbb0c028b7799fd",
+        "distance": 0.14820056449548025,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4e87fcb047ce30f2d5ef504f11c9766d1b8ca03533a10fe999b7399d1acc01fd",
+        "distance": 0.14884322682241224,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-25b5535bd8a7fde967da05b551848b50f82aa62a8fcbbec0a6e97e4796295ac3",
+        "distance": 0.12726069693637354,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-7804884f4dea4d580e0eebff0426067dcd43a437ceb7a156f579afc9f4fbc721",
+        "distance": 0.1329503439273706,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d711d8db9afc19156af1ffb6a63eb18b9e3b220d4d75b3b08a53e9084cd1b00b",
+        "distance": 0.15453272874430268,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-08613d8348aa91c463738cee22fa4058988915635f29d81334cf7ee6e06528af",
+        "distance": 0.07829395974774589,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-46ed7f5e8500d7c0bcec72707985358e6b62d089d517eb84e7115bd5612bd43b",
+        "distance": 0.14887867051402748,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2f028574d18ca4ba8fe97391a1cca3476c14ac9282cca74dec6b304aabd25d44",
+        "distance": 0.17160241487124261,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-a0921a71cd725d0f417c26c0573b34b84028f4ed8030d8e1e4567b531a6ed065",
+        "distance": 0.11343574983464388,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b09dc745c27a31a3fda964cc1c8d37e728b82212fcccbe5b975c758819b5e77d",
+        "distance": 0.11649997319952898,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-bcb3c8dabe356090b553f08e59106434a14b22ab79da98715330c6612898b759",
+        "distance": 0.1466404271255115,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-3fed9f3d46a698217acb635616f93247e995dbc7aaa588bb46bb2fbdba656fd1",
+        "distance": 0.11999533371662874,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-b3fddef62c60fcf86ded6ff6ddfdde2068d71cc3be94a859e06e29fdd3d9c451",
+        "distance": 0.12017278519871899,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-35d7e8f584fa42ed5ab1ffa7d70aa82a9a63b07d358a3d141e6488da1b9e1af2",
+        "distance": 0.10650022589773278,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8667e711d5ae6c6ef8ef42491e4125f30fc10b5aebe155f9e5aa6809c64e150f",
+        "distance": 0.11332115828272704,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a3b04bd9e30ebcbd398990c94cf1a2e9353e53aa8dd6d574d310a9b139142192",
+        "distance": 0.1177701212163339,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-51ff67c29127a45b2907d5c0777d278fc5df2efe5d73737ed81d23469414e53e",
+        "distance": 0.14507085225405847,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d51de794681cae341659248f4b89e0cfb5a2792ee49375d96aaed27576430f3c",
+        "distance": 0.17240839139207875,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-4ed1a78e945cc987ee1527d66c0936da418952e4891c61339ff701598e26a9d7",
+        "distance": 0.1602702461652935,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-faaa94b5850ac261d164e6f59c09b9ff1c237e61ded90c9114da6dd463e05acb",
+        "distance": 0.11564631245234736,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-62153cc50883618a696a2ceb602b9042aeb4cd391cd863df748ebc0a84d3efe9",
+        "distance": 0.11819317512727745,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-dcef8f36ff04daaa98883e87e454c4d617e24aee60f39e84aacab1d903b6dd28",
+        "distance": 0.17631773895410752,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d8cb0de110b34376608bc59a0816e1048942e56e1f7d2d3d65eac554e0987a1f",
+        "distance": 0.12204985382528433,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-cb745e46743f1ff0916e47baf39fde03f941b5986ed60bcccdc03c73eb585833",
+        "distance": 0.12792333027166303,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-49e53baa0580bd1ac11f85d8bdbde2c98a201b0ddc77a70af25c2b3b794c4d05",
+        "distance": 0.10420301840547963,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-57daf1d81e75b304b09202388b085e105d426a6268150a5b999c2c99de75f82c",
+        "distance": 0.18228708162649165,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-67f4dd1d681d7a0d45640712739ce2989a5d08d4063b4b4ed091c22407da8cde",
+        "distance": 0.10348041155260834,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-280fab20c64521acdeaa734dc420b5bff0dec8cff707e4561870c836862f6bef",
+        "distance": 0.10096539946967464,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-cd19ab03d0462e34c5d61dad84752f219baf1ccc4098a73c804b50b561a88efe",
+        "distance": 0.2000725384073111,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a06904197382db2cf174df38ac180f5f69a59f5e544d63f4f9e766119ea2a923",
+        "distance": 0.23100201746434468,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-d1aacffc17ac87acd1f3f8dfccf8bbee4115516c2b21d61e244aeb663e6fc317",
+        "distance": 0.08931582913374081,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-13c1a7eb088c35d52402bed2b17b4ec1d6d861d0bd5a696a53dd496a46da0260",
+        "distance": 0.08376369730677069,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8efd068a618ca926de81a1194a6f09ca4e2485df50b28145684d74b1d4632675",
+        "distance": 0.13617725941815806,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-77089ee03b96889566ca4ffdef8fd8dc4c83b45c36703290dd90313cd15b38b2",
+        "distance": 0.12589355992221696,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2e5a5429ff5140f9700bdf3cdc3b7de53cea588fe6cca99e1fbe5584c3cba1d6",
+        "distance": 0.12697947222515638,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-e090725c6921809255f163e7d66550e1946b84880e4da5c1683d1589c295ca57",
+        "distance": 0.1330340508780269,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d16b70538811e5ed8a0bbd170c6fa2ed64b3ca4a736aa2559845b5a0cac18141",
+        "distance": 0.15423604590489692,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-45d94aada320f020dd136f0ad99096aee2b3dbcfcb71364f9f4a5b749bcd05d2",
+        "distance": 0.17424329284693552,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-56164e34f7e515465552a33295ffe49ef611943e25ccdcefd3cb6f8d3509f86b",
+        "distance": 0.1895535173958589,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-6336620f95aa8a298849b55c82e810152770f37044be565ddff8e33dcb788f36",
+        "distance": 0.11315119736438162,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-9d7a73f9e3fdb1887e392a371f83b510bccbffaeaa1d4a07aae87d3d3c654baa",
+        "distance": 0.1460792822208843,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-225535f9bb1f4468aa77cde6ff3bf80be95001f065cfe8bde3a30c07654b752e",
+        "distance": 0.08466128059607692,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ffc0ac660b6dc3b0f2f3c71727d57284baf658e43e68b0b0f21067668772c162",
+        "distance": 0.14730613710910578,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-b0f686cdf218ea576a59f1103a04a17c2b1a2fd7866c9622df586e48c19e0d6f",
+        "distance": 0.16497391665927674,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4e7f0424d237979c31850bdada1c095aace7f2adc4924c144704c026a8b27123",
+        "distance": 0.1214189148114434,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-731f3feac99d3e3344597f100ce93097499822edc27ce7543277c5bff37d9dfb",
+        "distance": 0.1342811062709821,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c3824aa27efb31233308c9aed16c9399c742c6336213f5fa44d862c2fac1e995",
+        "distance": 0.12332556539038031,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-117c7e1ad4b6fcf69a8d85212adaa3a24cacc70dfa4362952c4e726ecacb00dd",
+        "distance": 0.14070933089620996,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-8606e72bbccfdfb6c0ba6f5c1819d308fb7ed867da20076ba7b81e537fbd2c13",
+        "distance": 0.10112369077391259,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9440b64f577a66d30670ecd0dc4f22b5af3b34725beafb7682eed407851ddf74",
+        "distance": 0.19095676455985966,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-80f3e956499f76061f7350e95a7c2cd1200c6707c38db7a3d2f304e83b8728e1",
+        "distance": 0.1644379962895618,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-8dfcdec5baf8404c13cd57adc156646de107bf7d2350357b9d404fb0c24a7497",
+        "distance": 0.07658232430493317,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-352b8a99e80cf35b94ae5db552c9c0baf2406b301a7e77170a520e5a3302adde",
+        "distance": 0.11830594713835008,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-152857ec529c75bfe8c8f4fe2651e0216379b3cea9aa82698cfb6aa5f395b3b9",
+        "distance": 0.13740980073076792,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-91354a162d3a7977fd31c6bd4a0f85e03021df8627ec9bd77f7f1b0a52c84b32",
+        "distance": 0.18194905472963196,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-3e777782bf1d1cf375cb6d4041f1c4b1726acac7137a67b92a7aee25493a7634",
+        "distance": 0.1899613351046352,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-800ef310cab5e0e8daa71d358d3b30c6ae30d0e3e64f30f5dfbbae6883b28fdf",
+        "distance": 0.1308682436111842,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-3aa57cf0fffae776c4a4673bd4b87e3687370e82bf627b4b8d01a4241ea237a9",
+        "distance": 0.12180358262624758,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-fc4f1cc4451de1426340e7b1365f2f87720a4ac7821f0aabd8944930d8905c90",
+        "distance": 0.1439464035859901,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ff4008777ac390af2fa14f05ea364168b734ff9f135c5b4a205f3e8b11ee86a3",
+        "distance": 0.10048066811154466,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a0b23dc7d84353ab7d1465aa2e9a5e4ec538e90b06a59d0b6a3003c260fe4edb",
+        "distance": 0.12777889256433972,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-0c16a63e273e948cb4841aa6caa630f6c09b67cd050b88be4e381dd90df7d087",
+        "distance": 0.13411386004536907,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-62910a5fcdbe81d87d7dd9c74d8ba15651239c8b852d37b5975aae6dabd939e3",
+        "distance": 0.13067490550908478,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-684ee2b35937912c5a7f1f2b541f865f5529776a3af28a5e6325b54347c3f271",
+        "distance": 0.08450930931729517,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-1c7d2f169db9f4950b64ca8cae1b32dc1d2dabe0ffb3233166c99c5e107ca262",
+        "distance": 0.13708138524690028,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-326eeb6f6db7c50df8c638251d08a5a4d25951f3b47335fbc0a67495398af2bc",
+        "distance": 0.10272404662568257,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ce28dabbe22ba7b5e2f8a2ba0ed21a536c1e90fcd344ea6671d65703d2983341",
+        "distance": 0.09936505877655766,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c0e6d775be6062822761f2057359d159c7831e2c3deddb4b40004332666842b2",
+        "distance": 0.10742809175679935,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d3e8a5474189b414fccdb7e11d2457ea3c7304065dbab291d8e15116e5c34b22",
+        "distance": 0.11344927158845353,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-29d023e57a5530c962f9bde4af960e020e0f30cc58dc27f7af31000e19b763cd",
+        "distance": 0.1131477270435991,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-1fda602b9df9e442dd5489d47c31d2dc4a381ddb0b29d5cbf8471afa49011162",
+        "distance": 0.11933578519197419,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-4c9a59cdbcf9b5e4ff292d436af66db9fb04208e4f3ff9a63760b02083017302",
+        "distance": 0.0603790987307381,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-601ffe302345c659368dfd8d541e536c6dcbbdcbda94e0f4e050c4c17a8acecb",
+        "distance": 0.11950308361122419,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-d492614fe242121039a804ed11e5fb8c562063cc5da0bfd71cce180db553bb5a",
+        "distance": 0.09578943121585293,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e66f5974c9ba6b481ebd3f784f99fa9ad70e73cb749ea0744dad4d7e32b4a135",
+        "distance": 0.12028026654601809,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8856d93779aab7f43da2da1cdb9a924d49e9c4635a295e30d2085b803bead4a5",
+        "distance": 0.12496792539026746,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-7d29b8b5fa64f7a2e481b3a3bb8c54ab6900496f8c50c399db3985d30f05dcd2",
+        "distance": 0.09653381824064688,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-710940ab1f54e5bd1e7579fee0341db1574de36fdefc22ac501f4052d307df14",
+        "distance": 0.1080444184784104,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-e99757851e7a51d547f27771be168e68433dfbfa67f94bab5d91f497de30bee8",
+        "distance": 0.16957734642295896,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-4e3030f92ba7c4b4b74e1b321f276074289b409d052b176ee4aab616cccdb21f",
+        "distance": 0.1271750859613282,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-63222e3fbfaef6d2cf4640f32b6f65a1664ac8c3133246eb8ff3e0812ca60ef9",
+        "distance": 0.12466821925199567,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ad4af093e8103c6a5b24565baca8a517199ade75ea92d3da049e30665d25d27c",
+        "distance": 0.1364658729096081,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-bfddd4f82ba2bd3481eac6abafaf11a869c5224e6e8b8df7378e705249e14ee2",
+        "distance": 0.1164915501485616,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-81b2d86364824605a2bc3364415ff656d219b9817efbec15a7150c9f8e26a36f",
+        "distance": 0.06638594853798674,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-eccc31db574abbbff5027165c652b3a3ee80063c3f10401f991390b22511d5f6",
+        "distance": 0.11049961451667778,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-e4dd189d7df5938c6d5c8a4e49e989cfb5fcb3f47b72e8ee4f71091c6d948cc0",
+        "distance": 0.1348717999755079,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f4abb1e34404a9bab4e18b27e1606ee6d890d87e253bf003f5cb172bdc622cc7",
+        "distance": 0.10207381919780034,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-3738b56bb455fbcffe84c10a4819d1a6ff99ba467fba82c976007e38189784c2",
+        "distance": 0.12291177305007128,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b658ebacbd946277cba30a7ec11830ffec857271e597d29366a906b0f2fb7370",
+        "distance": 0.128585377048564,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-21d6b56355dc4d87bd4ac5a917decde3f3a58efe75585b2fb65c360afe771dd2",
+        "distance": 0.1220423252349363,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2f437a49173150e2015cd6f10f710df1b26932ac1b16f11e21e11b99a2973037",
+        "distance": 0.07820799936782141,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-5801729db46799df848f973818ea43ec19a0f46077116ef4cd33972aa9f4a738",
+        "distance": 0.1320080311703724,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-18a098b9d8d60591c7503730578054da9a665d060c88d5283f90a3f9be886c93",
+        "distance": 0.1392449847537519,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-77d175d34d919fc647254349caa0f31efe402218b2961d3bf7e4e0dfe0263932",
+        "distance": 0.13472514803947422,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-802dadbad427df4834bffeb64b1007aef66c1bf1d6fbe0ee27435fa99c33adf7",
+        "distance": 0.11057329991698517,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9c594a56f49f5fe01e946f6dc95c0130b874d4b0180177b35e041b236b65e75a",
+        "distance": 0.10207954261016705,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-10749f8947927aaaf2c2c8887b8e68b2568f8ed782a322c857326d8fa41e3856",
+        "distance": 0.125519904514797,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-18ad9eb59e6ed24d0e3b9dc16cd1a2ec685537ab30d0484562efce3334d1e9ff",
+        "distance": 0.09237888149641516,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ef453028b8d603db23b2f0596f0fbb01ebcbea5089900d50ad49cad7eab52a33",
+        "distance": 0.14301114193473274,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-4e4aa7af5c71e84fb68597e5626c68116e65001fa53a9baa06735f97da9a6ea8",
+        "distance": 0.12317665160029412,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-bc57d332c839023be6aeb88236fefba1be1167da8d98fd94efd373c069d5cdf1",
+        "distance": 0.12305510123494146,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f110965f134059af4ac4814d53646749c881ada1dfc607a837a23e07735f0cb9",
+        "distance": 0.07686141185804751,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-eba357d41d44bc1d3d7c62ff8a5c9756501dbd6b4dbabcad22d6f9765ee10f4e",
+        "distance": 0.10292214581315995,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-78bb521209a76939c817fc4e160c1efc331208bfd2055d14ce3591d3f060154d",
+        "distance": 0.0990661747331113,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c6a99fd6fb90fda56a39c4da2c73a476fc103a97a367bca9976f0f856c268228",
+        "distance": 0.22187668256742976,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8ec249cdf20a4ee4fba13546d1ba2bd871ae9a1dc4c6e844532a07575195a092",
+        "distance": 0.1600179719578888,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-7f29d5df5c8635ac5fe3b2f84c78a1cb60adc05a537c97ec196c1ed9e735b7db",
+        "distance": 0.10920264106564193,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b9e67a9a3ca0d29650b4f762722703eff9c4dd270ae4d29159887f7eaeb7a622",
+        "distance": 0.1407758350096543,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-cb4740cedab608395b6a0d427f53ac8df13e9aae5e30d0d1018cb767dcb99ce8",
+        "distance": 0.09665524228883937,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2fdd7bbffa1244fa60cce4d1e9ae7cdd12303129af9934c8374bd7344b35a584",
+        "distance": 0.08189471465875464,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c7d8f57e23975b5d554e29d6e11065ca2575e61eb7d05715b035d586c0a60615",
+        "distance": 0.12848639302337173,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-419d56c1c9b955830c2ccf7efedbc649492e3d5148b044826e78d39c898e711e",
+        "distance": 0.10632891670028577,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8f50eb7f8e551d8d304576f9ed8968326c6d141a616591d0220ebd18edd3e87d",
+        "distance": 0.1369391758133024,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ee41278142108035f897ddac8076b1fb81c25d0e4fe97713add94397e2add67e",
+        "distance": 0.12058983914174137,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-d48bd7fb2fa820a80d83883e4b1f96d52e5266a329fd7843bc82eae4706e49b2",
+        "distance": 0.10601257201921166,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-dc4327571ebce6a1ca0dbefb052102107063833cd887051158c718ca21c1a9d3",
+        "distance": 0.13266056180522479,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-eba29c86baa6c6f6984f14b13ecfffd1ae8a9b36ad33579833eb35f1375702d1",
+        "distance": 0.1068700169567739,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-5aa95be618101958a0ad37df1320d0d2c012938d354b3fe8ff652b1af2023d9a",
+        "distance": 0.10673117661505438,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c6bcb3a18e752538d4d16f804368cb3018239331ce23ae5dcdb224ab958a32b0",
+        "distance": 0.08700039467329301,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-fc83c7719740727f14dcd59e8b683b1d0a000b92adeb74b2c6158c01aab178dd",
+        "distance": 0.0984968056039669,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-27c716d86b6facea0d6fddfaf843df86d43fc9f0542323857fb69b6d6e237f7a",
+        "distance": 0.11873864020291369,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-fb47532db87d495b91cf44c9e1d49c51cf81f2b1155aed24719b8e7947bd864c",
+        "distance": 0.13708709556280452,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2aafae3620b72d577b76f03870aa0b6fbf31e295feefd1b5a67485f525aaefc5",
+        "distance": 0.07322324741758834,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-0b9a28136663f17e431f734f13f2c6cafee616a14c73e4192bc2f596c5b17a11",
+        "distance": 0.12487845198695235,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-a06b6ba5cad131fd4b087e1d5c8313ccebaf18336d95b70fd1f4f96a13b866e6",
+        "distance": 0.1130243447814877,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-188c84a98345fa99f2600029cbbcc3851ab4ecd29a6cf2803b138c3727e5a4b4",
+        "distance": 0.10865478009988361,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9ddae9255bc50c336661068124ea47113bd0cd649fcedd542495757217e1ed42",
+        "distance": 0.09557204309679024,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ed978ee4bef4a56246bddee835122d3d22e613cccc445700d1467330d7bc2f55",
+        "distance": 0.12261210456394422,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-00485de49c4244059f2555ae43f4f20e13f72104577353490c3df8fa0ed29bc1",
+        "distance": 0.10353636176935876,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-23f067261f7176241cedae35d32cb0b5c7bb11d30e5683ae87fc3fe50bb72bd8",
+        "distance": 0.1329908496121508,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-7a5d94484c6f34cf45ac4e461160adaf0543412b28eb27620b23b64aed3a9523",
+        "distance": 0.1175381624111903,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-84365beff141c4338d8406c643e1f9c9678bb52da61b802bdd93e6bc1c6fab4e",
+        "distance": 0.10796768779455435,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-3ced2631089b2f56753cd4376f9bc0e8cf85072d5703b02b86132f7a0fd83a72",
+        "distance": 0.0848520781476012,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-3dfb703784ffa62c8654e693195c5d1e1f39775c4727f21b0e48294a3d7a14ef",
+        "distance": 0.13808268445730343,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2bc66bdc1f28e546de2e7a6a0d52d47adcdee7cde8a619e34c2602dd4441f8e6",
+        "distance": 0.12479494387230972,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-0ca9cc2b0019b77f3b08c2d46dcebebd907860ab24ba984f2b7d319286419012",
+        "distance": 0.11984910949310235,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-69fd32d9382f836ea2c03ecb8b91b8dbf0f779fa292c09e24580e828215cde46",
+        "distance": 0.1298157950184391,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a2f91b658cfac79be11929f6d7a78b6e76837b7c6a7ed9845440ff47127f8992",
+        "distance": 0.11285926073052854,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9160cd9d80be4e8bf1c13e94616598bcdb3777cffef8a1bd47dd6c8cdf9417a4",
+        "distance": 0.11912315964859577,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4479ce0b384f98f07b7196c553925a83d8ae2a9c7a59eebd682ae5f2ca26736a",
+        "distance": 0.1491691104032199,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-2cb6b8bab0e86fcba3e9713e4899380b9842b18f426a8aecb0a0b77859d9a431",
+        "distance": 0.11311102120278582,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-27bddccbb53fc4cfdc03a04ddf1ae6e6a06f665c393847da3d2ee1e7b954598c",
+        "distance": 0.1331712995168114,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-b85a35bf9595f6f0f3bc02c6b306aba2f7c1bc75ab518576e1b0291e7e6a83f2",
+        "distance": 0.12171014566049054,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a7732bbed698d27b7df8dfadc6fe0d2bb6af89adc00f561e9e41893d07aae369",
+        "distance": 0.10989961370878087,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f3a1b73e4559c6ab2ad0df05d8f3b11343871a281f02b161d3a96843a1559a7f",
+        "distance": 0.15594540644957688,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a13a5bbd2e05591003db549b67219f8ea9afa4f06214571c79947d51598b29c6",
+        "distance": 0.12013965010649019,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-129b892e4939f286c096f4cab35d7f27e2454b9cf04895d211040db467e2e5d6",
+        "distance": 0.1317255198631636,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d4c87490c2bcf8f4bb7eb274890e2f650ac776775ee2e61318c639aac531ea8d",
+        "distance": 0.07563391892673732,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-29313bd634cb0d1fcc3f5a0a9d8f4fb49a2e964a938c2072a7c177b59ce0cfcf",
+        "distance": 0.09575967191583135,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-15e05870df3ce0bcdc2abb1ce2eb3ee4b9dc0c75d72972227f6bc2cd8ac971f3",
+        "distance": 0.09837064611585611,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f5b3ea2024eb1043e3d96aa1101860978d6baa78ed0ff9bf5cec45fa4f9f8c08",
+        "distance": 0.1317630239337093,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-3c3ecd2554942a29a6cf7bd1d2af3da55666ab62b0189aade2918f81b84fd4e3",
+        "distance": 0.11380720121654453,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-4a757218cf20c4f572228026cb37993eaa7c856bdf6c02961a28bd8eedb761a2",
+        "distance": 0.10991825941375244,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-fca7038a6de8726bfa459bf1b5650c6945d83d28e94c1eecea7b18d2e9326308",
+        "distance": 0.12029087236996383,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-e2924165e479f274eaf1d6808790c414e10703c2faf30cc0e4fde625949fd99d",
+        "distance": 0.1293043453470717,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-8eb693aefff61ee720b84927745b53c0c56f0ec52cb1995cf452c2546a619e43",
+        "distance": 0.1619905279769991,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ff86005371061ce98ecf7d2c250e6de4f647d8d2b55b57222ff33ca0e393d187",
+        "distance": 0.18303068628245356,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-7b129ef44f00b36613475744d7ab2e5e636ba01a4821c897630fc6a38fd0a95a",
+        "distance": 0.13312240083971116,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b80217fa3f7108eb8ea74231e1840d1ebd100a35a68b1bb7b50cc380562cdd5b",
+        "distance": 0.13187955393661344,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-5feee8681a3d6a0147895c35c0640e120ea750b4c772205235b189e09bb106f6",
+        "distance": 0.0919574164617395,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-9f0589bcce7b73961e119fcff60947858f1c153b207458e4d92bc3846e988ba7",
+        "distance": 0.0916169467999699,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-43dab09b2c0579409f5a865bf10eb21dc2300135d765050ee26bc3e287c0e5f9",
+        "distance": 0.10440097549165772,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c0c0c5a6e6919e037d15bfd295568267e4e1bed99f3f8e61feb8d51a06ac09c0",
+        "distance": 0.08086260377584809,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-569c925444c3b50ef69a07a2136b9adf66459429fef76144d003c7fc415811d6",
+        "distance": 0.10911860276750662,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-8dbf1bdb2e08225c958587dff5bbcf59e5abadffec66c26873fed6d275861473",
+        "distance": 0.15060917177749988,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-708f242efbd18b7297f0685b99c70a88304615cbb1bd671e69875795d756ec81",
+        "distance": 0.15267985646793958,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-065b449d9ef9b94a22154ac3eee50f8762767ce332915427708e1eeaf3e2bdee",
+        "distance": 0.10436481851581692,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f2bd3f7505a0ed2ef589d359ffc8c5bc237b6477e62ea336c74b54017bc06c67",
+        "distance": 0.1376127654581566,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-6bfde0e9f5d88ff55612ea232415b8168f7d632a13269060c77c44c7d649a775",
+        "distance": 0.1433228182852715,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-23c900ed5356849d0c54f563a0b47713288e1ce5349e24244599a039a6cc95d5",
+        "distance": 0.14486896957092943,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f9e53e227045c2c77324ab5517ae53a6b2fb66b4c2a27db491e1d040f93007f3",
+        "distance": 0.11808284285300075,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-79ae07457ace103c442c6be4f5cce32b588f7df870426c529b4166b00d375cae",
+        "distance": 0.13013943325479438,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-6722bcd7eb2b3cb9e28513b1e9e157b5cc711dc21ab25178dfc4b673f6998e9f",
+        "distance": 0.11244834525099545,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4b5ab502169270c596d5f173ad1276d109deaece709dd7f4139474ee50eae2d8",
+        "distance": 0.10828669480434572,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c0ea3313971127269dbb3ea20d85085d2c7da8cf9f4ddf84e5ef71b6ec2d3163",
+        "distance": 0.0998887057662532,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b79af20084b52d55cd663e897be0c92a2e51360d9eb4cf76341cca7760add7a7",
+        "distance": 0.09837851129017938,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-5482bafb288fccdf76bfbb5eb04636018eac648ff329c88571108c8b8af6b02b",
+        "distance": 0.058274751658256574,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6dfb9874fcafcbade70c29d713e209e330db5694f4b9c6e73be2015a8ffee621",
+        "distance": 0.09250631895883132,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-cfe4b98b24b2b2522f86ffb849b41b3e4a355e876a14ffeb7c4ff0ae760b9896",
+        "distance": 0.1550330042160858,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-31bc4a4fb8186769d2fb6120d0d625f2cb935a78b72b59d1716be2fff50b8ee1",
+        "distance": 0.13352864047660162,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-510d4c3ae18427f7da59be39186326ef47647451ff205e99d06c82858fc4ae91",
+        "distance": 0.11881105199960418,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-2135d84d6751473b9a3adadf03f303969a27caf51329b8e1fcdd22b5395790df",
+        "distance": 0.1313931899767503,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-7b0cde7f58030456772e619f2250e955d4668f6e4d05947f35cf5cb9f089f48e",
+        "distance": 0.12110544307749616,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-c09cfd549501c0b37c0117078ecf6a8c33b52128ac2c55f67c4a4a91481844a9",
+        "distance": 0.10003256109253256,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-c087eee5c183b91e971aae6b5060152dabb9cf6e12b9256b723dcef49514870e",
+        "distance": 0.09484294695324513,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-ac5fed4d1cbddea980000afb49f8af21839602b763058325cb1465dff60a2c09",
+        "distance": 0.1220141498260644,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ffd3ed6e40be473e74a807238732639cf03d0724132e09994b345133b50e8548",
+        "distance": 0.10994581533821679,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-4895f3f1729d2ede6e1faad9dc2f6319320c01fb268c6df275e0a37ef1247a3d",
+        "distance": 0.1071995386121447,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-9ac090afb3e1c49423e09a56398299f729ea48225ff7134c491ae0b20d150187",
+        "distance": 0.11884114581168381,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-fa9aa03df042d3411f3bf0d982913f9517434dc4b757960cd9d9de4b8844a67b",
+        "distance": 0.13481423474013654,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6f56c0d67f7a60b1ef54735e8e0f71ef67ab4d99f503c11b4234bda27a3f1047",
+        "distance": 0.09897951050806242,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-f062066700003a3b15c0479e88f00e97b21bacad28777a3be3fec7f15255f3ba",
+        "distance": 0.12062986697294864,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-018a125e8b875ad13a75ec784c420e289f2feb11571c5932bc7458c3babdc67e",
+        "distance": 0.10188314722688252,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-6293bf81b642cfa127c0d202b59080fc7867ae9b479cecd0aa43ef65e6119f36",
+        "distance": 0.14486077929585028,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-d5582ed71d1ebea6f1d3420cca2978db57bb81b0aa0c489081c5ff6e889ce14c",
+        "distance": 0.13248524332455858,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-35f39588851113515ec5d60d3542ef0458da38de0955ca5a167bb347a343cc67",
+        "distance": 0.13286438899062714,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-7affd9b793e30625919f33f8a88b21443ed9058a7307e7c7401f7db06580028b",
+        "distance": 0.09160546035756412,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-25570ea2b1d950079fdb95f765f8679f93e90ef44164603de981fd5463bf68e1",
+        "distance": 0.12711401199752148,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-5c0e17e09fe14a1cf922733ff578d07eaf75e35d66ffa00243dd585e43c90f85",
+        "distance": 0.14517886590592477,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-df2c7318d883f41e8b2475f894d298a2f3987ebcd72d79872cb619cc5540a2b2",
+        "distance": 0.16288655672146257,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-6fd37937a13a5eba532eade4e543cf8559f6e8cd4089379461ee04f7e86e93e1",
+        "distance": 0.12029793777999298,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-9d2a380b1debac821a299f1127606a9b3ecbb6f8371dcd5186042a74edb5c953",
+        "distance": 0.11986398698457168,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-08e6d8e68eab8110b94a22ef822df3e313a3e9fcb740262cca7cf6ae370accbd",
+        "distance": 0.07958186572591819,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-8b8b4546f946b15e19bc68b682f3a5015592e722c3a4b54e8a00538f72425299",
+        "distance": 0.11906579231835523,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b0c27972586fb99a317d7fdf216369e29d4c2e685f1028340e55035c16bbd48d",
+        "distance": 0.11238038157662145,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-41ed8c31b531a9318bf836645aa8e303a73a0db367e13e79481697300f595d16",
+        "distance": 0.10143545652538233,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-5e443032dd367f4e7cb29f1963b969cc6d6647800f0f351a852e0423e7f4b6ff",
+        "distance": 0.0849489862372893,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-a1bb041c0f500713a177ab5cb9430f114110f02d16d2569f3e482182547abba2",
+        "distance": 0.11155612424998418,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-b5c915e03c0ec63b093e1f01c0dec89bf1111902252223fa98bb8176c5585dbf",
+        "distance": 0.12252084837869504,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-f0334dd61b2eaf11a6a689fc416b596821611c104be930f5400d39b069abb728",
+        "distance": 0.15270144768464944,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-648272b03f86b13ee1f59356af7e1d6bc2df365e1a77170e318bb069259e94b8",
+        "distance": 0.13010801969675967,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-4bbe18a6ccdc383d646d983dec1263e1768725d940c73f670d922fe79ab006de",
+        "distance": 0.11451382289750212,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-72bfb15ba629308734a8d0a68ebd4081b12de56fbb88eb865ad6de13cbf8b971",
+        "distance": 0.10301889006577958,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-79a54b6a101171fe13c6334062e7faa5bbf9a4094a904df57c58519e41caeb4b",
+        "distance": 0.13178386693048005,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-728049cbb71c1942f0de46e0194b341c6b15e89fbd3cf572e6f9c6aefdbdb4b1",
+        "distance": 0.12035404698100827,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-ef55ce71bc76bc932917972029e40ffcc022621c3cabbeb80ac3016544a92b4c",
+        "distance": 0.1661345450177958,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-3974329e57f30c2b7bcc1a8d4e4cb1f7494838b6a3eedf782800cb24d4463608",
+        "distance": 0.12492613175762446,
+        "boundary": false,
+        "reason": null
+      },
+      {
+        "unit_id": "u-a2e1d945b66038b175daea24e69375f18983a824439c175168f639fbca3783be",
+        "distance": 0.10115360147739028,
+        "boundary": true,
+        "reason": "maximum"
+      },
+      {
+        "unit_id": "u-d62135db93f7027f1067e1130490d6f966ad6ac69fc78014332a7244091bab4c",
+        "distance": 0.21464942976920842,
+        "boundary": false,
+        "reason": null
+      }
+    ],
+    "dimension": 384,
+    "sdk_versions": {
+      "sentence-transformers": "6.3.0",
+      "torch": "2.15.0",
+      "transformers": "5.24.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0"
+    },
+    "unit_vector_execution_kind": "local_hf"
+  },
+  "work": {
+    "execution_kind": "local_hf",
+    "boundary_model_jobs": 1,
+    "boundary_attempts": 1,
+    "unit_observation": {
+      "requested_items": 567,
+      "attempted_jobs": 1,
+      "workers_started": 1,
+      "backend_calls": 0,
+      "completed_items": 567,
+      "worker_exited": true,
+      "monitor": {
+        "workers_started": 1,
+        "worker_exited": true,
+        "completed": true,
+        "samples": [
+          {
+            "elapsed_ms": 43.723959010094404,
+            "gap_ms": 43.723959010094404,
+            "rss_bytes": 6537216,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 309.9830420105718,
+            "gap_ms": 266.2590830004774,
+            "rss_bytes": 29343744,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 576.4079590007896,
+            "gap_ms": 266.42491699021775,
+            "rss_bytes": 158253056,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 842.9641670081764,
+            "gap_ms": 266.5562080073869,
+            "rss_bytes": 196771840,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 1100.3909590071999,
+            "gap_ms": 257.4267919990234,
+            "rss_bytes": 221822976,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 1366.6590840002755,
+            "gap_ms": 266.2681249930756,
+            "rss_bytes": 239910912,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 1634.8831670038635,
+            "gap_ms": 268.224083003588,
+            "rss_bytes": 273842176,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 1900.3336250025313,
+            "gap_ms": 265.45045799866784,
+            "rss_bytes": 295043072,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 2156.1758750031004,
+            "gap_ms": 255.84225000056904,
+            "rss_bytes": 337526784,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 2421.9032500113826,
+            "gap_ms": 265.72737500828225,
+            "rss_bytes": 356417536,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 2684.1390839981614,
+            "gap_ms": 262.23583398677874,
+            "rss_bytes": 366395392,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 2947.6561670016963,
+            "gap_ms": 263.51708300353494,
+            "rss_bytes": 393625600,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 3208.6168750101933,
+            "gap_ms": 260.960708008497,
+            "rss_bytes": 492421120,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 3476.691125004436,
+            "gap_ms": 268.07424999424256,
+            "rss_bytes": 733609984,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 3745.0044170109322,
+            "gap_ms": 268.31329200649634,
+            "rss_bytes": 929873920,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 4012.5068339984864,
+            "gap_ms": 267.50241698755417,
+            "rss_bytes": 902135808,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 4281.508209009189,
+            "gap_ms": 269.00137501070276,
+            "rss_bytes": 978681856,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 4542.2465419978835,
+            "gap_ms": 260.7383329886943,
+            "rss_bytes": 983875584,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 4801.339875004487,
+            "gap_ms": 259.09333300660364,
+            "rss_bytes": 986431488,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 5069.815625000047,
+            "gap_ms": 268.47574999555945,
+            "rss_bytes": 989577216,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 5334.375667007407,
+            "gap_ms": 264.5600420073606,
+            "rss_bytes": 990724096,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 5594.49066700472,
+            "gap_ms": 260.11499999731313,
+            "rss_bytes": 991772672,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 5862.85200000566,
+            "gap_ms": 268.36133300093934,
+            "rss_bytes": 992903168,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 6130.973500010441,
+            "gap_ms": 268.1215000047814,
+            "rss_bytes": 993738752,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 6399.2427500052145,
+            "gap_ms": 268.2692499947734,
+            "rss_bytes": 994459648,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 6658.49287500896,
+            "gap_ms": 259.2501250037458,
+            "rss_bytes": 994934784,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 6925.527584011434,
+            "gap_ms": 267.0347090024734,
+            "rss_bytes": 995328000,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 7191.824250010541,
+            "gap_ms": 266.29666599910706,
+            "rss_bytes": 995885056,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 7453.142541999114,
+            "gap_ms": 261.31829198857304,
+            "rss_bytes": 996343808,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 7719.8019589995965,
+            "gap_ms": 266.6594170004828,
+            "rss_bytes": 996720640,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 7986.575750008342,
+            "gap_ms": 266.7737910087453,
+            "rss_bytes": 997195776,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 8255.098834008095,
+            "gap_ms": 268.523083999753,
+            "rss_bytes": 997490688,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 8519.723625009647,
+            "gap_ms": 264.6247910015518,
+            "rss_bytes": 998096896,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 8788.368499997887,
+            "gap_ms": 268.6448749882402,
+            "rss_bytes": 998424576,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 9056.897500006016,
+            "gap_ms": 268.5290000081295,
+            "rss_bytes": 998670336,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 9320.419459007098,
+            "gap_ms": 263.521959001082,
+            "rss_bytes": 999112704,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 9588.152542011812,
+            "gap_ms": 267.733083004714,
+            "rss_bytes": 999849984,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 9854.459834008594,
+            "gap_ms": 266.3072919967817,
+            "rss_bytes": 1003438080,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 10121.947375009768,
+            "gap_ms": 267.48754100117367,
+            "rss_bytes": 938115072,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 10388.432209001621,
+            "gap_ms": 266.4848339918535,
+            "rss_bytes": 901087232,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          }
+        ],
+        "sampling_target_ms": 250,
+        "sampling_max_gap_ms": 269.00137501070276,
+        "sampled_peak_rss_bytes": 1003438080,
+        "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+        "resume_safe": true,
+        "preflight": {
+          "platform": "darwin",
+          "pressure_level": 1,
+          "pressure": "normal"
+        },
+        "returncode": 0,
+        "elapsed_ms": 10421.240249997936,
+        "final_observation_gap_ms": 32.80804099631496
+      }
+    },
+    "requested_windows": 0,
+    "dispatches": 0,
+    "successful_windows": 0,
+    "failed_windows": 0,
+    "unknown_windows": 0,
+    "retry_count": 0,
+    "cost": null,
+    "cost_status": "unmeasured",
+    "unit_embedding": {
+      "jobs": 1,
+      "documents": 567,
+      "queries": 0,
+      "elapsed_ms": 10728.92670800502,
+      "sdk_versions": {
+        "sentence-transformers": "6.3.0",
+        "torch": "2.15.0",
+        "transformers": "5.24.1",
+        "tokenizers": "0.23.3",
+        "safetensors": "0.8.0"
+      },
+      "peak_rss_bytes": 1002258432,
+      "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
+      "sampling_interval_ms": 250,
+      "monitor": {
+        "workers_started": 1,
+        "worker_exited": true,
+        "completed": true,
+        "samples": [
+          {
+            "elapsed_ms": 43.723959010094404,
+            "gap_ms": 43.723959010094404,
+            "rss_bytes": 6537216,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 309.9830420105718,
+            "gap_ms": 266.2590830004774,
+            "rss_bytes": 29343744,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 576.4079590007896,
+            "gap_ms": 266.42491699021775,
+            "rss_bytes": 158253056,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 842.9641670081764,
+            "gap_ms": 266.5562080073869,
+            "rss_bytes": 196771840,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 1100.3909590071999,
+            "gap_ms": 257.4267919990234,
+            "rss_bytes": 221822976,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 1366.6590840002755,
+            "gap_ms": 266.2681249930756,
+            "rss_bytes": 239910912,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 1634.8831670038635,
+            "gap_ms": 268.224083003588,
+            "rss_bytes": 273842176,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 1900.3336250025313,
+            "gap_ms": 265.45045799866784,
+            "rss_bytes": 295043072,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 2156.1758750031004,
+            "gap_ms": 255.84225000056904,
+            "rss_bytes": 337526784,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 2421.9032500113826,
+            "gap_ms": 265.72737500828225,
+            "rss_bytes": 356417536,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 2684.1390839981614,
+            "gap_ms": 262.23583398677874,
+            "rss_bytes": 366395392,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 2947.6561670016963,
+            "gap_ms": 263.51708300353494,
+            "rss_bytes": 393625600,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 3208.6168750101933,
+            "gap_ms": 260.960708008497,
+            "rss_bytes": 492421120,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 3476.691125004436,
+            "gap_ms": 268.07424999424256,
+            "rss_bytes": 733609984,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 3745.0044170109322,
+            "gap_ms": 268.31329200649634,
+            "rss_bytes": 929873920,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 4012.5068339984864,
+            "gap_ms": 267.50241698755417,
+            "rss_bytes": 902135808,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 4281.508209009189,
+            "gap_ms": 269.00137501070276,
+            "rss_bytes": 978681856,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 4542.2465419978835,
+            "gap_ms": 260.7383329886943,
+            "rss_bytes": 983875584,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 4801.339875004487,
+            "gap_ms": 259.09333300660364,
+            "rss_bytes": 986431488,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 5069.815625000047,
+            "gap_ms": 268.47574999555945,
+            "rss_bytes": 989577216,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 5334.375667007407,
+            "gap_ms": 264.5600420073606,
+            "rss_bytes": 990724096,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 5594.49066700472,
+            "gap_ms": 260.11499999731313,
+            "rss_bytes": 991772672,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 5862.85200000566,
+            "gap_ms": 268.36133300093934,
+            "rss_bytes": 992903168,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 6130.973500010441,
+            "gap_ms": 268.1215000047814,
+            "rss_bytes": 993738752,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 6399.2427500052145,
+            "gap_ms": 268.2692499947734,
+            "rss_bytes": 994459648,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 6658.49287500896,
+            "gap_ms": 259.2501250037458,
+            "rss_bytes": 994934784,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 6925.527584011434,
+            "gap_ms": 267.0347090024734,
+            "rss_bytes": 995328000,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 7191.824250010541,
+            "gap_ms": 266.29666599910706,
+            "rss_bytes": 995885056,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 7453.142541999114,
+            "gap_ms": 261.31829198857304,
+            "rss_bytes": 996343808,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 7719.8019589995965,
+            "gap_ms": 266.6594170004828,
+            "rss_bytes": 996720640,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 7986.575750008342,
+            "gap_ms": 266.7737910087453,
+            "rss_bytes": 997195776,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 8255.098834008095,
+            "gap_ms": 268.523083999753,
+            "rss_bytes": 997490688,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 8519.723625009647,
+            "gap_ms": 264.6247910015518,
+            "rss_bytes": 998096896,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 8788.368499997887,
+            "gap_ms": 268.6448749882402,
+            "rss_bytes": 998424576,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 9056.897500006016,
+            "gap_ms": 268.5290000081295,
+            "rss_bytes": 998670336,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 9320.419459007098,
+            "gap_ms": 263.521959001082,
+            "rss_bytes": 999112704,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 9588.152542011812,
+            "gap_ms": 267.733083004714,
+            "rss_bytes": 999849984,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 9854.459834008594,
+            "gap_ms": 266.3072919967817,
+            "rss_bytes": 1003438080,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 10121.947375009768,
+            "gap_ms": 267.48754100117367,
+            "rss_bytes": 938115072,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          },
+          {
+            "elapsed_ms": 10388.432209001621,
+            "gap_ms": 266.4848339918535,
+            "rss_bytes": 901087232,
+            "os": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            }
+          }
+        ],
+        "sampling_target_ms": 250,
+        "sampling_max_gap_ms": 269.00137501070276,
+        "sampled_peak_rss_bytes": 1003438080,
+        "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+        "resume_safe": true,
+        "preflight": {
+          "platform": "darwin",
+          "pressure_level": 1,
+          "pressure": "normal"
+        },
+        "returncode": 0,
+        "elapsed_ms": 10421.240249997936,
+        "final_observation_gap_ms": 32.80804099631496
+      },
+      "execution_kind": "local_hf",
+      "worker_exited": true
+    },
+    "usage": {
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    "elapsed_ms": 10754.925665998599
+  },
+  "parent_fingerprint": null,
+  "statistics": {
+    "chunk_count": 250,
+    "unit_count": 567,
+    "lengths": [
+      191,
+      249,
+      251,
+      236,
+      180,
+      174,
+      176,
+      201,
+      203,
+      224,
+      236,
+      213,
+      250,
+      180,
+      223,
+      233,
+      190,
+      187,
+      234,
+      196,
+      178,
+      204,
+      227,
+      231,
+      210,
+      242,
+      256,
+      233,
+      246,
+      241,
+      182,
+      158,
+      247,
+      249,
+      193,
+      228,
+      167,
+      233,
+      208,
+      207,
+      247,
+      255,
+      190,
+      235,
+      232,
+      209,
+      249,
+      256,
+      239,
+      227,
+      245,
+      253,
+      182,
+      228,
+      240,
+      238,
+      224,
+      255,
+      187,
+      194,
+      193,
+      236,
+      240,
+      239,
+      236,
+      242,
+      221,
+      223,
+      217,
+      193,
+      218,
+      176,
+      245,
+      208,
+      247,
+      199,
+      216,
+      253,
+      222,
+      224,
+      234,
+      224,
+      177,
+      195,
+      206,
+      201,
+      224,
+      246,
+      211,
+      224,
+      236,
+      184,
+      249,
+      215,
+      229,
+      235,
+      173,
+      167,
+      224,
+      229,
+      247,
+      250,
+      214,
+      225,
+      168,
+      214,
+      251,
+      251,
+      253,
+      203,
+      208,
+      218,
+      210,
+      241,
+      183,
+      203,
+      218,
+      201,
+      221,
+      256,
+      242,
+      224,
+      204,
+      243,
+      235,
+      251,
+      230,
+      243,
+      214,
+      217,
+      211,
+      243,
+      216,
+      226,
+      254,
+      240,
+      204,
+      221,
+      231,
+      198,
+      234,
+      221,
+      211,
+      202,
+      198,
+      223,
+      227,
+      218,
+      242,
+      223,
+      222,
+      205,
+      239,
+      218,
+      192,
+      228,
+      238,
+      228,
+      237,
+      231,
+      238,
+      193,
+      174,
+      194,
+      194,
+      252,
+      201,
+      224,
+      219,
+      237,
+      234,
+      215,
+      237,
+      218,
+      233,
+      239,
+      163,
+      236,
+      229,
+      231,
+      219,
+      205,
+      208,
+      200,
+      194,
+      214,
+      214,
+      188,
+      214,
+      232,
+      201,
+      206,
+      225,
+      256,
+      248,
+      250,
+      226,
+      218,
+      185,
+      219,
+      212,
+      214,
+      214,
+      238,
+      208,
+      256,
+      238,
+      239,
+      205,
+      220,
+      198,
+      228,
+      219,
+      205,
+      223,
+      193,
+      216,
+      199,
+      235,
+      198,
+      205,
+      210,
+      191,
+      199,
+      143,
+      204,
+      197,
+      220,
+      202,
+      203,
+      246,
+      217,
+      206,
+      212,
+      205,
+      227,
+      193,
+      198,
+      190,
+      193,
+      238,
+      214,
+      219,
+      192,
+      242,
+      211,
+      219,
+      212,
+      200,
+      167
+    ],
+    "min": 143,
+    "max": 256,
+    "mean": 218.072,
+    "emitted_chars": 54518,
+    "unique_chars": 38582,
+    "duplicate_chars": 15936,
+    "forced_units": 4,
+    "token_count": null,
+    "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+  },
+  "units_hash": "43488eb52e5fa95d8204e0769a7c275a7afd15ccc1e7cefb7e46b155eaf1bbd4",
+  "chunks_hash": "0fc1bd2ccece7a0bb9c1ab46d037ffceeff7cd49fe3cbe0f76a8462c29b1c90d",
+  "coverage_hash": "fff3e9b480ea8e1f5c9a9fdba20b1d7bdfa2276038245cbf7b6be36650c6d429",
+  "vectors_hash": "f929d530ed6e484c73efb1b21c7701db5334ad86e21b93a029d181e28b906cd0",
+  "unit_order_hash": "011c1b682c7d792884de98cc0c68e0c30a339a2266d882cb774d7b6b1d6d6ea6",
+  "algorithm": "source-model-boundaries-v1",
+  "chunk_fingerprint": "3374ded7767aa7c40da083c397150b8a49e9b306404817e88327050501359a2f"
+}

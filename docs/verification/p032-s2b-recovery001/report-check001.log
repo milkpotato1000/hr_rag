@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/report_results.py", line 88, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/report_results.py", line 48, in run
+    if (build/'manifest.json').exists():bm,ds,cs=retrieval.load_build(build);byid={c['chunk_id']:c for c in cs}
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: load_build() missing 1 required positional argument: 'c'

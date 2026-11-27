@@ -1,0 +1,5920 @@
+{
+  "schema_version": 1,
+  "execution_kind": "preview",
+  "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "questions_hash": "2063d6e4f30c649c1ea1a4ed362827e765838cc0e90d4ebb33fb96847cb50c69",
+  "questions": [
+    {
+      "id": "gt01",
+      "question": "생일 특별휴가는 누가 며칠 받을 수 있고, 언제까지 신청해서 언제 사용해야 하나요?"
+    },
+    {
+      "id": "gt02",
+      "question": "미사용 연차는 최대 며칠 이월하며 언제까지 써야 하나요? 생일 특별휴가도 해당하나요?"
+    },
+    {
+      "id": "gt03",
+      "question": "재택근무 신청 자격·주당 횟수·승인 기한과 기기 사용 조건을 알려주세요."
+    },
+    {
+      "id": "gt04",
+      "question": "재택근무일에도 식대를 받을 수 있나요? 생일 포인트는 휴가 승인과 연결되나요?"
+    },
+    {
+      "id": "gt05",
+      "question": "교육휴가의 대상과 연간 일수는 무엇이며 연차·생일휴가와 별도로 관리하나요?"
+    },
+    {
+      "id": "gt06",
+      "question": "출장 시스템 오류 시 임시 접수하면 팀장 승인 기한을 생략할 수 있나요? 휴가도 자동 승인되나요?"
+    },
+    {
+      "id": "gt07",
+      "question": "생일휴가 접수 확인이 안 되는 시스템 장애 때 무엇을 기록하며 승인 면제가 되나요?"
+    },
+    {
+      "id": "gt08",
+      "question": "연차 일부 날짜와 교육휴가 응시 계획 취소를 함께 요청하면 어떤 범위를 구분해 기록해야 하나요?"
+    },
+    {
+      "id": "gt09",
+      "question": "재택근무 전기요금의 월 지원 한도는 얼마인가요?"
+    },
+    {
+      "id": "gt10",
+      "question": "개인 차량으로 출장할 때 킬로미터당 유류비 지급액은 얼마인가요?"
+    }
+  ],
+  "configs": [
+    {
+      "id": "config-1",
+      "hash": "4f090b365fc5151180f2fb7782255ecc500e6f347899ae264037add5b926ad90",
+      "settings": {
+        "schema_version": 3,
+        "retrieval": {
+          "method": "hybrid",
+          "candidate_k": 20,
+          "rrf_k": 60,
+          "top_k": 5,
+          "context_budget_chars": 2000
+        },
+        "llm": {
+          "schema_version": 2,
+          "profiles": {
+            "answer": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            },
+            "judge": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            }
+          },
+          "roles": {
+            "generation": "answer",
+            "evaluation": "judge",
+            "chunking": "answer"
+          }
+        },
+        "chunk_artifact": {
+          "fingerprint": "7d60bb23137538a1bb0447bfa29f89eb136ed11d037b17ac0f1a17707e0bc2dd",
+          "config": {
+            "schema_version": 1,
+            "size_chars": 256,
+            "overlap_chars": 64,
+            "method": "fixed"
+          }
+        },
+        "embedding": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "file_manifest": {
+            "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+            "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+            "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+            "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+            "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+            "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+            "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+            "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+            "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+            "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+          },
+          "device": "cpu",
+          "dtype": "float32",
+          "max_input_tokens": 512,
+          "catalog": {
+            "dimension": 384,
+            "query_prefix": "query: ",
+            "document_prefix": "passage: ",
+            "pooling": "mean",
+            "limit": 512,
+            "license": "MIT",
+            "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+          },
+          "normalization": "l2",
+          "algorithm": "exact-cosine-v1"
+        }
+      },
+      "changed_axes_vs_first": []
+    },
+    {
+      "id": "config-2",
+      "hash": "ed27cb6d82908e4c0dd1007e92c0131f502f72067100c46b15c5a0c901640955",
+      "settings": {
+        "schema_version": 3,
+        "retrieval": {
+          "method": "hybrid",
+          "candidate_k": 20,
+          "rrf_k": 60,
+          "top_k": 5,
+          "context_budget_chars": 2000
+        },
+        "llm": {
+          "schema_version": 2,
+          "profiles": {
+            "answer": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            },
+            "judge": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            }
+          },
+          "roles": {
+            "generation": "answer",
+            "evaluation": "judge",
+            "chunking": "answer"
+          }
+        },
+        "chunk_artifact": {
+          "fingerprint": "d976f3a835a81c473c91408bcbefcfde2926e14b972e01d0428dbcfb4bcb5cfb",
+          "config": {
+            "schema_version": 1,
+            "size_chars": 256,
+            "overlap_chars": 64,
+            "method": "recursive"
+          }
+        },
+        "embedding": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "file_manifest": {
+            "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+            "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+            "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+            "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+            "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+            "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+            "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+            "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+            "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+            "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+          },
+          "device": "cpu",
+          "dtype": "float32",
+          "max_input_tokens": 512,
+          "catalog": {
+            "dimension": 384,
+            "query_prefix": "query: ",
+            "document_prefix": "passage: ",
+            "pooling": "mean",
+            "limit": 512,
+            "license": "MIT",
+            "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+          },
+          "normalization": "l2",
+          "algorithm": "exact-cosine-v1"
+        }
+      },
+      "changed_axes_vs_first": [
+        "chunk_artifact"
+      ]
+    },
+    {
+      "id": "config-3",
+      "hash": "4030345c16e2b0f46f88eb576a5f5036e496e0d28ffa5d1e4c7b9b98bab8af62",
+      "settings": {
+        "schema_version": 3,
+        "retrieval": {
+          "method": "hybrid",
+          "candidate_k": 20,
+          "rrf_k": 60,
+          "top_k": 5,
+          "context_budget_chars": 2000
+        },
+        "llm": {
+          "schema_version": 2,
+          "profiles": {
+            "answer": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            },
+            "judge": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            }
+          },
+          "roles": {
+            "generation": "answer",
+            "evaluation": "judge",
+            "chunking": "answer"
+          }
+        },
+        "chunk_artifact": {
+          "fingerprint": "cfe8bda53f6e21a5af43e3e832af7deec27830177a55dd3172cc939b7c0951d9",
+          "config": {
+            "schema_version": 1,
+            "size_chars": 256,
+            "overlap_chars": 64,
+            "method": "structure"
+          }
+        },
+        "embedding": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "file_manifest": {
+            "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+            "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+            "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+            "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+            "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+            "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+            "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+            "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+            "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+            "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+          },
+          "device": "cpu",
+          "dtype": "float32",
+          "max_input_tokens": 512,
+          "catalog": {
+            "dimension": 384,
+            "query_prefix": "query: ",
+            "document_prefix": "passage: ",
+            "pooling": "mean",
+            "limit": 512,
+            "license": "MIT",
+            "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+          },
+          "normalization": "l2",
+          "algorithm": "exact-cosine-v1"
+        }
+      },
+      "changed_axes_vs_first": [
+        "chunk_artifact"
+      ]
+    },
+    {
+      "id": "config-4",
+      "hash": "6c6e02e6f294403a3d6797cd2b495e4eab1641ddf6dffa635a5b200e6124a18a",
+      "settings": {
+        "schema_version": 3,
+        "retrieval": {
+          "method": "hybrid",
+          "candidate_k": 20,
+          "rrf_k": 60,
+          "top_k": 5,
+          "context_budget_chars": 2000
+        },
+        "llm": {
+          "schema_version": 2,
+          "profiles": {
+            "answer": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            },
+            "judge": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            }
+          },
+          "roles": {
+            "generation": "answer",
+            "evaluation": "judge",
+            "chunking": "answer"
+          }
+        },
+        "chunk_artifact": {
+          "fingerprint": "3374ded7767aa7c40da083c397150b8a49e9b306404817e88327050501359a2f",
+          "config": {
+            "schema_version": 1,
+            "method": "semantic",
+            "size_chars": 256,
+            "overlap_chars": 64,
+            "unit_max_chars": 120,
+            "minimum_chars": 120,
+            "distance_threshold": 0.35,
+            "model": {
+              "model_id": "intfloat/multilingual-e5-small",
+              "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+              "file_manifest": {
+                "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+                "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+                "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+                "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+                "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+                "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+                "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+                "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+                "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+                "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+              },
+              "device": "cpu",
+              "dtype": "float32",
+              "max_input_tokens": 512,
+              "catalog": {
+                "dimension": 384,
+                "query_prefix": "query: ",
+                "document_prefix": "passage: ",
+                "pooling": "mean",
+                "limit": 512,
+                "license": "MIT",
+                "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+              },
+              "normalization": "l2",
+              "algorithm": "exact-cosine-v1"
+            }
+          }
+        },
+        "embedding": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "file_manifest": {
+            "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+            "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+            "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+            "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+            "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+            "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+            "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+            "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+            "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+            "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+          },
+          "device": "cpu",
+          "dtype": "float32",
+          "max_input_tokens": 512,
+          "catalog": {
+            "dimension": 384,
+            "query_prefix": "query: ",
+            "document_prefix": "passage: ",
+            "pooling": "mean",
+            "limit": 512,
+            "license": "MIT",
+            "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+          },
+          "normalization": "l2",
+          "algorithm": "exact-cosine-v1"
+        }
+      },
+      "changed_axes_vs_first": [
+        "chunk_artifact"
+      ]
+    }
+  ],
+  "generation_request_upper_bound": 40,
+  "retry_count": 0,
+  "builds": [
+    {
+      "config_id": "config-1",
+      "status": "ready",
+      "chunk_fingerprint": "7d60bb23137538a1bb0447bfa29f89eb136ed11d037b17ac0f1a17707e0bc2dd",
+      "index_fingerprint": "8cd7bebc2b7c12ee3ef81872ff885b263daa62e0ede5be1d6ec00b8b92070b92",
+      "build_ms": 8960.422
+    },
+    {
+      "config_id": "config-2",
+      "status": "ready",
+      "chunk_fingerprint": "d976f3a835a81c473c91408bcbefcfde2926e14b972e01d0428dbcfb4bcb5cfb",
+      "index_fingerprint": "fce9504357ac57800795fe687e233397b3b7afe59265a0470e5ec235d4c1e3d2",
+      "build_ms": 9744.472
+    },
+    {
+      "config_id": "config-3",
+      "status": "ready",
+      "chunk_fingerprint": "cfe8bda53f6e21a5af43e3e832af7deec27830177a55dd3172cc939b7c0951d9",
+      "index_fingerprint": "ba9310cb5b10597ca4f3dcd878cc9b9776b3439bd45617ded9ea89145b6f0e13",
+      "build_ms": 9840.346
+    },
+    {
+      "config_id": "config-4",
+      "status": "ready",
+      "chunk_fingerprint": "3374ded7767aa7c40da083c397150b8a49e9b306404817e88327050501359a2f",
+      "index_fingerprint": "ee0d72aafec02741982bffa3152cce9bdc4b26792de0ede6095b9740e585c8a4",
+      "build_ms": 9588.201
+    }
+  ],
+  "rows": [
+    {
+      "config_id": "config-1",
+      "question_id": "gt01",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt01/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 124.26687499100808,
+        "retrieval": 4859.997666004347,
+        "provider": null,
+        "total": 5072.8835000045365
+      }
+    },
+    {
+      "config_id": "config-1",
+      "question_id": "gt02",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt02/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 120.24158300482668,
+        "retrieval": 4867.079499992542,
+        "provider": null,
+        "total": 5075.814208001248
+      }
+    },
+    {
+      "config_id": "config-1",
+      "question_id": "gt03",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt03/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 8,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c01",
+              "gt03-c02",
+              "gt03-c03",
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.375,
+            "all_required": false,
+            "fulfilled": 3,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.375,
+            "all_required": false,
+            "fulfilled": 3,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 123.4378750086762,
+        "retrieval": 4843.301792003331,
+        "provider": null,
+        "total": 5056.765917004668
+      }
+    },
+    {
+      "config_id": "config-1",
+      "question_id": "gt04",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt04/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 120.25204200472217,
+        "retrieval": 4875.867041002493,
+        "provider": null,
+        "total": 5084.5322079985635
+      }
+    },
+    {
+      "config_id": "config-1",
+      "question_id": "gt05",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt05/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 123.20441599877086,
+        "retrieval": 4859.265959006734,
+        "provider": null,
+        "total": 5071.689707998303
+      }
+    },
+    {
+      "config_id": "config-1",
+      "question_id": "gt06",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt06/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c03",
+              "gt06-c04",
+              "gt06-c05"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c03",
+              "gt06-c04",
+              "gt06-c05"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c03",
+              "gt06-c04",
+              "gt06-c05"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 120.79462500696536,
+        "retrieval": 4861.284540995257,
+        "provider": null,
+        "total": 5071.7227080021985
+      }
+    },
+    {
+      "config_id": "config-1",
+      "question_id": "gt07",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt07/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 120.72145800630096,
+        "retrieval": 4882.191625001724,
+        "provider": null,
+        "total": 5091.751416999614
+      }
+    },
+    {
+      "config_id": "config-1",
+      "question_id": "gt08",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt08/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 0.625,
+            "all_required": false,
+            "fulfilled": 5,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c03",
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.25,
+            "all_required": false,
+            "fulfilled": 2,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c05",
+              "gt08-c06"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.25,
+            "all_required": false,
+            "fulfilled": 2,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c05",
+              "gt08-c06"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 122.45283300580923,
+        "retrieval": 4938.12787499337,
+        "provider": null,
+        "total": 5153.012958006002
+      }
+    },
+    {
+      "config_id": "config-1",
+      "question_id": "gt09",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt09/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "top_k": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "contexts": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 122.65350000234321,
+        "retrieval": 4968.606209004065,
+        "provider": null,
+        "total": 5183.771374999196
+      }
+    },
+    {
+      "config_id": "config-1",
+      "question_id": "gt10",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-1/answers/gt10/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "top_k": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "contexts": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 123.64570899808314,
+        "retrieval": 4996.735749999061,
+        "provider": null,
+        "total": 5210.9504169930005
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt01",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt01/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 136.93024999520276,
+        "retrieval": 4974.716167009319,
+        "provider": null,
+        "total": 5214.009499992244
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt02",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt02/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 135.11862501036376,
+        "retrieval": 4980.822500001523,
+        "provider": null,
+        "total": 5218.814292005845
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt03",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt03/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 8,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c01",
+              "gt03-c02",
+              "gt03-c03",
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.625,
+            "all_required": false,
+            "fulfilled": 5,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.625,
+            "all_required": false,
+            "fulfilled": 5,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 141.23074999952223,
+        "retrieval": 5049.253749995842,
+        "provider": null,
+        "total": 5291.799375001574
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt04",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt04/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 135.48775001254398,
+        "retrieval": 5049.920457997359,
+        "provider": null,
+        "total": 5288.794625012088
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt05",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt05/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 136.46816699474584,
+        "retrieval": 5190.3527499962365,
+        "provider": null,
+        "total": 5429.299791998346
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt06",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt06/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c03",
+              "gt06-c04",
+              "gt06-c05"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.3333333333333333,
+            "all_required": false,
+            "fulfilled": 1,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c05"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.3333333333333333,
+            "all_required": false,
+            "fulfilled": 1,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c05"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 139.8995829949854,
+        "retrieval": 4978.529125000932,
+        "provider": null,
+        "total": 5220.228624995798
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt07",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt07/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 136.10991700261366,
+        "retrieval": 4996.309708003537,
+        "provider": null,
+        "total": 5234.1234590130625
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt08",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt08/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 0.625,
+            "all_required": false,
+            "fulfilled": 5,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c03",
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.5,
+            "all_required": false,
+            "fulfilled": 4,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.5,
+            "all_required": false,
+            "fulfilled": 4,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 135.82850000238977,
+        "retrieval": 4998.055250005564,
+        "provider": null,
+        "total": 5235.364292006125
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt09",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt09/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "top_k": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "contexts": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 137.92520901188254,
+        "retrieval": 4976.275665991125,
+        "provider": null,
+        "total": 5215.41662501113
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "gt10",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-2/answers/gt10/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "top_k": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "contexts": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 136.83658400259446,
+        "retrieval": 4985.775583001669,
+        "provider": null,
+        "total": 5224.941459004185
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt01",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt01/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 219.0168750094017,
+        "retrieval": 4909.132041997509,
+        "provider": null,
+        "total": 5313.988042005803
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt02",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt02/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 212.65512499667238,
+        "retrieval": 4880.683750001481,
+        "provider": null,
+        "total": 5274.363666001591
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt03",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt03/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 8,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c01",
+              "gt03-c02",
+              "gt03-c03",
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.625,
+            "all_required": false,
+            "fulfilled": 5,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.625,
+            "all_required": false,
+            "fulfilled": 5,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 213.52241600106936,
+        "retrieval": 4893.333416999667,
+        "provider": null,
+        "total": 5285.75058298884
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt04",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt04/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 213.20949999790173,
+        "retrieval": 5000.117916992167,
+        "provider": null,
+        "total": 5395.440374995815
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt05",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt05/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 216.55329200439155,
+        "retrieval": 4994.431750004878,
+        "provider": null,
+        "total": 5393.075542000588
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt06",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt06/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c03",
+              "gt06-c04",
+              "gt06-c05"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.3333333333333333,
+            "all_required": false,
+            "fulfilled": 1,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c05"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.3333333333333333,
+            "all_required": false,
+            "fulfilled": 1,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c05"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 217.17087499564514,
+        "retrieval": 5002.165084006265,
+        "provider": null,
+        "total": 5400.292167003499
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt07",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt07/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 216.14670900453348,
+        "retrieval": 4931.827416003216,
+        "provider": null,
+        "total": 5326.639749997412
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt08",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt08/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 0.625,
+            "all_required": false,
+            "fulfilled": 5,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c03",
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.5,
+            "all_required": false,
+            "fulfilled": 4,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.5,
+            "all_required": false,
+            "fulfilled": 4,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 214.82158299477305,
+        "retrieval": 4915.495209002984,
+        "provider": null,
+        "total": 5308.752291995916
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt09",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt09/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "top_k": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "contexts": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 215.37974999228027,
+        "retrieval": 4904.895083003794,
+        "provider": null,
+        "total": 5298.89925000316
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "gt10",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-3/answers/gt10/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "top_k": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "contexts": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 216.5690830006497,
+        "retrieval": 4909.101416997146,
+        "provider": null,
+        "total": 5305.979458004003
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt01",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt01/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 6,
+            "total": 6,
+            "fulfilled_ids": [
+              "gt01-c02-a1",
+              "gt01-c02-a2",
+              "gt01-c02-a3",
+              "gt01-c04-a1",
+              "gt01-c04-a2",
+              "gt01-c05-a1"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 348.42137500527315,
+        "retrieval": 4899.454917002004,
+        "provider": null,
+        "total": 5556.556374998763
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt02",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt02/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt02-c01",
+              "gt02-c02",
+              "gt02-c03"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 344.6020000119461,
+        "retrieval": 4889.069208991714,
+        "provider": null,
+        "total": 5539.562042002217
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt03",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt03/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 8,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c01",
+              "gt03-c02",
+              "gt03-c03",
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.625,
+            "all_required": false,
+            "fulfilled": 5,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.625,
+            "all_required": false,
+            "fulfilled": 5,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt03-c04",
+              "gt03-c05-a2",
+              "gt03-c06",
+              "gt03-c07",
+              "gt03-c08"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 341.44150000065565,
+        "retrieval": 4896.411583002191,
+        "provider": null,
+        "total": 5544.471125002019
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt04",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt04/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 2,
+            "total": 2,
+            "fulfilled_ids": [
+              "gt04-c01",
+              "gt04-c05"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 344.15225000702776,
+        "retrieval": 4875.716124995961,
+        "provider": null,
+        "total": 5527.1355000004405
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt05",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt05/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt05-c02-a1",
+              "gt05-c02-a2",
+              "gt05-c03",
+              "gt05-c04"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 340.7900000020163,
+        "retrieval": 4895.614624998416,
+        "provider": null,
+        "total": 5541.7472919943975
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt06",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt06/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 3,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c03",
+              "gt06-c04",
+              "gt06-c05"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.3333333333333333,
+            "all_required": false,
+            "fulfilled": 1,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c05"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.3333333333333333,
+            "all_required": false,
+            "fulfilled": 1,
+            "total": 3,
+            "fulfilled_ids": [
+              "gt06-c05"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 340.8545830025105,
+        "retrieval": 4897.526542001287,
+        "provider": null,
+        "total": 5544.530457991641
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt07",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt07/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 4,
+            "total": 4,
+            "fulfilled_ids": [
+              "gt07-c01-a1",
+              "gt07-c01-a2",
+              "gt07-c01-a3",
+              "gt07-c03"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 343.1778329977533,
+        "retrieval": 4894.068417008384,
+        "provider": null,
+        "total": 5548.222458004602
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt08",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt08/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 8,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c01-a1",
+              "gt08-c01-a2",
+              "gt08-c02",
+              "gt08-c03",
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.5,
+            "all_required": false,
+            "fulfilled": 4,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.5,
+            "all_required": false,
+            "fulfilled": 4,
+            "total": 8,
+            "fulfilled_ids": [
+              "gt08-c05",
+              "gt08-c06",
+              "gt08-c07-a1",
+              "gt08-c07-a2"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 341.7643749999115,
+        "retrieval": 5035.439792001853,
+        "provider": null,
+        "total": 5685.97420900187
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt09",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt09/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "top_k": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "contexts": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 345.2357079950161,
+        "retrieval": 4916.507333007758,
+        "provider": null,
+        "total": 5568.629624991445
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "gt10",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "result_path": "config-4/answers/gt10/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "top_k": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          },
+          "contexts": {
+            "fact_recall": null,
+            "all_required": null,
+            "fulfilled": 0,
+            "total": 0,
+            "fulfilled_ids": [],
+            "reason": "no_required_facts"
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 342.0940000069095,
+        "retrieval": 4920.794624995324,
+        "provider": null,
+        "total": 5571.969958007685
+      }
+    }
+  ],
+  "status_counts": {
+    "preview": 40
+  },
+  "embedding_work": {
+    "jobs": 44,
+    "documents": 972,
+    "queries": 40
+  },
+  "generation_requests": 0,
+  "cost": null,
+  "cost_status": "unmeasured",
+  "metrics": {
+    "faithfulness": {
+      "value": null,
+      "reason": "evaluator_not_connected"
+    },
+    "correctness": {
+      "value": null,
+      "reason": "ground_truth_not_configured"
+    },
+    "recall_at_k": {
+      "value": null,
+      "reason": "ground_truth_not_configured"
+    },
+    "mrr": {
+      "value": null,
+      "reason": "ground_truth_not_configured"
+    },
+    "ndcg": {
+      "value": null,
+      "reason": "ground_truth_not_configured"
+    }
+  },
+  "source_parse_ms": 332.93,
+  "total_ms": 261141.4145000017,
+  "comparison_axis": "frozen_chunk_artifact",
+  "boundary_inference_calls": 0,
+  "fact_aggregates": {
+    "config-1": {
+      "candidate": {
+        "macro": 0.953125,
+        "micro": 0.9210526315789473,
+        "all_required_rate": 0.875,
+        "fulfilled": 35,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      },
+      "top_k": {
+        "macro": 0.828125,
+        "micro": 0.7105263157894737,
+        "all_required_rate": 0.75,
+        "fulfilled": 27,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      },
+      "contexts": {
+        "macro": 0.828125,
+        "micro": 0.7105263157894737,
+        "all_required_rate": 0.75,
+        "fulfilled": 27,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      }
+    },
+    "config-2": {
+      "candidate": {
+        "macro": 0.953125,
+        "micro": 0.9210526315789473,
+        "all_required_rate": 0.875,
+        "fulfilled": 35,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      },
+      "top_k": {
+        "macro": 0.8072916666666666,
+        "micro": 0.7631578947368421,
+        "all_required_rate": 0.625,
+        "fulfilled": 29,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      },
+      "contexts": {
+        "macro": 0.8072916666666666,
+        "micro": 0.7631578947368421,
+        "all_required_rate": 0.625,
+        "fulfilled": 29,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      }
+    },
+    "config-3": {
+      "candidate": {
+        "macro": 0.953125,
+        "micro": 0.9210526315789473,
+        "all_required_rate": 0.875,
+        "fulfilled": 35,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      },
+      "top_k": {
+        "macro": 0.8072916666666666,
+        "micro": 0.7631578947368421,
+        "all_required_rate": 0.625,
+        "fulfilled": 29,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      },
+      "contexts": {
+        "macro": 0.8072916666666666,
+        "micro": 0.7631578947368421,
+        "all_required_rate": 0.625,
+        "fulfilled": 29,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      }
+    },
+    "config-4": {
+      "candidate": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 38,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      },
+      "top_k": {
+        "macro": 0.8072916666666666,
+        "micro": 0.7631578947368421,
+        "all_required_rate": 0.625,
+        "fulfilled": 29,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      },
+      "contexts": {
+        "macro": 0.8072916666666666,
+        "micro": 0.7631578947368421,
+        "all_required_rate": 0.625,
+        "fulfilled": 29,
+        "total_facts": 38,
+        "valid": 8,
+        "questions": 10,
+        "failed": 0,
+        "no_required_facts": 2,
+        "excluded": 2
+      }
+    }
+  },
+  "chunk_artifacts": [
+    {
+      "chunk_fingerprint": "7d60bb23137538a1bb0447bfa29f89eb136ed11d037b17ac0f1a17707e0bc2dd",
+      "config": {
+        "schema_version": 1,
+        "size_chars": 256,
+        "overlap_chars": 64,
+        "method": "fixed"
+      },
+      "statistics": {
+        "chunk_count": 201,
+        "unit_count": 563,
+        "lengths": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          182
+        ],
+        "min": 182,
+        "max": 256,
+        "mean": 255.6318407960199,
+        "emitted_chars": 51382,
+        "unique_chars": 38582,
+        "duplicate_chars": 12800,
+        "forced_units": 0,
+        "token_count": null,
+        "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+      },
+      "work": {
+        "execution_kind": "offline",
+        "boundary_model_jobs": 0,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 0,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 0.3251669986639172
+      },
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700"
+    },
+    {
+      "chunk_fingerprint": "d976f3a835a81c473c91408bcbefcfde2926e14b972e01d0428dbcfb4bcb5cfb",
+      "config": {
+        "schema_version": 1,
+        "size_chars": 256,
+        "overlap_chars": 64,
+        "method": "recursive"
+      },
+      "statistics": {
+        "chunk_count": 257,
+        "unit_count": 563,
+        "lengths": [
+          51,
+          242,
+          198,
+          251,
+          236,
+          180,
+          174,
+          176,
+          201,
+          203,
+          224,
+          236,
+          213,
+          250,
+          180,
+          223,
+          233,
+          190,
+          187,
+          203,
+          227,
+          178,
+          204,
+          227,
+          231,
+          210,
+          242,
+          256,
+          233,
+          179,
+          221,
+          220,
+          207,
+          247,
+          249,
+          193,
+          228,
+          167,
+          233,
+          208,
+          207,
+          216,
+          195,
+          216,
+          228,
+          208,
+          234,
+          250,
+          255,
+          194,
+          180,
+          227,
+          245,
+          233,
+          202,
+          228,
+          240,
+          238,
+          224,
+          255,
+          187,
+          194,
+          193,
+          236,
+          220,
+          196,
+          221,
+          241,
+          217,
+          223,
+          222,
+          216,
+          198,
+          251,
+          245,
+          208,
+          247,
+          177,
+          238,
+          253,
+          222,
+          224,
+          234,
+          224,
+          177,
+          183,
+          218,
+          201,
+          224,
+          246,
+          211,
+          224,
+          236,
+          184,
+          249,
+          215,
+          229,
+          196,
+          212,
+          167,
+          224,
+          229,
+          247,
+          250,
+          214,
+          225,
+          168,
+          214,
+          251,
+          176,
+          226,
+          209,
+          237,
+          185,
+          205,
+          243,
+          213,
+          221,
+          174,
+          213,
+          230,
+          219,
+          117,
+          238,
+          185,
+          234,
+          251,
+          219,
+          201,
+          197,
+          230,
+          136,
+          246,
+          213,
+          226,
+          249,
+          204,
+          195,
+          213,
+          206,
+          240,
+          204,
+          221,
+          231,
+          198,
+          234,
+          221,
+          211,
+          202,
+          198,
+          223,
+          227,
+          218,
+          242,
+          223,
+          222,
+          205,
+          239,
+          218,
+          192,
+          228,
+          238,
+          228,
+          237,
+          231,
+          238,
+          193,
+          174,
+          194,
+          194,
+          252,
+          201,
+          224,
+          219,
+          237,
+          234,
+          215,
+          171,
+          185,
+          163,
+          233,
+          239,
+          163,
+          236,
+          229,
+          231,
+          219,
+          205,
+          208,
+          200,
+          169,
+          239,
+          214,
+          188,
+          214,
+          232,
+          201,
+          206,
+          225,
+          256,
+          248,
+          250,
+          89,
+          201,
+          218,
+          185,
+          219,
+          212,
+          214,
+          214,
+          238,
+          208,
+          256,
+          238,
+          239,
+          205,
+          220,
+          198,
+          228,
+          219,
+          205,
+          223,
+          193,
+          216,
+          199,
+          221,
+          212,
+          205,
+          210,
+          191,
+          199,
+          143,
+          204,
+          197,
+          220,
+          202,
+          203,
+          246,
+          124,
+          234,
+          220,
+          192,
+          219,
+          198,
+          205,
+          256,
+          193,
+          238,
+          214,
+          219,
+          192,
+          223,
+          230,
+          219,
+          212,
+          200,
+          167
+        ],
+        "min": 51,
+        "max": 256,
+        "mean": 213.82490272373542,
+        "emitted_chars": 54953,
+        "unique_chars": 38582,
+        "duplicate_chars": 16371,
+        "forced_units": 0,
+        "token_count": null,
+        "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+      },
+      "work": {
+        "execution_kind": "offline",
+        "boundary_model_jobs": 0,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 0,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 0.44583299313671887
+      },
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700"
+    },
+    {
+      "chunk_fingerprint": "cfe8bda53f6e21a5af43e3e832af7deec27830177a55dd3172cc939b7c0951d9",
+      "config": {
+        "schema_version": 1,
+        "size_chars": 256,
+        "overlap_chars": 64,
+        "method": "structure"
+      },
+      "statistics": {
+        "chunk_count": 264,
+        "unit_count": 563,
+        "lengths": [
+          101,
+          21,
+          18,
+          17,
+          17,
+          17,
+          18,
+          167,
+          251,
+          236,
+          180,
+          174,
+          176,
+          201,
+          203,
+          224,
+          236,
+          213,
+          250,
+          180,
+          223,
+          233,
+          190,
+          187,
+          203,
+          227,
+          178,
+          204,
+          227,
+          231,
+          210,
+          114,
+          178,
+          206,
+          233,
+          179,
+          221,
+          220,
+          207,
+          247,
+          249,
+          193,
+          228,
+          167,
+          233,
+          208,
+          207,
+          216,
+          195,
+          216,
+          228,
+          208,
+          234,
+          250,
+          255,
+          194,
+          180,
+          227,
+          245,
+          233,
+          202,
+          228,
+          240,
+          238,
+          224,
+          255,
+          187,
+          194,
+          193,
+          236,
+          220,
+          196,
+          221,
+          241,
+          217,
+          223,
+          222,
+          216,
+          198,
+          251,
+          245,
+          208,
+          247,
+          177,
+          174,
+          253,
+          222,
+          224,
+          234,
+          224,
+          177,
+          183,
+          218,
+          201,
+          224,
+          246,
+          211,
+          224,
+          236,
+          184,
+          249,
+          215,
+          229,
+          196,
+          212,
+          167,
+          224,
+          229,
+          247,
+          250,
+          214,
+          225,
+          168,
+          214,
+          251,
+          176,
+          226,
+          209,
+          237,
+          185,
+          205,
+          243,
+          213,
+          221,
+          174,
+          213,
+          230,
+          219,
+          117,
+          238,
+          185,
+          147,
+          162,
+          243,
+          235,
+          251,
+          230,
+          136,
+          246,
+          213,
+          226,
+          249,
+          204,
+          195,
+          213,
+          206,
+          240,
+          204,
+          221,
+          231,
+          198,
+          234,
+          221,
+          211,
+          202,
+          198,
+          223,
+          227,
+          218,
+          242,
+          223,
+          222,
+          205,
+          239,
+          218,
+          192,
+          228,
+          238,
+          130,
+          145,
+          236,
+          185,
+          238,
+          193,
+          174,
+          194,
+          194,
+          252,
+          201,
+          224,
+          219,
+          237,
+          234,
+          215,
+          171,
+          185,
+          163,
+          233,
+          239,
+          163,
+          236,
+          229,
+          231,
+          219,
+          205,
+          208,
+          200,
+          169,
+          239,
+          214,
+          188,
+          214,
+          232,
+          201,
+          206,
+          225,
+          256,
+          248,
+          250,
+          89,
+          137,
+          218,
+          185,
+          219,
+          212,
+          214,
+          214,
+          238,
+          208,
+          256,
+          238,
+          239,
+          205,
+          220,
+          198,
+          228,
+          219,
+          205,
+          223,
+          193,
+          216,
+          199,
+          221,
+          212,
+          205,
+          210,
+          191,
+          199,
+          143,
+          204,
+          197,
+          220,
+          202,
+          203,
+          246,
+          124,
+          234,
+          220,
+          192,
+          219,
+          198,
+          205,
+          256,
+          193,
+          238,
+          214,
+          219,
+          192,
+          223,
+          230,
+          219,
+          212,
+          200,
+          167
+        ],
+        "min": 17,
+        "max": 256,
+        "mean": 206.99242424242425,
+        "emitted_chars": 54646,
+        "unique_chars": 38582,
+        "duplicate_chars": 16064,
+        "forced_units": 0,
+        "token_count": null,
+        "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+      },
+      "work": {
+        "execution_kind": "offline",
+        "boundary_model_jobs": 0,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 0,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 0.33391699253115803
+      },
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700"
+    },
+    {
+      "chunk_fingerprint": "3374ded7767aa7c40da083c397150b8a49e9b306404817e88327050501359a2f",
+      "config": {
+        "schema_version": 1,
+        "method": "semantic",
+        "size_chars": 256,
+        "overlap_chars": 64,
+        "unit_max_chars": 120,
+        "minimum_chars": 120,
+        "distance_threshold": 0.35,
+        "model": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "file_manifest": {
+            "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+            "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+            "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+            "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+            "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+            "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+            "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+            "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+            "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+            "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+          },
+          "device": "cpu",
+          "dtype": "float32",
+          "max_input_tokens": 512,
+          "catalog": {
+            "dimension": 384,
+            "query_prefix": "query: ",
+            "document_prefix": "passage: ",
+            "pooling": "mean",
+            "limit": 512,
+            "license": "MIT",
+            "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+          },
+          "normalization": "l2",
+          "algorithm": "exact-cosine-v1"
+        }
+      },
+      "statistics": {
+        "chunk_count": 250,
+        "unit_count": 567,
+        "lengths": [
+          191,
+          249,
+          251,
+          236,
+          180,
+          174,
+          176,
+          201,
+          203,
+          224,
+          236,
+          213,
+          250,
+          180,
+          223,
+          233,
+          190,
+          187,
+          234,
+          196,
+          178,
+          204,
+          227,
+          231,
+          210,
+          242,
+          256,
+          233,
+          246,
+          241,
+          182,
+          158,
+          247,
+          249,
+          193,
+          228,
+          167,
+          233,
+          208,
+          207,
+          247,
+          255,
+          190,
+          235,
+          232,
+          209,
+          249,
+          256,
+          239,
+          227,
+          245,
+          253,
+          182,
+          228,
+          240,
+          238,
+          224,
+          255,
+          187,
+          194,
+          193,
+          236,
+          240,
+          239,
+          236,
+          242,
+          221,
+          223,
+          217,
+          193,
+          218,
+          176,
+          245,
+          208,
+          247,
+          199,
+          216,
+          253,
+          222,
+          224,
+          234,
+          224,
+          177,
+          195,
+          206,
+          201,
+          224,
+          246,
+          211,
+          224,
+          236,
+          184,
+          249,
+          215,
+          229,
+          235,
+          173,
+          167,
+          224,
+          229,
+          247,
+          250,
+          214,
+          225,
+          168,
+          214,
+          251,
+          251,
+          253,
+          203,
+          208,
+          218,
+          210,
+          241,
+          183,
+          203,
+          218,
+          201,
+          221,
+          256,
+          242,
+          224,
+          204,
+          243,
+          235,
+          251,
+          230,
+          243,
+          214,
+          217,
+          211,
+          243,
+          216,
+          226,
+          254,
+          240,
+          204,
+          221,
+          231,
+          198,
+          234,
+          221,
+          211,
+          202,
+          198,
+          223,
+          227,
+          218,
+          242,
+          223,
+          222,
+          205,
+          239,
+          218,
+          192,
+          228,
+          238,
+          228,
+          237,
+          231,
+          238,
+          193,
+          174,
+          194,
+          194,
+          252,
+          201,
+          224,
+          219,
+          237,
+          234,
+          215,
+          237,
+          218,
+          233,
+          239,
+          163,
+          236,
+          229,
+          231,
+          219,
+          205,
+          208,
+          200,
+          194,
+          214,
+          214,
+          188,
+          214,
+          232,
+          201,
+          206,
+          225,
+          256,
+          248,
+          250,
+          226,
+          218,
+          185,
+          219,
+          212,
+          214,
+          214,
+          238,
+          208,
+          256,
+          238,
+          239,
+          205,
+          220,
+          198,
+          228,
+          219,
+          205,
+          223,
+          193,
+          216,
+          199,
+          235,
+          198,
+          205,
+          210,
+          191,
+          199,
+          143,
+          204,
+          197,
+          220,
+          202,
+          203,
+          246,
+          217,
+          206,
+          212,
+          205,
+          227,
+          193,
+          198,
+          190,
+          193,
+          238,
+          214,
+          219,
+          192,
+          242,
+          211,
+          219,
+          212,
+          200,
+          167
+        ],
+        "min": 143,
+        "max": 256,
+        "mean": 218.072,
+        "emitted_chars": 54518,
+        "unique_chars": 38582,
+        "duplicate_chars": 15936,
+        "forced_units": 4,
+        "token_count": null,
+        "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+      },
+      "work": {
+        "execution_kind": "local_hf",
+        "boundary_model_jobs": 1,
+        "boundary_attempts": 1,
+        "unit_observation": {
+          "requested_items": 567,
+          "attempted_jobs": 1,
+          "workers_started": 1,
+          "backend_calls": 0,
+          "completed_items": 567,
+          "worker_exited": true,
+          "monitor": {
+            "workers_started": 1,
+            "worker_exited": true,
+            "completed": true,
+            "samples": [
+              {
+                "elapsed_ms": 43.723959010094404,
+                "gap_ms": 43.723959010094404,
+                "rss_bytes": 6537216,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 309.9830420105718,
+                "gap_ms": 266.2590830004774,
+                "rss_bytes": 29343744,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 576.4079590007896,
+                "gap_ms": 266.42491699021775,
+                "rss_bytes": 158253056,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 842.9641670081764,
+                "gap_ms": 266.5562080073869,
+                "rss_bytes": 196771840,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 1100.3909590071999,
+                "gap_ms": 257.4267919990234,
+                "rss_bytes": 221822976,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 1366.6590840002755,
+                "gap_ms": 266.2681249930756,
+                "rss_bytes": 239910912,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 1634.8831670038635,
+                "gap_ms": 268.224083003588,
+                "rss_bytes": 273842176,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 1900.3336250025313,
+                "gap_ms": 265.45045799866784,
+                "rss_bytes": 295043072,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 2156.1758750031004,
+                "gap_ms": 255.84225000056904,
+                "rss_bytes": 337526784,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 2421.9032500113826,
+                "gap_ms": 265.72737500828225,
+                "rss_bytes": 356417536,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 2684.1390839981614,
+                "gap_ms": 262.23583398677874,
+                "rss_bytes": 366395392,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 2947.6561670016963,
+                "gap_ms": 263.51708300353494,
+                "rss_bytes": 393625600,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 3208.6168750101933,
+                "gap_ms": 260.960708008497,
+                "rss_bytes": 492421120,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 3476.691125004436,
+                "gap_ms": 268.07424999424256,
+                "rss_bytes": 733609984,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 3745.0044170109322,
+                "gap_ms": 268.31329200649634,
+                "rss_bytes": 929873920,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 4012.5068339984864,
+                "gap_ms": 267.50241698755417,
+                "rss_bytes": 902135808,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 4281.508209009189,
+                "gap_ms": 269.00137501070276,
+                "rss_bytes": 978681856,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 4542.2465419978835,
+                "gap_ms": 260.7383329886943,
+                "rss_bytes": 983875584,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 4801.339875004487,
+                "gap_ms": 259.09333300660364,
+                "rss_bytes": 986431488,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 5069.815625000047,
+                "gap_ms": 268.47574999555945,
+                "rss_bytes": 989577216,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 5334.375667007407,
+                "gap_ms": 264.5600420073606,
+                "rss_bytes": 990724096,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 5594.49066700472,
+                "gap_ms": 260.11499999731313,
+                "rss_bytes": 991772672,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 5862.85200000566,
+                "gap_ms": 268.36133300093934,
+                "rss_bytes": 992903168,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 6130.973500010441,
+                "gap_ms": 268.1215000047814,
+                "rss_bytes": 993738752,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 6399.2427500052145,
+                "gap_ms": 268.2692499947734,
+                "rss_bytes": 994459648,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 6658.49287500896,
+                "gap_ms": 259.2501250037458,
+                "rss_bytes": 994934784,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 6925.527584011434,
+                "gap_ms": 267.0347090024734,
+                "rss_bytes": 995328000,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 7191.824250010541,
+                "gap_ms": 266.29666599910706,
+                "rss_bytes": 995885056,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 7453.142541999114,
+                "gap_ms": 261.31829198857304,
+                "rss_bytes": 996343808,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 7719.8019589995965,
+                "gap_ms": 266.6594170004828,
+                "rss_bytes": 996720640,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 7986.575750008342,
+                "gap_ms": 266.7737910087453,
+                "rss_bytes": 997195776,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 8255.098834008095,
+                "gap_ms": 268.523083999753,
+                "rss_bytes": 997490688,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 8519.723625009647,
+                "gap_ms": 264.6247910015518,
+                "rss_bytes": 998096896,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 8788.368499997887,
+                "gap_ms": 268.6448749882402,
+                "rss_bytes": 998424576,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 9056.897500006016,
+                "gap_ms": 268.5290000081295,
+                "rss_bytes": 998670336,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 9320.419459007098,
+                "gap_ms": 263.521959001082,
+                "rss_bytes": 999112704,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 9588.152542011812,
+                "gap_ms": 267.733083004714,
+                "rss_bytes": 999849984,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 9854.459834008594,
+                "gap_ms": 266.3072919967817,
+                "rss_bytes": 1003438080,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 10121.947375009768,
+                "gap_ms": 267.48754100117367,
+                "rss_bytes": 938115072,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 10388.432209001621,
+                "gap_ms": 266.4848339918535,
+                "rss_bytes": 901087232,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              }
+            ],
+            "sampling_target_ms": 250,
+            "sampling_max_gap_ms": 269.00137501070276,
+            "sampled_peak_rss_bytes": 1003438080,
+            "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+            "resume_safe": true,
+            "preflight": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            },
+            "returncode": 0,
+            "elapsed_ms": 10421.240249997936,
+            "final_observation_gap_ms": 32.80804099631496
+          }
+        },
+        "requested_windows": 0,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": {
+          "jobs": 1,
+          "documents": 567,
+          "queries": 0,
+          "elapsed_ms": 10728.92670800502,
+          "sdk_versions": {
+            "sentence-transformers": "6.3.0",
+            "torch": "2.15.0",
+            "transformers": "5.24.1",
+            "tokenizers": "0.23.3",
+            "safetensors": "0.8.0"
+          },
+          "peak_rss_bytes": 1002258432,
+          "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
+          "sampling_interval_ms": 250,
+          "monitor": {
+            "workers_started": 1,
+            "worker_exited": true,
+            "completed": true,
+            "samples": [
+              {
+                "elapsed_ms": 43.723959010094404,
+                "gap_ms": 43.723959010094404,
+                "rss_bytes": 6537216,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 309.9830420105718,
+                "gap_ms": 266.2590830004774,
+                "rss_bytes": 29343744,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 576.4079590007896,
+                "gap_ms": 266.42491699021775,
+                "rss_bytes": 158253056,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 842.9641670081764,
+                "gap_ms": 266.5562080073869,
+                "rss_bytes": 196771840,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 1100.3909590071999,
+                "gap_ms": 257.4267919990234,
+                "rss_bytes": 221822976,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 1366.6590840002755,
+                "gap_ms": 266.2681249930756,
+                "rss_bytes": 239910912,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 1634.8831670038635,
+                "gap_ms": 268.224083003588,
+                "rss_bytes": 273842176,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 1900.3336250025313,
+                "gap_ms": 265.45045799866784,
+                "rss_bytes": 295043072,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 2156.1758750031004,
+                "gap_ms": 255.84225000056904,
+                "rss_bytes": 337526784,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 2421.9032500113826,
+                "gap_ms": 265.72737500828225,
+                "rss_bytes": 356417536,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 2684.1390839981614,
+                "gap_ms": 262.23583398677874,
+                "rss_bytes": 366395392,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 2947.6561670016963,
+                "gap_ms": 263.51708300353494,
+                "rss_bytes": 393625600,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 3208.6168750101933,
+                "gap_ms": 260.960708008497,
+                "rss_bytes": 492421120,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 3476.691125004436,
+                "gap_ms": 268.07424999424256,
+                "rss_bytes": 733609984,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 3745.0044170109322,
+                "gap_ms": 268.31329200649634,
+                "rss_bytes": 929873920,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 4012.5068339984864,
+                "gap_ms": 267.50241698755417,
+                "rss_bytes": 902135808,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 4281.508209009189,
+                "gap_ms": 269.00137501070276,
+                "rss_bytes": 978681856,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 4542.2465419978835,
+                "gap_ms": 260.7383329886943,
+                "rss_bytes": 983875584,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 4801.339875004487,
+                "gap_ms": 259.09333300660364,
+                "rss_bytes": 986431488,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 5069.815625000047,
+                "gap_ms": 268.47574999555945,
+                "rss_bytes": 989577216,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 5334.375667007407,
+                "gap_ms": 264.5600420073606,
+                "rss_bytes": 990724096,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 5594.49066700472,
+                "gap_ms": 260.11499999731313,
+                "rss_bytes": 991772672,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 5862.85200000566,
+                "gap_ms": 268.36133300093934,
+                "rss_bytes": 992903168,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 6130.973500010441,
+                "gap_ms": 268.1215000047814,
+                "rss_bytes": 993738752,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 6399.2427500052145,
+                "gap_ms": 268.2692499947734,
+                "rss_bytes": 994459648,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 6658.49287500896,
+                "gap_ms": 259.2501250037458,
+                "rss_bytes": 994934784,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 6925.527584011434,
+                "gap_ms": 267.0347090024734,
+                "rss_bytes": 995328000,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 7191.824250010541,
+                "gap_ms": 266.29666599910706,
+                "rss_bytes": 995885056,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 7453.142541999114,
+                "gap_ms": 261.31829198857304,
+                "rss_bytes": 996343808,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 7719.8019589995965,
+                "gap_ms": 266.6594170004828,
+                "rss_bytes": 996720640,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 7986.575750008342,
+                "gap_ms": 266.7737910087453,
+                "rss_bytes": 997195776,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 8255.098834008095,
+                "gap_ms": 268.523083999753,
+                "rss_bytes": 997490688,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 8519.723625009647,
+                "gap_ms": 264.6247910015518,
+                "rss_bytes": 998096896,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 8788.368499997887,
+                "gap_ms": 268.6448749882402,
+                "rss_bytes": 998424576,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 9056.897500006016,
+                "gap_ms": 268.5290000081295,
+                "rss_bytes": 998670336,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 9320.419459007098,
+                "gap_ms": 263.521959001082,
+                "rss_bytes": 999112704,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 9588.152542011812,
+                "gap_ms": 267.733083004714,
+                "rss_bytes": 999849984,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 9854.459834008594,
+                "gap_ms": 266.3072919967817,
+                "rss_bytes": 1003438080,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 10121.947375009768,
+                "gap_ms": 267.48754100117367,
+                "rss_bytes": 938115072,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              },
+              {
+                "elapsed_ms": 10388.432209001621,
+                "gap_ms": 266.4848339918535,
+                "rss_bytes": 901087232,
+                "os": {
+                  "platform": "darwin",
+                  "pressure_level": 1,
+                  "pressure": "normal"
+                }
+              }
+            ],
+            "sampling_target_ms": 250,
+            "sampling_max_gap_ms": 269.00137501070276,
+            "sampled_peak_rss_bytes": 1003438080,
+            "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+            "resume_safe": true,
+            "preflight": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            },
+            "returncode": 0,
+            "elapsed_ms": 10421.240249997936,
+            "final_observation_gap_ms": 32.80804099631496
+          },
+          "execution_kind": "local_hf",
+          "worker_exited": true
+        },
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 10754.925665998599
+      },
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700"
+    }
+  ]
+}
