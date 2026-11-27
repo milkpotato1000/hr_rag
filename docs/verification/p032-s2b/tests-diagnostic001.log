@@ -1,0 +1,24 @@
+fixture diagnostic third_question {'schema_version': 1, 'status': 'halted', 'claimed': True, 'started_at': 100, 'deadline': 3700, 'reserved_workers': 3, 'reserved_items': 569, 'active': None, 'operations': [{'label': 'semantic-boundary', 'requested_items': 567, 'status': 'complete', 'reserved': True, 'workers_started': 1, 'completed_items': 567, 'started_at': 100, 'disk_free_bytes': 4294967296, 'observation': {'workers_started': 1, 'worker_exited': True, 'resume_safe': True, 'completed': True, 'samples': []}, 'finished_at': 100}, {'label': 'fixed-index', 'requested_items': 1, 'status': 'complete', 'reserved': True, 'workers_started': 1, 'completed_items': 1, 'started_at': 100, 'disk_free_bytes': 4294967296, 'observation': {'workers_started': 1, 'worker_exited': True, 'resume_safe': True, 'completed': True, 'samples': []}, 'finished_at': 100}, {'label': 'fixed-gt01', 'requested_items': 1, 'status': 'failed', 'reserved': True, 'workers_started': 1, 'completed_items': 1, 'started_at': 100, 'disk_free_bytes': 4294967296, 'observation': {'workers_started': 1, 'worker_exited': True, 'resume_safe': True, 'completed': True, 'samples': []}, 'error': 'TypeError', 'finished_at': 100}], 'gates': [], 'limits': {'workers': 45, 'items': 1896, 'wall_seconds': 3600, 'worker_seconds': 300, 'rss_bytes': 4294967296, 'disk_free_bytes': 2147483648}, 'automatic_retries': 0, 'S1_clock_or_budget_reset': False, 'first_error': {'code': 'TypeError', 'time': 100}}
+E
+======================================================================
+ERROR: test_third_question_stops_real_compare_dispatch (__main__.Tests.test_third_question_stops_real_compare_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 127, in test_third_question_stops_real_compare_dispatch
+    def test_third_question_stops_real_compare_dispatch(self):self.assertEqual(self.compare_fixture('third_question'),5)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 124, in compare_fixture
+    verify(base/'checkpoint/fixed/build','build');verify(base/'checkpoint/fixed/gt01','answer')
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/storage.py", line 79, in verify
+    root=Path(root);m=read_json(root/'manifest.json')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/storage.py", line 30, in read_json
+    except (OSError,UnicodeError,ValidationError):raise RagError('invalid_artifact','load') from None
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: invalid_artifact: load
+
+----------------------------------------------------------------------
+Ran 1 test in 0.034s
+
+FAILED (errors=1)

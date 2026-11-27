@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "claimed": false,
+  "started_at": null,
+  "deadline": null,
+  "reserved_workers": 0,
+  "reserved_items": 0,
+  "active": null,
+  "operations": [],
+  "gates": [],
+  "limits": {
+    "workers": 45,
+    "items": 1896,
+    "wall_seconds": 3600,
+    "worker_seconds": 300,
+    "rss_bytes": 4294967296,
+    "disk_free_bytes": 2147483648
+  },
+  "automatic_retries": 0,
+  "S1_clock_or_budget_reset": false
+}

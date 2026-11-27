@@ -1,0 +1,61 @@
+E.E........EE..
+======================================================================
+ERROR: test_cancel_preserves_prior_checkpoints (__main__.Tests.test_cancel_preserves_prior_checkpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 129, in test_cancel_preserves_prior_checkpoints
+    def test_cancel_preserves_prior_checkpoints(self):self.assertEqual(self.compare_fixture('cancel'),5)
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 90, in compare_fixture
+    snapshot(base/'sources.json',base/'snapshot')
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/documents.py", line 40, in snapshot
+    except ValidationError:raise RagError('invalid_sources','snapshot') from None
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: invalid_sources: snapshot
+
+======================================================================
+ERROR: test_checkpoint_error_preserves_prior_results (__main__.Tests.test_checkpoint_error_preserves_prior_results)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 127, in test_checkpoint_error_preserves_prior_results
+    def test_checkpoint_error_preserves_prior_results(self):self.assertEqual(self.compare_fixture('checkpoint'),4)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 90, in compare_fixture
+    snapshot(base/'sources.json',base/'snapshot')
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/documents.py", line 40, in snapshot
+    except ValidationError:raise RagError('invalid_sources','snapshot') from None
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: invalid_sources: snapshot
+
+======================================================================
+ERROR: test_publication_error_preserves_all_checkpoints (__main__.Tests.test_publication_error_preserves_all_checkpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 128, in test_publication_error_preserves_all_checkpoints
+    def test_publication_error_preserves_all_checkpoints(self):self.assertEqual(self.compare_fixture('publication'),23)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 90, in compare_fixture
+    snapshot(base/'sources.json',base/'snapshot')
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/documents.py", line 40, in snapshot
+    except ValidationError:raise RagError('invalid_sources','snapshot') from None
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: invalid_sources: snapshot
+
+======================================================================
+ERROR: test_third_question_stops_real_compare_dispatch (__main__.Tests.test_third_question_stops_real_compare_dispatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 126, in test_third_question_stops_real_compare_dispatch
+    def test_third_question_stops_real_compare_dispatch(self):self.assertEqual(self.compare_fixture('third_question'),5)
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b/test_control.py", line 90, in compare_fixture
+    snapshot(base/'sources.json',base/'snapshot')
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/documents.py", line 40, in snapshot
+    except ValidationError:raise RagError('invalid_sources','snapshot') from None
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: invalid_sources: snapshot
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.189s
+
+FAILED (errors=4)

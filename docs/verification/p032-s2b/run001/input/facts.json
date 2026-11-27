@@ -1,0 +1,788 @@
+{
+  "schema_version": 1,
+  "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "questions_hash": "2063d6e4f30c649c1ea1a4ed362827e765838cc0e90d4ebb33fb96847cb50c69",
+  "offset_unit": "unicode_codepoint",
+  "questions": [
+    {
+      "question_id": "gt01",
+      "required_facts": [
+        {
+          "fact_id": "gt01-c02-a1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 272,
+                  "end": 289,
+                  "quote": "입사 후 3개월이 지난 재직자는"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 293,
+                  "end": 314,
+                  "quote": "생일 특별휴가 1일을 신청할 수 있다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt01-c02-a2",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 290,
+                  "end": 314,
+                  "quote": "매년 생일 특별휴가 1일을 신청할 수 있다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt01-c02-a3",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 293,
+                  "end": 300,
+                  "quote": "생일 특별휴가"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 315,
+                  "end": 336,
+                  "quote": "수습 중인 직원은 대상\n에서 제외한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt01-c04-a1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 483,
+                  "end": 512,
+                  "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt01-c04-a2",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 483,
+                  "end": 512,
+                  "quote": "생일 특별휴가는 생일이 속한 달의 근무일에 사용한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt01-c05-a1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 684,
+                  "end": 734,
+                  "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "gt02",
+      "required_facts": [
+        {
+          "fact_id": "gt02-c01",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 8464,
+                  "end": 8507,
+                  "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt02-c02",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 8508,
+                  "end": 8538,
+                  "quote": "이월한 연차의 사용 \n기한은 다음 해 3월 31일이다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt02-c03",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 8464,
+                  "end": 8564,
+                  "quote": "해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 연차의 사용 \n기한은 다음 해 3월 31일이다. 생일 특별휴가에는 이 규정을 적용하지 않는다."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "gt03",
+      "required_facts": [
+        {
+          "fact_id": "gt03-c01",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 11922,
+                  "end": 11938,
+                  "quote": "입사 후 1개월이 지난 직원은"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 11951,
+                  "end": 11966,
+                  "quote": "재택근무를 신청할 수 있다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt03-c02",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 11939,
+                  "end": 11966,
+                  "quote": "보안 교육을 이수하면 재택근무를 신청할 수 있다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt03-c03",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 11967,
+                  "end": 11994,
+                  "quote": "현장 장비 운영 \n직무는 재택 대상에서 제외한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt03-c04",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 12132,
+                  "end": 12148,
+                  "quote": "재택근무는 매주 최대 2일이며"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt03-c05-a2",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 12132,
+                  "end": 12169,
+                  "quote": "재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt03-c06",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 12328,
+                  "end": 12358,
+                  "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt03-c07",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 12328,
+                  "end": 12358,
+                  "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt03-c08",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 12328,
+                  "end": 12383,
+                  "quote": "재택근무 시 회사 지급 기기와 회사 VPN을 사용한다. 공용 컴퓨터로 내부 문서에 접근할 수 없다."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "gt04",
+      "required_facts": [
+        {
+          "fact_id": "gt04-c01",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 19080,
+                  "end": 19134,
+                  "quote": "사무실 출근일에는 식대 1만 원을 지원한다. 재택근무일과 휴가일에는 이 식대를 지원하지 \n않는다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt04-c05",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 19264,
+                  "end": 19322,
+                  "quote": "재직자에게 생일 축하 포인트 3만 점을 지급한다. 이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "gt05",
+      "required_facts": [
+        {
+          "fact_id": "gt05-c02-a1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 24748,
+                  "end": 24785,
+                  "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt05-c02-a2",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 24748,
+                  "end": 24785,
+                  "quote": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt05-c03",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 24935,
+                  "end": 25004,
+                  "quote": "생일 특별휴가 및 연차와 별도로 관리한다.\n교육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt05-c04",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 24935,
+                  "end": 25004,
+                  "quote": "생일 특별휴가 및 연차와 별도로 관리한다.\n교육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "gt06",
+      "required_facts": [
+        {
+          "fact_id": "gt06-c03",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35009,
+                  "end": 35094,
+                  "quote": "신청 시스템이 열리지 않거나 제출 직후 오류가 발생하여 접수 여부를 알 수 없는 경우에는 TR-04\n@v4의 통상 기록을 바로 확인하기 어려울 수 있다."
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35103,
+                  "end": 35114,
+                  "quote": "전달받은 출장 목적,"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35155,
+                  "end": 35181,
+                  "quote": "임시 기록은 신청 내용을 보존하기 위\n한 것이며"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35182,
+                  "end": 35199,
+                  "quote": "TR-01@v4의 승인 기한이나"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35210,
+                  "end": 35227,
+                  "quote": "없애는 예외로 안내하지 않는다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt06-c04",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35009,
+                  "end": 35094,
+                  "quote": "신청 시스템이 열리지 않거나 제출 직후 오류가 발생하여 접수 여부를 알 수 없는 경우에는 TR-04\n@v4의 통상 기록을 바로 확인하기 어려울 수 있다."
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35103,
+                  "end": 35114,
+                  "quote": "전달받은 출장 목적,"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35155,
+                  "end": 35181,
+                  "quote": "임시 기록은 신청 내용을 보존하기 위\n한 것이며"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35200,
+                  "end": 35209,
+                  "quote": "팀장 승인 조건을"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 35210,
+                  "end": 35227,
+                  "quote": "없애는 예외로 안내하지 않는다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt06-c05",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 30941,
+                  "end": 30972,
+                  "quote": "출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "gt07",
+      "required_facts": [
+        {
+          "fact_id": "gt07-c01-a1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2586,
+                  "end": 2650,
+                  "quote": "다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2651,
+                  "end": 2663,
+                  "quote": "신청자가 알\n린 시점,"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2679,
+                  "end": 2708,
+                  "quote": "임시 기록으로 남기고 이를 접수 확인용으로 안내한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt07-c01-a2",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2586,
+                  "end": 2650,
+                  "quote": "다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2664,
+                  "end": 2671,
+                  "quote": "사용 희망일,"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2679,
+                  "end": 2708,
+                  "quote": "임시 기록으로 남기고 이를 접수 확인용으로 안내한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt07-c01-a3",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2586,
+                  "end": 2650,
+                  "quote": "다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2672,
+                  "end": 2678,
+                  "quote": "장애 상황을"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2679,
+                  "end": 2708,
+                  "quote": "임시 기록으로 남기고 이를 접수 확인용으로 안내한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt07-c03",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2586,
+                  "end": 2645,
+                  "quote": "다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2709,
+                  "end": 2716,
+                  "quote": "임시 기\n록은"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 2729,
+                  "end": 2740,
+                  "quote": "승인 면제가 아니며,"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "gt08",
+      "required_facts": [
+        {
+          "fact_id": "gt08-c01-a1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 10535,
+                  "end": 10561,
+                  "quote": "여러 날짜의 요청 중 일부만 취소하려는 경우에는"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 10562,
+                  "end": 10570,
+                  "quote": "유지하는 날짜와"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 10581,
+                  "end": 10590,
+                  "quote": "나누어 기록하고,"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt08-c01-a2",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 10535,
+                  "end": 10561,
+                  "quote": "여러 날짜의 요청 중 일부만 취소하려는 경우에는"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 10571,
+                  "end": 10579,
+                  "quote": "취소하는 날짜를"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 10581,
+                  "end": 10590,
+                  "quote": "나누어 기록하고,"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt08-c02",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 10535,
+                  "end": 10561,
+                  "quote": "여러 날짜의 요청 중 일부만 취소하려는 경우에는"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 10591,
+                  "end": 10610,
+                  "quote": "전체 신청을 일괄 삭제하지 않는다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt08-c03",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 10611,
+                  "end": 10693,
+                  "quote": "실제 사용 여부가 아직 확인되지 않았거나 사\n용 내역 반영이 지연되고 있으면 담당자는 신청 취소 의사와 기존 사용 사실의 확인을 구분해 처리\n한다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt08-c05",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 28157,
+                  "end": 28245,
+                  "quote": "응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다. 시\n험 접수만 취소한 것인지 휴가 신청도 취소하려는 것인지 구분하고,"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt08-c06",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 28157,
+                  "end": 28284,
+                  "quote": "응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다. 시\n험 접수만 취소한 것인지 휴가 신청도 취소하려는 것인지 구분하고, 신청자가 아직 결정하지 못한 \n문의를 확정된 취소로 기록하지 않는다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt08-c07-a1",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 28157,
+                  "end": 28206,
+                  "quote": "응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다."
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 28313,
+                  "end": 28328,
+                  "quote": "다른 시\n험에 관한 요청이나"
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 28349,
+                  "end": 28361,
+                  "quote": "일괄 삭제하지 않는다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "fact_id": "gt08-c07-a2",
+          "alternatives": [
+            {
+              "spans": [
+                {
+                  "document_id": "hr-handbook",
+                  "start": 28157,
+                  "end": 28206,
+                  "quote": "응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다."
+                },
+                {
+                  "document_id": "hr-handbook",
+                  "start": 28329,
+                  "end": 28361,
+                  "quote": "이미 별도로 관리되는 휴가 기록까지 일괄 삭제하지 않는다."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "question_id": "gt09",
+      "required_facts": []
+    },
+    {
+      "question_id": "gt10",
+      "required_facts": []
+    }
+  ]
+}
