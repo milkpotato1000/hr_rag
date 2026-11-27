@@ -50,3 +50,5 @@ Codex 또는 Claude Code에는 다음처럼 요청할 수 있습니다.
 > AGENTS.md와 현재 채택 계약을 읽고 dev 역할을 유지해줘. 일반 문서 UI의 저장 결과로 같은 질문의 후보·전달·제외와 답변 누락을 설명해줘. 한 변수씩 바꿀 실습과 예상 결과를 제시해줘. 모델/API/Drive 호출이나 보류된 평가 실험 재개는 하지 말고, 새 기능은 plan 접수 절차를 따라줘.
 
 두 제품의 실제 UI 조작 호환성이나 다른 OS의 실행 성공을 검증한 것은 아닙니다.
+
+UI build source: `ffa3337b461b67420598f7d6aa7c25832cb95bcb`. Use this SHA instead of the P028 checkout SHA in the installation instructions.

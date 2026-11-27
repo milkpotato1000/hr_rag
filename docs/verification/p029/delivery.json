@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-11-27T21:57:32.783624+09:00",
+  "plan": "e0d44e097c58da1c2944c8c16ce15a06c95b90b9",
+  "implementation_commit": "ffa3337b461b67420598f7d6aa7c25832cb95bcb",
+  "verified_remote": "personal/dev",
+  "remote_sha": "ffa3337b461b67420598f7d6aa7c25832cb95bcb",
+  "criteria": {
+    "C1": "PASS",
+    "C2": "PASS",
+    "C3": "PASS",
+    "C4": "FAIL: browser upload observation blocked by tool policy"
+  },
+  "execution": "BLOCKED",
+  "remaining": "Allowed browser upload -> snapshot observation; preserve earlier observations and failures",
+  "real_model_api_drive_calls": 0,
+  "P013": "BLOCKED; grant unused"
+}
