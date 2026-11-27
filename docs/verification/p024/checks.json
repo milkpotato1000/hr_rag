@@ -1,0 +1,731 @@
+{
+  "status": "PASS",
+  "local_links_checked": 44,
+  "links": [
+    {
+      "page": "README.md",
+      "target": "docs/learning/rag-package/README.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/planning/project-brief.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/architecture/system-design.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/planning/plans/P001.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/process/work-queue.md"
+    },
+    {
+      "page": "README.md",
+      "target": "1. Naive RAG/data/source-v2/README.md"
+    },
+    {
+      "page": "README.md",
+      "target": "1. Naive RAG/data/synthetic/chunks.jsonl"
+    },
+    {
+      "page": "README.md",
+      "target": "1. Naive RAG/data/source-v2/fixed-400-80/chunks.jsonl"
+    },
+    {
+      "page": "README.md",
+      "target": "1. Naive RAG/README.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/verification/p002/README.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/verification/p001/README.md"
+    },
+    {
+      "page": "README.md",
+      "target": "1. Naive RAG/README.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/verification/p003/README.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/planning/naive-rag-roadmap.md"
+    },
+    {
+      "page": "README.md",
+      "target": "1. Naive RAG/LEARNING_GUIDE.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/verification/p004/final-review.md"
+    },
+    {
+      "page": "README.md",
+      "target": "docs/verification/p005/README.md"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "experiments.md"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "models-and-support.md"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "examples/local.json"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "examples/api.json"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "../../planning/rag-package-roadmap.md"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "../../../2. Document Chunking/data/source-v4/output/pdf/hr-handbook.pdf"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "../../../2. Document Chunking/data/source-v4/extracted/canonical/hr-v4-handbook.txt"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "../../../2. Document Chunking/LEARNING.md"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "../../../1. Naive RAG/LEARNING_GUIDE.md"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "../../../1. Naive RAG/variants/langchain/README.md"
+    },
+    {
+      "page": "docs/learning/rag-package/README.md",
+      "target": "../../verification/p013/recovery-20261127/README.md"
+    },
+    {
+      "page": "docs/learning/rag-package/experiments.md",
+      "target": "README.md"
+    },
+    {
+      "page": "docs/learning/rag-package/experiments.md",
+      "target": "../../../2. Document Chunking/README.md"
+    },
+    {
+      "page": "docs/learning/rag-package/experiments.md",
+      "target": "../../planning/specs/P013-execution-contract.md"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "README.md"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../1. Naive RAG/variants/langchain/generation-lock.json"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../2. Document Chunking/runtime-lock.json"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p019/model-lock.json"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../1. Naive RAG/README.md"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p011/adoption-decision.json"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../2. Document Chunking/README.md"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "examples/local.json"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "examples/api.json"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../evaluation/project_b/README.md"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../planning/rag-package-roadmap.md"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p013/resource-stop.json"
+    },
+    {
+      "page": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p013/recovery-20261127/runtime-unreachable.json"
+    }
+  ],
+  "json_examples": 2,
+  "identical_structure": true,
+  "non_llm_values_identical": true,
+  "preserved_files": 1469,
+  "preservation_mismatches": [],
+  "p013_blocked_and_history_preserved": true,
+  "secret_pattern_scan": "PASS (bounded patterns; not a universal secret detector)",
+  "flow_diagram": "plain text; fenced block/source structure inspected; no Mermaid dependency",
+  "external_sources": "four official HF model cards opened 2026-11-27; see models-and-support.md",
+  "commands": [
+    {
+      "args": [
+        "python3",
+        "-m",
+        "json.tool",
+        "docs/learning/rag-package/examples/api.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n    \"example_only\": true,\n    \"schema_status\": \"design_example_not_current_cli_schema\",\n    \"source\": {\n        \"kind\": \"local_sample\",\n        \"path\": \"2. Document Chunking/data/source-v4/output/pdf/hr-handbook.pdf\",\n        \"path_base\": \"repository_root\",\n        \"snapshot\": \"PLACEHOLDER_VERIFIED_SNAPSHOT_HASH\",\n        \"drive_connection\": false\n    },\n    \"llm\": {\n        \"generation\": {\n            \"mode\": \"api\",\n            \"provider\": \"PLACEHOLDER_SUPPORTED_API_PROVIDER\",\n            \"model\": \"PLACEHOLDER_PINNED_API_MODEL\",\n            \"model_identity\": \"PLACEHOLDER_PROVIDER_MODEL_REVISION\",\n            \"revision_or_digest\": \"PLACEHOLDER_VERIFIED_MODEL_REVISION_OR_DIGEST\",\n            \"api_key_env\": \"RAG_LLM_API_KEY\",\n            \"fallback\": \"disabled\",\n            \"execution_status\": \"documentation_only_no_execution\"\n        },\n        \"evaluation\": {\n            \"mode\": \"api\",\n            \"provider\": \"PLACEHOLDER_SUPPORTED_API_PROVIDER\",\n            \"model\": \"PLACEHOLDER_PINNED_API_MODEL\",\n            \"model_identity\": \"PLACEHOLDER_PROVIDER_MODEL_REVISION\",\n            \"revision_or_digest\": \"PLACEHOLDER_VERIFIED_MODEL_REVISION_OR_DIGEST\",\n            \"api_key_env\": \"RAG_LLM_API_KEY\",\n            \"fallback\": \"disabled\",\n            \"execution_status\": \"documentation_only_no_execution\"\n        }\n    },\n    \"chunking\": {\n        \"method\": \"fixed\",\n        \"size_chars\": 400,\n        \"overlap_chars\": 80\n    },\n    \"embedding\": {\n        \"provider\": \"ollama\",\n        \"hf_model\": \"BAAI/bge-m3\",\n        \"model\": \"bge-m3:567m\",\n        \"revision\": \"PLACEHOLDER_LOCKED_REVISION\",\n        \"digest\": \"PLACEHOLDER_VERIFIED_DIGEST\",\n        \"status\": \"existing_baseline_not_executed_by_this_example\"\n    },\n    \"retrieval\": {\n        \"method\": \"dense\",\n        \"top_k\": 5,\n        \"context_budget_chars\": 8000,\n        \"index_fingerprint\": \"PLACEHOLDER_NEW_INDEX_FINGERPRINT\"\n    },\n    \"reranker\": {\n        \"enabled\": false,\n        \"provider\": \"PLACEHOLDER_FUTURE_PUBLIC_MODEL_RUNTIME\",\n        \"model\": \"BAAI/bge-reranker-v2-m3\",\n        \"status\": \"candidate_not_integrated\"\n    },\n    \"evaluation\": {\n        \"status\": \"P013_BLOCKED_NO_EXECUTION\",\n        \"reference_claims\": \"PLACEHOLDER_APPROVED_GT_VERSION_OR_NULL\",\n        \"qrels\": \"PLACEHOLDER_MATCHING_QRELS_VERSION_OR_NULL\",\n        \"correctness_without_gt\": \"N/A\",\n        \"retrieval_metrics_without_qrels\": \"N/A\",\n        \"faithfulness_context\": \"actually_dispatched_context_only\",\n        \"unmeasured_cost\": null\n    }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "-m",
+        "json.tool",
+        "docs/learning/rag-package/examples/local.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n    \"example_only\": true,\n    \"schema_status\": \"design_example_not_current_cli_schema\",\n    \"source\": {\n        \"kind\": \"local_sample\",\n        \"path\": \"2. Document Chunking/data/source-v4/output/pdf/hr-handbook.pdf\",\n        \"path_base\": \"repository_root\",\n        \"snapshot\": \"PLACEHOLDER_VERIFIED_SNAPSHOT_HASH\",\n        \"drive_connection\": false\n    },\n    \"llm\": {\n        \"generation\": {\n            \"mode\": \"local\",\n            \"provider\": \"ollama\",\n            \"model\": \"qwen3:4b\",\n            \"model_identity\": \"Qwen3-4B-Thinking-2507; verify generation-lock.json\",\n            \"revision_or_digest\": \"PLACEHOLDER_VERIFIED_MODEL_REVISION_OR_DIGEST\",\n            \"api_key_env\": null,\n            \"fallback\": \"disabled\",\n            \"execution_status\": \"documentation_only_no_execution\"\n        },\n        \"evaluation\": {\n            \"mode\": \"local\",\n            \"provider\": \"ollama\",\n            \"model\": \"qwen3:8b\",\n            \"model_identity\": \"Qwen3-8B; verify model-lock.json\",\n            \"revision_or_digest\": \"PLACEHOLDER_VERIFIED_MODEL_REVISION_OR_DIGEST\",\n            \"api_key_env\": null,\n            \"fallback\": \"disabled\",\n            \"execution_status\": \"documentation_only_no_execution\"\n        }\n    },\n    \"chunking\": {\n        \"method\": \"fixed\",\n        \"size_chars\": 400,\n        \"overlap_chars\": 80\n    },\n    \"embedding\": {\n        \"provider\": \"ollama\",\n        \"hf_model\": \"BAAI/bge-m3\",\n        \"model\": \"bge-m3:567m\",\n        \"revision\": \"PLACEHOLDER_LOCKED_REVISION\",\n        \"digest\": \"PLACEHOLDER_VERIFIED_DIGEST\",\n        \"status\": \"existing_baseline_not_executed_by_this_example\"\n    },\n    \"retrieval\": {\n        \"method\": \"dense\",\n        \"top_k\": 5,\n        \"context_budget_chars\": 8000,\n        \"index_fingerprint\": \"PLACEHOLDER_NEW_INDEX_FINGERPRINT\"\n    },\n    \"reranker\": {\n        \"enabled\": false,\n        \"provider\": \"PLACEHOLDER_FUTURE_PUBLIC_MODEL_RUNTIME\",\n        \"model\": \"BAAI/bge-reranker-v2-m3\",\n        \"status\": \"candidate_not_integrated\"\n    },\n    \"evaluation\": {\n        \"status\": \"P013_BLOCKED_NO_EXECUTION\",\n        \"reference_claims\": \"PLACEHOLDER_APPROVED_GT_VERSION_OR_NULL\",\n        \"qrels\": \"PLACEHOLDER_MATCHING_QRELS_VERSION_OR_NULL\",\n        \"correctness_without_gt\": \"N/A\",\n        \"retrieval_metrics_without_qrels\": \"N/A\",\n        \"faithfulness_context\": \"actually_dispatched_context_only\",\n        \"unmeasured_cost\": null\n    }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "scripts/contract_guard.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: contracts match adopted plan b0a7cbb234d6\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "scripts/work_queue.py",
+        "--owner",
+        "dev"
+      ],
+      "exit_code": 0,
+      "stdout": "dev는 채택한 plan b0a7cbb234d6 기준. 이후 plan 초안은 자동 채택하지 않음.\ndev 다음 작업: P024\nplan 새 요구 검토 대기: 0건 (구현 승인과 별개)\n[준비 완료] P024 공개 모델 기본·선택 LLM API 학습 경로와 설정 안내 — 0/4 (dev)\n[완료] P001 합성 HR 문서와 검색 평가 기반 구축 — 6/6 (dev)\n[완료] P002 BM25 검색 기준선과 평가 연결 — 8/8 (dev)\n[완료] P003 로컬 모델 실행 환경과 Dense 검색 비교 — 6/6 (dev)\n[완료] P004 Naive RAG 답변·인용·보류 연결 — 6/6 (dev)\n[완료] P005 Naive RAG 실행 화면·E2E 검증·학습 가이드 — 6/6 (dev)\n[완료] P006 원문 PDF·Markdown 추출과 자동 청킹 기준선 — 6/6 (dev)\n[완료] P009 근거 ID 선택과 코드 기반 원문 인용 — 6/6 (dev)\n[완료] P011 Naive RAG LangChain 리팩터링과 비교·채택 판정 — 6/6 (dev)\n[완료] P012 LangChain 기본 학습 화면과 별도 구현 비교 실험 — 4/4 (dev)\n[완료] P015 현실적인 가상 HR 규정 PDF 원문 재작성 — 5/5 (dev)\n[완료] P016 장문 가상 HR 규정집과 청킹 비교용 원문 확장 — 5/5 (dev)\n[완료] P018 정식 하네스 기준 업데이트와 plan/dev 역할·직접 인계 정비 — 4/4 (dev)\n[완료] P007 청킹·검색 품질 실험과 원문·청크·검색 비교 UI — 6/6 (dev)\n[완료] P017 청킹 실험의 방식 선택과 수치 직접 입력 분리 — 4/4 (dev)\n[완료] P019 P013 평가 모델 사전검증과 사람 검토용 정답 초안 — 4/4 (dev)\n[완료] P021 정답 검토 보고서 읽기 흐름 개선과 중복 주장 정리 — 4/4 (dev)\n[완료] P022 정답 후보 원자화 재검수와 새 검토본 개정 — 4/4 (dev)\n[완료] P023 질문별 필수·보충 정답 구분과 채점 정책·새 검토본 — 4/4 (dev)\n[차단] P013 Project B 내부 기본 LLM 답변 평가기와 검증 정답 — 1/4 (dev)\n  사용자 “일단 여기까지 두고”에 따른 P013 실행 보류 수신·즉시 적용. 2825d5b의 DRAFT 전환은 기존 실행 이력 보존 시 guard가 거부하여 merge 중단·기존 채택 유지. docs/feedback/dev/P013-user-hold-adoption.md에 원인 기록. 실행 차단으로 큐 제외; 서버 복구 시 자동 재개 금지. 새 모델 요청0/새4시간 미시작/grant 미소비·기존 성공1건 및 실패 보존. 별도 READY/명시 재개 전 상태 보존·대기.\n\n작업서: docs/planning/plans/P024.md\n  [ ] C1: 두 모드와 단계별 비교 학습 자료·공통 흐름도·Claude Code/Codex 요청 예시·제품 진입 링크를 제공한다.\n  [ ] C2: 같은 구조의 비실행 local/api JSON 예시와 모델 후보/지원 상태표가 로드맵·현재 코드·P013 보류에 부합한다.\n  [ ] C3: JSON·로컬 링크·명령 존재·비밀값·지원 주장 검토와 guard/훅의 실제 결과 및 미검증 범위를 증거로 남긴다.\n  [ ] C4: 정확 plan 채택, P013 보류·기존 기록 보존, 커밋/허용된 personal/dev 전달과 실행 로그가 일치한다.\n조회 전용 · 자동 실행/승인/병합/네트워크 접근 없음\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "1. Naive RAG/scripts/run_bm25_baseline.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "stdout": "usage: run_bm25_baseline.py [-h] --chunks CHUNKS --queries QUERIES\n                            [--top-k TOP_K] [--k K [K ...]] --output-dir\n                            OUTPUT_DIR\n\nFixed BM25 baseline, using the local P001 validation and evaluator.\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --chunks CHUNKS\n  --queries QUERIES\n  --top-k TOP_K\n  --k K [K ...]\n  --output-dir OUTPUT_DIR\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "python3",
+        "1. Naive RAG/scripts/run_bm25_baseline.py",
+        "--chunks",
+        "1. Naive RAG/data/synthetic/chunks.jsonl",
+        "--queries",
+        "1. Naive RAG/data/synthetic/queries.jsonl",
+        "--top-k",
+        "20",
+        "--k",
+        "5",
+        "10",
+        "20",
+        "--output-dir",
+        "/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p024-bm25-jpq8bvb3/result"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "offline_bm25_json": {
+    "metrics.json": {
+      "metadata": {
+        "evaluator_version": "1.0.0",
+        "sha256": {
+          "chunks": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+          "queries": "f602de0d04af57fe1d6342d4d89aabd4237aee7df12411464654125c9e3d5dee",
+          "rankings": "db82d63e73f55f0f315328687948cc0591e9af4fe5a88ed2aed45ccd8a189db6"
+        },
+        "k": [
+          5,
+          10,
+          20
+        ],
+        "chunk_count": 15,
+        "query_count": 14,
+        "answerable_count": 11,
+        "unanswerable_count": 3
+      },
+      "per_query": [
+        {
+          "query_id": "q01",
+          "answerability": "answerable",
+          "retrieved_count": 10,
+          "metrics": {
+            "5": {
+              "recall": 1.0,
+              "precision": 0.2,
+              "mrr": 0.5,
+              "ndcg": 0.6309297535714575
+            },
+            "10": {
+              "recall": 1.0,
+              "precision": 0.1,
+              "mrr": 0.5,
+              "ndcg": 0.6309297535714575
+            },
+            "20": {
+              "recall": 1.0,
+              "precision": 0.05,
+              "mrr": 0.5,
+              "ndcg": 0.6309297535714575
+            }
+          }
+        },
+        {
+          "query_id": "q02",
+          "answerability": "answerable",
+          "retrieved_count": 10,
+          "metrics": {
+            "5": {
+              "recall": 1.0,
+              "precision": 0.2,
+              "mrr": 1.0,
+              "ndcg": 1.0
+            },
+            "10": {
+              "recall": 1.0,
+              "precision": 0.1,
+              "mrr": 1.0,
+              "ndcg": 1.0
+            },
+            "20": {
+              "recall": 1.0,
+              "precision": 0.05,
+              "mrr": 1.0,
+              "ndcg": 1.0
+            }
+          }
+        },
+        {
+          "query_id": "q03",
+          "answerability": "answerable",
+          "retrieved_count": 8,
+          "metrics": {
+            "5": {
+              "recall": 0.6666666666666666,
+              "precision": 0.4,
+              "mrr": 1.0,
+              "ndcg": 0.6713860725233041
+            },
+            "10": {
+              "recall": 1.0,
+              "precision": 0.3,
+              "mrr": 1.0,
+              "ndcg": 0.8278123145308895
+            },
+            "20": {
+              "recall": 1.0,
+              "precision": 0.15,
+              "mrr": 1.0,
+              "ndcg": 0.8278123145308895
+            }
+          }
+        },
+        {
+          "query_id": "q04",
+          "answerability": "answerable",
+          "retrieved_count": 5,
+          "metrics": {
+            "5": {
+              "recall": 1.0,
+              "precision": 0.2,
+              "mrr": 1.0,
+              "ndcg": 1.0
+            },
+            "10": {
+              "recall": 1.0,
+              "precision": 0.1,
+              "mrr": 1.0,
+              "ndcg": 1.0
+            },
+            "20": {
+              "recall": 1.0,
+              "precision": 0.05,
+              "mrr": 1.0,
+              "ndcg": 1.0
+            }
+          }
+        },
+        {
+          "query_id": "q05",
+          "answerability": "answerable",
+          "retrieved_count": 5,
+          "metrics": {
+            "5": {
+              "recall": 1.0,
+              "precision": 0.2,
+              "mrr": 0.3333333333333333,
+              "ndcg": 0.5
+            },
+            "10": {
+              "recall": 1.0,
+              "precision": 0.1,
+              "mrr": 0.3333333333333333,
+              "ndcg": 0.5
+            },
+            "20": {
+              "recall": 1.0,
+              "precision": 0.05,
+              "mrr": 0.3333333333333333,
+              "ndcg": 0.5
+            }
+          }
+        },
+        {
+          "query_id": "q06",
+          "answerability": "answerable",
+          "retrieved_count": 3,
+          "metrics": {
+            "5": {
+              "recall": 0.0,
+              "precision": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0
+            },
+            "10": {
+              "recall": 0.0,
+              "precision": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0
+            },
+            "20": {
+              "recall": 0.0,
+              "precision": 0.0,
+              "mrr": 0.0,
+              "ndcg": 0.0
+            }
+          }
+        },
+        {
+          "query_id": "q07",
+          "answerability": "answerable",
+          "retrieved_count": 7,
+          "metrics": {
+            "5": {
+              "recall": 0.6666666666666666,
+              "precision": 0.4,
+              "mrr": 1.0,
+              "ndcg": 0.6198839993030103
+            },
+            "10": {
+              "recall": 1.0,
+              "precision": 0.3,
+              "mrr": 1.0,
+              "ndcg": 0.8156907976944874
+            },
+            "20": {
+              "recall": 1.0,
+              "precision": 0.15,
+              "mrr": 1.0,
+              "ndcg": 0.8156907976944874
+            }
+          }
+        },
+        {
+          "query_id": "q08",
+          "answerability": "answerable",
+          "retrieved_count": 1,
+          "metrics": {
+            "5": {
+              "recall": 1.0,
+              "precision": 0.2,
+              "mrr": 1.0,
+              "ndcg": 1.0
+            },
+            "10": {
+              "recall": 1.0,
+              "precision": 0.1,
+              "mrr": 1.0,
+              "ndcg": 1.0
+            },
+            "20": {
+              "recall": 1.0,
+              "precision": 0.05,
+              "mrr": 1.0,
+              "ndcg": 1.0
+            }
+          }
+        },
+        {
+          "query_id": "q09",
+          "answerability": "answerable",
+          "retrieved_count": 8,
+          "metrics": {
+            "5": {
+              "recall": 1.0,
+              "precision": 0.6,
+              "mrr": 0.5,
+              "ndcg": 0.5636640860885236
+            },
+            "10": {
+              "recall": 1.0,
+              "precision": 0.3,
+              "mrr": 0.5,
+              "ndcg": 0.5636640860885236
+            },
+            "20": {
+              "recall": 1.0,
+              "precision": 0.15,
+              "mrr": 0.5,
+              "ndcg": 0.5636640860885236
+            }
+          }
+        },
+        {
+          "query_id": "q10",
+          "answerability": "answerable",
+          "retrieved_count": 1,
+          "metrics": {
+            "5": {
+              "recall": 0.5,
+              "precision": 0.2,
+              "mrr": 1.0,
+              "ndcg": 0.9173194127129571
+            },
+            "10": {
+              "recall": 0.5,
+              "precision": 0.1,
+              "mrr": 1.0,
+              "ndcg": 0.9173194127129571
+            },
+            "20": {
+              "recall": 0.5,
+              "precision": 0.05,
+              "mrr": 1.0,
+              "ndcg": 0.9173194127129571
+            }
+          }
+        },
+        {
+          "query_id": "q11",
+          "answerability": "answerable",
+          "retrieved_count": 9,
+          "metrics": {
+            "5": {
+              "recall": 1.0,
+              "precision": 0.2,
+              "mrr": 0.5,
+              "ndcg": 0.6309297535714575
+            },
+            "10": {
+              "recall": 1.0,
+              "precision": 0.1,
+              "mrr": 0.5,
+              "ndcg": 0.6309297535714575
+            },
+            "20": {
+              "recall": 1.0,
+              "precision": 0.05,
+              "mrr": 0.5,
+              "ndcg": 0.6309297535714575
+            }
+          }
+        },
+        {
+          "query_id": "q12",
+          "answerability": "unanswerable",
+          "retrieved_count": 3,
+          "metrics": {
+            "5": {
+              "recall": null,
+              "precision": null,
+              "mrr": null,
+              "ndcg": null
+            },
+            "10": {
+              "recall": null,
+              "precision": null,
+              "mrr": null,
+              "ndcg": null
+            },
+            "20": {
+              "recall": null,
+              "precision": null,
+              "mrr": null,
+              "ndcg": null
+            }
+          }
+        },
+        {
+          "query_id": "q13",
+          "answerability": "unanswerable",
+          "retrieved_count": 0,
+          "metrics": {
+            "5": {
+              "recall": null,
+              "precision": null,
+              "mrr": null,
+              "ndcg": null
+            },
+            "10": {
+              "recall": null,
+              "precision": null,
+              "mrr": null,
+              "ndcg": null
+            },
+            "20": {
+              "recall": null,
+              "precision": null,
+              "mrr": null,
+              "ndcg": null
+            }
+          }
+        },
+        {
+          "query_id": "q14",
+          "answerability": "unanswerable",
+          "retrieved_count": 1,
+          "metrics": {
+            "5": {
+              "recall": null,
+              "precision": null,
+              "mrr": null,
+              "ndcg": null
+            },
+            "10": {
+              "recall": null,
+              "precision": null,
+              "mrr": null,
+              "ndcg": null
+            },
+            "20": {
+              "recall": null,
+              "precision": null,
+              "mrr": null,
+              "ndcg": null
+            }
+          }
+        }
+      ],
+      "macro": {
+        "5": {
+          "recall": 0.8030303030303029,
+          "precision": 0.2545454545454546,
+          "mrr": 0.7121212121212122,
+          "ndcg": 0.6849193707064283
+        },
+        "10": {
+          "recall": 0.8636363636363636,
+          "precision": 0.14545454545454548,
+          "mrr": 0.7121212121212122,
+          "ndcg": 0.716940556197252
+        },
+        "20": {
+          "recall": 0.8636363636363636,
+          "precision": 0.07272727272727274,
+          "mrr": 0.7121212121212122,
+          "ndcg": 0.716940556197252
+        }
+      },
+      "unanswerable": {
+        "query_count": 3,
+        "with_results_count": 2,
+        "empty_results_count": 1,
+        "with_results_ratio": 0.6666666666666666,
+        "empty_results_ratio": 0.3333333333333333
+      }
+    },
+    "run.json": {
+      "retriever_version": "1.0.0",
+      "tokenizer": {
+        "id": "unicode-word-v1",
+        "steps": [
+          "NFKC",
+          "casefold",
+          "re.findall"
+        ],
+        "pattern": "[^\\W_]+"
+      },
+      "parameters": {
+        "k1": 1.2,
+        "b": 0.75,
+        "top_k": 20,
+        "k": [
+          5,
+          10,
+          20
+        ]
+      },
+      "environment": {
+        "python_version": "3.9.6",
+        "unicode_version": "13.0.0",
+        "platform": "macOS-26.6.1-arm64-arm-64bit"
+      },
+      "sha256": {
+        "chunks": "2c8edcd64eef14f68512fb4d232d2267528e9bc63d161f37d8ac7dfcc198802f",
+        "queries": "f602de0d04af57fe1d6342d4d89aabd4237aee7df12411464654125c9e3d5dee",
+        "rankings": "db82d63e73f55f0f315328687948cc0591e9af4fe5a88ed2aed45ccd8a189db6"
+      },
+      "statistics": {
+        "N": 15,
+        "avgdl": 28.133333333333333
+      },
+      "observations": {
+        "index_build_ms": 0.4095830000000016,
+        "query_search_ms": {
+          "q01": 0.03175000000000053,
+          "q02": 0.0264170000000008,
+          "q03": 0.026000000000001716,
+          "q04": 0.017541999999998864,
+          "q05": 0.019457999999999975,
+          "q06": 0.015249999999997904,
+          "q07": 0.02170899999999823,
+          "q08": 0.016291999999997614,
+          "q09": 0.01833300000000232,
+          "q10": 0.014416999999999208,
+          "q11": 0.08304099999999898,
+          "q12": 0.01508299999999907,
+          "q13": 0.009624999999999218,
+          "q14": 0.011416999999999677
+        }
+      }
+    }
+  },
+  "not_performed": [
+    "model inference",
+    "model download",
+    "server start",
+    "paid API call",
+    "browser/render verification",
+    "live local/API parity",
+    "installation in clean environment"
+  ]
+}

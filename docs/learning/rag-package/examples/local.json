@@ -1,0 +1,67 @@
+{
+  "example_only": true,
+  "schema_status": "design_example_not_current_cli_schema",
+  "source": {
+    "kind": "local_sample",
+    "path": "2. Document Chunking/data/source-v4/output/pdf/hr-handbook.pdf",
+    "path_base": "repository_root",
+    "snapshot": "PLACEHOLDER_VERIFIED_SNAPSHOT_HASH",
+    "drive_connection": false
+  },
+  "llm": {
+    "generation": {
+      "mode": "local",
+      "provider": "ollama",
+      "model": "qwen3:4b",
+      "model_identity": "Qwen3-4B-Thinking-2507; verify generation-lock.json",
+      "revision_or_digest": "PLACEHOLDER_VERIFIED_MODEL_REVISION_OR_DIGEST",
+      "api_key_env": null,
+      "fallback": "disabled",
+      "execution_status": "documentation_only_no_execution"
+    },
+    "evaluation": {
+      "mode": "local",
+      "provider": "ollama",
+      "model": "qwen3:8b",
+      "model_identity": "Qwen3-8B; verify model-lock.json",
+      "revision_or_digest": "PLACEHOLDER_VERIFIED_MODEL_REVISION_OR_DIGEST",
+      "api_key_env": null,
+      "fallback": "disabled",
+      "execution_status": "documentation_only_no_execution"
+    }
+  },
+  "chunking": {
+    "method": "fixed",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "embedding": {
+    "provider": "ollama",
+    "hf_model": "BAAI/bge-m3",
+    "model": "bge-m3:567m",
+    "revision": "PLACEHOLDER_LOCKED_REVISION",
+    "digest": "PLACEHOLDER_VERIFIED_DIGEST",
+    "status": "existing_baseline_not_executed_by_this_example"
+  },
+  "retrieval": {
+    "method": "dense",
+    "top_k": 5,
+    "context_budget_chars": 8000,
+    "index_fingerprint": "PLACEHOLDER_NEW_INDEX_FINGERPRINT"
+  },
+  "reranker": {
+    "enabled": false,
+    "provider": "PLACEHOLDER_FUTURE_PUBLIC_MODEL_RUNTIME",
+    "model": "BAAI/bge-reranker-v2-m3",
+    "status": "candidate_not_integrated"
+  },
+  "evaluation": {
+    "status": "P013_BLOCKED_NO_EXECUTION",
+    "reference_claims": "PLACEHOLDER_APPROVED_GT_VERSION_OR_NULL",
+    "qrels": "PLACEHOLDER_MATCHING_QRELS_VERSION_OR_NULL",
+    "correctness_without_gt": "N/A",
+    "retrieval_metrics_without_qrels": "N/A",
+    "faithfulness_context": "actually_dispatched_context_only",
+    "unmeasured_cost": null
+  }
+}
