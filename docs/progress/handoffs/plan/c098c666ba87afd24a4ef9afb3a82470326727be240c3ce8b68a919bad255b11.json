@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "P032 S1 narrow mMiniLM legacy-buffer compatibility READY",
   "next_action": "Preserve and commit current model-free evidence; integrate exact READY and adopt; implement strict buffer validation and independent tests; then linked cumulative continuation only within original deadline and revised73worker500pair caps.",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-27T17:59:48.620464+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T18:00:28.830517+00:00",
+      "evidence": "Host send succeeded to verified same-project dev. Exact READY b6b57a9e11ac68e55b0bb475343a4df4092b5586, fixed-revision buffer validation, independent tests and linked cumulative continuation with original deadline delivered. Preserve current evidence before adoption; receipt/adoption not inferred."
     }
   ]
 }
