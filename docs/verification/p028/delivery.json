@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-27",
+  "plan_commit": "7e92000a4365519a11861696d3692f2d00d7c106",
+  "adoption_commit": "48434cb",
+  "package_source_commit": "6921810b0414297358cffe3574ffa09ea03a305d",
+  "implementation_and_docs_commit": "36c331987663ee294701fd92263632955f38be89",
+  "verified_personal_dev_sha": "36c331987663ee294701fd92263632955f38be89",
+  "normal_push": true,
+  "tests_passed": 51,
+  "installed_probes": [
+    "core",
+    "extras",
+    "independently_rebuilt_sdist_wheel"
+  ],
+  "preserved_files": 1489,
+  "p013_state": "BLOCKED",
+  "recovery_grant_consumed": false,
+  "actual_model_api_drive_user_key_calls": 0,
+  "live_quality_other_os_tools_ui": "not_verified",
+  "main_changed": false
+}
