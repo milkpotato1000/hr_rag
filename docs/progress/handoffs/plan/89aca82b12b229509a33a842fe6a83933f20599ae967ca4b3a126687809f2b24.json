@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "P032 S2b isolated same-lock environment recovery after preserved dependency failure; original deadline and cumulative caps retained",
   "next_action": "Adopt exact READY, restore new private venv and validate full dependency files/imports without models; freeze child controls then run at most45 new E5 workers under parent cumulative46/2463 and original deadline1795808563.61378.",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-27T18:51:04.916172+00:00",
       "evidence": "2026-11-28 host send success to verified existing same-project dev after terminal failure turn revision538 and clean HEAD/personal-dev4576841. Exact READY f32ab2582d517301b55e3dfcc4676cf945c55d5d, recovery scope, preserved deadline and cumulative bounds delivered. ACK/adoption/completion not yet observed."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T18:51:29.418564+00:00",
+      "evidence": "2026-11-28 host revision539 observed recovery response and active turn. Dev committed adoption579b06a selects exact READY f32ab2582d517301b55e3dfcc4676cf945c55d5d; adopted-plan.json and contract_guard PASS independently read. Environment validation and actual comparison not yet complete."
     }
   ]
 }
