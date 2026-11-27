@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "sdk_and_ui_observed_wheel": "5034fa8054d8f7e0ec0b3460085bcd142c74cc4568beb5bd17336475d68e40d2",
+  "final_wheel": "967cd9179ed53ebccdd89d4522d33859bd0398bebb696d12b4075544124ce240",
+  "changed_files": [
+    "rag_package/resources/manifest.json",
+    "rag_package/resources/sample/START_HERE.md"
+  ],
+  "change": "one trailing blank line removed and corresponding resource hash; every implementation and UI byte identical",
+  "actual_tiny_sdk": "tiny-installed.json",
+  "browser": "ui-observation.json"
+}

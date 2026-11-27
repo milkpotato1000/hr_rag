@@ -1,0 +1,523 @@
+{
+  "status": "PASS",
+  "execution_kind": "tiny_random_sdk_not_pretrained",
+  "pretrained_loads": 0,
+  "network_requests": 0,
+  "owned_timeout_kill_wait": true,
+  "production_hf_adapter_fake_sdk_transport": true,
+  "conversion": {
+    "method": "tensor-only-bin-to-safetensors",
+    "tools": {
+      "torch": "2.15.0",
+      "safetensors": "0.8.0"
+    },
+    "options": {
+      "weights_only": true,
+      "map_location": "cpu",
+      "mmap": true,
+      "copy_policy": "noncontiguous_or_shared_storage_only",
+      "hash_chunk_bytes": 1048576,
+      "release_source_before_output_verification": true,
+      "format": "pt"
+    },
+    "source_weight_sha256": "746777a74cb8a4f92f6c72060cd11929522c9c1ce493d778d0e4d675a5d7f64b",
+    "output_weight_sha256": "5a5707c69a6d71f3af6977001f1aa70111809cf972474ccb0e046d020d7c7bdb",
+    "tensors": {
+      "a": {
+        "dtype": "torch.float32",
+        "shape": [
+          3,
+          4
+        ],
+        "value_sha256": "29e1889124dc651e7bb488251123910767d042ae6dc47c280ec364655e24ab49",
+        "bytes": 48
+      },
+      "b": {
+        "dtype": "torch.float32",
+        "shape": [
+          3,
+          4
+        ],
+        "value_sha256": "29e1889124dc651e7bb488251123910767d042ae6dc47c280ec364655e24ab49",
+        "bytes": 48
+      },
+      "c": {
+        "dtype": "torch.float32",
+        "shape": [
+          4,
+          3
+        ],
+        "value_sha256": "5ad8a91ce86568a3d934ee2a80909d4292384e7ca8f5b721ce930a7d377cd709",
+        "bytes": 48
+      },
+      "half": {
+        "dtype": "torch.float16",
+        "shape": [
+          2
+        ],
+        "value_sha256": "14c189f9839c32991688a046c54f8ed8c0ee044ebd25e7ef9ed19a30a788e101",
+        "bytes": 4
+      },
+      "integer": {
+        "dtype": "torch.int64",
+        "shape": [
+          2
+        ],
+        "value_sha256": "9aaf1cb23dd7db150d81055ae94f039277351b672845511330a145849b5abc5e",
+        "bytes": 16
+      },
+      "scalar": {
+        "dtype": "torch.float32",
+        "shape": [],
+        "value_sha256": "ee0a6628f97214b7ef5d15c54388ea478862369e517aa4ef4593aea18c3ff618",
+        "bytes": 4
+      },
+      "empty": {
+        "dtype": "torch.float32",
+        "shape": [
+          0
+        ],
+        "value_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    "tensor_bytes": 168,
+    "forward_calls": 0
+  },
+  "observation": {
+    "attempted_jobs": 1,
+    "workers_started": 1,
+    "worker_exited": true,
+    "completed": true,
+    "peak_rss_bytes": 206651392,
+    "rss_samples": 4,
+    "retry_count": 0,
+    "memory_precheck": {
+      "platform": "darwin",
+      "pressure": "normal"
+    },
+    "memory_latest": {
+      "platform": "darwin",
+      "pressure": "normal"
+    },
+    "elapsed_ms": 1122.3497499886435
+  },
+  "models": [
+    {
+      "model_id": "intfloat/multilingual-e5-small",
+      "role": "embedding",
+      "preparation": {
+        "schema_version": 1,
+        "status": "ready",
+        "phase": "published",
+        "plan_sha256": "a65081be51a06fb38846f7c1e243e3e7607f3dd204c840e47c17392533881c8b",
+        "execution_kind": "test_fixture",
+        "work": {
+          "download": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "conversion": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "inference_calls": 0,
+          "retry_count": 0
+        },
+        "inference": "unverified",
+        "quality": "unverified",
+        "elapsed_ms": 23.126667001633905,
+        "diagnostic_status": "saved"
+      },
+      "check": {
+        "status": "prepared",
+        "role": "embedding",
+        "model_id": "intfloat/multilingual-e5-small",
+        "revision": "cccccccccccccccccccccccccccccccccccccccc",
+        "sdk": [
+          {
+            "name": "sentence-transformers",
+            "installed_version": "6.3.0",
+            "required_version": "6.3.0",
+            "status": "available"
+          },
+          {
+            "name": "torch",
+            "installed_version": "2.15.0",
+            "required_version": "2.15.0",
+            "status": "available"
+          },
+          {
+            "name": "transformers",
+            "installed_version": "5.24.1",
+            "required_version": "5.24.1",
+            "status": "available"
+          },
+          {
+            "name": "tokenizers",
+            "installed_version": "0.23.3",
+            "required_version": "0.23.3",
+            "status": "available"
+          },
+          {
+            "name": "safetensors",
+            "installed_version": "0.8.0",
+            "required_version": "0.8.0",
+            "status": "available"
+          }
+        ],
+        "inference": "unverified",
+        "quality": "unverified",
+        "inference_calls": 0,
+        "network_requests": 0,
+        "secrets_read": 0
+      },
+      "worker": {
+        "jobs": 1,
+        "documents": 1,
+        "queries": 0,
+        "elapsed_ms": 14846.796625002753,
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "peak_rss_bytes": 451985408,
+        "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
+        "sampling_interval_ms": null,
+        "execution_kind": "local_hf",
+        "worker_exited": true
+      },
+      "profile": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/tiny/workspace/model-0/prepared/profile.json"
+    },
+    {
+      "model_id": "BAAI/bge-m3",
+      "role": "embedding",
+      "preparation": {
+        "schema_version": 1,
+        "status": "ready",
+        "phase": "published",
+        "plan_sha256": "dc4a03bf96ea1ab960dac0b8b143d2ef6c0d5c24d23d34d4760a116471a33c2a",
+        "execution_kind": "test_fixture",
+        "work": {
+          "download": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "conversion": {
+            "requested_jobs": 1,
+            "workers_started": 1,
+            "fixture_calls": 0,
+            "completed": true,
+            "attempted_jobs": 1,
+            "worker_exited": true,
+            "peak_rss_bytes": 208207872,
+            "rss_samples": 4,
+            "retry_count": 0,
+            "memory_precheck": {
+              "platform": "darwin",
+              "pressure": "normal"
+            },
+            "memory_latest": {
+              "platform": "darwin",
+              "pressure": "normal"
+            },
+            "elapsed_ms": 1102.0989999960875
+          },
+          "inference_calls": 0,
+          "retry_count": 0
+        },
+        "inference": "unverified",
+        "quality": "unverified",
+        "elapsed_ms": 1240.5061659956118,
+        "diagnostic_status": "saved"
+      },
+      "check": {
+        "status": "prepared",
+        "role": "embedding",
+        "model_id": "BAAI/bge-m3",
+        "revision": "cccccccccccccccccccccccccccccccccccccccc",
+        "sdk": [
+          {
+            "name": "sentence-transformers",
+            "installed_version": "6.3.0",
+            "required_version": "6.3.0",
+            "status": "available"
+          },
+          {
+            "name": "torch",
+            "installed_version": "2.15.0",
+            "required_version": "2.15.0",
+            "status": "available"
+          },
+          {
+            "name": "transformers",
+            "installed_version": "5.24.1",
+            "required_version": "5.24.1",
+            "status": "available"
+          },
+          {
+            "name": "tokenizers",
+            "installed_version": "0.23.3",
+            "required_version": "0.23.3",
+            "status": "available"
+          },
+          {
+            "name": "safetensors",
+            "installed_version": "0.8.0",
+            "required_version": "0.8.0",
+            "status": "available"
+          }
+        ],
+        "inference": "unverified",
+        "quality": "unverified",
+        "inference_calls": 0,
+        "network_requests": 0,
+        "secrets_read": 0
+      },
+      "worker": {
+        "jobs": 1,
+        "documents": 1,
+        "queries": 0,
+        "elapsed_ms": 3448.527832995751,
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "peak_rss_bytes": 447987712,
+        "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
+        "sampling_interval_ms": null,
+        "execution_kind": "local_hf",
+        "worker_exited": true
+      },
+      "profile": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/tiny/workspace/model-1/prepared/profile.json"
+    },
+    {
+      "model_id": "BAAI/bge-reranker-v2-m3",
+      "role": "reranker",
+      "preparation": {
+        "schema_version": 1,
+        "status": "ready",
+        "phase": "published",
+        "plan_sha256": "2373425d0bc0ae8569564a3370452c08fbeacade710d45ceb38dc23a5c01d0bd",
+        "execution_kind": "test_fixture",
+        "work": {
+          "download": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "conversion": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "inference_calls": 0,
+          "retry_count": 0
+        },
+        "inference": "unverified",
+        "quality": "unverified",
+        "elapsed_ms": 8.198458992410451,
+        "diagnostic_status": "saved"
+      },
+      "check": {
+        "status": "prepared",
+        "role": "reranker",
+        "model_id": "BAAI/bge-reranker-v2-m3",
+        "revision": "cccccccccccccccccccccccccccccccccccccccc",
+        "sdk": [
+          {
+            "name": "sentence-transformers",
+            "installed_version": "6.3.0",
+            "required_version": "6.3.0",
+            "status": "available"
+          },
+          {
+            "name": "torch",
+            "installed_version": "2.15.0",
+            "required_version": "2.15.0",
+            "status": "available"
+          },
+          {
+            "name": "transformers",
+            "installed_version": "5.24.1",
+            "required_version": "5.24.1",
+            "status": "available"
+          },
+          {
+            "name": "tokenizers",
+            "installed_version": "0.23.3",
+            "required_version": "0.23.3",
+            "status": "available"
+          },
+          {
+            "name": "safetensors",
+            "installed_version": "0.8.0",
+            "required_version": "0.8.0",
+            "status": "available"
+          }
+        ],
+        "inference": "unverified",
+        "quality": "unverified",
+        "inference_calls": 0,
+        "network_requests": 0,
+        "secrets_read": 0
+      },
+      "worker": {
+        "requested_pairs": 1,
+        "attempted_pairs": 1,
+        "pairs": 1,
+        "queries": 1,
+        "workers": 1,
+        "fixture_calls": 0,
+        "worker_exited": true,
+        "retry_count": 0,
+        "execution_kind": "local_hf",
+        "load_ms": 2780.412708001677,
+        "score_ms": 1.7779579939087853,
+        "peak_rss_bytes": 421838848,
+        "rss_method": "OS process-lifetime ru_maxrss; includes imports/load; no periodic sampling",
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "pair_tokens": [
+          7
+        ],
+        "applied_limit": 512,
+        "preprocessing_hash": "8c5dc70a664370c7b8c4b599057f60b59ec3f3557bd0516a7574113fbb8f4129",
+        "benchmark": "cold owned worker; not warm latency",
+        "elapsed_ms": 3255.38212498941
+      },
+      "profile": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/tiny/workspace/model-2/prepared/profile.json"
+    },
+    {
+      "model_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "role": "reranker",
+      "preparation": {
+        "schema_version": 1,
+        "status": "ready",
+        "phase": "published",
+        "plan_sha256": "e7265152954ec58164f97e917b77b5abceffc95eadbf268fd1c5b2d1ef36193f",
+        "execution_kind": "test_fixture",
+        "work": {
+          "download": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "conversion": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "inference_calls": 0,
+          "retry_count": 0
+        },
+        "inference": "unverified",
+        "quality": "unverified",
+        "elapsed_ms": 7.9455420054728165,
+        "diagnostic_status": "saved"
+      },
+      "check": {
+        "status": "prepared",
+        "role": "reranker",
+        "model_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+        "revision": "cccccccccccccccccccccccccccccccccccccccc",
+        "sdk": [
+          {
+            "name": "sentence-transformers",
+            "installed_version": "6.3.0",
+            "required_version": "6.3.0",
+            "status": "available"
+          },
+          {
+            "name": "torch",
+            "installed_version": "2.15.0",
+            "required_version": "2.15.0",
+            "status": "available"
+          },
+          {
+            "name": "transformers",
+            "installed_version": "5.24.1",
+            "required_version": "5.24.1",
+            "status": "available"
+          },
+          {
+            "name": "tokenizers",
+            "installed_version": "0.23.3",
+            "required_version": "0.23.3",
+            "status": "available"
+          },
+          {
+            "name": "safetensors",
+            "installed_version": "0.8.0",
+            "required_version": "0.8.0",
+            "status": "available"
+          }
+        ],
+        "inference": "unverified",
+        "quality": "unverified",
+        "inference_calls": 0,
+        "network_requests": 0,
+        "secrets_read": 0
+      },
+      "worker": {
+        "requested_pairs": 1,
+        "attempted_pairs": 1,
+        "pairs": 1,
+        "queries": 1,
+        "workers": 1,
+        "fixture_calls": 0,
+        "worker_exited": true,
+        "retry_count": 0,
+        "execution_kind": "local_hf",
+        "load_ms": 2789.307832994382,
+        "score_ms": 1.6532919980818406,
+        "peak_rss_bytes": 421789696,
+        "rss_method": "OS process-lifetime ru_maxrss; includes imports/load; no periodic sampling",
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "pair_tokens": [
+          7
+        ],
+        "applied_limit": 512,
+        "preprocessing_hash": "8c5dc70a664370c7b8c4b599057f60b59ec3f3557bd0516a7574113fbb8f4129",
+        "benchmark": "cold owned worker; not warm latency",
+        "elapsed_ms": 3261.8627089977963
+      },
+      "profile": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/tiny/workspace/model-3/prepared/profile.json"
+    }
+  ],
+  "workspace": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/tiny/workspace",
+  "sdk": {
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0",
+    "transformers": "5.24.1",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0"
+  }
+}

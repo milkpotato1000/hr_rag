@@ -1,0 +1,22 @@
+test_catalog_pinned_and_unresolved_preview_no_calls (test_model_preparation.PreparationTests.test_catalog_pinned_and_unresolved_preview_no_calls) ... ok
+test_disk_and_confirmation_preflight (test_model_preparation.PreparationTests.test_disk_and_confirmation_preflight) ... ok
+test_doctor_chunking_role_and_no_file_hash_or_network (test_model_preparation.PreparationTests.test_doctor_chunking_role_and_no_file_hash_or_network) ... ok
+test_doctor_role_checks_preserve_drive_dependency_status (test_model_preparation.PreparationTests.test_doctor_role_checks_preserve_drive_dependency_status) ... ok
+test_download_fixture_uses_same_core (test_model_preparation.PreparationTests.test_download_fixture_uses_same_core) ... ok
+test_hash_size_symlink_and_partial_download_failures (test_model_preparation.PreparationTests.test_hash_size_symlink_and_partial_download_failures) ... ok
+test_import_hashes_relative_profile_and_no_inference (test_model_preparation.PreparationTests.test_import_hashes_relative_profile_and_no_inference) ... ok
+test_incomplete_metadata_does_not_fall_back_to_packaged_ready (test_model_preparation.PreparationTests.test_incomplete_metadata_does_not_fall_back_to_packaged_ready) ... ok
+test_interrupt_and_missing_sdk_accounting (test_model_preparation.PreparationTests.test_interrupt_and_missing_sdk_accounting) ... ok
+test_linux_measurement_semantics (test_model_preparation.PreparationTests.test_linux_measurement_semantics) ... ok
+test_llm_offline_local_api_and_mixed_strict (test_model_preparation.PreparationTests.test_llm_offline_local_api_and_mixed_strict) ... ok
+test_local_inspection_deduplicated_identity_only (test_model_preparation.PreparationTests.test_local_inspection_deduplicated_identity_only) ... ok
+test_owned_worker_timeout_rss_pressure_and_exit_accounting (test_model_preparation.PreparationTests.test_owned_worker_timeout_rss_pressure_and_exit_accounting) ... ok
+test_plan_semantic_tamper_even_with_new_hash (test_model_preparation.PreparationTests.test_plan_semantic_tamper_even_with_new_hash) ... ok
+test_publication_and_journal_failure_do_not_expose_failed_ready (test_model_preparation.PreparationTests.test_publication_and_journal_failure_do_not_expose_failed_ready) ... ok
+test_real_loopback_inspection_and_failure_no_output (test_model_preparation.PreparationTests.test_real_loopback_inspection_and_failure_no_output) ... ok
+test_sidecar_ui_provenance_and_change_detection (test_model_preparation.PreparationTests.test_sidecar_ui_provenance_and_change_detection) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.711s
+
+OK

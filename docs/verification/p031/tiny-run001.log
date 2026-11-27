@@ -1,0 +1,5 @@
+W1128 02:22:22.849000 34095 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p031/tiny_sdk.py", line 11, in <module>
+    from rag_package import model_catalog as cat,model_preparation as prep,embedding,reranker
+ModuleNotFoundError: No module named 'rag_package'

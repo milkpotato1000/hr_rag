@@ -1,0 +1,16 @@
+test_catalog_pinned_and_unresolved_preview_no_calls (test_model_preparation.PreparationTests.test_catalog_pinned_and_unresolved_preview_no_calls) ... ok
+test_disk_and_confirmation_preflight (test_model_preparation.PreparationTests.test_disk_and_confirmation_preflight) ... ok
+test_doctor_chunking_role_and_no_file_hash_or_network (test_model_preparation.PreparationTests.test_doctor_chunking_role_and_no_file_hash_or_network) ... ok
+test_download_fixture_uses_same_core (test_model_preparation.PreparationTests.test_download_fixture_uses_same_core) ... ok
+test_hash_size_symlink_and_partial_download_failures (test_model_preparation.PreparationTests.test_hash_size_symlink_and_partial_download_failures) ... ok
+test_import_hashes_relative_profile_and_no_inference (test_model_preparation.PreparationTests.test_import_hashes_relative_profile_and_no_inference) ... ok
+test_interrupt_and_missing_sdk_accounting (test_model_preparation.PreparationTests.test_interrupt_and_missing_sdk_accounting) ... ok
+test_llm_offline_local_api_and_mixed_strict (test_model_preparation.PreparationTests.test_llm_offline_local_api_and_mixed_strict) ... ok
+test_local_inspection_deduplicated_identity_only (test_model_preparation.PreparationTests.test_local_inspection_deduplicated_identity_only) ... ok
+test_plan_semantic_tamper_even_with_new_hash (test_model_preparation.PreparationTests.test_plan_semantic_tamper_even_with_new_hash) ... ok
+test_publication_and_journal_failure_do_not_expose_failed_ready (test_model_preparation.PreparationTests.test_publication_and_journal_failure_do_not_expose_failed_ready) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.136s
+
+OK

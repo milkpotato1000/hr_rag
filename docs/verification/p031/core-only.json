@@ -1,0 +1,256 @@
+{
+  "status": "PASS",
+  "kind": "source_free_core_only",
+  "sdk_missing": true,
+  "commands": [
+    {
+      "args": [
+        "init",
+        "--out",
+        "workspace"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"execution_kind\": \"offline\", \"files\": 26, \"network_requests\": 0, \"secrets_read\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "model-catalog"
+      ],
+      "exit": 0,
+      "stdout": "{\"models\": [{\"model_id\": \"intfloat/multilingual-e5-small\", \"role\": \"embedding\", \"recipe_id\": \"e5-v1\", \"license\": \"MIT\", \"source\": \"https://huggingface.co/intfloat/multilingual-e5-small\", \"license_source\": \"https://huggingface.co/intfloat/multilingual-e5-small/tree/614241f622f53c4eeff9890bdc4f31cfecc418b3\", \"revision\": \"614241f622f53c4eeff9890bdc4f31cfecc418b3\", \"source_observed_at\": \"2026-11-28\", \"source_bytes\": 492795290, \"memory_requirement\": \"unmeasured\", \"conversion\": \"native-copy\", \"preparation\": \"not_prepared\", \"inference\": \"unverified\", \"quality\": \"unverified\"}, {\"model_id\": \"BAAI/bge-m3\", \"role\": \"embedding\", \"recipe_id\": \"bge-v1\", \"license\": \"MIT\", \"source\": \"https://huggingface.co/BAAI/bge-m3\", \"license_source\": \"https://huggingface.co/BAAI/bge-m3/tree/5617a9f61b028005a4858fdac845db406aefb181\", \"revision\": \"5617a9f61b028005a4858fdac845db406aefb181\", \"source_observed_at\": \"2026-11-28\", \"source_bytes\": 2293315801, \"memory_requirement\": \"unmeasured\", \"conversion\": \"tensor-only-bin-to-safetensors\", \"preparation\": \"not_prepared\", \"inference\": \"unverified\", \"quality\": \"unverified\"}, {\"model_id\": \"BAAI/bge-reranker-v2-m3\", \"role\": \"reranker\", \"recipe_id\": \"bge-reranker-v1\", \"license\": \"Apache-2.0\", \"source\": \"https://huggingface.co/BAAI/bge-reranker-v2-m3\", \"license_source\": \"https://huggingface.co/BAAI/bge-reranker-v2-m3/tree/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e\", \"revision\": \"953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e\", \"source_observed_at\": \"2026-11-28\", \"source_bytes\": 2293242108, \"memory_requirement\": \"unmeasured\", \"conversion\": \"native-copy\", \"preparation\": \"not_prepared\", \"inference\": \"unverified\", \"quality\": \"unverified\"}, {\"model_id\": \"cross-encoder/mmarco-mMiniLMv2-L12-H384-v1\", \"role\": \"reranker\", \"recipe_id\": \"mmini-reranker-v1\", \"license\": \"Apache-2.0\", \"source\": \"https://huggingface.co/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1\", \"license_source\": \"https://huggingface.co/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1/tree/1427fd652930e4ba29e8149678df786c240d8825\", \"revision\": \"1427fd652930e4ba29e8149678df786c240d8825\", \"source_observed_at\": \"2026-11-28\", \"source_bytes\": 492745974, \"memory_requirement\": \"unmeasured\", \"conversion\": \"native-copy\", \"preparation\": \"not_prepared\", \"inference\": \"unverified\", \"quality\": \"unverified\"}], \"network_requests\": 0, \"inference_calls\": 0, \"secrets_read\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "model-plan",
+        "--model",
+        "intfloat/multilingual-e5-small",
+        "--role",
+        "embedding",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/plan-0"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema_version\": 1, \"status\": \"ready\", \"origin\": \"packaged_metadata\", \"recipe_id\": \"e5-v1\", \"repo_id\": \"intfloat/multilingual-e5-small\", \"role\": \"embedding\", \"revision\": \"614241f622f53c4eeff9890bdc4f31cfecc418b3\", \"files\": [{\"path\": \"1_Pooling/config.json\", \"size\": 200, \"git_blob_oid\": \"acbd4014202bf4dbc6c03229bcbeef7c4feafb58\", \"lfs_sha256\": null}, {\"path\": \"config.json\", \"size\": 655, \"git_blob_oid\": \"60a2a84020f1d74cc53ea9e8c4e91cf4af6c2b68\", \"lfs_sha256\": null}, {\"path\": \"model.safetensors\", \"size\": 470641600, \"git_blob_oid\": \"fe4cbb2a14318b79019748874f6ca4a61a02c6f6\", \"lfs_sha256\": \"1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477\"}, {\"path\": \"modules.json\", \"size\": 387, \"git_blob_oid\": \"ac2039abdf6ff023b27c919bb9675cfe378cb10f\", \"lfs_sha256\": null}, {\"path\": \"sentence_bert_config.json\", \"size\": 57, \"git_blob_oid\": \"4eca68d85ecd3034cf4174d8a4033a75344ea62d\", \"lfs_sha256\": null}, {\"path\": \"sentencepiece.bpe.model\", \"size\": 5069051, \"git_blob_oid\": \"7a3f40a75f870bc1f21700cd414dc2acc431583c\", \"lfs_sha256\": \"cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865\"}, {\"path\": \"special_tokens_map.json\", \"size\": 167, \"git_blob_oid\": \"e0b1d18ecd0ae4ff1d47bd297d910c0cf83e504b\", \"lfs_sha256\": null}, {\"path\": \"tokenizer.json\", \"size\": 17082730, \"git_blob_oid\": \"c9b2fea3119ca8886380e5f47bffc5ea7a6e0ffa\", \"lfs_sha256\": \"0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39\"}, {\"path\": \"tokenizer_config.json\", \"size\": 443, \"git_blob_oid\": \"059214673d9d6d2ee319411e2ffec8c024b816d5\", \"lfs_sha256\": null}], \"conversion\": \"native-copy\", \"license\": \"MIT\", \"source_observed_at\": \"2026-11-28\", \"metadata_sdk\": {\"huggingface-hub\": \"2.5.0\"}, \"total_bytes\": 492795290, \"plan_sha256\": \"c7e9e1914e2d66dad0cba6f47bc0728d6534614400e8e6819008df1c44b6e77f\", \"work\": {\"metadata_jobs\": 0, \"inference_calls\": 0, \"weight_download_jobs\": 0, \"secrets_read\": 0}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "model-prepare",
+        "--plan",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/plan-0",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/prepared-0"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"reason\": \"download_confirmation_required\", \"plan_sha256\": \"c7e9e1914e2d66dad0cba6f47bc0728d6534614400e8e6819008df1c44b6e77f\", \"source_bytes\": 492795290, \"required_disk_free_bytes\": 2552127694, \"network_requests\": 0, \"inference_calls\": 0, \"artifact_written\": false}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "model-plan",
+        "--model",
+        "BAAI/bge-m3",
+        "--role",
+        "embedding",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/plan-1"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema_version\": 1, \"status\": \"ready\", \"origin\": \"packaged_metadata\", \"recipe_id\": \"bge-v1\", \"repo_id\": \"BAAI/bge-m3\", \"role\": \"embedding\", \"revision\": \"5617a9f61b028005a4858fdac845db406aefb181\", \"files\": [{\"path\": \"1_Pooling/config.json\", \"size\": 191, \"git_blob_oid\": \"9bd85925f325e25246d94c4918dc02ab98f2a1b7\", \"lfs_sha256\": null}, {\"path\": \"config.json\", \"size\": 687, \"git_blob_oid\": \"e6eda1c72da8f9dc30fdd9b69c73d35af3b7a7ad\", \"lfs_sha256\": null}, {\"path\": \"config_sentence_transformers.json\", \"size\": 123, \"git_blob_oid\": \"1fba91c78a6c8e17227058ab6d4d3acb5d8630a9\", \"lfs_sha256\": null}, {\"path\": \"modules.json\", \"size\": 349, \"git_blob_oid\": \"952a9b81c0bfd99800fabf352f69c7ccd46c5e43\", \"lfs_sha256\": null}, {\"path\": \"pytorch_model.bin\", \"size\": 2271145830, \"git_blob_oid\": \"88e71f33b1af45aa960f3fbf6883edc6f014452a\", \"lfs_sha256\": \"b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38\"}, {\"path\": \"sentence_bert_config.json\", \"size\": 54, \"git_blob_oid\": \"0140ba1eac83a3c9b857d64baba91969d988624b\", \"lfs_sha256\": null}, {\"path\": \"sentencepiece.bpe.model\", \"size\": 5069051, \"git_blob_oid\": \"7a3f40a75f870bc1f21700cd414dc2acc431583c\", \"lfs_sha256\": \"cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865\"}, {\"path\": \"special_tokens_map.json\", \"size\": 964, \"git_blob_oid\": \"b1879d702821e753ffe4245048eee415d54a9385\", \"lfs_sha256\": null}, {\"path\": \"tokenizer.json\", \"size\": 17098108, \"git_blob_oid\": \"c8fd8778874b9aa8bdafaa3bbd760f236d237dd6\", \"lfs_sha256\": \"21106b6d7dab2952c1d496fb21d5dc9db75c28ed361a05f5020bbba27810dd08\"}, {\"path\": \"tokenizer_config.json\", \"size\": 444, \"git_blob_oid\": \"dc69ac559dcba2694012009aaa108c614541789a\", \"lfs_sha256\": null}], \"conversion\": \"tensor-only-bin-to-safetensors\", \"license\": \"MIT\", \"source_observed_at\": \"2026-11-28\", \"metadata_sdk\": {\"huggingface-hub\": \"2.5.0\"}, \"total_bytes\": 2293315801, \"plan_sha256\": \"42e22a66029a53af99416527f77d6ae8455f9ab73e85abc2a215f32d96616619\", \"work\": {\"metadata_jobs\": 0, \"inference_calls\": 0, \"weight_download_jobs\": 0, \"secrets_read\": 0}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "model-prepare",
+        "--plan",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/plan-1",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/prepared-1"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"reason\": \"conversion_confirmation_required\", \"plan_sha256\": \"42e22a66029a53af99416527f77d6ae8455f9ab73e85abc2a215f32d96616619\", \"source_bytes\": 2293315801, \"required_disk_free_bytes\": 7953689227, \"network_requests\": 0, \"inference_calls\": 0, \"artifact_written\": false}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "model-plan",
+        "--model",
+        "BAAI/bge-reranker-v2-m3",
+        "--role",
+        "reranker",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/plan-2"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema_version\": 1, \"status\": \"ready\", \"origin\": \"packaged_metadata\", \"recipe_id\": \"bge-reranker-v1\", \"repo_id\": \"BAAI/bge-reranker-v2-m3\", \"role\": \"reranker\", \"revision\": \"953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e\", \"files\": [{\"path\": \"config.json\", \"size\": 795, \"git_blob_oid\": \"9f62673cb00ec41dcec8947b9ed16f6f2eb23ba2\", \"lfs_sha256\": null}, {\"path\": \"model.safetensors\", \"size\": 2271071852, \"git_blob_oid\": \"773a0a7d7cc8a010835938a3a82a87eac8b21909\", \"lfs_sha256\": \"d9e3e081faff1eefb84019509b2f5558fd74c1a05a2c7db22f74174fcedb5286\"}, {\"path\": \"sentencepiece.bpe.model\", \"size\": 5069051, \"git_blob_oid\": \"7a3f40a75f870bc1f21700cd414dc2acc431583c\", \"lfs_sha256\": \"cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865\"}, {\"path\": \"special_tokens_map.json\", \"size\": 964, \"git_blob_oid\": \"b1879d702821e753ffe4245048eee415d54a9385\", \"lfs_sha256\": null}, {\"path\": \"tokenizer.json\", \"size\": 17098273, \"git_blob_oid\": \"1c98a28b19c084901b2622d8e8b15e85eed13bff\", \"lfs_sha256\": \"69564b696052886ed0ac63fa393e928384e0f8caada38c1f4864a9bfbf379c15\"}, {\"path\": \"tokenizer_config.json\", \"size\": 1173, \"git_blob_oid\": \"328a00a9a560aadcf2a3064f917517359eb3cc26\", \"lfs_sha256\": null}], \"conversion\": \"native-copy\", \"license\": \"Apache-2.0\", \"source_observed_at\": \"2026-11-28\", \"metadata_sdk\": {\"huggingface-hub\": \"2.5.0\"}, \"total_bytes\": 2293242108, \"plan_sha256\": \"93d8d28300523702ac1e0229f90b65340e1787a74945fc76279a11f407aa9736\", \"work\": {\"metadata_jobs\": 0, \"inference_calls\": 0, \"weight_download_jobs\": 0, \"secrets_read\": 0}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "model-prepare",
+        "--plan",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/plan-2",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/prepared-2"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"reason\": \"download_confirmation_required\", \"plan_sha256\": \"93d8d28300523702ac1e0229f90b65340e1787a74945fc76279a11f407aa9736\", \"source_bytes\": 2293242108, \"required_disk_free_bytes\": 7953468148, \"network_requests\": 0, \"inference_calls\": 0, \"artifact_written\": false}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "model-plan",
+        "--model",
+        "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+        "--role",
+        "reranker",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/plan-3"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema_version\": 1, \"status\": \"ready\", \"origin\": \"packaged_metadata\", \"recipe_id\": \"mmini-reranker-v1\", \"repo_id\": \"cross-encoder/mmarco-mMiniLMv2-L12-H384-v1\", \"role\": \"reranker\", \"revision\": \"1427fd652930e4ba29e8149678df786c240d8825\", \"files\": [{\"path\": \"config.json\", \"size\": 891, \"git_blob_oid\": \"43ac97f1bef372d4f1d30a32f9a84baffcf6575d\", \"lfs_sha256\": null}, {\"path\": \"model.safetensors\", \"size\": 470592698, \"git_blob_oid\": \"28b465f76ad713413a03db9d865baa6c70449ca4\", \"lfs_sha256\": \"5daeca2481a76b5976a2bdc32f0a78532b6716da4f8cd3ff59460ef8d2f359b4\"}, {\"path\": \"sentencepiece.bpe.model\", \"size\": 5069051, \"git_blob_oid\": \"7a3f40a75f870bc1f21700cd414dc2acc431583c\", \"lfs_sha256\": \"cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865\"}, {\"path\": \"special_tokens_map.json\", \"size\": 239, \"git_blob_oid\": \"2ea7ad0e45a9d1d1591782ba7e29a703d0758831\", \"lfs_sha256\": null}, {\"path\": \"tokenizer.json\", \"size\": 17082660, \"git_blob_oid\": \"b77624b6c85b399b6d11c581617e579ce832af28\", \"lfs_sha256\": \"62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626\"}, {\"path\": \"tokenizer_config.json\", \"size\": 435, \"git_blob_oid\": \"b59159d44c6bd4b1d9f7ae4f8da028da4238e06e\", \"lfs_sha256\": null}], \"conversion\": \"native-copy\", \"license\": \"Apache-2.0\", \"source_observed_at\": \"2026-11-28\", \"metadata_sdk\": {\"huggingface-hub\": \"2.5.0\"}, \"total_bytes\": 492745974, \"plan_sha256\": \"b1f49b40478dfdd2d1980d805f2ef5eb7bda7af490b927c272c128fbfb53256b\", \"work\": {\"metadata_jobs\": 0, \"inference_calls\": 0, \"weight_download_jobs\": 0, \"secrets_read\": 0}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "model-prepare",
+        "--plan",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/plan-3",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/prepared-3"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"preview\", \"reason\": \"download_confirmation_required\", \"plan_sha256\": \"b1f49b40478dfdd2d1980d805f2ef5eb7bda7af490b927c272c128fbfb53256b\", \"source_bytes\": 492745974, \"required_disk_free_bytes\": 2551979746, \"network_requests\": 0, \"inference_calls\": 0, \"artifact_written\": false}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "llm-configure",
+        "--spec",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/llm-spec-local.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/generated-local.json"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"needs_configuration\", \"schema_version\": 2, \"roles\": {\"generation\": \"local\", \"evaluation\": \"local\", \"chunking\": \"local\"}, \"inspection\": [], \"http_requests\": 0, \"retry_count\": 0, \"secrets_read\": 0, \"generation_requests\": 0, \"evaluation_requests\": 0, \"chunking_requests\": 0, \"quality\": \"unverified\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "doctor",
+        "--llm-config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/generated-local.json"
+      ],
+      "exit": 3,
+      "stdout": "{\"schema_version\": 1, \"package\": {\"name\": \"milkpotato-rag-lab\", \"version\": \"0.1.0.dev1\"}, \"python\": {\"version\": \"3.12.14\", \"supported\": true}, \"platform\": {\"name\": \"darwin\", \"storage_supported\": true}, \"optional_dependencies\": {\"pdf\": {\"installed_version\": null, \"required_version\": \"6.21.2\", \"status\": \"missing\"}, \"drive\": {\"packages\": [{\"name\": \"google-auth-oauthlib\", \"installed_version\": null, \"required_version\": \"1.5.0\"}, {\"name\": \"google-auth\", \"installed_version\": null, \"required_version\": \"2.63.1\"}], \"status\": \"missing\"}, \"retrieval\": [{\"name\": \"sentence-transformers\", \"installed_version\": null, \"required_version\": \"6.3.0\", \"status\": \"missing\"}, {\"name\": \"torch\", \"installed_version\": null, \"required_version\": \"2.15.0\", \"status\": \"missing\"}, {\"name\": \"transformers\", \"installed_version\": null, \"required_version\": \"5.24.1\", \"status\": \"missing\"}, {\"name\": \"tokenizers\", \"installed_version\": null, \"required_version\": \"0.23.3\", \"status\": \"missing\"}, {\"name\": \"safetensors\", \"installed_version\": null, \"required_version\": \"0.8.0\", \"status\": \"missing\"}], \"preparation\": {\"name\": \"huggingface-hub\", \"installed_version\": null, \"required_version\": \"2.5.0\", \"status\": \"missing\"}}, \"config\": {\"status\": \"not_supplied\", \"reasons\": []}, \"live_checks\": \"not_checked\", \"network_requests\": 0, \"secrets_read\": 0, \"status\": \"needs_configuration\", \"role_configs\": {\"llm\": {\"status\": \"example_requires_configuration\", \"roles\": {\"generation\": \"example_requires_configuration\", \"evaluation\": \"example_requires_configuration\", \"chunking\": \"example_requires_configuration\"}}}, \"inference_calls\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "llm-configure",
+        "--spec",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/llm-spec-api.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/generated-api.json"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"needs_configuration\", \"schema_version\": 2, \"roles\": {\"generation\": \"api\", \"evaluation\": \"api\", \"chunking\": \"api\"}, \"inspection\": [], \"http_requests\": 0, \"retry_count\": 0, \"secrets_read\": 0, \"generation_requests\": 0, \"evaluation_requests\": 0, \"chunking_requests\": 0, \"quality\": \"unverified\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "doctor",
+        "--llm-config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/generated-api.json"
+      ],
+      "exit": 3,
+      "stdout": "{\"schema_version\": 1, \"package\": {\"name\": \"milkpotato-rag-lab\", \"version\": \"0.1.0.dev1\"}, \"python\": {\"version\": \"3.12.14\", \"supported\": true}, \"platform\": {\"name\": \"darwin\", \"storage_supported\": true}, \"optional_dependencies\": {\"pdf\": {\"installed_version\": null, \"required_version\": \"6.21.2\", \"status\": \"missing\"}, \"drive\": {\"packages\": [{\"name\": \"google-auth-oauthlib\", \"installed_version\": null, \"required_version\": \"1.5.0\"}, {\"name\": \"google-auth\", \"installed_version\": null, \"required_version\": \"2.63.1\"}], \"status\": \"missing\"}, \"retrieval\": [{\"name\": \"sentence-transformers\", \"installed_version\": null, \"required_version\": \"6.3.0\", \"status\": \"missing\"}, {\"name\": \"torch\", \"installed_version\": null, \"required_version\": \"2.15.0\", \"status\": \"missing\"}, {\"name\": \"transformers\", \"installed_version\": null, \"required_version\": \"5.24.1\", \"status\": \"missing\"}, {\"name\": \"tokenizers\", \"installed_version\": null, \"required_version\": \"0.23.3\", \"status\": \"missing\"}, {\"name\": \"safetensors\", \"installed_version\": null, \"required_version\": \"0.8.0\", \"status\": \"missing\"}], \"preparation\": {\"name\": \"huggingface-hub\", \"installed_version\": null, \"required_version\": \"2.5.0\", \"status\": \"missing\"}}, \"config\": {\"status\": \"not_supplied\", \"reasons\": []}, \"live_checks\": \"not_checked\", \"network_requests\": 0, \"secrets_read\": 0, \"status\": \"needs_configuration\", \"role_configs\": {\"llm\": {\"status\": \"example_requires_configuration\", \"roles\": {\"generation\": \"example_requires_configuration\", \"evaluation\": \"example_requires_configuration\", \"chunking\": \"example_requires_configuration\"}}}, \"inference_calls\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "llm-configure",
+        "--spec",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/llm-spec-mixed.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/generated-mixed.json"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"needs_configuration\", \"schema_version\": 2, \"roles\": {\"generation\": \"api\", \"evaluation\": \"api\", \"chunking\": \"local\"}, \"inspection\": [], \"http_requests\": 0, \"retry_count\": 0, \"secrets_read\": 0, \"generation_requests\": 0, \"evaluation_requests\": 0, \"chunking_requests\": 0, \"quality\": \"unverified\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "doctor",
+        "--llm-config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/generated-mixed.json"
+      ],
+      "exit": 3,
+      "stdout": "{\"schema_version\": 1, \"package\": {\"name\": \"milkpotato-rag-lab\", \"version\": \"0.1.0.dev1\"}, \"python\": {\"version\": \"3.12.14\", \"supported\": true}, \"platform\": {\"name\": \"darwin\", \"storage_supported\": true}, \"optional_dependencies\": {\"pdf\": {\"installed_version\": null, \"required_version\": \"6.21.2\", \"status\": \"missing\"}, \"drive\": {\"packages\": [{\"name\": \"google-auth-oauthlib\", \"installed_version\": null, \"required_version\": \"1.5.0\"}, {\"name\": \"google-auth\", \"installed_version\": null, \"required_version\": \"2.63.1\"}], \"status\": \"missing\"}, \"retrieval\": [{\"name\": \"sentence-transformers\", \"installed_version\": null, \"required_version\": \"6.3.0\", \"status\": \"missing\"}, {\"name\": \"torch\", \"installed_version\": null, \"required_version\": \"2.15.0\", \"status\": \"missing\"}, {\"name\": \"transformers\", \"installed_version\": null, \"required_version\": \"5.24.1\", \"status\": \"missing\"}, {\"name\": \"tokenizers\", \"installed_version\": null, \"required_version\": \"0.23.3\", \"status\": \"missing\"}, {\"name\": \"safetensors\", \"installed_version\": null, \"required_version\": \"0.8.0\", \"status\": \"missing\"}], \"preparation\": {\"name\": \"huggingface-hub\", \"installed_version\": null, \"required_version\": \"2.5.0\", \"status\": \"missing\"}}, \"config\": {\"status\": \"not_supplied\", \"reasons\": []}, \"live_checks\": \"not_checked\", \"network_requests\": 0, \"secrets_read\": 0, \"status\": \"needs_configuration\", \"role_configs\": {\"llm\": {\"status\": \"example_requires_configuration\", \"roles\": {\"generation\": \"example_requires_configuration\", \"evaluation\": \"example_requires_configuration\", \"chunking\": \"example_requires_configuration\"}}}, \"inference_calls\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "doctor",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/fixed.json",
+        "--embedding-config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/embedding-e5.json",
+        "--reranker-config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/reranker-bge.json",
+        "--chunk-config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/chunk-semantic.json"
+      ],
+      "exit": 3,
+      "stdout": "{\"schema_version\": 1, \"package\": {\"name\": \"milkpotato-rag-lab\", \"version\": \"0.1.0.dev1\"}, \"python\": {\"version\": \"3.12.14\", \"supported\": true}, \"platform\": {\"name\": \"darwin\", \"storage_supported\": true}, \"optional_dependencies\": {\"pdf\": {\"installed_version\": null, \"required_version\": \"6.21.2\", \"status\": \"missing\"}, \"drive\": {\"packages\": [{\"name\": \"google-auth-oauthlib\", \"installed_version\": null, \"required_version\": \"1.5.0\"}, {\"name\": \"google-auth\", \"installed_version\": null, \"required_version\": \"2.63.1\"}], \"status\": \"missing\"}, \"retrieval\": [{\"name\": \"sentence-transformers\", \"installed_version\": null, \"required_version\": \"6.3.0\", \"status\": \"missing\"}, {\"name\": \"torch\", \"installed_version\": null, \"required_version\": \"2.15.0\", \"status\": \"missing\"}, {\"name\": \"transformers\", \"installed_version\": null, \"required_version\": \"5.24.1\", \"status\": \"missing\"}, {\"name\": \"tokenizers\", \"installed_version\": null, \"required_version\": \"0.23.3\", \"status\": \"missing\"}, {\"name\": \"safetensors\", \"installed_version\": null, \"required_version\": \"0.8.0\", \"status\": \"missing\"}], \"preparation\": {\"name\": \"huggingface-hub\", \"installed_version\": null, \"required_version\": \"2.5.0\", \"status\": \"missing\"}}, \"config\": {\"status\": \"example_requires_configuration\", \"reasons\": [\"Set your model identity and validation_status before execute. Preview remains available.\"]}, \"live_checks\": \"not_checked\", \"network_requests\": 0, \"secrets_read\": 0, \"status\": \"needs_configuration\", \"role_configs\": {\"embedding\": {\"status\": \"example_requires_configuration\"}, \"reranker\": {\"status\": \"example_requires_configuration\"}, \"chunk\": {\"status\": \"example_requires_configuration\"}}, \"inference_calls\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "snapshot",
+        "--sources",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/sources.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/snapshot"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"snapshot\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": null, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "build",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/fixed.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/build"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"build\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 0, \"documents\": 0, \"queries\": 0}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "ask",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/build",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/fixed.json",
+        "--question",
+        "생일 휴가 자격?",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p031-installed-qkisxgr_/verify-t3yro7_s/workspace/answer"
+      ],
+      "exit": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"ask\", \"execution_kind\": \"preview\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 0, \"documents\": 0, \"queries\": 0}, \"generation_requests\": 0}\n",
+      "stderr": ""
+    }
+  ],
+  "network_calls": 0,
+  "secrets_read": 0,
+  "model_calls": 0
+}

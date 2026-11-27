@@ -1,0 +1,15 @@
+W1128 02:22:31.859000 34126 .rag-runs/p010-sdk/.venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+sysctl: sysctl fmt -1 1024 1: Operation not permitted
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p031/tiny_sdk.py", line 21, in <module>
+    r,obs=run_worker({'operation':'conversion','source':str(td/'input.bin'),'destination':str(td/'output.safetensors')},td,timeout=300)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/model_process.py", line 90, in run_worker
+    err=e if isinstance(e,RagError) else RagError('preparation_worker_failed','model_preparation');err.observation=obs;raise err from None
+                                                                                                                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/model_process.py", line 61, in run_worker
+    dependency('torch','2.15.0');dependency('safetensors','0.8.0');obs['memory_precheck']=monitor()
+                                                                                          ^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/model_process.py", line 29, in pressure
+    raise RagError('memory_observation_unavailable','model_preparation')
+rag_package.storage.RagError: memory_observation_unavailable: model_preparation
