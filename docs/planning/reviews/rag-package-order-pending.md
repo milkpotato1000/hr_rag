@@ -1,12 +1,11 @@
-# RAG package follow-up ordering — human clarification pending
+# RAG package 개발 순서 — 2026-11-28 결정 완료
 
-2026-11-27. The existing order P013/P014 -> P008 -> P010 Hybrid -> P020 reranking remains in force. P013 local model execution is explicitly held. The new package goal motivates asking whether Hybrid/reranker code and offline verification may precede the held live evaluator experiments, while preserving the hold itself.
+이 파일은 이전 미결 질문의 기록을 이어받는다. 2026-11-27에는 기존 P013/P014→P008→P010→P020 순서와 P013 보류가 충돌해 Hybrid·리랭커 오프라인 구현을 먼저 진행할지 질문했고, 답변 전에는 순서를 바꾸지 않았다.
 
-An asynchronous question was presented directly to the user in the plan chat:
+2026-11-28 사용자 직접 답변: “평가기 실험은 보류하고 Hybrid·리랭커 구현부터 진행하자. 그 순서로 플랜 반영해서 dev에 전달해줘.”
 
-1. Keep live evaluation held, but implement and verify Hybrid/reranking offline first (recommended for package progress).
-2. Preserve the existing order and finish evaluator experiments before Hybrid/reranking.
+결정: **P010 Hybrid 구현 → P020 리랭커 구현**. P010 선행은 완료된 P026/P028로 바꾸고 P029 전달된 C1~C3 코드를 사용한다. P029의 업로드 browser C4 차단을 완료로 표시하지 않으며 해당 정책 우회를 요청하지 않는다. P020은 P010 다음이며 실제 P010 출력 계약을 확인한 READY 준비 후 직접 인계한다.
 
-No answer has been observed as of this record. A preselected option or elapsed time is not authorization. Do not change the corresponding dependencies or resume P013 from this question alone. P026 generic document RAG and P027 source connector preparation are independent and continue. This is not a project-wide pause and does not invalidate the current P026 READY handoff.
+P013/P014 평가기 실험은 보류, P008 평가 UI는 후속이다. 이번 결정은 P013 grant·Qwen recovery·유료 API·실제 계정 접근을 재개하지 않는다. 사전학습 embedding/reranker의 실모델 품질·메모리 비교도 이번 오프라인 구현과 분리해 후속 실행 계약에 남긴다. 구현 fixture 통과로 전체 실사용 goal을 완료하지 않는다.
 
-When a human response arrives, record its actual scope and amend the relevant plan contracts/dependencies before exact dev adoption. Do not mark model quality or held experiments complete based on offline adapter tests.
+일반 로컬 모델/API 설정·문서 연결·선택/비교 UI 목표와 HF 공개 모델 기본 정책은 유지한다. pending 질문은 이 사용자 답변으로 해소됐으며 같은 순서 결정을 다시 묻지 않는다.

@@ -1,6 +1,6 @@
 # 공개 모델 기반 RAG 교육·구축 패키지
 
-2026-11-27 사용자 최종 목표와 후속 결정에 따른 확장 로드맵이다. 기존 HR Naive/청킹 단계는 재사용 가능한 기준선으로 보존한다. 기존 project-brief/naive-rag-roadmap의 역사적 진행 표시보다 이 문서의 새 패키지 범위와 최신 dev 증거를 우선한다. P번호별 세부 실행은 정확 채택한 계약을 따른다.
+2026-11-27 사용자 최종 목표와 2026-11-28 순서 결정에 따른 확장 로드맵이다. 최신 구현 순서는 P010 Hybrid → P020 리랭커이며 P013/P014 평가기 실험은 보류한다. 기존 HR Naive/청킹 단계는 재사용 가능한 기준선으로 보존한다. 기존 project-brief/naive-rag-roadmap의 역사적 진행 표시보다 이 문서의 새 패키지 범위와 최신 dev 증거를 우선한다. P번호별 세부 실행은 정확 채택한 계약을 따른다.
 
 ## 사용자가 완성할 흐름
 
@@ -40,14 +40,14 @@ BM25, RRF, 고정/재귀/구조 기반 청킹은 모델이 아닌 알고리즘�
 | --- | --- | --- |
 | 0 | 두 경로 학습 안내, 공통 설정 예시, 지원/미지원 표, 비교 절차 | P024 완료. 문서·예시, 모델 실행 없음 |
 | 1 | LLM provider 인터페이스와 로컬/API adapter, 설정 검증·기록 | [P025](plans/P025.md) 구현, [P026](plans/P026.md) 일반 문서→답변 통합 완료(offline 검증). offline transport 시험 → 명시적 live 실행 분리 |
-| 2 | 평가 기준선 완성 | P013 기존 성공/실패 보존. 현재 로컬 실험 보류, 명시 재개 또는 별도 승인된 대체 실행 계약 필요. P014 NLI 비교로 이어짐 |
-| 3 | 생성·평가와 청킹 비교 UI 통합 | P007/P017 완료 재사용, P008의 답변·평가 표시 연결 |
-| 4 | Dense 임베딩 모델 교체, Sparse/BM25, Hybrid RRF 비교 | P010에 모델 선택·index fingerprint 계약 확장 준비. 기존 선행 순서 유지 |
-| 5 | 리랭커 없음/있음 및 모델별 비교 | Hybrid 이후 P020. 동일 후보 집합에서 순위·지연 비교 |
+| 후속 | 평가 기준선 완성 | P013 기존 성공/실패 보존. 현재 로컬 실험 보류, 명시 재개 또는 별도 승인된 대체 실행 계약 필요. P014 NLI 비교로 이어짐 |
+| 후속 | 생성·평가와 청킹 비교 UI 통합 | P007/P017 완료 재사용, P008의 답변·평가 표시 연결 |
+| 4 | Dense 임베딩 모델 교체, Sparse/BM25, Hybrid RRF 비교 | P010 READY: P026/P028 이후 우선 구현. HF 선택·index/RRF/qrels·실행 flag·UI 계약 확정; 평가기 선행 해제 |
+| 5 | 리랭커 없음/있음 및 모델별 비교 | P010 다음 P020. 동일 후보 집합에서 off/on·복수 HF 모델 선택과 순위·지연 비교. 상세 READY 후 실행 |
 | 6 | 실제 Google Drive 문서 연결·변경 반영 | [P027](plans/P027.md) 구현/모의 검증 완료(dev41a469d). 실제 계정 E2E 미검증; 자동 sync는 후속 |
-| 7 | 공통 설정 기반 UI·CLI 통합과 설치 패키지 | [P028](plans/P028.md) 설치·독립 샘플 완료(dev28c51a5, 같은Mac 새venv3종). [P029](plans/P029.md) Drive 링크·모델 form·원문/청크/답변 비교 UI READY(P028 완료 후). 깨끗한 환경과 실제 도구 검증 범위를 구분 |
+| 7 | 공통 설정 기반 UI·CLI 통합과 설치 패키지 | [P028](plans/P028.md) 설치·독립 샘플 완료(dev28c51a5, 같은Mac 새venv3종). [P029](plans/P029.md) Drive 링크·모델 form·원문/청크/답변 UI C1~C3 전달(dev78b85c8); C4 파일 업로드 화면 관찰은 정책 거부로 미완료. 깨끗한 환경과 실제 도구 검증 범위를 구분 |
 
-완료 근거: dev의 P001~P007, P009, P011/P012, P015~P017, P019, P021~P023. P013은 전체 완료가 아니다. P014/P008/P010/P020은 후속 계약이며 로드맵 등록만으로 실행하지 않는다. 구현 순서는 의존성에 따르고 최종 사용자 화면의 단계 순서와 다를 수 있다. 모델 실험 중지와 무관한 adapter·문서·fixture 개발은 별도 READY 범위에서 진행 가능하다.
+완료 근거: dev의 P001~P007, P009, P011/P012, P015~P017, P019, P021~P023. P013은 전체 완료가 아니다. P014/P008은 보류된 평가 후속이며 P020은 P010 다음 초안이다. P010은 2026-11-28 정확 READY 채택 후 착수한다. 구현 순서는 의존성에 따르고 최종 사용자 화면의 단계 순서와 다를 수 있다. 모델 실험 중지와 무관한 adapter·문서·fixture 개발은 별도 READY 범위에서 진행 가능하다.
 
 `1. Naive RAG/`, `2. Document Chunking/` 및 독립 evaluation 모듈을 보존한다. `3. Hybrid RAG/`는 기존 계획을 따른다. 모든 세부 P마다 새 번호 폴더를 만들지 않는다. 공통 패키지로 추출할 모듈·원본 commit/hash·호환 범위는 해당 구현 카드에서 정한다. Agentic 및 A/C 프로젝트는 이 패키지 기본 완성의 필수 선행이 아니다.
 
@@ -64,13 +64,13 @@ BM25, RRF, 고정/재귀/구조 기반 청킹은 모델이 아닌 알고리즘�
 
 지원 저장소 링크와 권한을 넣고 공개 모델 또는 본인 API를 선택해 문서→답변을 실행할 수 있다. 청킹/임베딩/검색/리랭커의 지원 옵션을 바꿔 동일 데이터에서 비교 결과를 재현할 수 있다. 가짜 결과·미구현 버튼을 정상 기능처럼 노출하지 않는다. 설치 가이드, 실습 질문, 해석 방법, 제한과 실패 복구가 있고 코딩 도구 양쪽으로 같은 절차를 수행한다. 공개 저장소에 비밀키·실제 비공개 HR 문서·개인 데이터를 포함하지 않는다. main 승격은 별도 명시 요청 사항이다.
 
-P025/P026의 공통 경계와 기본 BM25 문서→답변 연결, P027 저장소 연결은 보류된 평가 모델 실행과 독립인 제품 기반 작업이다. P008 평가 UI/P010 Hybrid/P020 리랭킹의 기존 선행을 자동 해제하지 않는다. 실모델 검증 및 기능별 비교 완료가 남으면 전체 패키지를 완료로 표시하지 않는다.
+P025/P026의 공통 경계와 기본 BM25 문서→답변 연결, P027 저장소 연결은 보류된 평가 모델 실행과 독립인 제품 기반 작업이다. 2026-11-28 사용자 결정으로 P010의 P008/P014 선행은 해제하고 P020은 P010 이후로 유지한다. P008 평가 UI는 별도 후속이다. 실모델 검증 및 기능별 비교 완료가 남으면 전체 패키지를 완료로 표시하지 않는다.
 
 ## Verified increment, 2026-11-27
 
-P024 learning guide: dev 7573c934c76aef493abb6dd1648393c025288d9c. P025 independent LLM adapters/CLI: dev d7406e2b6e2c611cc741ad823d59a90bcefd6043. Both delivered to personal/dev. P025 implements real provider HTTP paths with offline verification; it does not establish live API/model success or RAG integration. P026 completed at dev/personal-dev 0252ec1731431c67172f7692b14fed7ec763821f with 36 offline tests and documented preview integration. P027 completed at dev/personal-dev 41a469dc0cae4c1cf5b963fd2da066ba443c88d4:48 offline tests, actual Drive/OAuth0. P028 completed at28c51a56866f914b1745be0c1ae40a9aa215d1ad:51 tests, installed core/extras/rebuilt probes. P029 exact adoption79958fc observed and UI implementation started. P013 model execution remains held.
+P024 learning guide: dev 7573c934c76aef493abb6dd1648393c025288d9c. P025 independent LLM adapters/CLI: dev d7406e2b6e2c611cc741ad823d59a90bcefd6043. Both delivered to personal/dev. P025 implements real provider HTTP paths with offline verification; it does not establish live API/model success or RAG integration. P026 completed at dev/personal-dev 0252ec1731431c67172f7692b14fed7ec763821f with 36 offline tests and documented preview integration. P027 completed at dev/personal-dev 41a469dc0cae4c1cf5b963fd2da066ba443c88d4:48 offline tests, actual Drive/OAuth0. P028 completed at28c51a56866f914b1745be0c1ae40a9aa215d1ad:51 tests, installed core/extras/rebuilt probes. P029 partial delivery78b85c8 observed:61 tests, C1-C3 PASS; C4 browser file upload remains blocked. P013 model execution remains held.
 
-Hybrid/리랭커 구현 순서 질문은 [미결 결정 기록](reviews/rag-package-order-pending.md)에 보존한다. 답변 전에는 P008/P010/P020 기존 선행을 유지한다.
+Hybrid/리랭커 구현 순서는 [2026-11-28 사용자 결정](reviews/rag-package-order-pending.md)으로 해소했다. P010→P020을 우선 구현하고 평가기 실험 보류는 유지한다.
 
 전체 목표의 요구별 구현/검증 상태는 [목표 증거표](reviews/rag-package-goal-evidence.md)에 기록한다. 카드 완료와 전체 목표 달성은 별개다.
 
