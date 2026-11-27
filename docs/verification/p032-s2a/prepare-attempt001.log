@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2a/prepare.py", line 50, in <module>
+    from rag_package import chunk_artifact, chunk_policy, embedding, reranker, retrieval, rag, llm
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/chunk_artifact.py", line 4, in <module>
+    from . import chunk_policy as policy,embedding,llm
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/chunk_policy.py", line 4, in <module>
+    from . import embedding,llm
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/embedding.py", line 12, in <module>
+    from .llm.config import fields, number, ValidationError, read_json as input_json
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/llm/__init__.py", line 3, in <module>
+    from .core import preview, invoke
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/llm/core.py", line 9, in <module>
+    from .transport import http_transport, TransportError
+  File "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/env/lib/python3.12/site-packages/rag_package/llm/transport.py", line 5, in <module>
+    import urllib.request
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 88, in <module>
+    import http.client
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1498, in <module>
+    import ssl
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/ssl.py", line 959, in <module>
+    class SSLSocket(socket):
+TypeError: function() argument 'code' must be code, not str

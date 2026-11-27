@@ -1,0 +1,1999 @@
+{
+  "fixed": {
+    "chunk_count": 201,
+    "unit_count": 563,
+    "lengths": [
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      256,
+      182
+    ],
+    "min": 182,
+    "max": 256,
+    "mean": 255.6318407960199,
+    "emitted_chars": 51382,
+    "unique_chars": 38582,
+    "duplicate_chars": 12800,
+    "forced_units": 0,
+    "token_count": null,
+    "token_status": "unmeasured; character/byte limits do not guarantee model context window",
+    "median": 256,
+    "p95": 256,
+    "length_histogram": {
+      "182": 1,
+      "256": 200
+    },
+    "emitted_source_coverage_chars": 38582,
+    "source_chars": 38582,
+    "excluded_whitespace_chars": 0,
+    "nonwhitespace_missing_chars": 0,
+    "page_crossing_chunks": 29,
+    "heading_crossing_chunks": 8,
+    "rule_boundary_splits": [
+      [
+        0,
+        256,
+        "fixed_size_boundary"
+      ],
+      [
+        192,
+        448,
+        "fixed_size_boundary"
+      ],
+      [
+        384,
+        640,
+        "fixed_size_boundary"
+      ],
+      [
+        576,
+        832,
+        "fixed_size_boundary"
+      ],
+      [
+        768,
+        1024,
+        "fixed_size_boundary"
+      ],
+      [
+        960,
+        1216,
+        "fixed_size_boundary"
+      ],
+      [
+        1152,
+        1408,
+        "fixed_size_boundary"
+      ],
+      [
+        1344,
+        1600,
+        "fixed_size_boundary"
+      ],
+      [
+        1536,
+        1792,
+        "fixed_size_boundary"
+      ],
+      [
+        1728,
+        1984,
+        "fixed_size_boundary"
+      ],
+      [
+        1920,
+        2176,
+        "fixed_size_boundary"
+      ],
+      [
+        2112,
+        2368,
+        "fixed_size_boundary"
+      ],
+      [
+        2304,
+        2560,
+        "fixed_size_boundary"
+      ],
+      [
+        2496,
+        2752,
+        "fixed_size_boundary"
+      ],
+      [
+        2688,
+        2944,
+        "fixed_size_boundary"
+      ],
+      [
+        2880,
+        3136,
+        "fixed_size_boundary"
+      ],
+      [
+        3072,
+        3328,
+        "fixed_size_boundary"
+      ],
+      [
+        3264,
+        3520,
+        "fixed_size_boundary"
+      ],
+      [
+        3456,
+        3712,
+        "fixed_size_boundary"
+      ],
+      [
+        3648,
+        3904,
+        "fixed_size_boundary"
+      ],
+      [
+        3840,
+        4096,
+        "fixed_size_boundary"
+      ],
+      [
+        4032,
+        4288,
+        "fixed_size_boundary"
+      ],
+      [
+        4224,
+        4480,
+        "fixed_size_boundary"
+      ],
+      [
+        4416,
+        4672,
+        "fixed_size_boundary"
+      ],
+      [
+        4608,
+        4864,
+        "fixed_size_boundary"
+      ],
+      [
+        4800,
+        5056,
+        "fixed_size_boundary"
+      ],
+      [
+        4992,
+        5248,
+        "fixed_size_boundary"
+      ],
+      [
+        5184,
+        5440,
+        "fixed_size_boundary"
+      ],
+      [
+        5376,
+        5632,
+        "fixed_size_boundary"
+      ],
+      [
+        5568,
+        5824,
+        "fixed_size_boundary"
+      ],
+      [
+        5760,
+        6016,
+        "fixed_size_boundary"
+      ],
+      [
+        5952,
+        6208,
+        "fixed_size_boundary"
+      ],
+      [
+        6144,
+        6400,
+        "fixed_size_boundary"
+      ],
+      [
+        6336,
+        6592,
+        "fixed_size_boundary"
+      ],
+      [
+        6528,
+        6784,
+        "fixed_size_boundary"
+      ],
+      [
+        6720,
+        6976,
+        "fixed_size_boundary"
+      ],
+      [
+        6912,
+        7168,
+        "fixed_size_boundary"
+      ],
+      [
+        7104,
+        7360,
+        "fixed_size_boundary"
+      ],
+      [
+        7296,
+        7552,
+        "fixed_size_boundary"
+      ],
+      [
+        7488,
+        7744,
+        "fixed_size_boundary"
+      ],
+      [
+        7680,
+        7936,
+        "fixed_size_boundary"
+      ],
+      [
+        7872,
+        8128,
+        "fixed_size_boundary"
+      ],
+      [
+        8064,
+        8320,
+        "fixed_size_boundary"
+      ],
+      [
+        8256,
+        8512,
+        "fixed_size_boundary"
+      ],
+      [
+        8448,
+        8704,
+        "fixed_size_boundary"
+      ],
+      [
+        8640,
+        8896,
+        "fixed_size_boundary"
+      ],
+      [
+        8832,
+        9088,
+        "fixed_size_boundary"
+      ],
+      [
+        9024,
+        9280,
+        "fixed_size_boundary"
+      ],
+      [
+        9216,
+        9472,
+        "fixed_size_boundary"
+      ],
+      [
+        9408,
+        9664,
+        "fixed_size_boundary"
+      ],
+      [
+        9600,
+        9856,
+        "fixed_size_boundary"
+      ],
+      [
+        9792,
+        10048,
+        "fixed_size_boundary"
+      ],
+      [
+        9984,
+        10240,
+        "fixed_size_boundary"
+      ],
+      [
+        10176,
+        10432,
+        "fixed_size_boundary"
+      ],
+      [
+        10368,
+        10624,
+        "fixed_size_boundary"
+      ],
+      [
+        10560,
+        10816,
+        "fixed_size_boundary"
+      ],
+      [
+        10752,
+        11008,
+        "fixed_size_boundary"
+      ],
+      [
+        10944,
+        11200,
+        "fixed_size_boundary"
+      ],
+      [
+        11136,
+        11392,
+        "fixed_size_boundary"
+      ],
+      [
+        11328,
+        11584,
+        "fixed_size_boundary"
+      ],
+      [
+        11520,
+        11776,
+        "fixed_size_boundary"
+      ],
+      [
+        11712,
+        11968,
+        "fixed_size_boundary"
+      ],
+      [
+        11904,
+        12160,
+        "fixed_size_boundary"
+      ],
+      [
+        12096,
+        12352,
+        "fixed_size_boundary"
+      ],
+      [
+        12288,
+        12544,
+        "fixed_size_boundary"
+      ],
+      [
+        12480,
+        12736,
+        "fixed_size_boundary"
+      ],
+      [
+        12672,
+        12928,
+        "fixed_size_boundary"
+      ],
+      [
+        12864,
+        13120,
+        "fixed_size_boundary"
+      ],
+      [
+        13056,
+        13312,
+        "fixed_size_boundary"
+      ],
+      [
+        13248,
+        13504,
+        "fixed_size_boundary"
+      ],
+      [
+        13440,
+        13696,
+        "fixed_size_boundary"
+      ],
+      [
+        13632,
+        13888,
+        "fixed_size_boundary"
+      ],
+      [
+        13824,
+        14080,
+        "fixed_size_boundary"
+      ],
+      [
+        14016,
+        14272,
+        "fixed_size_boundary"
+      ],
+      [
+        14208,
+        14464,
+        "fixed_size_boundary"
+      ],
+      [
+        14400,
+        14656,
+        "fixed_size_boundary"
+      ],
+      [
+        14592,
+        14848,
+        "fixed_size_boundary"
+      ],
+      [
+        14784,
+        15040,
+        "fixed_size_boundary"
+      ],
+      [
+        14976,
+        15232,
+        "fixed_size_boundary"
+      ],
+      [
+        15168,
+        15424,
+        "fixed_size_boundary"
+      ],
+      [
+        15360,
+        15616,
+        "fixed_size_boundary"
+      ],
+      [
+        15552,
+        15808,
+        "fixed_size_boundary"
+      ],
+      [
+        15744,
+        16000,
+        "fixed_size_boundary"
+      ],
+      [
+        15936,
+        16192,
+        "fixed_size_boundary"
+      ],
+      [
+        16128,
+        16384,
+        "fixed_size_boundary"
+      ],
+      [
+        16320,
+        16576,
+        "fixed_size_boundary"
+      ],
+      [
+        16512,
+        16768,
+        "fixed_size_boundary"
+      ],
+      [
+        16704,
+        16960,
+        "fixed_size_boundary"
+      ],
+      [
+        16896,
+        17152,
+        "fixed_size_boundary"
+      ],
+      [
+        17088,
+        17344,
+        "fixed_size_boundary"
+      ],
+      [
+        17280,
+        17536,
+        "fixed_size_boundary"
+      ],
+      [
+        17472,
+        17728,
+        "fixed_size_boundary"
+      ],
+      [
+        17664,
+        17920,
+        "fixed_size_boundary"
+      ],
+      [
+        17856,
+        18112,
+        "fixed_size_boundary"
+      ],
+      [
+        18048,
+        18304,
+        "fixed_size_boundary"
+      ],
+      [
+        18240,
+        18496,
+        "fixed_size_boundary"
+      ],
+      [
+        18432,
+        18688,
+        "fixed_size_boundary"
+      ],
+      [
+        18624,
+        18880,
+        "fixed_size_boundary"
+      ],
+      [
+        18816,
+        19072,
+        "fixed_size_boundary"
+      ],
+      [
+        19008,
+        19264,
+        "fixed_size_boundary"
+      ],
+      [
+        19200,
+        19456,
+        "fixed_size_boundary"
+      ],
+      [
+        19392,
+        19648,
+        "fixed_size_boundary"
+      ],
+      [
+        19584,
+        19840,
+        "fixed_size_boundary"
+      ],
+      [
+        19776,
+        20032,
+        "fixed_size_boundary"
+      ],
+      [
+        19968,
+        20224,
+        "fixed_size_boundary"
+      ],
+      [
+        20160,
+        20416,
+        "fixed_size_boundary"
+      ],
+      [
+        20352,
+        20608,
+        "fixed_size_boundary"
+      ],
+      [
+        20544,
+        20800,
+        "fixed_size_boundary"
+      ],
+      [
+        20736,
+        20992,
+        "fixed_size_boundary"
+      ],
+      [
+        20928,
+        21184,
+        "fixed_size_boundary"
+      ],
+      [
+        21120,
+        21376,
+        "fixed_size_boundary"
+      ],
+      [
+        21312,
+        21568,
+        "fixed_size_boundary"
+      ],
+      [
+        21504,
+        21760,
+        "fixed_size_boundary"
+      ],
+      [
+        21696,
+        21952,
+        "fixed_size_boundary"
+      ],
+      [
+        21888,
+        22144,
+        "fixed_size_boundary"
+      ],
+      [
+        22080,
+        22336,
+        "fixed_size_boundary"
+      ],
+      [
+        22272,
+        22528,
+        "fixed_size_boundary"
+      ],
+      [
+        22464,
+        22720,
+        "fixed_size_boundary"
+      ],
+      [
+        22656,
+        22912,
+        "fixed_size_boundary"
+      ],
+      [
+        22848,
+        23104,
+        "fixed_size_boundary"
+      ],
+      [
+        23040,
+        23296,
+        "fixed_size_boundary"
+      ],
+      [
+        23232,
+        23488,
+        "fixed_size_boundary"
+      ],
+      [
+        23424,
+        23680,
+        "fixed_size_boundary"
+      ],
+      [
+        23616,
+        23872,
+        "fixed_size_boundary"
+      ],
+      [
+        23808,
+        24064,
+        "fixed_size_boundary"
+      ],
+      [
+        24000,
+        24256,
+        "fixed_size_boundary"
+      ],
+      [
+        24192,
+        24448,
+        "fixed_size_boundary"
+      ],
+      [
+        24384,
+        24640,
+        "fixed_size_boundary"
+      ],
+      [
+        24576,
+        24832,
+        "fixed_size_boundary"
+      ],
+      [
+        24768,
+        25024,
+        "fixed_size_boundary"
+      ],
+      [
+        24960,
+        25216,
+        "fixed_size_boundary"
+      ],
+      [
+        25152,
+        25408,
+        "fixed_size_boundary"
+      ],
+      [
+        25344,
+        25600,
+        "fixed_size_boundary"
+      ],
+      [
+        25536,
+        25792,
+        "fixed_size_boundary"
+      ],
+      [
+        25728,
+        25984,
+        "fixed_size_boundary"
+      ],
+      [
+        25920,
+        26176,
+        "fixed_size_boundary"
+      ],
+      [
+        26112,
+        26368,
+        "fixed_size_boundary"
+      ],
+      [
+        26304,
+        26560,
+        "fixed_size_boundary"
+      ],
+      [
+        26496,
+        26752,
+        "fixed_size_boundary"
+      ],
+      [
+        26688,
+        26944,
+        "fixed_size_boundary"
+      ],
+      [
+        26880,
+        27136,
+        "fixed_size_boundary"
+      ],
+      [
+        27072,
+        27328,
+        "fixed_size_boundary"
+      ],
+      [
+        27264,
+        27520,
+        "fixed_size_boundary"
+      ],
+      [
+        27456,
+        27712,
+        "fixed_size_boundary"
+      ],
+      [
+        27648,
+        27904,
+        "fixed_size_boundary"
+      ],
+      [
+        27840,
+        28096,
+        "fixed_size_boundary"
+      ],
+      [
+        28032,
+        28288,
+        "fixed_size_boundary"
+      ],
+      [
+        28224,
+        28480,
+        "fixed_size_boundary"
+      ],
+      [
+        28416,
+        28672,
+        "fixed_size_boundary"
+      ],
+      [
+        28608,
+        28864,
+        "fixed_size_boundary"
+      ],
+      [
+        28800,
+        29056,
+        "fixed_size_boundary"
+      ],
+      [
+        28992,
+        29248,
+        "fixed_size_boundary"
+      ],
+      [
+        29184,
+        29440,
+        "fixed_size_boundary"
+      ],
+      [
+        29376,
+        29632,
+        "fixed_size_boundary"
+      ],
+      [
+        29568,
+        29824,
+        "fixed_size_boundary"
+      ],
+      [
+        29760,
+        30016,
+        "fixed_size_boundary"
+      ],
+      [
+        29952,
+        30208,
+        "fixed_size_boundary"
+      ],
+      [
+        30144,
+        30400,
+        "fixed_size_boundary"
+      ],
+      [
+        30336,
+        30592,
+        "fixed_size_boundary"
+      ],
+      [
+        30528,
+        30784,
+        "fixed_size_boundary"
+      ],
+      [
+        30720,
+        30976,
+        "fixed_size_boundary"
+      ],
+      [
+        30912,
+        31168,
+        "fixed_size_boundary"
+      ],
+      [
+        31104,
+        31360,
+        "fixed_size_boundary"
+      ],
+      [
+        31296,
+        31552,
+        "fixed_size_boundary"
+      ],
+      [
+        31488,
+        31744,
+        "fixed_size_boundary"
+      ],
+      [
+        31680,
+        31936,
+        "fixed_size_boundary"
+      ],
+      [
+        31872,
+        32128,
+        "fixed_size_boundary"
+      ],
+      [
+        32064,
+        32320,
+        "fixed_size_boundary"
+      ],
+      [
+        32256,
+        32512,
+        "fixed_size_boundary"
+      ],
+      [
+        32448,
+        32704,
+        "fixed_size_boundary"
+      ],
+      [
+        32640,
+        32896,
+        "fixed_size_boundary"
+      ],
+      [
+        32832,
+        33088,
+        "fixed_size_boundary"
+      ],
+      [
+        33024,
+        33280,
+        "fixed_size_boundary"
+      ],
+      [
+        33216,
+        33472,
+        "fixed_size_boundary"
+      ],
+      [
+        33408,
+        33664,
+        "fixed_size_boundary"
+      ],
+      [
+        33600,
+        33856,
+        "fixed_size_boundary"
+      ],
+      [
+        33792,
+        34048,
+        "fixed_size_boundary"
+      ],
+      [
+        33984,
+        34240,
+        "fixed_size_boundary"
+      ],
+      [
+        34176,
+        34432,
+        "fixed_size_boundary"
+      ],
+      [
+        34368,
+        34624,
+        "fixed_size_boundary"
+      ],
+      [
+        34560,
+        34816,
+        "fixed_size_boundary"
+      ],
+      [
+        34752,
+        35008,
+        "fixed_size_boundary"
+      ],
+      [
+        34944,
+        35200,
+        "fixed_size_boundary"
+      ],
+      [
+        35136,
+        35392,
+        "fixed_size_boundary"
+      ],
+      [
+        35328,
+        35584,
+        "fixed_size_boundary"
+      ],
+      [
+        35520,
+        35776,
+        "fixed_size_boundary"
+      ],
+      [
+        35712,
+        35968,
+        "fixed_size_boundary"
+      ],
+      [
+        35904,
+        36160,
+        "fixed_size_boundary"
+      ],
+      [
+        36096,
+        36352,
+        "fixed_size_boundary"
+      ],
+      [
+        36288,
+        36544,
+        "fixed_size_boundary"
+      ],
+      [
+        36480,
+        36736,
+        "fixed_size_boundary"
+      ],
+      [
+        36672,
+        36928,
+        "fixed_size_boundary"
+      ],
+      [
+        36864,
+        37120,
+        "fixed_size_boundary"
+      ],
+      [
+        37056,
+        37312,
+        "fixed_size_boundary"
+      ],
+      [
+        37248,
+        37504,
+        "fixed_size_boundary"
+      ],
+      [
+        37440,
+        37696,
+        "fixed_size_boundary"
+      ],
+      [
+        37632,
+        37888,
+        "fixed_size_boundary"
+      ],
+      [
+        37824,
+        38080,
+        "fixed_size_boundary"
+      ],
+      [
+        38016,
+        38272,
+        "fixed_size_boundary"
+      ],
+      [
+        38208,
+        38464,
+        "fixed_size_boundary"
+      ]
+    ],
+    "rule_boundary_split_count": 200,
+    "forced_units_note": "statistics.forced_units is diagnostic unitization, not rule chunk boundary count",
+    "chunk_fingerprint": "7d60bb23137538a1bb0447bfa29f89eb136ed11d037b17ac0f1a17707e0bc2dd",
+    "chunks_hash": "585e5f9766436c31290ee968a1a981c0b20daae3c29ce8a1b79009b59029e561"
+  },
+  "recursive": {
+    "chunk_count": 257,
+    "unit_count": 563,
+    "lengths": [
+      51,
+      242,
+      198,
+      251,
+      236,
+      180,
+      174,
+      176,
+      201,
+      203,
+      224,
+      236,
+      213,
+      250,
+      180,
+      223,
+      233,
+      190,
+      187,
+      203,
+      227,
+      178,
+      204,
+      227,
+      231,
+      210,
+      242,
+      256,
+      233,
+      179,
+      221,
+      220,
+      207,
+      247,
+      249,
+      193,
+      228,
+      167,
+      233,
+      208,
+      207,
+      216,
+      195,
+      216,
+      228,
+      208,
+      234,
+      250,
+      255,
+      194,
+      180,
+      227,
+      245,
+      233,
+      202,
+      228,
+      240,
+      238,
+      224,
+      255,
+      187,
+      194,
+      193,
+      236,
+      220,
+      196,
+      221,
+      241,
+      217,
+      223,
+      222,
+      216,
+      198,
+      251,
+      245,
+      208,
+      247,
+      177,
+      238,
+      253,
+      222,
+      224,
+      234,
+      224,
+      177,
+      183,
+      218,
+      201,
+      224,
+      246,
+      211,
+      224,
+      236,
+      184,
+      249,
+      215,
+      229,
+      196,
+      212,
+      167,
+      224,
+      229,
+      247,
+      250,
+      214,
+      225,
+      168,
+      214,
+      251,
+      176,
+      226,
+      209,
+      237,
+      185,
+      205,
+      243,
+      213,
+      221,
+      174,
+      213,
+      230,
+      219,
+      117,
+      238,
+      185,
+      234,
+      251,
+      219,
+      201,
+      197,
+      230,
+      136,
+      246,
+      213,
+      226,
+      249,
+      204,
+      195,
+      213,
+      206,
+      240,
+      204,
+      221,
+      231,
+      198,
+      234,
+      221,
+      211,
+      202,
+      198,
+      223,
+      227,
+      218,
+      242,
+      223,
+      222,
+      205,
+      239,
+      218,
+      192,
+      228,
+      238,
+      228,
+      237,
+      231,
+      238,
+      193,
+      174,
+      194,
+      194,
+      252,
+      201,
+      224,
+      219,
+      237,
+      234,
+      215,
+      171,
+      185,
+      163,
+      233,
+      239,
+      163,
+      236,
+      229,
+      231,
+      219,
+      205,
+      208,
+      200,
+      169,
+      239,
+      214,
+      188,
+      214,
+      232,
+      201,
+      206,
+      225,
+      256,
+      248,
+      250,
+      89,
+      201,
+      218,
+      185,
+      219,
+      212,
+      214,
+      214,
+      238,
+      208,
+      256,
+      238,
+      239,
+      205,
+      220,
+      198,
+      228,
+      219,
+      205,
+      223,
+      193,
+      216,
+      199,
+      221,
+      212,
+      205,
+      210,
+      191,
+      199,
+      143,
+      204,
+      197,
+      220,
+      202,
+      203,
+      246,
+      124,
+      234,
+      220,
+      192,
+      219,
+      198,
+      205,
+      256,
+      193,
+      238,
+      214,
+      219,
+      192,
+      223,
+      230,
+      219,
+      212,
+      200,
+      167
+    ],
+    "min": 51,
+    "max": 256,
+    "mean": 213.82490272373542,
+    "emitted_chars": 54953,
+    "unique_chars": 38582,
+    "duplicate_chars": 16371,
+    "forced_units": 0,
+    "token_count": null,
+    "token_status": "unmeasured; character/byte limits do not guarantee model context window",
+    "median": 218,
+    "p95": 250,
+    "length_histogram": {
+      "51": 1,
+      "89": 1,
+      "117": 1,
+      "124": 1,
+      "136": 1,
+      "143": 1,
+      "163": 2,
+      "167": 3,
+      "168": 1,
+      "169": 1,
+      "171": 1,
+      "174": 3,
+      "176": 2,
+      "177": 2,
+      "178": 1,
+      "179": 1,
+      "180": 3,
+      "183": 1,
+      "184": 1,
+      "185": 4,
+      "187": 2,
+      "188": 1,
+      "190": 1,
+      "191": 1,
+      "192": 3,
+      "193": 5,
+      "194": 4,
+      "195": 2,
+      "196": 2,
+      "197": 2,
+      "198": 6,
+      "199": 2,
+      "200": 2,
+      "201": 6,
+      "202": 3,
+      "203": 3,
+      "204": 4,
+      "205": 7,
+      "206": 2,
+      "207": 2,
+      "208": 5,
+      "209": 1,
+      "210": 2,
+      "211": 2,
+      "212": 4,
+      "213": 5,
+      "214": 7,
+      "215": 2,
+      "216": 4,
+      "217": 1,
+      "218": 4,
+      "219": 9,
+      "220": 5,
+      "221": 6,
+      "222": 3,
+      "223": 6,
+      "224": 8,
+      "225": 2,
+      "226": 2,
+      "227": 4,
+      "228": 6,
+      "229": 3,
+      "230": 3,
+      "231": 4,
+      "232": 1,
+      "233": 5,
+      "234": 6,
+      "236": 5,
+      "237": 3,
+      "238": 8,
+      "239": 4,
+      "240": 2,
+      "241": 1,
+      "242": 3,
+      "243": 1,
+      "245": 2,
+      "246": 3,
+      "247": 3,
+      "248": 1,
+      "249": 3,
+      "250": 4,
+      "251": 4,
+      "252": 1,
+      "253": 1,
+      "255": 2,
+      "256": 4
+    },
+    "emitted_source_coverage_chars": 38582,
+    "source_chars": 38582,
+    "excluded_whitespace_chars": 0,
+    "nonwhitespace_missing_chars": 0,
+    "page_crossing_chunks": 22,
+    "heading_crossing_chunks": 7,
+    "rule_boundary_splits": [],
+    "rule_boundary_split_count": 0,
+    "forced_units_note": "statistics.forced_units is diagnostic unitization, not rule chunk boundary count",
+    "chunk_fingerprint": "d976f3a835a81c473c91408bcbefcfde2926e14b972e01d0428dbcfb4bcb5cfb",
+    "chunks_hash": "05bd0c45999945e169197cc26456504e914e3573249d30de19f28d3f33bbd9ba"
+  },
+  "structure": {
+    "chunk_count": 264,
+    "unit_count": 563,
+    "lengths": [
+      101,
+      21,
+      18,
+      17,
+      17,
+      17,
+      18,
+      167,
+      251,
+      236,
+      180,
+      174,
+      176,
+      201,
+      203,
+      224,
+      236,
+      213,
+      250,
+      180,
+      223,
+      233,
+      190,
+      187,
+      203,
+      227,
+      178,
+      204,
+      227,
+      231,
+      210,
+      114,
+      178,
+      206,
+      233,
+      179,
+      221,
+      220,
+      207,
+      247,
+      249,
+      193,
+      228,
+      167,
+      233,
+      208,
+      207,
+      216,
+      195,
+      216,
+      228,
+      208,
+      234,
+      250,
+      255,
+      194,
+      180,
+      227,
+      245,
+      233,
+      202,
+      228,
+      240,
+      238,
+      224,
+      255,
+      187,
+      194,
+      193,
+      236,
+      220,
+      196,
+      221,
+      241,
+      217,
+      223,
+      222,
+      216,
+      198,
+      251,
+      245,
+      208,
+      247,
+      177,
+      174,
+      253,
+      222,
+      224,
+      234,
+      224,
+      177,
+      183,
+      218,
+      201,
+      224,
+      246,
+      211,
+      224,
+      236,
+      184,
+      249,
+      215,
+      229,
+      196,
+      212,
+      167,
+      224,
+      229,
+      247,
+      250,
+      214,
+      225,
+      168,
+      214,
+      251,
+      176,
+      226,
+      209,
+      237,
+      185,
+      205,
+      243,
+      213,
+      221,
+      174,
+      213,
+      230,
+      219,
+      117,
+      238,
+      185,
+      147,
+      162,
+      243,
+      235,
+      251,
+      230,
+      136,
+      246,
+      213,
+      226,
+      249,
+      204,
+      195,
+      213,
+      206,
+      240,
+      204,
+      221,
+      231,
+      198,
+      234,
+      221,
+      211,
+      202,
+      198,
+      223,
+      227,
+      218,
+      242,
+      223,
+      222,
+      205,
+      239,
+      218,
+      192,
+      228,
+      238,
+      130,
+      145,
+      236,
+      185,
+      238,
+      193,
+      174,
+      194,
+      194,
+      252,
+      201,
+      224,
+      219,
+      237,
+      234,
+      215,
+      171,
+      185,
+      163,
+      233,
+      239,
+      163,
+      236,
+      229,
+      231,
+      219,
+      205,
+      208,
+      200,
+      169,
+      239,
+      214,
+      188,
+      214,
+      232,
+      201,
+      206,
+      225,
+      256,
+      248,
+      250,
+      89,
+      137,
+      218,
+      185,
+      219,
+      212,
+      214,
+      214,
+      238,
+      208,
+      256,
+      238,
+      239,
+      205,
+      220,
+      198,
+      228,
+      219,
+      205,
+      223,
+      193,
+      216,
+      199,
+      221,
+      212,
+      205,
+      210,
+      191,
+      199,
+      143,
+      204,
+      197,
+      220,
+      202,
+      203,
+      246,
+      124,
+      234,
+      220,
+      192,
+      219,
+      198,
+      205,
+      256,
+      193,
+      238,
+      214,
+      219,
+      192,
+      223,
+      230,
+      219,
+      212,
+      200,
+      167
+    ],
+    "min": 17,
+    "max": 256,
+    "mean": 206.99242424242425,
+    "emitted_chars": 54646,
+    "unique_chars": 38582,
+    "duplicate_chars": 16064,
+    "forced_units": 0,
+    "token_count": null,
+    "token_status": "unmeasured; character/byte limits do not guarantee model context window",
+    "median": 215.0,
+    "p95": 250,
+    "length_histogram": {
+      "17": 3,
+      "18": 2,
+      "21": 1,
+      "89": 1,
+      "101": 1,
+      "114": 1,
+      "117": 1,
+      "124": 1,
+      "130": 1,
+      "136": 1,
+      "137": 1,
+      "143": 1,
+      "145": 1,
+      "147": 1,
+      "162": 1,
+      "163": 2,
+      "167": 4,
+      "168": 1,
+      "169": 1,
+      "171": 1,
+      "174": 4,
+      "176": 2,
+      "177": 2,
+      "178": 2,
+      "179": 1,
+      "180": 3,
+      "183": 1,
+      "184": 1,
+      "185": 5,
+      "187": 2,
+      "188": 1,
+      "190": 1,
+      "191": 1,
+      "192": 3,
+      "193": 5,
+      "194": 4,
+      "195": 2,
+      "196": 2,
+      "197": 1,
+      "198": 5,
+      "199": 2,
+      "200": 2,
+      "201": 4,
+      "202": 3,
+      "203": 3,
+      "204": 4,
+      "205": 7,
+      "206": 3,
+      "207": 2,
+      "208": 5,
+      "209": 1,
+      "210": 2,
+      "211": 2,
+      "212": 4,
+      "213": 5,
+      "214": 7,
+      "215": 2,
+      "216": 4,
+      "217": 1,
+      "218": 4,
+      "219": 8,
+      "220": 5,
+      "221": 6,
+      "222": 3,
+      "223": 6,
+      "224": 8,
+      "225": 2,
+      "226": 2,
+      "227": 4,
+      "228": 5,
+      "229": 3,
+      "230": 3,
+      "231": 3,
+      "232": 1,
+      "233": 5,
+      "234": 5,
+      "235": 1,
+      "236": 6,
+      "237": 2,
+      "238": 7,
+      "239": 4,
+      "240": 2,
+      "241": 1,
+      "242": 1,
+      "243": 2,
+      "245": 2,
+      "246": 3,
+      "247": 3,
+      "248": 1,
+      "249": 3,
+      "250": 4,
+      "251": 4,
+      "252": 1,
+      "253": 1,
+      "255": 2,
+      "256": 3
+    },
+    "emitted_source_coverage_chars": 38582,
+    "source_chars": 38582,
+    "excluded_whitespace_chars": 0,
+    "nonwhitespace_missing_chars": 0,
+    "page_crossing_chunks": 21,
+    "heading_crossing_chunks": 0,
+    "rule_boundary_splits": [],
+    "rule_boundary_split_count": 0,
+    "forced_units_note": "statistics.forced_units is diagnostic unitization, not rule chunk boundary count",
+    "chunk_fingerprint": "cfe8bda53f6e21a5af43e3e832af7deec27830177a55dd3172cc939b7c0951d9",
+    "chunks_hash": "e70020d436be23b46ed21688b0b7fb662530ebb813c88d583e0ef80ffdfd07c1"
+  }
+}

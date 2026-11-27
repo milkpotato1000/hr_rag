@@ -6,6 +6,8 @@
 
 [Hybrid 검색](hybrid.md)과 [고정 후보 리랭킹](reranking.md)은 설치 패키지·CLI/UI에 연결했습니다. 수기 fixture/tiny SDK/합성 화면을 검증했습니다. 이후 [실제 검색·리랭킹 80개 결과](live-retrieval-s1.md)를 추가했습니다. E5/BGE 검색과 두 리랭커를 고정 가상 규정집 10질문에서 비교했습니다. mMiniLM의 최초 실패와 좁은 호환 수정도 보존했습니다. 일반적인 한국어 품질·다른 문서/환경을 보장하는 결과는 아닙니다.
 
+[같은 원문의 청킹 경계 비교](chunk-boundaries-s2a.md)에서는 고정·재귀·제목/섹션의 실제 청크와 의미·LLM 방식의 미실행 preview를 구분해 봅니다. 어떤 사실이 한 청크에 담기고 어떤 사실이 두 청크를 요구하는지 확인하는 준비 단계이며, 검색 성능 비교는 후속입니다.
+
 [단계별 비교 실습](experiments.md) → [모델과 지원 상태](models-and-support.md) → [로컬 예시](examples/local.json) / [API 예시](examples/api.json) 순서로 읽으세요. 전체 후속 순서는 [채택한 패키지 로드맵](../../planning/rag-package-roadmap.md)에 있습니다.
 
 ## 같은 흐름에서 LLM만 선택하기

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "chunk",
+    "--snapshot",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2a/run001/snapshot",
+    "--config",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2a/run001/configs/fixed.json",
+    "--out",
+    "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2a/run001/chunks/fixed"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"ready\", \"chunk_fingerprint\": \"7d60bb23137538a1bb0447bfa29f89eb136ed11d037b17ac0f1a17707e0bc2dd\", \"statistics\": {\"chunk_count\": 201, \"unit_count\": 563, \"lengths\": [256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 182], \"min\": 182, \"max\": 256, \"mean\": 255.6318407960199, \"emitted_chars\": 51382, \"unique_chars\": 38582, \"duplicate_chars\": 12800, \"forced_units\": 0, \"token_count\": null, \"token_status\": \"unmeasured; character/byte limits do not guarantee model context window\"}, \"work\": {\"execution_kind\": \"offline\", \"boundary_model_jobs\": 0, \"boundary_attempts\": 0, \"unit_observation\": {}, \"requested_windows\": 0, \"dispatches\": 0, \"successful_windows\": 0, \"failed_windows\": 0, \"unknown_windows\": 0, \"retry_count\": 0, \"cost\": null, \"cost_status\": \"unmeasured\", \"unit_embedding\": null, \"usage\": {\"input_tokens\": null, \"output_tokens\": null}, \"elapsed_ms\": 0.3251669986639172}, \"invocation_path\": \"/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2a/run001/chunks/fixed.invocation-4944481377d04856b65b00ab8c7f36f7\"}\n"
+}

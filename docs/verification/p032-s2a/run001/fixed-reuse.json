@@ -1,0 +1,13 @@
+{
+  "S1_fixed_chunks_equal": true,
+  "count": 201,
+  "S1_chunks_file_sha256": "b4520cc8c7dea1067ea32672e5d1cd180c1b6630184b35f59b295b6e883fde75",
+  "new_chunks_file_sha256": "b4520cc8c7dea1067ea32672e5d1cd180c1b6630184b35f59b295b6e883fde75",
+  "interval_text_ID_pages_heading_equal": true,
+  "S1_chunk_fingerprint": "acdcd8466dae5203f4e025675dcfb7bc6593b80557a4f10090503acef243a2c8",
+  "new_frozen_chunk_fingerprint": "7d60bb23137538a1bb0447bfa29f89eb136ed11d037b17ac0f1a17707e0bc2dd",
+  "reason": "Rule chunk identity is unchanged; frozen artifact additionally includes config/unit/work/base metadata. It is a different artifact/version identity.",
+  "qrels_reused_or_modified": false,
+  "index_or_query_called": false,
+  "reuse_limit": "Source slices and original fixed baseline results can be referenced by hash. No automatic transplantation of index/query/qrels into v3 identities was performed."
+}

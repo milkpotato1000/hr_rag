@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "profiles": {
+    "answer": {
+      "mode": "api",
+      "provider": "openai_chat",
+      "model": "EXAMPLE_API_MODEL",
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "RAG_API_KEY",
+      "max_output_tokens": 1024,
+      "timeout_seconds": 120,
+      "response_mode": "json_object",
+      "identity": {
+        "requested_model": "EXAMPLE_API_MODEL",
+        "revision_pinned": false,
+        "revision": null,
+        "validation_status": "example_requires_configuration"
+      }
+    },
+    "judge": {
+      "mode": "api",
+      "provider": "openai_chat",
+      "model": "EXAMPLE_API_MODEL",
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "RAG_API_KEY",
+      "max_output_tokens": 1024,
+      "timeout_seconds": 120,
+      "response_mode": "json_object",
+      "identity": {
+        "requested_model": "EXAMPLE_API_MODEL",
+        "revision_pinned": false,
+        "revision": null,
+        "validation_status": "example_requires_configuration"
+      }
+    }
+  },
+  "roles": {
+    "generation": "answer",
+    "evaluation": "judge",
+    "chunking": "answer"
+  }
+}

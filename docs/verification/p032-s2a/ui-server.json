@@ -1,0 +1,17 @@
+{
+  "ui_url": "http://127.0.0.1:49780",
+  "report_url": "http://127.0.0.1:49782/report.html",
+  "pid": 77749,
+  "workspace": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s2a-ui-21dp17jo",
+  "artifacts": {
+    "fixed": "afb478fc90fd435fb7cb8e44d206b122",
+    "recursive": "dfcfcb163e1349509da8e8241f235d5c",
+    "structure": "058dd4d059d04a6fbef0ebc75f95a8ad",
+    "semantic": "c903495e43bd4fb9abb3136110282989",
+    "llm-local": "8d91c6ca82d347bc926e0c9ca6cfa1af",
+    "llm-api": "e8cf627d91214cc5987091c2d03cd3c3"
+  },
+  "model_execution_flags": "all off",
+  "external_network_model_calls": 0,
+  "loopback": "owned browser observation only; separate from network-free preparation"
+}

@@ -1,0 +1,92 @@
+{
+  "semantic": {
+    "exit_code": 0,
+    "result": {
+      "status": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "expected_unit_embeddings": 567,
+      "work": {
+        "execution_kind": "preview",
+        "boundary_model_jobs": 0,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 0,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 0
+      },
+      "token_count": null
+    },
+    "artifact_exists": true
+  },
+  "llm-local": {
+    "exit_code": 0,
+    "result": {
+      "status": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "expected_unit_embeddings": 0,
+      "work": {
+        "execution_kind": "preview",
+        "boundary_model_jobs": 0,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 34,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 0
+      },
+      "token_count": null
+    },
+    "artifact_exists": true
+  },
+  "llm-api": {
+    "exit_code": 0,
+    "result": {
+      "status": "preview",
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "expected_unit_embeddings": 0,
+      "work": {
+        "execution_kind": "preview",
+        "boundary_model_jobs": 0,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 34,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 0
+      },
+      "token_count": null
+    },
+    "artifact_exists": true
+  }
+}

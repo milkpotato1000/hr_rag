@@ -1,0 +1,46 @@
+{
+  "status": "estimate_only_not_execution_authorization",
+  "settings": {
+    "retrieval": "E5 Hybrid RRF",
+    "candidate_N": 20,
+    "top_K": 5,
+    "context_budget_chars": 2000,
+    "questions": 10
+  },
+  "methods": {
+    "fixed": {
+      "boundary_embedding_jobs": 0,
+      "chunk_index_jobs": 1,
+      "chunk_index_items": 201,
+      "query_jobs": 10
+    },
+    "recursive": {
+      "boundary_embedding_jobs": 0,
+      "chunk_index_jobs": 1,
+      "chunk_index_items": 257,
+      "query_jobs": 10
+    },
+    "structure": {
+      "boundary_embedding_jobs": 0,
+      "chunk_index_jobs": 1,
+      "chunk_index_items": 264,
+      "query_jobs": 10
+    }
+  },
+  "semantic": {
+    "boundary_embedding_jobs": 1,
+    "boundary_embedding_items": 567,
+    "chunk_index_jobs": 1,
+    "chunk_count": null,
+    "chunk_count_upper_bound": 567,
+    "query_jobs": 10
+  },
+  "conservative_new_embedding_jobs": 45,
+  "if_exact_old_fixed_baseline_is_reference_only_new_jobs": 34,
+  "reuse_condition": "34 excludes fixed index+10queries as a historical control, not a new v3 run. New schema identity or API reuse still needs subsequent review. No query cache or automatic cross-build reuse assumed.",
+  "llm_boundary_requests_if_authorized": 34,
+  "llm_status": "example only; actual model and execution contract pending",
+  "reranker_jobs": 0,
+  "generation_jobs": 0,
+  "actual_jobs_this_stage": 0
+}
