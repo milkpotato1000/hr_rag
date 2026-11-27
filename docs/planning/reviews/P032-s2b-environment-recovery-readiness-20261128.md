@@ -25,3 +25,8 @@ SDK import 진단은 torch가 typing_extensions를 찾지 못함을 보여준다
 실패1worker/567items를 보존하면서 새45workers/최대1896items가 필요하므로 누적 상한을46/2463으로 명시한다. 실제 비교 대상·원문·파라미터를 줄이지 않으며 추가 smoke는 없다. 원래 start1795804963.61378/deadline1795808563.61378은 변경하지 않는다. 준비900초와 추가 비교 모두 이 deadline 이내이며 만료되면 자동 연장하지 않는다. 준비 디스크8GiB/runtime2GiB, 단일CPU·300초·4GiB·pressure normal, 오류 후 추가dispatch0을 유지한다.
 
 기존 control의 hardcoded 상한을 몰래 바꾸지 않고 별도 child에서 부모 누적/원래 deadline을 검사한다. 실패 후 부모 재개가 아닌 명시 검토된 새 실행이며 원래259개 부모 파일과 중단 기록을 그대로 보존한다. 새 실패는 자동 추가 child 없이 부분 결과와 원인만 보고한다. 준비/실행/보고에 대한 완료 증거와 정상 personal/dev 전달은 필요하며, 전체P032/goal 체크를 완료로 바꾸지 않는다.
+
+
+## 복구 중 독립 설치 대조 — 2026-11-28
+
+dev의 새 환경 감사 `environment-audit.json` SHA256 `46a6e41610e8d4510a970cc72c620bf114eef61580ff0d547bc08ed5325a3dbd`를 관찰했다. plan은 해당 새 venv의 METADATA/RECORD와 원본 wheel을 표준 라이브러리로 다시 읽어 lock45개 이름·버전, hashed file24569개 내용/크기, wheel의 제품83개 파일 일치를 독립 확인했다. unhashed12200개는 존재만 확인했으며 내용 hash 검증에 포함하지 않았다. 이 감사는 모델/네트워크 호출0이다. dev의 별도 import 검사는 torch2.15.0 및 SentenceTransformer 정의 import PASS·model_instances0·차단 시도0을 기록한다. 원래 검사 오탐 실패는 별도 보존되어 있고 새 설치·모델 재시도로 숨기지 않는다. 설치 완전성 관찰이며 실제 semantic/search 결과 성공은 아직 증명하지 않는다.
