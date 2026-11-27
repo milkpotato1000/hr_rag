@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "R20261127-94452f98",
+  "request_sha256": "7ae8a32faa8faa354db61aa49beca9340dacdecdf12614a355483654cd3d9913",
+  "disposition": "linked",
+  "cards": [
+    "P032"
+  ],
+  "reason": "고정 mMiniLM revision의 결정적 position_ids buffer만 별도 검증하는 후속 계약으로 연결한다. 다른 모델/키의 일반 무시는 허용하지 않으며 실패1회를 포함한 누적73worker/500pairs와 최초2시간 deadline을 유지한다. 새 exact READY 채택과 독립 검증 후에만 continuation 실행.",
+  "review_reference": "docs/planning/reviews/P032-s1-legacy-buffer-readiness-20261128.md"
+}
