@@ -14,15 +14,15 @@
 
 canonical NFC/LF Unicode codepoint `[start,end)`를 사용한다. 단위는 각 문서에서 문단→문장 끝/제목 경계와 deterministic 긴 단위 분할을 조합하고 원문 전체를 순서대로 덮는다. unit IDs는 source/document/interval/단위화 version에 묶인다. 공백·개행을 조용히 삭제하지 않는다. heading_path/page는 원문 mapping에서 유도하고 모델이 만든 텍스트를 추가하지 않는다. unit 강제 분할·window 끝·길이 제한 경계와 모델이 고른 경계를 따로 기록한다.
 
-chunk config v1 공통은 schema_version/method/size_chars/overlap_chars, size100..4000, overlap0..min(400,size-1). 규칙3종은 기존 P026 의미와 동일하다. semantic/llm은 최종 청크 최대 size를 지키기 위해 base_max=size-overlap, unit 최대=min(400,base_max), minimum_chars1..base_max를 사용한다. post-partition left extension은 이전 base start를 넘지 않는다. fixed sliding overlap과 model-based extension 차이를 표시한다.
+chunk config v1 공통은 schema_version/method/size_chars/overlap_chars, size100..4000, overlap0..min(400,size-1). 규칙3종은 기존 P026 의미와 동일하다. semantic/llm은 최종 청크 최대 size를 지키기 위해 base_max=size-overlap을 사용한다. 두 방식의 unit_max_chars는1..min(400,base_max), 기본min(400,base_max)이며 긴 원문 단위의 상한이다. semantic의 minimum_chars는1..base_max다. unit 최대와 최종 청크 크기를 구분해 임베딩 입력 초과 시 최종 청크 크기만 강제로 줄이지 않아도 되게 한다. post-partition left extension은 이전 base start를 넘지 않는다. fixed sliding overlap과 model-based extension 차이를 표시한다.
 
-semantic 추가 필드는 embedding_config/distance_threshold(유한0..2)/minimum_chars. llm 추가 필드는 llm_config/window_max_chars(100..4000,기본1200)/window_max_units(1..40,기본20)/max_windows(1..128,기본64)/max_prompt_bytes(1024..65536,기본16384)/total_timeout_seconds(1..3600,기본1800). 적용되지 않는 필드는 거부한다. 모든 문서의 단위 수 최대5000, 모든 output chunks 최대10000. 한도가 부족하면 첫 모델 호출 전에 전체 입력을 거부하고 일부 문서만 성공한 것으로 나타내지 않는다.
+semantic 추가 필드는 unit_max_chars/embedding_config/distance_threshold(유한0..2)/minimum_chars. llm 추가 필드는 unit_max_chars/llm_config/window_max_chars(100..4000,기본1200)/window_max_units(1..40,기본20)/max_windows(1..128,기본64)/max_prompt_bytes(1024..65536,기본16384)/total_timeout_seconds(1..3600,기본1800). 적용되지 않는 필드는 거부한다. 모든 문서의 단위 수 최대5000, 모든 output chunks 최대10000. 한도가 부족하면 첫 모델 호출 전에 전체 입력을 거부하고 일부 문서만 성공한 것으로 나타내지 않는다.
 
 ## Semantic 모델과 파생
 
 P010 E5/BGE profile과 실제 encode worker를 재사용한다. 경계용 unit는 document prefix/preprocessing/길이 검사로 인코딩하고 finite/nonzero/차원·수/순서·정규화를 검증한다. unit 개수는 profile max_chunks와 본 계약 상한 중 낮은 값 이내다. 기본값을 우회해 대량 실행하지 않는다. 실제 SDK tiny 모델 시험과 주입 vector 산술 시험은 별도 증거다.
 
-semantic 알고리즘은 인접 unit의 `1-cosine` 거리이다. 현재 base 길이가 minimum_chars 이상이며 거리>=threshold이거나 다음 unit를 포함하면 base_max를 넘을 때 경계를 고른다. 거리와 각 결정 이유를 기록한다. 문서 간 거리를 계산하지 않는다. 동일 unit/model/preprocessing/SDK일 때만 저장 float32 unit vectors를 재사용한다. vectors byte hash와 순서 hash를 포함하고 dtype 정밀도로 인한 재생 결과가 달라지지 않도록 **저장 정밀도로 고정한 벡터**로 최초 경계를 계산한다. 파생 작업은 저장된 unit map/단위화 정책을 그대로 사용한다. 새 base_max가 저장 unit 하나보다 작으면 reuse 불가이며 새 단위화가 필요하다. source text 또는 모델 변경도 reuse 불가다.
+semantic 알고리즘은 인접 unit의 `1-cosine` 거리이다. 현재 base 길이가 minimum_chars 이상이며 거리>=threshold이거나 다음 unit를 포함하면 base_max를 넘을 때 경계를 고른다. 거리와 각 결정 이유를 기록한다. 문서 간 거리를 계산하지 않는다. 동일 unit/model/preprocessing/SDK일 때만 저장 float32 unit vectors를 재사용한다. vectors byte hash와 순서 hash를 포함하고 dtype 정밀도로 인한 재생 결과가 달라지지 않도록 **저장 정밀도로 고정한 벡터**로 최초 경계를 계산한다. 파생 작업은 저장된 unit map/단위화 정책을 그대로 사용한다. 새 base_max가 저장 unit 하나보다 작으면 reuse 불가이며 새 단위화가 필요하다. source text·unit_max_chars·단위화 정책 또는 모델 변경도 reuse 불가다.
 
 오버랩 파생은 unit/base 경계를 유지하고 emitted interval만 바꾼다. 모든 파생 청크가 새 size_chars 안에 들어오는지 먼저 검사하고 초과하면 derived_size_exceeded로 거부한다. 모델을 다시 불러 분할하거나 조용히 overlap을 줄이지 않는다. 사용자는 size를 늘리거나 명시 새 경계 생성을 선택한다. 파생 artifact는 parent의 unitization/base policy와 새 emission policy를 각각 기록한다. LLM derive는 source/model/prompt/window/end IDs를 바꾸지 않는 overlap 및 충분한 emission size 변경만 허용한다. Semantic derive는 저장 unit가 들어가는 범위의 base_max/minimum/threshold/overlap 변경까지 가능하고 저장 정밀도 vector로 경계를 다시 계산한다. 원 경계와 새 경계 모델 실행을 혼동하지 않는다. 새로운 청크 text/ID에는 새 검색 index가 필요하며 unit vector를 최종 chunk embedding인 것처럼 쓰지 않는다.
 

@@ -97,3 +97,5 @@ LLM window 한도는 raw 원문 글자·unit 수와 실제 prompt/JSON bytes를 
 ## 파생 크기 충돌 검토 — 2026-11-28
 
 동일 base 경계에 overlap을 추가하면 최종 size를 넘을 수 있다. 실행 계약 초안은 이를 derived_size_exceeded로 거부하고 size 확대 또는 명시 새 경계 생성으로 구분한다. 저장된 단위화 정책과 파생 emission 정책을 분리하므로 overlap만 바꿨다는 이유로 모델을 재호출하지 않는다. semantic 재생은 저장 unit가 새 base_max에 들어갈 때만 가능하며, LLM 경계/모델/prompt/window 변경은 파생으로 위장하지 않는다.
+
+단위 token 초과의 복구를 최종 청크 크기 변경과 분리하기 위해 모델 방식에 unit_max_chars를 둔다. 기본은min(400,size-overlap), 고급 설정에서 더 작게 선택 가능하며 변경 시 unit identity와 vector 캐시는 새로 만든다. 예를 들어 최종800자 청크를 유지하면서 경계 판단 단위만100자로 줄일 수 있다. 실제 token 한도 검사는 여전히 모델 tokenizer가 수행한다.
