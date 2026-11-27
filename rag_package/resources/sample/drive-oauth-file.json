@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "connector": "google_drive",
+  "url": "https://docs.google.com/document/d/REPLACE_WITH_FILE_ID/edit",
+  "auth": {
+    "mode": "oauth_file",
+    "credentials_file": "/REPLACE_WITH_PRIVATE_DIRECTORY/credentials.json"
+  }
+}

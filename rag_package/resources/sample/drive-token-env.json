@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "connector": "google_drive",
+  "url": "https://drive.google.com/file/d/REPLACE_WITH_FILE_ID/view",
+  "auth": {
+    "mode": "access_token_env",
+    "env": "RAG_DRIVE_ACCESS_TOKEN"
+  }
+}

@@ -1,0 +1,250 @@
+* Getting build dependencies for sdist...
+running egg_info
+creating milkpotato_rag_lab.egg-info
+writing milkpotato_rag_lab.egg-info/PKG-INFO
+writing dependency_links to milkpotato_rag_lab.egg-info/dependency_links.txt
+writing entry points to milkpotato_rag_lab.egg-info/entry_points.txt
+writing requirements to milkpotato_rag_lab.egg-info/requires.txt
+writing top-level names to milkpotato_rag_lab.egg-info/top_level.txt
+writing manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'
+reading manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing milkpotato_rag_lab.egg-info/PKG-INFO
+writing dependency_links to milkpotato_rag_lab.egg-info/dependency_links.txt
+writing entry points to milkpotato_rag_lab.egg-info/entry_points.txt
+writing requirements to milkpotato_rag_lab.egg-info/requires.txt
+writing top-level names to milkpotato_rag_lab.egg-info/top_level.txt
+reading manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating milkpotato_rag_lab-0.1.0.dev1
+creating milkpotato_rag_lab-0.1.0.dev1/milkpotato_rag_lab.egg-info
+creating milkpotato_rag_lab-0.1.0.dev1/rag_package
+creating milkpotato_rag_lab-0.1.0.dev1/rag_package/connectors
+creating milkpotato_rag_lab-0.1.0.dev1/rag_package/llm
+creating milkpotato_rag_lab-0.1.0.dev1/rag_package/resources
+creating milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+creating milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample/documents
+copying files to milkpotato_rag_lab-0.1.0.dev1...
+copying MANIFEST.in -> milkpotato_rag_lab-0.1.0.dev1
+copying PACKAGING.md -> milkpotato_rag_lab-0.1.0.dev1
+copying pyproject.toml -> milkpotato_rag_lab-0.1.0.dev1
+copying rag_package/__init__.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/__main__.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/_version.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/bm25.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/chunks.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/documents.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/drive_auth.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/pdf_worker.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/provenance.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/rag.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/requirements-drive.lock -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/requirements-pdf.lock -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/retrieval.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/storage.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/workspace.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package
+copying rag_package/connectors/__init__.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/connectors
+copying rag_package/connectors/drive_config.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/connectors
+copying rag_package/connectors/drive_http.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/connectors
+copying rag_package/connectors/google_drive.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/connectors
+copying rag_package/connectors/origin.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/connectors
+copying rag_package/llm/__init__.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/llm
+copying rag_package/llm/__main__.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/llm
+copying rag_package/llm/config.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/llm
+copying rag_package/llm/core.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/llm
+copying rag_package/llm/transport.py -> milkpotato_rag_lab-0.1.0.dev1/rag_package/llm
+copying rag_package/resources/manifest.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources
+copying rag_package/resources/sample/.gitignore -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/START_HERE.md -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/drive-oauth-file.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/drive-token-env.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/fixed.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/llm-api.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/llm-local.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/questions.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/recursive.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/sources.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/structure.json -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample
+copying rag_package/resources/sample/documents/annual.txt -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample/documents
+copying rag_package/resources/sample/documents/birthday.md -> milkpotato_rag_lab-0.1.0.dev1/rag_package/resources/sample/documents
+copying milkpotato_rag_lab.egg-info/SOURCES.txt -> milkpotato_rag_lab-0.1.0.dev1/milkpotato_rag_lab.egg-info
+Writing milkpotato_rag_lab-0.1.0.dev1/setup.cfg
+Creating tar archive
+removing 'milkpotato_rag_lab-0.1.0.dev1' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing milkpotato_rag_lab.egg-info/PKG-INFO
+writing dependency_links to milkpotato_rag_lab.egg-info/dependency_links.txt
+writing entry points to milkpotato_rag_lab.egg-info/entry_points.txt
+writing requirements to milkpotato_rag_lab.egg-info/requires.txt
+writing top-level names to milkpotato_rag_lab.egg-info/top_level.txt
+reading manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/rag_package
+copying rag_package/bm25.py -> build/lib/rag_package
+copying rag_package/_version.py -> build/lib/rag_package
+copying rag_package/documents.py -> build/lib/rag_package
+copying rag_package/__init__.py -> build/lib/rag_package
+copying rag_package/pdf_worker.py -> build/lib/rag_package
+copying rag_package/rag.py -> build/lib/rag_package
+copying rag_package/storage.py -> build/lib/rag_package
+copying rag_package/retrieval.py -> build/lib/rag_package
+copying rag_package/workspace.py -> build/lib/rag_package
+copying rag_package/drive_auth.py -> build/lib/rag_package
+copying rag_package/__main__.py -> build/lib/rag_package
+copying rag_package/chunks.py -> build/lib/rag_package
+creating build/lib/rag_package/llm
+copying rag_package/llm/config.py -> build/lib/rag_package/llm
+copying rag_package/llm/transport.py -> build/lib/rag_package/llm
+copying rag_package/llm/__init__.py -> build/lib/rag_package/llm
+copying rag_package/llm/core.py -> build/lib/rag_package/llm
+copying rag_package/llm/__main__.py -> build/lib/rag_package/llm
+creating build/lib/rag_package/connectors
+copying rag_package/connectors/__init__.py -> build/lib/rag_package/connectors
+copying rag_package/connectors/drive_http.py -> build/lib/rag_package/connectors
+copying rag_package/connectors/drive_config.py -> build/lib/rag_package/connectors
+copying rag_package/connectors/google_drive.py -> build/lib/rag_package/connectors
+copying rag_package/connectors/origin.py -> build/lib/rag_package/connectors
+copying rag_package/provenance.json -> build/lib/rag_package
+copying rag_package/requirements-pdf.lock -> build/lib/rag_package
+copying rag_package/requirements-drive.lock -> build/lib/rag_package
+creating build/lib/rag_package/resources
+copying rag_package/resources/manifest.json -> build/lib/rag_package/resources
+creating build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/sources.json -> build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/questions.json -> build/lib/rag_package/resources/sample
+creating build/lib/rag_package/resources/sample/documents
+copying rag_package/resources/sample/documents/birthday.md -> build/lib/rag_package/resources/sample/documents
+copying rag_package/resources/sample/documents/annual.txt -> build/lib/rag_package/resources/sample/documents
+copying rag_package/resources/sample/fixed.json -> build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/recursive.json -> build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/structure.json -> build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/llm-local.json -> build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/llm-api.json -> build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/drive-token-env.json -> build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/drive-oauth-file.json -> build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/.gitignore -> build/lib/rag_package/resources/sample
+copying rag_package/resources/sample/START_HERE.md -> build/lib/rag_package/resources/sample
+installing to build/bdist.macosx-11.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-11.0-arm64/wheel
+creating build/bdist.macosx-11.0-arm64/wheel/rag_package
+copying build/lib/rag_package/bm25.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+creating build/bdist.macosx-11.0-arm64/wheel/rag_package/connectors
+copying build/lib/rag_package/connectors/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors
+copying build/lib/rag_package/connectors/drive_http.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors
+copying build/lib/rag_package/connectors/drive_config.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors
+copying build/lib/rag_package/connectors/google_drive.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors
+copying build/lib/rag_package/connectors/origin.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors
+creating build/bdist.macosx-11.0-arm64/wheel/rag_package/llm
+copying build/lib/rag_package/llm/config.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm
+copying build/lib/rag_package/llm/transport.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm
+copying build/lib/rag_package/llm/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm
+copying build/lib/rag_package/llm/core.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm
+copying build/lib/rag_package/llm/__main__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm
+copying build/lib/rag_package/provenance.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/_version.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/documents.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+creating build/bdist.macosx-11.0-arm64/wheel/rag_package/resources
+copying build/lib/rag_package/resources/manifest.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources
+creating build/bdist.macosx-11.0-arm64/wheel/rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/sources.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/recursive.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/START_HERE.md -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/fixed.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/llm-local.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/questions.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/structure.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/.gitignore -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/drive-token-env.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/resources/sample/llm-api.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+creating build/bdist.macosx-11.0-arm64/wheel/rag_package/resources/sample/documents
+copying build/lib/rag_package/resources/sample/documents/birthday.md -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample/documents
+copying build/lib/rag_package/resources/sample/documents/annual.txt -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample/documents
+copying build/lib/rag_package/resources/sample/drive-oauth-file.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample
+copying build/lib/rag_package/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/requirements-drive.lock -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/pdf_worker.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/rag.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/storage.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/retrieval.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/workspace.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/drive_auth.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/requirements-pdf.lock -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/__main__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+copying build/lib/rag_package/chunks.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package
+running install_egg_info
+running egg_info
+writing milkpotato_rag_lab.egg-info/PKG-INFO
+writing dependency_links to milkpotato_rag_lab.egg-info/dependency_links.txt
+writing entry points to milkpotato_rag_lab.egg-info/entry_points.txt
+writing requirements to milkpotato_rag_lab.egg-info/requires.txt
+writing top-level names to milkpotato_rag_lab.egg-info/top_level.txt
+reading manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'
+Copying milkpotato_rag_lab.egg-info to build/bdist.macosx-11.0-arm64/wheel/./milkpotato_rag_lab-0.1.0.dev1-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-11.0-arm64/wheel/milkpotato_rag_lab-0.1.0.dev1.dist-info/WHEEL
+creating '/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/dist/.tmp-s_5baw9r/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl' and adding 'build/bdist.macosx-11.0-arm64/wheel' to it
+adding 'rag_package/__init__.py'
+adding 'rag_package/__main__.py'
+adding 'rag_package/_version.py'
+adding 'rag_package/bm25.py'
+adding 'rag_package/chunks.py'
+adding 'rag_package/documents.py'
+adding 'rag_package/drive_auth.py'
+adding 'rag_package/pdf_worker.py'
+adding 'rag_package/provenance.json'
+adding 'rag_package/rag.py'
+adding 'rag_package/requirements-drive.lock'
+adding 'rag_package/requirements-pdf.lock'
+adding 'rag_package/retrieval.py'
+adding 'rag_package/storage.py'
+adding 'rag_package/workspace.py'
+adding 'rag_package/connectors/__init__.py'
+adding 'rag_package/connectors/drive_config.py'
+adding 'rag_package/connectors/drive_http.py'
+adding 'rag_package/connectors/google_drive.py'
+adding 'rag_package/connectors/origin.py'
+adding 'rag_package/llm/__init__.py'
+adding 'rag_package/llm/__main__.py'
+adding 'rag_package/llm/config.py'
+adding 'rag_package/llm/core.py'
+adding 'rag_package/llm/transport.py'
+adding 'rag_package/resources/manifest.json'
+adding 'rag_package/resources/sample/.gitignore'
+adding 'rag_package/resources/sample/START_HERE.md'
+adding 'rag_package/resources/sample/drive-oauth-file.json'
+adding 'rag_package/resources/sample/drive-token-env.json'
+adding 'rag_package/resources/sample/fixed.json'
+adding 'rag_package/resources/sample/llm-api.json'
+adding 'rag_package/resources/sample/llm-local.json'
+adding 'rag_package/resources/sample/questions.json'
+adding 'rag_package/resources/sample/recursive.json'
+adding 'rag_package/resources/sample/sources.json'
+adding 'rag_package/resources/sample/structure.json'
+adding 'rag_package/resources/sample/documents/annual.txt'
+adding 'rag_package/resources/sample/documents/birthday.md'
+adding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/METADATA'
+adding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/WHEEL'
+adding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/entry_points.txt'
+adding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/top_level.txt'
+adding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/RECORD'
+removing build/bdist.macosx-11.0-arm64/wheel
+Successfully built milkpotato_rag_lab-0.1.0.dev1.tar.gz and milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl

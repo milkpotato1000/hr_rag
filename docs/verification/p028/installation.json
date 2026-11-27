@@ -1,0 +1,138 @@
+{
+  "base": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft",
+  "commands": [
+    {
+      "args": [
+        "uv",
+        "venv",
+        "--python",
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/.venv/bin/python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/core"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using CPython 3.12.14 interpreter at: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/.venv/bin/python\nCreating virtual environment at: core\nActivate with: source core/bin/activate\n"
+    },
+    {
+      "args": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/core/bin/python",
+        "--no-deps",
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: core\nResolved 1 package in 1ms\nPrepared 1 package in 5ms\nInstalled 1 package in 3ms\n + milkpotato-rag-lab==0.1.0.dev1 (from file:///Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl)\n"
+    },
+    {
+      "args": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/core/bin/python"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: core\nChecked 1 package in 0.56ms\nAll installed packages are compatible\n"
+    },
+    {
+      "args": [
+        "uv",
+        "venv",
+        "--python",
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/.venv/bin/python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/extras"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using CPython 3.12.14 interpreter at: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/.venv/bin/python\nCreating virtual environment at: extras\nActivate with: source extras/bin/activate\n"
+    },
+    {
+      "args": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/extras/bin/python",
+        "--index-url",
+        "https://pypi.org/simple",
+        "--require-hashes",
+        "-r",
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/requirements-pdf.lock",
+        "-r",
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/requirements-drive.lock"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: extras\nResolved 15 packages in 79ms\nInstalled 15 packages in 18ms\n + certifi==2026.11.20\n + cffi==2.1.1\n + charset-normalizer==3.5.3\n + cryptography==50.0.2\n + google-auth==2.63.1\n + google-auth-oauthlib==1.5.0\n + idna==3.20\n + oauthlib==4.0.1\n + pyasn1==0.6.5\n + pyasn1-modules==0.4.2\n + pycparser==3.12\n + pypdf==6.21.2\n + requests==2.34.2\n + requests-oauthlib==2.0.0\n + urllib3==2.8.0\n"
+    },
+    {
+      "args": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/extras/bin/python",
+        "--no-deps",
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: extras\nResolved 1 package in 0.69ms\nInstalled 1 package in 2ms\n + milkpotato-rag-lab==0.1.0.dev1 (from file:///Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl)\n"
+    },
+    {
+      "args": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/extras/bin/python"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: extras\nChecked 16 packages in 0.48ms\nAll installed packages are compatible\n"
+    },
+    {
+      "args": [
+        "uv",
+        "venv",
+        "--python",
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/.venv/bin/python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using CPython 3.12.14 interpreter at: /Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/.venv/bin/python\nCreating virtual environment at: rebuilt\nActivate with: source rebuilt/bin/activate\n"
+    },
+    {
+      "args": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt/bin/python",
+        "--no-deps",
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: rebuilt\nResolved 1 package in 0.77ms\nInstalled 1 package in 2ms\n + milkpotato-rag-lab==0.1.0.dev1 (from file:///Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl)\n"
+    },
+    {
+      "args": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt/bin/python"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: rebuilt\nChecked 1 package in 0.34ms\nAll installed packages are compatible\n"
+    }
+  ]
+}

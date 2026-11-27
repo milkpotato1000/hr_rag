@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "modules": [
+    "rag_package/__init__.py",
+    "rag_package/__main__.py",
+    "rag_package/_version.py",
+    "rag_package/bm25.py",
+    "rag_package/chunks.py",
+    "rag_package/connectors/__init__.py",
+    "rag_package/connectors/drive_config.py",
+    "rag_package/connectors/drive_http.py",
+    "rag_package/connectors/google_drive.py",
+    "rag_package/connectors/origin.py",
+    "rag_package/documents.py",
+    "rag_package/drive_auth.py",
+    "rag_package/llm/__init__.py",
+    "rag_package/llm/__main__.py",
+    "rag_package/llm/config.py",
+    "rag_package/llm/core.py",
+    "rag_package/llm/transport.py",
+    "rag_package/pdf_worker.py",
+    "rag_package/rag.py",
+    "rag_package/retrieval.py",
+    "rag_package/storage.py",
+    "rag_package/workspace.py"
+  ],
+  "resources": [
+    "rag_package/provenance.json",
+    "rag_package/requirements-pdf.lock",
+    "rag_package/requirements-drive.lock",
+    "rag_package/resources/manifest.json",
+    "rag_package/resources/sample/sources.json",
+    "rag_package/resources/sample/questions.json",
+    "rag_package/resources/sample/documents/birthday.md",
+    "rag_package/resources/sample/documents/annual.txt",
+    "rag_package/resources/sample/fixed.json",
+    "rag_package/resources/sample/recursive.json",
+    "rag_package/resources/sample/structure.json",
+    "rag_package/resources/sample/llm-local.json",
+    "rag_package/resources/sample/llm-api.json",
+    "rag_package/resources/sample/drive-token-env.json",
+    "rag_package/resources/sample/drive-oauth-file.json",
+    "rag_package/resources/sample/.gitignore",
+    "rag_package/resources/sample/START_HERE.md"
+  ],
+  "sdist_extra": [
+    "pyproject.toml",
+    "MANIFEST.in",
+    "PACKAGING.md"
+  ]
+}

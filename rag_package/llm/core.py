@@ -164,10 +164,17 @@ def verify_digest(p, send):
         raise TransportError('model_identity_mismatch')
 
 
+def configuration_required(profile):
+    return profile['identity'].get('validation_status')=='example_requires_configuration' or profile['model'].startswith('EXAMPLE_')
+
+
 def invoke(config, role, messages, *, transport=None, key_resolver=None):
     request=preview(config,role,messages)
     p=config['profiles'][config['roles'][role]]
     result=result_base(p,role,request)
+    if configuration_required(p):
+        result['error']={'code':'configuration_required','phase':'preflight'}
+        return result
     send=transport if transport is not None else http_transport
     resolver=key_resolver if key_resolver is not None else os.environ.get
     start=time.monotonic()

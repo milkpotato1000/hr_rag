@@ -7,13 +7,18 @@ from ..storage import RagError,require
 
 SCOPE='https://www.googleapis.com/auth/drive.readonly'
 REPO=Path(__file__).resolve().parents[2]
-WORKSPACE=REPO.parent if REPO.name in ('hr_rag_dev','hr_rag_plan','hr_rag_main') else REPO
+WORKSPACE=(REPO.parent if REPO.name in ('hr_rag_dev','hr_rag_plan','hr_rag_main') else REPO) if (REPO/'.git').exists() else None
 
 
-def credential_path(path):
+def credential_path(path,workspace=None):
     require(isinstance(path,str) and path.strip() and not any(ord(c)<32 for c in path),'invalid_credential_path','auth')
     p=Path(path)
-    require(p.is_absolute() and '..' not in p.parts and not p.is_relative_to(WORKSPACE),'credential_must_be_outside_repository','auth')
+    require(p.is_absolute() and '..' not in p.parts,'credential_must_be_outside_repository','auth')
+    current=Path(workspace).resolve() if workspace is not None else Path.cwd().resolve()
+    if current.name in ('hr_rag_dev','hr_rag_plan','hr_rag_main') and (current/'.git').exists():current=current.parent
+    boundaries=[current]+([WORKSPACE.resolve()] if WORKSPACE is not None else [])
+    require(not any(p.is_relative_to(b) or p.resolve().is_relative_to(b) for b in boundaries),'credential_must_be_outside_repository','auth')
+    require(not any((parent/'.git').exists() or (parent/'.git').is_symlink() for parent in [p.parent,*p.parent.parents]),'credential_must_be_outside_repository','auth')
     return p
 
 

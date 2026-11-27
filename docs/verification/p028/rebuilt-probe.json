@@ -1,0 +1,222 @@
+{
+  "mode": "rebuilt",
+  "status": "PASS",
+  "import_path": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt/lib/python3.12/site-packages/rag_package/__init__.py",
+  "package_version": "0.1.0.dev1",
+  "doctor": {
+    "schema_version": 1,
+    "package": {
+      "name": "milkpotato-rag-lab",
+      "version": "0.1.0.dev1"
+    },
+    "python": {
+      "version": "3.12.14",
+      "supported": true
+    },
+    "platform": {
+      "name": "darwin",
+      "storage_supported": true
+    },
+    "optional_dependencies": {
+      "pdf": {
+        "installed_version": null,
+        "required_version": "6.21.2",
+        "status": "missing"
+      },
+      "drive": {
+        "packages": [
+          {
+            "name": "google-auth-oauthlib",
+            "installed_version": null,
+            "required_version": "1.5.0"
+          },
+          {
+            "name": "google-auth",
+            "installed_version": null,
+            "required_version": "2.63.1"
+          }
+        ],
+        "status": "missing"
+      }
+    },
+    "config": {
+      "status": "not_supplied",
+      "reasons": []
+    },
+    "live_checks": "not_checked",
+    "network_requests": 0,
+    "secrets_read": 0,
+    "status": "ready_for_offline"
+  },
+  "comparison_rows": 9,
+  "network_requests": 0,
+  "secret_reads": 0,
+  "calls": [
+    {
+      "args": [
+        "doctor"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"schema_version\": 1, \"package\": {\"name\": \"milkpotato-rag-lab\", \"version\": \"0.1.0.dev1\"}, \"python\": {\"version\": \"3.12.14\", \"supported\": true}, \"platform\": {\"name\": \"darwin\", \"storage_supported\": true}, \"optional_dependencies\": {\"pdf\": {\"installed_version\": null, \"required_version\": \"6.21.2\", \"status\": \"missing\"}, \"drive\": {\"packages\": [{\"name\": \"google-auth-oauthlib\", \"installed_version\": null, \"required_version\": \"1.5.0\"}, {\"name\": \"google-auth\", \"installed_version\": null, \"required_version\": \"2.63.1\"}], \"status\": \"missing\"}}, \"config\": {\"status\": \"not_supplied\", \"reasons\": []}, \"live_checks\": \"not_checked\", \"network_requests\": 0, \"secrets_read\": 0, \"status\": \"ready_for_offline\"}\n"
+    },
+    {
+      "args": [
+        "init",
+        "--out",
+        "rebuilt-sample-1fbe6909"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"execution_kind\": \"offline\", \"files\": 13, \"network_requests\": 0, \"secrets_read\": 0}\n"
+    },
+    {
+      "args": [
+        "init",
+        "--out",
+        "rebuilt-sample-1fbe6909"
+      ],
+      "exit_code": 2,
+      "stdout": "{\"status\": \"error\", \"error\": {\"code\": \"output_exists\", \"stage\": \"publish\"}, \"dispatch_attempted\": false, \"requests\": 0, \"request_stages\": [], \"auth_refresh_attempted\": false}\n"
+    },
+    {
+      "args": [
+        "doctor",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/fixed.json"
+      ],
+      "exit_code": 3,
+      "stdout": "{\"schema_version\": 1, \"package\": {\"name\": \"milkpotato-rag-lab\", \"version\": \"0.1.0.dev1\"}, \"python\": {\"version\": \"3.12.14\", \"supported\": true}, \"platform\": {\"name\": \"darwin\", \"storage_supported\": true}, \"optional_dependencies\": {\"pdf\": {\"installed_version\": null, \"required_version\": \"6.21.2\", \"status\": \"missing\"}, \"drive\": {\"packages\": [{\"name\": \"google-auth-oauthlib\", \"installed_version\": null, \"required_version\": \"1.5.0\"}, {\"name\": \"google-auth\", \"installed_version\": null, \"required_version\": \"2.63.1\"}], \"status\": \"missing\"}}, \"config\": {\"status\": \"example_requires_configuration\", \"reasons\": [\"Set your model identity and validation_status before execute. Preview remains available.\"]}, \"live_checks\": \"not_checked\", \"network_requests\": 0, \"secrets_read\": 0, \"status\": \"needs_configuration\"}\n"
+    },
+    {
+      "args": [
+        "snapshot",
+        "--sources",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/sources.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/snapshot"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"snapshot\", \"execution_kind\": \"offline\", \"artifact_written\": true}\n"
+    },
+    {
+      "args": [
+        "build",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/fixed.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/fixed"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"build\", \"execution_kind\": \"offline\", \"artifact_written\": true}\n"
+    },
+    {
+      "args": [
+        "ask",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/fixed",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/fixed.json",
+        "--question",
+        "생일 휴가 자격은?",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/answer-fixed"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"ask\", \"execution_kind\": \"preview\", \"artifact_written\": true}\n"
+    },
+    {
+      "args": [
+        "build",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/recursive.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/recursive"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"build\", \"execution_kind\": \"offline\", \"artifact_written\": true}\n"
+    },
+    {
+      "args": [
+        "ask",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/recursive",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/recursive.json",
+        "--question",
+        "생일 휴가 자격은?",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/answer-recursive"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"ask\", \"execution_kind\": \"preview\", \"artifact_written\": true}\n"
+    },
+    {
+      "args": [
+        "build",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/snapshot",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/structure.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/structure"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"build\", \"execution_kind\": \"offline\", \"artifact_written\": true}\n"
+    },
+    {
+      "args": [
+        "ask",
+        "--run",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/structure",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/structure.json",
+        "--question",
+        "생일 휴가 자격은?",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/answer-structure"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"ask\", \"execution_kind\": \"preview\", \"artifact_written\": true}\n"
+    },
+    {
+      "args": [
+        "compare",
+        "--snapshot",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/snapshot",
+        "--configs",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/fixed.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/recursive.json",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/structure.json",
+        "--questions",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/questions.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/.rag-runs/compare"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"command\": \"compare\", \"execution_kind\": \"preview\", \"artifact_written\": true}\n"
+    },
+    {
+      "args": [
+        "drive-preview",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/drive-token-env.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"preview\", \"connector\": \"google_drive\", \"execution_kind\": \"preview\", \"auth_mode\": \"access_token_env\", \"scope\": \"https://www.googleapis.com/auth/drive.readonly\", \"scope_warning\": \"Read access to accessible Drive files, not limited to the selected file.\", \"supported\": [\"PDF\", \"UTF-8 TXT/MD\", \"Google Docs PDF export\"], \"remote_access_verified\": false, \"requests\": 0, \"notice\": \"No credentials, SDK, OAuth or HTTP used. Folder/shared-drive/shortcut/other apps are unsupported.\"}\n"
+    },
+    {
+      "args": [
+        "drive-pull",
+        "--config",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/drive-token-env.json",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-sample-1fbe6909/never"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"preview\", \"connector\": \"google_drive\", \"execution_kind\": \"preview\", \"auth_mode\": \"access_token_env\", \"scope\": \"https://www.googleapis.com/auth/drive.readonly\", \"scope_warning\": \"Read access to accessible Drive files, not limited to the selected file.\", \"supported\": [\"PDF\", \"UTF-8 TXT/MD\", \"Google Docs PDF export\"], \"remote_access_verified\": false, \"requests\": 0, \"notice\": \"No credentials, SDK, OAuth or HTTP used. Folder/shared-drive/shortcut/other apps are unsupported.\"}\n"
+    }
+  ]
+}

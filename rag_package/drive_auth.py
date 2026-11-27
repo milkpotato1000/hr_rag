@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 import stat
 import tempfile
-from .connectors.drive_config import credential_path,SCOPE,WORKSPACE
+from .connectors.drive_config import credential_path,SCOPE
 from .storage import RagError,require
 from .llm.config import strict_json
 
@@ -17,7 +17,6 @@ AUTH_URIS=('https://accounts.google.com/o/oauth2/auth','https://accounts.google.
 def protected_path(path,create=False):
     p=credential_path(str(path))
     for part in [p,*p.parents]:require(not part.is_symlink(),'credential_symlink','auth')
-    require(not p.resolve().is_relative_to(WORKSPACE.resolve()),'credential_must_be_outside_repository','auth')
     if create and not p.parent.exists():p.parent.mkdir(mode=0o700,parents=True)
     require(p.parent.is_dir() and stat.S_IMODE(p.parent.stat().st_mode)==0o700,'unsafe_credential_directory','auth')
     if p.exists():require(p.is_file() and stat.S_IMODE(p.stat().st_mode)==0o600,'unsafe_credential_permissions','auth')

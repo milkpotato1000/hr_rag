@@ -10,6 +10,8 @@ from .rag import ask,compare
 def main(argv=None):
     try:
         p=Parser(description='PDF/TXT/MD RAG. ask/compare default preview: no model/API/key access. Explicit --execute dispatches generation.')
+        from ._version import __version__
+        p.add_argument('--version',action='version',version=__version__)
         subs=p.add_subparsers(dest='command',required=True)
         s=subs.add_parser('snapshot');s.add_argument('--sources',required=True)
         b=subs.add_parser('build');b.add_argument('--snapshot',required=True);b.add_argument('--config',required=True)
@@ -19,7 +21,14 @@ def main(argv=None):
         dp=subs.add_parser('drive-preview');dp.add_argument('--config',required=True)
         dl=subs.add_parser('drive-pull');dl.add_argument('--config',required=True);dl.add_argument('--out',required=True);dl.add_argument('--execute',action='store_true')
         login=subs.add_parser('drive-login');login.add_argument('--client-secret-file',required=True);login.add_argument('--credentials-file',required=True);login.add_argument('--execute',action='store_true')
+        init=subs.add_parser('init');init.add_argument('--out',required=True)
+        doctor=subs.add_parser('doctor');doctor.add_argument('--config')
         args=p.parse_args(argv)
+        if args.command in ('init','doctor'):
+            from . import workspace
+            if args.command=='init':result,code=workspace.init(args.out),0
+            else:result,code=workspace.doctor(args.config)
+            print(json.dumps(result,ensure_ascii=False));return code
         if args.command=='drive-preview':
             from .connectors.drive_config import preview
             print(json.dumps(preview(args.config),ensure_ascii=False));return 0

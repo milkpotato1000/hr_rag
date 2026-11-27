@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "milkpotato-rag-lab"
+dynamic = ["version"]
+description = "Offline-first document RAG learning CLI"
+readme = "PACKAGING.md"
+requires-python = ">=3.10"
+license-files = []
+dependencies = []
+
+[project.optional-dependencies]
+pdf = ["pypdf==6.21.2"]
+drive = ["google-auth-oauthlib==1.5.0", "google-auth==2.63.1"]
+all = ["pypdf==6.21.2", "google-auth-oauthlib==1.5.0", "google-auth==2.63.1"]
+
+[project.scripts]
+rag-lab = "rag_package.__main__:main"
+
+[tool.setuptools]
+packages = ["rag_package", "rag_package.llm", "rag_package.connectors"]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = {attr = "rag_package._version.__version__"}
+
+[tool.setuptools.package-data]
+rag_package = ["provenance.json", "requirements-pdf.lock", "requirements-drive.lock", "resources/manifest.json", "resources/sample/sources.json", "resources/sample/questions.json", "resources/sample/documents/birthday.md", "resources/sample/documents/annual.txt", "resources/sample/fixed.json", "resources/sample/recursive.json", "resources/sample/structure.json", "resources/sample/llm-local.json", "resources/sample/llm-api.json", "resources/sample/drive-token-env.json", "resources/sample/drive-oauth-file.json", "resources/sample/.gitignore", "resources/sample/START_HERE.md"]

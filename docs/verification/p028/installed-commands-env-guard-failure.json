@@ -1,0 +1,84 @@
+[
+  {
+    "args": [
+      "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/.venv/bin/python",
+      "-m",
+      "build",
+      "--wheel",
+      "--no-isolation",
+      "--outdir",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-dist",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/sdist/milkpotato_rag_lab-0.1.0.dev1"
+    ],
+    "exit_code": 0,
+    "stdout": "running egg_info\nwriting milkpotato_rag_lab.egg-info/PKG-INFO\nwriting dependency_links to milkpotato_rag_lab.egg-info/dependency_links.txt\nwriting entry points to milkpotato_rag_lab.egg-info/entry_points.txt\nwriting requirements to milkpotato_rag_lab.egg-info/requires.txt\nwriting top-level names to milkpotato_rag_lab.egg-info/top_level.txt\nreading manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nwriting manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'\nrunning bdist_wheel\nrunning build\nrunning build_py\ninstalling to build/bdist.macosx-11.0-arm64/wheel\nrunning install\nrunning install_lib\ncreating build/bdist.macosx-11.0-arm64/wheel\ncreating build/bdist.macosx-11.0-arm64/wheel/rag_package\ncopying build/lib/rag_package/bm25.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncreating build/bdist.macosx-11.0-arm64/wheel/rag_package/connectors\ncopying build/lib/rag_package/connectors/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors\ncopying build/lib/rag_package/connectors/drive_http.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors\ncopying build/lib/rag_package/connectors/drive_config.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors\ncopying build/lib/rag_package/connectors/google_drive.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors\ncopying build/lib/rag_package/connectors/origin.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/connectors\ncreating build/bdist.macosx-11.0-arm64/wheel/rag_package/llm\ncopying build/lib/rag_package/llm/config.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm\ncopying build/lib/rag_package/llm/transport.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm\ncopying build/lib/rag_package/llm/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm\ncopying build/lib/rag_package/llm/core.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm\ncopying build/lib/rag_package/llm/__main__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/llm\ncopying build/lib/rag_package/provenance.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/_version.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/documents.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncreating build/bdist.macosx-11.0-arm64/wheel/rag_package/resources\ncopying build/lib/rag_package/resources/manifest.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources\ncreating build/bdist.macosx-11.0-arm64/wheel/rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/sources.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/recursive.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/START_HERE.md -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/fixed.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/llm-local.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/questions.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/structure.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/.gitignore -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/drive-token-env.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/resources/sample/llm-api.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncreating build/bdist.macosx-11.0-arm64/wheel/rag_package/resources/sample/documents\ncopying build/lib/rag_package/resources/sample/documents/birthday.md -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample/documents\ncopying build/lib/rag_package/resources/sample/documents/annual.txt -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample/documents\ncopying build/lib/rag_package/resources/sample/drive-oauth-file.json -> build/bdist.macosx-11.0-arm64/wheel/./rag_package/resources/sample\ncopying build/lib/rag_package/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/requirements-drive.lock -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/pdf_worker.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/rag.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/storage.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/retrieval.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/workspace.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/drive_auth.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/requirements-pdf.lock -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/__main__.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\ncopying build/lib/rag_package/chunks.py -> build/bdist.macosx-11.0-arm64/wheel/./rag_package\nrunning install_egg_info\nrunning egg_info\nwriting milkpotato_rag_lab.egg-info/PKG-INFO\nwriting dependency_links to milkpotato_rag_lab.egg-info/dependency_links.txt\nwriting entry points to milkpotato_rag_lab.egg-info/entry_points.txt\nwriting requirements to milkpotato_rag_lab.egg-info/requires.txt\nwriting top-level names to milkpotato_rag_lab.egg-info/top_level.txt\nreading manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nwriting manifest file 'milkpotato_rag_lab.egg-info/SOURCES.txt'\nCopying milkpotato_rag_lab.egg-info to build/bdist.macosx-11.0-arm64/wheel/./milkpotato_rag_lab-0.1.0.dev1-py3.12.egg-info\nrunning install_scripts\ncreating build/bdist.macosx-11.0-arm64/wheel/milkpotato_rag_lab-0.1.0.dev1.dist-info/WHEEL\ncreating '/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-dist/.tmp-1lelqwba/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl' and adding 'build/bdist.macosx-11.0-arm64/wheel' to it\nadding 'rag_package/__init__.py'\nadding 'rag_package/__main__.py'\nadding 'rag_package/_version.py'\nadding 'rag_package/bm25.py'\nadding 'rag_package/chunks.py'\nadding 'rag_package/documents.py'\nadding 'rag_package/drive_auth.py'\nadding 'rag_package/pdf_worker.py'\nadding 'rag_package/provenance.json'\nadding 'rag_package/rag.py'\nadding 'rag_package/requirements-drive.lock'\nadding 'rag_package/requirements-pdf.lock'\nadding 'rag_package/retrieval.py'\nadding 'rag_package/storage.py'\nadding 'rag_package/workspace.py'\nadding 'rag_package/connectors/__init__.py'\nadding 'rag_package/connectors/drive_config.py'\nadding 'rag_package/connectors/drive_http.py'\nadding 'rag_package/connectors/google_drive.py'\nadding 'rag_package/connectors/origin.py'\nadding 'rag_package/llm/__init__.py'\nadding 'rag_package/llm/__main__.py'\nadding 'rag_package/llm/config.py'\nadding 'rag_package/llm/core.py'\nadding 'rag_package/llm/transport.py'\nadding 'rag_package/resources/manifest.json'\nadding 'rag_package/resources/sample/.gitignore'\nadding 'rag_package/resources/sample/START_HERE.md'\nadding 'rag_package/resources/sample/drive-oauth-file.json'\nadding 'rag_package/resources/sample/drive-token-env.json'\nadding 'rag_package/resources/sample/fixed.json'\nadding 'rag_package/resources/sample/llm-api.json'\nadding 'rag_package/resources/sample/llm-local.json'\nadding 'rag_package/resources/sample/questions.json'\nadding 'rag_package/resources/sample/recursive.json'\nadding 'rag_package/resources/sample/sources.json'\nadding 'rag_package/resources/sample/structure.json'\nadding 'rag_package/resources/sample/documents/annual.txt'\nadding 'rag_package/resources/sample/documents/birthday.md'\nadding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/METADATA'\nadding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/WHEEL'\nadding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/entry_points.txt'\nadding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/top_level.txt'\nadding 'milkpotato_rag_lab-0.1.0.dev1.dist-info/RECORD'\nremoving build/bdist.macosx-11.0-arm64/wheel\nSuccessfully built milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl\n",
+    "stderr": "* Getting build dependencies for wheel...\n* Building wheel...\n"
+  },
+  {
+    "args": [
+      "uv",
+      "--cache-dir",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/uv-cache",
+      "pip",
+      "install",
+      "--python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt/bin/python",
+      "--reinstall",
+      "--no-deps",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Using Python 3.12.14 environment at: rebuilt\nResolved 1 package in 0.63ms\nPrepared 1 package in 4ms\nUninstalled 1 package in 3ms\nInstalled 1 package in 2ms\n - milkpotato-rag-lab==0.1.0.dev1 (from file:///Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl)\n + milkpotato-rag-lab==0.1.0.dev1 (from file:///private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/rebuilt-dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl)\n"
+  },
+  {
+    "args": [
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/core/bin/rag-lab",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "0.1.0.dev1\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/core/bin/python",
+      "-m",
+      "rag_package",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "0.1.0.dev1\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/core/bin/rag-lab",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: rag-lab [-h] [--version]\n               {snapshot,build,ask,compare,drive-preview,drive-pull,drive-login,init,doctor}\n               ...\n\nPDF/TXT/MD RAG. ask/compare default preview: no model/API/key access. Explicit\n--execute dispatches generation.\n\npositional arguments:\n  {snapshot,build,ask,compare,drive-preview,drive-pull,drive-login,init,doctor}\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/core/bin/python",
+      "-m",
+      "rag_package.llm",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: __main__.py [-h] {validate,preview,invoke} ...\n\nIndependent LLM adapters. Preview may contain private prompt text;\nproxies/retries/fallback are disabled.\n\npositional arguments:\n  {validate,preview,invoke}\n\noptions:\n  -h, --help            show this help message and exit\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/core/bin/python",
+      "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/probe.py",
+      "core"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/probe.py\", line 22, in <module>\n    call(['doctor']);call(['init','--out',mode+'-sample']);call(['init','--out',mode+'-sample'],2)\n    ^^^^^^^^^^^^^^^^\n  File \"/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p028-installed-a1efmxft/probe.py\", line 18, in call\n    assert code==expected,(args,code,stream.getvalue())\n           ^^^^^^^^^^^^^^\nAssertionError: (['doctor'], 2, '{\"status\": \"error\", \"error\": {\"code\": \"internal_error\"}}\\n')\n"
+  }
+]

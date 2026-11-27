@@ -1,0 +1,411 @@
+{
+  "status": "PASS",
+  "baseline_files": 1493,
+  "preserved_files": 1489,
+  "allowed_changes": [
+    "rag_package/__main__.py",
+    "rag_package/connectors/drive_config.py",
+    "rag_package/drive_auth.py",
+    "rag_package/llm/core.py"
+  ],
+  "resource_files": 13,
+  "source_provenance_verified": true,
+  "links_checked": 97,
+  "links": [
+    {
+      "file": "README.md",
+      "target": "docs/learning/rag-package/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/learning/rag-package/document-rag.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/learning/rag-package/providers.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/learning/rag-package/drive.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/planning/project-brief.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/architecture/system-design.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/planning/plans/P001.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/process/work-queue.md"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/data/source-v2/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/data/synthetic/chunks.jsonl"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/data/source-v2/fixed-400-80/chunks.jsonl"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p002/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p001/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p003/README.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/planning/naive-rag-roadmap.md"
+    },
+    {
+      "file": "README.md",
+      "target": "1. Naive RAG/LEARNING_GUIDE.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p004/final-review.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/verification/p005/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "providers.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "document-rag.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "drive.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "experiments.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "models-and-support.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "examples/local.json"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "examples/api.json"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../planning/rag-package-roadmap.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../2. Document Chunking/data/source-v4/output/pdf/hr-handbook.pdf"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../2. Document Chunking/data/source-v4/extracted/canonical/hr-v4-handbook.txt"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../2. Document Chunking/LEARNING.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../1. Naive RAG/LEARNING_GUIDE.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../../1. Naive RAG/variants/langchain/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "../../verification/p013/recovery-20261127/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/README.md",
+      "target": "document-rag.md"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "providers.md"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "experiments.md"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "../../verification/p026/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "../../../rag_package/requirements-pdf.lock"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "drive.md"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "../../../2. Document Chunking/LEARNING.md"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "../../../examples/rag/sources.json"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "../../../examples/rag/sources-pdf.json"
+    },
+    {
+      "file": "docs/learning/rag-package/document-rag.md",
+      "target": "../../../examples/rag/fixed.json"
+    },
+    {
+      "file": "docs/learning/rag-package/drive.md",
+      "target": "README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/drive.md",
+      "target": "document-rag.md"
+    },
+    {
+      "file": "docs/learning/rag-package/drive.md",
+      "target": "../../verification/p027/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/drive.md",
+      "target": "../../../rag_package/requirements-drive.lock"
+    },
+    {
+      "file": "docs/learning/rag-package/drive.md",
+      "target": "../../../rag_package/requirements-pdf.lock"
+    },
+    {
+      "file": "docs/learning/rag-package/drive.md",
+      "target": "../../../examples/drive/token-env.json"
+    },
+    {
+      "file": "docs/learning/rag-package/drive.md",
+      "target": "../../../examples/drive/oauth-file.json"
+    },
+    {
+      "file": "docs/learning/rag-package/experiments.md",
+      "target": "README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/experiments.md",
+      "target": "../../../2. Document Chunking/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/experiments.md",
+      "target": "../../planning/specs/P013-execution-contract.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../1. Naive RAG/variants/langchain/generation-lock.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../2. Document Chunking/runtime-lock.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p019/model-lock.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../1. Naive RAG/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p011/adoption-decision.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../2. Document Chunking/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "examples/local.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "examples/api.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../../evaluation/project_b/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "providers.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "document-rag.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../planning/rag-package-roadmap.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "drive.md"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p013/resource-stop.json"
+    },
+    {
+      "file": "docs/learning/rag-package/models-and-support.md",
+      "target": "../../verification/p013/recovery-20261127/runtime-unreachable.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "document-rag.md"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "models-and-support.md"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../rag_package/llm/core.py"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../verification/p025/README.md"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../examples/llm/local.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../examples/llm/openai.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../examples/llm/anthropic.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "../../../examples/llm/messages.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "examples/local.json"
+    },
+    {
+      "file": "docs/learning/rag-package/providers.md",
+      "target": "examples/api.json"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "../../../packaging/requirements-build.lock"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "../../../packaging/allowlist.json"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "artifacts.json"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "installation.json"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "installed-commands.json"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "core-probe.json"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "extras-probe.json"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "rebuilt-probe.json"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "regression.log"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "unit-initial.log"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "install_environments.py"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "verify_installation.py"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "installed_probe.py"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "validate_artifacts.py"
+    },
+    {
+      "file": "docs/verification/p028/README.md",
+      "target": "checks.json"
+    }
+  ],
+  "p013_blocked": true,
+  "recovery_grant_consumed": false,
+  "live_model_api_drive_user_key_calls": 0,
+  "actual_os": "macOS",
+  "other_os_verified": false,
+  "python_actual": "3.12.14",
+  "python_310_syntax": true
+}

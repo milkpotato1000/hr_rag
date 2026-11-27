@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "answer": {
+      "mode": "local",
+      "provider": "ollama",
+      "model": "EXAMPLE_OLLAMA_MODEL",
+      "base_url": "http://127.0.0.1:11434",
+      "max_output_tokens": 1024,
+      "timeout_seconds": 120,
+      "response_mode": "json_object",
+      "temperature": 0,
+      "num_ctx": 8192,
+      "seed": 42,
+      "identity": {
+        "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+        "hf_id": "Qwen/Qwen3-8B",
+        "source_revision": null,
+        "conversion": "User must record their actual runtime conversion",
+        "validation_status": "example_requires_configuration"
+      }
+    },
+    "judge": {
+      "mode": "local",
+      "provider": "ollama",
+      "model": "EXAMPLE_OLLAMA_MODEL",
+      "base_url": "http://127.0.0.1:11434",
+      "max_output_tokens": 1024,
+      "timeout_seconds": 120,
+      "response_mode": "json_object",
+      "temperature": 0,
+      "num_ctx": 8192,
+      "seed": 42,
+      "identity": {
+        "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+        "hf_id": "Qwen/Qwen3-8B",
+        "source_revision": null,
+        "conversion": "User must record their actual runtime conversion",
+        "validation_status": "example_requires_configuration"
+      }
+    }
+  },
+  "roles": {
+    "generation": "answer",
+    "evaluation": "judge"
+  }
+}
