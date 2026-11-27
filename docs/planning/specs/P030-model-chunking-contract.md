@@ -1,6 +1,6 @@
-# P030 범용 모델 청킹 실행 계약 초안
+# P030 범용 모델 청킹 실행 계약
 
-2026-11-28 DRAFT. P020 최종 완료와 준비 검토 전에는 실행 인계가 아니다. [설계/기준 코드](P030-model-chunking-design.md)의 재사용 근거를 따른다. P013/P014 실험 보류·P029 미완료를 보존한다.
+2026-11-28 READY. P020 완료 `d8724cb6b356703c8fa0d09b6d86d8e3782fdc98`와 [준비 검토](../reviews/P030-readiness-20261128.md)를 기준으로 한다. [설계/기준 코드](P030-model-chunking-design.md)의 재사용 근거를 따르며 충돌 시 이 실행 계약이 우선한다. P013/P014 실험 보류·P029 미완료를 보존한다.
 
 ## 기능과 pipeline
 
@@ -46,8 +46,10 @@ retry0, 실패 시 남은 window 중단. total deadline을 첫 호출 전 시작
 
 같은 source와 질문·검색 설정에서 다섯 방식의 경계/원문·chunk 수/길이/중복/강제분할·모델과 색인 비용·검색 후보/전달 근거를 비교한다. 모델 경계 생성과 검색을 별도 작업으로 수행해 저장 결과를 선택하고, compare가 경계를 암묵적으로 새로 생성하지 않는다. P020 source fact/span 지표로 청킹 간 근거 회수를 비교하고 chunk qrels는 각 chunk fingerprint의 별도 입력이 있을 때만 사용한다. GT/qrels 없는 일반 문서 품질은 N/A, Faithfulness/Correctness evaluator는 미연결이다.
 
+비교 CLI는 기존 `rag-lab compare`를 v3 설정에 연결하고 UI도 같은 코어를 사용한다. 한 비교는 같은 source의2..5개 저장 chunk artifact와1..20개 고정 질문으로 제한한다. retrieval/embedding/generation 설정은 고정하고 chunk 축만 바꾼다. 경계 추론은0회이며 Dense/Hybrid의 새 색인·질문 embedding은 기존 별도 실행 flag가 있어야 한다. 답변 생성은 기본 preview다. P020의 `fact_metrics.validate/coverage`를 재사용하여 후보·top K·전달 문맥의 fact recall과 all_required, 질문별·macro/micro·성공/실패/정답 없음 분모를 보고한다. 비교 결과는 source/questions/chunk/config fingerprint와 실행 종류를 보존하며 저장 결과 재생은 모델0이다. 리랭커 비교는 각 variant의 고정 후보를 P020에 넘겨 명시 별도 작업으로 수행하고, 청킹 비교가 리랭커를 암묵 실행하지 않는다. 비교 화면에서 P020로 이동해 선택한 청킹 결과를 이어서 사용할 수 있어야 한다.
+
 준비된 독립 기대값은 설계 문서의3unit vector·임계값·길이/LLM end IDs/overlap·fact 예시를 따른다. 추가로 다문서·빈문서/공백·제목·Unicode·window 경계·단위 초과/전체 사전거부·wrong model/source·vector bytes 변경·불완전 JSON·실패 두 번째 window·deadline/unknown·쓰기 실패/재시작·model0 재생/색인 조회를 검증한다. 가짜 세 provider를 통한 경계 선택과 실제 SDK tiny unit encode를 구분하고 실제 모델 품질이라고 부르지 않는다.
 
 설치물·CLI·학습 UI와 가이드 `docs/learning/rag-package/model-chunking.md`, 다섯 설정 예시/실습자료를 제공한다. source 없는 새 venv/일반 문서로 경계 생성→저장 선택→검색→P020리랭커/답변 preview 연결을 검증한다. 허용 브라우저에서 원문·경계·예산/비용·실패와 좁은 화면/키보드 확인, 파일 선택창의 기존 정책 거부는 우회하지 않는다. 필수 회귀/guard/선별 출처·hash 보존/소유 worker 종료/커밋 증거/정상 personal-dev 전달이 필요하다.
 
-이 초안의 개발 검증은 실제 LLM/API/Drive/OAuth/키 및 사전학습 모델 호출0이다. 유료 API/로컬 모델을 사용할 수 있는 실코드는 구현하지만 실제 성능·리소스 비교는 별도 live 계약으로 검증한다. P020 완료 SHA와 실제 source/fact/UI 인터페이스, 위 상한 및 fixture를 준비 검토한 뒤 카드와 함께 READY로 확정한다.
+개발 검증은 실제 LLM/API/Drive/OAuth/키 및 사전학습 모델 호출0이다. 유료 API/로컬 모델을 사용할 수 있는 실코드는 구현하지만 실제 성능·리소스 비교는 별도 live 계약으로 검증한다. tiny SDK와 fake provider만으로 실제 한국어 품질·메모리·전체 goal 완료를 주장하지 않는다.
