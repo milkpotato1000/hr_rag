@@ -52,7 +52,7 @@
   ],
   "pretrained_quality": "not_verified",
   "examples": "placeholder; no weight download or model call",
-  "package_source_commit": "8e7ef784377043c9b8653ef87a254015c4eb90eb",
+  "package_source_commit": "b80ca38b71179821d2eafb38befe85700229a50d",
   "package_version": "0.1.0.dev1",
   "reranking": {
     "models": [
@@ -61,6 +61,7 @@
     ],
     "contract_commit": "f6800d0bd60b6345917533efd831fe2892dfb751",
     "baseline_package_commit": "3d99353b5aef3b683b24d0f7fa06b8a757dc1f83",
-    "execution": "none or explicit local CrossEncoder; examples preview only"
+    "execution": "none or explicit local CrossEncoder; examples preview only",
+    "delivery_record": "docs/verification/p020/delivery.json"
   }
 }
