@@ -75,3 +75,5 @@ Hybrid/리랭커 구현 순서는 [2026-11-28 사용자 결정](reviews/rag-pack
 전체 목표의 요구별 구현/검증 상태는 [목표 증거표](reviews/rag-package-goal-evidence.md)에 기록한다. 카드 완료와 전체 목표 달성은 별개다.
 
 기본 HF 후보의 공개 출처·라이선스·조회 시점 인기도 및 미검증 항목은 [후보 조사](reviews/hf-model-candidates-20261127.md)에 기록했다. 실행 카탈로그 확정이나 모델 실행 완료를 뜻하지 않는다.
+
+후속 청킹 통합은 [P030 초안](plans/P030.md)으로 추적한다. P020 이후 기존 HR 전용 semantic/LLM 경계 알고리즘을 일반 snapshot·공개 embedding·LLM provider·설치 UI에 연결하며, P020 진행을 선점하거나 평가기 실험을 재개하지 않는다.
