@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "7e92000a4365519a11861696d3692f2d00d7c106",
+  "document": "docs/planning/handoffs/P028.md",
+  "summary": "P028 updated install credential boundary; supersedes c09fa2f",
+  "next_action": "Finish P027 then adopt latest 7e92000 P028; P029 remains DRAFT",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T09:05:53.591252+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T09:06:14.512444+00:00",
+      "evidence": "Host send succeeded to existing HR RAG dev: latest P028 READY 7e92000 supersedes c09fa2f after P027 completion, installed credential boundary added; P029 DRAFT excluded."
+    }
+  ]
+}
