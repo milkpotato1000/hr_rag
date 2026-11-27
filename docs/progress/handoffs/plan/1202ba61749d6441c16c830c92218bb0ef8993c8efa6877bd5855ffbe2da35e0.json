@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P026.md",
   "summary": "P026 generic document RAG integration READY",
   "next_action": "Exact adoption then snapshot/chunk/BM25/provider/citation/compare implementation; no real model calls",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-27T08:44:12.416753+00:00",
       "evidence": "Host send_message_to_thread succeeded to existing HR RAG dev with exact bb733052fda6dfbdd7de8e1f2eae50118ae059c1, P026 complete contract and P013 hold."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T08:44:35.960387+00:00",
+      "evidence": "Observed dev P026 acceptance on 2026-11-27: generic document/retrieval/answer/citation path, synthetic input and fake responses, P013 hold and baseline preserved. Exact adoption and completion separately checked."
     }
   ]
 }
