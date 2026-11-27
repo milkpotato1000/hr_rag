@@ -38,8 +38,8 @@ upload의 empty/unsupported/잘못된 UTF-8/크기 초과는 정확한 오류로
 모든 job 공통: `request_id` UUID와 `kind`, 해당 kind의 허용 필드만 받는다.
 
 - snapshot: input_ids1..20. 등록된 sample/upload 원본만 sources로 묶어 P026 snapshot 수행.
-- drive_preview: drive_config_id. P027 preview만; 원래 URL/resourcekey는 표시하지 않는다.
-- drive_pull: drive_config_id. allow-drive-download=true인 server에서 사용자가 실행한 경우만 P027 execute, 결과 snapshot을 registry에 연결.
+- drive_preview: drive_config_id, url(최대2048자). 등록된 auth만 재사용해 사용자가 화면에 입력한 링크를 P027 strict parser로 검증한다. SDK/credential/HTTP0. 응답에는 resourcekey/원래 URL을 되돌리지 않는다.
+- drive_pull: drive_config_id, url(최대2048자). 등록 auth + strict URL을 memory config로 합성한다. allow-drive-download=true인 server에서 사용자가 실행한 경우만 P027 execute, 결과 snapshot을 registry에 연결.
 - build: snapshot_id, chunking{method,size_chars,overlap_chars}, retrieval{method,top_k,context_budget_chars}, llm_config_id. P026 schema/bounds 그대로.
 - ask: build_id, llm_config_id, question(1..2000자), top_k, context_budget_chars, execute(bool; default false). build와 청킹/검색 identity를 유지하고 허용 query 설정만 바꾼다. execute=true는 allow-model-execution=true인 server와 configured profile 필요. preview 후 실제 실행도 새로운 job이며 변경된 입력은 새 preview로 표시한다.
 - compare: snapshot_id, variants2..4(각각 label,chunking,retrieval,llm_config_id), questions1..20({id,question}), execute(default false). 최대80 generation 요청, 현재 P026 limits와 동일. 같은 snapshot/questions를 고정하고 changed_axes/모든 실패 행을 보존한다.
@@ -56,9 +56,9 @@ source/build/answer/comparison artifact는 P026/P027 schema와 hash를 검증해
 
 상단에 ‘일반 문서 RAG 실험실’, 현재 문서 snapshot, preview/live/test_fixture 표시를 둔다. 0문서/1모델/2청킹/3검색/4답변/5비교 tab 또는 단계 navigator. layout은 원문·결과 중심이고 내부 JSON·SHA·긴 로그는 details 기본 접힘. 원문 인용은 읽을 수 있게 기본 표시한다. 상태는 글자+아이콘으로 표시하고 색만으로 구분하지 않는다. keyboard focus, label/aria 상태, skip link를 제공한다.
 
-문서는 sample/업로드/등록 Drive configuration을 선택하고 preview/pull 버튼을 구분한다. raw Drive URL 입력 자체는 준비된 configuration을 만드는 CLI/Codex 안내로 연결한다. 서버에 등록하지 않은 arbitrary URL/credential을 웹 요청으로 새로 추가하지 않는다. 이는 첫 UI의 제한이며 최종 goal의 완전한 link 입력 UI가 완료됐다고 표시하지 않는다. 다음 증분에서 안전한 설정 생성·모델 catalog 편집을 확장한다.
+문서는 sample/업로드/Drive 링크 직접 입력 중 선택하고 preview/pull 버튼을 구분한다. 사용자는 붙여넣은 링크와 서버 시작 시 등록한 인증 profile을 선택한다. 새 credential/외부 host를 웹 입력으로 추가하지 않는다. 지원 Google Drive 링크만 P027 parser를 거쳐 고정 API로 연결하며 다른 웹하드는 미지원 이유를 표시한다. resourcekey가 있는 원래 URL은 사용자가 입력한 현재 form에서만 유지하고 browser URL/localStorage/server durable request에 저장하지 않는다.
 
-모델 목록은 등록 LLM profiles의 provider/model/HF ID와 사용자 설정 필요 여부를 보여 준다. API key 입력창은 만들지 않는다. 모델 설정 파일 편집/등록 명령을 쉽게 안내한다. 기본값은 local이며 API는 명시 선택한다. 실행 불가능한 placeholder는 이유와 설정 안내를 보여 준다. 가능한 두 모델 설정으로 preview comparison을 실제 코어에 전달할 수 있어야 한다.
+모델 목록은 등록 LLM profiles의 provider/model/HF ID와 사용자 설정 필요 여부를 보여 준다. API key 입력창은 만들지 않는다. 아래 설정 form으로 모델명·generation 설정을 편집해 새 config를 저장/선택/비교할 수 있다. 기존 profile을 덮어쓰지 않는다. 기본값은 local이며 API는 명시 선택한다. 실행 불가능한 placeholder는 이유와 설정 안내를 보여 준다. 가능한 두 모델 설정으로 preview comparison을 실제 코어에 전달할 수 있어야 한다.
 
 청킹은 fixed/recursive/structure와 숫자 입력을 별개로 둔다. 긴 섹션 재분할/heading metadata를 설명하고 선택 청크에서 해당 원문 페이지/offset으로 이동한다. size/top-k/검색 근거 최대 분량(문자)/모델 token window를 별도 설명하며 문자→토큰 정확 환산을 발명하지 않는다.
 
@@ -67,6 +67,19 @@ source/build/answer/comparison artifact는 P026/P027 schema와 hash를 검증해
 비교는 설정2~4, 질문1~20 선택/입력으로 P026 compare를 실제 호출한다. 결과는 각 행의 상태/바뀐 축/검색·전달 문맥·답변/지연/usage/비용 미측정을 표시한다. preview는 답변/품질 점수가 없음을 명확히 보여 준다. evaluator/qrels 미연결 값은 N/A 이유를 한국어로 보여 준다. 실패행/누락 결과를 숨기지 않는다.
 
 미구현 Dense/Hybrid/임베딩 선택/리랭커/semantic·LLM 청킹/평가기 옵션은 disabled와 이유를 표시한다. P007 전용 실험으로 이동할 안내는 별도 링크/명령이며 해당 서버를 자동 시작하지 않는다. 이 UI 증분은 전체 feature goal 완료가 아니다.
+
+
+## 직접 링크·모델 설정 form의 추가 계약
+
+Drive job 요청은 raw URL을 memory에서만 가지고 P027 strict parser/config validation을 사용한다. P027 connector가 파일 경로만 받는 경우, 기존 path API를 보존하는 typed config/validated-memory 진입점을 추가하여 서버가 URL/resourcekey를 임시 JSON 파일로 쓰지 않아도 호출할 수 있게 한다. raw HTTP request를 그대로 job log에 저장하지 않는다. idempotency hash는 전체 정규화 입력을 반영하되 durable 요청 요약에는 config_id와 redacted link identity만 기록한다. 재시작 후 interrupted job는 자동 복원/실행하지 않는다. 이 수정은 P027 실제 다운로드/정확 version/secret/실패 계약을 유지하는 UI adapter 범위이며 fake production 경로가 아니다.
+
+POST /api/model-configs는 `{base_config_id, model, max_output_tokens, temperature, local_identity?}`를 받는다. 기본 server에 등록된 config의 generation profile만 복제하며 provider/base_url/key_env/auth/timeout/응답 schema와 evaluation profile은 browser가 바꾸지 못한다. generation과 evaluation이 같은 profile이면 별도 generation profile을 만들어 role mapping을 분리한다. model은1..200자, 나머지 한도는 P025 validator를 그대로 사용한다. local_identity는 local일 때만 `{expected_digest,hf_id,source_revision,quantization}`를 받으며 digest64hex/HF repository 형식과 필요한 값을 검증한다. API에서는 이 필드를 거부하고 requested_model을 새 model에 맞추며 revision_pinned=false/revision=null로 명시한다. 새 model 변경을 원래 pinned revision 검증으로 표시하지 않는다.
+
+UI는 기본 model·출력 길이·temperature 입력과 advanced local digest/HF 출처를 제공한다. Ollama alias만으로 HF model identity를 자동 추측하지 않는다. digest/HF 경로를 찾는 명령은 안내하되 이 form 저장은 서버/모델 조회·key env 읽기·다운로드·API 호출을 하지 않는다. example 값/0 digest/EXAMPLE_ model은 실제 설정 완료로 저장하지 않는다. 성공하면 validation_status=user_configured_unverified이고 live success 배지가 아니다. API endpoint/key env를 바꾸려면 사용자가 CLI에서 새 profile을 등록해야 한다.
+
+새 config는 workspace/.rag-runs/ui/configs의 불변 서버 ID 파일로 저장하고 전체 strict validation/bytes hash 후 registry에 추가한다. 최대 등록 config는 base+UI생성 합계8개다. 응답은 새 opaque config_id와 sanitized summary뿐이다. GET /api/model-configs/{id}/export는 secret 없는 config JSON을 attachment로 제공한다. 모든 새로운 endpoint도 same-origin/session token·입력한도·추가필드 금지·경로 registry 규칙을 따른다. 질문/문서/Drive resourcekey나 실제키가 config export에 들어가지 않아야 한다. 기존 질문·청킹 조건을 고정한 채 두 생성 config를 비교해 모델 선택 학습을 할 수 있어야 한다.
+
+추가 시험은 typed Drive URL preview/pull 성공·위장 호스트/resourcekey 비노출·memory path/source API 호환, local/API config clone·shared role 분리·endpoint/key-env 변경 거부·불변 저장/재시작 조회·export secret sentinel·placeholder거부·서버 조회0·두 모델 compare다. 실제 browser에서도 직접 링크 form과 model form의 labels/validation/errors를 확인한다. 실계정/모델 호출은 fake backend로 대체하고 execution_kind 표시를 유지한다.
 
 ## 검증·실행 권한
 
