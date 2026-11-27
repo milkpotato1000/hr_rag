@@ -61,6 +61,8 @@ def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver
             'usage':None,'cost':None,'cost_status':'unmeasured','latency_ms':{'load_build':(loaded-started)*1000,'retrieval':(searched-loaded)*1000,'provider':None},
             'generation_request_upper_bound':1 if contexts else 0,
             'context_budget_note':'Sum of whole chunk text characters; excludes prompt overhead and is not a model token budget.'}
+    if any('origin' in d for d in docs):
+        result['source_origins']={d['document_id']:d['origin'] for d in docs if 'origin' in d}
     try:
         with staging(out) as tmp:
             if not contexts:

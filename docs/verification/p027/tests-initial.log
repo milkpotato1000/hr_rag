@@ -1,0 +1,102 @@
+test_bm25_manual_order_ties_and_budget_skip (test_document_rag.DocumentTests.test_bm25_manual_order_ties_and_budget_skip) ... ok
+test_build_identity_llm_and_query_settings (test_document_rag.DocumentTests.test_build_identity_llm_and_query_settings) ... ok
+test_business_and_provider_failures_not_answers (test_document_rag.DocumentTests.test_business_and_provider_failures_not_answers) ... ok
+test_chunks_long_coverage_overlap_and_heading_scope (test_document_rag.DocumentTests.test_chunks_long_coverage_overlap_and_heading_scope) ... ok
+test_cli_preview_and_duplicate_questions (test_document_rag.DocumentTests.test_cli_preview_and_duplicate_questions) ... ok
+test_compare_all_rows_failures_axes_and_labels (test_document_rag.DocumentTests.test_compare_all_rows_failures_axes_and_labels) ... ok
+test_existing_synthetic_handbook_pdf (test_document_rag.DocumentTests.test_existing_synthetic_handbook_pdf) ... ok
+test_pdf_failures_and_optional_dependency (test_document_rag.DocumentTests.test_pdf_failures_and_optional_dependency) ... ok
+test_pdf_physical_pages_and_cross_page_citations (test_document_rag.DocumentTests.test_pdf_physical_pages_and_cross_page_citations) ... ok
+test_post_dispatch_write_failure_preserves_attempt_without_retry (test_document_rag.DocumentTests.test_post_dispatch_write_failure_preserves_attempt_without_retry) ... ok
+test_preview_and_no_context_no_key_or_network (test_document_rag.DocumentTests.test_preview_and_no_context_no_key_or_network) ... ok
+test_snapshot_normalization_identity_and_original_copy (test_document_rag.DocumentTests.test_snapshot_normalization_identity_and_original_copy) ... ok
+test_snapshot_page_metadata_and_index_tamper (test_document_rag.DocumentTests.test_snapshot_page_metadata_and_index_tamper) ... ok
+test_tamper_paths_and_no_clobber (test_document_rag.DocumentTests.test_tamper_paths_and_no_clobber) ... ok
+test_three_provider_e2e_exact_citations (test_document_rag.DocumentTests.test_three_provider_e2e_exact_citations) ... ok
+test_unknown_options_and_invalid_sources (test_document_rag.DocumentTests.test_unknown_options_and_invalid_sources) ... ok
+test_whitespace_coverage (test_document_rag.DocumentTests.test_whitespace_coverage) ... ok
+test_rag_uses_real_http_transport_with_fixture_label (test_document_rag.RagHTTPTests.test_rag_uses_real_http_transport_with_fixture_label) ... ok
+test_stream_status_timeout_size_and_no_retry (test_drive.DriveHTTPTests.test_stream_status_timeout_size_and_no_retry) ... ERROR
+test_blob_resource_key_origin_and_pipeline (test_drive.DriveTests.test_blob_resource_key_origin_and_pipeline) ... ok
+test_checksum_size_errors_missing_token_and_no_clobber (test_drive.DriveTests.test_checksum_size_errors_missing_token_and_no_clobber) ... ok
+test_metadata_failures_and_three_request_limit (test_drive.DriveTests.test_metadata_failures_and_three_request_limit) ... ok
+test_oauth_files_cached_refresh_and_login (test_drive.DriveTests.test_oauth_files_cached_refresh_and_login) ... ok
+test_output_failures_keep_dispatch_and_no_secrets (test_drive.DriveTests.test_output_failures_keep_dispatch_and_no_secrets) ... ok
+test_real_sdk_import_pkce_signatures_and_restricted_session (test_drive.DriveTests.test_real_sdk_import_pkce_signatures_and_restricted_session) ... FAIL
+test_strict_links_and_offline_preview (test_drive.DriveTests.test_strict_links_and_offline_preview) ... ok
+test_supported_pdf_markdown_export_and_scan (test_drive.DriveTests.test_supported_pdf_markdown_export_and_scan) ... ok
+test_version_bytes_changes_and_origin_tampering (test_drive.DriveTests.test_version_bytes_changes_and_origin_tampering) ... ok
+test_additional_envelope_boundaries (test_llm.ContractTests.test_additional_envelope_boundaries) ... ok
+test_cli_and_files (test_llm.ContractTests.test_cli_and_files) ... ok
+test_config_rejection (test_llm.ContractTests.test_config_rejection) ... ok
+test_envelope_and_json_errors (test_llm.ContractTests.test_envelope_and_json_errors) ... ok
+test_escaped_thinking_in_json (test_llm.ContractTests.test_escaped_thinking_in_json) ... ok
+test_identity_gates (test_llm.ContractTests.test_identity_gates) ... ok
+test_import_help_and_cli_failure_artifact (test_llm.ContractTests.test_import_help_and_cli_failure_artifact) ... ok
+test_inline_thinking_rejected_not_repaired (test_llm.ContractTests.test_inline_thinking_rejected_not_repaired) ... ok
+test_messages (test_llm.ContractTests.test_messages) ... ok
+test_missing_key_and_errors_no_retry_or_leak (test_llm.ContractTests.test_missing_key_and_errors_no_retry_or_leak) ... ok
+test_missing_model_and_empty_envelopes (test_llm.ContractTests.test_missing_model_and_empty_envelopes) ... ok
+test_non_success_finishes (test_llm.ContractTests.test_non_success_finishes) ... ok
+test_preview_no_keys_no_network_and_json_hash (test_llm.ContractTests.test_preview_no_keys_no_network_and_json_hash) ... ok
+test_routing_and_roles (test_llm.ContractTests.test_routing_and_roles) ... ok
+test_urls (test_llm.ContractTests.test_urls) ... ok
+test_usage_missing_and_hidden_thinking (test_llm.ContractTests.test_usage_missing_and_hidden_thinking) ... ok
+test_http_invoke_cli_and_no_proxy (test_llm.HTTPTests.test_http_invoke_cli_and_no_proxy) ... ok
+test_real_transport_errors (test_llm.HTTPTests.test_real_transport_errors) ... ok
+
+======================================================================
+ERROR: test_stream_status_timeout_size_and_no_retry (test_drive.DriveHTTPTests.test_stream_status_timeout_size_and_no_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_drive.py", line 244, in test_stream_status_timeout_size_and_no_retry
+    self.assertEqual(bounded_get(self.base+'/good',{'Authorization':'Bearer '+TOKEN},100,time.monotonic()+5),b'leave eligibility')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/connectors/drive_http.py", line 42, in bounded_get
+    except (OSError,http.client.HTTPException,ValueError):raise RagError('connection_error','transport') from None
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: connection_error: transport
+
+======================================================================
+FAIL: test_real_sdk_import_pkce_signatures_and_restricted_session (test_drive.DriveTests.test_real_sdk_import_pkce_signatures_and_restricted_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_drive.py", line 210, in test_real_sdk_import_pkce_signatures_and_restricted_session
+    with self.assertRaises(RagError):session.send(bad)
+                                     ^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p027-sdk/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p027-sdk/.venv/lib/python3.12/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p027-sdk/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p027-sdk/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p027-sdk/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p027-sdk/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p027-sdk/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p027-sdk/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: external DNS forbidden
+
+----------------------------------------------------------------------
+Ran 46 tests in 6.316s
+
+FAILED (failures=1, errors=1)

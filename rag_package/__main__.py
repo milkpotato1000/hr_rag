@@ -16,8 +16,23 @@ def main(argv=None):
         a=subs.add_parser('ask');a.add_argument('--run',required=True);a.add_argument('--config',required=True);a.add_argument('--question',required=True);a.add_argument('--execute',action='store_true')
         c=subs.add_parser('compare');c.add_argument('--snapshot',required=True);c.add_argument('--configs',nargs='+',required=True);c.add_argument('--questions',required=True);c.add_argument('--execute',action='store_true')
         for sub in (s,b,a,c):sub.add_argument('--out',required=True)
+        dp=subs.add_parser('drive-preview');dp.add_argument('--config',required=True)
+        dl=subs.add_parser('drive-pull');dl.add_argument('--config',required=True);dl.add_argument('--out',required=True);dl.add_argument('--execute',action='store_true')
+        login=subs.add_parser('drive-login');login.add_argument('--client-secret-file',required=True);login.add_argument('--credentials-file',required=True);login.add_argument('--execute',action='store_true')
         args=p.parse_args(argv)
-        if args.command=='snapshot':
+        if args.command=='drive-preview':
+            from .connectors.drive_config import preview
+            print(json.dumps(preview(args.config),ensure_ascii=False));return 0
+        if args.command=='drive-pull':
+            from .connectors.google_drive import pull
+            r=pull(args.config,args.out,execute=args.execute)
+            if not args.execute:print(json.dumps(r,ensure_ascii=False));return 0
+            ok=r['status']=='ready'
+        elif args.command=='drive-login':
+            from .drive_auth import login
+            r=login(args.client_secret_file,args.credentials_file,execute=args.execute)
+            print(json.dumps(r,ensure_ascii=False));return 0
+        elif args.command=='snapshot':
             r=snapshot(args.sources,args.out);ok=r['identity']['status']=='ready'
         elif args.command=='build':r=build(args.snapshot,args.config,args.out);ok=True
         elif args.command=='ask':
@@ -28,7 +43,7 @@ def main(argv=None):
         print(json.dumps({'status':'complete' if ok else 'needs_review_or_failed','command':args.command,'execution_kind':r.get('execution_kind','offline'),'artifact_written':True}))
         return 0 if ok else 1
     except (RagError,ValidationError) as e:
-        print(json.dumps({'status':'error','error':{'code':e.code,'stage':getattr(e,'stage','input')},'dispatch_attempted':getattr(e,'dispatch_attempted',False)}));return 2
+        print(json.dumps({'status':'error','error':{'code':e.code,'stage':getattr(e,'stage','input')},'dispatch_attempted':getattr(e,'dispatch_attempted',False),'requests':getattr(e,'requests',0),'request_stages':getattr(e,'request_stages',[]),'auth_refresh_attempted':getattr(e,'auth_refresh_attempted',False)}));return 2
     except Exception:
         print(json.dumps({'status':'error','error':{'code':'internal_error'}}));return 2
 

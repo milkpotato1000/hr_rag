@@ -1,0 +1,15 @@
+{
+  "versions": {
+    "google-auth-oauthlib": "1.5.0",
+    "google-auth": "2.63.1",
+    "requests-oauthlib": "2.0.0",
+    "requests": "2.34.2"
+  },
+  "signatures": {
+    "run_local_server": "(self, host='localhost', bind_addr=None, port=8080, authorization_prompt_message='Please visit this URL to authorize this application: {url}', success_message='The authentication flow has completed. You may close this window.', open_browser=True, redirect_uri_trailing_slash=True, timeout_seconds=None, token_audience=None, browser=None, **kwargs)",
+    "from_client_config": "(client_config, scopes, **kwargs)",
+    "from_authorized_user_info": "(info, scopes=None)",
+    "refresh": "(self, request)",
+    "Request": "(session: Optional[requests.sessions.Session] = None) -> None"
+  }
+}

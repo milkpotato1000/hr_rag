@@ -25,7 +25,7 @@ def parse_pdf(path,target):
         if target.exists():target.unlink()
 
 
-def snapshot(sources,out):
+def snapshot(sources,out,*,origins=None):
     started=time.monotonic();sources=Path(sources)
     try:
         cfg=input_json(sources);fields(cfg,{'schema_version','documents'},set(),'sources')
@@ -38,6 +38,8 @@ def snapshot(sources,out):
             string(d['title'],'document.title');string(d['path'],'document.path')
             require(d['format'] in ('pdf','txt','md') and type(d['synthetic']) is bool,'unsupported_source','snapshot')
     except ValidationError:raise RagError('invalid_sources','snapshot') from None
+    if origins is not None:
+        require(isinstance(origins,dict) and set(origins)<=ids,'invalid_origins','snapshot')
     with staging(out) as tmp:
         records=[];total=0
         for d in docs:
@@ -71,6 +73,9 @@ def snapshot(sources,out):
                 'original_path':str(original.relative_to(tmp)),'original_sha256':digest(raw),'bytes':len(raw),'parser':parser,
                 'normalization':'NFC/LF','pages':pages,'canonical_path':d['document_id']+'/canonical.txt','canonical_sha256':digest(canonical.encode()),
                 'status':result['status'],'reason':result['reason']})
+            if origins is not None and d['document_id'] in origins:
+                from .connectors.origin import validate_origin
+                records[-1]['origin']=validate_origin(origins[d['document_id']],records[-1]['original_sha256'])
         status='ready' if all(d['status']=='ready' for d in records) else 'needs_review'
         return seal(tmp,{'schema_version':1,'kind':'snapshot','status':status,'normalization':'NFC/LF','page_separator':'\n\n','offset_unit':'Unicode code point [start,end)','documents':records},round((time.monotonic()-started)*1000,3))
 
@@ -86,6 +91,9 @@ def load_snapshot(root,ready=True):
             require(name in i['files'],'unlisted_file','snapshot')
             return safe_path(root,name).read_bytes()
         original=data(d['original_path'])
+        if 'origin' in d:
+            from .connectors.origin import validate_origin
+            validate_origin(d['origin'],digest(original))
         require(len(original)==d['bytes'] and digest(original)==d['original_sha256'] and len(original)<=MAX_BYTES,'stale_source','snapshot')
         canonical=data(d['canonical_path']).decode('utf-8');pieces=[];offset=0
         for n,p in enumerate(d['pages'],1):

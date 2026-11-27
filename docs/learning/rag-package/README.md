@@ -2,7 +2,7 @@
 
 먼저 준비된 가상 HR 문서와 저장 결과로 RAG의 각 단계를 이해하고, 같은 질문에서 한 가지 조건을 바꾸어 비교합니다. 구현과 검증은 Codex 또는 Claude Code에 맡기고, 학습자는 **왜 이 근거를 찾았는지, 답변에서 무엇이 빠졌는지**를 해석합니다.
 
-이 안내는 P024의 첫 문서 증분입니다. 기본 방향은 Hugging Face(HF)의 공개 모델을 로컬에서 사용하는 것이며, 유료 LLM API는 후속 선택 기능입니다. **아래 두 JSON은 실행할 수 없는 설계 예시입니다. 현재 CLI에 전달하지 마세요.** 독립 API adapter와 validate/preview/invoke CLI는 P025에서 오프라인 검증까지 구현했습니다. [provider 안내](providers.md)를 참고하세요. [일반 문서 RAG CLI](document-rag.md)는 P026에서 연결해 오프라인 검증했습니다. 기존 HR UI/평가 runner 통합·실제 Drive 연결·설치 패키지는 후속입니다. P013 모델 실험은 사용자 요청으로 보류 중이며 이 안내가 재개 권한을 부여하지 않습니다.
+이 안내는 P024의 첫 문서 증분입니다. 기본 방향은 Hugging Face(HF)의 공개 모델을 로컬에서 사용하는 것이며, 유료 LLM API는 후속 선택 기능입니다. **아래 두 JSON은 실행할 수 없는 설계 예시입니다. 현재 CLI에 전달하지 마세요.** 독립 API adapter와 validate/preview/invoke CLI는 P025에서 오프라인 검증까지 구현했습니다. [provider 안내](providers.md)를 참고하세요. [일반 문서 RAG CLI](document-rag.md)는 P026에서 연결해 오프라인 검증했습니다. [Drive 단일 문서 연결](drive.md)은 P027에서 구현하고 가짜 인증/HTTP로 검증했습니다. 실제 계정 연결은 미검증이며 기존 HR UI/평가 runner 통합·설치 패키지는 후속입니다. P013 모델 실험은 사용자 요청으로 보류 중이며 이 안내가 재개 권한을 부여하지 않습니다.
 
 [단계별 비교 실습](experiments.md) → [모델과 지원 상태](models-and-support.md) → [로컬 예시](examples/local.json) / [API 예시](examples/api.json) 순서로 읽으세요. 전체 후속 순서는 [채택한 패키지 로드맵](../../planning/rag-package-roadmap.md)에 있습니다.
 
@@ -48,7 +48,7 @@
 - [Naive RAG 학습 안내](<../../../1. Naive RAG/LEARNING_GUIDE.md>)와 [LangChain 구현](<../../../1. Naive RAG/variants/langchain/README.md>): 기존 합성 청크 기준선입니다. 장문 source-v4와 자동으로 같은 corpus가 되지 않습니다.
 - [P013 중지 기록](../../verification/p013/recovery-20261127/README.md): 기존 8B 한 요청의 성공과 메모리 중지는 전체 평가 완료를 뜻하지 않습니다.
 
-샘플은 가상 자료입니다. 이후 개인 문서를 연결하면 문서 권한·버전과 정답을 새로 관리해야 합니다. 현재 Drive fixture는 로컬 샘플 복사이며 Google Drive 계정에 접속하지 않습니다.
+샘플은 가상 자료입니다. 이후 개인 문서를 연결하면 문서 권한·버전과 정답을 새로 관리해야 합니다. 기존 청킹 단계의 Drive fixture는 로컬 샘플 복사입니다. 별도 P027 connector는 실제 REST/OAuth 코드를 제공하지만 개발 시험은 가짜 인증/HTTP만 사용했고 Google Drive 계정에 접속하지 않았습니다.
 
 ## 호출 없이 시작하기
 
