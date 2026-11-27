@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "7ad76bdad4bd4c3aa2f08b9c5077d9e9b8bc4f5f",
+  "document": "docs/planning/handoffs/P010.md",
+  "summary": "P010 Hybrid READY; evaluator held; P020 reranker next",
+  "next_action": "Integrate and exactly adopt P010 READY; preserve P029 C4 and P013 hold; implement Hybrid package with offline and tiny SDK verification",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T16:08:08.797716+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T16:08:22.578473+00:00",
+      "evidence": "2026-11-28 human expressly chose Hybrid then reranker with evaluation held. Host direct send succeeded to verified existing HR RAG dev with full READY 7ad76bdad4bd4c3aa2f08b9c5077d9e9b8bc4f5f and committed P010 contract. Receipt/adoption/start not yet observed."
+    }
+  ]
+}
