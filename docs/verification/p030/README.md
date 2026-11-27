@@ -10,7 +10,7 @@
 
 ## 증거
 
-- [최종 package 회귀](regression-final.log): 기존 89개와 P030 경계·오류·재생·UI·회계·deadline·상한 시험. [harness 35개](harness.log).
+- [최종 package 회귀](regression-final-2.log): 기존 89개와 P030 18개 경계·오류·재생·UI·회계·deadline·상한 시험. [harness 35개](harness.log).
 - [독립 SDK 시험](tiny-sdk.json): 로컬에서 생성한 작은 랜덤 BERT/SentenceTransformer, 실제 encode worker·수동 document prefix 벡터 대조·공백 단위·float32 재생. [설치본 SDK](tiny-installed.json)는 source 없는 cwd에서 실제 worker 종료와 모델 없는 파생을 검증합니다. 사전학습 품질 증거가 아닙니다.
 - [설치 결과](installation.json), [core-only](core-only.json), [sdist 재생](sdist-replay.json): allowlist와 wheel bytes 일치, 새 venv/소스 없는 cwd/PYTHONPATH 제거, 5방식 비교·candidate→none 연결, sdist 재빌드의 package bytes 동일. 같은 Mac에서만 검증했습니다.
 - [브라우저 관찰](browser.json): 설치 wheel, 합성 backend, 1280×900 및 390×844. 390px 문서 폭 유지, Enter/Space 상세 토글과 Tab 이동, 원문 위치, LLM preview 0호출/명시 fake 3window, 82codepoint 이모지 청크, model0 derive, 후보 출처 test_fixture→none 보존. [데스크톱](browser-desktop.jpg), [좁은 화면](browser-narrow.jpg).

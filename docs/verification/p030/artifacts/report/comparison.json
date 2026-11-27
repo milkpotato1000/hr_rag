@@ -1,0 +1,1414 @@
+{
+  "schema_version": 1,
+  "execution_kind": "test_fixture",
+  "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+  "questions_hash": "88d69a30d3cafae50e5a64edc3598c58f3edb4ffe9e7bd65fc9f2eedc0c9ba34",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "생일 휴가의 자격과 신청 기한은?"
+    }
+  ],
+  "configs": [
+    {
+      "id": "config-1",
+      "hash": "47fa8d0b17751e52680a946ec4d78b034d2e895c4b73f71d60f0c3a2f831a1bb",
+      "settings": {
+        "schema_version": 3,
+        "retrieval": {
+          "method": "bm25",
+          "top_k": 5,
+          "context_budget_chars": 4000,
+          "candidate_k": 20,
+          "rrf_k": 60
+        },
+        "llm": {
+          "schema_version": 1,
+          "profiles": {
+            "answer": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            },
+            "judge": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            }
+          },
+          "roles": {
+            "generation": "answer",
+            "evaluation": "judge"
+          }
+        },
+        "chunk_artifact": {
+          "fingerprint": "e4d06afe574893464ac0dce5300c1a7afe7bfc7aafa8dab4931bfaf1b267843f",
+          "config": {
+            "schema_version": 1,
+            "method": "fixed",
+            "size_chars": 400,
+            "overlap_chars": 80
+          }
+        },
+        "embedding": null
+      },
+      "changed_axes_vs_first": []
+    },
+    {
+      "id": "config-2",
+      "hash": "06e13c255b14f1050f4fa968b3a64834f99a4162bc9c818152e16b14cd7d5aeb",
+      "settings": {
+        "schema_version": 3,
+        "retrieval": {
+          "method": "bm25",
+          "top_k": 5,
+          "context_budget_chars": 4000,
+          "candidate_k": 20,
+          "rrf_k": 60
+        },
+        "llm": {
+          "schema_version": 1,
+          "profiles": {
+            "answer": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            },
+            "judge": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            }
+          },
+          "roles": {
+            "generation": "answer",
+            "evaluation": "judge"
+          }
+        },
+        "chunk_artifact": {
+          "fingerprint": "c5ab2c503fa7566cb2499379e14cda765a695536f9e26de4d2e700003d92e7c8",
+          "config": {
+            "schema_version": 1,
+            "method": "recursive",
+            "size_chars": 400,
+            "overlap_chars": 80
+          }
+        },
+        "embedding": null
+      },
+      "changed_axes_vs_first": [
+        "chunk_artifact"
+      ]
+    },
+    {
+      "id": "config-3",
+      "hash": "87436cf4eafe03d68c73c9b1502c79026c900d569af37a258dbed520dcbe95cb",
+      "settings": {
+        "schema_version": 3,
+        "retrieval": {
+          "method": "bm25",
+          "top_k": 5,
+          "context_budget_chars": 4000,
+          "candidate_k": 20,
+          "rrf_k": 60
+        },
+        "llm": {
+          "schema_version": 1,
+          "profiles": {
+            "answer": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            },
+            "judge": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            }
+          },
+          "roles": {
+            "generation": "answer",
+            "evaluation": "judge"
+          }
+        },
+        "chunk_artifact": {
+          "fingerprint": "75fae1b5535ea7239799595c88d6e9b3eb332039c2679d9c3f8b8e314cf5eb06",
+          "config": {
+            "schema_version": 1,
+            "method": "structure",
+            "size_chars": 400,
+            "overlap_chars": 80
+          }
+        },
+        "embedding": null
+      },
+      "changed_axes_vs_first": [
+        "chunk_artifact"
+      ]
+    },
+    {
+      "id": "config-4",
+      "hash": "82ff174eb1c1a19090915e8b2debf64955c6f9337fae7326967305f5866b426e",
+      "settings": {
+        "schema_version": 3,
+        "retrieval": {
+          "method": "bm25",
+          "top_k": 5,
+          "context_budget_chars": 4000,
+          "candidate_k": 20,
+          "rrf_k": 60
+        },
+        "llm": {
+          "schema_version": 1,
+          "profiles": {
+            "answer": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            },
+            "judge": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            }
+          },
+          "roles": {
+            "generation": "answer",
+            "evaluation": "judge"
+          }
+        },
+        "chunk_artifact": {
+          "fingerprint": "4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e",
+          "config": {
+            "schema_version": 1,
+            "method": "semantic",
+            "size_chars": 400,
+            "overlap_chars": 80,
+            "unit_max_chars": 120,
+            "minimum_chars": 120,
+            "distance_threshold": 0.35,
+            "model": {
+              "model_id": "intfloat/multilingual-e5-small",
+              "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "file_manifest": {
+                "config.json": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "device": "cpu",
+              "dtype": "float32",
+              "max_input_tokens": 512,
+              "catalog": {
+                "dimension": 384,
+                "query_prefix": "query: ",
+                "document_prefix": "passage: ",
+                "pooling": "mean",
+                "limit": 512,
+                "license": "MIT",
+                "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+              },
+              "normalization": "l2",
+              "algorithm": "exact-cosine-v1"
+            }
+          }
+        },
+        "embedding": null
+      },
+      "changed_axes_vs_first": [
+        "chunk_artifact"
+      ]
+    },
+    {
+      "id": "config-5",
+      "hash": "170825dce4dba5c03b9f18457c016a2e25e4c6303f6d6440c82782bd5238468c",
+      "settings": {
+        "schema_version": 3,
+        "retrieval": {
+          "method": "bm25",
+          "top_k": 5,
+          "context_budget_chars": 4000,
+          "candidate_k": 20,
+          "rrf_k": 60
+        },
+        "llm": {
+          "schema_version": 1,
+          "profiles": {
+            "answer": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            },
+            "judge": {
+              "mode": "local",
+              "provider": "ollama",
+              "model": "EXAMPLE_OLLAMA_MODEL",
+              "base_url": "http://127.0.0.1:11434",
+              "max_output_tokens": 1024,
+              "timeout_seconds": 120,
+              "response_mode": "json_object",
+              "temperature": 0,
+              "num_ctx": 8192,
+              "seed": 42,
+              "identity": {
+                "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+                "hf_id": "Qwen/Qwen3-8B",
+                "source_revision": null,
+                "conversion": "User must record their actual runtime conversion",
+                "validation_status": "example_requires_configuration"
+              }
+            }
+          },
+          "roles": {
+            "generation": "answer",
+            "evaluation": "judge"
+          }
+        },
+        "chunk_artifact": {
+          "fingerprint": "5fc0be8d8b1a3e27c964262322d54cdb72aa446d93d3e780e69edd845b8f0eff",
+          "config": {
+            "window_max_chars": 1200,
+            "window_max_units": 20,
+            "max_windows": 64,
+            "max_prompt_bytes": 16384,
+            "total_timeout_seconds": 1800,
+            "schema_version": 1,
+            "method": "llm",
+            "size_chars": 400,
+            "overlap_chars": 80,
+            "unit_max_chars": 120,
+            "model": {
+              "role": "chunking",
+              "profile": {
+                "mode": "local",
+                "provider": "ollama",
+                "model": "fixture-model",
+                "base_url": "http://127.0.0.1:1",
+                "max_output_tokens": 256,
+                "timeout_seconds": 1,
+                "response_mode": "json_object",
+                "identity": {
+                  "expected_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "hf_id": "fixture/model",
+                  "conversion": "synthetic"
+                }
+              },
+              "prompt_version": "source-unit-ends-v1"
+            }
+          }
+        },
+        "embedding": null
+      },
+      "changed_axes_vs_first": [
+        "chunk_artifact"
+      ]
+    }
+  ],
+  "generation_request_upper_bound": 5,
+  "retry_count": 0,
+  "builds": [
+    {
+      "config_id": "config-1",
+      "status": "ready",
+      "chunk_fingerprint": "e4d06afe574893464ac0dce5300c1a7afe7bfc7aafa8dab4931bfaf1b267843f",
+      "index_fingerprint": "cd03db47e62f31b484daeff88c810197de2d26f4a2dc46641d91ae20db9bd6ce",
+      "build_ms": 20.564
+    },
+    {
+      "config_id": "config-2",
+      "status": "ready",
+      "chunk_fingerprint": "c5ab2c503fa7566cb2499379e14cda765a695536f9e26de4d2e700003d92e7c8",
+      "index_fingerprint": "0b0e5ec652fe28f99452d687b6971631c389f7de4b65b4409a0ede8b659823d5",
+      "build_ms": 21.996
+    },
+    {
+      "config_id": "config-3",
+      "status": "ready",
+      "chunk_fingerprint": "75fae1b5535ea7239799595c88d6e9b3eb332039c2679d9c3f8b8e314cf5eb06",
+      "index_fingerprint": "cd799745364f9a1b67e0ad920d5e7f77cc5649f7546125d86e6a5f6a01ac690b",
+      "build_ms": 29.36
+    },
+    {
+      "config_id": "config-4",
+      "status": "ready",
+      "chunk_fingerprint": "4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e",
+      "index_fingerprint": "5a6bd9412a6b13f2c05169aba566849046170c06d6d22836bb2020a1c34d399b",
+      "build_ms": 26.638
+    },
+    {
+      "config_id": "config-5",
+      "status": "ready",
+      "chunk_fingerprint": "5fc0be8d8b1a3e27c964262322d54cdb72aa446d93d3e780e69edd845b8f0eff",
+      "index_fingerprint": "04ad5a454991095956f26a1f475ea57406d00bc29990cfe2feb95ab3f4c7e379",
+      "build_ms": 28.53
+    }
+  ],
+  "rows": [
+    {
+      "config_id": "config-1",
+      "question_id": "q1",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "test_fixture",
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+      "result_path": "config-1/answers/q1/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 18.38424999732524,
+        "retrieval": 0.11683399497997016,
+        "provider": null,
+        "total": 31.072500001755543
+      }
+    },
+    {
+      "config_id": "config-2",
+      "question_id": "q1",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "test_fixture",
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+      "result_path": "config-2/answers/q1/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 19.595041987486184,
+        "retrieval": 0.1263330050278455,
+        "provider": null,
+        "total": 33.547083992743865
+      }
+    },
+    {
+      "config_id": "config-3",
+      "question_id": "q1",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "test_fixture",
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+      "result_path": "config-3/answers/q1/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 25.00645899272058,
+        "retrieval": 0.12933299876749516,
+        "provider": null,
+        "total": 40.01370898913592
+      }
+    },
+    {
+      "config_id": "config-4",
+      "question_id": "q1",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "test_fixture",
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+      "result_path": "config-4/answers/q1/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 24.971457998617552,
+        "retrieval": 0.1356249995296821,
+        "provider": null,
+        "total": 42.912874996545725
+      }
+    },
+    {
+      "config_id": "config-5",
+      "question_id": "q1",
+      "status": "preview",
+      "failed_stage": null,
+      "error": null,
+      "dispatch_attempted": false,
+      "execution_kind": "test_fixture",
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2",
+      "result_path": "config-5/answers/q1/result.json",
+      "metrics": {
+        "faithfulness": {
+          "value": null,
+          "reason": "evaluator_not_connected"
+        },
+        "correctness": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "recall_at_k": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "mrr": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "ndcg": {
+          "value": null,
+          "reason": "ground_truth_not_configured"
+        },
+        "facts": {
+          "candidate": {
+            "fact_recall": 1.0,
+            "all_required": true,
+            "fulfilled": 1,
+            "total": 1,
+            "fulfilled_ids": [
+              "birthday"
+            ],
+            "reason": null
+          },
+          "top_k": {
+            "fact_recall": 0.0,
+            "all_required": false,
+            "fulfilled": 0,
+            "total": 1,
+            "fulfilled_ids": [],
+            "reason": null
+          },
+          "contexts": {
+            "fact_recall": 0.0,
+            "all_required": false,
+            "fulfilled": 0,
+            "total": 1,
+            "fulfilled_ids": [],
+            "reason": null
+          }
+        }
+      },
+      "usage": null,
+      "cost": null,
+      "latency_ms": {
+        "load_build": 24.299249998875894,
+        "retrieval": 0.2365830005146563,
+        "provider": null,
+        "total": 42.51558298710734
+      }
+    }
+  ],
+  "status_counts": {
+    "preview": 5
+  },
+  "embedding_work": {
+    "jobs": 0,
+    "documents": 0,
+    "queries": 0
+  },
+  "generation_requests": 0,
+  "cost": null,
+  "cost_status": "unmeasured",
+  "metrics": {
+    "faithfulness": {
+      "value": null,
+      "reason": "evaluator_not_connected"
+    },
+    "correctness": {
+      "value": null,
+      "reason": "ground_truth_not_configured"
+    },
+    "recall_at_k": {
+      "value": null,
+      "reason": "ground_truth_not_configured"
+    },
+    "mrr": {
+      "value": null,
+      "reason": "ground_truth_not_configured"
+    },
+    "ndcg": {
+      "value": null,
+      "reason": "ground_truth_not_configured"
+    }
+  },
+  "source_parse_ms": 1.178,
+  "total_ms": 422.8179170022486,
+  "comparison_axis": "frozen_chunk_artifact",
+  "boundary_inference_calls": 0,
+  "fact_aggregates": {
+    "config-1": {
+      "candidate": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "top_k": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "contexts": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      }
+    },
+    "config-2": {
+      "candidate": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "top_k": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "contexts": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      }
+    },
+    "config-3": {
+      "candidate": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "top_k": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "contexts": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      }
+    },
+    "config-4": {
+      "candidate": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "top_k": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "contexts": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      }
+    },
+    "config-5": {
+      "candidate": {
+        "macro": 1.0,
+        "micro": 1.0,
+        "all_required_rate": 1.0,
+        "fulfilled": 1,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "top_k": {
+        "macro": 0.0,
+        "micro": 0.0,
+        "all_required_rate": 0.0,
+        "fulfilled": 0,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      },
+      "contexts": {
+        "macro": 0.0,
+        "micro": 0.0,
+        "all_required_rate": 0.0,
+        "fulfilled": 0,
+        "total_facts": 1,
+        "valid": 1,
+        "questions": 1,
+        "failed": 0,
+        "no_required_facts": 0,
+        "excluded": 0
+      }
+    }
+  },
+  "chunk_artifacts": [
+    {
+      "chunk_fingerprint": "e4d06afe574893464ac0dce5300c1a7afe7bfc7aafa8dab4931bfaf1b267843f",
+      "config": {
+        "schema_version": 1,
+        "method": "fixed",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "statistics": {
+        "chunk_count": 3,
+        "unit_count": 38,
+        "lengths": [
+          400,
+          333,
+          385
+        ],
+        "min": 333,
+        "max": 400,
+        "mean": 372.6666666666667,
+        "emitted_chars": 1118,
+        "unique_chars": 1038,
+        "duplicate_chars": 80,
+        "forced_units": 0,
+        "token_count": null,
+        "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+      },
+      "work": {
+        "execution_kind": "offline",
+        "boundary_model_jobs": 0,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 0,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 0.35924999974668026
+      },
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2"
+    },
+    {
+      "chunk_fingerprint": "c5ab2c503fa7566cb2499379e14cda765a695536f9e26de4d2e700003d92e7c8",
+      "config": {
+        "schema_version": 1,
+        "method": "recursive",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "statistics": {
+        "chunk_count": 5,
+        "unit_count": 38,
+        "lengths": [
+          246,
+          271,
+          296,
+          213,
+          252
+        ],
+        "min": 213,
+        "max": 296,
+        "mean": 255.6,
+        "emitted_chars": 1278,
+        "unique_chars": 1038,
+        "duplicate_chars": 240,
+        "forced_units": 0,
+        "token_count": null,
+        "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+      },
+      "work": {
+        "execution_kind": "offline",
+        "boundary_model_jobs": 0,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 0,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 0.2928339963546023
+      },
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2"
+    },
+    {
+      "chunk_fingerprint": "75fae1b5535ea7239799595c88d6e9b3eb332039c2679d9c3f8b8e314cf5eb06",
+      "config": {
+        "schema_version": 1,
+        "method": "structure",
+        "size_chars": 400,
+        "overlap_chars": 80
+      },
+      "statistics": {
+        "chunk_count": 7,
+        "unit_count": 38,
+        "lengths": [
+          47,
+          189,
+          191,
+          226,
+          44,
+          169,
+          172
+        ],
+        "min": 44,
+        "max": 226,
+        "mean": 148.28571428571428,
+        "emitted_chars": 1038,
+        "unique_chars": 1038,
+        "duplicate_chars": 0,
+        "forced_units": 0,
+        "token_count": null,
+        "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+      },
+      "work": {
+        "execution_kind": "offline",
+        "boundary_model_jobs": 0,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 0,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 0.27704100648406893
+      },
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2"
+    },
+    {
+      "chunk_fingerprint": "4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e",
+      "config": {
+        "schema_version": 1,
+        "method": "semantic",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "unit_max_chars": 120,
+        "minimum_chars": 120,
+        "distance_threshold": 0.35,
+        "model": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "file_manifest": {
+            "config.json": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          },
+          "device": "cpu",
+          "dtype": "float32",
+          "max_input_tokens": 512,
+          "catalog": {
+            "dimension": 384,
+            "query_prefix": "query: ",
+            "document_prefix": "passage: ",
+            "pooling": "mean",
+            "limit": 512,
+            "license": "MIT",
+            "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+          },
+          "normalization": "l2",
+          "algorithm": "exact-cosine-v1"
+        }
+      },
+      "statistics": {
+        "chunk_count": 5,
+        "unit_count": 38,
+        "lengths": [
+          296,
+          355,
+          162,
+          320,
+          145
+        ],
+        "min": 145,
+        "max": 355,
+        "mean": 255.6,
+        "emitted_chars": 1278,
+        "unique_chars": 1038,
+        "duplicate_chars": 240,
+        "forced_units": 0,
+        "token_count": null,
+        "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+      },
+      "work": {
+        "execution_kind": "test_fixture",
+        "boundary_model_jobs": 1,
+        "boundary_attempts": 1,
+        "unit_observation": {
+          "requested_items": 38,
+          "attempted_jobs": 1,
+          "workers_started": 0,
+          "backend_calls": 1,
+          "completed_items": 38,
+          "worker_exited": null
+        },
+        "requested_windows": 0,
+        "dispatches": 0,
+        "successful_windows": 0,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": {
+          "jobs": 1,
+          "documents": 38,
+          "queries": 0,
+          "elapsed_ms": 1.7237499996554106,
+          "sdk_versions": {
+            "synthetic": "1"
+          },
+          "peak_rss_bytes": null,
+          "rss_method": "unavailable",
+          "sampling_interval_ms": null,
+          "execution_kind": "test_fixture",
+          "worker_exited": true
+        },
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 3.8440839998656884
+      },
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2"
+    },
+    {
+      "chunk_fingerprint": "5fc0be8d8b1a3e27c964262322d54cdb72aa446d93d3e780e69edd845b8f0eff",
+      "config": {
+        "window_max_chars": 1200,
+        "window_max_units": 20,
+        "max_windows": 64,
+        "max_prompt_bytes": 16384,
+        "total_timeout_seconds": 1800,
+        "schema_version": 1,
+        "method": "llm",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "unit_max_chars": 120,
+        "model": {
+          "role": "chunking",
+          "profile": {
+            "mode": "local",
+            "provider": "ollama",
+            "model": "fixture-model",
+            "base_url": "http://127.0.0.1:1",
+            "max_output_tokens": 256,
+            "timeout_seconds": 1,
+            "response_mode": "json_object",
+            "identity": {
+              "expected_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "hf_id": "fixture/model",
+              "conversion": "synthetic"
+            }
+          },
+          "prompt_version": "source-unit-ends-v1"
+        }
+      },
+      "statistics": {
+        "chunk_count": 38,
+        "unit_count": 38,
+        "lengths": [
+          17,
+          18,
+          30,
+          39,
+          11,
+          32,
+          53,
+          47,
+          58,
+          60,
+          67,
+          49,
+          10,
+          51,
+          78,
+          68,
+          65,
+          63,
+          47,
+          10,
+          30,
+          60,
+          74,
+          74,
+          82,
+          82,
+          44,
+          54,
+          56,
+          77,
+          83,
+          82,
+          40,
+          43,
+          65,
+          64,
+          61,
+          65
+        ],
+        "min": 10,
+        "max": 83,
+        "mean": 52.86842105263158,
+        "emitted_chars": 2009,
+        "unique_chars": 1038,
+        "duplicate_chars": 971,
+        "forced_units": 0,
+        "token_count": null,
+        "token_status": "unmeasured; character/byte limits do not guarantee model context window"
+      },
+      "work": {
+        "execution_kind": "test_fixture",
+        "boundary_model_jobs": 3,
+        "boundary_attempts": 0,
+        "unit_observation": {},
+        "requested_windows": 3,
+        "dispatches": 3,
+        "successful_windows": 3,
+        "failed_windows": 0,
+        "unknown_windows": 0,
+        "retry_count": 0,
+        "cost": null,
+        "cost_status": "unmeasured",
+        "unit_embedding": null,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        },
+        "elapsed_ms": 7.109750004019588
+      },
+      "source_fingerprint": "6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2"
+    }
+  ]
+}

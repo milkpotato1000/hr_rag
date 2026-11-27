@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "adopted_plan": "0c2c5d0c5d8de16702a8cd188bed078081f4b181",
+  "adoption_commit": "583f775",
+  "implementation_commit": "9bdfdcf",
+  "package_tests": 107,
+  "harness_tests": 35,
+  "new_tests": 18,
+  "tiny_random_sdk": "PASS; document-prefix manual vectors, float32 boundaries, whitespace, final source-free installed single worker exit",
+  "core_only_and_sdist": "PASS; final source-free same Mac venv; all5 config preview and compare10 rows; model-free report and candidate/none",
+  "browser": "PASS; 1280x900,390x844,width390; keyboard/source/Unicode/fake LLM/derive/fixture candidate provenance",
+  "final_ui_bytes": "equal to observed installed wheel; browser-final-bytes.json",
+  "preserved_files": 1513,
+  "markdown_links": 102,
+  "P013": "BLOCKED, grant unused, no new provider work",
+  "P014": "evaluation hold unchanged",
+  "P029": "C4 BLOCKED, denied filepicker not retried",
+  "actual_pretrained_llm_api_drive_oauth_key_calls": 0,
+  "retries": 0,
+  "owned_servers": "exit0",
+  "reverse_messages": 0,
+  "delivery": "pending normal personal/dev push; delivery.json will record"
+}

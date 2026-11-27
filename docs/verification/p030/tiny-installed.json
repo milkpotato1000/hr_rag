@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "installed_path": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-2msizrvo/env/lib/python3.12/site-packages/rag_package/__init__.py",
+  "installed_path": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p030-installed-zx7wqwm0/env/lib/python3.12/site-packages/rag_package/__init__.py",
   "random_weights_only": true,
   "pretrained_loads": 0,
   "network_calls": 0,
@@ -28,7 +28,7 @@
       "jobs": 1,
       "documents": 43,
       "queries": 0,
-      "elapsed_ms": 38324.1149999958,
+      "elapsed_ms": 38557.63870799274,
       "sdk_versions": {
         "sentence-transformers": "6.3.0",
         "torch": "2.15.0",
@@ -36,7 +36,7 @@
         "tokenizers": "0.23.3",
         "safetensors": "0.8.0"
       },
-      "peak_rss_bytes": 475758592,
+      "peak_rss_bytes": 477413376,
       "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
       "sampling_interval_ms": null,
       "execution_kind": "local_hf",
@@ -46,6 +46,6 @@
       "input_tokens": null,
       "output_tokens": null
     },
-    "elapsed_ms": 38326.524832998984
+    "elapsed_ms": 38560.16916599765
   }
 }

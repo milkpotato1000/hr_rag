@@ -27,5 +27,12 @@
   },
   "derive": "저장된 경계 · 검색에 사용 가능\n\nllm · derived · 경계 모델 작업 0 · 토큰/비용 미측정\n\n단위 38 · 청크 38 · 길이 10~83 / 평균 52.9자 · 중복 971자 · 강제 단위 분할 0\n\n원문 단위와 강제 분할\n오버랩 이전 기본 경계\n모델 선택·거리·window 경계\nbirthday · 0–17\n\n제목 경로: 가상 회사 생일 휴가 안내 · 17자\n\n# 가상 회사 생",
   "console_errors": [],
-  "blocked_upload_retries": 0
+  "blocked_upload_retries": 0,
+  "owned_servers": {
+    "pids": [
+      23997,
+      26372
+    ],
+    "termination": "SIGINT then exec observed exit0 and owned_server_closed"
+  }
 }

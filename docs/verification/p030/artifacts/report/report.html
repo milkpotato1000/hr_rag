@@ -1,0 +1,1414 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>청킹 비교</title><style>body{font-family:system-ui;max-width:1000px;margin:auto;padding:20px;overflow-wrap:anywhere}table{width:100%;border-collapse:collapse}td,th{border:1px solid #ccc;padding:8px}pre{white-space:pre-wrap}</style><h1>저장된 청크 비교</h1><p>경계 모델 재실행 0. 원문 span 회수는 답변 정답 판정과 별개입니다. 실행 출처: test_fixture</p><table><tr><th>설정</th><th>질문</th><th>상태</th><th>문맥 fact 회수</th></tr><tr><td>config-1</td><td>q1</td><td>preview</td><td>1.0</td></tr><tr><td>config-2</td><td>q1</td><td>preview</td><td>1.0</td></tr><tr><td>config-3</td><td>q1</td><td>preview</td><td>1.0</td></tr><tr><td>config-4</td><td>q1</td><td>preview</td><td>1.0</td></tr><tr><td>config-5</td><td>q1</td><td>preview</td><td>0.0</td></tr></table><details><summary>집계·실행 기록</summary><pre>{
+  &quot;schema_version&quot;: 1,
+  &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+  &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;,
+  &quot;questions_hash&quot;: &quot;88d69a30d3cafae50e5a64edc3598c58f3edb4ffe9e7bd65fc9f2eedc0c9ba34&quot;,
+  &quot;questions&quot;: [
+    {
+      &quot;id&quot;: &quot;q1&quot;,
+      &quot;question&quot;: &quot;생일 휴가의 자격과 신청 기한은?&quot;
+    }
+  ],
+  &quot;configs&quot;: [
+    {
+      &quot;id&quot;: &quot;config-1&quot;,
+      &quot;hash&quot;: &quot;47fa8d0b17751e52680a946ec4d78b034d2e895c4b73f71d60f0c3a2f831a1bb&quot;,
+      &quot;settings&quot;: {
+        &quot;schema_version&quot;: 3,
+        &quot;retrieval&quot;: {
+          &quot;method&quot;: &quot;bm25&quot;,
+          &quot;top_k&quot;: 5,
+          &quot;context_budget_chars&quot;: 4000,
+          &quot;candidate_k&quot;: 20,
+          &quot;rrf_k&quot;: 60
+        },
+        &quot;llm&quot;: {
+          &quot;schema_version&quot;: 1,
+          &quot;profiles&quot;: {
+            &quot;answer&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            },
+            &quot;judge&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            }
+          },
+          &quot;roles&quot;: {
+            &quot;generation&quot;: &quot;answer&quot;,
+            &quot;evaluation&quot;: &quot;judge&quot;
+          }
+        },
+        &quot;chunk_artifact&quot;: {
+          &quot;fingerprint&quot;: &quot;e4d06afe574893464ac0dce5300c1a7afe7bfc7aafa8dab4931bfaf1b267843f&quot;,
+          &quot;config&quot;: {
+            &quot;schema_version&quot;: 1,
+            &quot;method&quot;: &quot;fixed&quot;,
+            &quot;size_chars&quot;: 400,
+            &quot;overlap_chars&quot;: 80
+          }
+        },
+        &quot;embedding&quot;: null
+      },
+      &quot;changed_axes_vs_first&quot;: []
+    },
+    {
+      &quot;id&quot;: &quot;config-2&quot;,
+      &quot;hash&quot;: &quot;06e13c255b14f1050f4fa968b3a64834f99a4162bc9c818152e16b14cd7d5aeb&quot;,
+      &quot;settings&quot;: {
+        &quot;schema_version&quot;: 3,
+        &quot;retrieval&quot;: {
+          &quot;method&quot;: &quot;bm25&quot;,
+          &quot;top_k&quot;: 5,
+          &quot;context_budget_chars&quot;: 4000,
+          &quot;candidate_k&quot;: 20,
+          &quot;rrf_k&quot;: 60
+        },
+        &quot;llm&quot;: {
+          &quot;schema_version&quot;: 1,
+          &quot;profiles&quot;: {
+            &quot;answer&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            },
+            &quot;judge&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            }
+          },
+          &quot;roles&quot;: {
+            &quot;generation&quot;: &quot;answer&quot;,
+            &quot;evaluation&quot;: &quot;judge&quot;
+          }
+        },
+        &quot;chunk_artifact&quot;: {
+          &quot;fingerprint&quot;: &quot;c5ab2c503fa7566cb2499379e14cda765a695536f9e26de4d2e700003d92e7c8&quot;,
+          &quot;config&quot;: {
+            &quot;schema_version&quot;: 1,
+            &quot;method&quot;: &quot;recursive&quot;,
+            &quot;size_chars&quot;: 400,
+            &quot;overlap_chars&quot;: 80
+          }
+        },
+        &quot;embedding&quot;: null
+      },
+      &quot;changed_axes_vs_first&quot;: [
+        &quot;chunk_artifact&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;config-3&quot;,
+      &quot;hash&quot;: &quot;87436cf4eafe03d68c73c9b1502c79026c900d569af37a258dbed520dcbe95cb&quot;,
+      &quot;settings&quot;: {
+        &quot;schema_version&quot;: 3,
+        &quot;retrieval&quot;: {
+          &quot;method&quot;: &quot;bm25&quot;,
+          &quot;top_k&quot;: 5,
+          &quot;context_budget_chars&quot;: 4000,
+          &quot;candidate_k&quot;: 20,
+          &quot;rrf_k&quot;: 60
+        },
+        &quot;llm&quot;: {
+          &quot;schema_version&quot;: 1,
+          &quot;profiles&quot;: {
+            &quot;answer&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            },
+            &quot;judge&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            }
+          },
+          &quot;roles&quot;: {
+            &quot;generation&quot;: &quot;answer&quot;,
+            &quot;evaluation&quot;: &quot;judge&quot;
+          }
+        },
+        &quot;chunk_artifact&quot;: {
+          &quot;fingerprint&quot;: &quot;75fae1b5535ea7239799595c88d6e9b3eb332039c2679d9c3f8b8e314cf5eb06&quot;,
+          &quot;config&quot;: {
+            &quot;schema_version&quot;: 1,
+            &quot;method&quot;: &quot;structure&quot;,
+            &quot;size_chars&quot;: 400,
+            &quot;overlap_chars&quot;: 80
+          }
+        },
+        &quot;embedding&quot;: null
+      },
+      &quot;changed_axes_vs_first&quot;: [
+        &quot;chunk_artifact&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;config-4&quot;,
+      &quot;hash&quot;: &quot;82ff174eb1c1a19090915e8b2debf64955c6f9337fae7326967305f5866b426e&quot;,
+      &quot;settings&quot;: {
+        &quot;schema_version&quot;: 3,
+        &quot;retrieval&quot;: {
+          &quot;method&quot;: &quot;bm25&quot;,
+          &quot;top_k&quot;: 5,
+          &quot;context_budget_chars&quot;: 4000,
+          &quot;candidate_k&quot;: 20,
+          &quot;rrf_k&quot;: 60
+        },
+        &quot;llm&quot;: {
+          &quot;schema_version&quot;: 1,
+          &quot;profiles&quot;: {
+            &quot;answer&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            },
+            &quot;judge&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            }
+          },
+          &quot;roles&quot;: {
+            &quot;generation&quot;: &quot;answer&quot;,
+            &quot;evaluation&quot;: &quot;judge&quot;
+          }
+        },
+        &quot;chunk_artifact&quot;: {
+          &quot;fingerprint&quot;: &quot;4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e&quot;,
+          &quot;config&quot;: {
+            &quot;schema_version&quot;: 1,
+            &quot;method&quot;: &quot;semantic&quot;,
+            &quot;size_chars&quot;: 400,
+            &quot;overlap_chars&quot;: 80,
+            &quot;unit_max_chars&quot;: 120,
+            &quot;minimum_chars&quot;: 120,
+            &quot;distance_threshold&quot;: 0.35,
+            &quot;model&quot;: {
+              &quot;model_id&quot;: &quot;intfloat/multilingual-e5-small&quot;,
+              &quot;revision&quot;: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;,
+              &quot;file_manifest&quot;: {
+                &quot;config.json&quot;: &quot;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb&quot;
+              },
+              &quot;device&quot;: &quot;cpu&quot;,
+              &quot;dtype&quot;: &quot;float32&quot;,
+              &quot;max_input_tokens&quot;: 512,
+              &quot;catalog&quot;: {
+                &quot;dimension&quot;: 384,
+                &quot;query_prefix&quot;: &quot;query: &quot;,
+                &quot;document_prefix&quot;: &quot;passage: &quot;,
+                &quot;pooling&quot;: &quot;mean&quot;,
+                &quot;limit&quot;: 512,
+                &quot;license&quot;: &quot;MIT&quot;,
+                &quot;url&quot;: &quot;https://huggingface.co/intfloat/multilingual-e5-small&quot;
+              },
+              &quot;normalization&quot;: &quot;l2&quot;,
+              &quot;algorithm&quot;: &quot;exact-cosine-v1&quot;
+            }
+          }
+        },
+        &quot;embedding&quot;: null
+      },
+      &quot;changed_axes_vs_first&quot;: [
+        &quot;chunk_artifact&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;config-5&quot;,
+      &quot;hash&quot;: &quot;170825dce4dba5c03b9f18457c016a2e25e4c6303f6d6440c82782bd5238468c&quot;,
+      &quot;settings&quot;: {
+        &quot;schema_version&quot;: 3,
+        &quot;retrieval&quot;: {
+          &quot;method&quot;: &quot;bm25&quot;,
+          &quot;top_k&quot;: 5,
+          &quot;context_budget_chars&quot;: 4000,
+          &quot;candidate_k&quot;: 20,
+          &quot;rrf_k&quot;: 60
+        },
+        &quot;llm&quot;: {
+          &quot;schema_version&quot;: 1,
+          &quot;profiles&quot;: {
+            &quot;answer&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            },
+            &quot;judge&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            }
+          },
+          &quot;roles&quot;: {
+            &quot;generation&quot;: &quot;answer&quot;,
+            &quot;evaluation&quot;: &quot;judge&quot;
+          }
+        },
+        &quot;chunk_artifact&quot;: {
+          &quot;fingerprint&quot;: &quot;5fc0be8d8b1a3e27c964262322d54cdb72aa446d93d3e780e69edd845b8f0eff&quot;,
+          &quot;config&quot;: {
+            &quot;window_max_chars&quot;: 1200,
+            &quot;window_max_units&quot;: 20,
+            &quot;max_windows&quot;: 64,
+            &quot;max_prompt_bytes&quot;: 16384,
+            &quot;total_timeout_seconds&quot;: 1800,
+            &quot;schema_version&quot;: 1,
+            &quot;method&quot;: &quot;llm&quot;,
+            &quot;size_chars&quot;: 400,
+            &quot;overlap_chars&quot;: 80,
+            &quot;unit_max_chars&quot;: 120,
+            &quot;model&quot;: {
+              &quot;role&quot;: &quot;chunking&quot;,
+              &quot;profile&quot;: {
+                &quot;mode&quot;: &quot;local&quot;,
+                &quot;provider&quot;: &quot;ollama&quot;,
+                &quot;model&quot;: &quot;fixture-model&quot;,
+                &quot;base_url&quot;: &quot;http://127.0.0.1:1&quot;,
+                &quot;max_output_tokens&quot;: 256,
+                &quot;timeout_seconds&quot;: 1,
+                &quot;response_mode&quot;: &quot;json_object&quot;,
+                &quot;identity&quot;: {
+                  &quot;expected_digest&quot;: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;,
+                  &quot;hf_id&quot;: &quot;fixture/model&quot;,
+                  &quot;conversion&quot;: &quot;synthetic&quot;
+                }
+              },
+              &quot;prompt_version&quot;: &quot;source-unit-ends-v1&quot;
+            }
+          }
+        },
+        &quot;embedding&quot;: null
+      },
+      &quot;changed_axes_vs_first&quot;: [
+        &quot;chunk_artifact&quot;
+      ]
+    }
+  ],
+  &quot;generation_request_upper_bound&quot;: 5,
+  &quot;retry_count&quot;: 0,
+  &quot;builds&quot;: [
+    {
+      &quot;config_id&quot;: &quot;config-1&quot;,
+      &quot;status&quot;: &quot;ready&quot;,
+      &quot;chunk_fingerprint&quot;: &quot;e4d06afe574893464ac0dce5300c1a7afe7bfc7aafa8dab4931bfaf1b267843f&quot;,
+      &quot;index_fingerprint&quot;: &quot;cd03db47e62f31b484daeff88c810197de2d26f4a2dc46641d91ae20db9bd6ce&quot;,
+      &quot;build_ms&quot;: 20.564
+    },
+    {
+      &quot;config_id&quot;: &quot;config-2&quot;,
+      &quot;status&quot;: &quot;ready&quot;,
+      &quot;chunk_fingerprint&quot;: &quot;c5ab2c503fa7566cb2499379e14cda765a695536f9e26de4d2e700003d92e7c8&quot;,
+      &quot;index_fingerprint&quot;: &quot;0b0e5ec652fe28f99452d687b6971631c389f7de4b65b4409a0ede8b659823d5&quot;,
+      &quot;build_ms&quot;: 21.996
+    },
+    {
+      &quot;config_id&quot;: &quot;config-3&quot;,
+      &quot;status&quot;: &quot;ready&quot;,
+      &quot;chunk_fingerprint&quot;: &quot;75fae1b5535ea7239799595c88d6e9b3eb332039c2679d9c3f8b8e314cf5eb06&quot;,
+      &quot;index_fingerprint&quot;: &quot;cd799745364f9a1b67e0ad920d5e7f77cc5649f7546125d86e6a5f6a01ac690b&quot;,
+      &quot;build_ms&quot;: 29.36
+    },
+    {
+      &quot;config_id&quot;: &quot;config-4&quot;,
+      &quot;status&quot;: &quot;ready&quot;,
+      &quot;chunk_fingerprint&quot;: &quot;4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e&quot;,
+      &quot;index_fingerprint&quot;: &quot;5a6bd9412a6b13f2c05169aba566849046170c06d6d22836bb2020a1c34d399b&quot;,
+      &quot;build_ms&quot;: 26.638
+    },
+    {
+      &quot;config_id&quot;: &quot;config-5&quot;,
+      &quot;status&quot;: &quot;ready&quot;,
+      &quot;chunk_fingerprint&quot;: &quot;5fc0be8d8b1a3e27c964262322d54cdb72aa446d93d3e780e69edd845b8f0eff&quot;,
+      &quot;index_fingerprint&quot;: &quot;04ad5a454991095956f26a1f475ea57406d00bc29990cfe2feb95ab3f4c7e379&quot;,
+      &quot;build_ms&quot;: 28.53
+    }
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;config_id&quot;: &quot;config-1&quot;,
+      &quot;question_id&quot;: &quot;q1&quot;,
+      &quot;status&quot;: &quot;preview&quot;,
+      &quot;failed_stage&quot;: null,
+      &quot;error&quot;: null,
+      &quot;dispatch_attempted&quot;: false,
+      &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;,
+      &quot;result_path&quot;: &quot;config-1/answers/q1/result.json&quot;,
+      &quot;metrics&quot;: {
+        &quot;faithfulness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+        },
+        &quot;correctness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;recall_at_k&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;mrr&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;ndcg&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;facts&quot;: {
+          &quot;candidate&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          },
+          &quot;top_k&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          },
+          &quot;contexts&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          }
+        }
+      },
+      &quot;usage&quot;: null,
+      &quot;cost&quot;: null,
+      &quot;latency_ms&quot;: {
+        &quot;load_build&quot;: 18.38424999732524,
+        &quot;retrieval&quot;: 0.11683399497997016,
+        &quot;provider&quot;: null,
+        &quot;total&quot;: 31.072500001755543
+      }
+    },
+    {
+      &quot;config_id&quot;: &quot;config-2&quot;,
+      &quot;question_id&quot;: &quot;q1&quot;,
+      &quot;status&quot;: &quot;preview&quot;,
+      &quot;failed_stage&quot;: null,
+      &quot;error&quot;: null,
+      &quot;dispatch_attempted&quot;: false,
+      &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;,
+      &quot;result_path&quot;: &quot;config-2/answers/q1/result.json&quot;,
+      &quot;metrics&quot;: {
+        &quot;faithfulness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+        },
+        &quot;correctness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;recall_at_k&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;mrr&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;ndcg&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;facts&quot;: {
+          &quot;candidate&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          },
+          &quot;top_k&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          },
+          &quot;contexts&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          }
+        }
+      },
+      &quot;usage&quot;: null,
+      &quot;cost&quot;: null,
+      &quot;latency_ms&quot;: {
+        &quot;load_build&quot;: 19.595041987486184,
+        &quot;retrieval&quot;: 0.1263330050278455,
+        &quot;provider&quot;: null,
+        &quot;total&quot;: 33.547083992743865
+      }
+    },
+    {
+      &quot;config_id&quot;: &quot;config-3&quot;,
+      &quot;question_id&quot;: &quot;q1&quot;,
+      &quot;status&quot;: &quot;preview&quot;,
+      &quot;failed_stage&quot;: null,
+      &quot;error&quot;: null,
+      &quot;dispatch_attempted&quot;: false,
+      &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;,
+      &quot;result_path&quot;: &quot;config-3/answers/q1/result.json&quot;,
+      &quot;metrics&quot;: {
+        &quot;faithfulness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+        },
+        &quot;correctness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;recall_at_k&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;mrr&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;ndcg&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;facts&quot;: {
+          &quot;candidate&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          },
+          &quot;top_k&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          },
+          &quot;contexts&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          }
+        }
+      },
+      &quot;usage&quot;: null,
+      &quot;cost&quot;: null,
+      &quot;latency_ms&quot;: {
+        &quot;load_build&quot;: 25.00645899272058,
+        &quot;retrieval&quot;: 0.12933299876749516,
+        &quot;provider&quot;: null,
+        &quot;total&quot;: 40.01370898913592
+      }
+    },
+    {
+      &quot;config_id&quot;: &quot;config-4&quot;,
+      &quot;question_id&quot;: &quot;q1&quot;,
+      &quot;status&quot;: &quot;preview&quot;,
+      &quot;failed_stage&quot;: null,
+      &quot;error&quot;: null,
+      &quot;dispatch_attempted&quot;: false,
+      &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;,
+      &quot;result_path&quot;: &quot;config-4/answers/q1/result.json&quot;,
+      &quot;metrics&quot;: {
+        &quot;faithfulness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+        },
+        &quot;correctness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;recall_at_k&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;mrr&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;ndcg&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;facts&quot;: {
+          &quot;candidate&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          },
+          &quot;top_k&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          },
+          &quot;contexts&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          }
+        }
+      },
+      &quot;usage&quot;: null,
+      &quot;cost&quot;: null,
+      &quot;latency_ms&quot;: {
+        &quot;load_build&quot;: 24.971457998617552,
+        &quot;retrieval&quot;: 0.1356249995296821,
+        &quot;provider&quot;: null,
+        &quot;total&quot;: 42.912874996545725
+      }
+    },
+    {
+      &quot;config_id&quot;: &quot;config-5&quot;,
+      &quot;question_id&quot;: &quot;q1&quot;,
+      &quot;status&quot;: &quot;preview&quot;,
+      &quot;failed_stage&quot;: null,
+      &quot;error&quot;: null,
+      &quot;dispatch_attempted&quot;: false,
+      &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;,
+      &quot;result_path&quot;: &quot;config-5/answers/q1/result.json&quot;,
+      &quot;metrics&quot;: {
+        &quot;faithfulness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+        },
+        &quot;correctness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;recall_at_k&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;mrr&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;ndcg&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;facts&quot;: {
+          &quot;candidate&quot;: {
+            &quot;fact_recall&quot;: 1.0,
+            &quot;all_required&quot;: true,
+            &quot;fulfilled&quot;: 1,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [
+              &quot;birthday&quot;
+            ],
+            &quot;reason&quot;: null
+          },
+          &quot;top_k&quot;: {
+            &quot;fact_recall&quot;: 0.0,
+            &quot;all_required&quot;: false,
+            &quot;fulfilled&quot;: 0,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [],
+            &quot;reason&quot;: null
+          },
+          &quot;contexts&quot;: {
+            &quot;fact_recall&quot;: 0.0,
+            &quot;all_required&quot;: false,
+            &quot;fulfilled&quot;: 0,
+            &quot;total&quot;: 1,
+            &quot;fulfilled_ids&quot;: [],
+            &quot;reason&quot;: null
+          }
+        }
+      },
+      &quot;usage&quot;: null,
+      &quot;cost&quot;: null,
+      &quot;latency_ms&quot;: {
+        &quot;load_build&quot;: 24.299249998875894,
+        &quot;retrieval&quot;: 0.2365830005146563,
+        &quot;provider&quot;: null,
+        &quot;total&quot;: 42.51558298710734
+      }
+    }
+  ],
+  &quot;status_counts&quot;: {
+    &quot;preview&quot;: 5
+  },
+  &quot;embedding_work&quot;: {
+    &quot;jobs&quot;: 0,
+    &quot;documents&quot;: 0,
+    &quot;queries&quot;: 0
+  },
+  &quot;generation_requests&quot;: 0,
+  &quot;cost&quot;: null,
+  &quot;cost_status&quot;: &quot;unmeasured&quot;,
+  &quot;metrics&quot;: {
+    &quot;faithfulness&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+    },
+    &quot;correctness&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+    },
+    &quot;recall_at_k&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+    },
+    &quot;mrr&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+    },
+    &quot;ndcg&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+    }
+  },
+  &quot;source_parse_ms&quot;: 1.178,
+  &quot;total_ms&quot;: 422.8179170022486,
+  &quot;comparison_axis&quot;: &quot;frozen_chunk_artifact&quot;,
+  &quot;boundary_inference_calls&quot;: 0,
+  &quot;fact_aggregates&quot;: {
+    &quot;config-1&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      }
+    },
+    &quot;config-2&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      }
+    },
+    &quot;config-3&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      }
+    },
+    &quot;config-4&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      }
+    },
+    &quot;config-5&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: 1.0,
+        &quot;micro&quot;: 1.0,
+        &quot;all_required_rate&quot;: 1.0,
+        &quot;fulfilled&quot;: 1,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: 0.0,
+        &quot;micro&quot;: 0.0,
+        &quot;all_required_rate&quot;: 0.0,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: 0.0,
+        &quot;micro&quot;: 0.0,
+        &quot;all_required_rate&quot;: 0.0,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 1,
+        &quot;valid&quot;: 1,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 0
+      }
+    }
+  },
+  &quot;chunk_artifacts&quot;: [
+    {
+      &quot;chunk_fingerprint&quot;: &quot;e4d06afe574893464ac0dce5300c1a7afe7bfc7aafa8dab4931bfaf1b267843f&quot;,
+      &quot;config&quot;: {
+        &quot;schema_version&quot;: 1,
+        &quot;method&quot;: &quot;fixed&quot;,
+        &quot;size_chars&quot;: 400,
+        &quot;overlap_chars&quot;: 80
+      },
+      &quot;statistics&quot;: {
+        &quot;chunk_count&quot;: 3,
+        &quot;unit_count&quot;: 38,
+        &quot;lengths&quot;: [
+          400,
+          333,
+          385
+        ],
+        &quot;min&quot;: 333,
+        &quot;max&quot;: 400,
+        &quot;mean&quot;: 372.6666666666667,
+        &quot;emitted_chars&quot;: 1118,
+        &quot;unique_chars&quot;: 1038,
+        &quot;duplicate_chars&quot;: 80,
+        &quot;forced_units&quot;: 0,
+        &quot;token_count&quot;: null,
+        &quot;token_status&quot;: &quot;unmeasured; character/byte limits do not guarantee model context window&quot;
+      },
+      &quot;work&quot;: {
+        &quot;execution_kind&quot;: &quot;offline&quot;,
+        &quot;boundary_model_jobs&quot;: 0,
+        &quot;boundary_attempts&quot;: 0,
+        &quot;unit_observation&quot;: {},
+        &quot;requested_windows&quot;: 0,
+        &quot;dispatches&quot;: 0,
+        &quot;successful_windows&quot;: 0,
+        &quot;failed_windows&quot;: 0,
+        &quot;unknown_windows&quot;: 0,
+        &quot;retry_count&quot;: 0,
+        &quot;cost&quot;: null,
+        &quot;cost_status&quot;: &quot;unmeasured&quot;,
+        &quot;unit_embedding&quot;: null,
+        &quot;usage&quot;: {
+          &quot;input_tokens&quot;: null,
+          &quot;output_tokens&quot;: null
+        },
+        &quot;elapsed_ms&quot;: 0.35924999974668026
+      },
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;
+    },
+    {
+      &quot;chunk_fingerprint&quot;: &quot;c5ab2c503fa7566cb2499379e14cda765a695536f9e26de4d2e700003d92e7c8&quot;,
+      &quot;config&quot;: {
+        &quot;schema_version&quot;: 1,
+        &quot;method&quot;: &quot;recursive&quot;,
+        &quot;size_chars&quot;: 400,
+        &quot;overlap_chars&quot;: 80
+      },
+      &quot;statistics&quot;: {
+        &quot;chunk_count&quot;: 5,
+        &quot;unit_count&quot;: 38,
+        &quot;lengths&quot;: [
+          246,
+          271,
+          296,
+          213,
+          252
+        ],
+        &quot;min&quot;: 213,
+        &quot;max&quot;: 296,
+        &quot;mean&quot;: 255.6,
+        &quot;emitted_chars&quot;: 1278,
+        &quot;unique_chars&quot;: 1038,
+        &quot;duplicate_chars&quot;: 240,
+        &quot;forced_units&quot;: 0,
+        &quot;token_count&quot;: null,
+        &quot;token_status&quot;: &quot;unmeasured; character/byte limits do not guarantee model context window&quot;
+      },
+      &quot;work&quot;: {
+        &quot;execution_kind&quot;: &quot;offline&quot;,
+        &quot;boundary_model_jobs&quot;: 0,
+        &quot;boundary_attempts&quot;: 0,
+        &quot;unit_observation&quot;: {},
+        &quot;requested_windows&quot;: 0,
+        &quot;dispatches&quot;: 0,
+        &quot;successful_windows&quot;: 0,
+        &quot;failed_windows&quot;: 0,
+        &quot;unknown_windows&quot;: 0,
+        &quot;retry_count&quot;: 0,
+        &quot;cost&quot;: null,
+        &quot;cost_status&quot;: &quot;unmeasured&quot;,
+        &quot;unit_embedding&quot;: null,
+        &quot;usage&quot;: {
+          &quot;input_tokens&quot;: null,
+          &quot;output_tokens&quot;: null
+        },
+        &quot;elapsed_ms&quot;: 0.2928339963546023
+      },
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;
+    },
+    {
+      &quot;chunk_fingerprint&quot;: &quot;75fae1b5535ea7239799595c88d6e9b3eb332039c2679d9c3f8b8e314cf5eb06&quot;,
+      &quot;config&quot;: {
+        &quot;schema_version&quot;: 1,
+        &quot;method&quot;: &quot;structure&quot;,
+        &quot;size_chars&quot;: 400,
+        &quot;overlap_chars&quot;: 80
+      },
+      &quot;statistics&quot;: {
+        &quot;chunk_count&quot;: 7,
+        &quot;unit_count&quot;: 38,
+        &quot;lengths&quot;: [
+          47,
+          189,
+          191,
+          226,
+          44,
+          169,
+          172
+        ],
+        &quot;min&quot;: 44,
+        &quot;max&quot;: 226,
+        &quot;mean&quot;: 148.28571428571428,
+        &quot;emitted_chars&quot;: 1038,
+        &quot;unique_chars&quot;: 1038,
+        &quot;duplicate_chars&quot;: 0,
+        &quot;forced_units&quot;: 0,
+        &quot;token_count&quot;: null,
+        &quot;token_status&quot;: &quot;unmeasured; character/byte limits do not guarantee model context window&quot;
+      },
+      &quot;work&quot;: {
+        &quot;execution_kind&quot;: &quot;offline&quot;,
+        &quot;boundary_model_jobs&quot;: 0,
+        &quot;boundary_attempts&quot;: 0,
+        &quot;unit_observation&quot;: {},
+        &quot;requested_windows&quot;: 0,
+        &quot;dispatches&quot;: 0,
+        &quot;successful_windows&quot;: 0,
+        &quot;failed_windows&quot;: 0,
+        &quot;unknown_windows&quot;: 0,
+        &quot;retry_count&quot;: 0,
+        &quot;cost&quot;: null,
+        &quot;cost_status&quot;: &quot;unmeasured&quot;,
+        &quot;unit_embedding&quot;: null,
+        &quot;usage&quot;: {
+          &quot;input_tokens&quot;: null,
+          &quot;output_tokens&quot;: null
+        },
+        &quot;elapsed_ms&quot;: 0.27704100648406893
+      },
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;
+    },
+    {
+      &quot;chunk_fingerprint&quot;: &quot;4bb82f3a627f7f22e0736ef665e9356a31a7cf2797334d6a30814a0a4e11ba1e&quot;,
+      &quot;config&quot;: {
+        &quot;schema_version&quot;: 1,
+        &quot;method&quot;: &quot;semantic&quot;,
+        &quot;size_chars&quot;: 400,
+        &quot;overlap_chars&quot;: 80,
+        &quot;unit_max_chars&quot;: 120,
+        &quot;minimum_chars&quot;: 120,
+        &quot;distance_threshold&quot;: 0.35,
+        &quot;model&quot;: {
+          &quot;model_id&quot;: &quot;intfloat/multilingual-e5-small&quot;,
+          &quot;revision&quot;: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;,
+          &quot;file_manifest&quot;: {
+            &quot;config.json&quot;: &quot;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb&quot;
+          },
+          &quot;device&quot;: &quot;cpu&quot;,
+          &quot;dtype&quot;: &quot;float32&quot;,
+          &quot;max_input_tokens&quot;: 512,
+          &quot;catalog&quot;: {
+            &quot;dimension&quot;: 384,
+            &quot;query_prefix&quot;: &quot;query: &quot;,
+            &quot;document_prefix&quot;: &quot;passage: &quot;,
+            &quot;pooling&quot;: &quot;mean&quot;,
+            &quot;limit&quot;: 512,
+            &quot;license&quot;: &quot;MIT&quot;,
+            &quot;url&quot;: &quot;https://huggingface.co/intfloat/multilingual-e5-small&quot;
+          },
+          &quot;normalization&quot;: &quot;l2&quot;,
+          &quot;algorithm&quot;: &quot;exact-cosine-v1&quot;
+        }
+      },
+      &quot;statistics&quot;: {
+        &quot;chunk_count&quot;: 5,
+        &quot;unit_count&quot;: 38,
+        &quot;lengths&quot;: [
+          296,
+          355,
+          162,
+          320,
+          145
+        ],
+        &quot;min&quot;: 145,
+        &quot;max&quot;: 355,
+        &quot;mean&quot;: 255.6,
+        &quot;emitted_chars&quot;: 1278,
+        &quot;unique_chars&quot;: 1038,
+        &quot;duplicate_chars&quot;: 240,
+        &quot;forced_units&quot;: 0,
+        &quot;token_count&quot;: null,
+        &quot;token_status&quot;: &quot;unmeasured; character/byte limits do not guarantee model context window&quot;
+      },
+      &quot;work&quot;: {
+        &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+        &quot;boundary_model_jobs&quot;: 1,
+        &quot;boundary_attempts&quot;: 1,
+        &quot;unit_observation&quot;: {
+          &quot;requested_items&quot;: 38,
+          &quot;attempted_jobs&quot;: 1,
+          &quot;workers_started&quot;: 0,
+          &quot;backend_calls&quot;: 1,
+          &quot;completed_items&quot;: 38,
+          &quot;worker_exited&quot;: null
+        },
+        &quot;requested_windows&quot;: 0,
+        &quot;dispatches&quot;: 0,
+        &quot;successful_windows&quot;: 0,
+        &quot;failed_windows&quot;: 0,
+        &quot;unknown_windows&quot;: 0,
+        &quot;retry_count&quot;: 0,
+        &quot;cost&quot;: null,
+        &quot;cost_status&quot;: &quot;unmeasured&quot;,
+        &quot;unit_embedding&quot;: {
+          &quot;jobs&quot;: 1,
+          &quot;documents&quot;: 38,
+          &quot;queries&quot;: 0,
+          &quot;elapsed_ms&quot;: 1.7237499996554106,
+          &quot;sdk_versions&quot;: {
+            &quot;synthetic&quot;: &quot;1&quot;
+          },
+          &quot;peak_rss_bytes&quot;: null,
+          &quot;rss_method&quot;: &quot;unavailable&quot;,
+          &quot;sampling_interval_ms&quot;: null,
+          &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+          &quot;worker_exited&quot;: true
+        },
+        &quot;usage&quot;: {
+          &quot;input_tokens&quot;: null,
+          &quot;output_tokens&quot;: null
+        },
+        &quot;elapsed_ms&quot;: 3.8440839998656884
+      },
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;
+    },
+    {
+      &quot;chunk_fingerprint&quot;: &quot;5fc0be8d8b1a3e27c964262322d54cdb72aa446d93d3e780e69edd845b8f0eff&quot;,
+      &quot;config&quot;: {
+        &quot;window_max_chars&quot;: 1200,
+        &quot;window_max_units&quot;: 20,
+        &quot;max_windows&quot;: 64,
+        &quot;max_prompt_bytes&quot;: 16384,
+        &quot;total_timeout_seconds&quot;: 1800,
+        &quot;schema_version&quot;: 1,
+        &quot;method&quot;: &quot;llm&quot;,
+        &quot;size_chars&quot;: 400,
+        &quot;overlap_chars&quot;: 80,
+        &quot;unit_max_chars&quot;: 120,
+        &quot;model&quot;: {
+          &quot;role&quot;: &quot;chunking&quot;,
+          &quot;profile&quot;: {
+            &quot;mode&quot;: &quot;local&quot;,
+            &quot;provider&quot;: &quot;ollama&quot;,
+            &quot;model&quot;: &quot;fixture-model&quot;,
+            &quot;base_url&quot;: &quot;http://127.0.0.1:1&quot;,
+            &quot;max_output_tokens&quot;: 256,
+            &quot;timeout_seconds&quot;: 1,
+            &quot;response_mode&quot;: &quot;json_object&quot;,
+            &quot;identity&quot;: {
+              &quot;expected_digest&quot;: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;,
+              &quot;hf_id&quot;: &quot;fixture/model&quot;,
+              &quot;conversion&quot;: &quot;synthetic&quot;
+            }
+          },
+          &quot;prompt_version&quot;: &quot;source-unit-ends-v1&quot;
+        }
+      },
+      &quot;statistics&quot;: {
+        &quot;chunk_count&quot;: 38,
+        &quot;unit_count&quot;: 38,
+        &quot;lengths&quot;: [
+          17,
+          18,
+          30,
+          39,
+          11,
+          32,
+          53,
+          47,
+          58,
+          60,
+          67,
+          49,
+          10,
+          51,
+          78,
+          68,
+          65,
+          63,
+          47,
+          10,
+          30,
+          60,
+          74,
+          74,
+          82,
+          82,
+          44,
+          54,
+          56,
+          77,
+          83,
+          82,
+          40,
+          43,
+          65,
+          64,
+          61,
+          65
+        ],
+        &quot;min&quot;: 10,
+        &quot;max&quot;: 83,
+        &quot;mean&quot;: 52.86842105263158,
+        &quot;emitted_chars&quot;: 2009,
+        &quot;unique_chars&quot;: 1038,
+        &quot;duplicate_chars&quot;: 971,
+        &quot;forced_units&quot;: 0,
+        &quot;token_count&quot;: null,
+        &quot;token_status&quot;: &quot;unmeasured; character/byte limits do not guarantee model context window&quot;
+      },
+      &quot;work&quot;: {
+        &quot;execution_kind&quot;: &quot;test_fixture&quot;,
+        &quot;boundary_model_jobs&quot;: 3,
+        &quot;boundary_attempts&quot;: 0,
+        &quot;unit_observation&quot;: {},
+        &quot;requested_windows&quot;: 3,
+        &quot;dispatches&quot;: 3,
+        &quot;successful_windows&quot;: 3,
+        &quot;failed_windows&quot;: 0,
+        &quot;unknown_windows&quot;: 0,
+        &quot;retry_count&quot;: 0,
+        &quot;cost&quot;: null,
+        &quot;cost_status&quot;: &quot;unmeasured&quot;,
+        &quot;unit_embedding&quot;: null,
+        &quot;usage&quot;: {
+          &quot;input_tokens&quot;: null,
+          &quot;output_tokens&quot;: null
+        },
+        &quot;elapsed_ms&quot;: 7.109750004019588
+      },
+      &quot;source_fingerprint&quot;: &quot;6e9e817d154d2effd3748cc47f638df4a9edcd9860460d568223bbde32d7eda2&quot;
+    }
+  ]
+}</pre></details>
