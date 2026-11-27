@@ -45,8 +45,12 @@ def link(url):
 
 
 def config(path):
+    return validate_memory(read_json(path))
+
+
+def validate_memory(c):
     try:
-        c=read_json(path);fields(c,{'schema_version','connector','url','auth'},set(),'drive_config')
+        fields(c,{'schema_version','connector','url','auth'},set(),'drive_config')
         require(type(c['schema_version']) is int and c['schema_version']==1 and c['connector']=='google_drive','invalid_drive_config','config')
         file_id,key=link(c['url']);a=c['auth'];require(isinstance(a,dict),'invalid_auth','config')
         if a.get('mode')=='access_token_env':
@@ -60,7 +64,11 @@ def config(path):
 
 
 def preview(path):
-    c=config(path)
+    return preview_memory(read_json(path))
+
+
+def preview_memory(value):
+    c=validate_memory(value)
     return {'status':'preview','connector':'google_drive','execution_kind':'preview','auth_mode':c['auth']['mode'],
             'scope':SCOPE,'scope_warning':'Read access to accessible Drive files, not limited to the selected file.',
             'supported':['PDF','UTF-8 TXT/MD','Google Docs PDF export'],'remote_access_verified':False,'requests':0,

@@ -29,10 +29,10 @@ HF ID는 원본 저장소 식별자이고 Ollama 태그는 실행 환경의 이�
 | 일부 구현·미완료 | claim 추출·판정·Python 집계와 실제 RAG 평가 연결 | [평가 모듈](../../../evaluation/project_b/README.md). 오프라인 모듈 검증과 전체 모델 검증은 별개. P013 BLOCKED |
 | 독립 구현·오프라인 검증 | Ollama/OpenAI Chat/Anthropic Messages adapter와 CLI | [provider 안내](providers.md). 실제 호출·기존 HR UI/평가 runner 연결 미검증 |
 | 신규 구현·오프라인 E2E 검증 | 일반 PDF/TXT/MD snapshot·규칙3종·BM25·선택 LLM·원문 인용·비교 CLI | [일반 문서 안내](document-rag.md). 실모델/실 API/개인 문서 품질 미검증 |
-| 후속 계획 | 임의 임베딩 교체, Hybrid RRF, 리랭커 | [로드맵](../../planning/rag-package-roadmap.md). RAG UI의 API 선택은 후속이며 지원 protocol은 독립 모듈에 한정 |
+| 후속 계획 | 임의 임베딩 교체, Hybrid RRF, 리랭커 | [로드맵](../../planning/rag-package-roadmap.md). 새 범용 UI는 등록 API 설정 선택을 지원하며 실제 호출 품질은 미검증 |
 | 신규 구현·오프라인 검증 | Google Drive 단일 파일 REST/OAuth→snapshot | [Drive 안내](drive.md). 실제 계정 미검증. 명시 재수집/rebuild 지원, 폴더·자동 동기화는 후속 |
 | 신규 구현·독립 설치 검증 | wheel/sdist·rag-lab·init/doctor·샘플 preview | [설치 안내](install.md). 같은 Mac 새 venv/core·extras·재빌드 검증. 다른 OS/두 제품 UI/실서비스 미검증 |
-| 후속 계획 | 통합 학습 UI·실모델 품질 비교 | 기존 개별 단계의 완료를 전체 패키지 goal 완료로 표시하지 않음 |
+| 구현·부분 브라우저 검증 | [통합 학습 UI](ui.md) | 합성 backend·설치 wheel 검증. 파일 선택창 정책 차단으로 C4 미완료, 실모델 품질 비교는 후속 |
 
 ## 메모리와 운영 상태
 

@@ -1,0 +1,54 @@
+{
+  "status": "PARTIAL",
+  "method": "actual IAB via cua_repl; synthetic installed-wheel fixture",
+  "first_wheel": {
+    "desktop": 1280,
+    "narrow": 390,
+    "overflow_width_before_fix": 469,
+    "rank_before_fix": "missing number",
+    "candidate_codepoints": 400,
+    "candidate_js_utf16_units": 406,
+    "candidate_count": 4,
+    "included": 1,
+    "excluded": 3,
+    "source_locate": "PASS; page1/offset0/NFC/LF",
+    "keyboard": "Tab focuses SUMMARY; Enter opens; Space closes",
+    "comparison": "two models, two questions, four preview rows; changed_axes chunking.method and llm; N/A",
+    "model_form": "placeholder rejected; API clone accepted, local advanced labels observed",
+    "drive_form": "spoof host rejected; supported synthetic link preview and fake pull passed",
+    "refresh": "history retained; no automatic redispatch"
+  },
+  "final_wheel": {
+    "desktop": {
+      "viewport": 1280,
+      "document_width": 1280
+    },
+    "narrow": {
+      "viewport": 390,
+      "document_width": 390
+    },
+    "candidate_ranks": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "candidate_count": 4,
+    "included": 1,
+    "excluded": 3,
+    "answer": "answered / test_fixture; canonical 400 codepoint quote visible",
+    "logs_default_closed": true,
+    "screenshots": [
+      "desktop-answer.jpg",
+      "narrow-answer.jpg"
+    ]
+  },
+  "browser_upload": {
+    "status": "BLOCKED",
+    "filechooser": "617s continuation error",
+    "native_fallback": "Computer Use is not allowed to use the app com.openai.codex for safety reasons",
+    "bypassed": false
+  },
+  "C4_complete": false,
+  "real_model_api_drive_calls": 0
+}

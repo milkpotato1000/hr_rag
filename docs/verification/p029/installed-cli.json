@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "args": [
+    "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p029-installed-ru2rd8le/env/bin/rag-lab",
+    "serve",
+    "--workspace",
+    "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p029-installed-ru2rd8le/cli-workspace",
+    "--sources",
+    "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p029-installed-ru2rd8le/cli-workspace/sources.json",
+    "--llm-config",
+    "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p029-installed-ru2rd8le/cli-workspace/llm-local.json",
+    "--port",
+    "0"
+  ],
+  "startup": {
+    "status": "serving",
+    "url": "http://127.0.0.1:56073",
+    "execution_kind": "preview_default",
+    "model_execution_allowed": false,
+    "drive_download_allowed": false
+  },
+  "documents": 2,
+  "model_calls": 0,
+  "drive_calls": 0,
+  "exit_code": 0,
+  "stopped": true
+}

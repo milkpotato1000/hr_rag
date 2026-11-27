@@ -22,6 +22,9 @@
     "rag_package/rag.py",
     "rag_package/retrieval.py",
     "rag_package/storage.py",
+    "rag_package/ui_jobs.py",
+    "rag_package/ui_registry.py",
+    "rag_package/ui_server.py",
     "rag_package/workspace.py"
   ],
   "resources": [
@@ -41,7 +44,10 @@
     "rag_package/resources/sample/drive-token-env.json",
     "rag_package/resources/sample/drive-oauth-file.json",
     "rag_package/resources/sample/.gitignore",
-    "rag_package/resources/sample/START_HERE.md"
+    "rag_package/resources/sample/START_HERE.md",
+    "rag_package/ui/index.html",
+    "rag_package/ui/app.js",
+    "rag_package/ui/style.css"
   ],
   "sdist_extra": [
     "pyproject.toml",

@@ -5,10 +5,10 @@ from pathlib import Path
 import re
 import time
 from urllib.parse import urlencode
-from .drive_config import config,preview
+from .drive_config import config,preview,validate_memory,preview_memory
 from .drive_http import drive_get
 from ..drive_auth import acquire
-from ..llm.config import strict_json,ValidationError,string
+from ..llm.config import strict_json,ValidationError,string,read_json as input_json
 from ..storage import RagError,require,staging,new_output,write_json,digest
 from ..documents import snapshot
 
@@ -48,8 +48,12 @@ def metadata(raw,file_id,check_access=True):
 
 
 def pull(config_path,out,*,execute=False,transport=None,auth_backend=None,env_resolver=None):
-    if not execute:return preview(config_path)
-    c=config(config_path);new_output(out);started=time.monotonic();stages=[];requests=0;auth_info=None
+    return pull_memory(input_json(config_path),out,execute=execute,transport=transport,auth_backend=auth_backend,env_resolver=env_resolver)
+
+
+def pull_memory(value,out,*,execute=False,transport=None,auth_backend=None,env_resolver=None):
+    if not execute:return preview_memory(value)
+    c=validate_memory(value);new_output(out);started=time.monotonic();stages=[];requests=0;auth_info=None
     kind='test_fixture' if transport is not None or auth_backend is not None or env_resolver is not None else 'live'
     stage='auth'
     try:

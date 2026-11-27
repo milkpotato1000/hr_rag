@@ -23,7 +23,11 @@ def main(argv=None):
         login=subs.add_parser('drive-login');login.add_argument('--client-secret-file',required=True);login.add_argument('--credentials-file',required=True);login.add_argument('--execute',action='store_true')
         init=subs.add_parser('init');init.add_argument('--out',required=True)
         doctor=subs.add_parser('doctor');doctor.add_argument('--config')
+        server=subs.add_parser('serve');server.add_argument('--workspace',required=True);server.add_argument('--sources');server.add_argument('--llm-config',required=True,action='append');server.add_argument('--drive-config',action='append',default=[]);server.add_argument('--port',type=int,default=8765);server.add_argument('--allow-model-execution',action='store_true');server.add_argument('--allow-drive-download',action='store_true')
         args=p.parse_args(argv)
+        if args.command=='serve':
+            from .ui_server import serve
+            return serve(args)
         if args.command in ('init','doctor'):
             from . import workspace
             if args.command=='init':result,code=workspace.init(args.out),0

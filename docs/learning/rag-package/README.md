@@ -2,7 +2,7 @@
 
 먼저 준비된 가상 HR 문서와 저장 결과로 RAG의 각 단계를 이해하고, 같은 질문에서 한 가지 조건을 바꾸어 비교합니다. 구현과 검증은 Codex 또는 Claude Code에 맡기고, 학습자는 **왜 이 근거를 찾았는지, 답변에서 무엇이 빠졌는지**를 해석합니다.
 
-이 안내는 P024의 첫 문서 증분입니다. 기본 방향은 Hugging Face(HF)의 공개 모델을 로컬에서 사용하는 것이며, 유료 LLM API는 후속 선택 기능입니다. **아래 두 JSON은 실행할 수 없는 설계 예시입니다. 현재 CLI에 전달하지 마세요.** 독립 API adapter와 validate/preview/invoke CLI는 P025에서 오프라인 검증까지 구현했습니다. [provider 안내](providers.md)를 참고하세요. [일반 문서 RAG CLI](document-rag.md)는 P026에서 연결해 오프라인 검증했습니다. [Drive 단일 문서 연결](drive.md)은 P027에서 구현하고 가짜 인증/HTTP로 검증했습니다. 실제 계정 연결은 미검증이며 [wheel 설치·독립 실습](install.md)은 P028에서 새 venv로 검증했습니다. 기존 HR UI/평가 runner 통합·통합 학습 UI는 후속입니다. P013 모델 실험은 사용자 요청으로 보류 중이며 이 안내가 재개 권한을 부여하지 않습니다.
+이 안내는 P024의 첫 문서 증분입니다. 기본 방향은 Hugging Face(HF)의 공개 모델을 로컬에서 사용하는 것이며, 유료 LLM API는 후속 선택 기능입니다. **아래 두 JSON은 실행할 수 없는 설계 예시입니다. 현재 CLI에 전달하지 마세요.** 독립 API adapter와 validate/preview/invoke CLI는 P025에서 오프라인 검증까지 구현했습니다. [provider 안내](providers.md)를 참고하세요. [일반 문서 RAG CLI](document-rag.md)는 P026에서 연결해 오프라인 검증했습니다. [Drive 단일 문서 연결](drive.md)은 P027에서 구현하고 가짜 인증/HTTP로 검증했습니다. 실제 계정 연결은 미검증이며 [wheel 설치·독립 실습](install.md)은 P028에서 새 venv로 검증했습니다. [일반 문서 학습 UI](ui.md)는 실제 코어에 연결했고 합성 backend로 화면을 검증했습니다. 파일 선택창의 도구 정책 차단으로 브라우저 업로드 검증은 남아 있습니다. 기존 HR 평가 runner 통합은 후속입니다. P013 모델 실험은 사용자 요청으로 보류 중이며 이 안내가 재개 권한을 부여하지 않습니다.
 
 [단계별 비교 실습](experiments.md) → [모델과 지원 상태](models-and-support.md) → [로컬 예시](examples/local.json) / [API 예시](examples/api.json) 순서로 읽으세요. 전체 후속 순서는 [채택한 패키지 로드맵](../../planning/rag-package-roadmap.md)에 있습니다.
 
