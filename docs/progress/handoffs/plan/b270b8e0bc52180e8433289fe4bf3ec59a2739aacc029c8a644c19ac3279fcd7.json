@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "b0a7cbb234d605dfcce4cd5eb8ce49978741df51",
+  "document": "docs/planning/handoffs/P024.md",
+  "summary": "P024 open-model default and optional LLM API learning materials",
+  "next_action": "Preserve P013 BLOCKED/history, integrate and exactly adopt this SHA, implement P024 docs/examples only",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T08:20:41.089565+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T08:21:04.150755+00:00",
+      "evidence": "Host send_message_to_thread succeeded for existing HR RAG dev with exact b0a7cbb234d605dfcce4cd5eb8ce49978741df51; P024 docs/examples only, P013 hold preserved."
+    }
+  ]
+}
