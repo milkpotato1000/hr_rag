@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P031.md",
   "summary": "P031 model preparation READY after P030 completion",
   "next_action": "Integrate exact READY, adopt and commit, verify guard/queue, implement C1-C3 within tiny/fake validation scope; preserve evaluator and P029 holds",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-27T17:15:00.830778+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T17:15:42.112368+00:00",
+      "evidence": "Host send succeeded to verified existing same-project dev; exact READY 61499e4971731fbb95c41ad670ffa8a48fc30ce3, scope, verification limits and adoption/implementation action delivered. Receipt and adoption not yet observed."
     }
   ]
 }
