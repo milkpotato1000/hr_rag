@@ -41,3 +41,7 @@ workspace.init은 배포 resources/sample을 hash 검증 후 복사한다. 관�
 ## 준비와 최종 검증 구분
 
 준비 코드의 fixture 성공은 실제 모델 작동 증거가 아니다. 후속 실서비스 검증에는 고정 합성 문서·질문에서 실제 embedding/reranker/생성 연결, 순차 로딩과 자원 관찰, 저장 결과 재생과 선택 비교가 필요하다. Drive 실계정 검증에는 사용자가 지정한 문서와 인증 설정이 필요하며 API 비용 발생도 사용자가 선택한 경로로 한정한다. P013 평가기와 무관한 제품 경로라도 실제 실행 범위와 상한은 별도 계약으로 명시한다.
+
+## 설치 SDK 근거 — 2026-11-28
+
+P010의 격리된 설치 소스를 읽었다. requirements-retrieval.lock은 huggingface-hub2.5.0을 고정한다. _snapshot_download.py는 revision/local_dir/dry_run/token 인자를 갖고, hf_api.py의 model_info는 files_metadata를 지원한다. torch/serialization.py에는 weights_only 및 mmap 경로가 있다. 이는 API 존재 확인이며 다운로드/변환 실행 성공은 아니다. 실제 검증은 P031 tiny 도구 시험과 별도 live 계약에 남긴다. [실행 계약 초안](P031-model-preparation-contract.md)을 작성했다.
