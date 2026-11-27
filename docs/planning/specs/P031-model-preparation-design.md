@@ -45,3 +45,5 @@ workspace.init은 배포 resources/sample을 hash 검증 후 복사한다. 관�
 ## 설치 SDK 근거 — 2026-11-28
 
 P010의 격리된 설치 소스를 읽었다. requirements-retrieval.lock은 huggingface-hub2.5.0을 고정한다. _snapshot_download.py는 revision/local_dir/dry_run/token 인자를 갖고, hf_api.py의 model_info는 files_metadata를 지원한다. torch/serialization.py에는 weights_only 및 mmap 경로가 있다. 이는 API 존재 확인이며 다운로드/변환 실행 성공은 아니다. 실제 검증은 P031 tiny 도구 시험과 별도 live 계약에 남긴다. [실행 계약 초안](P031-model-preparation-contract.md)을 작성했다.
+
+공식 metadata API에서 BGE-M3 revision5617a9f61b028005a4858fdac845db406aefb181의 Dense용10파일·총2,293,315,801bytes와 원본 hash를 확인해 [조사 자료](../reviews/p031-bge-source-metadata.json)에 보존했다. 다른 세 모델의 blobs=true 조회는 웹 도구에서 접근 오류여서 정확 file metadata를 아직 확보하지 못했다. 기존 tree 관찰과 성공한 BGE metadata를 다른 모델의 다운로드/파일 검증 증거로 대신하지 않는다. 남은 세 recipe는 READY 전에 확인한다.

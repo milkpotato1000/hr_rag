@@ -35,6 +35,10 @@ download는 고정 원본 파일과 크기/hash를 확인한 뒤 export한다. L
 
 원본 config/modules/pooling/tokenizer와 변환된 가중치가 runtime 요구에 맞는지 검증한다. 원본 revision/file hashes와 변환 tool/version/options, 결과 hashes를 preparation 기록에 연결하고 모델 identity에 provenance를 보존한다. runtime의 bin 거부와 local-only 검사는 완화하지 않는다. worker timeout/메모리 상한·OS pressure 처리와 소유 프로세스 종료 확인은 READY 전 확정한다. tiny tensor 변환 성공을 BGE 전체 가중치 변환 성공으로 표시하지 않는다.
 
+고정 metadata의 Dense용 필수10파일 합은2,293,315,801bytes다. [관찰 기록](../reviews/p031-bge-source-metadata.json)은 원본 크기·Git blob OID/LFS SHA256을 분리한다. 원격 metadata 확인이며 파일 다운로드·hash 재계산·변환 완료가 아니다. 실제 준비에서는 고정 revision의 metadata와 받은 bytes를 다시 검증한다. export의 새 model.safetensors는 원본 bin과 다른 파일 hash를 가지므로 동일 파일로 표시하지 않는다.
+
+변환 fixture는 float32/float16/int64 및 contiguous/noncontiguous·공유 storage tensor를 포함한다. 저장 가능한 형태로 복제할 경우 개별 tensor의 key/dtype/shape/value hash를 변환 전후 비교한다. metadata format=pt와 출력 key 집합이 일치해야 하며 tensor에 대한 양자화/수치 cast는 하지 않는다. 원본/출력 tensor 합계와 실제 worker RSS는 다른 측정이다. SDK import·mmap·page cache 비용을 무시한 가중치 크기만으로 M1 실행 가능을 판정하지 않는다.
+
 ## LLM 설정·설치 안내
 
 로컬 사용자는 서버 URL·실제 모델 alias를 고르고 명시 inspect로 digest/model_info를 확인한다. HTTP 호출은 /api/tags 또는 /api/show 범위로 제한하고 /generate·/chat·/pull·서버 start/unload를 호출하지 않는다. 기존 HF 원본/양자화 매핑을 alias만으로 추측하지 않고 확인 가능한 정보와 사용자 제공 정보를 구분한다. 동일 alias가 다른 digest로 변하면 새 설정을 요구한다. P013 모델 상태/예산은 건드리지 않는다.
