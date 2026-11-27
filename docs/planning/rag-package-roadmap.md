@@ -73,3 +73,5 @@ P024 learning guide: dev 7573c934c76aef493abb6dd1648393c025288d9c. P025 independ
 Hybrid/리랭커 구현 순서 질문은 [미결 결정 기록](reviews/rag-package-order-pending.md)에 보존한다. 답변 전에는 P008/P010/P020 기존 선행을 유지한다.
 
 전체 목표의 요구별 구현/검증 상태는 [목표 증거표](reviews/rag-package-goal-evidence.md)에 기록한다. 카드 완료와 전체 목표 달성은 별개다.
+
+기본 HF 후보의 공개 출처·라이선스·조회 시점 인기도 및 미검증 항목은 [후보 조사](reviews/hf-model-candidates-20261127.md)에 기록했다. 실행 카탈로그 확정이나 모델 실행 완료를 뜻하지 않는다.
