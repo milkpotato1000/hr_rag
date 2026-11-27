@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "e0d44e097c58da1c2944c8c16ce15a06c95b90b9",
+  "document": "docs/planning/handoffs/P029.md",
+  "summary": "P029 learning UI READY after P028; direct Drive link and model forms",
+  "next_action": "Complete P027 and latest P028 first; then exact adoption and actual UI/core integration with browser evidence",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T12:20:00.724692+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T12:20:43.016761+00:00",
+      "evidence": "Host direct send succeeded to verified existing HR RAG dev with exact e0d44e0 full SHA and P029 scope including direct Drive/model forms. Queued after P027 and latest P028 completion; receipt/adoption/completion not observed yet."
+    }
+  ]
+}
