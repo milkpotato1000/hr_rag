@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P024.md",
   "summary": "P024 open-model default and optional LLM API learning materials",
   "next_action": "Preserve P013 BLOCKED/history, integrate and exactly adopt this SHA, implement P024 docs/examples only",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-27T08:21:04.150755+00:00",
       "evidence": "Host send_message_to_thread succeeded for existing HR RAG dev with exact b0a7cbb234d605dfcce4cd5eb8ce49978741df51; P024 docs/examples only, P013 hold preserved."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T08:21:20.252245+00:00",
+      "evidence": "Observed existing dev commentary on 2026-11-27: P024 plan received, docs and non-executable examples started; P013 hold and no model/download/API calls explicitly retained. Adoption/completion tracked separately."
     }
   ]
 }
