@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-27",
+  "status": "BLOCKED_BEFORE_RECOVERY_SETUP_RUNTIME_UNREACHABLE",
+  "plan_commit": "d6cfda305dad37050750aaa5db4c5aecceeacdd1",
+  "adoption_commit": "ee6980c894e10b5ba83dab98db24cb9b026e9741",
+  "endpoint": "http://127.0.0.1:11434",
+  "read_only_observations": [
+    {
+      "route": "/api/version",
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    },
+    {
+      "route": "/api/ps",
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    }
+  ],
+  "interpretation": "No connection accepted at the configured endpoint; runtime version and loaded models cannot be verified. No claim that the machine has no Ollama installation.",
+  "new_inference_requests": 0,
+  "unload_requests": 0,
+  "read_only_metadata_attempts": 2,
+  "new_wall_window_started": false,
+  "recovery_event_created": false,
+  "child_run_created": false,
+  "recovery_grant_consumed": false,
+  "recovery_implementation_started": false,
+  "parent_file_hashes": {
+    "manifest.json": "77f160f0b91620fec83dfd8c2dae988753532c870269f009a9d58092e04e7be0",
+    "ledger.json": "ff1ea3dbb31f946c717b35549229d4cd878278ed04cb2e9b4673c5e025b519ca",
+    "calls/001.json": "570bb990dfc8f648578d772c0d73aa09daf4e4918d3e78f3bea19bb886fe8418",
+    "cases.json": "6af42b60acbdea8278bf2fad3f3787e4e6f10c00f101764fac8713040220cea1",
+    "expectations.json": "1e9d762faf03177f9dcb5f6affc7547ccd8efaf455b027795040eaeae64209bc"
+  },
+  "parent_unresolved_preserved": true,
+  "parent_completed_calls": 1,
+  "pending_decisions": [],
+  "paused_sessions": [],
+  "server_started_or_restarted": false,
+  "models_downloaded": 0,
+  "next_action": "User restores the existing locked Ollama 0.40.8 endpoint at 127.0.0.1:11434. Recheck unconsumed authorization and prerequisites, implement/test/freeze recovery offline, then perform the prescribed normal-pressure and memory probe gates."
+}
