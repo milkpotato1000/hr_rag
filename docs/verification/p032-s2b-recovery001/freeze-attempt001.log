@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/freeze.py", line 13, in <module>
+    assert sys.flags.isolated and 'site-packages' in str(Path(rag_package.__file__)) and not Path(rag_package.__file__).is_relative_to(rt.ROOT)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

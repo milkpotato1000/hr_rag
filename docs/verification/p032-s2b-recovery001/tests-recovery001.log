@@ -1,0 +1,7 @@
+....../Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/environment_audit.py:13: DeprecationWarning: Implicit None on return values is deprecated and will raise KeyErrors.
+  site=Path(site);expected=locked(Path(lock).read_text());found={norm(d.metadata['Name']):d for d in md.distributions(path=[str(site)]) if d.metadata['Name']}
+......
+----------------------------------------------------------------------
+Ran 12 tests in 0.042s
+
+OK

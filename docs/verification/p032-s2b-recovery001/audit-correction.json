@@ -1,0 +1,10 @@
+{
+  "scope": "pre-inference model-free verifier defect correction; plan also confirmed scope",
+  "preserved": "audit-attempt001; environment-audit002.log repeats same guard because preceding edit failed from incorrect cwd",
+  "cause": "substring /token incorrectly matched standard-library tokenize.py; no missing SDK demonstrated by these attempts",
+  "correction": "exact credential basename and protected directory segments; weight suffix guard unchanged",
+  "installation_attempts": 1,
+  "model_calls": 0,
+  "original_preparation_deadline_preserved": true,
+  "no_new_environment_or_child": true
+}

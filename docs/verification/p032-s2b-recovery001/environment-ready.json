@@ -1,0 +1,17 @@
+{
+  "started_at": 1795805515.301595,
+  "preparation_deadline": 1795806415.301595,
+  "original_deadline": 1795808563.61378,
+  "environment": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p032-s2b-recovery001/env",
+  "python": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p032-s2b-recovery001/env/bin/python",
+  "wheel": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl",
+  "wheel_sha256": "9342add625a9ed633dffb2fccb3bad27379e8cddaf9a06836ea5a224fe9f280a",
+  "lock": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/requirements-retrieval.lock",
+  "lock_sha256": "f7988bdf801f51e27ce7538805bd9c9ca8202c0d714c13901e53f9365891b32f",
+  "status": "PASS",
+  "model_calls": 0,
+  "automatic_retry": 0,
+  "finished_install_at": 1795805555.2107499,
+  "error": "sdk_import_failed:Traceback (most recent call last):\n  File \"/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/import_only.py\", line 14, in <module>\n    import torch\n  File \"/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p032-s2b-recovery001/env/lib/python3.12/site-packages/torch/__init__.py\", line 16, in <module>\n    import inspect\n  File \"/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/inspect.py\", line 151, in <module>\n    import linecache\n  File \"/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/linecache.py\", line 11, in <module>\n    import tokenize\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 995, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1091, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1190, in get_data\n  File \"/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/import_only.py\", line 12, in audit\n    attempts.append('blocked_file');raise RuntimeError('weight/key read forbidden')\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: weight/key read forbidden\n",
+  "finished_at": 1795805684.460671
+}

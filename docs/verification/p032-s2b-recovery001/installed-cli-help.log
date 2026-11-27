@@ -1,0 +1,13 @@
+usage: __main__.py [-h] [--version]
+                   {snapshot,build,ask,compare,chunk,chunk-replay,chunk-derive,chunk-report,retrieval-preview,drive-preview,drive-pull,drive-login,init,doctor,model-catalog,model-plan,model-prepare,model-import,model-check,llm-configure,serve,candidates,rerank,answer-from-rerank,rerank-compare,rerank-report}
+                   ...
+
+PDF/TXT/MD RAG. ask/compare default preview: no model/API/key access. Explicit
+--execute dispatches generation.
+
+positional arguments:
+  {snapshot,build,ask,compare,chunk,chunk-replay,chunk-derive,chunk-report,retrieval-preview,drive-preview,drive-pull,drive-login,init,doctor,model-catalog,model-plan,model-prepare,model-import,model-check,llm-configure,serve,candidates,rerank,answer-from-rerank,rerank-compare,rerank-report}
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit

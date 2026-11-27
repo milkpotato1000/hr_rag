@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "chunk_artifact": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/chunks/recursive",
+  "retrieval": {
+    "method": "hybrid",
+    "candidate_k": 20,
+    "rrf_k": 60,
+    "top_k": 5,
+    "context_budget_chars": 2000
+  },
+  "embedding_config": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/e5.json",
+  "llm_config": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2b-recovery001/run001/input/llm.json"
+}
