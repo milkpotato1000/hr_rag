@@ -16,3 +16,7 @@
 53개 commands 기록과 설치된 package 대상 resource 회귀 3개 결과를 읽었다. 첫 집계의 파일명 오류, 다음 집계의 unknown 행 상태 가정 오류, 최초 테스트 정의만 로드한 시도는 별도로 보존돼 있다. 후속 명시적 unittest 실행과 실제 행 대조가 이 오류를 바로잡는다. 새로운 모델 호출로 검증을 확장하지 않았다.
 
 이 시점에는 dev의 최종 guard·전달 상태를 아직 대기한다. 새 sdist의 hash 확인은 다른 OS에서의 설치 성공이나 sdist 재빌드 검증을 뜻하지 않는다. 실제 생성 profile·LLM 청킹·실제 Drive 문서·P029 파일 선택창 검증과 전체 P032 조건은 남는다. P013/P014 평가기 보류는 유지한다.
+
+## 완료·전달 후속 확인
+
+dev 호스트 작업의 terminal completed를 확인했고, clean HEAD와 personal/dev가 모두 `0ea558018b94b50d29c54fe45cb2ba34616c4356`이다. final-checks.json은 evidence_source_commit `606403c576adfba231c247d66d475fc33f104cdb`, 정확 채택 guard PASS, 문서18개/상대링크174개, 모델·네트워크·키0 및 full_P032_complete=false를 기록한다. 따라서 S2c의 문서·번들·새 설치 검증과 dev 전달은 완료로 판단한다. 위의 최종 전달 대기는 해소됐으며 전체 목표의 실제 모델/문서 선택 대기는 유지한다.
