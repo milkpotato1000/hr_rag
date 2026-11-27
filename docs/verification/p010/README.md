@@ -22,3 +22,5 @@
 실제 브라우저는 새 IAB 탭에서 등록된 합성 문서만 사용했다. 기존 파일 선택창/앱 정책 거부를 재시도·우회하지 않았다. 최초 checkbox setChecked가 상태를 바꾸지 못해 DOM을 확인한 뒤 키보드 Space로 정상 선택했다. 새 검색 UI의 desktop/narrow/Tab/Enter/Space/원문/두 모델 비교를 관찰했으며 P029 C4 완료로 승계하지 않는다.
 
 한계: 같은 Mac/Python3.12·CPU tiny model과 injected vectors만 검증했다. MPS·다른 OS·사전학습 한국어 품질/메모리·실제 답변·평가기·리랭커는 미검증/후속이다. 이번 구현 완료는 전체 제품 goal 완료가 아니다. SDK 출처와 모델 계약은 [ST API](https://www.sbert.net/docs/package_reference/sentence_transformer/model.html), [E5](https://huggingface.co/intfloat/multilingual-e5-small), [BGE-M3](https://huggingface.co/BAAI/bge-m3)를 확인했다.
+
+최종 문구 수정: 비교 안내의 모델 호출 0회를 생성 LLM 요청 0회로 명확히 하고 체크한 임베딩 계산은 별도임을 표시했다. `core-verified-installation.json`의 실제 설치 검증본과 최종 wheel의 모든 core bytes가 같고, app.js는 이 한 문구 치환만 다름을 checks.json에서 확인했다. JS syntax PASS. 앞선 실제 browser 관찰을 보존하며 최종 문구를 별도로 재관찰했다고 주장하지 않는다.

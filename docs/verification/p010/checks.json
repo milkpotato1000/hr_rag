@@ -29,7 +29,7 @@
     },
     "rag_package/ui/app.js": {
       "before": "b71916b996dc0df790295188c5402f5e9f1d4eccd4d8e881741ba65514be77fa",
-      "after": "d92b635b635c3e3903c963905d0e048817b186ceda2e104ef96c202cbcb35199"
+      "after": "4c5c026af672404e16232c10153c6501984a3e6e8b26d37ed12feb8d6859fba2"
     },
     "rag_package/ui/index.html": {
       "before": "42f99995db420bc1fc15f8c19c2e21386d557578013274fd8d92d7350d04ace3",
@@ -447,6 +447,10 @@
     },
     {
       "file": "docs/verification/p010/README.md",
+      "target": "core-probe.json"
+    },
+    {
+      "file": "docs/verification/p010/README.md",
       "target": "installed-probe.json"
     },
     {
@@ -496,16 +500,18 @@
   "recovery_grant_consumed": false,
   "final_wheel_matches_source": true,
   "browser_wheel": "d457e83368854672837d8053e255ab9fe1a72ec12d0cb57e809f04080531cf4b",
-  "final_wheel": "975caa9fd0ed6ec40c7c145711000e38180b72be5e8490c88b1fcacd057cfe56",
+  "final_wheel": "811f058a0582e77fe581237593bc72e18225b60b0ad0ff5dade208e8507e7743",
   "browser_modules_byte_identical": [
     "rag_package/ui_jobs.py",
     "rag_package/ui_registry.py",
     "rag_package/ui_server.py",
-    "rag_package/ui/app.js",
     "rag_package/ui/index.html",
     "rag_package/ui/style.css"
   ],
   "stage_copy_provenance": "verified",
   "regression_tests": 69,
-  "sdk_lock_sha256": "f7988bdf801f51e27ce7538805bd9c9ca8202c0d714c13901e53f9365891b32f"
+  "sdk_lock_sha256": "f7988bdf801f51e27ce7538805bd9c9ca8202c0d714c13901e53f9365891b32f",
+  "core_verified_wheel": "975caa9fd0ed6ec40c7c145711000e38180b72be5e8490c88b1fcacd057cfe56",
+  "core_modules_byte_identical": true,
+  "ui_wording_only_change": "One comparison note now explicitly separates generation preview 0 calls and checked embedding computation. JS syntax PASS; prior functional browser evidence preserved; no new browser observation claimed."
 }
