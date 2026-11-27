@@ -45,7 +45,7 @@ BM25, RRF, 고정/재귀/구조 기반 청킹은 모델이 아닌 알고리즘�
 | 4 | Dense 임베딩 모델 교체, Sparse/BM25, Hybrid RRF 비교 | P010에 모델 선택·index fingerprint 계약 확장 준비. 기존 선행 순서 유지 |
 | 5 | 리랭커 없음/있음 및 모델별 비교 | Hybrid 이후 P020. 동일 후보 집합에서 순위·지연 비교 |
 | 6 | 실제 Google Drive 문서 연결·변경 반영 | [P027](plans/P027.md) 구현/모의 검증 완료(dev41a469d). 실제 계정 E2E 미검증; 자동 sync는 후속 |
-| 7 | 공통 설정 기반 UI·CLI 통합과 설치 패키지 | [P028](plans/P028.md) 설치·독립 샘플 READY(P027 완료 후). [P029](plans/P029.md) Drive 링크·모델 form·원문/청크/답변 비교 UI READY(P028 완료 후). 깨끗한 환경과 실제 도구 검증 범위를 구분 |
+| 7 | 공통 설정 기반 UI·CLI 통합과 설치 패키지 | [P028](plans/P028.md) 설치·독립 샘플 완료(dev28c51a5, 같은Mac 새venv3종). [P029](plans/P029.md) Drive 링크·모델 form·원문/청크/답변 비교 UI READY(P028 완료 후). 깨끗한 환경과 실제 도구 검증 범위를 구분 |
 
 완료 근거: dev의 P001~P007, P009, P011/P012, P015~P017, P019, P021~P023. P013은 전체 완료가 아니다. P014/P008/P010/P020은 후속 계약이며 로드맵 등록만으로 실행하지 않는다. 구현 순서는 의존성에 따르고 최종 사용자 화면의 단계 순서와 다를 수 있다. 모델 실험 중지와 무관한 adapter·문서·fixture 개발은 별도 READY 범위에서 진행 가능하다.
 
@@ -68,7 +68,7 @@ P025/P026의 공통 경계와 기본 BM25 문서→답변 연결, P027 저장소
 
 ## Verified increment, 2026-11-27
 
-P024 learning guide: dev 7573c934c76aef493abb6dd1648393c025288d9c. P025 independent LLM adapters/CLI: dev d7406e2b6e2c611cc741ad823d59a90bcefd6043. Both delivered to personal/dev. P025 implements real provider HTTP paths with offline verification; it does not establish live API/model success or RAG integration. P026 completed at dev/personal-dev 0252ec1731431c67172f7692b14fed7ec763821f with 36 offline tests and documented preview integration. P027 completed at dev/personal-dev 41a469dc0cae4c1cf5b963fd2da066ba443c88d4:48 offline tests, actual Drive/OAuth0. P028 exact adoption48434cb observed; P029 READY queued after P028. P013 model execution remains held.
+P024 learning guide: dev 7573c934c76aef493abb6dd1648393c025288d9c. P025 independent LLM adapters/CLI: dev d7406e2b6e2c611cc741ad823d59a90bcefd6043. Both delivered to personal/dev. P025 implements real provider HTTP paths with offline verification; it does not establish live API/model success or RAG integration. P026 completed at dev/personal-dev 0252ec1731431c67172f7692b14fed7ec763821f with 36 offline tests and documented preview integration. P027 completed at dev/personal-dev 41a469dc0cae4c1cf5b963fd2da066ba443c88d4:48 offline tests, actual Drive/OAuth0. P028 completed at28c51a56866f914b1745be0c1ae40a9aa215d1ad:51 tests, installed core/extras/rebuilt probes. P029 exact adoption79958fc observed and UI implementation started. P013 model execution remains held.
 
 Hybrid/리랭커 구현 순서 질문은 [미결 결정 기록](reviews/rag-package-order-pending.md)에 보존한다. 답변 전에는 P008/P010/P020 기존 선행을 유지한다.
 

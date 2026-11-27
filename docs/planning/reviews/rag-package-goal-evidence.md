@@ -1,6 +1,6 @@
 # RAG package 목표별 증거와 남은 작업
 
-2026-11-27 plan 관찰. 전체 goal은 **미완료/active**다. 이전 goal turn들은 P024~P027 구현·검증/전달, P028 exact adoption, P029 실행 계약/직접 전달로 실제 상태를 진전시켰다. 현재 dev live turn에서 P028 구현이 진행 중이므로 완료나 차단을 추측하지 않는다. 구현/fixture/라이브/설치/화면 증거를 구별한다.
+2026-11-27 plan 관찰. 전체 goal은 **미완료/active**다. 이전 goal turn들은 P024~P027 구현·검증/전달, P028 exact adoption, P029 실행 계약/직접 전달로 실제 상태를 진전시켰다. 현재 dev live turn에서 P029 구현이 진행 중이므로 완료나 차단을 추측하지 않는다. 구현/fixture/라이브/설치/화면 증거를 구별한다.
 
 | 사용자 요구 | 현재 authoritative 증거 | 판정과 다음 행동 |
 | --- | --- | --- |
@@ -12,9 +12,9 @@
 | 리랭커 없음/있음·여러 방식 비교 | P020 후속계약 초안만 | 미구현. Hybrid 이후 선행 유지, 동일 후보집합/최종K·정답/지연 비교 필요 |
 | 근거 있는 최종 답변 | P026 실제 P025.invoke 호출 연결과 ID whitelist/code quote·page; fake3providerE2E 및23p합성PDF 시험 | 코드/fixture 완료. 실제 모델 답변과 의미적 근거 충실도/정답 품질 미검증. 유효 citation은 의미 정확성 보장이 아님 |
 | 평가·실험 해석 | P024 가이드, P026 실패 포함 compare·N/A. P013 승인 GT/검증 일부와 보류 기록 | 일반 모듈 평가기 미연결. GT/qrels 없는 문서는N/A. P013 보류·성공1건/기존 실패/GT/grant 유지 |
-| 누구나 설치해 재현 | P028 exact adoption48434cb, READY7e92000; 아직 implementation 없음(관찰 시점) | 진행 중. wheel/sdist/독립resources/새venv/doctor/init 실제 증거 필요 |
-| Claude Code/Codex 공통 학습 | P024 요청 예시/파일규칙, P028 설치가이드 계약 | 문서 기반 경로 있음. 설치물·샘플실습 완료와 실제 도구별 검증 범위를 구분해야 함 |
-| 학습용 프론트/UI | 기존 고정 HR UI는 완료. generic P029 READYe0d44e0 직접 전달 | generic UI 미구현. P028 이후 실제 core/링크/model form/비교 + browser desktop/narrow/keyboard 검증 필요 |
+| 누구나 설치해 재현 | P028 완료28c51a5, source6921810, README/artifacts/installed probes,51테스트 | 같은Mac의 core/extras/rebuilt 새venv와 wheel/sdist/init/doctor/실습 완료. 다른OS/실제 코딩 도구 UI 검증은 아직 없음 |
+| Claude Code/Codex 공통 학습 | P024 요청 예시/파일규칙, P028 설치가이드 계약 | 문서 기반 경로 있음. 설치물·샘플실습은 P028 완료. 실제 두 도구 UI에서 수행한 것으로 주장하지 않음 |
+| 학습용 프론트/UI | 기존 고정 HR UI는 완료. generic P029 READYe0d44e0, dev exact adoption79958fc | generic UI 구현 중. 실제 core/링크/model form/비교 + browser desktop/narrow/keyboard 검증 필요 |
 | 단계별 폴더·P계획·이력 보존 | 기존1.Naive/2.Document Chunking 유지, 독립rag_package 선택복사provenance, P0271483파일불변 | 현재 증거 있음. 후속에서도 보존하고 P별 새 큰폴더를 만들지 않음 |
 
 P024 완료7573c934c76aef493abb6dd1648393c025288d9c, P025 완료d7406e2b6e2c611cc741ad823d59a90bcefd6043, P026 완료0252ec1731431c67172f7692b14fed7ec763821f, P027 완료41a469dc0cae4c1cf5b963fd2da066ba443c88d4. 각 완료 시 personal/dev 일치를 관찰했다. 현재 ref가 후속 adoption으로 전진해도 이 완료 이력은 보존된다.
@@ -26,4 +26,6 @@ P024 완료7573c934c76aef493abb6dd1648393c025288d9c, P025 완료d7406e2b6e2c611c
 - 실제 Drive 검증은 사용자가 지정한 접근 가능한 문서/본인 OAuth 설정이 필요하다. 실제 모델 검증은 구체적인 모델/자원·호출 범위 또는 사용자가 선택한 API 설정이 필요하다. 이것을 fixture로 대체해 완료라고 표시하지 않는다.
 - main 승격/PyPI publish/새 원격은 기존 goal의 자동 부수 작업이 아니다. 승인된 personal plan/dev 증분 전달을 실제 상태로 보고한다.
 
-현재 P028·P029의 승인된 독립 구현이 있으므로 전체 goal은 막힌 상태가 아니다. 이들 실행·검증이 남아 있으며 이번 표는 완료 체크리스트를 축소하기 위한 문서가 아니다. 최종 목표 달성은 모든 선택 축/실제 사용 경로/교육·설치·UI·검증 근거를 다시 감사해야 한다.
+P028 완료 후 현재 P029의 승인된 독립 구현이 있으므로 전체 goal은 막힌 상태가 아니다. 이들 실행·검증이 남아 있으며 이번 표는 완료 체크리스트를 축소하기 위한 문서가 아니다. 최종 목표 달성은 모든 선택 축/실제 사용 경로/교육·설치·UI·검증 근거를 다시 감사해야 한다.
+
+추가 완료 관찰: P028 완료28c51a56866f914b1745be0c1ae40a9aa215d1ad의 personal/dev 일치와 P029 adoption79958fc의 후속 진입을 확인했다. 1489파일 보존, actual model/API/Drive/user-key0. 자세한 source/artifact hash와 범위는 P028 인계/검증 기록을 따른다.
