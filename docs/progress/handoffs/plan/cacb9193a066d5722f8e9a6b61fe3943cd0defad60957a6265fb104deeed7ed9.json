@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "f12d52c99b78bfc83352c9b3e038cf08865f6d28",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "P032 S2b READY: actual four-method chunking comparison after completed Hybrid/reranker and S2a; evaluator hold preserved",
+  "next_action": "Integrate and adopt exact READY; commit independent runner tests and frozen inputs before at most 45 E5 workers/1896 items/3600 seconds. Preserve all holds and prior evidence.",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T18:36:52.618122+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
