@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "3f727c9ce0cd59fdac1337b7bf25acca8bb87c0a",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "P032 S1 live retrieval stage READY after P031 completion",
+  "next_action": "Integrate exact READY, adopt and commit, verify guards, implement owned-worker monitoring and tests then bounded public-model retrieval/reranking validation. S2/S3 and evaluator remain unstarted.",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T17:35:02.904403+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
