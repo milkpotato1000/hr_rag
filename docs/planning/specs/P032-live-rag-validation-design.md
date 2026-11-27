@@ -51,6 +51,8 @@ Google Drive 실제 연결은 사용자가 지정한 테스트 문서와 본인 
 
 S2의 선택 의존 작업과 별개로 [S2a 청킹 사전 준비](P032-s2a-chunking-preparation.md)를 추가 READY로 확정했다. 동일 snapshot의 규칙3종 artifact와 semantic/LLM preview·작업량을 모델 호출0으로 준비하는 범위다. [준비 검토](../reviews/P032-s2a-readiness-20261128.md)의 정확 채택 전 실행하지 않으며, 실제 semantic/LLM·답변 비교를 이 사전 준비로 대체하지 않는다. 생성 profile과 Drive 링크에 대한 기존 질문은 계속 대기한다.
 
+S2a의 현재 관찰567unit/규칙201·257·264chunks를 바탕으로 [S2b 실제4방식 비교 초안](P032-s2b-nonllm-chunking-comparison-draft.md)을 준비했다. E5 semantic 경계와 동일 Hybrid 검색의 최대45worker 후보 범위이며 아직 DRAFT다. S2a 최종 커밋/준비 검토/새 정확 계약 전 호출하지 않는다. LLM 청킹과 답변 생성·사용자 문서 선택은 여전히 독립적으로 남아 있다.
+
 S1이 완료되어도 P032 전체나 최종 goal을 완료로 처리하지 않는다. 작은 모델만 통과한 경우 BGE 비교의 실패/미실행도 별도로 남긴다. 실제 SDK의 CPU worker는 현재 timeout 회수와 종료 시 RSS를 제공하지만 실행 중 pressure 감시를 제공하지 않으므로, S1 계약에는 해당 관찰·중단 경로의 구현 및 독립 검증을 포함해야 한다. P031의 준비용 monitor가 추론 worker에도 적용된다고 가정하거나 P013 recovery runner를 재사용하지 않는다.
 
 [S1 실행 계약](P032-s1-execution-contract.md)에 다운로드·추론 작업 수, 시간·디스크·RSS 한도와 취소/회수 검증을 확정했다. P031 완료 검토 후 S1만 READY로 인계하며 S2/S3의 대기 사항은 유지한다. 위의 후보 설명보다 이 실행 계약을 우선한다.
