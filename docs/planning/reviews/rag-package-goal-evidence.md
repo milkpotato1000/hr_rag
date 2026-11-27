@@ -1,15 +1,15 @@
 # RAG package 목표별 증거와 남은 작업
 
-2026-11-27 plan 관찰. 전체 goal은 **미완료/active**다. 이전 goal turn들은 P024~P027 구현·검증/전달, P028 exact adoption, P029 실행 계약/직접 전달로 실제 상태를 진전시켰다. 2026-11-28 dev 최종78b85c8을 확인했다. P029 C1~C3는 전달됐고 C4는 도구 정책에 따른 파일 업로드 화면 관찰 차단이다. 구현/fixture/라이브/설치/화면 증거를 구별한다.
+2026-11-28 최신 plan 관찰. 아래 표는 현재 상태이며 하단의 날짜별 기록은 당시 관찰 이력이다. 전체 goal은 **미완료/active**다. 이전 goal turn들은 P024~P027 구현·검증/전달, P028 exact adoption, P029 실행 계약/직접 전달로 실제 상태를 진전시켰다. 2026-11-28 dev 최종78b85c8을 확인했다. P029 C1~C3는 전달됐고 C4는 도구 정책에 따른 파일 업로드 화면 관찰 차단이다. 구현/fixture/라이브/설치/화면 증거를 구별한다.
 
 | 사용자 요구 | 현재 authoritative 증거 | 판정과 다음 행동 |
 | --- | --- | --- |
 | 문서 저장소 링크 입력 | P027 구현adc87a5, 완료41a469d; Drive PDF/TXT/MD·Google Docs PDF export,48테스트. OAuth SDK 실제설치/mock 인증 | 코드/모의 수집 검증 완료. 실제 사용자 계정·문서 E2E 미검증. P029 직접 링크 form 후 지정 파일/로그인 검증 필요 |
 | 인기 HF 공개 모델 기본, 유료 LLM API 선택 | P024 교육 자료, P025 Ollama/OpenAI Chat/Anthropic Messages 실제 adapter,18테스트. HF 후보/라이선스 정책은 roadmap | provider 코드는 완료. 사용자 선택 모델의 실제 추론/품질·여유 메모리 미검증. 카탈로그 popularity/revision/런타임 선택 및 검증 필요 |
-| 모델 선택·비교 | P025 config generation/evaluation 분리; P026 config compare, 실제 invoke 경로 | fake transport/preview 검증 완료. P029 model form/등록 설정 비교와 실제 선택 모델 비교는 남음 |
-| 청킹 선택·비교 | P026 fixed/recursive/structure와 비교 CLI;36테스트. 기존 P007 semantic/LLM chunking은 별도 고정 HR stage | 일반 문서 규칙3종 완료. generic semantic/LLM 청킹 연결과 실제 실험은 남음. 기존 stage 결과를 새 module 성능으로 주장하지 않음 |
-| Dense와 여러 HF embedding, Sparse, Hybrid | generic BM25는 P026. 기존 Naive/P007 Dense는 고정 모델/데이터 | P010 READY7ad76bd를 dev가 e354abd에서 정확 채택해 구현 중. 수기 순위/지표·tiny SDK 증거와 전체 회귀68개 통과 보고를 관찰. 설치·화면·완료 commit과 실제 사전학습 품질은 아직 미확인 |
-| 리랭커 없음/있음·여러 방식 비교 | P020 후속계약 초안만 | 미구현. P010 다음으로 사용자 확정. 동일 후보집합/최종K·정답/지연 비교 상세 READY 준비 필요 |
+| 모델 선택·비교 | P025 config generation/evaluation 분리; P026 config compare, 실제 invoke 경로 | fake transport/preview 검증 완료. P029 model form/등록 설정 비교는 구현됐으나 실제 선택 모델 비교는 남음 |
+| 청킹 선택·비교 | P026 fixed/recursive/structure와 비교 CLI;36테스트. 기존 P007 semantic/LLM chunking은 별도 고정 HR stage | 일반 문서 규칙3종 완료. P030 READY0c2c5d0을 dev583f775가 정확 채택하여 generic semantic/LLM·비교/설치 연결 구현 중. 실제 실험은 별도 |
+| Dense와 여러 HF embedding, Sparse, Hybrid | P010 완료3d99353, E5/BGE Dense·BM25·Hybrid RRF·69테스트·tiny SDK·설치/UI | 구현 완료. 실제 사전학습 한국어 품질·모델 파일 준비·실메모리 검증은 남음 |
+| 리랭커 없음/있음·여러 방식 비교 | P020 완료d8724cb6, none/두 CrossEncoder·qrels/fact·89테스트·tiny SDK·설치/UI | 구현 완료. 실제 사전학습 모델 비교는 미검증 |
 | 근거 있는 최종 답변 | P026 실제 P025.invoke 호출 연결과 ID whitelist/code quote·page; fake3providerE2E 및23p합성PDF 시험 | 코드/fixture 완료. 실제 모델 답변과 의미적 근거 충실도/정답 품질 미검증. 유효 citation은 의미 정확성 보장이 아님 |
 | 평가·실험 해석 | P024 가이드, P026 실패 포함 compare·N/A. P013 승인 GT/검증 일부와 보류 기록 | 일반 모듈 평가기 미연결. GT/qrels 없는 문서는N/A. P013 보류·성공1건/기존 실패/GT/grant 유지 |
 | 누구나 설치해 재현 | P028 완료28c51a5, source6921810, README/artifacts/installed probes,51테스트 | 같은Mac의 core/extras/rebuilt 새venv와 wheel/sdist/init/doctor/실습 완료. 다른OS/실제 코딩 도구 UI 검증은 아직 없음 |
@@ -21,7 +21,7 @@ P024 완료7573c934c76aef493abb6dd1648393c025288d9c, P025 완료d7406e2b6e2c611c
 
 ## 필요한 사람 결정/입력과 독립 진행
 
-- [2026-11-28 사용자 직접 결정](rag-package-order-pending.md): 평가기 실험 보류, Hybrid→리랭커 구현 우선. 해당 순서 질문은 해소됐으며 P010 READY를 직접 전달한다.
+- [2026-11-28 사용자 직접 결정](rag-package-order-pending.md): 평가기 실험 보류, Hybrid→리랭커 구현 우선. 해당 순서 질문은 해소됐으며 P010/P020 구현·dev 원격 전달이 완료됐다.
 - P013 로컬 모델 recovery 보류는 명시 재개 전 유지한다. 설치/UI/가짜 backend 검증은 이 중지와 독립이다. 준비 코드의 성공으로 보류를 해제하지 않는다.
 - 실제 Drive 검증은 사용자가 지정한 접근 가능한 문서/본인 OAuth 설정이 필요하다. 실제 모델 검증은 구체적인 모델/자원·호출 범위 또는 사용자가 선택한 API 설정이 필요하다. 이것을 fixture로 대체해 완료라고 표시하지 않는다.
 - main 승격/PyPI publish/새 원격은 기존 goal의 자동 부수 작업이 아니다. 승인된 personal plan/dev 증분 전달을 실제 상태로 보고한다.
@@ -45,3 +45,7 @@ P010 dev/personal-dev `3d99353b5aef3b683b24d0f7fa06b8a757dc1f83` 일치와 clean
 P020 구현 b80ca38b71179821d2eafb38befe85700229a50d와 완료 dev/personal-dev d8724cb6b356703c8fa0d09b6d86d8e3782fdc98 일치를 확인했다. 89개 패키지·35개 하네스 시험, tiny SDK 두 profile, source-free wheel/sdist, 등록 합성자료 UI·좁은 화면·키보드,1534개 파일 보존과 C1~C4 PASS 증거가 커밋됐다. 실제 사전학습 가중치/LLM/API/Drive0이며 한국어 품질과 실모델 메모리 검증은 남아 있다. P013/P014 보류·미소비 grant, P029 C4 BLOCKED는 유지한다.
 
 P030은 최종 candidate/fact/registry/retrieval 경계를 대조해 READY로 준비했다. 일반 문서의 semantic/LLM 경계 생성과 저장·재생, 다섯 방식 비교·설치 UI 연결이 다음 구현이다. 전체 goal의 live 검증 및 미완료 항목을 이 READY로 대체하지 않는다.
+
+## P030 채택과 실제 모델 준비 공백 — 2026-11-28
+
+P030 exact adoption583f77550b85f06859e24cf8c63b6fc01237dbff와 active dev를 확인했다. 구현 완료는 아니다. P031 DRAFT는 사용자가 HF revision/hash를 수동 작성하는 공백과 최신 설치/모델 준비 흐름을 다룬다. 공식 BGE-M3 main 목록은 bin 가중치이며 현재 runtime은 safetensors export만 받으므로 실제 준비 경로 검증이 필요하다. 상세 출처와 변환 검토는 P031 설계에 기록했다. 이 발견은 tiny SDK 통과를 실제 모델 준비 완료로 해석할 수 없음을 보여준다.

@@ -77,3 +77,5 @@ Hybrid/리랭커 구현 순서는 [2026-11-28 사용자 결정](reviews/rag-pack
 기본 HF 후보의 공개 출처·라이선스·조회 시점 인기도 및 미검증 항목은 [후보 조사](reviews/hf-model-candidates-20261127.md)에 기록했다. 실행 카탈로그 확정이나 모델 실행 완료를 뜻하지 않는다.
 
 후속 청킹 통합은 [P030 READY](plans/P030.md)으로 추적한다. P020 완료 이후 기존 HR 전용 semantic/LLM 경계 알고리즘을 일반 snapshot·공개 embedding·LLM provider·설치 UI에 연결하며, 실행은 정확 채택 후 진행하고 평가기 실험 보류는 유지한다.
+
+모델 파일·설정 준비와 최신 설치 실습 연결은 [P031 초안](plans/P031.md)으로 추적한다. 현재 수동 revision/manifest 입력과 BGE-M3 원본 형식 차이를 해결하는 후속이며 P030 구현을 선점하거나 실제 모델 실행을 승인하지 않는다.
