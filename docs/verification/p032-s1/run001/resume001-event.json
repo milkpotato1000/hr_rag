@@ -1,0 +1,25 @@
+{
+  "event": "offline_output_path_repair",
+  "execution_id": "run001-resume001",
+  "parent_execution_id": "run001",
+  "parent_manifest_sha256": "2b8fe2a38634a15b74db18374e83c93474ebb8956215ec2722912babccc388a5",
+  "parent_ledger_sha256": "d69d322636756ef6b66eebed98b0557ce6e806327cbf261fa81d0f3fff0e1272",
+  "failure_log_sha256": "75f63b546e99dcfe4dec9f3f4e846e030e7c973bc010abdf94248d90ec36878d",
+  "first_new_job_index": 1,
+  "failure": "E5 preparation published successfully; runtime profile output directory absent; no inference dispatched",
+  "repair": "Create dedicated profiles/configs output directories; original pinned scripts and model artifacts unchanged",
+  "independent_test": "../runner-path-run001.log",
+  "same_started_at": 1795801676.159772,
+  "same_deadline": 1795808876.159772,
+  "same_reservations": {
+    "embedding_smoke": 0,
+    "embedding_full": 0,
+    "reranker_smoke": 0,
+    "reranker_full": 0
+  },
+  "same_download_attempts": [
+    "e5"
+  ],
+  "download_retry": false,
+  "time": 1795801724.856638
+}
