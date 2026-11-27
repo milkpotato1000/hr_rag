@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "installed_wheel": "9342add625a9ed633dffb2fccb3bad27379e8cddaf9a06836ea5a224fe9f280a",
+  "report_rows": 80,
+  "question_navigation": 10,
+  "default_details_open": 0,
+  "keyboard": "Enter opens; Space closes; Tab moves to next summary",
+  "report_width": 390,
+  "report_scroll_width": 390,
+  "ui_width": 390,
+  "ui_scroll_width": 390,
+  "UI_observed": "stored BGE reranker gt03: original rank11 to1, K5/1280chars, qrels facts8/8, evaluator null, source page8 offset346 canonical12096",
+  "actual_generation_disabled": true,
+  "live_model_calls_this_browser": 0,
+  "filepicker": "not attempted; P029 C4 remains BLOCKED",
+  "viewport_reset": true,
+  "owned_server_pid": 71615,
+  "owned_servers_closed": true,
+  "screenshots": [
+    "report-desktop.jpg",
+    "report-paired-desktop.jpg",
+    "report-narrow.jpg",
+    "ui-bge-desktop.jpg",
+    "ui-bge-narrow.jpg"
+  ]
+}

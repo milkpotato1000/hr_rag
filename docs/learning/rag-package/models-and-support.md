@@ -8,10 +8,10 @@
 | --- | --- | --- | --- |
 | 생성·LLM 평가 | [Qwen/Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) | Apache-2.0 | 기존 Ollama 8B 평가 실험 이력 있음. P013 첫 추출 성공 후 OS 메모리 critical로 중단. 전체 평가 품질·안전한 연속 실행 미검증, 현재 보류 |
 | 기존 생성 기준선 | Qwen3-4B-Thinking-2507 계열 | 잠금 파일에 Apache-2.0 | 로컬 태그 qwen3:4b의 저장된 model_info는 Thinking/2507. 기존 Naive·LangChain 실행 검증 범위만 인정 |
-| 임베딩 | [BAAI/bge-m3](https://huggingface.co/BAAI/bge-m3) | MIT | 기존 Ollama bge-m3:567m 기반 Dense 검색 검증 이력. HF 원본의 모든 검색 모드를 구현했다는 뜻은 아님 |
-| 임베딩 대안 | [intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small) | MIT | HF adapter·tiny SDK 시험 완료, 사전학습 한국어 품질 미검증 |
-| 리랭커 | [BAAI/bge-reranker-v2-m3](https://huggingface.co/BAAI/bge-reranker-v2-m3) | Apache-2.0 | 실제 CrossEncoder adapter·tiny SDK·설치/UI 검증. 한국어 사전학습 품질 미검증 |
-| 리랭커 대안 | cross-encoder/mmarco-mMiniLMv2-L12-H384-v1 | Apache-2.0 | 같은 CrossEncoder 연결 검증 범위. 한국어 실모델 미검증 |
+| 임베딩 | [BAAI/bge-m3](https://huggingface.co/BAAI/bge-m3) | MIT | 기존 Ollama 이력 및 HF tensor-only 준비·Dense/Hybrid 10문항 CPU 비교 완료. Dense 벡터만 사용하며 HF의 모든 검색 모드를 구현한 것은 아님 |
+| 임베딩 대안 | [intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small) | MIT | HF adapter·tiny SDK 및 가상 규정집 10문항의 실제 검색 완료. [S1 범위와 한계](live-retrieval-s1.md) |
+| 리랭커 | [BAAI/bge-reranker-v2-m3](https://huggingface.co/BAAI/bge-reranker-v2-m3) | Apache-2.0 | 실제 CrossEncoder adapter·tiny SDK·설치/UI와 고정 10문항 CPU 비교 완료. [S1 결과](live-retrieval-s1.md)는 일반 품질 보장이 아님 |
+| 리랭커 대안 | cross-encoder/mmarco-mMiniLMv2-L12-H384-v1 | Apache-2.0 | 고정 revision buffer 호환 검증 후 동일 후보 10문항 실제 실행. 사실 회수와 순위 지표의 상충을 [S1 안내](live-retrieval-s1.md)에 기록 |
 | NLI | P014의 후속 다국어 후보 | 실행 계약에서 확인 예정 | 선택 비교 실험. 현재 기본 실행 필수 모델 아님 |
 
 네 HF 링크는 기준일에 공식 카드를 열어 라이선스와 역할을 확인했습니다. E5는 모델 카드의 query/passage 입력 정책을 따라야 합니다. 모델을 바꾸면 접두어, 정규화, 길이·truncation 정책도 비교 기록에 포함합니다. 리랭커 raw score를 다른 모델의 같은 숫자와 동등한 확률로 해석하지 않습니다.

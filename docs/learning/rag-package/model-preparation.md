@@ -1,5 +1,6 @@
 # 모델 준비부터 실습 연결까지
 
+실제 공개 모델의 후속 검증은 [S1 실험 안내](live-retrieval-s1.md)에서 확인합니다. 아래 원래 구현 단계의 tiny/fake 시험 범위와 실제 실행 결과를 구분합니다.
 이 경로는 사람이 revision과 파일 hash를 수작업으로 입력하던 단계를 줄입니다. 공개 embedding/reranker 파일 준비와 LLM 설정 생성을 분리합니다. **준비 완료는 추론 성공이나 한국어 품질 검증이 아닙니다.** [최신 설치](install-current.md) 후 새 workspace의 START_HERE.md를 따라갑니다.
 
 ## 1. 오프라인 계획
@@ -23,7 +24,7 @@ catalog와 기본 plan/prepare는 네트워크·키·추론 요청 0입니다. �
 
 ## 2. 명시 파일 준비
 
-아래는 사용자가 실행을 선택할 때의 명령입니다. 이번 개발 검증에서는 실제 사전학습 파일 다운로드·로드를 수행하지 않았습니다.
+아래는 사용자가 실행을 선택할 때의 명령입니다. 초기 P031은 tiny/fake로 검증했고, 후속 S1에서는 고정 공개 모델 네 개의 실제 준비와 CPU 검색/리랭킹을 수행했습니다. 개인 환경의 실행 결과는 별도로 확인합니다.
 
 ```sh
 rag-lab model-prepare --plan .rag-runs/e5-plan --out .rag-runs/e5-ready --execute-download
@@ -36,7 +37,7 @@ rag-lab model-check --profile .rag-runs/e5-ready/profile.json
 
 다운로드는 고정 revision의 필요한 파일만 요청합니다. LFS는 SHA256, 일반 파일은 `blob <크기>\0` 헤더를 포함한 Git OID로 검증합니다. 원본 합계/최종 export는 각각 4GiB·100파일 이하여야 합니다. 디스크 여유 기준 `3 × 원본 크기 + 1GiB`는 보수적 사전 기준이며 peak 실측값이 아닙니다.
 
-한 사용자에게 준비 작업은 한 번에 하나입니다. metadata 60초/개별 20초, 다운로드 900초, 변환 300초 한도가 적용됩니다. 변환 RSS 4GiB, 250ms 관측, macOS warning/critical 또는 계측 실패 시 중지합니다. Linux는 RSS와 available-memory 관측을 사용하며 실제 다른 OS 검증 여부는 증거에 별도로 기록합니다. 표본 RSS는 순간 peak·GPU·시스템 전체 메모리 보장이 아닙니다. 이 한도로 실제 BGE 전체 변환이 가능한지는 미검증입니다.
+한 사용자에게 준비 작업은 한 번에 하나입니다. metadata 60초/개별 20초, 다운로드 900초, 변환 300초 한도가 적용됩니다. 변환 RSS 4GiB, 250ms 관측, macOS warning/critical 또는 계측 실패 시 중지합니다. Linux는 RSS와 available-memory 관측을 사용하며 실제 다른 OS 검증 여부는 증거에 별도로 기록합니다. 표본 RSS는 순간 peak·GPU·시스템 전체 메모리 보장이 아닙니다. 후속 S1에서 고정 BGE-M3 전체 변환을 수행했고 관측 RSS는 약 2.31GiB였습니다. 같은 모델이라도 다른 환경의 성공을 보장하지 않습니다.
 
 실패 시 새 출력은 ready로 게시되지 않으며 sibling `.preparation.json` 진단과 숨김 staging을 남깁니다. 자동 재시도는 없습니다. 이미 게시된 결과의 진단 ACK만 실패하면 ready 결과와 `ack_write_failed`를 함께 반환합니다. 원본/다른 작업/공유 캐시는 삭제하지 않습니다. download/metadata의 상위 작업 수와 SDK 내부 HTTP retry는 다릅니다. 정확히 관찰하지 못한 SDK HTTP 횟수는 미확정입니다.
 

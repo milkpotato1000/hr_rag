@@ -1,0 +1,384 @@
+{
+  "scores": [
+    {
+      "chunk_id": "c-b626c9bf7e1cd5a6b44eb8995a433358399b15e746a473e7693343e1cca361be",
+      "score": -0.6386474370956421
+    },
+    {
+      "chunk_id": "c-ca05d758b63bde892a3d06952559d9cd3177f07a0ed27929206ddfa6d22ed4b9",
+      "score": 1.6899653673171997
+    },
+    {
+      "chunk_id": "c-751f0f8cf20aeab15d745b730bd1c10071881e6a7e3ee737e03742686af8ffc3",
+      "score": -0.7274978756904602
+    },
+    {
+      "chunk_id": "c-1e5a740e8d25d762406dad31e5f305c04f34de00e809343ccba68df23866fb1a",
+      "score": -6.535322666168213
+    },
+    {
+      "chunk_id": "c-1dd1c345bcc08893fb046f4a14d7d12ab0a66051e418f0166cc7e4b37a713768",
+      "score": -4.389676570892334
+    },
+    {
+      "chunk_id": "c-8995879337447e7bbea700cde2c44e026ac44b209d3625781ab40f8082b2dc01",
+      "score": -5.547314167022705
+    },
+    {
+      "chunk_id": "c-ff4c92db2855ce3243057b914b0bd0b7c878d88d29790a9761d8f53f52997472",
+      "score": -6.766358852386475
+    },
+    {
+      "chunk_id": "c-bd0f8810de4c1408992ce5931e04c83825598419c417d0de991da9c49bc979a5",
+      "score": -5.400304317474365
+    },
+    {
+      "chunk_id": "c-52b4a91f6fa9fd32292b784309e33eac7c31dd18f72efea4ba2d48a1a5721a13",
+      "score": -2.4928133487701416
+    },
+    {
+      "chunk_id": "c-628277f8a505587077ba522aae35338600d6d0dbb06d2260996121ab7d562892",
+      "score": -2.7796621322631836
+    },
+    {
+      "chunk_id": "c-f2a22751830900a0b28fc9ba501f9d8067f3fd4fbb1783a63971031ad153ad41",
+      "score": -7.371209144592285
+    },
+    {
+      "chunk_id": "c-da66b56ea8570af0b9dedb4394c9ad64e06a34376c7a159cac3c433db7468eaa",
+      "score": -6.1554036140441895
+    },
+    {
+      "chunk_id": "c-a69cbe855f4e83d6dad7fe93ef992f88f5e3114cf42b07e08996e74dc24f4e2a",
+      "score": -5.191375732421875
+    },
+    {
+      "chunk_id": "c-4371d32ce8981bc0995b0db520822c50562ad5138e66d65415e2677a4a5ac0c5",
+      "score": -9.56879711151123
+    },
+    {
+      "chunk_id": "c-cfacb621bd8d4e21c16fd6687451c6c3b54075fee9c140f14b96553d58687dfa",
+      "score": -9.304962158203125
+    },
+    {
+      "chunk_id": "c-43d14122926948bbae746eb569ad8c654c6308640ea8fda321e2666e0e022b66",
+      "score": -6.754518032073975
+    },
+    {
+      "chunk_id": "c-75329f255c4926886d15ce44d13ded9b1ee49d6d0c0446924a205eaf5412de67",
+      "score": -3.4670732021331787
+    },
+    {
+      "chunk_id": "c-1eeb2a10b8372c8942868c89f5360bc4cfa31f1aa3ddddcf749adcf482e258dc",
+      "score": -7.910693645477295
+    },
+    {
+      "chunk_id": "c-9303ed2189449f5ada2740dc59eeff4be6147994462062863a5b50f6ca4b6104",
+      "score": -6.716488361358643
+    },
+    {
+      "chunk_id": "c-3160a9fdcd70ae3e8b5402825d56c934ab889217154daed7f54d896a2383f477",
+      "score": -7.206777095794678
+    }
+  ],
+  "work": {
+    "requested_pairs": 20,
+    "attempted_pairs": 20,
+    "pairs": 20,
+    "queries": 1,
+    "workers": 1,
+    "fixture_calls": 0,
+    "worker_exited": true,
+    "retry_count": 0,
+    "execution_kind": "local_hf",
+    "load_ms": 3904.938874999061,
+    "score_ms": 489.2835840000771,
+    "peak_rss_bytes": 986611712,
+    "rss_method": "OS process-lifetime ru_maxrss; includes imports/load; no periodic sampling",
+    "sdk_versions": {
+      "sentence-transformers": "6.3.0",
+      "torch": "2.15.0",
+      "transformers": "5.24.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0"
+    },
+    "pair_tokens": [
+      149,
+      151,
+      157,
+      145,
+      161,
+      146,
+      149,
+      150,
+      147,
+      166,
+      150,
+      163,
+      144,
+      150,
+      154,
+      147,
+      155,
+      146,
+      144,
+      150
+    ],
+    "applied_limit": 512,
+    "preprocessing_hash": "c3945a4e0b6ff2e85c732b3ec2a541b6783c628bd89581e5fe682b59985bad06",
+    "benchmark": "cold owned worker; not warm latency",
+    "monitor": {
+      "workers_started": 1,
+      "worker_exited": true,
+      "completed": true,
+      "samples": [
+        {
+          "elapsed_ms": 17.949041997781023,
+          "gap_ms": 17.949041997781023,
+          "rss_bytes": 6520832,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 284.64395900664385,
+          "gap_ms": 266.69491700886283,
+          "rss_bytes": 30261248,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 547.5758750108071,
+          "gap_ms": 262.9319160041632,
+          "rss_bytes": 117063680,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 804.6198340016417,
+          "gap_ms": 257.04395899083465,
+          "rss_bytes": 249511936,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 1070.8866250060964,
+          "gap_ms": 266.2667910044547,
+          "rss_bytes": 286113792,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 1336.781209000037,
+          "gap_ms": 265.8945839939406,
+          "rss_bytes": 306987008,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 1598.1809170043562,
+          "gap_ms": 261.3997080043191,
+          "rss_bytes": 327974912,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 1856.6892920061946,
+          "gap_ms": 258.50837500183843,
+          "rss_bytes": 359366656,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 2121.2267500086455,
+          "gap_ms": 264.5374580024509,
+          "rss_bytes": 384647168,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 2389.301292001619,
+          "gap_ms": 268.07454199297354,
+          "rss_bytes": 418775040,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 2647.911334002856,
+          "gap_ms": 258.61004200123716,
+          "rss_bytes": 441876480,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 2915.829917008523,
+          "gap_ms": 267.91858300566673,
+          "rss_bytes": 452460544,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 3181.2039590004133,
+          "gap_ms": 265.3740419918904,
+          "rss_bytes": 479739904,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 3443.290834009531,
+          "gap_ms": 262.08687500911765,
+          "rss_bytes": 569327616,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 3711.9707920064684,
+          "gap_ms": 268.67995799693745,
+          "rss_bytes": 735887360,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 3981.1724590108497,
+          "gap_ms": 269.2016670043813,
+          "rss_bytes": 929873920,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 4248.438417009311,
+          "gap_ms": 267.2659579984611,
+          "rss_bytes": 902594560,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 4516.2944170006085,
+          "gap_ms": 267.8559999912977,
+          "rss_bytes": 981188608,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 4784.017042009509,
+          "gap_ms": 267.72262500890065,
+          "rss_bytes": 985841664,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 5049.363124999218,
+          "gap_ms": 265.3460829897085,
+          "rss_bytes": 920518656,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 5315.789000000223,
+          "gap_ms": 266.4258750010049,
+          "rss_bytes": 918536192,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        }
+      ],
+      "sampling_target_ms": 250,
+      "sampling_max_gap_ms": 269.2016670043813,
+      "sampled_peak_rss_bytes": 985841664,
+      "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+      "resume_safe": true,
+      "preflight": {
+        "platform": "darwin",
+        "pressure_level": 1,
+        "pressure": "normal"
+      },
+      "returncode": 0,
+      "elapsed_ms": 5452.250417001778,
+      "final_observation_gap_ms": 136.46141700155567
+    },
+    "weight_validation": {
+      "stage": "persistent_state",
+      "legacy_buffer": "verified",
+      "buffer_key": "roberta.embeddings.position_ids",
+      "buffer_dtype": "I64",
+      "buffer_shape": [
+        1,
+        514
+      ],
+      "buffer_rule": "arange(514)",
+      "buffer_nontrainable": true,
+      "missing": [],
+      "unexpected": [],
+      "mismatched": [],
+      "difference_counts": {
+        "missing": 0,
+        "unexpected": 0,
+        "mismatched": 0
+      },
+      "stored_count": 202,
+      "loaded_count": 201
+    },
+    "elapsed_ms": 5929.04187500244
+  }
+}

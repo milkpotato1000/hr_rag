@@ -1,0 +1,556 @@
+{
+  "scores": [
+    {
+      "chunk_id": "c-e9ef2836370d7327d17c786540fabc87f7024de83345c11d55ee89a62f0dd305",
+      "score": -10.679197311401367
+    },
+    {
+      "chunk_id": "c-75f678b75e5f15dfe8dc27a37a45b7a368426e19088baae0083823c549c0d724",
+      "score": -11.029729843139648
+    },
+    {
+      "chunk_id": "c-950785f5c17bd7e1e7a99f14f2cb5f830a7a49fb7c107e3fd69c4326e98157e5",
+      "score": -9.769079208374023
+    },
+    {
+      "chunk_id": "c-75329f255c4926886d15ce44d13ded9b1ee49d6d0c0446924a205eaf5412de67",
+      "score": -10.308438301086426
+    },
+    {
+      "chunk_id": "c-d5671c27291574f3d37620c914bebf7d2320bfbecc8e71442888169d89461f47",
+      "score": -8.720760345458984
+    },
+    {
+      "chunk_id": "c-ed5997aa8c0ff221758a2404f87bb8a5080c91a90e0dd278a70fa647a202df2e",
+      "score": -9.334052085876465
+    },
+    {
+      "chunk_id": "c-2fcf0f5cdf6b47b4607765498e23906fe4f13d1bace89f8c0dfceb957c361c6c",
+      "score": -10.846129417419434
+    },
+    {
+      "chunk_id": "c-da37ad6c347dde013f6113a626db6676c5fa1a8ed0d1e0aa7dec626dcb6b4876",
+      "score": -10.149528503417969
+    },
+    {
+      "chunk_id": "c-6dfb27dc9c27e8fb2396d838c32b546b4be2d7b619896c2de0acd779bd9f856d",
+      "score": -11.006089210510254
+    },
+    {
+      "chunk_id": "c-f8546a22a1ebe929c3363025a59677ee62daa424af8643fe5c0f5e4be387e5fe",
+      "score": -9.002104759216309
+    },
+    {
+      "chunk_id": "c-a1246adb35925d19582e623b11c2aad0cd4a58557eae37e0beb5354ce7f5cd6b",
+      "score": -10.637716293334961
+    },
+    {
+      "chunk_id": "c-4f7ba592f5c3158e81d0b59198874809ea468e779cca1d0f3a9a5b582ccdc89e",
+      "score": -10.853316307067871
+    },
+    {
+      "chunk_id": "c-628277f8a505587077ba522aae35338600d6d0dbb06d2260996121ab7d562892",
+      "score": -9.973690032958984
+    },
+    {
+      "chunk_id": "c-48c8bcd9c2da208701ba9ff61ecc4f90dacce5f6692b7097c18a9bbacf1b0088",
+      "score": -10.915233612060547
+    },
+    {
+      "chunk_id": "c-45644448c8f1869328c85a3a5eda40575c166973e15a0e7bf472c303a170963c",
+      "score": -10.33787727355957
+    },
+    {
+      "chunk_id": "c-c480b7a48b117d65673eff0b6b44cd6668d20482115c14f03762fbd45366fe60",
+      "score": -11.042943954467773
+    },
+    {
+      "chunk_id": "c-dd1746967d29400b2e3681e1192b350f58a6c23a58e63590e46e9174256d4e3c",
+      "score": -6.844566822052002
+    },
+    {
+      "chunk_id": "c-7e9de44d963dcb22db239536c2e9e32660d60a5785964b707f322eb8877f75a1",
+      "score": -9.780139923095703
+    },
+    {
+      "chunk_id": "c-f5dddd3eb9c75dedb799b0506aa4cb5482e25a2aac005683bd61adb82fe122bc",
+      "score": -9.815793991088867
+    },
+    {
+      "chunk_id": "c-228e9f7506c89bc90c95af811e40bae1ed2779698623a1cc3247a44480167982",
+      "score": -11.03105354309082
+    }
+  ],
+  "work": {
+    "requested_pairs": 20,
+    "attempted_pairs": 20,
+    "pairs": 20,
+    "queries": 1,
+    "workers": 1,
+    "fixture_calls": 0,
+    "worker_exited": true,
+    "retry_count": 0,
+    "execution_kind": "local_hf",
+    "load_ms": 3888.6548330046935,
+    "score_ms": 4328.695916992729,
+    "peak_rss_bytes": 2118909952,
+    "rss_method": "OS process-lifetime ru_maxrss; includes imports/load; no periodic sampling",
+    "sdk_versions": {
+      "sentence-transformers": "6.3.0",
+      "torch": "2.15.0",
+      "transformers": "5.24.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0"
+    },
+    "pair_tokens": [
+      146,
+      145,
+      139,
+      152,
+      152,
+      146,
+      150,
+      157,
+      147,
+      154,
+      142,
+      152,
+      163,
+      149,
+      147,
+      143,
+      144,
+      155,
+      141,
+      139
+    ],
+    "applied_limit": 512,
+    "preprocessing_hash": "7a4b747fe59a93885f2131a271ee50fa5b2cb70dd516854d905694553d5737eb",
+    "benchmark": "cold owned worker; not warm latency",
+    "monitor": {
+      "workers_started": 1,
+      "worker_exited": true,
+      "completed": true,
+      "samples": [
+        {
+          "elapsed_ms": 30.15725000295788,
+          "gap_ms": 30.15725000295788,
+          "rss_bytes": 6520832,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 296.8106249900302,
+          "gap_ms": 266.6533749870723,
+          "rss_bytes": 29261824,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 563.2872080022935,
+          "gap_ms": 266.4765830122633,
+          "rss_bytes": 29261824,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 827.3462499928428,
+          "gap_ms": 264.0590419905493,
+          "rss_bytes": 29261824,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 1091.7852080019657,
+          "gap_ms": 264.43895800912287,
+          "rss_bytes": 29261824,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 1358.001582993893,
+          "gap_ms": 266.2163749919273,
+          "rss_bytes": 162676736,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 1614.699792000465,
+          "gap_ms": 256.69820900657214,
+          "rss_bytes": 230473728,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 1882.435624997015,
+          "gap_ms": 267.73583299655,
+          "rss_bytes": 272678912,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 2139.92554199649,
+          "gap_ms": 257.4899169994751,
+          "rss_bytes": 304218112,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 2399.811082999804,
+          "gap_ms": 259.88554100331385,
+          "rss_bytes": 306446336,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 2665.466916994774,
+          "gap_ms": 265.6558339949697,
+          "rss_bytes": 349552640,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 2922.619874996599,
+          "gap_ms": 257.152958001825,
+          "rss_bytes": 369639424,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 3181.6723749943776,
+          "gap_ms": 259.0524999977788,
+          "rss_bytes": 402243584,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 3441.4757920021657,
+          "gap_ms": 259.8034170077881,
+          "rss_bytes": 435568640,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 3698.7242920004064,
+          "gap_ms": 257.24849999824073,
+          "rss_bytes": 440582144,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 3964.830416996847,
+          "gap_ms": 266.1061249964405,
+          "rss_bytes": 465010688,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 4230.866625002818,
+          "gap_ms": 266.0362080059713,
+          "rss_bytes": 498810880,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 4496.95437499031,
+          "gap_ms": 266.0877499874914,
+          "rss_bytes": 577273856,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 4764.1427499911515,
+          "gap_ms": 267.1883750008419,
+          "rss_bytes": 732774400,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 5031.627207994461,
+          "gap_ms": 267.48445800330956,
+          "rss_bytes": 894812160,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 5292.648749993532,
+          "gap_ms": 261.0215419990709,
+          "rss_bytes": 898859008,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 5560.042166995117,
+          "gap_ms": 267.3934170015855,
+          "rss_bytes": 2043740160,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 5828.24091699149,
+          "gap_ms": 268.1987499963725,
+          "rss_bytes": 2106769408,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 6089.641667000251,
+          "gap_ms": 261.40075000876095,
+          "rss_bytes": 2108686336,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 6350.025416992139,
+          "gap_ms": 260.3837499918882,
+          "rss_bytes": 2109112320,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 6616.370417003054,
+          "gap_ms": 266.3450000109151,
+          "rss_bytes": 2109652992,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 6884.401249990333,
+          "gap_ms": 268.0308329872787,
+          "rss_bytes": 2114207744,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 7152.786374994321,
+          "gap_ms": 268.3851250039879,
+          "rss_bytes": 2115256320,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 7416.307374995085,
+          "gap_ms": 263.5210000007646,
+          "rss_bytes": 2115551232,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 7684.488582992344,
+          "gap_ms": 268.18120799725875,
+          "rss_bytes": 2116190208,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 7954.539749989635,
+          "gap_ms": 270.05116699729115,
+          "rss_bytes": 2116747264,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 8222.923499997705,
+          "gap_ms": 268.3837500080699,
+          "rss_bytes": 2117091328,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 8487.251541999285,
+          "gap_ms": 264.3280420015799,
+          "rss_bytes": 2117320704,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 8749.884624994593,
+          "gap_ms": 262.63308299530763,
+          "rss_bytes": 2117664768,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 9016.81129199278,
+          "gap_ms": 266.926666998188,
+          "rss_bytes": 2118189056,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 9284.810249999282,
+          "gap_ms": 267.9989580065012,
+          "rss_bytes": 2118533120,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 9553.047207999043,
+          "gap_ms": 268.2369579997612,
+          "rss_bytes": 2118828032,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 9821.116457998869,
+          "gap_ms": 268.06924999982584,
+          "rss_bytes": 2053996544,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        },
+        {
+          "elapsed_ms": 10090.53687499545,
+          "gap_ms": 269.4204169965815,
+          "rss_bytes": 2045591552,
+          "os": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          }
+        }
+      ],
+      "sampling_target_ms": 250,
+      "sampling_max_gap_ms": 270.05116699729115,
+      "sampled_peak_rss_bytes": 2118828032,
+      "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+      "resume_safe": true,
+      "preflight": {
+        "platform": "darwin",
+        "pressure_level": 1,
+        "pressure": "normal"
+      },
+      "returncode": 0,
+      "elapsed_ms": 10162.2522079997,
+      "final_observation_gap_ms": 71.71533300424926
+    },
+    "weight_validation": {
+      "stage": "persistent_state",
+      "legacy_buffer": "absent",
+      "missing": [],
+      "unexpected": [],
+      "mismatched": [],
+      "difference_counts": {
+        "missing": 0,
+        "unexpected": 0,
+        "mismatched": 0
+      },
+      "stored_count": 393,
+      "loaded_count": 393
+    },
+    "elapsed_ms": 11513.162124989321
+  }
+}

@@ -1,5 +1,6 @@
 # BM25·Dense·Hybrid를 비교하기
 
+실제 공개 모델의 후속 검증은 [S1 실험 안내](live-retrieval-s1.md)에서 확인합니다. 아래 원래 구현 단계의 tiny/fake 시험 범위와 실제 실행 결과를 구분합니다.
 같은 문서와 청크에서 검색 방식만 바꾸어 봅니다. **BM25는 단어 일치, Dense는 임베딩의 cosine, Hybrid는 두 순위의 RRF 결합**입니다. 점수의 단위가 다르므로 BM25 점수와 cosine를 직접 더하지 않습니다. 생성·평가 LLM과 검색 임베딩은 별도 역할입니다.
 
 [독립 실습 폴더](<../../../3. Hybrid RAG/README.md>) · [화면 안내](ui.md) · [검증과 실제 한계](../../verification/p010/README.md)
@@ -27,7 +28,7 @@ rag-lab build --snapshot .rag-runs/snapshot --config e5-hybrid.json --out .rag-r
 rag-lab ask --run .rag-runs/hybrid --config e5-hybrid.json --question '생일 휴가 자격은?' --out .rag-runs/answer --execute-retrieval
 ```
 
-첫 명령은 설정만 검사하고 실제 모델 파일·SDK를 로드하지 않습니다. `--execute-retrieval`은 문서/질문 임베딩만 허용합니다. `--execute`는 별도의 생성 LLM 호출 허용입니다. 위 명령에는 생성 허용이 없으므로 검색 근거·프롬프트를 저장하고 답변을 생성하지 않습니다. 실제 사전학습 모델 실행은 이번 개발 검증에서 하지 않았습니다.
+첫 명령은 설정만 검사하고 실제 모델 파일·SDK를 로드하지 않습니다. `--execute-retrieval`은 문서/질문 임베딩만 허용합니다. `--execute`는 별도의 생성 LLM 호출 허용입니다. 위 명령에는 생성 허용이 없으므로 검색 근거·프롬프트를 저장하고 답변을 생성하지 않습니다. 초기 P010은 tiny 모델로 검증했고, 후속 S1에서는 E5/BGE의 실제 Dense/Hybrid 각 10문항을 비교했습니다.
 
 같은 문서·청킹·임베딩으로 top-k/candidate-k/RRF/문맥 예산/LLM만 바꾸면 기존 문서 벡터를 사용합니다. query는 매번 새 임베딩이 필요합니다. compare 내부는 같은 색인을 복사·검증해 문서 계산을 재사용합니다. 개별 build를 새로 요청하면 새 결과를 만들므로 불필요한 build를 반복하지 마세요. 파일·전처리·SDK가 다르면 혼용하지 않고 stale 오류로 실패합니다. 색인 fingerprint는 실제 float32 vector bytes와 청크 순서, source/config/SDK identity를 포함합니다.
 
@@ -59,6 +60,6 @@ CLI compare의 `--qrels 파일.json`은 같은 source/chunk/questions fingerprin
 
 지표는 개별 answer artifact를 봉인하기 전에 계산하여 compare 행과 상세 result.json에 동일하게 저장합니다. 답변의 Faithfulness/Correctness는 여전히 N/A입니다. 개발 fixture의 수기 qrels는 승인 HR GT·독립 holdout이 아닙니다. 현재 화면에는 qrels 업로드가 없으며 CLI에서 지정합니다.
 
-실습 기록에는 예상 순위, 실제 순위, 누락된 근거, 바꾼 변수, latency, 문서/query 작업 수를 남기세요. RSS는 worker의 OS peak 관측이며 모델 상주 메모리만을 뜻하지 않습니다. 비용과 실제 한국어 품질·사전학습 모델 메모리는 미검증입니다. 다음 실습은 [고정 후보 리랭커](reranking.md)이며 평가기 실험 보류는 유지됩니다.
+실습 기록에는 예상 순위, 실제 순위, 누락된 근거, 바꾼 변수, latency, 문서/query 작업 수를 남기세요. RSS는 worker의 OS peak 관측이며 모델 상주 메모리만을 뜻하지 않습니다. 비용은 미측정입니다. 후속 S1의 고정 규정집 결과와 관측 메모리는 [실제 비교 안내](live-retrieval-s1.md)에 있으며 일반 한국어 품질을 보장하지 않습니다. 다음 실습은 [고정 후보 리랭커](reranking.md)이며 평가기 실험 보류는 유지됩니다.
 
 검증한 패키지 소스: `8e7ef784377043c9b8653ef87a254015c4eb90eb` (personal/dev). 설치 안내의 P028 고정 checkout 대신 이 SHA를 사용해 빌드합니다. 같은 0.1.0.dev1 이름이라도 wheel hash로 배포물을 구분하세요. [최종 배포물 hash](../../verification/p010/installation.json)와 [전달 기록](../../verification/p010/delivery.json)을 함께 확인합니다.

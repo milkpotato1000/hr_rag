@@ -1,0 +1,28 @@
+{
+  "ui_url": "http://127.0.0.1:49458",
+  "report_url": "http://127.0.0.1:49460/report.html",
+  "pid": 71615,
+  "workspace": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-ui-replay-0vzi8qzx/workspace",
+  "registered_artifacts": {
+    "candidates/gt01": "f75b04e253b74bdfbbb76fcb221c4197",
+    "none/gt01": "5bdcea42d4af42eaba26c6f014feea45",
+    "candidates/gt03": "98eb3759b1244e8db6b0f20fcba71629",
+    "none/gt03": "d11087670b5547f6ae0013a336911689",
+    "candidates/gt04": "a3cf2aa15bf34bc4abc9b3a60230a529",
+    "none/gt04": "86c7475f433a4fcb823fcb08954422ea",
+    "mmini/gt01": "c84cc17169eb453a8e31f194919c51fa",
+    "mmini/gt03": "caba44d540b74fbfa96043ab0824e6c5",
+    "mmini/gt04": "53f9751a536f4398bd1262f3765eb90d",
+    "bge-reranker/gt01": "fcec2b9328b04cada1546469a2f01ecb",
+    "bge-reranker/gt03": "04d7efe09a3f407b838fe898a2c5c623",
+    "bge-reranker/gt04": "1dd853d0cb1a4afb940cbe80ec522c89",
+    "bm25/gt01": "87a4c8d464254c00a1e1f6238f2c29fc",
+    "e5-dense/gt01": "8ddc9234639445a3862bea8336b2237c",
+    "e5-hybrid/gt01": "835fdfa6b41142ef8b089f2a4c9fdf08",
+    "bge-dense/gt01": "119b09e6299e4a429daf572f10ee1246",
+    "bge-hybrid/gt01": "5006686ea08048bf8ef9ece0f5d7bbb3"
+  },
+  "execution_flags": "all off",
+  "replay_new_model_calls": 0,
+  "original_results": "stored S1 live retrieval/rerank; historical mMiniLM failure preserved; none model-free"
+}

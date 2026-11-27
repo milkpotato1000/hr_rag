@@ -1,5 +1,6 @@
 # 최신 패키지 설치와 모델 준비
 
+실제 공개 모델의 후속 검증은 [S1 실험 안내](live-retrieval-s1.md)에서 확인합니다. 아래 원래 구현 단계의 tiny/fake 시험 범위와 실제 실행 결과를 구분합니다.
 현재 dev 패키지는 규칙·의미·LLM 청킹, BM25/Dense/Hybrid, 고정 후보 리랭커와 모델 준비 CLI를 제공합니다. [P028 설치 문서](install.md)의 고정 SHA는 과거 기준선입니다. 최신 검증 소스와 배포물 hash는 [P031 검증 기록](../../verification/p031/README.md)에서 확인합니다. main 승격·PyPI 게시를 뜻하지 않습니다.
 
 지원 Python 3.10 이상과 새 환경을 사용합니다. 아래는 기존 환경을 바꾸지 않는 설치 예시입니다. `git rev-parse HEAD`의 SHA를 실험 기록에 보관하세요. 검증 기록의 소스를 재현할 때는 그 기록의 구현 SHA를 checkout합니다.

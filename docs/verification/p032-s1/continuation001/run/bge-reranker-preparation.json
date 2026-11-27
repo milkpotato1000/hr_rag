@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "phase": "published",
+  "plan_sha256": "93d8d28300523702ac1e0229f90b65340e1787a74945fc76279a11f407aa9736",
+  "execution_kind": "hf_download",
+  "work": {
+    "download": {
+      "requested_jobs": 1,
+      "workers_started": 1,
+      "fixture_calls": 0,
+      "completed": true,
+      "attempted_jobs": 1,
+      "worker_exited": true,
+      "peak_rss_bytes": null,
+      "rss_samples": 0,
+      "retry_count": 0,
+      "elapsed_ms": 60841.772957996,
+      "sdk": {
+        "download_jobs_completed": 1,
+        "http_request_count": null,
+        "sdk_internal_retries": "SDK controlled; top-level retry 0"
+      }
+    },
+    "conversion": {
+      "requested_jobs": 0,
+      "workers_started": 0,
+      "fixture_calls": 0,
+      "completed": false
+    },
+    "inference_calls": 0,
+    "retry_count": 0
+  },
+  "inference": "unverified",
+  "quality": "unverified",
+  "elapsed_ms": 69368.79320800654,
+  "diagnostic_status": "saved"
+}

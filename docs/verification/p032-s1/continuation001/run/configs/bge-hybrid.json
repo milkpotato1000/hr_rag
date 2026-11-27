@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "chunking": {
+    "method": "fixed",
+    "size_chars": 256,
+    "overlap_chars": 64
+  },
+  "retrieval": {
+    "method": "hybrid",
+    "candidate_k": 20,
+    "top_k": 5,
+    "context_budget_chars": 2000,
+    "rrf_k": 60
+  },
+  "embedding_config": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s1/continuation001/run/profiles/bge.json",
+  "llm_config": "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s1/input/llm-preview-only.json"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "phase": "published",
+  "plan_sha256": "42e22a66029a53af99416527f77d6ae8455f9ab73e85abc2a215f32d96616619",
+  "execution_kind": "hf_download",
+  "work": {
+    "download": {
+      "requested_jobs": 1,
+      "workers_started": 1,
+      "fixture_calls": 0,
+      "completed": true,
+      "attempted_jobs": 1,
+      "worker_exited": true,
+      "peak_rss_bytes": null,
+      "rss_samples": 0,
+      "retry_count": 0,
+      "elapsed_ms": 61221.33758300333,
+      "sdk": {
+        "download_jobs_completed": 1,
+        "http_request_count": null,
+        "sdk_internal_retries": "SDK controlled; top-level retry 0"
+      }
+    },
+    "conversion": {
+      "requested_jobs": 1,
+      "workers_started": 1,
+      "fixture_calls": 0,
+      "completed": true,
+      "attempted_jobs": 1,
+      "worker_exited": true,
+      "peak_rss_bytes": 2478555136,
+      "rss_samples": 44,
+      "retry_count": 0,
+      "memory_precheck": {
+        "platform": "darwin",
+        "pressure_level": 1,
+        "pressure": "normal"
+      },
+      "memory_latest": {
+        "platform": "darwin",
+        "pressure_level": 1,
+        "pressure": "normal"
+      },
+      "elapsed_ms": 11661.09854199749
+    },
+    "inference_calls": 0,
+    "retry_count": 0
+  },
+  "inference": "unverified",
+  "quality": "unverified",
+  "elapsed_ms": 82340.56691700243,
+  "diagnostic_status": "saved"
+}

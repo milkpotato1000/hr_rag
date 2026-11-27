@@ -1,6 +1,8 @@
 # P032 S1 — 공개 검색 모델 검증 기록
 
-현재 단계: E5 실제 검색을 완료했으며 mMiniLM 첫 smoke의 `model_weights_mismatch`로 중단했다. P032 전체 완료가 아니다.
+현재 S1은 후속 계약까지 실행·검증했다. [최종 80개 비교 보고서](continuation001/report-final/report.html)와 [누적 실행 감사](continuation001/final-checks.json)를 먼저 읽는다. P032 전체 완료는 아니며 S2/S3·평가기·Drive는 실행하지 않았다.
+
+아래 부모 run001 기록은 E5 검색 후 mMiniLM 첫 smoke에서 중단했던 시점의 보존 기록이다. 그 실패를 삭제하지 않고 [후속 계약의 구현·실행](continuation001/README.md)으로 이어갔다.
 
 [비교 보고서](report-final/report.html)와 [실제 사례 학습 안내](../../learning/rag-package/live-retrieval-s1.md)에서 결과를 읽는다. BM25/E5 Dense/E5 Hybrid 검색 각 10건과 저장 후보의 모델 없는 none 재생 10건을 보존했다. 필수 사실 회수는 BM25 24/38, E5 Dense와 Hybrid 27/38이다. 답변 생성과 의미 평가는 수행하지 않았다.
 
