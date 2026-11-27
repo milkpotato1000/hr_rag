@@ -47,3 +47,15 @@ workspace.init은 배포 resources/sample을 hash 검증 후 복사한다. 관�
 P010의 격리된 설치 소스를 읽었다. requirements-retrieval.lock은 huggingface-hub2.5.0을 고정한다. _snapshot_download.py는 revision/local_dir/dry_run/token 인자를 갖고, hf_api.py의 model_info는 files_metadata를 지원한다. torch/serialization.py에는 weights_only 및 mmap 경로가 있다. 이는 API 존재 확인이며 다운로드/변환 실행 성공은 아니다. 실제 검증은 P031 tiny 도구 시험과 별도 live 계약에 남긴다. [실행 계약 초안](P031-model-preparation-contract.md)을 작성했다.
 
 공식 metadata API에서 BGE-M3 revision5617a9f61b028005a4858fdac845db406aefb181의 Dense용10파일·총2,293,315,801bytes와 원본 hash를 확인해 [조사 자료](../reviews/p031-bge-source-metadata.json)에 보존했다. 다른 세 모델의 blobs=true 조회는 웹 도구에서 접근 오류여서 정확 file metadata를 아직 확보하지 못했다. 기존 tree 관찰과 성공한 BGE metadata를 다른 모델의 다운로드/파일 검증 증거로 대신하지 않는다. 남은 세 recipe는 READY 전에 확인한다.
+
+## 남은 metadata 확보 — 2026-11-28
+
+웹 도구의 내부 접근 오류 이후 공개 공식 API를 read-only HTTP로 조회해 세 모델의 SHA를 확인했고, 다시 그 정확 revision endpoint를 조회하여 파일 목록을 고정했다. metadata만 읽었으며 가중치·계정·키·모델 실행은0이다.
+
+| 모델 | 고정 revision | runtime 원본 파일/합계 bytes | 자료 |
+| --- | --- | --- | --- |
+| E5-small | 614241f622f53c4eeff9890bdc4f31cfecc418b3 | 9 / 492795290 | [metadata](../reviews/p031-e5-source-metadata.json) |
+| BGE reranker | 953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e | 6 / 2293242108 | [metadata](../reviews/p031-bge-reranker-source-metadata.json) |
+| mMiniLM reranker | 1427fd652930e4ba29e8149678df786c240d8825 | 6 / 492745974 | [metadata](../reviews/p031-mmini-reranker-source-metadata.json) |
+
+이 원본 크기는 실행 메모리가 아니다. BGE-M3는 앞선10파일 기록 및 변환 recipe를 사용하고 나머지 세 모델은 native safetensors를 선택한다. bin/onnx/학습 코드를 함께 내려받지 않는다. download가 실제로 이 목록만 받고 bytes를 검증하는지는 dev의 독립 fixture와 후속 live 증거로 확인한다.

@@ -39,6 +39,16 @@ download는 고정 원본 파일과 크기/hash를 확인한 뒤 export한다. L
 
 변환 fixture는 float32/float16/int64 및 contiguous/noncontiguous·공유 storage tensor를 포함한다. 저장 가능한 형태로 복제할 경우 개별 tensor의 key/dtype/shape/value hash를 변환 전후 비교한다. metadata format=pt와 출력 key 집합이 일치해야 하며 tensor에 대한 양자화/수치 cast는 하지 않는다. 원본/출력 tensor 합계와 실제 worker RSS는 다른 측정이다. SDK import·mmap·page cache 비용을 무시한 가중치 크기만으로 M1 실행 가능을 판정하지 않는다.
 
+## 준비 작업의 자원·상태 초안
+
+한 번의 prepare/import는 한 모델만 처리하고 동시 준비 worker는1개다. metadata 전체 deadline60초, 개별 요청 timeout20초; download 전체 deadline900초, 변환 deadline300초를 기본으로 한다. 개발 fixture 검증은 더 짧은 timeout을 주입한다. 도구는 자체 시작한 worker만 종료하고 kill 후 wait로 종료를 확인한다. Ollama나 다른 사용자의 프로세스는 종료·언로드하지 않는다.
+
+디스크 사전검사는 원본 계획 합 S에 대해 `3*S + 1GiB`의 여유 공간을 요구한다. 원본·export·변환 임시 사본과 여유분을 위한 보수적 기준이며 실제 peak 실측값으로 설명하지 않는다. 파일별/합계4GiB·100파일 상한도 계속 적용한다. 출력은 새 경로만 허용하며 계획, 진행 중 진단, 검증된 export의 상태를 분리한다. 실패·중단 후 기존 결과나 원본을 지우지 않는다.
+
+변환 worker는 CPU 전용이며 RSS4GiB를 중지 기준으로 삼고250ms 간격으로 관찰한다. macOS는 사전·주기 OS pressure가 warning/critical이면 시작하지 않거나 소유 worker를 중지한다. Linux는 지원되는 RSS/available-memory 관측을 별도 검증하고, 필요한 관측을 못 하면 변환 미실행으로 남긴다. RSS 표본은 GPU/통합 메모리 전체 또는 순간 peak 보장이 아니다. 기존 P013의 grant/runner를 호출하지 않고 해당 코드의 계측 의미만 참고한다. 이 초기 한도로 실제 BGE 변환이 가능한지는 live 검증 전 미확인이다. 한도를 넘어 실패하면 자동 상향하지 않는다.
+
+진행 중 강제 종료·진단 쓰기 실패·최종 publication 실패를 각각 시험한다. READY export를 노출하기 전 원본 검증·변환 검증·profile/check 성공과 publication 의도를 기록한다. ready 파일이 이미 atomic publication 된 이후 진단 ACK 쓰기만 실패한 경우 ready artifact를 실패한 다운로드처럼 재요청하지 않으며 실제 결과와 진단 상태를 따로 보고한다. partial staging은 정상 목록에 등록하지 않는다.
+
 ## LLM 설정·설치 안내
 
 로컬 사용자는 서버 URL·실제 모델 alias를 고르고 명시 inspect로 digest/model_info를 확인한다. HTTP 호출은 /api/tags 또는 /api/show 범위로 제한하고 /generate·/chat·/pull·서버 start/unload를 호출하지 않는다. 기존 HF 원본/양자화 매핑을 alias만으로 추측하지 않고 확인 가능한 정보와 사용자 제공 정보를 구분한다. 동일 alias가 다른 digest로 변하면 새 설정을 요구한다. P013 모델 상태/예산은 건드리지 않는다.
@@ -51,4 +61,4 @@ API 설정은 supported provider·base URL·model·max output·timeout·response
 
 원격 metadata/파일 transport fixture는 production 다운로드 코어를 통과시키며, 새로운 테스트 전용 endpoint를 배포 기본값으로 노출하지 않는다. actual SDK의 tiny safetensors 및 tiny tensor-only bin 변환·파일 hash/shape/value 일치, manifest/role/revision/symlink/path·크기/다운로드 실패/중단/출력 충돌·변환 실패·no fallback·no inference·설정 비밀값0을 검증한다. source-free 설치에서 생성한 profile을 기존 worker의 tiny 시험과 UI registry에 연결한다.
 
-아직 확정할 부분은 네 모델의 pinned file recipes/총 byte 상한 실측, 변환 worker 자원/시간 상한, LLM config 명령 schema, P030 최종 artifact·resource·doctor와의 연결이다. 현재 초안의 조사/작업은 모델을 다운로드하거나 실행하지 않는다. 실제 사전학습 모델과 합성 문서로 수행할 제품 E2E는 별도 계약으로 남기며 평가기 보류를 우회하지 않는다.
+네 모델의 pinned file recipe/metadata와 변환 worker 자원·시간 초기 기준은 위에 구체화했다. 아직 LLM config 명령 schema, 고정 metadata의 준비 도구 소비 방식 및 P030 최종 artifact·resource·doctor 연결을 준비 검토해야 한다. 현재 초안의 조사/작업은 모델을 다운로드하거나 실행하지 않는다. 실제 사전학습 모델과 합성 문서로 수행할 제품 E2E는 별도 계약으로 남기며 평가기 보류를 우회하지 않는다.
