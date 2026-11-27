@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "afda7f700b848defe0e78fa70313b5b32a5c9c6f",
+  "document": "docs/planning/handoffs/P027.md",
+  "summary": "P027 single-file Drive connector READY",
+  "next_action": "Exact adopt then implement actual connector with offline verification; preserve P013 hold",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T08:57:23.436889+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T08:57:54.526814+00:00",
+      "evidence": "Host send_message_to_thread succeeded to verified existing HR RAG dev with exact afda7f700b848defe0e78fa70313b5b32a5c9c6f and P027 scope/verification/P013 hold. Receipt, adoption and completion not yet observed."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T09:00:40.366653+00:00",
+      "evidence": "Observed dev acceptance on 2026-11-27: actual Drive connector with fake auth/HTTP and isolated SDK only. Exact adoption commit 1aa8862 observed separately; completion not yet observed."
+    }
+  ]
+}

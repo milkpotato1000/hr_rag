@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "c09fa2f9697c4ee882ad1751dede7d54ac656344",
+  "document": "docs/planning/handoffs/P028.md",
+  "summary": "P028 installable package READY; queued after P027",
+  "next_action": "Finish P027 first; then exact adopt and implement packaging with isolated offline verification",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T09:02:30.789491+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T09:02:48.460878+00:00",
+      "evidence": "Host direct message succeeded to verified existing HR RAG dev with exact c09fa2f9697c4ee882ad1751dede7d54ac656344. Explicitly queued after P027 completed commit/push, preserving current work, P013 hold and pending ordering decision. Receipt/adoption/completion not yet observed."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T09:05:31.659261+00:00",
+      "evidence": "Observed dev acknowledgment: P028 will be adopted separately after P027 verification/completion/push. Current P027 preserved; P028 adoption/completion not yet observed."
+    }
+  ]
+}
