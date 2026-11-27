@@ -9,13 +9,13 @@
 CLI와 한국어 가이드는 다음 단계로 이어진다. 정확 option 이름은 준비 검토에서 확정하며 실제 코어를 한 번만 구현한다.
 
 - `model-catalog`: 네 후보·역할·공식 출처·라이선스·revision 조회 시점·준비 방식/검증 상태를 오프라인으로 표시한다. 모델 메모리와 파일 크기는 구분한다.
-- `model-plan --model ID --role embedding|reranker --out DIR [--revision REF] [--fetch-metadata]`: 기본은 네트워크0 미설정 preview. 명시 metadata 조회 시 full commit SHA와 필요한 파일·크기·원본 hash·변환 여부를 고정한 준비 계획을 저장한다. branch/tag는 이 시점에 full SHA로 해소하고 실제 download가 main을 다시 따라가지 않는다. metadata만 읽는 것을 가중치 다운로드로 표시하지 않는다.
+- `model-plan --model ID --role embedding|reranker --out DIR [--revision REF] [--fetch-metadata]`: 기본은 네트워크0으로 배포된 고정 metadata recipe의 계획을 저장하고 origin=packaged_metadata로 표시한다. 네 모델의 기본 revision은 준비 검토한 조사 기록과 같아야 한다. 새 ref는 --fetch-metadata 없이는 미설정 preview이며, 명시 metadata 조회 시 full commit SHA와 필요한 파일·크기·원본 hash·변환 여부를 고정한 새 계획을 저장한다. branch/tag는 이 시점에 full SHA로 해소하고 실제 download가 main을 다시 따라가지 않는다. metadata만 읽는 것을 가중치 다운로드로 표시하지 않는다.
 - `model-prepare --plan DIR --out DIR [--execute-download] [--execute-conversion]`: 고정 계획을 검증하고 새 디렉터리에서 작업한다. 기본 preview, download와 변환은 각각 명시 flag가 필요하다. 변환이 필요한데 flag가 없으면 가중치부터 무작정 내려받지 않고 사전 설명 후 미실행한다.
 - `model-import --plan DIR --source DIR --out DIR [--execute-conversion]`: 같은 계획의 검증된 원본 regular 파일을 별도 export에 복사한다. HF cache symlink를 임의 해제하거나 원본을 수정하지 않는다. 일부 파일·revision/hash가 맞지 않으면 완료하지 않는다.
 - `model-check --profile FILE`: 파일·manifest·구조만 확인하고 추론0이다. 준비 완료/SDK 미설치/추론 미검증/품질 미검증을 따로 보고한다.
 - `llm-configure`: 새 파일로 provider/model/base URL/환경 변수 이름과 역할을 구성한다. local identity 조회는 명시된 Ollama 서버의 읽기 전용 정보만 사용하고, API config 생성은 키 값·유료 API 호출0이다. 기존 config를 덮어쓰지 않는다.
 
-출력물은 `source-plan.json`, `preparation.json`, `model/`, `profile.json`을 분리한다. profile의 model directory에는 runtime이 요구하는 파일만 포함한다. 모델 준비 진단·HF cache metadata·계획은 model/ 밖에 둔다. manifest는 실제 export bytes의 SHA256으로 생성하며 사용자에게 수동 hash 계산을 요구하지 않는다. 기존 profile 직접 등록도 계속 지원한다.
+출력물은 `source-plan.json`, `preparation.json`, `model/`, `profile.json`을 분리한다. profile의 model directory에는 runtime이 요구하는 파일만 포함한다. 모델 준비 진단·HF cache metadata·계획은 model/ 밖에 둔다. manifest는 실제 export bytes의 SHA256으로 생성하며 사용자에게 수동 hash 계산을 요구하지 않는다. 기존 profile 직접 등록도 계속 지원한다. runtime profile v1의 허용 필드를 임의 확장하지 않는다. export 안의 source-provenance.json에 원본 ID/revision/파일 hash와 native-copy 또는 변환 tool/options·출력 weight hash를 저장하고 file_manifest에 그 파일 hash도 포함한다. 이 sidecar는 자신의 hash나 전체 export manifest를 포함하지 않아 순환 참조를 피한다. 준비 진단의 경로·PID·키·HTTP header는 sidecar에 넣지 않는다. 따라서 기존 runtime identity의 manifest로 변환 출처까지 고정된다.
 
 ## HF 준비 계획과 파일 검증
 
@@ -55,10 +55,16 @@ download는 고정 원본 파일과 크기/hash를 확인한 뒤 export한다. L
 
 API 설정은 supported provider·base URL·model·max output·timeout·response mode·API key 환경 변수 이름을 검증해 config를 생성한다. 비밀값을 읽거나 실제 request를 보내지 않고 `user_configured_unverified`를 유지한다. generation/chunking/evaluation 프로필 매핑은 기록하되 생성/청킹만 선택했다고 evaluation을 실행하지 않는다. config 생성은 API 이용권 확인이 아니다.
 
+`llm-configure --spec FILE --out FILE [--inspect-local]`를 공통 진입점으로 한다. spec v1은 schema_version/profiles/roles의 strict object이며 profiles는1..4개다. 각 profile은 name을 key로 하고 provider/base_url/model/max_output_tokens/timeout_seconds/response_mode와 기존 provider별 선택 항목을 사용한다. Ollama는 origin(hf_id,source_revision,conversion,quantization)을 별도로 받고 expected_digest를 사용자가 계산하게 하지 않는다. API는 api_key_env와 revision_pinned/revision을 받는다. roles는 generation/evaluation/chunking이 존재하는 profile key를 가리키며 누락·알 수 없는 profile은 거부한다. 출력은 P030 runtime config v2다. 키 값·Authorization header·임의 request body는 spec에 받지 않는다.
+
+기본 설정 생성은 네트워크0이다. API identity는 입력한 모델/revision과 user_configured_unverified로 구성한다. Ollama는 inspect가 없으면0 digest와 example 표시를 유지해 실행 불가·needs_configuration을 명확히 한다. `--inspect-local`을 주면 spec에 선택된 고유 local server/model에 한해 tags/show를 확인하고 실제 digest를 채운다. 각 HTTP timeout5초, 전체60초, profile당 최대2회의 상위 요청을 제한하며 retry0이다. 반환 model_info에 HF origin/revision 근거가 없으면 입력 origin은 user_asserted로 설명하고 서버가 검증했다고 표시하지 않는다. /show의 license/template 등 본문 전체를 공개 기록에 덤프하지 않고 필요한 identity 필드만 보존한다. 서버 변경은 실행 시 기존 P025의 digest 검사가 다시 확인한다.
+
+설정 spec 예제는 local-only와 API-only, generation과 chunking을 다른 profile로 둔 혼합 예제의3종이다. 예시 출력은 실제 모델과 인증을 갖춘 것으로 위장하지 않는다. 역할 선택이 프롬프트 자체를 재작성하지 않으며 각 작업의 실제 prompt/schema는 해당 모듈이 담당한다. `--out`은 새 파일만 허용하고 기존 profile/규칙/환경 변수를 수정하지 않는다. JSON의 중복 key·불명확한 타입·유한하지 않은 숫자 등은 공통 strict validator로 거부한다.
+
 최신 dev의 검증된 source/artifact를 선택하는 설치 안내와 독립 init 실습을 제공한다. 현재 가이드의 고정 P028 명령은 역사적 baseline으로 표시하고 최신 기능 설치 경로와 구분한다. START_HERE/doctor/UI 등록은 현재 패키지와 같은 config schema를 사용한다. 두 코딩 도구 요청 예시는 먼저 규칙을 읽고 모델 준비→실행 preview→명시 실행을 구분하며, 사람이 hash/내부 registry를 직접 편집하게 하지 않는다. 두 제품을 실제 사용하지 않은 시험을 양쪽 UI 검증으로 주장하지 않는다.
 
 ## 개발 검증과 남은 결정
 
 원격 metadata/파일 transport fixture는 production 다운로드 코어를 통과시키며, 새로운 테스트 전용 endpoint를 배포 기본값으로 노출하지 않는다. actual SDK의 tiny safetensors 및 tiny tensor-only bin 변환·파일 hash/shape/value 일치, manifest/role/revision/symlink/path·크기/다운로드 실패/중단/출력 충돌·변환 실패·no fallback·no inference·설정 비밀값0을 검증한다. source-free 설치에서 생성한 profile을 기존 worker의 tiny 시험과 UI registry에 연결한다.
 
-네 모델의 pinned file recipe/metadata와 변환 worker 자원·시간 초기 기준은 위에 구체화했다. 아직 LLM config 명령 schema, 고정 metadata의 준비 도구 소비 방식 및 P030 최종 artifact·resource·doctor 연결을 준비 검토해야 한다. 현재 초안의 조사/작업은 모델을 다운로드하거나 실행하지 않는다. 실제 사전학습 모델과 합성 문서로 수행할 제품 E2E는 별도 계약으로 남기며 평가기 보류를 우회하지 않는다.
+네 모델의 pinned file recipe/metadata와 변환 worker 자원·시간 초기 기준, LLM 설정 spec은 위에 구체화했다. 고정 metadata의 준비 도구 소비 방식 및 P030 최종 artifact·resource·doctor 연결은 준비 검토가 남아 있다. 현재 초안의 조사/작업은 모델을 다운로드하거나 실행하지 않는다. 실제 사전학습 모델과 합성 문서로 수행할 제품 E2E는 별도 계약으로 남기며 평가기 보류를 우회하지 않는다.
