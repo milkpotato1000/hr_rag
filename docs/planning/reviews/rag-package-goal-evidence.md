@@ -32,6 +32,10 @@ P029 C4는 미완료로 유지한다. 사용자 순서 결정으로 P010의 독�
 
 ## P010 진행 및 P020 준비 관찰 — 2026-11-28
 
-P010 dev live turn `01a21dc3-b0cf-7a83-acef-cb6f12fbed3c`가 구현 중이다. plan의 vector byte hash/SDK identity/개별 결과 지표 일관성 검토를 dev가 수신했고 작업 중 코드에 반영한 것을 읽었다. `docs/verification/p010/hybrid-refined.log`는 독립 fixture6개 PASS, `tiny-sdk.json`은 실제 SDK의 작은 무작위384/1024차원 모델 호출과 길이 초과 거부를 기록한다. 사전학습 모델0이며 이 증거는 한국어 검색 품질을 증명하지 않는다. 기존 실패 로그도 남아 있다. 전체 회귀68개 PASS는 dev의 최신 진행 보고이며 최종 설치/화면/커밋 증거는 후속 확인한다.
+당시 P010 dev의 실행 중인 turn을 확인했다. plan의 vector byte hash/SDK identity/개별 결과 지표 일관성 검토를 dev가 수신했고 작업 중 코드에 반영한 것을 읽었다. `docs/verification/p010/hybrid-refined.log`는 독립 fixture6개 PASS, `tiny-sdk.json`은 실제 SDK의 작은 무작위384/1024차원 모델 호출과 길이 초과 거부를 기록한다. 사전학습 모델0이며 이 증거는 한국어 검색 품질을 증명하지 않는다. 기존 실패 로그도 남아 있다. 전체 회귀68개 PASS는 dev의 최신 진행 보고이며 최종 설치/화면/커밋 증거는 후속 확인한다.
 
 P020는 아직 DRAFT다. 저장 branch 후보로 고정 N개를 구성하고 qrels를 모델 입력에서 분리하는 계약, 재검색 없는 off/on 비교와 선택 결과의 generation 연결, 필수 fact의 AND/OR span 합집합 집계를 상세 설계했다. P010 최종 artifact/API를 대조하기 전 READY나 착수로 처리하지 않는다.
+
+## P010 완료 및 P020 READY — 2026-11-28
+
+P010 dev/personal-dev `3d99353b5aef3b683b24d0f7fa06b8a757dc1f83` 일치와 clean/terminal turn을 확인했다. C1~C4 PASS, 회귀69개·actual tiny SDK·독립 설치·등록 합성자료 IAB 관찰·1535파일 보존이다. generic Dense/Hybrid 구현은 완료이며 실제 사전학습 한국어 성능은 미검증이다. P020는 이 최종 API/증거를 대조해 READY로 확정했다. 후보·두 scorer·qrels/facts·CLI/UI·생성 연결의 구현은 아직 남아 있다. 이전 진행 관찰은 이 완료 기록으로 갱신하며 P013/P029 보류·한계는 그대로다.
