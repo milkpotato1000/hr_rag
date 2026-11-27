@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "bb733052fda6dfbdd7de8e1f2eae50118ae059c1",
+  "document": "docs/planning/handoffs/P026.md",
+  "summary": "P026 generic document RAG integration READY",
+  "next_action": "Exact adoption then snapshot/chunk/BM25/provider/citation/compare implementation; no real model calls",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T08:43:35.834885+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T08:44:12.416753+00:00",
+      "evidence": "Host send_message_to_thread succeeded to existing HR RAG dev with exact bb733052fda6dfbdd7de8e1f2eae50118ae059c1, P026 complete contract and P013 hold."
+    }
+  ]
+}
