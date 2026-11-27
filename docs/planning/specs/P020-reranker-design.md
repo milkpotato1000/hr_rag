@@ -61,3 +61,44 @@ UI/CLI에 reranking 계산 실행 허용을 생성 및 임베딩 계산과 구�
 5. wheel/3.Hybrid 실습/허용 browser 검증과 C1~C4, actual pretrained model0·live 미검증 보고.
 
 P029의 파일 선택창 접근 거부를 재시도 우회하거나 검증된 것으로 처리하지 않는다. 신규 rerank UI는 등록된 합성 candidate artifact로 관찰한다. P010 구현이 완료되지 않았는데 본 초안을 근거로 P020를 자동 시작하지 않는다.
+
+## P010 연결 상세 초안 — 2026-11-28 코드 관찰
+
+다음은 P010 dev HEAD `e354abd` 위의 작업 중 코드 관찰에 따른 설계이며 완료 인터페이스의 보증이 아니다. READY 검토에서 커밋된 최종 코드와 다시 대조한다.
+
+현재 `retrieval.select`는 `rows`를 top_k까지 줄여 반환하지만 `retrieval_trace.bm25`와 `.dense`에 branch 후보를 보존한다. P020 후보 생성은 이 branch 목록과 저장된 검색 설정을 사용하여 전체 결합 순위를 재구성한다. Hybrid는 기존 `rrf` 함수를, Dense/BM25는 해당 branch 순위를 사용한다. 재구성한 top_k가 원 결과의 candidates와 일치하는지 검사한 뒤 앞 N개를 고정한다. branch의 candidate_k가 요청 N보다 작다면 `candidate_depth_insufficient`로 명시하고 충분한 candidate_k의 검색을 따로 수행하도록 안내한다. corpus가 작거나 BM25 양수 결과가 적은 정상적인 후보 부족과 설정 깊이 부족을 구분한다. 과거 artifact에 branch trace가 없으면 contexts를 후보인 것처럼 대체하지 않는다.
+
+후보 고정은 이미 저장된 answer/검색 결과 artifact와 대응 build를 검증한 뒤 실행한다. 원문·청크·index fingerprint, query hash, effective retrieval settings, branch 순위·점수와 실제 chunk ID/text hash를 일치시킨다. 원래 답변이 생성 실패했더라도 검색 단계와 후보가 온전하면 검색 후보는 사용할 수 있다. 검색 단계 실패나 잘못된 artifact는 불가하다. 기존 answer JSON을 고쳐 rerank 결과를 끼워 넣지 않는다.
+
+새 candidate artifact v1의 필수 내용:
+
+- `source_fingerprint`, `chunk_fingerprint`, `index_fingerprint`, `query_hash`, `question_id`, `question`, `retrieval_settings`, `origin_result_fingerprint`, `execution_kind`.
+- `requested_n`, `actual_n`, `candidate_depth`, `shortage_reason`, 원 순서의 `candidates`. 각 행은 `chunk_id`, `original_rank`, `retrieval_score`, `text`, `text_hash`, `document_id`, `start`, `end`, `pages`, `heading_path`를 가진다. page는 원문 매핑에서 유도하며 임의 입력으로 신뢰하지 않는다.
+- source canonical text/page mapping 및 후보를 검증할 최소 원문 snapshot을 함께 보존한다. 모든 corpus의 chunk ID·구간 목록도 보존하여 qrels의 unknown ID를 검증한다. vector와 embedding profile 경로는 후보 재생에 필요하지 않다.
+- `candidate_fingerprint`는 질문·출처·검색 identity·순서·본문 hash를 포함한다. 같은 text라도 source/revision/query가 다르면 같은 비교쌍으로 취급하지 않는다. 실제 비교에서는 입력 값의 fingerprint를 재계산하고 저장된 문자열만 믿지 않는다.
+
+후보 manifest에는 qrels/GT를 넣지 않는다. qrels와 fact/span 정답은 평가 입력으로 별도 고정하고 result에는 그 hash만 provenance로 연결한다. worker payload는 질문, 후보 ID/본문, 모델 profile만 받는다. grade, fact 정답, 기대 순위, 기존 답변, 모델별 점수, 비교군 이름은 모델 입력에 포함하지 않는다. UI의 주입 fixture는 production 선택 목록에 넣지 않는다.
+
+### 사용자 실행 동선 초안
+
+1. `rag-lab candidates --build ... --result ... --n 20 --out ...`: 저장 결과에서 후보 고정. 모델/embedding/LLM 호출0.
+2. `rag-lab rerank --candidates ... --profile ... --top-k 5 --context-budget-chars ... --out ...`: 기본 preview; `--execute-reranking`이 있어야 실제 score 계산. `--method none`은 profile 없이 원 순위를 재사용한다.
+3. `rag-lab rerank-compare --candidates-set ... --variants ... --qrels ... --facts ... --out ...`: 같은 질문별 후보에 none과 모델을 순차 비교. qrels/facts는 선택 입력. 실행 허용은 생성·embedding flag와 독립이다.
+4. `rag-lab rerank-report --run ...`: 검증된 결과의 재생. 저장된 score와 순위로 표를 재구성하고 모델/SDK import/키/네트워크0. 재생과 재채점을 혼동하지 않도록 표시한다.
+5. 선택한 rerank 결과의 contexts를 기존 generation provider에 연결할 별도 경로를 제공한다. 이 경로는 결과/후보를 검증한 뒤 K와 문자 예산의 선택을 재현하고, 기존 ID-only citation 검증을 재사용한다. 재검색·재임베딩·재리랭킹 없이 generation만 실행할 수 있어야 한다. 기본은 generation preview이며 별도 `--execute`만 LLM 호출을 허용한다. 기존 ask 설정에 reranker 이름만 추가하고 실제로 무시하는 구현은 허용하지 않는다.
+
+CLI 명령명은 최종 READY에서 고정한다. UI도 같은 코어를 호출하고 candidate/result opaque ID를 선택하며 서버에 등록한 reranker profile만 사용한다. URL/path·동적 Python·model ID 자유입력을 브라우저에서 실행하지 않는다. 기존 단일 job/idempotency/restart 정책을 계승한다. qrels/facts 등록도 서버 측 읽기 경로에서 검증하고 웹에는 ID만 노출한다. qrels가 없어도 순위/원문/비용 비교는 가능하고 품질 지표만 N/A다.
+
+## Fact/span 입력과 검증 예시 초안
+
+optional facts v1은 `schema_version`, `source_fingerprint`, `questions_hash`, `offset_unit="unicode_codepoint"`, `questions`를 가진다. 질문별 항목은 `question_id`, `required_facts`이며 각 fact는 고유 `fact_id`와 비어 있지 않은 `alternatives`다. 하나의 alternative는 **모두 필요한** `spans` 배열이며 각 span은 `document_id`, `start`, `end`, `quote`다. alternatives 중 하나의 모든 spans가 커버되면 그 fact를1회 센다. 의미 추론이나 임의 조항 확장을 하지 않는다.
+
+source의 NFC/LF canonical text에서 `[start,end)`가 정확 quote와 일치해야 한다. byte/UTF-16/PDF 화면 좌표가 아니다. page는 canonical page mapping으로 유도한다. 범위 밖/빈 구간/없는 문서/중복 fact ID/중복 JSON key/잘못된 타입·추가 필드는 거부한다. 다른 source나 question set 정답을 조용히 재사용하지 않는다. fact 위치는 chunking과 독립이지만 선택 chunk의 source identity는 동일해야 한다. 질문당 최대100 facts, fact당 최대4 alternatives, alternative당 최대8 spans로 입력 규모를 제한한다. facts가 없으면 N/A이며 empty required_facts는 `no_required_facts`로 분모0을 별도 표시한다.
+
+각 단계별 선택 청크의 구간을 document별로 합집합한다. 겹치거나 맞닿은 구간은 병합하되 서로 다른 문서의 동일 숫자 구간을 합치지 않는다. 다음 세 집계를 각각 남긴다: 후보 N 전체, 최종 K(문자 예산 전), 실제 contexts(문자 예산 후). 필요 fact 수와 충족 fact ID·대안·span별 커버 여부를 기록해 수치를 원문으로 추적한다.
+
+독립 기대값은 다음과 같다. 동일 문서 d에서 f1은 `[0,5)` AND `[10,15)`, f2는 `[20,25)` OR 대체 문서 e의 `[0,5)`를 필요로 한다. 선택 청크가 d:`[0,3)`, d:`[3,5)`, d:`[10,15)`이면 f1만 충족하여 fact_recall=1/2, all_required=false다. d:`[0,3)`을 중복해도 점수는 같다. 여기에 e:`[0,5)`를 추가하면2/2,true다. d:`[3,5)`가 예산에서 제외되면 f1이 다시 미충족이며 f2만 남아1/2,false다. d:`[0,3)`과 e:`[3,5)`를 합쳐 d의 `[0,5)`를 충족했다고 판단하면 오류다. 이 시험은 span 회수율 검증이며 생성 claim의 Faithfulness/Correctness 시험이 아니다.
+
+## READY 전 남은 확인
+
+P010 tiny SDK 증거는 Sentence Transformers6.3.0/torch2.15.0/transformers5.24.1/tokenizers0.23.3/safetensors0.8.0의 실제 임베딩 호출을 보였지만 CrossEncoder 지원 증거는 아니다. P020는 이 잠금을 그대로 쓸 수 있는지 해당 설치 코드/API를 읽고 tiny sequence classifier로 별도 확인하도록 계약한다. 라이브 가중치 실행을 tiny 성공으로 갈음하지 않는다. P010 전체 회귀·설치·화면·완료 SHA가 확보된 뒤 위 입력/출력·CLI·모델 목록·기대값을 최종 계약으로 검토한다.
