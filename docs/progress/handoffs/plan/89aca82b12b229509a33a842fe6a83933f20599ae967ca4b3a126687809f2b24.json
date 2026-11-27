@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "f32ab2582d517301b55e3dfcc4676cf945c55d5d",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "P032 S2b isolated same-lock environment recovery after preserved dependency failure; original deadline and cumulative caps retained",
+  "next_action": "Adopt exact READY, restore new private venv and validate full dependency files/imports without models; freeze child controls then run at most45 new E5 workers under parent cumulative46/2463 and original deadline1795808563.61378.",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T18:50:27.897234+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
