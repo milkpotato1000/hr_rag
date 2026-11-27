@@ -18,7 +18,7 @@
 
 S2a 현재 workload에서 보수적 최대45 embedding workers다: semantic unit 경계1 + 최종 chunk index4 + query40. 항목 수 상한은 semantic unit567, index합1289(201+257+264+567), query40으로 총1896이다. 실제 semantic chunk가 줄면 index항목도 줄어들지만 worker 예산을 다른 실험으로 전용하지 않는다. 다운로드/변환0, reranker0, LLM/API/Ollama/Drive/평가기0, 키읽기0, 자동재시도0이다.
 
-새 run의 최초 실제 작업 전에 별도 시작 시각과 전체1시간 deadline을 고정하는 안을 검토한다. 단일 owned worker, RSS4GiB, OS pressure normal, 기존 관찰 불가·warning/critical·timeout·취소 시 owned worker 종료/회수와 추가 작업 중단을 유지한다. S1의 원래 deadline과73회 기록을 수정하거나 새 예산으로 덮지 않는다. 실제 실행 범위/최종 한도는 READY에서 확정한다.
+새 run의 최초 실제 작업 전에 별도 시작 시각과 전체1시간 deadline을 고정하는 안을 검토한다. 단일 owned worker, RSS4GiB, OS pressure normal, 작업 디스크 여유2GiB 이상을 사전 확인한다. 기존 관찰 불가·warning/critical·timeout·취소 시 owned worker 종료/회수와 추가 작업 중단을 유지한다. S1의 원래 deadline과73회 기록을 수정하거나 새 예산으로 덮지 않는다. 실제 실행 범위/최종 한도는 READY에서 확정한다.
 
 새 semantic 경계가 저장되면 모델0 검증(원문 보존·unit/vector/경계 identity·거리/강제 분할·최대길이·replay)을 먼저 통과한다. 이후 각 variant의 index와 gt01/gt02를 먼저 실행하고, 그 결과의 구조/자원/identity/성공을 확인한 후 나머지8질문을 진행한다. 앞의2질문은 전체10개에 포함하며 중복 재호출하지 않는다. 품질이 낮다는 이유만으로 결과를 버리거나 좋은 variant만 전체 비교하는 선택은 하지 않는다. 기술적 실패/한도 초과는 그대로 보존하고 실제 후속 호출을 멈춘다.
 
@@ -33,6 +33,10 @@ source facts의 후보N20/topK/문맥 recall·all_required·fulfilled ID·유효
 기존 설치 CLI/코어/owned-worker 관찰을 사용한다. stage별 새 ledger와 dispatch 전 예약, 항목/worker/시간/실패/미확정 관리가 필요하면 별도 runner로 구현하며 S1 runner/evidence는 불변으로 둔다. 초과 요청·deadline·불명확한 worker·source/profile/artifact 변조·일부 실패 후 자동 재개 거부를 모델 없는 독립 시험으로 검증한다. 기존 source-free 설치물과 SDK·실제 model 파일 hash를 재검증한다. 이 초안 때문에 모델을 추가 다운로드하거나 설치 버전을 바꾸지 않는다.
 
 현재 rag.compare는 variant/질문별 오류를 저장하고 반복을 계속할 수 있다. 실험 runner는 worker exit0만 성공으로 보지 말고 SDK JSON 오류·실패 결과·저장 오류에서도 영구 halted를 기록해 이후 dispatch를 거부해야 한다. 상위 compare가 실패 행을 추가 기록하는 것과 실제 worker가 재시작되는 것을 구분한다. 거부 뒤 실제 호출0을 독립 시험으로 확인한다. 앞2질문 검토·나머지8질문 진행과 설치 comparison/replay를 같은45회 안에 연결할 방법을 READY 검토에서 확정하며, CLI 검증 때문에 전체 호출을 다시 반복하지 않는다.
+
+구체 연결은 새 source-free evidence runner에서 설치된 `rag-lab compare`의 코어를 그대로 호출하고 원래 build/ask 경계를 감싸는 방식을 우선한다. 원래 계산을 대체하는 fixture/backend를 주입하지 않는다. 각 실제 build/ask의 기술적 성공·identity를 검증한 뒤 현재 variant의 gt01/gt02 완료를 gate로 기록하여 gt03부터 허용한다. 질문은 고정 순서를 유지하고 하나의 비교 invocation 안에서 각 질문을 한 번만 처리한다. semantic boundary는 비교 전에1회 실행/검증하며 compare 안에서 재실행하지 않는다.
+
+compare가 최종 seal 전 임시 디렉터리를 정리할 수 있으므로, wrapper는 성공한 build/answer의 검증된 artifact를 별도 append-only checkpoint에 모델 없이 보존해야 한다. 중간 실패·쓰기 오류·취소 때문에 앞서 얻은 결과가 사라지면 안 된다. 성공 시 원래 comparison artifact를 사용하고, 실패 시 checkpoint·실패/미실행 행·ledger로 부분 결과를 보고한다. 중단된 checkpoint를 자동 재개 입력으로 쓰지 않는다. 독립 시험에 논리적 worker 오류, 세 번째 질문 오류, 비교 출판 오류, checkpoint 저장 오류를 포함하여 다음 dispatch0·이전 증거 보존·소유 worker 회수를 확인한다. runner 구현으로 충족하지 못해 제품 동작 변경이 필요하면 실제 실행 전 plan intake한다.
 
 결과는 저장된 실제4방식 비교 보고서와 설치 UI에서 원문→단위/경계→청크→후보→전달 문맥으로 읽을 수 있어야 한다. source 없는 설치 경로와 입력 fingerprint, 모델0 replay, 허용 desktop/narrow/keyboard 관찰 및 학습 안내를 남긴다. P029 filepicker 차단은 우회하지 않는다. 기존1513보존 파일과 S1/S2a 전체 산출물 hash를 검사하고 정상 personal/dev에 전달한다.
 
