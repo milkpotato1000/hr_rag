@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "P032 S1 live retrieval stage READY after P031 completion",
   "next_action": "Integrate exact READY, adopt and commit, verify guards, implement owned-worker monitoring and tests then bounded public-model retrieval/reranking validation. S2/S3 and evaluator remain unstarted.",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-27T17:35:46.364603+00:00",
       "evidence": "Host send succeeded to verified existing same-project dev. Exact READY 3f727c9ce0cd59fdac1337b7bf25acca8bb87c0a, S1 contract/readiness, staged boundaries and integrate-adopt-start action delivered. Receipt/adoption remain unobserved."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T17:36:28.124006+00:00",
+      "evidence": "Observed dev acknowledging S1 and preserving S2/S3/evaluator holds; adoption commit 57afafb selects exact READY 3f727c9ce0cd59fdac1337b7bf25acca8bb87c0a with P032 S1 readiness reference. Implementation turn active; live model results and S1 completion not yet observed."
     }
   ]
 }
