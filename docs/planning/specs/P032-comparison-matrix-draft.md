@@ -2,6 +2,8 @@
 
 2026-11-28 DRAFT. 실행 승인/인계가 아니며 P031 최종 도구 및 준비 검토 후 확정한다. [실사용 설계](P032-live-rag-validation-design.md)의 모든 선택 축을 유지하되 무제한 Cartesian product를 만들지 않는다.
 
+S1 검색·리랭커 행의 실행 범위는 이후 확정한 [S1 계약](P032-s1-execution-contract.md)을 우선한다. 나머지 생성·청킹 행은 계속 DRAFT이며 이 행렬만으로 실행하지 않는다.
+
 ## 공통 입력
 
 고정23쪽 규정집의 새 generic snapshot과 기존10개 질문을 사용한다. 원문 fact/span과 청크 qrels를 별도로 준비한다. 첫 기준선은 fixed size256/overlap64, candidate_k20, final K5, context budget2000문자, RRF60 후보로 둔다. 수치는 품질 최적값이 아니라 통제 실험 시작값이다. 각 입력의 실제 tokenizer 길이를 확인하며512토큰을 넘는 청크/질문·쌍을 조용히 자르지 않는다. 실패 시 원본 설정 결과를 보존하고 바뀐 설정은 새 실험으로 분리한다.
