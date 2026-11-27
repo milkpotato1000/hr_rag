@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "STOP",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "2825d5bb01de5a3debd6e6b5a2298f8a23d5982f",
+  "document": "docs/planning/handoffs/P013-user-hold.md",
+  "summary": "User holds P013 local model recovery; independent package planning continues",
+  "next_action": "Stop new P013 model dispatch, preserve state and adopt hold; await separately READY work",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T08:15:29.285016+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T08:18:26.460070+00:00",
+      "evidence": "Host send_message_to_thread succeeded for existing HR RAG dev; STOP 2825d5b delivered 2026-11-27."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T08:18:26.771426+00:00",
+      "evidence": "Observed dev final and commit 87d664fa9da9ea357f2dc0ced3df1b13d572bc69: P013 BLOCKED, zero new model requests, hold adoption rejected due to DRAFT/history constraint; receipt is not exact adoption."
+    }
+  ]
+}
