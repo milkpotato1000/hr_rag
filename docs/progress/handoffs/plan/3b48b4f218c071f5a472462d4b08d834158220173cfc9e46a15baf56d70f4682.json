@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "d6cfda305dad37050750aaa5db4c5aecceeacdd1",
+  "document": "docs/planning/handoffs/P013-recovery.md",
+  "summary": "P013 recovery READY: isolated 8B memory gate then saved 4B generation and 8B evaluation",
+  "next_action": "Integrate exact recovery plan and adopt; implement and verify offline recovery before bounded single-model execution",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T05:20:01.187655+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T05:20:27.662363+00:00",
+      "evidence": "2026-11-27 host send succeeded to verified existing HR dev with READY d6cfda305dad37050750aaa5db4c5aecceeacdd1; authorized bounded recovery and single-model sequence delivered"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T05:20:38.466505+00:00",
+      "evidence": "Observed dev response: recovery plan received; preserve prior success and memory stop, adopt exact new plan. Adoption and runtime result not yet observed."
+    }
+  ]
+}
