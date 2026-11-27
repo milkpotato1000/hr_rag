@@ -7,7 +7,7 @@
 | 문서 저장소 링크 입력 | P027 구현adc87a5, 완료41a469d; Drive PDF/TXT/MD·Google Docs PDF export,48테스트. OAuth SDK 실제설치/mock 인증 | 코드/모의 수집 검증 완료. 실제 사용자 계정·문서 E2E 미검증. P029 직접 링크 form 후 지정 파일/로그인 검증 필요 |
 | 인기 HF 공개 모델 기본, 유료 LLM API 선택 | P024 교육 자료, P025 Ollama/OpenAI Chat/Anthropic Messages 실제 adapter,18테스트. HF 후보/라이선스 정책은 roadmap | provider 코드는 완료. 사용자 선택 모델의 실제 추론/품질·여유 메모리 미검증. 카탈로그 popularity/revision/런타임 선택 및 검증 필요 |
 | 모델 선택·비교 | P025 config generation/evaluation 분리; P026 config compare, 실제 invoke 경로 | fake transport/preview 검증 완료. P029 model form/등록 설정 비교는 구현됐으나 실제 선택 모델 비교는 남음 |
-| 청킹 선택·비교 | P026 fixed/recursive/structure와 비교 CLI;36테스트. 기존 P007 semantic/LLM chunking은 별도 고정 HR stage | 일반 문서 규칙3종 완료. P030 READY0c2c5d0을 dev583f775가 정확 채택하여 generic semantic/LLM·비교/설치 연결 구현 중. 실제 실험은 별도 |
+| 청킹 선택·비교 | P026 fixed/recursive/structure와 비교 CLI;36테스트. 기존 P007 semantic/LLM chunking은 별도 고정 HR stage | P030 완료aa3010f: generic5방식·frozen/replay/derive·107테스트·설치/UI 연결 완료. 실제 사전학습/LLM 청킹 품질은 미검증 |
 | Dense와 여러 HF embedding, Sparse, Hybrid | P010 완료3d99353, E5/BGE Dense·BM25·Hybrid RRF·69테스트·tiny SDK·설치/UI | 구현 완료. 실제 사전학습 한국어 품질·모델 파일 준비·실메모리 검증은 남음 |
 | 리랭커 없음/있음·여러 방식 비교 | P020 완료d8724cb6, none/두 CrossEncoder·qrels/fact·89테스트·tiny SDK·설치/UI | 구현 완료. 실제 사전학습 모델 비교는 미검증 |
 | 근거 있는 최종 답변 | P026 실제 P025.invoke 호출 연결과 ID whitelist/code quote·page; fake3providerE2E 및23p합성PDF 시험 | 코드/fixture 완료. 실제 모델 답변과 의미적 근거 충실도/정답 품질 미검증. 유효 citation은 의미 정확성 보장이 아님 |
@@ -49,3 +49,7 @@ P030은 최종 candidate/fact/registry/retrieval 경계를 대조해 READY로 �
 ## P030 채택과 실제 모델 준비 공백 — 2026-11-28
 
 P030 exact adoption583f77550b85f06859e24cf8c63b6fc01237dbff와 active dev를 확인했다. 구현 완료는 아니다. P031 DRAFT는 사용자가 HF revision/hash를 수동 작성하는 공백과 최신 설치/모델 준비 흐름을 다룬다. 공식 BGE-M3 main 목록은 bin 가중치이며 현재 runtime은 safetensors export만 받으므로 실제 준비 경로 검증이 필요하다. 상세 출처와 변환 검토는 P031 설계에 기록했다. 이 발견은 tiny SDK 통과를 실제 모델 준비 완료로 해석할 수 없음을 보여준다.
+
+## P030 완료 및 P031 READY — 2026-11-28
+
+P030 dev/personal-dev aa3010f9f1709c3152e0bd8ed570fc5516b92a93 일치와 clean 작업 트리를 확인했다. 107package/35harness·실제 tiny SDK·source-free wheel/sdist/core·허용 UI·1513파일 보존 증거가 있다. 모델 준비·실제 품질·Drive E2E는 여전히 남아 있다. P031은 네 모델의 고정 metadata 및 실제 설정 파일 OID, runtime config/registry/doctor를 대조해 READY로 확정했다. 실제 준비 코드와 설정 자동화는 다음 dev 구현이며, 이 상태가 모델 다운로드/실행 완료는 아니다. 평가기 보류와 P029 C4 미완료를 유지한다.

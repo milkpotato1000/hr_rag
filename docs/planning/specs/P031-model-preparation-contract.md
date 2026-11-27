@@ -1,12 +1,12 @@
-# P031 모델 준비 실행 계약 초안
+# P031 모델 준비 실행 계약
 
-2026-11-28 DRAFT. P030 완료·최종 인터페이스와 준비 검토 전에는 실행 인계가 아니다. [발견한 공백과 공식 출처](P031-model-preparation-design.md)를 따른다. 여기서 모델 준비는 파일과 설정을 구성하는 단계이며 추론 성공·한국어 품질 검증을 뜻하지 않는다.
+2026-11-28 READY. P030 완료 aa3010f9f1709c3152e0bd8ed570fc5516b92a93의 인터페이스를 대조했다. 정확 plan SHA 채택 후 이 범위만 개발한다. [발견한 공백과 공식 출처](P031-model-preparation-design.md)를 따른다. 여기서 모델 준비는 파일과 설정을 구성하는 단계이며 추론 성공·한국어 품질 검증을 뜻하지 않는다.
 
 ## 대상과 설치 흐름
 
 초기 대상은 기존 catalog의 E5-small/BGE-M3 embedding, BGE-v2-m3/mMiniLM CrossEncoder 네 가지다. 임의 Hub repository/custom Python/GGUF를 같은 경로에서 자동 지원하지 않는다. 새 모델 추가는 catalog의 역할·구조·전처리·파일 recipe·license·revision 검토가 필요하다. LLM은 기존 Ollama/OpenAI Chat/Anthropic provider 설정을 생성하고 P030 generation/chunking 역할을 명시적으로 선택한다. 유료 embedding/reranker는 추가하지 않는다.
 
-CLI와 한국어 가이드는 다음 단계로 이어진다. 정확 option 이름은 준비 검토에서 확정하며 실제 코어를 한 번만 구현한다.
+CLI와 한국어 가이드는 다음 단계로 이어진다. 아래 option 이름을 사용하고 실제 코어를 한 번만 구현한다.
 
 - `model-catalog`: 네 후보·역할·공식 출처·라이선스·revision 조회 시점·준비 방식/검증 상태를 오프라인으로 표시한다. 모델 메모리와 파일 크기는 구분한다.
 - `model-plan --model ID --role embedding|reranker --out DIR [--revision REF] [--fetch-metadata]`: 기본은 네트워크0으로 배포된 고정 metadata recipe의 계획을 저장하고 origin=packaged_metadata로 표시한다. 네 모델의 기본 revision은 준비 검토한 조사 기록과 같아야 한다. 새 ref는 --fetch-metadata 없이는 미설정 preview이며, 명시 metadata 조회 시 full commit SHA와 필요한 파일·크기·원본 hash·변환 여부를 고정한 새 계획을 저장한다. branch/tag는 이 시점에 full SHA로 해소하고 실제 download가 main을 다시 따라가지 않는다. metadata만 읽는 것을 가중치 다운로드로 표시하지 않는다.
@@ -39,13 +39,13 @@ download는 고정 원본 파일과 크기/hash를 확인한 뒤 export한다. L
 
 변환은 별도 소유 subprocess에서 고정 torch/safetensors 버전으로 수행한다. `torch.load(..., weights_only=True, map_location='cpu', mmap=True)`처럼 제한된 tensor loader를 명시하고 unrestricted pickle 또는 allowlist에 custom class를 추가하는 fallback은 금지한다. 모델 forward/custom source 실행 없이 문자열 key→지원 tensor state만 허용하여 safetensors로 저장한다. 공유 tensor storage·contiguous 처리·dtype·값/형상을 보존하는 방법과 원본/변환 후 tensor hash 검증을 구현 검토에서 고정한다. 알 수 없는 state 형식은 명시 실패다.
 
-원본 config/modules/pooling/tokenizer와 변환된 가중치가 runtime 요구에 맞는지 검증한다. 원본 revision/file hashes와 변환 tool/version/options, 결과 hashes를 preparation 기록에 연결하고 모델 identity에 provenance를 보존한다. runtime의 bin 거부와 local-only 검사는 완화하지 않는다. worker timeout/메모리 상한·OS pressure 처리와 소유 프로세스 종료 확인은 READY 전 확정한다. tiny tensor 변환 성공을 BGE 전체 가중치 변환 성공으로 표시하지 않는다.
+원본 config/modules/pooling/tokenizer와 변환된 가중치가 runtime 요구에 맞는지 검증한다. 원본 revision/file hashes와 변환 tool/version/options, 결과 hashes를 preparation 기록에 연결하고 모델 identity에 provenance를 보존한다. runtime의 bin 거부와 local-only 검사는 완화하지 않는다. worker timeout/메모리 상한·OS pressure 처리와 소유 프로세스 종료 확인은 다음 자원 계약을 따른다. tiny tensor 변환 성공을 BGE 전체 가중치 변환 성공으로 표시하지 않는다.
 
 고정 metadata의 Dense용 필수10파일 합은2,293,315,801bytes다. [관찰 기록](../reviews/p031-bge-source-metadata.json)은 원본 크기·Git blob OID/LFS SHA256을 분리한다. 원격 metadata 확인이며 파일 다운로드·hash 재계산·변환 완료가 아니다. 실제 준비에서는 고정 revision의 metadata와 받은 bytes를 다시 검증한다. export의 새 model.safetensors는 원본 bin과 다른 파일 hash를 가지므로 동일 파일로 표시하지 않는다.
 
 변환 fixture는 float32/float16/int64 및 contiguous/noncontiguous·공유 storage tensor를 포함한다. 저장 가능한 형태로 복제할 경우 개별 tensor의 key/dtype/shape/value hash를 변환 전후 비교한다. metadata format=pt와 출력 key 집합이 일치해야 하며 tensor에 대한 양자화/수치 cast는 하지 않는다. 원본/출력 tensor 합계와 실제 worker RSS는 다른 측정이다. SDK import·mmap·page cache 비용을 무시한 가중치 크기만으로 M1 실행 가능을 판정하지 않는다.
 
-## 준비 작업의 자원·상태 초안
+## 준비 작업의 자원·상태
 
 한 번의 prepare/import는 한 모델만 처리하고 동시 준비 worker는1개다. metadata 전체 deadline60초, 개별 요청 timeout20초; download 전체 deadline900초, 변환 deadline300초를 기본으로 한다. 개발 fixture 검증은 더 짧은 timeout을 주입한다. 도구는 자체 시작한 worker만 종료하고 kill 후 wait로 종료를 확인한다. Ollama나 다른 사용자의 프로세스는 종료·언로드하지 않는다.
 
@@ -73,8 +73,8 @@ doctor의 기존 `--config`·exit0/2/3 의미를 보존하고 `--llm-config`, `-
 
 생성된 embedding/reranker profile과 LLM v2 설정은 기존 serve 등록 인자로 UI에 연결한다. 작은 SDK 테스트 export를 설치물의 새 준비 도구로 만들고 registry에 등록하여 실제 선택 목록과 준비/미검증 표식을 확인한다. 테스트용 경로·가중치·응답 backend는 배포 기본 예제에 넣지 않는다. 현재 P029 파일 선택창 차단은 그대로 두며 이 준비 경로의 성공으로 그 항목을 완료 처리하지 않는다.
 
-## 개발 검증과 남은 결정
+## 개발 검증과 실행 범위
 
 원격 metadata/파일 transport fixture는 production 다운로드 코어를 통과시키며, 새로운 테스트 전용 endpoint를 배포 기본값으로 노출하지 않는다. actual SDK의 tiny safetensors 및 tiny tensor-only bin 변환·파일 hash/shape/value 일치, manifest/role/revision/symlink/path·크기/다운로드 실패/중단/출력 충돌·변환 실패·no fallback·no inference·설정 비밀값0을 검증한다. source-free 설치에서 생성한 profile을 기존 worker의 tiny 시험과 UI registry에 연결한다.
 
-네 모델의 pinned file recipe/metadata와 준비 계획 소비 방식, 변환 worker 자원·시간 초기 기준, LLM 설정 spec은 위에 구체화했다. P030 최종 artifact·resource·doctor 연결은 준비 검토가 남아 있다. 현재 초안의 조사/작업은 모델을 다운로드하거나 실행하지 않는다. 실제 사전학습 모델과 합성 문서로 수행할 제품 E2E는 별도 계약으로 남기며 평가기 보류를 우회하지 않는다.
+네 모델의 pinned file recipe/metadata와 준비 계획 소비 방식, 변환 worker 자원·시간 초기 기준, LLM 설정 spec은 위에 구체화했다. P030 최종 artifact·resource·doctor 연결과 준비 검토를 대조했다. 이번 dev 검증은 tiny 및 fake transport에 한정하며 실제 사전학습 가중치·LLM/API·Drive/OAuth·개인키 호출0이다. 준비 도구는 실제 다운로드 경로를 구현하되 그 live 검증을 완료했다고 표시하지 않는다. 실제 사전학습 모델과 합성 문서로 수행할 제품 E2E는 별도 계약으로 남기며 평가기 보류를 우회하지 않는다.
