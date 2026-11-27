@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "f6800d0bd60b6345917533efd831fe2892dfb751",
+  "document": "docs/planning/handoffs/P020.md",
+  "summary": "P010 완료 기반 P020 고정 후보 리랭커 READY; 평가기 보류 유지",
+  "next_action": "정확 plan 통합·채택 후 P020 후보/리랭커/비교/생성 연결과 오프라인 검증 착수",
+  "status": "SENT",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T16:25:36.416888+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T16:25:48.796468+00:00",
+      "evidence": "Host send_message_to_thread succeeded to verified existing dev; exact READY f6800d0bd60b6345917533efd831fe2892dfb751 and contract/start boundaries delivered. Receipt/adoption not yet observed."
+    }
+  ]
+}
