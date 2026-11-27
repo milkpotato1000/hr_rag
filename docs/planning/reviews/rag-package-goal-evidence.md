@@ -39,3 +39,9 @@ P020는 아직 DRAFT다. 저장 branch 후보로 고정 N개를 구성하고 qre
 ## P010 완료 및 P020 READY — 2026-11-28
 
 P010 dev/personal-dev `3d99353b5aef3b683b24d0f7fa06b8a757dc1f83` 일치와 clean/terminal turn을 확인했다. C1~C4 PASS, 회귀69개·actual tiny SDK·독립 설치·등록 합성자료 IAB 관찰·1535파일 보존이다. generic Dense/Hybrid 구현은 완료이며 실제 사전학습 한국어 성능은 미검증이다. P020는 이 최종 API/증거를 대조해 READY로 확정했다. 후보·두 scorer·qrels/facts·CLI/UI·생성 연결의 구현은 아직 남아 있다. 이전 진행 관찰은 이 완료 기록으로 갱신하며 P013/P029 보류·한계는 그대로다.
+
+## P020 완료 및 P030 READY — 2026-11-28
+
+P020 구현 b80ca38b71179821d2eafb38befe85700229a50d와 완료 dev/personal-dev d8724cb6b356703c8fa0d09b6d86d8e3782fdc98 일치를 확인했다. 89개 패키지·35개 하네스 시험, tiny SDK 두 profile, source-free wheel/sdist, 등록 합성자료 UI·좁은 화면·키보드,1534개 파일 보존과 C1~C4 PASS 증거가 커밋됐다. 실제 사전학습 가중치/LLM/API/Drive0이며 한국어 품질과 실모델 메모리 검증은 남아 있다. P013/P014 보류·미소비 grant, P029 C4 BLOCKED는 유지한다.
+
+P030은 최종 candidate/fact/registry/retrieval 경계를 대조해 READY로 준비했다. 일반 문서의 semantic/LLM 경계 생성과 저장·재생, 다섯 방식 비교·설치 UI 연결이 다음 구현이다. 전체 goal의 live 검증 및 미완료 항목을 이 READY로 대체하지 않는다.
