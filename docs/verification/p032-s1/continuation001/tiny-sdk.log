@@ -1,0 +1,6 @@
+W1128 03:05:57.593000 65199 env/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 495.08it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 166.61it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 1215.04it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 1529.09it/s]
+{"status": "PASS", "workspace": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/tiny-regression/workspace", "models": 4, "tensor_variants": ["a", "b", "c", "half", "integer", "scalar", "empty"]}

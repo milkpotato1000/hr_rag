@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "question_id": "gt08",
+  "question": "연차 일부 날짜와 교육휴가 응시 계획 취소를 함께 요청하면 어떤 범위를 구분해 기록해야 하나요?",
+  "query_hash": "a3d11bdda5c2c611c661995265531970d765398a05856ed432302f4ea50cf75a",
+  "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "chunk_fingerprint": "acdcd8466dae5203f4e025675dcfb7bc6593b80557a4f10090503acef243a2c8",
+  "index_fingerprint": "3bffa0482285557958f228d9781dc5989400dc93b724ef0f9c012785e1b41348",
+  "execution_kind": "preview",
+  "settings": {
+    "schema_version": 2,
+    "retrieval": {
+      "method": "hybrid",
+      "candidate_k": 20,
+      "top_k": 5,
+      "context_budget_chars": 2000,
+      "rrf_k": 60
+    },
+    "llm": {
+      "schema_version": 1,
+      "profiles": {
+        "answer": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        },
+        "judge": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        }
+      },
+      "roles": {
+        "generation": "answer",
+        "evaluation": "judge"
+      }
+    },
+    "chunking": {
+      "method": "fixed",
+      "size_chars": 256,
+      "overlap_chars": 64
+    },
+    "embedding": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "file_manifest": {
+        "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+        "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+        "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+        "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+        "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+        "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+      },
+      "device": "cpu",
+      "dtype": "float32",
+      "max_input_tokens": 512,
+      "catalog": {
+        "dimension": 384,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "pooling": "mean",
+        "limit": 512,
+        "license": "MIT",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      "normalization": "l2",
+      "algorithm": "exact-cosine-v1"
+    }
+  },
+  "parent_result_fingerprint": "1e5d6e65142b53ee6fb5caf9bd941b0dd6a70fb320d92eee6b86355d808c28b5",
+  "requested_n": 20,
+  "actual_n": 20,
+  "candidate_depth": 20,
+  "shortage_reason": null,
+  "original_retrieval_ms": 4887.610250007128,
+  "rows": [
+    {
+      "chunk_id": "c-2fa23fe9725818f6af1cc57f41cb02eff7a61f224815976f47f7e125c8c0cbf0",
+      "document_id": "hr-handbook",
+      "start": 28032,
+      "end": 28288,
+      "text": "할 수 있다. 이 사례는 ED-03@v4의 정보 구분을 설명하는 것으로, 시험 일정 변경 시 추가 휴가를\n 부여하거나 기존 사용량을 자동 복구한다는 별도 규칙을 뜻하지 않는다.\nED-06 응시 계획 취소와 요청 상태의 정리\n응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다. 시\n험 접수만 취소한 것인지 휴가 신청도 취소하려는 것인지 구분하고, 신청자가 아직 결정하지 못한 \n문의를 확정된 취소로 기록하지 않는다. 확인된",
+      "pages": [
+        {
+          "page": 17,
+          "canonical_start": 28032,
+          "canonical_end": 28288,
+          "page_start": 992,
+          "page_end": 1248
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 1,
+      "retrieval_score": 0.03252247488101534,
+      "text_hash": "51fbbcc0b39825dd081b5a665f9a17e05ae461d77ebc47680d4cdf9b192a7cbb"
+    },
+    {
+      "chunk_id": "c-bd0f8810de4c1408992ce5931e04c83825598419c417d0de991da9c49bc979a5",
+      "document_id": "hr-handbook",
+      "start": 24960,
+      "end": 25216,
+      "text": "육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 \n관한 문의가 함께 들어오면 해당 휴가 종류를 구분하고, 연차 사용 단위는 AN-03@v4에서 확인하\n되 그 규칙을 교육휴가의 분할 기준으로 적용하지 않는다.\nHR-V4-HANDBOOK / v4\n15\n\n\nED-03 시험 일정과 사용 희망일의 표시\n교육휴가 신청에는 시험을 식별할 수 있는 정보와 사용 희망일, 해당 신청을 구분하는 기록을 연결\n한다. 시험의 이름과 ",
+      "pages": [
+        {
+          "page": 15,
+          "canonical_start": 24960,
+          "canonical_end": 25124,
+          "page_start": 1274,
+          "page_end": 1438
+        },
+        {
+          "page": 16,
+          "canonical_start": 25126,
+          "canonical_end": 25216,
+          "page_start": 0,
+          "page_end": 90
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 2,
+      "retrieval_score": 0.03177805800756621,
+      "text_hash": "b412216f82b1c53ce12824fa0b0589cafaf8091c54aaaecfcfe98d22fb5aeee7"
+    },
+    {
+      "chunk_id": "c-1e5a740e8d25d762406dad31e5f305c04f34de00e809343ccba68df23866fb1a",
+      "document_id": "hr-handbook",
+      "start": 24768,
+      "end": 25024,
+      "text": " 교육 휴가를 신청할 수 있다.\n신청 정보에는 어떤 자격시험 응시를 위한 요청인지 식별할 수 있는 설명을 연결한다. 이미 전달된\n 설명으로 대상을 확인할 수 있으면 같은 내용을 반복 제출하도록 요구하지 않고, 시험 이름이 비슷\n해 구별이 필요한 부분만 확인한다.\nED-02 다른 휴가와의 관리 구분\n생일 특별휴가 및 연차와 별도로 관리한다.\n교육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 \n관한 문의가 함께 들",
+      "pages": [
+        {
+          "page": 15,
+          "canonical_start": 24768,
+          "canonical_end": 25024,
+          "page_start": 1082,
+          "page_end": 1338
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 3,
+      "retrieval_score": 0.030776515151515152,
+      "text_hash": "c72e275970cdbd3fc6ef7fecbd1b596cf42cda72ab36fa405e14d8c9e61c94d0"
+    },
+    {
+      "chunk_id": "c-516afa0199f5aced787481998b499b694986973d79702b5f06a48a7cd2df38f0",
+      "document_id": "hr-handbook",
+      "start": 29952,
+      "end": 30208,
+      "text": "가 있는 경우에도 어떤 사실을 확인하려는 것인지 특정하고, 교육휴가의 이용 기록이 \n시험 성적 평가 자료로 잘못 분류되지 않도록 한다. 신청자가 결과 자료의 연결 대상을 정정하면 \n기존 연결 관계와 정정 사유를 기록하되 원래 휴가의 종류를 바꾸지 않는다.\nED-09 복합 문의의 답변과 담당 업무 인계\n교육휴가 신청과 시험 비용, 근무 일정, 다른 휴가 사용을 함께 묻는 문의에서는 먼저 이 장에서 확\n인할 수 있는 항목을 구분한다. 교육휴가에 관한 기록은 ",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 29952,
+          "canonical_end": 30208,
+          "page_start": 1064,
+          "page_end": 1320
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 4,
+      "retrieval_score": 0.029957522915269395,
+      "text_hash": "0aba89295cd121ab1a947ffbe01007370ae916029c37f62ff849958d14ecf897"
+    },
+    {
+      "chunk_id": "c-3bcf9f92bc73b6ede560ba8b70f294a468d9a07d67c423411e078e40e6deeb04",
+      "document_id": "hr-handbook",
+      "start": 30144,
+      "end": 30400,
+      "text": "다른 휴가 사용을 함께 묻는 문의에서는 먼저 이 장에서 확\n인할 수 있는 항목을 구분한다. 교육휴가에 관한 기록은 ED-01@v4과 ED-02@v4의 기준에 연결\n하고, 규정집에 답이 없는 비용 지원이나 별도의 시험 제도는 확인되지 않은 사항으로 남긴다. 담당\n자가 알고 있는 다른 사례만으로 이번 문의의 지원 여부를 확정하지 않는다. 여러 항목 중 일부 확\n인이 끝나면 완료된 항목을 안내하면서 남은 항목의 상태를 함께 적고, 전체 문의가 종결된 것으로 \n",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 30144,
+          "canonical_end": 30400,
+          "page_start": 1256,
+          "page_end": 1512
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 5,
+      "retrieval_score": 0.028283227848101264,
+      "text_hash": "91bbc15ffdf2959536bba96440413c9d5918e4fa660d34f71fe589736246caa8"
+    },
+    {
+      "chunk_id": "c-ca16d29cbe531d56e2e563f336e89c527367694135e60379298ebfc0f84e8fa9",
+      "document_id": "hr-handbook",
+      "start": 6144,
+      "end": 6400,
+      "text": "\n를 함께 적는다. 신청자가 같은 요청의 제목만 바꾸어 다시 제출했다면 제목의 차이만으로 별도 사\nHR-V4-HANDBOOK / v4\n4\n\n\n용 건으로 계산하지 않고 날짜와 사용 단위를 대조한다. 담당자가 요청을 찾기 위해 추가 설명을 \n문의할 때에는 이미 시스템에서 확인되는 정보를 반복 제출하도록 요구하지 않으며, 필요한 정정 \n내용만 신청자가 확인할 수 있게 제시한다.\nAN-05 검토 내용의 연결과 처리 통지\n담당자는 접수된 연차 신청을 해당 직원의 ",
+      "pages": [
+        {
+          "page": 4,
+          "canonical_start": 6144,
+          "canonical_end": 6221,
+          "page_start": 1749,
+          "page_end": 1826
+        },
+        {
+          "page": 5,
+          "canonical_start": 6223,
+          "canonical_end": 6400,
+          "page_start": 0,
+          "page_end": 177
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 6,
+      "retrieval_score": 0.026356857985087564,
+      "text_hash": "4655c27bb823aff019f58a5cdb4784d43f4033e3740f1b61d98e4f5c3dd2eb6c"
+    },
+    {
+      "chunk_id": "c-4ebe6c61bdb8e6b2a7e9afadc7f953423c998f7dba084e4daae6a35f97151cb2",
+      "document_id": "hr-handbook",
+      "start": 27456,
+      "end": 27712,
+      "text": "경인지 신청자의 응시 계획 변경인지 확인 가능한 범위에서 사유를 구분하되, \n그 구분을 새로운 자격 심사 항목으로 만들지 않는다. 같은 시험의 여러 회차가 함께 표시되어 있\n으면 어느 회차와 연결된 요청인지 확인하고 다른 회차의 날짜를 잘못 참조하지 않도록 한다. 원래\n 요청이 아직 정보 확인 단계이면 기존 요청에 정정 내용을 연결하고, 이미 안내가 전달된 상태이면\n 안내 내용과 변경 요청을 함께 확인하여 현재 처리 대상을 분명히 한다. 통상적으로는 시스",
+      "pages": [
+        {
+          "page": 17,
+          "canonical_start": 27456,
+          "canonical_end": 27712,
+          "page_start": 416,
+          "page_end": 672
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 7,
+      "retrieval_score": 0.016129032258064516,
+      "text_hash": "c1aaf0648c13a3995d467851260666b1fe1bed92a41835aafe889f860452f9de"
+    },
+    {
+      "chunk_id": "c-495a3a223e2a16cbb92bb32b62dc2746f23e77484d99280a6f5312b3eb8864a6",
+      "document_id": "hr-handbook",
+      "start": 29376,
+      "end": 29632,
+      "text": "이 \n다시 열린 사실만으로 요청 처리가 끝났다고 안내하지 않는다. 임시 기록과 시스템 기록의 식별 정\n보가 달라 연결할 수 없으면 확인 중인 상태를 유지하고 신청자에게 차이가 있는 항목만 문의한다.\nED-08 자발적으로 전달된 결과 정보의 관리\n신청자가 시험 응시 후 결과나 후기를 자발적으로 전달하면 담당자는 해당 내용이 어떤 교육휴가 \n기록과 관련되는지 확인한다. 결과 자료를 받았다는 사실과 휴가 사용 기록의 확인을 구분하고, 합\n격 여부를 기존 신청 ",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 29376,
+          "canonical_end": 29632,
+          "page_start": 488,
+          "page_end": 744
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 8,
+      "retrieval_score": 0.015873015873015872,
+      "text_hash": "8c537ae71326de315912b9b2b29189ff73d29f83fb199b797ec659e631a3519e"
+    },
+    {
+      "chunk_id": "c-6d8d42b21b053e0eb2b8256092f1725ce570e79cf8f5efb1e2600b67aa76ea46",
+      "document_id": "hr-handbook",
+      "start": 29760,
+      "end": 30016,
+      "text": "을 별도 정정 요청으로 식별하고 원래 기\n록과 대조한다. 자료의 일부가 읽히지 않더라도 휴가 기록 확인에 필요하지 않은 내용까지 다시 제\n출하도록 요구하지 않으며, 확인 가능한 범위와 미확인 범위를 내부 기록에 구분한다. 담당자가 결\n과 안내를 작성할 때에는 자료 수신 여부와 기록 정정 여부를 각각 표시한다. 다른 업무로 자료를 \n전달할 필요가 있는 경우에도 어떤 사실을 확인하려는 것인지 특정하고, 교육휴가의 이용 기록이 \n시험 성적 평가 자료로 잘못 분",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 29760,
+          "canonical_end": 30016,
+          "page_start": 872,
+          "page_end": 1128
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 9,
+      "retrieval_score": 0.015384615384615385,
+      "text_hash": "6fad6c02abfba955a430c4ed8ea9466fdf8b2f39813b348fad233688e867192c"
+    },
+    {
+      "chunk_id": "c-c7eb383ff065285eb9ed77dfe8d27eb5f0a89cce80fc7620a8716ed90486974a",
+      "document_id": "hr-handbook",
+      "start": 27264,
+      "end": 27520,
+      "text": "5 시험 일정 변경과 신청 정정\n시험 일정이 변경되었다는 연락을 받으면 담당자는 변경 전 일정, 새로 전달된 일정, 신청자가 실제\n로 바꾸려는 사용 희망일을 서로 연결한다. 시험 일정이 바뀌었다는 사실만으로 휴가 신청 날짜도 \n자동으로 같은 방식으로 바꾸지 않고 신청자의 현재 의사를 확인한다. 일정 안내의 오입력인지 시\n험 주관 측 일정의 변경인지 신청자의 응시 계획 변경인지 확인 가능한 범위에서 사유를 구분하되, \n그 구분을 새로운 자격 심사 항목으로 ",
+      "pages": [
+        {
+          "page": 17,
+          "canonical_start": 27264,
+          "canonical_end": 27520,
+          "page_start": 224,
+          "page_end": 480
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 10,
+      "retrieval_score": 0.015151515151515152,
+      "text_hash": "af4dbcc37da2bd6293638f7bb2c9034d6d9721a8cd2181df367d0c6b3e167534"
+    },
+    {
+      "chunk_id": "c-5c8be608ac0d1a1693dd98487f57baea74bec0c86031db7e7eb5060a4b6b2e53",
+      "document_id": "hr-handbook",
+      "start": 34560,
+      "end": 34816,
+      "text": " 않은 항목을 질문받으면 확인되지 않은 범위라고 안내하고 \n담당자의 추정으로 채워 넣지 않는다. 검토 결과의 일부가 누락되어 조회되지 않는 경우에는 미확\n인 상태로 남겨 자료를 찾으며, 표시 오류를 승인 거절이나 승인 완료로 바꾸지 않는다.\n승인 내용을 다른 업무에 전달할 때에는 전달 목적과 확인이 필요한 항목을 적는다. 출장 일정이 \n연차 기록과 같은 날짜를 포함하더라도 두 기록의 관계는 TR-02@v4의 구분에 따라 확인하며, 일\n정의 중복만으로 한쪽",
+      "pages": [
+        {
+          "page": 21,
+          "canonical_start": 34560,
+          "canonical_end": 34816,
+          "page_start": 381,
+          "page_end": 637
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 11,
+      "retrieval_score": 0.014925373134328358,
+      "text_hash": "0239391b72c8113f20e1d2a2c8f238e73c17d383823d5730f5e48218817edc33"
+    },
+    {
+      "chunk_id": "c-736f795cf191426818eae9f8c5599063166cce4e05b94aa8868440db71078903",
+      "document_id": "hr-handbook",
+      "start": 34176,
+      "end": 34432,
+      "text": "\n\n\n를 함께 바꾸지 않는다.\nTR-06 승인 범위와 문의 답변의 대조\n승인 기록을 조회하거나 사본을 전달할 때에는 해당 기록이 어느 신청에 관한 것인지 확인한다. 출\n장 제목이 같아도 날짜와 방문지가 다른 요청일 수 있으므로 제목만으로 승인 범위를 판단하지 않\n는다. 신청자가 전달받은 승인 안내와 시스템 표시가 다르다고 알리면 원래 결과 기록, 안내 문구, \n현재 표시를 대조하고 어떤 항목에서 차이가 있는지 구분한다. 안내 문구의 오입력이라면 수정한 \n",
+      "pages": [
+        {
+          "page": 20,
+          "canonical_start": 34176,
+          "canonical_end": 34177,
+          "page_start": 1969,
+          "page_end": 1970
+        },
+        {
+          "page": 21,
+          "canonical_start": 34179,
+          "canonical_end": 34432,
+          "page_start": 0,
+          "page_end": 253
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 12,
+      "retrieval_score": 0.014925373134328358,
+      "text_hash": "222305f26e21dfed673ab8529419daa5dbe957f60584eae8feb6cb17a85fd6a6"
+    },
+    {
+      "chunk_id": "c-79c185f7cb65e078b51c5e7b95612214ba0bfd4b9a3399a61040ae721f70fc32",
+      "document_id": "hr-handbook",
+      "start": 29568,
+      "end": 29824,
+      "text": "과 관련되는지 확인한다. 결과 자료를 받았다는 사실과 휴가 사용 기록의 확인을 구분하고, 합\n격 여부를 기존 신청 자격의 새로운 조건으로 추가하지 않는다. 결과 자료에 새로운 시험 일정이나\n 다음 회차에 관한 설명이 포함되어 있어도 이를 다음 교육휴가의 신청으로 자동 등록하지 않는다.\n 신청자가 실제 사용 날짜의 오입력을 함께 알리면 그 항목을 별도 정정 요청으로 식별하고 원래 기\n록과 대조한다. 자료의 일부가 읽히지 않더라도 휴가 기록 확인에 필요하지 ",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 29568,
+          "canonical_end": 29824,
+          "page_start": 680,
+          "page_end": 936
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 13,
+      "retrieval_score": 0.014705882352941176,
+      "text_hash": "b08f1ce0df771eb5f118a2b9686cdeeeeabf828ac374e4432c9e2d57b5dd2465"
+    },
+    {
+      "chunk_id": "c-f8546a22a1ebe929c3363025a59677ee62daa424af8643fe5c0f5e4be387e5fe",
+      "document_id": "hr-handbook",
+      "start": 3840,
+      "end": 4096,
+      "text": "1 발생 기준\n1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 \n기준으로 별도 산정한다.\n연차 내역을 확인할 때에는 발생 기준에 관한 정보와 실제 사용 기록을 구분하여 표시한다. 특정 \n직원의 계산 결과를 안내할 경우에는 적용한 재직 기간과 확인한 기록의 범위를 함께 남긴다.\nAN-02 발생 내역의 확인과 정정\n연차 발생 내역을 문의받은 담당자는 먼저 문의가 발생 일수에 관한 것인지 사용 후 남은 일수에",
+      "pages": [
+        {
+          "page": 3,
+          "canonical_start": 3840,
+          "canonical_end": 4096,
+          "page_start": 992,
+          "page_end": 1248
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 14,
+      "retrieval_score": 0.014705882352941176,
+      "text_hash": "452780dbeb829c95f23bd82cff0fd2a676e765e41691bf8180f8eef4b8ad25ff"
+    },
+    {
+      "chunk_id": "c-1dd1c345bcc08893fb046f4a14d7d12ab0a66051e418f0166cc7e4b37a713768",
+      "document_id": "hr-handbook",
+      "start": 11520,
+      "end": 11776,
+      "text": "되었다고 보거나, 복구 뒤 표시되는 내역\n을 모두 새로운 신청으로 간주하지 않는다. 확인되지 않은 부분은 자료 불일치로 표시하여 AN-02\n@v4의 대조 과정으로 연결한다.\n신청자가 다른 종류의 휴가와 비교해 문의한 경우에는 해당 제도의 규칙과 연차 규칙을 구별해 답\n할 수 있도록 문의 항목을 나눈다. 생일 특별휴가의 날짜 범위와 분할 여부는 BD-02@v4에서 확\nHR-V4-HANDBOOK / v4\n7\n\n\n인하며, 연차 이월이나 반차 규칙을 그대로 옮겨",
+      "pages": [
+        {
+          "page": 7,
+          "canonical_start": 11520,
+          "canonical_end": 11748,
+          "page_start": 1687,
+          "page_end": 1915
+        },
+        {
+          "page": 8,
+          "canonical_start": 11750,
+          "canonical_end": 11776,
+          "page_start": 0,
+          "page_end": 26
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 15,
+      "retrieval_score": 0.014492753623188406,
+      "text_hash": "0ab8e65269eb7d86f461e35134247fb689684f04d0923ae62751b3bf9bb7af8e"
+    },
+    {
+      "chunk_id": "c-affa9414b517f194a2f668997c2257004f29d6dce76b5faa72ec36208969d387",
+      "document_id": "hr-handbook",
+      "start": 3072,
+      "end": 3328,
+      "text": ", 중복 표시가 휴가 일수의 추가 사용이나 신청 취소를 뜻하지 않도록 처리 상태\n를 설명한다.\nBD-06 날짜 변경과 취소 의사 확인\n신청자가 사용 날짜를 바꾸려는 경우에는 어느 요청을 어떤 날짜로 바꾸려는지 확인하고 변경 전\n후 값을 함께 남긴다. 원래 날짜를 유지한 채 설명만 바로잡는 것인지, 실제 사용 날짜를 변경하는 \n것인지 구분한다. 다만 신청자가 문의 과정에서 여러 날짜를 예로 들었을 뿐 변경 의사를 확정하지\n 않은 경우에는 문의 내용을 새 신",
+      "pages": [
+        {
+          "page": 3,
+          "canonical_start": 3072,
+          "canonical_end": 3328,
+          "page_start": 224,
+          "page_end": 480
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 16,
+      "retrieval_score": 0.014492753623188406,
+      "text_hash": "628eac48fc0284681ab5a1cdbcb3f1fd290c3c0274f880b1a9d1ce1a6b228de8"
+    },
+    {
+      "chunk_id": "c-bf0bfd1ab23813dffb409db0a0015631476375be848300c21096032499e7dd66",
+      "document_id": "hr-handbook",
+      "start": 17088,
+      "end": 17344,
+      "text": "경 의사가 확인되면 원래 요청을 유지한 채 변경 요청을 연결하여 팀장에게 전달\n할 내용을 정리하고, 담당자의 연결 작업이 끝났다는 사실을 변경 승인으로 표시하지 않는다. 날짜 \n변경과 함께 주소 변경을 알렸다면 RM-05@v4의 등록 정보 처리와 별도로 연결하여 두 변경의 현\n재 상태가 각각 보이게 한다.\n신청 철회를 요청한 경우에는 대상 날짜와 요청을 확인하고, 다른 날짜의 승인을 함께 취소하지 않\n도록 범위를 구분한다. 철회가 접수되었지만 화면에 반영",
+      "pages": [
+        {
+          "page": 11,
+          "canonical_start": 17088,
+          "canonical_end": 17344,
+          "page_start": 308,
+          "page_end": 564
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 17,
+      "retrieval_score": 0.014285714285714285,
+      "text_hash": "390da8818c81fa0075b0277654f5d7b2556ead6f84bcd833799ca25e26328dea"
+    },
+    {
+      "chunk_id": "c-e9ef2836370d7327d17c786540fabc87f7024de83345c11d55ee89a62f0dd305",
+      "document_id": "hr-handbook",
+      "start": 6336,
+      "end": 6592,
+      "text": "자가 확인할 수 있게 제시한다.\nAN-05 검토 내용의 연결과 처리 통지\n담당자는 접수된 연차 신청을 해당 직원의 사용 기록과 연결할 때 기록 번호, 사용 날짜, 사용 단위\n를 차례로 대조한다. 같은 직원이 같은 날 다른 종류의 휴가를 문의한 경우에도 문의 기록을 곧바\n로 사용 기록으로 옮기지 않는다. 이미 반영된 신청과 새 요청이 겹치면 중복 제출인지 날짜 변경\n인지 구분하기 위해 신청자에게 현재 의사를 확인한다. 확인 과정에서는 어떤 기록을 비교하고 ",
+      "pages": [
+        {
+          "page": 5,
+          "canonical_start": 6336,
+          "canonical_end": 6592,
+          "page_start": 113,
+          "page_end": 369
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 18,
+      "retrieval_score": 0.014285714285714285,
+      "text_hash": "6dbee5db22da772767051e067026a119b32dfd599f0d4d5acb89b3a5ce14157f"
+    },
+    {
+      "chunk_id": "c-5dc2eb73bb0cf2077351511604986cb290a65eac72e14ee6930913d9fe12189d",
+      "document_id": "hr-handbook",
+      "start": 28224,
+      "end": 28480,
+      "text": "가 신청도 취소하려는 것인지 구분하고, 신청자가 아직 결정하지 못한 \n문의를 확정된 취소로 기록하지 않는다. 확인된 취소 의사는 원래 신청과 연결하여 남기며, 다른 시\n험에 관한 요청이나 이미 별도로 관리되는 휴가 기록까지 일괄 삭제하지 않는다. 신청 날짜를 잘못\n 선택하여 다시 입력하려는 경우에는 날짜 정정으로 처리할 수 있는지 ED-05@v4의 변경 관계를 \n확인한다. 취소 후 새로운 신청이 접수되면 두 요청의 관계를 식별하되, 새로운 요청의 시험과 ",
+      "pages": [
+        {
+          "page": 17,
+          "canonical_start": 28224,
+          "canonical_end": 28480,
+          "page_start": 1184,
+          "page_end": 1440
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 19,
+      "retrieval_score": 0.014084507042253521,
+      "text_hash": "4f6ba747a8b84ab69d4759738350a8d9966aa03916e3438f6102f13a8259f285"
+    },
+    {
+      "chunk_id": "c-9ec9487b9e5812d3e992fb714973391c03079d12b439a3ede95cff60ed87b00f",
+      "document_id": "hr-handbook",
+      "start": 25152,
+      "end": 25408,
+      "text": "휴가 신청에는 시험을 식별할 수 있는 정보와 사용 희망일, 해당 신청을 구분하는 기록을 연결\n한다. 시험의 이름과 일정이 함께 적혀 있으면 원래 작성된 내용 그대로 확인하고, 신청자가 설명한\n 일정과 시스템 선택 날짜가 다를 때에는 어느 값이 희망일인지 문의한다. 여러 시험 일정이 같은 \n설명에 적혀 있으면 각각을 별도 휴가 신청으로 계산하지 않고 문의인지 실제 신청인지 먼저 구분\n한다. 응시하려는 시험이 변경되었다는 설명과 시험 명칭의 오입력을 바로잡는",
+      "pages": [
+        {
+          "page": 16,
+          "canonical_start": 25152,
+          "canonical_end": 25408,
+          "page_start": 26,
+          "page_end": 282
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 20,
+      "retrieval_score": 0.013888888888888888,
+      "text_hash": "a646b834b87b875becb614f6a3071c3f0c013539ef6d4e1f22819306f701e3da"
+    }
+  ],
+  "candidate_fingerprint": "770225f45fe3cae41f51d1f241a519737d4aafe1abade3fbd194111ee3f3f5ec"
+}

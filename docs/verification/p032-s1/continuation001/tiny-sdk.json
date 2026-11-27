@@ -1,0 +1,1125 @@
+{
+  "status": "PASS",
+  "execution_kind": "tiny_random_sdk_not_pretrained",
+  "pretrained_loads": 0,
+  "network_requests": 0,
+  "owned_timeout_kill_wait": true,
+  "production_hf_adapter_fake_sdk_transport": true,
+  "conversion": {
+    "method": "tensor-only-bin-to-safetensors",
+    "tools": {
+      "torch": "2.15.0",
+      "safetensors": "0.8.0"
+    },
+    "options": {
+      "weights_only": true,
+      "map_location": "cpu",
+      "mmap": true,
+      "copy_policy": "noncontiguous_or_shared_storage_only",
+      "hash_chunk_bytes": 1048576,
+      "release_source_before_output_verification": true,
+      "format": "pt"
+    },
+    "source_weight_sha256": "746777a74cb8a4f92f6c72060cd11929522c9c1ce493d778d0e4d675a5d7f64b",
+    "output_weight_sha256": "5a5707c69a6d71f3af6977001f1aa70111809cf972474ccb0e046d020d7c7bdb",
+    "tensors": {
+      "a": {
+        "dtype": "torch.float32",
+        "shape": [
+          3,
+          4
+        ],
+        "value_sha256": "29e1889124dc651e7bb488251123910767d042ae6dc47c280ec364655e24ab49",
+        "bytes": 48
+      },
+      "b": {
+        "dtype": "torch.float32",
+        "shape": [
+          3,
+          4
+        ],
+        "value_sha256": "29e1889124dc651e7bb488251123910767d042ae6dc47c280ec364655e24ab49",
+        "bytes": 48
+      },
+      "c": {
+        "dtype": "torch.float32",
+        "shape": [
+          4,
+          3
+        ],
+        "value_sha256": "5ad8a91ce86568a3d934ee2a80909d4292384e7ca8f5b721ce930a7d377cd709",
+        "bytes": 48
+      },
+      "half": {
+        "dtype": "torch.float16",
+        "shape": [
+          2
+        ],
+        "value_sha256": "14c189f9839c32991688a046c54f8ed8c0ee044ebd25e7ef9ed19a30a788e101",
+        "bytes": 4
+      },
+      "integer": {
+        "dtype": "torch.int64",
+        "shape": [
+          2
+        ],
+        "value_sha256": "9aaf1cb23dd7db150d81055ae94f039277351b672845511330a145849b5abc5e",
+        "bytes": 16
+      },
+      "scalar": {
+        "dtype": "torch.float32",
+        "shape": [],
+        "value_sha256": "ee0a6628f97214b7ef5d15c54388ea478862369e517aa4ef4593aea18c3ff618",
+        "bytes": 4
+      },
+      "empty": {
+        "dtype": "torch.float32",
+        "shape": [
+          0
+        ],
+        "value_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    "tensor_bytes": 168,
+    "forward_calls": 0
+  },
+  "observation": {
+    "attempted_jobs": 1,
+    "workers_started": 1,
+    "worker_exited": true,
+    "completed": true,
+    "peak_rss_bytes": 201555968,
+    "rss_samples": 3,
+    "retry_count": 0,
+    "memory_precheck": {
+      "platform": "darwin",
+      "pressure_level": 1,
+      "pressure": "normal"
+    },
+    "memory_latest": {
+      "platform": "darwin",
+      "pressure_level": 1,
+      "pressure": "normal"
+    },
+    "elapsed_ms": 837.8403329988942
+  },
+  "models": [
+    {
+      "model_id": "intfloat/multilingual-e5-small",
+      "role": "embedding",
+      "preparation": {
+        "schema_version": 1,
+        "status": "ready",
+        "phase": "published",
+        "plan_sha256": "a65081be51a06fb38846f7c1e243e3e7607f3dd204c840e47c17392533881c8b",
+        "execution_kind": "test_fixture",
+        "work": {
+          "download": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "conversion": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "inference_calls": 0,
+          "retry_count": 0
+        },
+        "inference": "unverified",
+        "quality": "unverified",
+        "elapsed_ms": 22.347958001773804,
+        "diagnostic_status": "saved"
+      },
+      "check": {
+        "status": "prepared",
+        "role": "embedding",
+        "model_id": "intfloat/multilingual-e5-small",
+        "revision": "cccccccccccccccccccccccccccccccccccccccc",
+        "sdk": [
+          {
+            "name": "sentence-transformers",
+            "installed_version": "6.3.0",
+            "required_version": "6.3.0",
+            "status": "available"
+          },
+          {
+            "name": "torch",
+            "installed_version": "2.15.0",
+            "required_version": "2.15.0",
+            "status": "available"
+          },
+          {
+            "name": "transformers",
+            "installed_version": "5.24.1",
+            "required_version": "5.24.1",
+            "status": "available"
+          },
+          {
+            "name": "tokenizers",
+            "installed_version": "0.23.3",
+            "required_version": "0.23.3",
+            "status": "available"
+          },
+          {
+            "name": "safetensors",
+            "installed_version": "0.8.0",
+            "required_version": "0.8.0",
+            "status": "available"
+          }
+        ],
+        "inference": "unverified",
+        "quality": "unverified",
+        "inference_calls": 0,
+        "network_requests": 0,
+        "secrets_read": 0
+      },
+      "worker": {
+        "jobs": 1,
+        "documents": 1,
+        "queries": 0,
+        "elapsed_ms": 3284.2197499994654,
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "peak_rss_bytes": 425984000,
+        "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
+        "sampling_interval_ms": 250,
+        "monitor": {
+          "workers_started": 1,
+          "worker_exited": true,
+          "completed": true,
+          "samples": [
+            {
+              "elapsed_ms": 28.940875010448508,
+              "gap_ms": 28.940875010448508,
+              "rss_bytes": 16629760,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 304.72054200072307,
+              "gap_ms": 275.77966699027456,
+              "rss_bytes": 161775616,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 580.3128330007894,
+              "gap_ms": 275.5922910000663,
+              "rss_bytes": 201916416,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 854.4556670094607,
+              "gap_ms": 274.14283400867134,
+              "rss_bytes": 221544448,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1130.6957500055432,
+              "gap_ms": 276.2400829960825,
+              "rss_bytes": 247726080,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1406.182542006718,
+              "gap_ms": 275.48679200117476,
+              "rss_bytes": 277463040,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1672.038832999533,
+              "gap_ms": 265.85629099281505,
+              "rss_bytes": 301187072,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1948.057958012214,
+              "gap_ms": 276.0191250126809,
+              "rss_bytes": 341360640,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2221.067958002095,
+              "gap_ms": 273.0099999898812,
+              "rss_bytes": 357318656,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2492.226792004658,
+              "gap_ms": 271.1588340025628,
+              "rss_bytes": 372899840,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2770.8011670038104,
+              "gap_ms": 278.5743749991525,
+              "rss_bytes": 408928256,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 3047.6859580085147,
+              "gap_ms": 276.8847910047043,
+              "rss_bytes": 426049536,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            }
+          ],
+          "sampling_target_ms": 250,
+          "sampling_max_gap_ms": 278.5743749991525,
+          "sampled_peak_rss_bytes": 426049536,
+          "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+          "resume_safe": true,
+          "preflight": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          },
+          "returncode": 0,
+          "elapsed_ms": 3279.5440000045346,
+          "final_observation_gap_ms": 231.8580419960199
+        },
+        "execution_kind": "local_hf",
+        "worker_exited": true
+      },
+      "profile": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/tiny-regression/workspace/model-0/prepared/profile.json"
+    },
+    {
+      "model_id": "BAAI/bge-m3",
+      "role": "embedding",
+      "preparation": {
+        "schema_version": 1,
+        "status": "ready",
+        "phase": "published",
+        "plan_sha256": "dc4a03bf96ea1ab960dac0b8b143d2ef6c0d5c24d23d34d4760a116471a33c2a",
+        "execution_kind": "test_fixture",
+        "work": {
+          "download": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "conversion": {
+            "requested_jobs": 1,
+            "workers_started": 1,
+            "fixture_calls": 0,
+            "completed": true,
+            "attempted_jobs": 1,
+            "worker_exited": true,
+            "peak_rss_bytes": 201719808,
+            "rss_samples": 3,
+            "retry_count": 0,
+            "memory_precheck": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            },
+            "memory_latest": {
+              "platform": "darwin",
+              "pressure_level": 1,
+              "pressure": "normal"
+            },
+            "elapsed_ms": 1099.1917089995695
+          },
+          "inference_calls": 0,
+          "retry_count": 0
+        },
+        "inference": "unverified",
+        "quality": "unverified",
+        "elapsed_ms": 1234.455583995441,
+        "diagnostic_status": "saved"
+      },
+      "check": {
+        "status": "prepared",
+        "role": "embedding",
+        "model_id": "BAAI/bge-m3",
+        "revision": "cccccccccccccccccccccccccccccccccccccccc",
+        "sdk": [
+          {
+            "name": "sentence-transformers",
+            "installed_version": "6.3.0",
+            "required_version": "6.3.0",
+            "status": "available"
+          },
+          {
+            "name": "torch",
+            "installed_version": "2.15.0",
+            "required_version": "2.15.0",
+            "status": "available"
+          },
+          {
+            "name": "transformers",
+            "installed_version": "5.24.1",
+            "required_version": "5.24.1",
+            "status": "available"
+          },
+          {
+            "name": "tokenizers",
+            "installed_version": "0.23.3",
+            "required_version": "0.23.3",
+            "status": "available"
+          },
+          {
+            "name": "safetensors",
+            "installed_version": "0.8.0",
+            "required_version": "0.8.0",
+            "status": "available"
+          }
+        ],
+        "inference": "unverified",
+        "quality": "unverified",
+        "inference_calls": 0,
+        "network_requests": 0,
+        "secrets_read": 0
+      },
+      "worker": {
+        "jobs": 1,
+        "documents": 1,
+        "queries": 0,
+        "elapsed_ms": 3387.7326660003746,
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "peak_rss_bytes": 448643072,
+        "rss_method": "OS process-lifetime ru_maxrss; no periodic sampling; includes imports/model/tokenization/encode",
+        "sampling_interval_ms": 250,
+        "monitor": {
+          "workers_started": 1,
+          "worker_exited": true,
+          "completed": true,
+          "samples": [
+            {
+              "elapsed_ms": 28.89820899872575,
+              "gap_ms": 28.89820899872575,
+              "rss_bytes": 16465920,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 305.40620899409987,
+              "gap_ms": 276.5079999953741,
+              "rss_bytes": 158646272,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 582.7114589919802,
+              "gap_ms": 277.3052499978803,
+              "rss_bytes": 199737344,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 858.5913749993779,
+              "gap_ms": 275.8799160073977,
+              "rss_bytes": 221986816,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1134.4460419932147,
+              "gap_ms": 275.8546669938369,
+              "rss_bytes": 244482048,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1413.6040839948691,
+              "gap_ms": 279.1580420016544,
+              "rss_bytes": 275415040,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1682.4387089873198,
+              "gap_ms": 268.8346249924507,
+              "rss_bytes": 299892736,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1962.624291991233,
+              "gap_ms": 280.18558300391305,
+              "rss_bytes": 340525056,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2230.680916996789,
+              "gap_ms": 268.05662500555627,
+              "rss_bytes": 357842944,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2508.8374170009047,
+              "gap_ms": 278.1565000041155,
+              "rss_bytes": 371441664,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2783.4991669951705,
+              "gap_ms": 274.66174999426585,
+              "rss_bytes": 404570112,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 3061.717124990537,
+              "gap_ms": 278.2179579953663,
+              "rss_bytes": 448708608,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 3338.5447499895236,
+              "gap_ms": 276.8276249989867,
+              "rss_bytes": 450576384,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            }
+          ],
+          "sampling_target_ms": 250,
+          "sampling_max_gap_ms": 280.18558300391305,
+          "sampled_peak_rss_bytes": 450576384,
+          "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+          "resume_safe": true,
+          "preflight": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          },
+          "returncode": 0,
+          "elapsed_ms": 3372.904333999031,
+          "final_observation_gap_ms": 34.35958400950767
+        },
+        "execution_kind": "local_hf",
+        "worker_exited": true
+      },
+      "profile": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/tiny-regression/workspace/model-1/prepared/profile.json"
+    },
+    {
+      "model_id": "BAAI/bge-reranker-v2-m3",
+      "role": "reranker",
+      "preparation": {
+        "schema_version": 1,
+        "status": "ready",
+        "phase": "published",
+        "plan_sha256": "2373425d0bc0ae8569564a3370452c08fbeacade710d45ceb38dc23a5c01d0bd",
+        "execution_kind": "test_fixture",
+        "work": {
+          "download": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "conversion": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "inference_calls": 0,
+          "retry_count": 0
+        },
+        "inference": "unverified",
+        "quality": "unverified",
+        "elapsed_ms": 7.682750001549721,
+        "diagnostic_status": "saved"
+      },
+      "check": {
+        "status": "prepared",
+        "role": "reranker",
+        "model_id": "BAAI/bge-reranker-v2-m3",
+        "revision": "cccccccccccccccccccccccccccccccccccccccc",
+        "sdk": [
+          {
+            "name": "sentence-transformers",
+            "installed_version": "6.3.0",
+            "required_version": "6.3.0",
+            "status": "available"
+          },
+          {
+            "name": "torch",
+            "installed_version": "2.15.0",
+            "required_version": "2.15.0",
+            "status": "available"
+          },
+          {
+            "name": "transformers",
+            "installed_version": "5.24.1",
+            "required_version": "5.24.1",
+            "status": "available"
+          },
+          {
+            "name": "tokenizers",
+            "installed_version": "0.23.3",
+            "required_version": "0.23.3",
+            "status": "available"
+          },
+          {
+            "name": "safetensors",
+            "installed_version": "0.8.0",
+            "required_version": "0.8.0",
+            "status": "available"
+          }
+        ],
+        "inference": "unverified",
+        "quality": "unverified",
+        "inference_calls": 0,
+        "network_requests": 0,
+        "secrets_read": 0
+      },
+      "worker": {
+        "requested_pairs": 1,
+        "attempted_pairs": 1,
+        "pairs": 1,
+        "queries": 1,
+        "workers": 1,
+        "fixture_calls": 0,
+        "worker_exited": true,
+        "retry_count": 0,
+        "execution_kind": "local_hf",
+        "load_ms": 2792.5691249984084,
+        "score_ms": 1.9635420030681416,
+        "peak_rss_bytes": 421904384,
+        "rss_method": "OS process-lifetime ru_maxrss; includes imports/load; no periodic sampling",
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "pair_tokens": [
+          7
+        ],
+        "applied_limit": 512,
+        "preprocessing_hash": "8c5dc70a664370c7b8c4b599057f60b59ec3f3557bd0516a7574113fbb8f4129",
+        "benchmark": "cold owned worker; not warm latency",
+        "monitor": {
+          "workers_started": 1,
+          "worker_exited": true,
+          "completed": true,
+          "samples": [
+            {
+              "elapsed_ms": 30.298416008008644,
+              "gap_ms": 30.298416008008644,
+              "rss_bytes": 16678912,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 305.90329100959934,
+              "gap_ms": 275.6048750015907,
+              "rss_bytes": 162299904,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 582.1562500059372,
+              "gap_ms": 276.25295899633784,
+              "rss_bytes": 202047488,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 858.3125410077628,
+              "gap_ms": 276.1562910018256,
+              "rss_bytes": 222396416,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1132.9847910092212,
+              "gap_ms": 274.67225000145845,
+              "rss_bytes": 248152064,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1407.8627910057548,
+              "gap_ms": 274.8779999965336,
+              "rss_bytes": 279183360,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1683.3022500068182,
+              "gap_ms": 275.43945900106337,
+              "rss_bytes": 306823168,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1959.4937910005683,
+              "gap_ms": 276.1915409937501,
+              "rss_bytes": 346619904,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2233.7464160082163,
+              "gap_ms": 274.252625007648,
+              "rss_bytes": 357498880,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2501.58008300059,
+              "gap_ms": 267.83366699237376,
+              "rss_bytes": 376225792,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2779.1730410099262,
+              "gap_ms": 277.59295800933614,
+              "rss_bytes": 410517504,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 3055.1780829991912,
+              "gap_ms": 276.005041989265,
+              "rss_bytes": 422035456,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            }
+          ],
+          "sampling_target_ms": 250,
+          "sampling_max_gap_ms": 277.59295800933614,
+          "sampled_peak_rss_bytes": 422035456,
+          "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+          "resume_safe": true,
+          "preflight": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          },
+          "returncode": 0,
+          "elapsed_ms": 3288.2733330043266,
+          "final_observation_gap_ms": 233.0952500051353
+        },
+        "weight_validation": {
+          "stage": "persistent_state",
+          "legacy_buffer": "absent",
+          "missing": [],
+          "unexpected": [],
+          "mismatched": [],
+          "difference_counts": {
+            "missing": 0,
+            "unexpected": 0,
+            "mismatched": 0
+          },
+          "stored_count": 25,
+          "loaded_count": 25
+        },
+        "elapsed_ms": 3290.949082991574
+      },
+      "profile": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/tiny-regression/workspace/model-2/prepared/profile.json"
+    },
+    {
+      "model_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "role": "reranker",
+      "preparation": {
+        "schema_version": 1,
+        "status": "ready",
+        "phase": "published",
+        "plan_sha256": "e7265152954ec58164f97e917b77b5abceffc95eadbf268fd1c5b2d1ef36193f",
+        "execution_kind": "test_fixture",
+        "work": {
+          "download": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "conversion": {
+            "requested_jobs": 0,
+            "workers_started": 0,
+            "fixture_calls": 0,
+            "completed": false
+          },
+          "inference_calls": 0,
+          "retry_count": 0
+        },
+        "inference": "unverified",
+        "quality": "unverified",
+        "elapsed_ms": 7.578250006190501,
+        "diagnostic_status": "saved"
+      },
+      "check": {
+        "status": "prepared",
+        "role": "reranker",
+        "model_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+        "revision": "cccccccccccccccccccccccccccccccccccccccc",
+        "sdk": [
+          {
+            "name": "sentence-transformers",
+            "installed_version": "6.3.0",
+            "required_version": "6.3.0",
+            "status": "available"
+          },
+          {
+            "name": "torch",
+            "installed_version": "2.15.0",
+            "required_version": "2.15.0",
+            "status": "available"
+          },
+          {
+            "name": "transformers",
+            "installed_version": "5.24.1",
+            "required_version": "5.24.1",
+            "status": "available"
+          },
+          {
+            "name": "tokenizers",
+            "installed_version": "0.23.3",
+            "required_version": "0.23.3",
+            "status": "available"
+          },
+          {
+            "name": "safetensors",
+            "installed_version": "0.8.0",
+            "required_version": "0.8.0",
+            "status": "available"
+          }
+        ],
+        "inference": "unverified",
+        "quality": "unverified",
+        "inference_calls": 0,
+        "network_requests": 0,
+        "secrets_read": 0
+      },
+      "worker": {
+        "requested_pairs": 1,
+        "attempted_pairs": 1,
+        "pairs": 1,
+        "queries": 1,
+        "workers": 1,
+        "fixture_calls": 0,
+        "worker_exited": true,
+        "retry_count": 0,
+        "execution_kind": "local_hf",
+        "load_ms": 2814.4654159987113,
+        "score_ms": 1.6489999979967251,
+        "peak_rss_bytes": 422150144,
+        "rss_method": "OS process-lifetime ru_maxrss; includes imports/load; no periodic sampling",
+        "sdk_versions": {
+          "sentence-transformers": "6.3.0",
+          "torch": "2.15.0",
+          "transformers": "5.24.1",
+          "tokenizers": "0.23.3",
+          "safetensors": "0.8.0"
+        },
+        "pair_tokens": [
+          7
+        ],
+        "applied_limit": 512,
+        "preprocessing_hash": "8c5dc70a664370c7b8c4b599057f60b59ec3f3557bd0516a7574113fbb8f4129",
+        "benchmark": "cold owned worker; not warm latency",
+        "monitor": {
+          "workers_started": 1,
+          "worker_exited": true,
+          "completed": true,
+          "samples": [
+            {
+              "elapsed_ms": 28.559875005157664,
+              "gap_ms": 28.559875005157664,
+              "rss_bytes": 16580608,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 304.56600000616163,
+              "gap_ms": 276.00612500100397,
+              "rss_bytes": 162463744,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 580.3087910026079,
+              "gap_ms": 275.7427909964463,
+              "rss_bytes": 202964992,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 856.0561660124222,
+              "gap_ms": 275.7473750098143,
+              "rss_bytes": 222806016,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1131.7513750109356,
+              "gap_ms": 275.6952089985134,
+              "rss_bytes": 249233408,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1407.2096250019968,
+              "gap_ms": 275.45824999106117,
+              "rss_bytes": 281280512,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1684.100208003656,
+              "gap_ms": 276.89058300165925,
+              "rss_bytes": 307183616,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 1956.3046250113985,
+              "gap_ms": 272.20441700774245,
+              "rss_bytes": 342114304,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2231.7968330025906,
+              "gap_ms": 275.4922079911921,
+              "rss_bytes": 357662720,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2507.4201250099577,
+              "gap_ms": 275.6232920073671,
+              "rss_bytes": 376373248,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 2786.392958005308,
+              "gap_ms": 278.9728329953505,
+              "rss_bytes": 409419776,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            },
+            {
+              "elapsed_ms": 3064.0746660064906,
+              "gap_ms": 277.6817080011824,
+              "rss_bytes": 422199296,
+              "os": {
+                "platform": "darwin",
+                "pressure_level": 1,
+                "pressure": "normal"
+              }
+            }
+          ],
+          "sampling_target_ms": 250,
+          "sampling_max_gap_ms": 278.9728329953505,
+          "sampled_peak_rss_bytes": 422199296,
+          "measurement": "owned PID RSS samples + OS pressure; gaps include measurement latency; not instantaneous/system/GPU peak",
+          "resume_safe": true,
+          "preflight": {
+            "platform": "darwin",
+            "pressure_level": 1,
+            "pressure": "normal"
+          },
+          "returncode": 0,
+          "elapsed_ms": 3305.9031660086475,
+          "final_observation_gap_ms": 241.82850000215694
+        },
+        "weight_validation": {
+          "stage": "persistent_state",
+          "legacy_buffer": "absent",
+          "missing": [],
+          "unexpected": [],
+          "mismatched": [],
+          "difference_counts": {
+            "missing": 0,
+            "unexpected": 0,
+            "mismatched": 0
+          },
+          "stored_count": 25,
+          "loaded_count": 25
+        },
+        "elapsed_ms": 3308.5835829988355
+      },
+      "profile": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/tiny-regression/workspace/model-3/prepared/profile.json"
+    }
+  ],
+  "workspace": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s1-installed-xnqj3p_4/tiny-regression/workspace",
+  "sdk": {
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0",
+    "transformers": "5.24.1",
+    "tokenizers": "0.23.3",
+    "safetensors": "0.8.0"
+  }
+}

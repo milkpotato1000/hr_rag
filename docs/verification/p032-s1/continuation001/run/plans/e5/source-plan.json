@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "origin": "packaged_metadata",
+  "recipe_id": "e5-v1",
+  "repo_id": "intfloat/multilingual-e5-small",
+  "role": "embedding",
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "files": [
+    {
+      "path": "1_Pooling/config.json",
+      "size": 200,
+      "git_blob_oid": "acbd4014202bf4dbc6c03229bcbeef7c4feafb58",
+      "lfs_sha256": null
+    },
+    {
+      "path": "config.json",
+      "size": 655,
+      "git_blob_oid": "60a2a84020f1d74cc53ea9e8c4e91cf4af6c2b68",
+      "lfs_sha256": null
+    },
+    {
+      "path": "model.safetensors",
+      "size": 470641600,
+      "git_blob_oid": "fe4cbb2a14318b79019748874f6ca4a61a02c6f6",
+      "lfs_sha256": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477"
+    },
+    {
+      "path": "modules.json",
+      "size": 387,
+      "git_blob_oid": "ac2039abdf6ff023b27c919bb9675cfe378cb10f",
+      "lfs_sha256": null
+    },
+    {
+      "path": "sentence_bert_config.json",
+      "size": 57,
+      "git_blob_oid": "4eca68d85ecd3034cf4174d8a4033a75344ea62d",
+      "lfs_sha256": null
+    },
+    {
+      "path": "sentencepiece.bpe.model",
+      "size": 5069051,
+      "git_blob_oid": "7a3f40a75f870bc1f21700cd414dc2acc431583c",
+      "lfs_sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "size": 167,
+      "git_blob_oid": "e0b1d18ecd0ae4ff1d47bd297d910c0cf83e504b",
+      "lfs_sha256": null
+    },
+    {
+      "path": "tokenizer.json",
+      "size": 17082730,
+      "git_blob_oid": "c9b2fea3119ca8886380e5f47bffc5ea7a6e0ffa",
+      "lfs_sha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size": 443,
+      "git_blob_oid": "059214673d9d6d2ee319411e2ffec8c024b816d5",
+      "lfs_sha256": null
+    }
+  ],
+  "conversion": "native-copy",
+  "license": "MIT",
+  "source_observed_at": "2026-11-28",
+  "metadata_sdk": {
+    "huggingface-hub": "2.5.0"
+  },
+  "total_bytes": 492795290,
+  "plan_sha256": "c7e9e1914e2d66dad0cba6f47bc0728d6534614400e8e6819008df1c44b6e77f"
+}

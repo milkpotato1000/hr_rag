@@ -1,0 +1,13 @@
+test_deadline_original_and_no_e5_download (__main__.Tests.test_deadline_original_and_no_e5_download) ... ok
+test_failed_continuation_stays_halted (__main__.Tests.test_failed_continuation_stays_halted) ... ok
+test_parent_immutable_inherited_attempts_and_new_label (__main__.Tests.test_parent_immutable_inherited_attempts_and_new_label) ... ok
+test_parent_tamper_rejected (__main__.Tests.test_parent_tamper_rejected) ... ok
+test_unresolved_parent_worker_rejected (__main__.Tests.test_unresolved_parent_worker_rejected) ... ok
+test_worker_and_pair_caps (__main__.Tests.test_worker_and_pair_caps) ... /Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/tempfile.py:940: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/tmpk3skqv0s'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.136s
+
+OK

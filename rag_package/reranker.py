@@ -139,6 +139,7 @@ def score(p, question, rows, *, backend=None):
                 try: response = json.loads(stdout)
                 except ValueError: raise RagError('reranker_worker_failed', 'reranking') from None
             require(isinstance(response, dict), 'invalid_scores', 'reranking')
+            if 'weight_validation' in response: work['weight_validation'] = response['weight_validation']
             if response.get('error'):
                 if response['error'] in ('pair_too_long','model_pair_limit','classifier_head_mismatch'): work['pairs'] = 0
                 err = RagError(response['error'], 'reranking'); err.offending_ids = response.get('offending_ids', []); raise err
