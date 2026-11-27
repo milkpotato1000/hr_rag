@@ -38,13 +38,13 @@ BM25, RRF, 고정/재귀/구조 기반 청킹은 모델이 아닌 알고리즘�
 
 | 순서 | 산출물 | 상태·연결 |
 | --- | --- | --- |
-| 0 | 두 경로 학습 안내, 공통 설정 예시, 지원/미지원 표, 비교 절차 | P024 즉시 수행 가능. 문서·예시만, 모델 실행 없음 |
-| 1 | LLM provider 인터페이스와 로컬/API adapter, 설정 검증·기록 | [P025](plans/P025.md) 구현, [P026 초안](plans/P026.md)에서 일반 문서→답변 통합. offline transport 시험 → 명시적 live 실행 분리 |
+| 0 | 두 경로 학습 안내, 공통 설정 예시, 지원/미지원 표, 비교 절차 | P024 완료. 문서·예시, 모델 실행 없음 |
+| 1 | LLM provider 인터페이스와 로컬/API adapter, 설정 검증·기록 | [P025](plans/P025.md) 구현, [P026](plans/P026.md) 일반 문서→답변 통합 완료(offline 검증). offline transport 시험 → 명시적 live 실행 분리 |
 | 2 | 평가 기준선 완성 | P013 기존 성공/실패 보존. 현재 로컬 실험 보류, 명시 재개 또는 별도 승인된 대체 실행 계약 필요. P014 NLI 비교로 이어짐 |
 | 3 | 생성·평가와 청킹 비교 UI 통합 | P007/P017 완료 재사용, P008의 답변·평가 표시 연결 |
 | 4 | Dense 임베딩 모델 교체, Sparse/BM25, Hybrid RRF 비교 | P010에 모델 선택·index fingerprint 계약 확장 준비. 기존 선행 순서 유지 |
 | 5 | 리랭커 없음/있음 및 모델별 비교 | Hybrid 이후 P020. 동일 후보 집합에서 순위·지연 비교 |
-| 6 | 실제 Google Drive 문서 연결·변경 반영 | [P027 초안](plans/P027.md). 인증·지원 파일·버전·삭제·권한·실패 계약 후 구현 |
+| 6 | 실제 Google Drive 문서 연결·변경 반영 | [P027](plans/P027.md) READY. 단일 Drive 문서 연결 계약에 따라 구현; 자동 sync는 후속 |
 | 7 | 공통 설정 기반 UI·CLI 통합과 설치 패키지 | 별도 카드. 깨끗한 환경에서 두 도구의 설치·샘플 E2E 검증 |
 
 완료 근거: dev의 P001~P007, P009, P011/P012, P015~P017, P019, P021~P023. P013은 전체 완료가 아니다. P014/P008/P010/P020은 후속 계약이며 로드맵 등록만으로 실행하지 않는다. 구현 순서는 의존성에 따르고 최종 사용자 화면의 단계 순서와 다를 수 있다. 모델 실험 중지와 무관한 adapter·문서·fixture 개발은 별도 READY 범위에서 진행 가능하다.
@@ -68,4 +68,6 @@ P025/P026의 공통 경계와 기본 BM25 문서→답변 연결, P027 저장소
 
 ## Verified increment, 2026-11-27
 
-P024 learning guide: dev 7573c934c76aef493abb6dd1648393c025288d9c. P025 independent LLM adapters/CLI: dev d7406e2b6e2c611cc741ad823d59a90bcefd6043. Both delivered to personal/dev. P025 implements real provider HTTP paths with offline verification; it does not establish live API/model success or RAG integration. P026/P027 remain drafts. P013 model execution remains held.
+P024 learning guide: dev 7573c934c76aef493abb6dd1648393c025288d9c. P025 independent LLM adapters/CLI: dev d7406e2b6e2c611cc741ad823d59a90bcefd6043. Both delivered to personal/dev. P025 implements real provider HTTP paths with offline verification; it does not establish live API/model success or RAG integration. P026 completed at dev/personal-dev 0252ec1731431c67172f7692b14fed7ec763821f with 36 offline tests and documented preview integration. P027 is READY for the independent Drive connector increment. P013 model execution remains held.
+
+Hybrid/리랭커 구현 순서 질문은 [미결 결정 기록](reviews/rag-package-order-pending.md)에 보존한다. 답변 전에는 P008/P010/P020 기존 선행을 유지한다.
