@@ -9,3 +9,5 @@ READY with execution dependency P027. work-queue.md의 “준비 완료 / 미착
 라이선스 파일이 없으므로 소스 권리를 임의 변경하지 않고 metadata에 MIT 등을 발명하지 않는다. PyPI/GitHub release/main 승격은 하지 않는다. 여기서의 배포물은 승인된 dev 브랜치와 격리된 로컬 build artifact다. 실제 타 OS·다른 컴퓨터·Claude/Codex UI 실행 검증과 동일 기계 fresh venv 시험을 구분한다.
 
 P013 hold, 기존 실패/GT/grant, Hybrid/리랭커 선행 결정을 유지한다. 설치/샘플/의존성 검사에는 실제 모델·계정 접근이 필요 없고 기존 목표를 진전시킨다. 사용자 프로젝트 goal·준비/직접 dev 등록 위임으로 기존 dev에 queued handoff하되 현재 P027을 중단하지 않는다. 안전한 완료 커밋 이후 exact adoption/구현한다. C1~C3 전체 증거와 personal/dev 전달을 요구하며 전체 goal 완료는 별도다.
+
+추가 설치 검토: 현재 P027 drive_config.py의 REPO/WORKSPACE는 __file__ 기준이다. wheel 설치 시 site-packages만 보호하는 것으로는 저장소 밖 credential 계약을 유지하지 못하므로, 실제 workspace/credential 부모의 Git 경계를 검사하는 후방 호환 수정을 P028 계약에 명시했다. P027 checkout에서의 범위를 깨지 않고 installed 형태에서 같은 약속을 지키기 위한 수정이다. 실제 private credential을 읽을 필요가 없다.

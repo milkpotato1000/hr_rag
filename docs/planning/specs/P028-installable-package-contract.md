@@ -52,3 +52,7 @@ core-only는 --help/version/doctor/init 및 sample snapshot→3chunker build→a
 ## 확인한 공식 근거
 
 2026-11-27 [PyPA packaging guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/), [build 1.6.1](https://pypi.org/project/build/), [setuptools 84.2.1](https://pypi.org/project/setuptools/)를 확인했다. pyproject/build backend/wheel/sdist는 공식 패키징 구조를 따른다. 배포 이름·파일 경계·optional 구성·명령·실행 제한은 이 프로젝트 선택이다. 후보 버전 확인은 설치 호환성 검증이 아니다.
+
+## 설치 위치 변경에 따른 credential 경계
+
+P027의 source checkout 경로 기반 credential guard는 wheel 설치 후 site-packages를 프로젝트 루트로 오인할 수 있다. P028에서는 현재 명시 workspace/cwd와 credential 대상의 부모 `.git` directory 또는 worktree `.git` file를 검사하여 실제 Git 작업폴더 내부 credential을 거부한다. 단순히 site-packages 밖이면 안전하다고 판단하지 않는다. 기존 HR 컨테이너 경계·절대경로·symlink/0700/0600 검사를 보존한다. init sample 폴더 내부에 credentials를 저장하도록 안내하지 않는다. installed wheel + temporary Git/worktree-shaped directory의 거부와 저장소 밖 전용 credential 경로의 허용을 fake secret으로 검증한다. Git 네트워크 호출/사용자 secret 탐색은 필요 없다.
