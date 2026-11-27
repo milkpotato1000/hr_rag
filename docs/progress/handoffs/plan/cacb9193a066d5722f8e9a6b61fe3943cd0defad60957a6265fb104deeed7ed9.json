@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "f12d52c99b78bfc83352c9b3e038cf08865f6d28",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "P032 S2b READY: actual four-method chunking comparison after completed Hybrid/reranker and S2a; evaluator hold preserved",
+  "next_action": "Integrate and adopt exact READY; commit independent runner tests and frozen inputs before at most 45 E5 workers/1896 items/3600 seconds. Preserve all holds and prior evidence.",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-27T18:36:52.618122+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-27T18:37:31.239633+00:00",
+      "evidence": "2026-11-28 host send_message_to_thread success to verified existing same-project dev; exact READY f12d52c99b78bfc83352c9b3e038cf08865f6d28 with limits, preservation, validation and next action delivered. Receipt/adoption/completion not yet observed."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-27T18:38:04.569270+00:00",
+      "evidence": "2026-11-28 observed dev host revision494 response accepting S2b preparation; committed adoption192b948099567cbb852f200417fc30f4f3da27ef selects exact READY f12d52c99b78bfc83352c9b3e038cf08865f6d28. Read adopted-plan.json and contract_guard check PASS. Implementation active; actual calls/completion not yet verified."
+    }
+  ]
+}
