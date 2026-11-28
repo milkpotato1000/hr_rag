@@ -37,7 +37,7 @@ class UI:
             'allow_reranking_execution':self.jobs.allow_reranking,
             'labels':{kind:[{'id':k,'label':v['label']} for k,v in entries.items()] for kind,entries in r.labels.items()},
             'rerank_artifacts':[{'id':k,'kind':v['kind']} for k,v in r.data['artifacts'].items() if v['kind'] in ('candidates','rerank','rerank-comparison','rerank-answer')],
-            'chunk_configs':[{'id':k,'method':v['config']['method'],'size_chars':v['config']['size_chars'],'overlap_chars':v['config']['overlap_chars']} for k,v in r.chunk_configs.items()],
+            'chunk_configs':[{'id':k,'method':v['config']['method'],'heading_profile':v['config'].get('heading_profile'),'size_chars':v['config']['size_chars'],'overlap_chars':v['config']['overlap_chars']} for k,v in r.chunk_configs.items()],
             'allow_chunking_execution':self.jobs.allow_chunking,
             'chunk_artifacts':[r.chunk_summary(k) for k,v in r.data['artifacts'].items() if v['kind'] in ('chunks','chunk-preview')],
             'capabilities':{'chunking':['fixed','recursive','structure','semantic','llm'],'retrieval':['bm25','dense','hybrid'],'unsupported':['Qwen instruction 리랭커','평가기']},

@@ -8,7 +8,7 @@ from .llm.config import fields, number, read_json as input_json, ValidationError
 from .llm import validate_config
 from .storage import require,RagError,fingerprint,write_json,read_json,staging,seal,verify,safe_path,digest
 from .documents import load_snapshot
-from .chunks import make_chunks,ALGORITHM
+from .chunks import make_chunks,ALGORITHM,validate_heading_profile
 from .bm25 import BM25Index
 
 PARAMETERS={'tokenizer':'unicode-word-v1','k1':1.2,'b':.75,'text':'canonical_slice_only'}
@@ -27,7 +27,9 @@ def config(path):
             require(isinstance(c['chunk_artifact'],str) and c['chunk_artifact'],'chunk_artifact_required','config')
             cp=Path(c['chunk_artifact']);cp=cp if cp.is_absolute() else path.absolute().parent/cp
             c=dict(c,chunk_artifact=str(cp));chunk_artifact.load(cp)
-        else:fields(c['chunking'],{'method','size_chars','overlap_chars'},set(),'chunking')
+        else:
+            fields(c['chunking'],{'method','size_chars','overlap_chars'},{'heading_profile'},'chunking')
+            validate_heading_profile(c['chunking'])
         fields(c['retrieval'],{'method','top_k','context_budget_chars'}|({'candidate_k','rrf_k'} if c['schema_version'] in (2,3) else set()),set(),'retrieval')
         if c['schema_version']!=3:require(c['chunking']['method'] in ('fixed','recursive','structure'),'unsupported_chunking','config')
         require(c['retrieval']['method'] in (('bm25',) if c['schema_version']==1 else ('bm25','dense','hybrid')),'unsupported_retrieval','config')

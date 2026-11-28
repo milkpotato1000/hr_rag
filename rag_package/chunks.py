@@ -36,11 +36,60 @@ def headings(text):
     return nodes
 
 
+HANDBOOK_PROFILE = 'handbook-v1'
+_CHAPTER = re.compile(r'^제[ ]*\d+[ ]*장[ \t]+[^\n]+?[ \t]+\[([A-Z]{2,8})\][ \t]*$', re.M)
+_SECTION = re.compile(r'^제[ ]*(\d+)[ ]*절[ \t]+[^\n]+?[ \t]+\[([A-Z]{2,8})-S(\d+)\][ \t]*$', re.M)
+_ARTICLE = re.compile(r'^([A-Z]{2,8})-\d{2,3}[ \t]+[가-힣A-Za-z0-9][가-힣A-Za-z0-9 ·/()\-]{0,95}$', re.M)
+
+
+def handbook_headings(text):
+    """Tagged body headings only. Untagged chapter listings are front matter."""
+    chapters = list(_CHAPTER.finditer(text))
+    if not chapters:
+        return []
+    first = chapters[0]
+    contents = re.search(r'^(?:통합 )?목차[ \t]*$', text[:first.start()], re.M)
+    if contents:
+        # Some contents lists repeat the tagged first chapter verbatim.
+        first = next((m for m in chapters[1:] if m[0].strip() == first[0].strip()), first)
+    matches = [(m.start(), level, m) for level, pattern in
+               enumerate((_CHAPTER, _SECTION, _ARTICLE), 1)
+               for m in pattern.finditer(text, first.start())]
+    path = []
+    nodes = []
+    chapter_code = None
+    for offset, level, match in sorted(matches, key=lambda item: item[0]):
+        title = match[0].strip()
+        if level == 1:
+            chapter_code = match[1]
+        elif level == 2:
+            if match[2] != chapter_code or match[1] != match[3]:
+                continue
+        elif len(path) < 2 or match[1] != chapter_code or title.endswith('다'):
+            continue
+        path = path[:level-1] + [title]
+        nodes.append({'start':offset, 'level':level, 'heading_path':path})
+    return nodes
+
+
+def rule_settings(config):
+    keys = ('method', 'size_chars', 'overlap_chars', 'heading_profile')
+    return {key:config[key] for key in keys if key in config}
+
+
+def validate_heading_profile(config):
+    if 'heading_profile' in config:
+        require(config.get('method') == 'structure' and config['heading_profile'] == HANDBOOK_PROFILE,
+                'invalid_heading_profile', 'chunking')
+
+
 def make_chunks(docs,source_fp,cfg,*,max_chunks=None):
     emitted=[];coverage=[];details=[]
     size,overlap=cfg['size_chars'],cfg['overlap_chars']
     for d in docs:
-        text=d['text'];nodes=headings(text);method=cfg['method']
+        text=d['text'];method=cfg['method']
+        validate_heading_profile(cfg)
+        nodes=handbook_headings(text) if 'heading_profile' in cfg else headings(text)
         sections=[(0,len(text),[])]
         if method=='structure' and nodes:
             sections=[]

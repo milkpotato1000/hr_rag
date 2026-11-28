@@ -1,0 +1,86 @@
+[
+  {
+    "method": "handbook-chunk-structure",
+    "chunks": 155,
+    "detection": [
+      {
+        "document_id": "handbook",
+        "headings_detected": 12,
+        "fallback": null
+      }
+    ],
+    "paths_by_depth": [
+      12,
+      0,
+      0
+    ],
+    "hits": [
+      {
+        "id": "c-729133750f2aae0973d2afa2eab038cf82778ecc7900306d0e2dd85ed240ea71",
+        "start": 433,
+        "end": 810,
+        "path": [
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+        ],
+        "whole": true,
+        "rank": 1,
+        "selected": true
+      }
+    ],
+    "toc_paths": [
+      [
+        "제2장 연차의 사용과 기록 관리"
+      ],
+      [
+        "제1장 생일 특별휴가와 포인트의 구분"
+      ],
+      [
+        "제5장 교육휴가의 신청과 변경"
+      ],
+      [
+        "제3장 재택근무의 신청과 운영"
+      ],
+      [
+        "제4장 복지 지원 내역의 확인"
+      ],
+      [],
+      [
+        "제6장 출장의 승인과 일정 관리"
+      ]
+    ]
+  },
+  {
+    "method": "handbook-hierarchy",
+    "chunks": 177,
+    "detection": [
+      {
+        "document_id": "handbook",
+        "headings_detected": 78,
+        "fallback": null
+      }
+    ],
+    "paths_by_depth": [
+      6,
+      15,
+      57
+    ],
+    "hits": [
+      {
+        "id": "c-074f96f923aaa206f7c27c4b791e5f1c8b0ff78d789961d4d943c790ad5f94e9",
+        "start": 668,
+        "end": 961,
+        "path": [
+          "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+          "제1절 적용 기준 [BD-S1]",
+          "BD-03 신청 기한과 승인"
+        ],
+        "whole": true,
+        "rank": 1,
+        "selected": true
+      }
+    ],
+    "toc_paths": [
+      []
+    ]
+  }
+]

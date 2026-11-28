@@ -228,4 +228,4 @@ class Registry:
             from .chunk_artifact import load
             cr,_,_,_=load(p)
         else:cr=read_json(p/'preview.json')
-        c=cr['config'];return {'id':key,'kind':e['kind'],'method':c['method'],'size_chars':c['size_chars'],'overlap_chars':c['overlap_chars'],'execution_kind':cr['work'].get('origin_execution_kind',cr['work']['execution_kind'])}
+        c=cr['config'];return {'id':key,'kind':e['kind'],'method':c['method'],'heading_profile':c.get('heading_profile'),'size_chars':c['size_chars'],'overlap_chars':c['overlap_chars'],'execution_kind':cr['work'].get('origin_execution_kind',cr['work']['execution_kind'])}

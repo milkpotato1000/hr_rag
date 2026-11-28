@@ -64,6 +64,7 @@ include rag_package/ui/index.html
 include rag_package/ui/app.js
 include rag_package/ui/style.css
 include rag_package/requirements-retrieval.lock
+include rag_package/resources/sample/chunk-handbook.json
 include rag_package/resources/sample/chunk-structure.json
 include rag_package/resources/sample/embedding-e5.json
 include rag_package/resources/sample/chunk-llm.json

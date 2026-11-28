@@ -212,12 +212,12 @@
     },
     {
       "path": "HANDBOOK.md",
-      "sha256": "93fd6e2320c904eacc87647c2b6e30c7ab32fa79e40f56973dd559cfaf740e6e",
+      "sha256": "e2fdcf051ea91cd3bdff8cc1e9a193071d7b69a28123654aa65b35da1af02027",
       "source": {
         "contract": "P032 S3",
         "kind": "handbook_practice"
       },
-      "changes": "Installed PDF practice including S6 chunk boundary comparison"
+      "changes": "Installed handbook hierarchy practice"
     },
     {
       "path": "handbook-sources.json",
@@ -245,6 +245,15 @@
         "kind": "handbook_practice"
       },
       "changes": "Installed PDF practice"
+    },
+    {
+      "path": "chunk-handbook.json",
+      "sha256": "cbebd149b69eea1eb01b98114b9dadcaf66e904213582933d66d3247c148d628",
+      "source": {
+        "contract": "P032 S7",
+        "kind": "handbook_practice"
+      },
+      "changes": "Opt-in tagged hierarchy"
     }
   ]
 }

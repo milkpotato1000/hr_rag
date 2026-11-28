@@ -2,7 +2,7 @@
 import copy,json,math,struct,time,uuid
 from pathlib import Path
 from . import chunk_policy as policy,embedding,llm
-from .chunks import make_chunks
+from .chunks import make_chunks,rule_settings
 from .documents import load_snapshot
 from .storage import RagError,require,digest,fingerprint,read_json,write_json,verify,seal,staging,new_output
 from .ui_registry import atomic_json
@@ -46,7 +46,7 @@ def preflight(snapshot_dir,config_path):
             records.append({'window_id':f'w{n:03d}','unit_ids':[u['id'] for u in batch],'messages':messages,'request':preview,'request_bytes':size,'token_count':None,'status':'pending','response':None,'selected_end_ids':None,'dispatch_attempted':False,'outcome_unknown':False})
     # Upper bound of one chunk per unit; rule methods are also computed before any model call.
     if method in ('fixed','recursive','structure'):
-        chunks,maps=make_chunks(docs,sm['fingerprint'],{k:c[k] for k in ('method','size_chars','overlap_chars')},max_chunks=10000);require(len(chunks)<=10000,'chunk_limit','chunking')
+        chunks,maps=make_chunks(docs,sm['fingerprint'],rule_settings(c),max_chunks=10000);require(len(chunks)<=10000,'chunk_limit','chunking')
     return sm,docs,c,model,cfg,us,records
 
 
@@ -54,7 +54,7 @@ def publish(out,snapshot_dir,cfg,unit_policy,base_policy,us,base,details,work,ra
     from .candidates import copy_artifact
     sm,docs=load_snapshot(snapshot_dir)
     if cfg['method'] in ('fixed','recursive','structure'):
-        chunks,maps=make_chunks(docs,sm['fingerprint'],{k:cfg[k] for k in ('method','size_chars','overlap_chars')},max_chunks=10000)
+        chunks,maps=make_chunks(docs,sm['fingerprint'],rule_settings(cfg),max_chunks=10000)
     else:chunks,maps=policy.emit(docs,sm['fingerprint'],cfg,base)
     require(len(chunks)<=10000,'chunk_limit','chunking')
     r={'schema_version':1,'source_fingerprint':sm['fingerprint'],'config':cfg,'unit_policy':unit_policy,'base_policy':base_policy,'base':base,'details':details,'work':copy.deepcopy(work),
@@ -186,7 +186,7 @@ def load(root):
             expected+=policy.parse({'end_unit_ids':w['selected_end_ids']},batch,bp['size_chars']-bp['overlap_chars'])
         require(flat==[u['id'] for u in us] and base==expected,'stale_llm_boundaries','chunking')
     require(method in ('fixed','recursive','structure','semantic','llm'),'unsupported_chunking','chunking')
-    if method in ('fixed','recursive','structure'):chunks,maps=make_chunks(docs,sm['fingerprint'],{k:cfg[k] for k in ('method','size_chars','overlap_chars')},max_chunks=10000)
+    if method in ('fixed','recursive','structure'):chunks,maps=make_chunks(docs,sm['fingerprint'],rule_settings(cfg),max_chunks=10000)
     else:chunks,maps=policy.emit(docs,sm['fingerprint'],cfg,base)
     require(chunks==read_json(root/'chunks.json') and maps==read_json(root/'coverage.json') and fingerprint(chunks)==r['chunks_hash'] and fingerprint(maps)==r['coverage_hash'],'stale_emitted_chunks','chunking')
     require(r['statistics']==stats(chunks,maps,us),'stale_chunk_statistics','chunking')

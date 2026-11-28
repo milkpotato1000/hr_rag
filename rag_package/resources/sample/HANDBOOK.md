@@ -147,3 +147,26 @@ rag-lab serve --workspace . --sources handbook-sources.json --llm-config llm-loc
 의미 기반 설정과 LLM 설정은 각각 chunk-semantic.json과 chunk-llm.json입니다. 같은 chunk 명령에 별도 출력 경로를 주면 모델 실행 전 미리보기를 확인할 수 있습니다. 앞선 실험에서 E5 의미 경계는 실제 생성됐고, 로컬 Qwen 4B의 LLM 경계는 첫 구간에서 출력 상한에 도달했습니다.
 
 Codex 또는 Claude Code에 요청할 예시: “같은 PDF·질문·BM25에서 세 규칙의 청크를 비교해 줘. 신청 기한과 팀장 승인을 함께 담은 첫 청크의 순위와 PDF 페이지를 알려 주고, 구조 방식이 실제 제목을 인식했는지도 확인해 줘. 답변 모델은 호출하지 마.”
+
+## 장·절·조항 경로를 유지하며 긴 절 나누기
+
+기본 구조 설정은 일반 제목 규칙을 사용합니다. 규정집의 코드가 붙은 제목을 구분하려면 설치 샘플 `chunk-handbook.json`의 `heading_profile: handbook-v1`을 선택하세요. ‘제1장 … [BD]’, ‘제1절 … [BD-S1]’, ‘BD-03 신청 기한과 승인’처럼 장 코드·절 번호가 일치하고 독립된 한 줄인 제목을 지원합니다. 태그 없는 목차의 장 목록은 앞부분 원문으로 유지합니다. 조항 제목은 같은 코드의 절 아래에서만 인식하며 명사형 짧은 표제를 전제로 합니다. 문장 중간의 코드, ‘BD-03에 따라’ 같은 참조, 마침표나 서술형 ‘다’로 끝나는 줄은 조항 제목으로 취급하지 않습니다. 이 형식을 사용하지 않는 문서에는 일반 구조 설정이 적합합니다.
+
+긴 조항 안에서는 재귀 방식으로 계속 분할합니다. 겹침은 같은 하위 섹션 안에서만 적용됩니다. 제목을 검색 본문 앞에 복사하지 않고 heading_path에 기록하므로 원문 페이지와 문자 위치를 대조할 수 있습니다. 인식된 제목이 없으면 경로는 비고 재귀 분할로 진행됩니다.
+
+앞의 PDF 청킹 비교 실습을 마친 폴더에서 다음을 실행하세요.
+
+```sh
+rag-lab chunk --snapshot .rag-runs/pdf --config chunk-handbook.json --out .rag-runs/handbook-hierarchy
+python - <<'PY'
+import json
+from pathlib import Path
+cfg = json.loads(Path('rag-frozen.json').read_text())
+cfg['chunk_artifact'] = '.rag-runs/handbook-hierarchy'
+Path('search-hierarchy.json').write_text(json.dumps(cfg))
+PY
+rag-lab compare --snapshot .rag-runs/pdf --configs search-structure.json search-hierarchy.json --questions deadline.json --out .rag-runs/heading-compare
+rag-lab chunk-report --run .rag-runs/heading-compare --out .rag-runs/heading-report
+```
+
+UI의 serve 명령에 `--chunk-config chunk-handbook.json`을 추가하세요. ‘청킹 → 저장 경계 실험’에서 ‘structure · 규정집 계층’을 선택하고 현재 snapshot의 경계를 만드세요. BD-03 청크의 제목 경로, 문자 범위, ‘원문 보기’를 차례로 확인하세요.

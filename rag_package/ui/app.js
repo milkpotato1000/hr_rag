@@ -91,7 +91,7 @@ $('rerank-button').onclick=()=>safe(()=>submit('rerank',{...rerankInputs(),metho
 $('rerank-compare-button').onclick=()=>safe(()=>submit('rerank_compare',{...rerankInputs(),reranker_ids:[...$('reranker-select').selectedOptions].map(o=>o.value)}));
 
 function refreshChunking(b){
- for(const [id,rows] of [['boundary-config',(b.chunk_configs||[]).map(c=>({id:c.id,label:`${c.method} · 최대 ${c.size_chars} / overlap ${c.overlap_chars}`}))],['frozen-select',(b.chunk_artifacts||[]).filter(c=>c.kind==='chunks').map(c=>({id:c.id,label:`${c.method} · ${c.size_chars}/${c.overlap_chars} · ${c.execution_kind} · ${c.id.slice(0,8)}`}))],['boundary-facts',b.labels?.facts||[]]]){
+ for(const [id,rows] of [['boundary-config',(b.chunk_configs||[]).map(c=>({id:c.id,label:`${c.method}${c.heading_profile ? " · 규정집 계층" : ""} · 최대 ${c.size_chars} / overlap ${c.overlap_chars}`}))],['frozen-select',(b.chunk_artifacts||[]).filter(c=>c.kind==='chunks').map(c=>({id:c.id,label:`${c.method}${c.heading_profile ? " · 규정집 계층" : ""} · ${c.size_chars}/${c.overlap_chars} · ${c.execution_kind} · ${c.id.slice(0,8)}`}))],['boundary-facts',b.labels?.facts||[]]]){
   const box=$(id),old=[...box.selectedOptions].map(o=>o.value);clear(box);
   if(id==='boundary-facts'){const o=el('option','선택 안 함 · N/A');o.value='';box.append(o);}
   for(const row of rows){const o=el('option',row.label);o.value=row.id;o.selected=old.includes(row.id);box.append(o);}

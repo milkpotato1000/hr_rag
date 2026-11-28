@@ -2,7 +2,7 @@
 from pathlib import Path
 import math,re
 from . import embedding,llm
-from .chunks import headings
+from .chunks import headings,validate_heading_profile
 from .documents import intersections
 from .storage import require,fingerprint,digest,read_json
 from .reranker import strict,integer
@@ -19,6 +19,9 @@ def config(value):
     require(isinstance(method,str) and method in ('fixed','recursive','structure','semantic','llm'),'unsupported_chunking','chunking')
     common={'schema_version','method','size_chars','overlap_chars'}
     extra={'unit_max_chars','embedding_config','distance_threshold','minimum_chars'} if method=='semantic' else {'unit_max_chars','llm_config',*LLM_DEFAULTS} if method=='llm' else set()
+    if 'heading_profile' in c:
+        validate_heading_profile(c)
+        extra.add('heading_profile')
     if method=='llm' and 'id_representation' in c:
         extra.add('id_representation')
         require(c['id_representation'] in ('persistent','window_number'),'invalid_id_representation','chunking')

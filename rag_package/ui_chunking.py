@@ -67,5 +67,5 @@ def execute(jobs,v,plan,work):
         cid=row['config_id']
         if cid not in builds:builds[cid]=r.add_artifact(out/cid/'build','build',snapshot_id=v['chunk_ids'][0])
         answers[cid+'/'+row['question_id']]=r.add_artifact((out/row['result_path']).parent,'answer',snapshot_id=v['chunk_ids'][0],build_id=builds[cid])
-    id=r.add_artifact(out,'comparison',snapshot_id=v['chunk_ids'][0],build_ids=builds,answer_ids=answers,labels=[f"{c['config']['method']} / {c['config']['size_chars']}자 / 중첩 {c['config']['overlap_chars']}" for c in result['chunk_artifacts']])
+    id=r.add_artifact(out,'comparison',snapshot_id=v['chunk_ids'][0],build_ids=builds,answer_ids=answers,labels=[f"{c['config'].get('heading_profile', c['config']['method'])} / {c['config']['size_chars']}자 / 중첩 {c['config']['overlap_chars']}" for c in result['chunk_artifacts']])
     return [id],'completed',dict(result,dispatch_attempted=bool(result['generation_requests']))
