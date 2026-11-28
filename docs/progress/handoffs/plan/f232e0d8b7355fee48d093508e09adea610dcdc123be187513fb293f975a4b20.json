@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "e8ee871bae26400d11b158eceafb12739321c415",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "P032 S2g verify eligibility and exception coverage",
+  "next_action": "Adopt S2g after closing S2f, test fixed-context general prompt change, review gt01 then gated gt02 and remaining questions",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T06:55:06.074590+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
