@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "P032 S2e READY: explicit local thinking support, final-only response handling, one bounded gt01 probe after S2d truncation",
   "next_action": "Exactly adopt 379e131e17955512ca1a6016e9fb811b96a922b8; implement opt-in compatibility and model-free tests/new install; freeze and run at most one gt01 under new12min ledger; preserve parent failure and holds",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T06:39:24.521611+00:00",
       "evidence": "2026-11-28 host direct send succeeded to verified existing HR RAG dev. Exact READY379e131e17955512ca1a6016e9fb811b96a922b8, opt-in final-only compatibility, one new gt01/12min scope and parent preservation delivered; receipt/adoption/completion not yet observed."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T06:40:10.071919+00:00",
+      "evidence": "Dev acknowledged the S2e contract and committed exact adoption in 47890c2. Host turn active, probe result pending."
     }
   ]
 }
