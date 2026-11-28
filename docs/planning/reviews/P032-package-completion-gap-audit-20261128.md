@@ -1,5 +1,21 @@
 # P032 패키지 전체 목표의 남은 검증
 
+## S18 종료 후 전체 요구 대조
+
+검토 기준은 공개 dev 커밋 `2aeee85`이다. 아래 행은 해당 버전의 설치본·실행 기록을 가리킨다. 뒤의 초기 감사와 당시 대기 상태는 이력으로 보존한다.
+
+| 요구 | 확인 범위 및 남은 검증 | 근거 |
+| --- | --- | --- |
+| 설치 및 학습 | 새 가상환경의 wheel에서 기본 PDF와 CLI·UI를 검증했다. Codex·Claude Code용 실습 요청이 있다. 두 제품에서 각각 새로 설치해 끝까지 실행한 증거와 다른 OS 검증은 남아 있다. | [첫 설치](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s10/README.md) · [도구별 요청](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/rag_package/resources/sample/START_HERE.md) |
+| 문서 연결 | 로컬 PDF를 지정한 설치본에서 해당 파일의 고유 근거를 BM25 1위·1쪽으로 확인했다. Drive 단일 링크는 모의 인증·HTTP 검증까지이며 실계정 연결은 사용자 보류다. 브라우저 파일 선택창은 별도 미검증 경로다. | [내 파일](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s16/README.md) · [Drive](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/learning/rag-package/drive.md) · [선택창](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p029/README.md) |
+| 모델 선택·비교 | 같은 문맥에서 로컬 4B 실답변과 API 미리보기를 비교했다. 설치본에서 로컬·OpenAI·Anthropic 설정이 가능하다. 두 실제 생성 모델의 품질 비교와 실계정 API 응답은 미측정이다. | [생성 비교](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s5/README.md) · [모델 설정](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s14/README.md) |
+| 청킹 | 고정·재귀·구조·의미 청킹의 검색 비교와 고정·재귀 청킹의 실답변 비교가 있다. 현재 4B의 LLM 청킹은 후보 ID 제한 후에도 출력 상한에 도달했다. 해당 실행에서 만들어진 청크나 검색 결과는 없다. | [네 방식](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s2b-recovery001/README.md) · [실답변](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s13/README.md) · [LLM 청킹](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s18/README.md) |
+| 검색·리랭커 | BM25, E5/BGE Dense·Hybrid와 고정 후보 리랭킹을 실측했다. 검색 10문항 중 관련 근거가 있는 8문항을 검색 지표 평균에 사용했다. 설치본에서 임베딩·리랭커만 바꾸는 구성도 확인했다. | [방법별 측정](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/learning/rag-package/live-retrieval-s1.md) · [선택 경로](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s15/README.md) |
+| 답변과 인용 | 단일 질문의 기한·승인권자는 실제 4B 답변·인용과 PDF를 대조했다. 복합 gt01의 S2h 실행은 잘렸다. 단순 질문 성공으로 복합 질문의 필수 사실 회수나 근거 없는 금액 질문의 적절한 보류를 판정할 수 없다. | [기한](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s8/README.md) · [승인권자](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s11/README.md) · [복합 질문](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/verification/p032-s2h/gt01-review.json) |
+| 자동 평가기 | 사람 승인 정답지와 판정 기대값은 확보했다. P013/P014 평가기·NLI 실험은 보류 중이며 검색 지표와 답변 개별 대조를 자동 평가 점수로 사용하지 않는다. | [검토 기준](https://github.com/milkpotato1000/hr_rag/blob/2aeee8595b4b131b1ae1da649e3feafa8588fa0e/docs/planning/reviews/P013-human-review.md) |
+
+다음 로컬 답변 검증 후보는 승인된 gt09 “재택근무 전기요금의 월 지원 한도는 얼마인가요?”다. 실제 전달 청크, 금액·미지급 단정 여부, 근거 부족 안내, 응답 상태를 각각 대조해야 한다. 검토 문서의 우선순위이며 이 기록만으로 모델을 호출하지 않는다. Drive·평가기 보류와 S18 단일 호출 종료를 유지한다.
+
 2026-11-28 plan 읽기 전용 감사. dev의 S1 완료 `3ce2ed8c95f9259f1184c67e52373c7411e331b5`, S2a 완료 `17ea6305bb483409b9cd593d62e2e64c50c10625`, S2b 정확 채택 `192b948099567cbb852f200417fc30f4f3da27ef`를 구분한다. S2b는 진행 중이며 실제 실행 성공을 이 문서에서 추정하지 않는다. 이 검토는 새 실행 승인이나 제품 문서 수정이 아니다.
 
 최종 목표는 문서 링크부터 모델·청킹·검색·리랭커 비교와 최종 답변까지 이어지는 설치형 학습 패키지다. 실제 검색 비교 성공이나 모델 없는 preview만으로 이 전체 목표를 완료할 수 없다.
