@@ -1,0 +1,23 @@
+{
+  "status": "failed",
+  "actual_messages_hash": "ba828038edff9c93685b752a248ce3c3cfca3904ba3a4fb0aea07ae7892d4557",
+  "provider_result": {
+    "status": "truncated",
+    "usage": {
+      "input_tokens": 2171,
+      "output_tokens": 4096,
+      "provider_duration_ms": 262393.467042
+    },
+    "finish_reason": "length",
+    "elapsed_ms": 262433.911,
+    "identity_verification": {
+      "status": "verified",
+      "before": true,
+      "after": true
+    },
+    "outcome_unknown": false
+  },
+  "selected_end_ids": null,
+  "spans": null,
+  "error": "provider_truncated"
+}

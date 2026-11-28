@@ -1,0 +1,32 @@
+{
+  "status": "failed",
+  "error": "provider_truncated",
+  "provider_status": "truncated",
+  "finish_reason": "length",
+  "usage": {
+    "input_tokens": 2171,
+    "output_tokens": 4096,
+    "provider_duration_ms": 262393.467042
+  },
+  "elapsed_seconds": 262.433911,
+  "estimated_remaining_minutes": 144.33865105,
+  "peak_rss_bytes": 4027367424,
+  "pressure_levels": [
+    1
+  ],
+  "metadata_requests": 63,
+  "chunking_posts": 1,
+  "retries": 0,
+  "windows_executed": 1,
+  "remaining_unexecuted": 33,
+  "source_chars": 762,
+  "units": 20,
+  "validated_segments": 0,
+  "server_cleanup": {
+    "owned": true,
+    "pid": 62253,
+    "listener_closed": true
+  },
+  "partial_window_only": true,
+  "search_index_created": false
+}
