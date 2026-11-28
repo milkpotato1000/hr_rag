@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Installed selected RAG pipeline through final citation",
   "next_action": "Adopt S8 then verify selected hierarchy chunks, Hybrid, reranker and local 4B answer as one run",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T07:53:37.789097+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T07:53:59.095800+00:00",
+      "evidence": "Direct host delivery to verified HR RAG dev succeeded for S8 exact selected configuration and bounded integrated verification."
     }
   ]
 }
