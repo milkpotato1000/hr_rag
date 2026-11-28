@@ -1,0 +1,96 @@
+[
+  {
+    "args": [
+      "init",
+      "--out",
+      "handbook-practice"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"complete\", \"execution_kind\": \"offline\", \"files\": 30, \"network_requests\": 0, \"secrets_read\": 0}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "doctor"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"schema_version\": 1, \"package\": {\"name\": \"milkpotato-rag-lab\", \"version\": \"0.1.0.dev1\"}, \"python\": {\"version\": \"3.12.14\", \"supported\": true}, \"platform\": {\"name\": \"darwin\", \"storage_supported\": true}, \"optional_dependencies\": {\"pdf\": {\"installed_version\": \"6.21.2\", \"required_version\": \"6.21.2\", \"status\": \"available\"}, \"drive\": {\"packages\": [{\"name\": \"google-auth-oauthlib\", \"installed_version\": null, \"required_version\": \"1.5.0\"}, {\"name\": \"google-auth\", \"installed_version\": null, \"required_version\": \"2.63.1\"}], \"status\": \"missing\"}, \"retrieval\": [{\"name\": \"sentence-transformers\", \"installed_version\": null, \"required_version\": \"6.3.0\", \"status\": \"missing\"}, {\"name\": \"torch\", \"installed_version\": null, \"required_version\": \"2.15.0\", \"status\": \"missing\"}, {\"name\": \"transformers\", \"installed_version\": null, \"required_version\": \"5.24.1\", \"status\": \"missing\"}, {\"name\": \"tokenizers\", \"installed_version\": null, \"required_version\": \"0.23.3\", \"status\": \"missing\"}, {\"name\": \"safetensors\", \"installed_version\": null, \"required_version\": \"0.8.0\", \"status\": \"missing\"}], \"preparation\": {\"name\": \"huggingface-hub\", \"installed_version\": null, \"required_version\": \"2.5.0\", \"status\": \"missing\"}}, \"config\": {\"status\": \"not_supplied\", \"reasons\": []}, \"live_checks\": \"not_checked\", \"network_requests\": 0, \"secrets_read\": 0, \"status\": \"ready_for_offline\", \"role_configs\": {}, \"inference_calls\": 0}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "snapshot",
+      "--sources",
+      "handbook-sources.json",
+      "--out",
+      ".rag-runs/pdf"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"complete\", \"command\": \"snapshot\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": null, \"generation_requests\": 0}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "build",
+      "--snapshot",
+      ".rag-runs/pdf",
+      "--config",
+      "fixed.json",
+      "--out",
+      ".rag-runs/bm25"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"complete\", \"command\": \"build\", \"execution_kind\": \"offline\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 0, \"documents\": 0, \"queries\": 0}, \"generation_requests\": 0}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "ask",
+      "--run",
+      ".rag-runs/bm25",
+      "--config",
+      "fixed.json",
+      "--question",
+      "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+      "--out",
+      ".rag-runs/preview"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"complete\", \"command\": \"ask\", \"execution_kind\": \"preview\", \"artifact_written\": true, \"embedding_work\": {\"jobs\": 0, \"documents\": 0, \"queries\": 0}, \"generation_requests\": 0}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "llm-configure",
+      "--spec",
+      "llm-spec-api.json",
+      "--out",
+      "handbook-api.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"needs_configuration\", \"schema_version\": 2, \"roles\": {\"generation\": \"api\", \"evaluation\": \"api\", \"chunking\": \"api\"}, \"inspection\": [], \"http_requests\": 0, \"retry_count\": 0, \"secrets_read\": 0, \"generation_requests\": 0, \"evaluation_requests\": 0, \"chunking_requests\": 0, \"quality\": \"unverified\"}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "doctor",
+      "--llm-config",
+      "handbook-api.json"
+    ],
+    "exit_code": 3,
+    "stdout": "{\"schema_version\": 1, \"package\": {\"name\": \"milkpotato-rag-lab\", \"version\": \"0.1.0.dev1\"}, \"python\": {\"version\": \"3.12.14\", \"supported\": true}, \"platform\": {\"name\": \"darwin\", \"storage_supported\": true}, \"optional_dependencies\": {\"pdf\": {\"installed_version\": \"6.21.2\", \"required_version\": \"6.21.2\", \"status\": \"available\"}, \"drive\": {\"packages\": [{\"name\": \"google-auth-oauthlib\", \"installed_version\": null, \"required_version\": \"1.5.0\"}, {\"name\": \"google-auth\", \"installed_version\": null, \"required_version\": \"2.63.1\"}], \"status\": \"missing\"}, \"retrieval\": [{\"name\": \"sentence-transformers\", \"installed_version\": null, \"required_version\": \"6.3.0\", \"status\": \"missing\"}, {\"name\": \"torch\", \"installed_version\": null, \"required_version\": \"2.15.0\", \"status\": \"missing\"}, {\"name\": \"transformers\", \"installed_version\": null, \"required_version\": \"5.24.1\", \"status\": \"missing\"}, {\"name\": \"tokenizers\", \"installed_version\": null, \"required_version\": \"0.23.3\", \"status\": \"missing\"}, {\"name\": \"safetensors\", \"installed_version\": null, \"required_version\": \"0.8.0\", \"status\": \"missing\"}], \"preparation\": {\"name\": \"huggingface-hub\", \"installed_version\": null, \"required_version\": \"2.5.0\", \"status\": \"missing\"}}, \"config\": {\"status\": \"not_supplied\", \"reasons\": []}, \"live_checks\": \"not_checked\", \"network_requests\": 0, \"secrets_read\": 0, \"status\": \"needs_configuration\", \"role_configs\": {\"llm\": {\"status\": \"example_requires_configuration\", \"roles\": {\"generation\": \"example_requires_configuration\", \"evaluation\": \"example_requires_configuration\", \"chunking\": \"example_requires_configuration\"}}}, \"inference_calls\": 0}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "llm-configure",
+      "--spec",
+      "handbook-qwen-spec.json",
+      "--out",
+      "offline-model.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"needs_configuration\", \"schema_version\": 2, \"roles\": {\"generation\": \"local\", \"evaluation\": \"local\", \"chunking\": \"local\"}, \"inspection\": [], \"http_requests\": 0, \"retry_count\": 0, \"secrets_read\": 0, \"generation_requests\": 0, \"evaluation_requests\": 0, \"chunking_requests\": 0, \"quality\": \"unverified\"}\n",
+    "stderr": ""
+  }
+]

@@ -85,7 +85,11 @@
     "rag_package/resources/models/mmini-reranker.json",
     "rag_package/resources/sample/llm-spec-api.json",
     "rag_package/resources/sample/llm-spec-local.json",
-    "rag_package/resources/sample/llm-spec-mixed.json"
+    "rag_package/resources/sample/llm-spec-mixed.json",
+    "rag_package/resources/sample/HANDBOOK.md",
+    "rag_package/resources/sample/handbook-sources.json",
+    "rag_package/resources/sample/handbook-local.json",
+    "rag_package/resources/sample/handbook-qwen-spec.json"
   ],
   "sdist_extra": [
     "pyproject.toml",

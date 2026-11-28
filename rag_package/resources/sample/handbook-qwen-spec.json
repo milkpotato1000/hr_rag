@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "local": {
+      "provider": "ollama",
+      "base_url": "http://127.0.0.1:11434",
+      "model": "qwen3:4b",
+      "max_output_tokens": 4096,
+      "timeout_seconds": 480,
+      "response_mode": "json_object",
+      "temperature": 0.6,
+      "origin": {
+        "hf_id": "Qwen/Qwen3-4B-Thinking-2507",
+        "source_revision": null,
+        "conversion": "historical_ollama_import",
+        "quantization": "Q4_K_M"
+      },
+      "think": true,
+      "num_ctx": 8192,
+      "seed": 42
+    }
+  },
+  "roles": {
+    "generation": "local",
+    "evaluation": "local",
+    "chunking": "local"
+  }
+}

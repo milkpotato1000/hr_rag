@@ -119,7 +119,7 @@
     },
     {
       "path": "START_HERE.md",
-      "sha256": "e7c2d3ee7eec2464c37ed48bf49aa8957e7a018c769ef2cb4ede69414d1c288c",
+      "sha256": "6aac8626000a68b8e401844c91d635996a41212a973f6f35810089dbca6ead1d",
       "source": null,
       "changes": "P031 latest installation and preparation guidance; P032 S2c current learner entry, symmetric local/API spec and bounded evidence/doctor guidance"
     },
@@ -209,6 +209,42 @@
         "kind": "new_documentation_example"
       },
       "changes": "P031 LLM configuration spec; no live identity or credentials"
+    },
+    {
+      "path": "HANDBOOK.md",
+      "sha256": "df9191448edbcf503b806647a8fe6d0b9d579e7ea4390bcb01bca5dda6f70779",
+      "source": {
+        "contract": "P032 S3",
+        "kind": "handbook_practice"
+      },
+      "changes": "Installed PDF practice"
+    },
+    {
+      "path": "handbook-sources.json",
+      "sha256": "4d05aa95984edf6c26da13cf64d0e8817975456710e4120ca49e3c8e69c007cd",
+      "source": {
+        "contract": "P032 S3",
+        "kind": "handbook_practice"
+      },
+      "changes": "Installed PDF practice"
+    },
+    {
+      "path": "handbook-local.json",
+      "sha256": "6d8a5812890a9bae5dc03f5ca5474e9f82b2be140550676b4a55fd52ef5b5665",
+      "source": {
+        "contract": "P032 S3",
+        "kind": "handbook_practice"
+      },
+      "changes": "Installed PDF practice"
+    },
+    {
+      "path": "handbook-qwen-spec.json",
+      "sha256": "bd5b208ce21ed89a02428ac4889ea21332e3b35b90591b2476c65a9fc5bfc988",
+      "source": {
+        "contract": "P032 S3",
+        "kind": "handbook_practice"
+      },
+      "changes": "Installed PDF practice"
     }
   ]
 }
