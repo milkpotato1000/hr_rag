@@ -1,0 +1,46 @@
+{
+  "status": "prepared",
+  "claimed": false,
+  "started_at": null,
+  "deadline": null,
+  "metadata": [
+    {
+      "endpoint": "/api/version",
+      "actor": "supervisor",
+      "at": 1795841073.484326,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/tags",
+      "actor": "supervisor",
+      "at": 1795841073.497432,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/show",
+      "actor": "supervisor",
+      "at": 1795841073.507791,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841073.5399208,
+      "status": "received"
+    }
+  ],
+  "requests": [],
+  "gates": [],
+  "active": null,
+  "server_start_attempts": 1,
+  "limits": {
+    "generation": 10,
+    "wall_seconds": 2700,
+    "http_seconds": 180,
+    "watchdog_seconds": 210,
+    "metadata": 200,
+    "metadata_timeout": 5,
+    "rss_bytes": 8589934592
+  },
+  "automatic_retries": 0
+}
