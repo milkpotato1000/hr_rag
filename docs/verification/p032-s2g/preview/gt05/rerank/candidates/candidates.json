@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "question_id": "gt05",
+  "question": "교육휴가의 대상과 연간 일수는 무엇이며 연차·생일휴가와 별도로 관리하나요?",
+  "query_hash": "7173db863f890dd37e1e10a0dd8deba50a00af076b1f51349e60c5fa9ea38aaa",
+  "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "chunk_fingerprint": "acdcd8466dae5203f4e025675dcfb7bc6593b80557a4f10090503acef243a2c8",
+  "index_fingerprint": "3bffa0482285557958f228d9781dc5989400dc93b724ef0f9c012785e1b41348",
+  "execution_kind": "preview",
+  "settings": {
+    "schema_version": 2,
+    "retrieval": {
+      "method": "hybrid",
+      "candidate_k": 20,
+      "top_k": 5,
+      "context_budget_chars": 2000,
+      "rrf_k": 60
+    },
+    "llm": {
+      "schema_version": 1,
+      "profiles": {
+        "answer": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        },
+        "judge": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        }
+      },
+      "roles": {
+        "generation": "answer",
+        "evaluation": "judge"
+      }
+    },
+    "chunking": {
+      "method": "fixed",
+      "size_chars": 256,
+      "overlap_chars": 64
+    },
+    "embedding": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "file_manifest": {
+        "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+        "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+        "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+        "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+        "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+        "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+      },
+      "device": "cpu",
+      "dtype": "float32",
+      "max_input_tokens": 512,
+      "catalog": {
+        "dimension": 384,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "pooling": "mean",
+        "limit": 512,
+        "license": "MIT",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      "normalization": "l2",
+      "algorithm": "exact-cosine-v1"
+    }
+  },
+  "parent_result_fingerprint": "d75b4b70093951fdd39dec1b15900a1a47e23be2558b69644d84d82cee23bad7",
+  "requested_n": 20,
+  "actual_n": 20,
+  "candidate_depth": 20,
+  "shortage_reason": null,
+  "original_retrieval_ms": 4943.570832998375,
+  "rows": [
+    {
+      "chunk_id": "c-2fcf0f5cdf6b47b4607765498e23906fe4f13d1bace89f8c0dfceb957c361c6c",
+      "document_id": "hr-handbook",
+      "start": 24576,
+      "end": 24832,
+      "text": "의 문의 번호로 접수되었더라도 확인 결과가 항목별로 나뉘는\n 이유가 여기에 있다. 이 사례는 서로 다른 지급 내역을 대조할 때 필요한 구분을 설명하며 새 지원 \n항목이나 환산 비율을 제시하지 않는다.\n제5장 교육휴가의 신청과 변경 [ED]\n제1절 대상과 신청 정보 [ED-S1]\nED-01 신청 대상과 일수\n직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.\n신청 정보에는 어떤 자격시험 응시를 위한 요청인지 식별할 수 있는 설명을 연결한다.",
+      "pages": [
+        {
+          "page": 15,
+          "canonical_start": 24576,
+          "canonical_end": 24832,
+          "page_start": 890,
+          "page_end": 1146
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 1,
+      "retrieval_score": 0.032266458495966696,
+      "text_hash": "196c4ff7c9b14e6eb769f8a687b05d48453468697c5aeee2d8973d19685aaff5"
+    },
+    {
+      "chunk_id": "c-bd0f8810de4c1408992ce5931e04c83825598419c417d0de991da9c49bc979a5",
+      "document_id": "hr-handbook",
+      "start": 24960,
+      "end": 25216,
+      "text": "육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 \n관한 문의가 함께 들어오면 해당 휴가 종류를 구분하고, 연차 사용 단위는 AN-03@v4에서 확인하\n되 그 규칙을 교육휴가의 분할 기준으로 적용하지 않는다.\nHR-V4-HANDBOOK / v4\n15\n\n\nED-03 시험 일정과 사용 희망일의 표시\n교육휴가 신청에는 시험을 식별할 수 있는 정보와 사용 희망일, 해당 신청을 구분하는 기록을 연결\n한다. 시험의 이름과 ",
+      "pages": [
+        {
+          "page": 15,
+          "canonical_start": 24960,
+          "canonical_end": 25124,
+          "page_start": 1274,
+          "page_end": 1438
+        },
+        {
+          "page": 16,
+          "canonical_start": 25126,
+          "canonical_end": 25216,
+          "page_start": 0,
+          "page_end": 90
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 2,
+      "retrieval_score": 0.03225806451612903,
+      "text_hash": "b412216f82b1c53ce12824fa0b0589cafaf8091c54aaaecfcfe98d22fb5aeee7"
+    },
+    {
+      "chunk_id": "c-1e5a740e8d25d762406dad31e5f305c04f34de00e809343ccba68df23866fb1a",
+      "document_id": "hr-handbook",
+      "start": 24768,
+      "end": 25024,
+      "text": " 교육 휴가를 신청할 수 있다.\n신청 정보에는 어떤 자격시험 응시를 위한 요청인지 식별할 수 있는 설명을 연결한다. 이미 전달된\n 설명으로 대상을 확인할 수 있으면 같은 내용을 반복 제출하도록 요구하지 않고, 시험 이름이 비슷\n해 구별이 필요한 부분만 확인한다.\nED-02 다른 휴가와의 관리 구분\n생일 특별휴가 및 연차와 별도로 관리한다.\n교육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 \n관한 문의가 함께 들",
+      "pages": [
+        {
+          "page": 15,
+          "canonical_start": 24768,
+          "canonical_end": 25024,
+          "page_start": 1082,
+          "page_end": 1338
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 3,
+      "retrieval_score": 0.03177805800756621,
+      "text_hash": "c72e275970cdbd3fc6ef7fecbd1b596cf42cda72ab36fa405e14d8c9e61c94d0"
+    },
+    {
+      "chunk_id": "c-516afa0199f5aced787481998b499b694986973d79702b5f06a48a7cd2df38f0",
+      "document_id": "hr-handbook",
+      "start": 29952,
+      "end": 30208,
+      "text": "가 있는 경우에도 어떤 사실을 확인하려는 것인지 특정하고, 교육휴가의 이용 기록이 \n시험 성적 평가 자료로 잘못 분류되지 않도록 한다. 신청자가 결과 자료의 연결 대상을 정정하면 \n기존 연결 관계와 정정 사유를 기록하되 원래 휴가의 종류를 바꾸지 않는다.\nED-09 복합 문의의 답변과 담당 업무 인계\n교육휴가 신청과 시험 비용, 근무 일정, 다른 휴가 사용을 함께 묻는 문의에서는 먼저 이 장에서 확\n인할 수 있는 항목을 구분한다. 교육휴가에 관한 기록은 ",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 29952,
+          "canonical_end": 30208,
+          "page_start": 1064,
+          "page_end": 1320
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 4,
+      "retrieval_score": 0.029910714285714284,
+      "text_hash": "0aba89295cd121ab1a947ffbe01007370ae916029c37f62ff849958d14ecf897"
+    },
+    {
+      "chunk_id": "c-da66b56ea8570af0b9dedb4394c9ad64e06a34376c7a159cac3c433db7468eaa",
+      "document_id": "hr-handbook",
+      "start": 0,
+      "end": 256,
+      "text": "가상 HR 운영 규정집\n가상 HR 규정입니다. 실제 회사의 정책이나 법적 기준이 아닙니다.\n문서 식별자: hr-v4-handbook | 버전: 4 | 시행일: 정보 없음\n통합 목차\n제1장 생일 특별휴가와 포인트의 구분\n제2장 연차의 사용과 기록 관리\n제3장 재택근무의 신청과 운영\n제4장 복지 지원 내역의 확인\n제5장 교육휴가의 신청과 변경\n제6장 출장의 승인과 일정 관리\n제1장 생일 특별휴가와 포인트의 구분 [BD]\n제1절 적용 기준 [BD-S1]\nBD-",
+      "pages": [
+        {
+          "page": 1,
+          "canonical_start": 0,
+          "canonical_end": 256,
+          "page_start": 0,
+          "page_end": 256
+        }
+      ],
+      "heading_path": [],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 5,
+      "retrieval_score": 0.029857397504456328,
+      "text_hash": "0fc1e2743ed770e291866ce66429bcf589f39d23d00df96eacdfc0a50788cbd3"
+    },
+    {
+      "chunk_id": "c-f8546a22a1ebe929c3363025a59677ee62daa424af8643fe5c0f5e4be387e5fe",
+      "document_id": "hr-handbook",
+      "start": 3840,
+      "end": 4096,
+      "text": "1 발생 기준\n1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 \n기준으로 별도 산정한다.\n연차 내역을 확인할 때에는 발생 기준에 관한 정보와 실제 사용 기록을 구분하여 표시한다. 특정 \n직원의 계산 결과를 안내할 경우에는 적용한 재직 기간과 확인한 기록의 범위를 함께 남긴다.\nAN-02 발생 내역의 확인과 정정\n연차 발생 내역을 문의받은 담당자는 먼저 문의가 발생 일수에 관한 것인지 사용 후 남은 일수에",
+      "pages": [
+        {
+          "page": 3,
+          "canonical_start": 3840,
+          "canonical_end": 4096,
+          "page_start": 992,
+          "page_end": 1248
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 6,
+      "retrieval_score": 0.028665028665028666,
+      "text_hash": "452780dbeb829c95f23bd82cff0fd2a676e765e41691bf8180f8eef4b8ad25ff"
+    },
+    {
+      "chunk_id": "c-1dd1c345bcc08893fb046f4a14d7d12ab0a66051e418f0166cc7e4b37a713768",
+      "document_id": "hr-handbook",
+      "start": 11520,
+      "end": 11776,
+      "text": "되었다고 보거나, 복구 뒤 표시되는 내역\n을 모두 새로운 신청으로 간주하지 않는다. 확인되지 않은 부분은 자료 불일치로 표시하여 AN-02\n@v4의 대조 과정으로 연결한다.\n신청자가 다른 종류의 휴가와 비교해 문의한 경우에는 해당 제도의 규칙과 연차 규칙을 구별해 답\n할 수 있도록 문의 항목을 나눈다. 생일 특별휴가의 날짜 범위와 분할 여부는 BD-02@v4에서 확\nHR-V4-HANDBOOK / v4\n7\n\n\n인하며, 연차 이월이나 반차 규칙을 그대로 옮겨",
+      "pages": [
+        {
+          "page": 7,
+          "canonical_start": 11520,
+          "canonical_end": 11748,
+          "page_start": 1687,
+          "page_end": 1915
+        },
+        {
+          "page": 8,
+          "canonical_start": 11750,
+          "canonical_end": 11776,
+          "page_start": 0,
+          "page_end": 26
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 7,
+      "retrieval_score": 0.028370221327967807,
+      "text_hash": "0ab8e65269eb7d86f461e35134247fb689684f04d0923ae62751b3bf9bb7af8e"
+    },
+    {
+      "chunk_id": "c-79c185f7cb65e078b51c5e7b95612214ba0bfd4b9a3399a61040ae721f70fc32",
+      "document_id": "hr-handbook",
+      "start": 29568,
+      "end": 29824,
+      "text": "과 관련되는지 확인한다. 결과 자료를 받았다는 사실과 휴가 사용 기록의 확인을 구분하고, 합\n격 여부를 기존 신청 자격의 새로운 조건으로 추가하지 않는다. 결과 자료에 새로운 시험 일정이나\n 다음 회차에 관한 설명이 포함되어 있어도 이를 다음 교육휴가의 신청으로 자동 등록하지 않는다.\n 신청자가 실제 사용 날짜의 오입력을 함께 알리면 그 항목을 별도 정정 요청으로 식별하고 원래 기\n록과 대조한다. 자료의 일부가 읽히지 않더라도 휴가 기록 확인에 필요하지 ",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 29568,
+          "canonical_end": 29824,
+          "page_start": 680,
+          "page_end": 936
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 8,
+      "retrieval_score": 0.028083267871170464,
+      "text_hash": "b08f1ce0df771eb5f118a2b9686cdeeeeabf828ac374e4432c9e2d57b5dd2465"
+    },
+    {
+      "chunk_id": "c-6d8d42b21b053e0eb2b8256092f1725ce570e79cf8f5efb1e2600b67aa76ea46",
+      "document_id": "hr-handbook",
+      "start": 29760,
+      "end": 30016,
+      "text": "을 별도 정정 요청으로 식별하고 원래 기\n록과 대조한다. 자료의 일부가 읽히지 않더라도 휴가 기록 확인에 필요하지 않은 내용까지 다시 제\n출하도록 요구하지 않으며, 확인 가능한 범위와 미확인 범위를 내부 기록에 구분한다. 담당자가 결\n과 안내를 작성할 때에는 자료 수신 여부와 기록 정정 여부를 각각 표시한다. 다른 업무로 자료를 \n전달할 필요가 있는 경우에도 어떤 사실을 확인하려는 것인지 특정하고, 교육휴가의 이용 기록이 \n시험 성적 평가 자료로 잘못 분",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 29760,
+          "canonical_end": 30016,
+          "page_start": 872,
+          "page_end": 1128
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 9,
+      "retrieval_score": 0.027313266443701224,
+      "text_hash": "6fad6c02abfba955a430c4ed8ea9466fdf8b2f39813b348fad233688e867192c"
+    },
+    {
+      "chunk_id": "c-751f0f8cf20aeab15d745b730bd1c10071881e6a7e3ee737e03742686af8ffc3",
+      "document_id": "hr-handbook",
+      "start": 192,
+      "end": 448,
+      "text": "6장 출장의 승인과 일정 관리\n제1장 생일 특별휴가와 포인트의 구분 [BD]\n제1절 적용 기준 [BD-S1]\nBD-01 적용 대상과 부여 일수\n입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상\n에서 제외한다.\n담당자는 신청 내역에 표시된 재직 기간과 수습 구분을 각각 확인한다. 두 정보의 표시가 서로 맞\n지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운\n 제",
+      "pages": [
+        {
+          "page": 1,
+          "canonical_start": 192,
+          "canonical_end": 448,
+          "page_start": 192,
+          "page_end": 448
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 10,
+      "retrieval_score": 0.026742734890354787,
+      "text_hash": "30be76a66bbcba447b7f0818a5e75cf779bd7eaceb3f35175b70a81ffd803062"
+    },
+    {
+      "chunk_id": "c-b87137cbda382eeb550686bf0b47d32fd338726a97c8a68998ce75478922454d",
+      "document_id": "hr-handbook",
+      "start": 8064,
+      "end": 8320,
+      "text": "용 단위의 확인은 별도로 처리하며, 통지된 날짜가 사용 \nHR-V4-HANDBOOK / v4\n5\n\n\n날짜와 어떻게 연결되는지 표시한다. 시스템 입력이 뒤이어 이루어졌다면 입력 시각만으로 앞선 \n통지를 없었던 것으로 취급하지 않고 두 사건의 순서를 남긴다. 긴급 신청으로 처리한 기록은 AN-\n05@v4의 검토·통지 과정에서도 그 구분을 유지한다. 당일 접수가 가능하다는 안내를 모든 연차 \n신청의 일반 기한으로 바꾸지 않으며, 긴급성이 확인되지 않은 문의에는",
+      "pages": [
+        {
+          "page": 5,
+          "canonical_start": 8064,
+          "canonical_end": 8118,
+          "page_start": 1841,
+          "page_end": 1895
+        },
+        {
+          "page": 6,
+          "canonical_start": 8120,
+          "canonical_end": 8320,
+          "page_start": 0,
+          "page_end": 200
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 11,
+      "retrieval_score": 0.015873015873015872,
+      "text_hash": "11ea86f253915e100f2941572d3ba151fd23a058b0043d7dbf72e4ca68e34024"
+    },
+    {
+      "chunk_id": "c-7b8ee3ff8cee669055b04780e4cfc37fc82f2a7c8bf909a9e835345d1c620969",
+      "document_id": "hr-handbook",
+      "start": 7872,
+      "end": 8128,
+      "text": "접수 예외\n통상적인 신청 경로와 달리 긴급 사유로 당일 팀장에게 알린 후 신청한 경우에는 통지에 관한 정보\n와 시스템 신청 기록을 연결한다. 담당자는 신청자가 전달한 긴급 사유의 존재와 통지 내용을 확인\n할 수 있는 범위에서 정리하되, 이 규정집에 없는 긴급 사유의 목록을 만들어 일률적으로 제외하지 \n않는다. 통지 사실에 대한 확인과 연차 사용 단위의 확인은 별도로 처리하며, 통지된 날짜가 사용 \nHR-V4-HANDBOOK / v4\n5\n\n\n날짜와 어떻게 ",
+      "pages": [
+        {
+          "page": 5,
+          "canonical_start": 7872,
+          "canonical_end": 8118,
+          "page_start": 1649,
+          "page_end": 1895
+        },
+        {
+          "page": 6,
+          "canonical_start": 8120,
+          "canonical_end": 8128,
+          "page_start": 0,
+          "page_end": 8
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 12,
+      "retrieval_score": 0.015625,
+      "text_hash": "b04dda32d522ec39f9b642ab69e9ee4396328d3bc590c0b5ebbe0387ce9822f3"
+    },
+    {
+      "chunk_id": "c-d5671c27291574f3d37620c914bebf7d2320bfbecc8e71442888169d89461f47",
+      "document_id": "hr-handbook",
+      "start": 3648,
+      "end": 3904,
+      "text": "별개로 식별한다. 포인트를 받았다는 \n문의가 휴가 승인 확인으로 접수되면 문의 목적을 먼저 구분하고, 휴가에 관한 내용은 BD-03@v4\n의 승인 기록에서 확인한다. 지급 내역 화면을 휴가 승인서 대신 첨부하거나 두 상태를 같은 항목\n으로 합치지 않는다.\n제2장 연차의 사용과 기록 관리 [AN]\n제1절 발생과 사용 단위 [AN-S1]\nAN-01 발생 기준\n1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 ",
+      "pages": [
+        {
+          "page": 3,
+          "canonical_start": 3648,
+          "canonical_end": 3904,
+          "page_start": 800,
+          "page_end": 1056
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 13,
+      "retrieval_score": 0.015384615384615385,
+      "text_hash": "4581e9db968fc8576bb7d33235ea81f0346f22309ae0b54f20e6cb4f18d4fc14"
+    },
+    {
+      "chunk_id": "c-b626c9bf7e1cd5a6b44eb8995a433358399b15e746a473e7693343e1cca361be",
+      "document_id": "hr-handbook",
+      "start": 384,
+      "end": 640,
+      "text": "가 서로 맞\n지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운\n 제외 사유로 처리하지 않는다.\nBD-02 사용 범위와 다른 제도\n생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다. 생일 특별휴가는 분할할 수 없다.\n신청서에는 사용하려는 날짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의\n로 연차로 바꾸지 않고 선택 오류인지 신청 의",
+      "pages": [
+        {
+          "page": 1,
+          "canonical_start": 384,
+          "canonical_end": 640,
+          "page_start": 384,
+          "page_end": 640
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 14,
+      "retrieval_score": 0.014925373134328358,
+      "text_hash": "ce9d6b1c6f134fc1e7ee4bb1e45fb1e3dd7d7d98e12ce1ae3b9cb5d73774b116"
+    },
+    {
+      "chunk_id": "c-628277f8a505587077ba522aae35338600d6d0dbb06d2260996121ab7d562892",
+      "document_id": "hr-handbook",
+      "start": 8448,
+      "end": 8704,
+      "text": "7 미사용 연차의 이월 기준\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 연차의 사용 \n기한은 다음 해 3월 31일이다. 생일 특별휴가에는 이 규정을 적용하지 않는다.\n이월 기록에는 원래 연도와 사용 기한을 구별하여 표시한다. 다른 휴가 종류의 잔여 표시를 이월할\n 연차에 포함하지 않고, 종류가 불분명한 내역은 합산하기 전에 확인 대상으로 남긴다.\nAN-08 연도를 넘긴 내역의 대조\n전년도에서 넘어온 연차와 해당 ",
+      "pages": [
+        {
+          "page": 6,
+          "canonical_start": 8448,
+          "canonical_end": 8704,
+          "page_start": 328,
+          "page_end": 584
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 15,
+      "retrieval_score": 0.014705882352941176,
+      "text_hash": "199787c226e48f08a873b976b8260682562679d80cff0e603c88e16213805610"
+    },
+    {
+      "chunk_id": "c-3bcf9f92bc73b6ede560ba8b70f294a468d9a07d67c423411e078e40e6deeb04",
+      "document_id": "hr-handbook",
+      "start": 30144,
+      "end": 30400,
+      "text": "다른 휴가 사용을 함께 묻는 문의에서는 먼저 이 장에서 확\n인할 수 있는 항목을 구분한다. 교육휴가에 관한 기록은 ED-01@v4과 ED-02@v4의 기준에 연결\n하고, 규정집에 답이 없는 비용 지원이나 별도의 시험 제도는 확인되지 않은 사항으로 남긴다. 담당\n자가 알고 있는 다른 사례만으로 이번 문의의 지원 여부를 확정하지 않는다. 여러 항목 중 일부 확\n인이 끝나면 완료된 항목을 안내하면서 남은 항목의 상태를 함께 적고, 전체 문의가 종결된 것으로 \n",
+      "pages": [
+        {
+          "page": 18,
+          "canonical_start": 30144,
+          "canonical_end": 30400,
+          "page_start": 1256,
+          "page_end": 1512
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 16,
+      "retrieval_score": 0.014492753623188406,
+      "text_hash": "91bbc15ffdf2959536bba96440413c9d5918e4fa660d34f71fe589736246caa8"
+    },
+    {
+      "chunk_id": "c-75329f255c4926886d15ce44d13ded9b1ee49d6d0c0446924a205eaf5412de67",
+      "document_id": "hr-handbook",
+      "start": 5760,
+      "end": 6016,
+      "text": "2영업일 전까지 휴가 시스템에서 신청한다. 긴급 사유가 있으면 당일 팀장에게 알린 \n후 신청할 수 있다.\n연차 신청을 접수하면 사용 예정일, 하루 또는 반차 구분, 원래 제출 기록을 식별할 수 있는 정보를 \n연결한다. 신청자가 작성한 자유 서술의 개인 사유를 사용 일수 계산 항목과 혼합하지 않는다. 시\n스템에 기재된 기간과 신청자가 설명한 기간이 다르면 달력상 시작일과 종료일, 실제 사용하려는 \n날짜를 먼저 확인한다. 표시된 기간 전체를 임의로 근무일로 ",
+      "pages": [
+        {
+          "page": 4,
+          "canonical_start": 5760,
+          "canonical_end": 6016,
+          "page_start": 1365,
+          "page_end": 1621
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 17,
+      "retrieval_score": 0.013888888888888888,
+      "text_hash": "e730bd39a2f805e061c116ea4f5c54b5f3075be6be8ef6279b0164aaee80c564"
+    },
+    {
+      "chunk_id": "c-da37ad6c347dde013f6113a626db6676c5fa1a8ed0d1e0aa7dec626dcb6b4876",
+      "document_id": "hr-handbook",
+      "start": 8256,
+      "end": 8512,
+      "text": ". 당일 접수가 가능하다는 안내를 모든 연차 \n신청의 일반 기한으로 바꾸지 않으며, 긴급성이 확인되지 않은 문의에는 통상 기한과 확인 중인 사\n항을 나누어 설명한다. 같은 직원의 다른 날짜 신청까지 긴급 신청으로 일괄 변경하거나, 긴급 신청\n을 했다는 이유로 차감 단위를 다르게 적용하지 않는다.\n제3절 이월과 변경 이력 [AN-S3]\nAN-07 미사용 연차의 이월 기준\n해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 ",
+      "pages": [
+        {
+          "page": 6,
+          "canonical_start": 8256,
+          "canonical_end": 8512,
+          "page_start": 136,
+          "page_end": 392
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 18,
+      "retrieval_score": 0.013888888888888888,
+      "text_hash": "c8ae0d52f87e02cca261243829c04b1358baf19cc1df81c5f40a55a8102b3580"
+    },
+    {
+      "chunk_id": "c-2fa23fe9725818f6af1cc57f41cb02eff7a61f224815976f47f7e125c8c0cbf0",
+      "document_id": "hr-handbook",
+      "start": 28032,
+      "end": 28288,
+      "text": "할 수 있다. 이 사례는 ED-03@v4의 정보 구분을 설명하는 것으로, 시험 일정 변경 시 추가 휴가를\n 부여하거나 기존 사용량을 자동 복구한다는 별도 규칙을 뜻하지 않는다.\nED-06 응시 계획 취소와 요청 상태의 정리\n응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다. 시\n험 접수만 취소한 것인지 휴가 신청도 취소하려는 것인지 구분하고, 신청자가 아직 결정하지 못한 \n문의를 확정된 취소로 기록하지 않는다. 확인된",
+      "pages": [
+        {
+          "page": 17,
+          "canonical_start": 28032,
+          "canonical_end": 28288,
+          "page_start": 992,
+          "page_end": 1248
+        }
+      ],
+      "heading_path": [
+        "제5장 교육휴가의 신청과 변경 [ED]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 19,
+      "retrieval_score": 0.0136986301369863,
+      "text_hash": "51fbbcc0b39825dd081b5a665f9a17e05ae461d77ebc47680d4cdf9b192a7cbb"
+    },
+    {
+      "chunk_id": "c-44da8ca9c9a9f0b5c39b64b96ad5ccbb90581898392852935274e224f9b67a0d",
+      "document_id": "hr-handbook",
+      "start": 35904,
+      "end": 36160,
+      "text": "정된 것으로 처리하지 않는다. 확인된 의사는 기존 신청과 연결하고, 일정 일부가 남는 경우에는 \n남아 있는 날짜와 장소를 식별하여 전체 요청이 사라지지 않게 한다. 이미 승인된 요청이라면 원래\n 승인 기록과 취소 요청의 관계를 남기고, 취소 통지를 전달할 때에는 정리한 대상과 현재 상태를 \n구분한다. 신청자가 취소 요청을 철회하면 취소 처리 전후의 기록을 대조하여 무엇을 유지하거나 \n다시 확인해야 하는지 파악한다. 예약 취소나 비용 환급에 관한 문의가 함",
+      "pages": [
+        {
+          "page": 22,
+          "canonical_start": 35904,
+          "canonical_end": 36160,
+          "page_start": 1,
+          "page_end": 257
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 20,
+      "retrieval_score": 0.0136986301369863,
+      "text_hash": "e3cf6e711cfaa50087c990f5f80ab71d9863bab5d88341a72b32c349c4416808"
+    }
+  ],
+  "candidate_fingerprint": "0bfe467d64680b9e28ff9b8cb5a6ed59ede85b682d7eb090e848a3da6f761c65"
+}

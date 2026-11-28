@@ -134,6 +134,8 @@ class DocumentTests(unittest.TestCase):
                     self.assertEqual(r['status'],'answered');self.assertEqual(r['execution_kind'],'test_fixture');self.assertTrue(r['dispatch_attempted'])
                     self.assertEqual(sum(m=='POST' for m,_,_ in calls),1)
                     sent=next(body for method,_,body in calls if method=='POST')
+                    self.assertEqual(r['prompt_version'],'document-rag-json-v2')
+                    self.assertIn('조건 또는 예외', r['messages'][0]['content'])
                     self.assertEqual(sent,r['preview']['body'])
                     if provider=='ollama':
                         schema=sent['format']
