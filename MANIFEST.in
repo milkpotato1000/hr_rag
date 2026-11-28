@@ -18,6 +18,7 @@ include rag_package/llm/core.py
 include rag_package/llm/transport.py
 include rag_package/pdf_worker.py
 include rag_package/rag.py
+include rag_package/pipeline.py
 include rag_package/retrieval.py
 include rag_package/storage.py
 include rag_package/ui_jobs.py

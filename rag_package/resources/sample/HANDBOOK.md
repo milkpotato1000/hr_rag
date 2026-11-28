@@ -170,3 +170,34 @@ rag-lab chunk-report --run .rag-runs/heading-compare --out .rag-runs/heading-rep
 ```
 
 UI의 serve 명령에 `--chunk-config chunk-handbook.json`을 추가하세요. ‘청킹 → 저장 경계 실험’에서 ‘structure · 규정집 계층’을 선택하고 현재 snapshot의 경계를 만드세요. BD-03 청크의 제목 경로, 문자 범위, ‘원문 보기’를 차례로 확인하세요.
+
+## 선택한 구성으로 PDF부터 답변까지 실행하기
+
+앞서 만든 handbook-sources.json과 handbook-model.json을 사용합니다. 준비한 임베딩·리랭커 profile.json의 절대경로를 E5_PROFILE과 RERANK_PROFILE에 지정하세요. 검색 템플릿에서 검색 방식·후보 수·최종 K·문맥 예산·생성 프로필을 선택하고, 청킹은 --chunk-config에서 선택합니다.
+
+```sh
+python - <<'PY'
+import json, os
+from pathlib import Path
+cfg = json.loads(Path('rag-hybrid.json').read_text())
+cfg['embedding_config'] = str(Path(os.environ['E5_PROFILE']).resolve(strict=True))
+cfg['llm_config'] = 'handbook-model.json'
+Path('pipeline-search.json').write_text(json.dumps(cfg, indent=2))
+PY
+question='생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?'
+selected_pipeline() {
+  rag-lab pipeline --sources handbook-sources.json --chunk-config chunk-handbook.json --search-config pipeline-search.json --reranker-profile "$RERANK_PROFILE" --question "$question" "$@"
+}
+selected_pipeline --out .rag-runs/pipeline-plan
+```
+
+미리보기에서 생성 모델·전송 주소, 모델 작업 상한, 단계별 출력 폴더를 확인하세요. 실제 실행은 새 경로로 한 번 시작합니다.
+
+```sh
+selected_pipeline --out .rag-runs/pipeline-live --execute
+rag-lab pipeline-replay --run .rag-runs/pipeline-live
+```
+
+BM25로 간단히 시작하려면 fixed.json의 llm_config를 준비한 생성 프로필로 바꾼 사본을 --search-config에 주고 --reranker-profile을 생략하세요. 유료 API는 llm_config를 해당 프로필로 바꾸면 됩니다. 명시 실행하면 질문과 최종 문맥이 미리보기에 표시된 주소로 전송됩니다. 답변의 citations에서 chunk_id·heading_path·pages·start·end·quote를 보고 chunks와 rerank의 최종 문맥을 대조하세요. 실패한 실행은 pipeline.json의 failed_stage와 해당 단계 파일에서 확인하고 보존하세요.
+
+Codex 또는 Claude Code에 줄 요청 예시: “내 규정집 PDF를 handbook-v1으로 나누고 E5 Hybrid와 mMiniLM, 준비한 로컬 Qwen으로 신청 기한을 찾아줘. 실행 전 미리보기에서 모델과 전송 주소를 확인하고, 최종 답변의 인용을 PDF 원문과 대조해 줘.”

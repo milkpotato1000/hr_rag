@@ -59,7 +59,20 @@ def main(argv=None):
         server.add_argument('--chunk-config',action='append',default=[]);server.add_argument('--allow-chunking-execution',action='store_true')
         view=subs.add_parser('compare-answers',help='Compare saved answer-from-rerank results without inference')
         view.add_argument('--result',nargs=2,action='append',required=True,metavar=('LABEL','DIRECTORY'))
+        pipe=subs.add_parser('pipeline',help='Preview or run the selected pipeline')
+        for arg in ('sources','chunk-config','search-config','question','out'):
+            pipe.add_argument('--'+arg,required=True)
+        pipe.add_argument('--reranker-profile')
+        pipe.add_argument('--execute',action='store_true')
+        saved=subs.add_parser('pipeline-replay');saved.add_argument('--run',required=True)
         args=p.parse_args(argv)
+        if args.command in ('pipeline','pipeline-replay'):
+            from . import pipeline
+            result=(pipeline.replay(args.run) if args.command=='pipeline-replay' else
+                    pipeline.run(args.sources,args.chunk_config,args.search_config,args.question,args.out,
+                                 reranker_profile=args.reranker_profile,execute=args.execute))
+            print(json.dumps(result,ensure_ascii=False,indent=2))
+            return int(result['status']=='failed')
         if args.command=='compare-answers':
             from .reranking import compare_answers
             print(json.dumps(compare_answers(args.result),ensure_ascii=False,indent=2))
