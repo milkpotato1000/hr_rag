@@ -112,8 +112,8 @@ class RerankTests(unittest.TestCase):
     return envelope(provider,json.dumps(v))
    a=reranking.answer(self.ws/'none',self.ws/'provider.json',self.ws/provider,execute=True,transport=send,key_resolver=lambda _:KEY)
    self.assertEqual(a['status'],'answered',a);self.assertEqual(a['generation_requests'],1);self.assertEqual(calls.count('POST'),1)
-   self.assertEqual(a['prompt_version'],'document-rag-json-v2')
-   self.assertIn('조건 또는 예외', a['messages'][0]['content'])
+   self.assertEqual(a['prompt_version'],'document-rag-json-v3')
+   self.assertIn('각 행위를 별도 문장이나 항목으로', a['messages'][0]['content'])
    self.assertEqual(bodies,[a['preview']['body']])
    if provider=='ollama':
     schema=bodies[0]['format'];self.assertEqual(schema['properties']['citations']['items']['properties']['chunk_id']['enum'],[c['chunk_id'] for c in a['contexts']])

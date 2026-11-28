@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "question_id": "gt09",
+  "question": "재택근무 전기요금의 월 지원 한도는 얼마인가요?",
+  "query_hash": "0f37f8c11d0250d58899a6a4c1c843006111818970300192c219cf18e5b9850d",
+  "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+  "chunk_fingerprint": "acdcd8466dae5203f4e025675dcfb7bc6593b80557a4f10090503acef243a2c8",
+  "index_fingerprint": "3bffa0482285557958f228d9781dc5989400dc93b724ef0f9c012785e1b41348",
+  "execution_kind": "preview",
+  "settings": {
+    "schema_version": 2,
+    "retrieval": {
+      "method": "hybrid",
+      "candidate_k": 20,
+      "top_k": 5,
+      "context_budget_chars": 2000,
+      "rrf_k": 60
+    },
+    "llm": {
+      "schema_version": 1,
+      "profiles": {
+        "answer": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        },
+        "judge": {
+          "mode": "local",
+          "provider": "ollama",
+          "model": "EXAMPLE_OLLAMA_MODEL",
+          "base_url": "http://127.0.0.1:11434",
+          "max_output_tokens": 1024,
+          "timeout_seconds": 120,
+          "response_mode": "json_object",
+          "temperature": 0,
+          "num_ctx": 8192,
+          "seed": 42,
+          "identity": {
+            "expected_digest": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hf_id": "Qwen/Qwen3-8B",
+            "source_revision": null,
+            "conversion": "User must record their actual runtime conversion",
+            "validation_status": "example_requires_configuration"
+          }
+        }
+      },
+      "roles": {
+        "generation": "answer",
+        "evaluation": "judge"
+      }
+    },
+    "chunking": {
+      "method": "fixed",
+      "size_chars": 256,
+      "overlap_chars": 64
+    },
+    "embedding": {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "file_manifest": {
+        "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+        "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+        "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+        "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+        "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+        "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+        "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+      },
+      "device": "cpu",
+      "dtype": "float32",
+      "max_input_tokens": 512,
+      "catalog": {
+        "dimension": 384,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "pooling": "mean",
+        "limit": 512,
+        "license": "MIT",
+        "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+      },
+      "normalization": "l2",
+      "algorithm": "exact-cosine-v1"
+    }
+  },
+  "parent_result_fingerprint": "2693532afbb82fc04c4d6df6221bd88e83f0f188ac7bebc76ac3ab833ef15380",
+  "requested_n": 20,
+  "actual_n": 20,
+  "candidate_depth": 20,
+  "shortage_reason": null,
+  "original_retrieval_ms": 4908.672999998089,
+  "rows": [
+    {
+      "chunk_id": "c-7e9de44d963dcb22db239536c2e9e32660d60a5785964b707f322eb8877f75a1",
+      "document_id": "hr-handbook",
+      "start": 19008,
+      "end": 19264,
+      "text": "구분해 확인한다.\n제4장 복지 지원 내역의 확인 [WF]\n제1절 지급 기준과 문의 구분 [WF-S1]\nWF-01 식대 지원 기준\n사무실 출근일에는 식대 1만 원을 지원한다. 재택근무일과 휴가일에는 이 식대를 지원하지 \n않는다.\n식대 내역에 대한 문의는 해당 날짜의 근무 형태와 지급 표시를 연결해 확인한다. 지급 화면의 항\n목 이름만으로 사무실 출근 여부를 판단하지 않고, 날짜나 근무 형태가 불명확한 항목은 별도로 확\n인한다.\nWF-02 생일 축하 포인트\n",
+      "pages": [
+        {
+          "page": 12,
+          "canonical_start": 19008,
+          "canonical_end": 19264,
+          "page_start": 368,
+          "page_end": 624
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 1,
+      "retrieval_score": 0.03252247488101534,
+      "text_hash": "ec71b30dcc2623313da1c2b71aa597bbcad7b1a37f07b3812fc0e0db1565436f"
+    },
+    {
+      "chunk_id": "c-085c48a2e947d9d8f6d9c625f721c9131708edc1d1188151e44d7c7ac139213d",
+      "document_id": "hr-handbook",
+      "start": 12096,
+      "end": 12352,
+      "text": "육 재수강 의무로 \n바꾸지 않는다.\nRM-02 횟수와 승인 기한\n재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다. 재택근무는 휴가가 아닌 근\n무일로 집계한다.\n신청 내역에는 대상 주와 희망 날짜를 구분해 표시한다. 여러 날짜가 함께 제시되면 최종적으로 어\n떤 날짜를 신청한 것인지 확인하며, 일정 문의에 적힌 모든 후보 날짜를 승인된 근무일로 등록하지 \n않는다.\nRM-03 기기와 내부 문서 접근\n재택근무 시 회사 지급 기기와 회사 VPN을",
+      "pages": [
+        {
+          "page": 8,
+          "canonical_start": 12096,
+          "canonical_end": 12352,
+          "page_start": 346,
+          "page_end": 602
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 2,
+      "retrieval_score": 0.031544957774465976,
+      "text_hash": "21d787f692aac90e7d39c49d5c322fd33941de4ef0bce1b5576d6f1f55f5b013"
+    },
+    {
+      "chunk_id": "c-d4b98a5c3daa9e087ebf09eeba13edcf6f6534df0ddbe9c6db298f5d212940a8",
+      "document_id": "hr-handbook",
+      "start": 30912,
+      "end": 31168,
+      "text": "짜를 확인한다.\nTR-02 다른 제도의 승인과 구분\n출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.\n출장 일정에 다른 근무 형태나 휴가에 관한 문의가 포함되면 해당 종류를 구분한다. 재택근무는 R\nM-02@v4의 기준을 확인하고, 출장 승인 기록의 제목이나 날짜만으로 별도의 재택근무 승인 상태\n를 입력하지 않는다.\nTR-03 목적과 일정 정보의 작성\n출장 신청의 설명에는 업무 목적, 방문할 장소, 출발과 복귀의 예정 일정이 서로 대응하도록 \n적는",
+      "pages": [
+        {
+          "page": 19,
+          "canonical_start": 30912,
+          "canonical_end": 31168,
+          "page_start": 230,
+          "page_end": 486
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 3,
+      "retrieval_score": 0.03076923076923077,
+      "text_hash": "692b27211ad177e7c45f4c7064edbb357f4b2ec3cd8030e7b83db5a5fdf8dc3d"
+    },
+    {
+      "chunk_id": "c-851ae4c8ad2d1884122770e1617a7ac3b8e831a3a8268f3abb0593fbbd8e498e",
+      "document_id": "hr-handbook",
+      "start": 21696,
+      "end": 21952,
+      "text": "는 \n화면만 골라 근거로 사용하지 않는다. 사무실 출근, 재택근무, 휴가의 구분이 바뀐 이유를 확인할 \n수 있으면 그 정정 근거를 남기고, 아직 확인할 수 없으면 어느 자료가 미확인인지 표시한다. 재택 \nHR-V4-HANDBOOK / v4\n13\n\n\n신청이 승인되었다는 사실과 실제 근무 기록의 반영은 서로 구분하여 살피며, 신청 내역만으로 근\n무 사실을 임의 추정하지 않는다. 날짜가 잘못 연결된 경우에는 대상 날짜를 바로잡고 다른 날짜의\n 정상 내역이 영향",
+      "pages": [
+        {
+          "page": 13,
+          "canonical_start": 21696,
+          "canonical_end": 21833,
+          "page_start": 1741,
+          "page_end": 1878
+        },
+        {
+          "page": 14,
+          "canonical_start": 21835,
+          "canonical_end": 21952,
+          "page_start": 0,
+          "page_end": 117
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 4,
+      "retrieval_score": 0.030621785881252923,
+      "text_hash": "be1d1f43a6da7b6181786d8aa51fadd03fea81b48130d1a33fa3000e831fb436"
+    },
+    {
+      "chunk_id": "c-45644448c8f1869328c85a3a5eda40575c166973e15a0e7bf472c303a170963c",
+      "document_id": "hr-handbook",
+      "start": 21504,
+      "end": 21760,
+      "text": "지 않는다.\nWF-05 근무 형태 기록이 다른 경우\n식대 문의의 통상 대조 자료는 WF-01@v4의 날짜별 근무 형태와 지급 표시다. 다만 신청 화면과 \n집계 화면에서 같은 날짜의 근무 형태가 서로 다르면 어느 값이 먼저 등록되었고 어떤 정정이 진행 \n중인지 확인한 뒤 지급 내역과 연결한다. 담당자는 서로 다른 화면 중 지급액이 기대와 일치하는 \n화면만 골라 근거로 사용하지 않는다. 사무실 출근, 재택근무, 휴가의 구분이 바뀐 이유를 확인할 \n수 있으면 ",
+      "pages": [
+        {
+          "page": 13,
+          "canonical_start": 21504,
+          "canonical_end": 21760,
+          "page_start": 1549,
+          "page_end": 1805
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 5,
+      "retrieval_score": 0.02964426877470356,
+      "text_hash": "c98d69cd785f0b722a06fe61a92cf7114c1e0a4d2b714d97e64db1260f61d8f1"
+    },
+    {
+      "chunk_id": "c-b7ba733643f4112a32c40bbc95f6467633d67d406cfd1ae383f8a2edae721dd7",
+      "document_id": "hr-handbook",
+      "start": 19776,
+      "end": 20032,
+      "text": " 값을 임의로 채우지 않는다. 재\n택근무가 근무일로 집계된다는 RM-02@v4의 내용과 식대 지원 여부는 서로 다른 기준이므로, 근\n무일이라는 표시만으로 식대가 누락되었다고 판단하지 않는다. 대상 내역의 식별은 지급 기준의 \n변경이나 새 복지 항목의 등록과 구별해 처리한다.\nHR-V4-HANDBOOK / v4\n12\n\n\n제2절 대조와 정정의 진행 [WF-S2]\nWF-04 지급 표시의 확인부터 정정 통지까지\n담당자는 문의 대상 내역을 찾은 뒤 그 항목의 지급",
+      "pages": [
+        {
+          "page": 12,
+          "canonical_start": 19776,
+          "canonical_end": 19953,
+          "page_start": 1136,
+          "page_end": 1313
+        },
+        {
+          "page": 13,
+          "canonical_start": 19955,
+          "canonical_end": 20032,
+          "page_start": 0,
+          "page_end": 77
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 6,
+      "retrieval_score": 0.028782894736842105,
+      "text_hash": "ceb77dd26805084ca5ef570bffa11340d339d7a17e6dbcde32947630caa4cb01"
+    },
+    {
+      "chunk_id": "c-75f678b75e5f15dfe8dc27a37a45b7a368426e19088baae0083823c549c0d724",
+      "document_id": "hr-handbook",
+      "start": 12288,
+      "end": 12544,
+      "text": " 승인된 근무일로 등록하지 \n않는다.\nRM-03 기기와 내부 문서 접근\n재택근무 시 회사 지급 기기와 회사 VPN을 사용한다. 공용 컴퓨터로 내부 문서에 접근할 수 없다.\n기기 정보의 확인은 회사 지급 기기와 신청자의 현재 사용 기기가 연결되어 있는지를 대조하는 과\n정으로 기록한다. 연결 정보가 잘못 표시되었다는 문의를 받으면 오류가 있는 항목과 실제 확인 결\n과를 구별해 남기고, 단순한 정보 정정 문의를 개인 기기 사용 허용 요청으로 처리하지 않는다.\n",
+      "pages": [
+        {
+          "page": 8,
+          "canonical_start": 12288,
+          "canonical_end": 12544,
+          "page_start": 538,
+          "page_end": 794
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 7,
+      "retrieval_score": 0.02862400327131466,
+      "text_hash": "1db302c711a183ad3b3a25b8d3f2cff9d8422b63a11a2893c0718acc40748f89"
+    },
+    {
+      "chunk_id": "c-29a7990c962ad2a5f6f3f13b8d9d100a31da5df86603c123a7ab1573e508569b",
+      "document_id": "hr-handbook",
+      "start": 19584,
+      "end": 19840,
+      "text": "문의 내용에는 확인하려는 날짜나 내역의 제목, 화면에 표시된 값, 문의자가 차이가 있다고\n 설명한 부분을 연결한다. 이미 확인 가능한 지급 기록을 찾을 수 있는데도 같은 화면을 다시 제출\n해야만 문의를 접수하는 방식으로 처리하지 않는다. 설명만으로 대상 항목을 특정하기 어려우면 \n어느 기간이나 어떤 표시를 확인하려는지 문의하고, 확인되지 않은 값을 임의로 채우지 않는다. 재\n택근무가 근무일로 집계된다는 RM-02@v4의 내용과 식대 지원 여부는 서로 다른",
+      "pages": [
+        {
+          "page": 12,
+          "canonical_start": 19584,
+          "canonical_end": 19840,
+          "page_start": 944,
+          "page_end": 1200
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 8,
+      "retrieval_score": 0.027783137179239824,
+      "text_hash": "84d35ac5746746ed83a259c0fc809eec01fa8333142ab68f66194543d6a25d50"
+    },
+    {
+      "chunk_id": "c-6604152b22e562e496f0b79c96be1d6cba3faa40edf1544717f1b75522aad9a6",
+      "document_id": "hr-handbook",
+      "start": 18048,
+      "end": 18304,
+      "text": " 항목을 함께 넘긴\n다. 접수된 신청을 단순히 새 담당자 이름으로 다시 등록하지 않고 원래 요청의 식별 관계를 유지\n한다. 신청자가 이미 답한 기기·주소 관련 질문은 확인된 기록을 인계하여 반복 문의를 줄이고, 실\n제로 확인하지 않은 값은 이전 담당자가 확인했다고 추정해 완료 표시를 붙이지 않는다. 새 담당자\n가 설명을 보완할 때에는 추가 확인한 부분과 기존 확인 사항을 구별해 남긴다.\nRM-10 근무 기록에 관한 이견 확인\n재택근무 신청 상태와 실제 근",
+      "pages": [
+        {
+          "page": 11,
+          "canonical_start": 18048,
+          "canonical_end": 18304,
+          "page_start": 1268,
+          "page_end": 1524
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 9,
+      "retrieval_score": 0.027777777777777776,
+      "text_hash": "ef07f0a7e50c81e8dd393a899922e2e5c2c6262585a05095f399de9cd2144d4a"
+    },
+    {
+      "chunk_id": "c-d2ada5a4478e1cbc5c34f5674d244cc8f7fdfaaf39a4a66414bcc0b8e1f19ece",
+      "document_id": "hr-handbook",
+      "start": 18240,
+      "end": 18496,
+      "text": "인한 부분과 기존 확인 사항을 구별해 남긴다.\nRM-10 근무 기록에 관한 이견 확인\n재택근무 신청 상태와 실제 근무 기록이 다르게 보인다는 문의에서는 어느 날짜의 어떤 값이 다른\n지를 먼저 특정한다. 신청자에게 표시된 근무일, 승인 내역의 날짜, 집계 화면의 기준 시점을 구별\n하여 기록하고, 합계 수치만 비교해 오류 여부를 정하지 않는다. 조회 시점 차이로 최근 변경이 아\n직 반영되지 않은 것인지, 서로 다른 신청이 연결된 것인지, 날짜 자체가 잘못 입",
+      "pages": [
+        {
+          "page": 11,
+          "canonical_start": 18240,
+          "canonical_end": 18496,
+          "page_start": 1460,
+          "page_end": 1716
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 10,
+      "retrieval_score": 0.027443609022556388,
+      "text_hash": "2b113919f71f60331c90773022b59f4ed3634f6644460abf9c130622d202dc9a"
+    },
+    {
+      "chunk_id": "c-e8548b00edf6438232f5f3ad336035093e2ed780c0d0a06b9827f0c4140a8ebf",
+      "document_id": "hr-handbook",
+      "start": 12480,
+      "end": 12736,
+      "text": "목과 실제 확인 결\n과를 구별해 남기고, 단순한 정보 정정 문의를 개인 기기 사용 허용 요청으로 처리하지 않는다.\n제2절 접수와 장소 정보 [RM-S2]\nRM-04 근무 신청의 검토와 통지\n재택근무 신청을 접수하면 담당자는 신청자, 대상 주, 희망 날짜와 원래 제출본을 서로 연결한다. \n대상 주와 날짜가 맞지 않거나 날짜가 여러 주에 걸쳐 있으면 표시된 기간을 임의로 하나의 주로 묶\n지 않고 신청 의도를 확인한다. 이미 접수된 다른 신청과 날짜가 겹치면 ",
+      "pages": [
+        {
+          "page": 8,
+          "canonical_start": 12480,
+          "canonical_end": 12736,
+          "page_start": 730,
+          "page_end": 986
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 11,
+      "retrieval_score": 0.02658450704225352,
+      "text_hash": "4a02137c36e44104a1f2ae34fc340a5dd1a9b034573ebd02e9c35cb1701dd660"
+    },
+    {
+      "chunk_id": "c-1ea07ac047147bd4ba53c39a7e4f634ef15065702950afa81b433664c89727b0",
+      "document_id": "hr-handbook",
+      "start": 18816,
+      "end": 19072,
+      "text": " 날짜의 오류만\n 확인된 경우에는 확인된 부분을 먼저 설명하고 나머지 날짜까지 같은 원인이라고 단정하지 않는\n다. 내부 확인이 끝나면 정정한 항목과 그대로인 항목, 아직 자료가 부족한 항목을 구분하여 안내한\n다. 이러한 기록 확인은 새로운 재택 허용 장소나 추가 가능 일수를 설정하는 절차가 아니며, 신청 \n범위가 달라지는 내용은 기존 신청과 구분해 확인한다.\n제4장 복지 지원 내역의 확인 [WF]\n제1절 지급 기준과 문의 구분 [WF-S1]\nWF-01 식",
+      "pages": [
+        {
+          "page": 12,
+          "canonical_start": 18816,
+          "canonical_end": 19072,
+          "page_start": 176,
+          "page_end": 432
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 12,
+      "retrieval_score": 0.026171741361614778,
+      "text_hash": "323e311fd38f0b50aef2f5994d06ac3bd21723aea2a92bfea2f9dd15b38ace1c"
+    },
+    {
+      "chunk_id": "c-9d4d532f8dd3b4bcc2aea1ab46b0caec52ebbdbaf900cbe7b1eb30ffd1f79e3a",
+      "document_id": "hr-handbook",
+      "start": 21888,
+      "end": 22144,
+      "text": "무 사실을 임의 추정하지 않는다. 날짜가 잘못 연결된 경우에는 대상 날짜를 바로잡고 다른 날짜의\n 정상 내역이 영향을 받지 않았는지도 대조한다. 정정 요청이 있다는 이유만으로 식대 지원 범위를\n 확대하거나, 원자료 확인이 진행 중이라는 사실을 새로운 지급 제외 조건으로 만들지 않는다.\n같은 날짜에 사무실 출근으로 표시된 조회본과 재택근무로 표시된 조회본이 있는 상황에서는 두 \n조회본의 생성 시각과 관련 정정 기록이 차이를 설명하는 단서가 된다. 이후 화면",
+      "pages": [
+        {
+          "page": 14,
+          "canonical_start": 21888,
+          "canonical_end": 22144,
+          "page_start": 53,
+          "page_end": 309
+        }
+      ],
+      "heading_path": [
+        "제4장 복지 지원 내역의 확인 [WF]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 13,
+      "retrieval_score": 0.026171741361614778,
+      "text_hash": "cf6e92a961cee4f26616fa3978c0cddc63cce666aafb89c47c6891372d7c3573"
+    },
+    {
+      "chunk_id": "c-ccb778159237d92f6b24e9e9b5abb770e2f22a2fe86208bfa6d7164a0033b7b8",
+      "document_id": "hr-handbook",
+      "start": 18432,
+      "end": 18688,
+      "text": "조회 시점 차이로 최근 변경이 아\n직 반영되지 않은 것인지, 서로 다른 신청이 연결된 것인지, 날짜 자체가 잘못 입력된 것인지를 살\n핀다. 담당자는 확인할 수 있는 원자료와 신청자의 설명을 구별하여 보관하며, 자료가 없다는 이유\n로 근무 사실이나 부재 사실을 추정하지 않는다. 재택근무는 근무일로 집계한다는 RM-02@v4의 \nHR-V4-HANDBOOK / v4\n11\n\n\n규칙을 유지하고, 복지 내역에서 식대가 보이지 않는다는 사유를 근무일 기록이 없다는 근",
+      "pages": [
+        {
+          "page": 11,
+          "canonical_start": 18432,
+          "canonical_end": 18638,
+          "page_start": 1652,
+          "page_end": 1858
+        },
+        {
+          "page": 12,
+          "canonical_start": 18640,
+          "canonical_end": 18688,
+          "page_start": 0,
+          "page_end": 48
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 14,
+      "retrieval_score": 0.015873015873015872,
+      "text_hash": "0371e5d795087bf92893f2c1f47d9a02464bb8570ff9e7b7d34467311c3ef1a1"
+    },
+    {
+      "chunk_id": "c-dc772a95130b2fdbcd899b2ee93302f7aab08d7281539593c4186da80c10dfa9",
+      "document_id": "hr-handbook",
+      "start": 14016,
+      "end": 14272,
+      "text": "내용을 새 신청으로 다시 작성하도록 안내하지 않는다. 이전 담당자의 검토가 어디까\n지 진행되었는지 확인할 수 없는 경우에는 미확인 범위를 명시하여 이어서 확인하며, 추정으로 빈 \n항목을 채우지 않는다.\nRM-05 등록 자택과 주소 변경 요청\n재택근무 장소는 등록한 자택으로 제한한다. 주소 변경 시 근무 시작 전에 인사 담당자에게 등록 \n주소 변경을 요청한다.\n주소 변경 요청에는 기존 등록 주소를 식별할 수 있는 정보와 변경하려는 주소를 연결하여 남긴다.\n",
+      "pages": [
+        {
+          "page": 9,
+          "canonical_start": 14016,
+          "canonical_end": 14272,
+          "page_start": 910,
+          "page_end": 1166
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 15,
+      "retrieval_score": 0.015873015873015872,
+      "text_hash": "4211a9325189aa2c9a604b0e55bd8c95c7bbff0f58c8b40c602beb9a79f90fe3"
+    },
+    {
+      "chunk_id": "c-483121a2e429d03ebec92f514a4faa0f05b7b5e79ad5293f287080ee56fdd9c5",
+      "document_id": "hr-handbook",
+      "start": 17280,
+      "end": 17536,
+      "text": "짜와 요청을 확인하고, 다른 날짜의 승인을 함께 취소하지 않\n도록 범위를 구분한다. 철회가 접수되었지만 화면에 반영되지 않은 상태와 실제 기록 정리가 끝난 \n상태를 따로 안내한다. 단순 중복 신청을 정리하려는 경우에는 정상 신청이 어느 기록인지 확인한 \n뒤 중복 표시를 붙이며, 중복을 제거했다는 안내가 모든 재택근무 신청의 철회를 뜻하지 않도록 설\n명한다. 이전 주의 철회 처리를 현재 주의 승인 여부에 자동으로 적용하지 않는다.\nRM-09 알림 누락과 담",
+      "pages": [
+        {
+          "page": 11,
+          "canonical_start": 17280,
+          "canonical_end": 17536,
+          "page_start": 500,
+          "page_end": 756
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 16,
+      "retrieval_score": 0.015625,
+      "text_hash": "481cc85a824a2808ac50937f9cbef05b36280185bc75d6963eede0124bab1d83"
+    },
+    {
+      "chunk_id": "c-836673ebd023030b3de8634fe9f02c5e8d409a33f8fc5254c9f8c9b405235a18",
+      "document_id": "hr-handbook",
+      "start": 11904,
+      "end": 12160,
+      "text": "M-S1]\nRM-01 신청 대상\n입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다. 현장 장비 운영 \n직무는 재택 대상에서 제외한다.\n대상 확인에서는 재직 기간, 교육 이수 정보, 직무 구분을 각각 확인한다. 교육 이수 화면에 표시 오\n류가 있으면 확인이 필요한 항목을 기록하고, 그 오류를 새로운 자격 요건이나 교육 재수강 의무로 \n바꾸지 않는다.\nRM-02 횟수와 승인 기한\n재택근무는 매주 최대 2일이며 전주 금요일까지 팀장",
+      "pages": [
+        {
+          "page": 8,
+          "canonical_start": 11904,
+          "canonical_end": 12160,
+          "page_start": 154,
+          "page_end": 410
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 17,
+      "retrieval_score": 0.014925373134328358,
+      "text_hash": "fa8ff38bb0f75f7167bf83872af8f0d9515038d1c2dd73ac4ff32e009ea0c090"
+    },
+    {
+      "chunk_id": "c-d93f5e5bcb6ce10c982cbad6662d63a75aba2a556896489cca51258f4b860833",
+      "document_id": "hr-handbook",
+      "start": 11712,
+      "end": 11968,
+      "text": " BD-02@v4에서 확\nHR-V4-HANDBOOK / v4\n7\n\n\n인하며, 연차 이월이나 반차 규칙을 그대로 옮겨 적용하지 않는다. 처리 안내를 정정할 때에도 어느\n 제도에 대한 설명을 바꾼 것인지 표시하여 다른 신청 기록이 영향을 받은 것으로 오인되지 않게 한\n다.\n제3장 재택근무의 신청과 운영 [RM]\n제1절 신청 범위와 기본 조건 [RM-S1]\nRM-01 신청 대상\n입사 후 1개월이 지난 직원은 보안 교육을 이수하면 재택근무를 신청할 수 있다. 현",
+      "pages": [
+        {
+          "page": 7,
+          "canonical_start": 11712,
+          "canonical_end": 11748,
+          "page_start": 1879,
+          "page_end": 1915
+        },
+        {
+          "page": 8,
+          "canonical_start": 11750,
+          "canonical_end": 11968,
+          "page_start": 0,
+          "page_end": 218
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 18,
+      "retrieval_score": 0.014705882352941176,
+      "text_hash": "71a71d6f57cb0fa784874bfc63da596e19e36fdf1faee3706e9ca0adc766892c"
+    },
+    {
+      "chunk_id": "c-ebf64f9cfe0a0b378bc7ed90eb9ed1db1504046a32a4d0e59afa292e2f7ed5d0",
+      "document_id": "hr-handbook",
+      "start": 32640,
+      "end": 32896,
+      "text": "검토 중에 일정을 변경하면 변경 전후를 함\n께 전달하여 어느 버전을 대상으로 검토하는지 분명히 한다. 내용 확인 담당자가 바뀌어도 팀장 승\n인 주체를 임의로 바꾸지 않으며, 업무 인계는 승인 권한의 이전으로 표시하지 않는다. 일정표에 연\n차나 재택근무 문의가 포함되어 있으면 TR-02@v4에 따라 별도 항목으로 구분하고, 출장 승인 결\n과를 그 항목들의 결과로 전파하지 않는다.\n처리 결과를 신청자에게 안내할 때에는 요청을 식별할 수 있는 정보, 확인된 출",
+      "pages": [
+        {
+          "page": 20,
+          "canonical_start": 32640,
+          "canonical_end": 32896,
+          "page_start": 433,
+          "page_end": 689
+        }
+      ],
+      "heading_path": [
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 19,
+      "retrieval_score": 0.014705882352941176,
+      "text_hash": "39a6800794bd6a2a03cc59dcd4040bd27df5f8ec0cb28ad81e8723db22c70a3d"
+    },
+    {
+      "chunk_id": "c-541d5b86f97d1fd767b674c8f0f574a21f32f8a8c614159ce49140ccccd998ea",
+      "document_id": "hr-handbook",
+      "start": 13824,
+      "end": 14080,
+      "text": "정정 사유를 원래 메시지에 연결하고, \n신청 자체의 변경이라면 기존 승인 내역과 변경 요청을 구분해 기록한다. 재택근무가 근무일로 집\n계된다는 설명은 식대 지원의 별도 조건을 결정하지 않으므로, 근무 상태와 복지 내역을 같은 확인 \n결과로 묶지 않는다. 처리 도중 담당자가 바뀌어도 처음 접수한 신청의 식별 관계는 유지하고, 신청\n자에게 동일 내용을 새 신청으로 다시 작성하도록 안내하지 않는다. 이전 담당자의 검토가 어디까\n지 진행되었는지 확인할 수 없는 ",
+      "pages": [
+        {
+          "page": 9,
+          "canonical_start": 13824,
+          "canonical_end": 14080,
+          "page_start": 718,
+          "page_end": 974
+        }
+      ],
+      "heading_path": [
+        "제3장 재택근무의 신청과 운영 [RM]"
+      ],
+      "source_fingerprint": "b5abf56d9dbe9d07d7ce8414d2af39de327afd4fb2731d7ecac86bf840765700",
+      "original_rank": 20,
+      "retrieval_score": 0.014285714285714285,
+      "text_hash": "17d51b5d5ac2652d2ad157c732812a56a1586204343bd0410544d6f7ba39187f"
+    }
+  ],
+  "candidate_fingerprint": "91e0e815934e44ae02345f552bc7b4fa27003dd90074a4174f945537b6e64ca8"
+}
