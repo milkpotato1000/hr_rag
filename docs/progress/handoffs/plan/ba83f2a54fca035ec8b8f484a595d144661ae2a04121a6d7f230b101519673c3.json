@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S17 LLM 청킹 경계 후보 선택",
   "next_action": "정확 채택 후 설치 경로와 짧은 PDF 전체의 로컬 선택 검증",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T08:40:24.606877+00:00",
       "evidence": "기존 dev 채팅에 지정 SHA와 실험 조건 직접 전달 성공"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T08:40:52.368443+00:00",
+      "evidence": "기존 dev 채팅이 S17 계약과 짧은 PDF 후보 사전검증·조건부 단일 호출 범위를 확인했다."
     }
   ]
 }
