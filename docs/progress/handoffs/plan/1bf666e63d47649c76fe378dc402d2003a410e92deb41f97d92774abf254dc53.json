@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "686913549ac00e1eed5d7aa364e4381c8b3ee54e",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "Validate first local LLM chunk window",
+  "next_action": "Adopt exact S2i, verify first-window inputs and controls, then invoke local chunking once",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T07:11:08.365444+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
