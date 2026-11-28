@@ -1,0 +1,123 @@
+{
+  "status": "complete",
+  "claimed": true,
+  "started_at": 1795856408.948412,
+  "deadline": 1795857128.948413,
+  "metadata": [
+    {
+      "endpoint": "/api/version",
+      "actor": "supervisor",
+      "at": 1795856376.7042172,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/tags",
+      "actor": "supervisor",
+      "at": 1795856376.769761,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/show",
+      "actor": "supervisor",
+      "at": 1795856376.777764,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856376.808222,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856407.7795699,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/tags",
+      "actor": "adapter",
+      "at": 1795856408.938308,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856413.019508,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856418.278226,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856423.526272,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856428.7655869,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856434.0108569,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856439.270793,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856444.5365639,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/tags",
+      "actor": "adapter",
+      "at": 1795856448.573913,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795856448.692018,
+      "status": "received"
+    }
+  ],
+  "requests": [
+    {
+      "question_id": "first",
+      "reserved_at": 1795856408.948413,
+      "dispatch_attempted": true,
+      "response_received": true,
+      "server_completion": "response_and_unloaded_observed",
+      "status": "complete",
+      "body_hash": "ac55e4136d51d58186a28e11fdeb9a1890046fc7f99cd27a36e866d9e643daaf",
+      "finished_at": 1795856479.797817
+    }
+  ],
+  "gates": [],
+  "active": null,
+  "server_start_attempts": 1,
+  "limits": {
+    "generation": 1,
+    "wall_seconds": 720,
+    "http_seconds": 480,
+    "watchdog_seconds": 510,
+    "metadata": 160,
+    "metadata_timeout": 5,
+    "rss_bytes": 8589934592
+  },
+  "automatic_retries": 0
+}

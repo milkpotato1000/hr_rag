@@ -1,0 +1,28 @@
+{
+  "status": "abstained",
+  "answer": {
+    "status": "abstained",
+    "answer": "근거에 재택근무 전기요금 월 지원 한도에 대한 정보가 없습니다.",
+    "citations": []
+  },
+  "provider_status": "complete",
+  "finish_reason": "stop",
+  "usage": {
+    "input_tokens": 2338,
+    "output_tokens": 462,
+    "provider_duration_ms": 39616.894958
+  },
+  "error": null,
+  "citation_validation": null,
+  "model_calls": 1,
+  "replay_calls": 0,
+  "canonical_sha256": "1c6867d284d136b2eb1cf6f9a707506480946988eaa155ae46b13ce25e2eb298",
+  "canonical_chars": 38582,
+  "approved_gt09": true,
+  "verified_contexts": 5,
+  "identity": {
+    "status": "verified",
+    "before": true,
+    "after": true
+  }
+}

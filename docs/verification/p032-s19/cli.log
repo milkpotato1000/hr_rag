@@ -1,0 +1,91 @@
+{
+  "status": "abstained",
+  "question": "재택근무 전기요금의 월 지원 한도는 얼마인가요?",
+  "mode": "execute",
+  "execution_kind": "live",
+  "stages": {
+    "snapshot": "complete",
+    "chunks": "complete",
+    "index": "complete",
+    "search": "complete",
+    "candidates": "complete",
+    "rerank": "complete",
+    "answer": "complete"
+  },
+  "answer": {
+    "status": "abstained",
+    "answer": "근거에 재택근무 전기요금 월 지원 한도에 대한 정보가 없습니다.",
+    "citations": []
+  },
+  "active_stage": null,
+  "plan": {
+    "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+    "chunking": {
+      "schema_version": 1,
+      "method": "fixed",
+      "size_chars": 400,
+      "overlap_chars": 80
+    },
+    "retrieval": {
+      "method": "bm25",
+      "top_k": 5,
+      "context_budget_chars": 4000,
+      "candidate_k": 20,
+      "rrf_k": 60
+    },
+    "embedding": null,
+    "reranker": null,
+    "generation": {
+      "provider": "ollama",
+      "model": "qwen3:4b",
+      "destination": "http://127.0.0.1:11434",
+      "configuration_required": false
+    },
+    "generation_profile": {
+      "provider": "ollama",
+      "base_url": "http://127.0.0.1:11434",
+      "model": "qwen3:4b",
+      "max_output_tokens": 4096,
+      "timeout_seconds": 480,
+      "response_mode": "json_object",
+      "temperature": 0.6,
+      "think": true,
+      "num_ctx": 8192,
+      "seed": 42,
+      "mode": "local",
+      "identity": {
+        "hf_id": "Qwen/Qwen3-4B-Thinking-2507",
+        "source_revision": null,
+        "conversion": "historical_ollama_import",
+        "quantization": "Q4_K_M",
+        "expected_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "validation_status": "user_configured_unverified"
+      }
+    },
+    "effective_chunking": {
+      "schema_version": 1,
+      "method": "fixed",
+      "size_chars": 400,
+      "overlap_chars": 80
+    },
+    "chunking_destination": null,
+    "work_upper_bounds": {
+      "boundary_llm_requests": 0,
+      "boundary_embedding_items": 0,
+      "index_jobs": 0,
+      "query_jobs": 0,
+      "rerank_pairs": 0,
+      "generation_requests": 1
+    },
+    "outputs": {
+      "snapshot": "snapshot",
+      "chunks": "chunks",
+      "index": "index",
+      "search": "search",
+      "candidates": "candidates",
+      "rerank": "rerank",
+      "answer": "answer"
+    }
+  },
+  "generation_requests": 1
+}
