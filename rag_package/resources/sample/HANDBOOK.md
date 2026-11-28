@@ -260,3 +260,17 @@ rag-lab pipeline-compare --runs .rag-runs/fixed-run .rag-runs/recursive-run
 ```
 
 위 경로를 실제 저장한 두 통합 실행 폴더로 바꾸세요. 질문과 원문이 같은지 확인하고, 변경 항목이 chunk.method 하나인지 읽으세요. BD-03 문장이 각 실행에서 몇 번째 문맥에 들어갔는지 펼쳐 보세요. 청크 ID가 달라도 문서·페이지·문자 범위로 같은 문장을 찾을 수 있습니다. 끝으로 답변에 등장하는 조건을 실제 인용문과 대조하세요. 질문도 바꿨다면 답변 차이에 질문의 영향이 섞입니다. 비교와 재열기는 저장 파일만 읽습니다.
+
+### 원문을 두 가지로 나눠 보고 모델에게 고르게 하기
+
+짧은 PDF에서 조항 제목과 조건이 함께 남는지 비교할 수 있습니다. 작업 폴더에 아래 내용을 `chunk-choice.json`으로 저장하세요. `llm_config`는 chunking 역할이 설정된 프로필 경로입니다. 아래 명령의 snapshot은 자기 PDF로 만든 통합 미리보기의 snapshot 폴더입니다.
+
+```json
+{"schema_version":1,"method":"llm","partition_mode":"candidate_choice","llm_config":"llm-chunking.json","size_chars":150,"overlap_chars":0,"unit_max_chars":150}
+```
+
+```sh
+rag-lab chunk --snapshot '내 문서 실습-preview/snapshot' --config chunk-choice.json --out choice-preview
+```
+
+`choice-preview/preview.json`의 requests에서 각 후보의 pieces를 읽으세요. 각 조각에는 원문과 시작·끝 위치가 들어 있습니다. 앞에서 채운 안과 뒤에서 채운 안이 같으면 모델 호출을 건너뜁니다. 실제 모델 프로필을 준비한 뒤 새 출력 폴더로 같은 명령에 `--execute-chunking`을 추가하면 선택 ID와 청크가 저장됩니다. 통합 실습에서도 `pipeline --chunk-config chunk-choice.json`으로 같은 설정을 선택할 수 있습니다.

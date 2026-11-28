@@ -75,6 +75,42 @@ class ChunkTests(unittest.TestCase):
    return envelope('openai_chat',json.dumps({'end_unit_ids':['01']}))
   failed=a.build(self.ws/'snapshot',cfg,self.ws/'bad',execute=True,transport=wrong,key_resolver=lambda _:KEY)
   self.assertEqual(failed['status'],'failed');self.assertEqual(self.calls,[1])
+ def test_candidate_choice_partition_and_failures(self):
+  self.lc()
+  cfg=self.cfg('llm',size_chars=100,overlap_chars=20,unit_max_chars=19,window_max_chars=140,partition_mode='candidate_choice')
+  def run(name,choice='1',finish='stop'):
+   def send(*args):
+    self.calls.append(args[3])
+    return envelope('openai_chat',json.dumps({'candidate_id':choice}),finish)
+   return a.build(self.ws/'snapshot',cfg,self.ws/name,execute=True,transport=send,key_resolver=lambda _:KEY)
+  target=self.ws/'choice'
+  self.assertEqual(run('choice')['status'],'ready')
+  saved,docs,chunks,maps=a.load(target)
+  windows=saved['details']['windows']
+  self.assertGreater(len(windows),1)
+  self.assertTrue(saved['statistics']['forced_units'])
+  self.assertEqual(len(self.calls),sum(len(w['candidates'])>1 for w in windows))
+  self.assertGreater(len(self.calls),0)
+  for w in windows:
+   for candidate in w['candidates']:
+    parts=candidate['pieces']
+    self.assertTrue(all(len(i['text'])==i['end']-i['start']<=80 for i in parts))
+    self.assertEqual([i['end'] for i in parts[:-1]],[i['start'] for i in parts[1:]])
+  with patch.object(llm,'invoke',side_effect=AssertionError('model')):a.replay(target)
+  for name,choice,finish in [('bad-choice','invalid','stop'),('truncated','1','length')]:
+   self.calls.clear()
+   self.assertEqual(run(name,choice,finish)['status'],'failed')
+   self.assertEqual(len(self.calls),1)
+   self.assertFalse((self.ws/name).exists())
+  cfg=self.cfg('llm',window_max_units=1,partition_mode='candidate_choice')
+  with patch.object(llm,'invoke',side_effect=AssertionError('model')):
+   single=run('single')
+  self.assertEqual(single['status'],'ready')
+  self.assertEqual(single['work']['dispatches'],0)
+  self.assertTrue(all(w['selection_reason']=='single_candidate' for w in a.load(self.ws/'single')[0]['details']['windows']))
+  saved['details']['windows'][0]['candidates'][0]['pieces'][0]['text']='changed'
+  write_json(target/'chunk.json',saved);self.reseal(target)
+  with self.assertRaisesRegex(RagError,'stale_partition_candidates'):a.load(target)
  def test_three_llm_providers_and_tamper(self):
   for provider in ('ollama','openai_chat','anthropic_messages'):
    self.lc(provider);out=self.ws/provider;r=a.build(self.ws/'snapshot',self.cfg('llm'),out,execute=True,transport=self.send(provider),key_resolver=lambda _:KEY);self.assertEqual(r['status'],'ready',r)

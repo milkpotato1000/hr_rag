@@ -40,10 +40,10 @@ def preflight(snapshot_dir,config_path):
     if method=='llm':
         batches=policy.windows(us,c['window_max_chars'],c['window_max_units']);require(len(batches)<=c['max_windows'],'window_limit','chunking')
         for n,batch in enumerate(batches):
-            messages=policy.messages(batch,c['size_chars']-c['overlap_chars'],c.get('id_representation','persistent'));preview=llm.preview(model,'chunking',messages)
+            messages,choice=policy.window_input(batch,c);preview=llm.preview(model,'chunking',messages)
             size=len(json.dumps(preview['body'],ensure_ascii=False,allow_nan=False).encode())
             require(size<=c['max_prompt_bytes'],'prompt_bytes_limit','chunking')
-            records.append({'window_id':f'w{n:03d}','unit_ids':[u['id'] for u in batch],'messages':messages,'request':preview,'request_bytes':size,'token_count':None,'status':'pending','response':None,'selected_end_ids':None,'dispatch_attempted':False,'outcome_unknown':False})
+            records.append({**choice,'window_id':f'w{n:03d}','unit_ids':[u['id'] for u in batch],'messages':messages,'request':preview,'request_bytes':size,'token_count':None,'status':'pending','response':None,'selected_end_ids':None,'dispatch_attempted':False,'outcome_unknown':False})
     # Upper bound of one chunk per unit; rule methods are also computed before any model call.
     if method in ('fixed','recursive','structure'):
         chunks,maps=make_chunks(docs,sm['fingerprint'],rule_settings(c),max_chunks=10000);require(len(chunks)<=10000,'chunk_limit','chunking')
@@ -106,6 +106,13 @@ def build(snapshot_dir,config_path,out,*,execute=False,embedding_backend=None,tr
             for record in records:
                 remaining=deadline-time.monotonic();require(remaining>0,'total_deadline_exceeded','chunking')
                 record['status']='in_progress';persist();batch=[byid[i] for i in record['unit_ids']]
+                if record.get('selection_reason')=='single_candidate':
+                    candidate=record['candidates'][0]
+                    base.extend(policy.parse({'end_unit_ids':candidate['end_unit_ids']},batch,c['size_chars']-c['overlap_chars']))
+                    record.update(status='complete',selected_candidate_id=candidate['id'],selected_end_ids=candidate['end_unit_ids'])
+                    work['successful_windows']+=1
+                    persist()
+                    continue
                 def bounded_send(method,url,headers,body,timeout):
                     remaining=deadline-time.monotonic()
                     if remaining<=0:raise TransportError('timeout',outcome_unknown=False)
@@ -128,10 +135,13 @@ def build(snapshot_dir,config_path,out,*,execute=False,embedding_backend=None,tr
                 if not record['dispatch_attempted']:record['outcome_unknown']=False
                 require(response['request_fingerprint']==record['request']['request_fingerprint'],'request_identity_changed','chunking')
                 require(response['status']=='complete','chunking_provider_'+response['status'],'chunking')
-                resolved=policy.resolve_response(response['parsed_json'],batch,c.get('id_representation','persistent'))
+                if 'candidates' in record:
+                    resolved=policy.chosen_ends(response['parsed_json'],record['candidates'])
+                    record['selected_candidate_id']=response['parsed_json']['candidate_id']
+                else:resolved=policy.resolve_response(response['parsed_json'],batch,c.get('id_representation','persistent'))
                 selected=policy.parse(resolved,batch,c['size_chars']-c['overlap_chars']);base.extend(selected)
                 record.update(status='complete',selected_end_ids=resolved['end_unit_ids']);work['successful_windows']+=1;persist()
-            details={'prompt_version':policy.prompt_version(c),'windows':[{'window_id':r['window_id'],'unit_ids':r['unit_ids'],'selected_end_ids':r['selected_end_ids'],'actual_messages_hash':r['request']['actual_messages_hash'],'request_fingerprint':r['request']['request_fingerprint']} for r in records]}
+            details={'prompt_version':policy.prompt_version(c),'windows':[{**{key:r[key] for key in ('candidates','selection_reason','selected_candidate_id') if key in r},'window_id':r['window_id'],'unit_ids':r['unit_ids'],'selected_end_ids':r['selected_end_ids'],'actual_messages_hash':r['request']['actual_messages_hash'],'request_fingerprint':r['request']['request_fingerprint']} for r in records]}
         work['elapsed_ms']=(time.monotonic()-started)*1000
         def prepared(r):
             diagnostic.update(status='publication_prepared',artifact_fingerprint=r['chunk_fingerprint']);persist()
@@ -179,7 +189,12 @@ def load(root):
         batches=policy.windows(us,bp['window_max_chars'],bp['window_max_units'])
         require(len(batches)==len(r['details']['windows'])<=bp['max_windows'],'stale_windows','chunking')
         for n,(batch,w) in enumerate(zip(batches,r['details']['windows'])):
-            request=llm.preview(policy.saved_llm(bp['model']),'chunking',policy.messages(batch,bp['size_chars']-bp['overlap_chars'],bp.get('id_representation','persistent')))
+            messages,choice=policy.window_input(batch,bp)
+            if choice:
+                require(all(w.get(key)==value for key,value in choice.items()),'stale_partition_candidates','chunking')
+                chosen=policy.chosen_ends({'candidate_id':w.get('selected_candidate_id')},choice['candidates'])
+                require(chosen['end_unit_ids']==w['selected_end_ids'],'stale_partition_selection','chunking')
+            request=llm.preview(policy.saved_llm(bp['model']),'chunking',messages)
             require(w['window_id']==f'w{n:03d}' and w['unit_ids']==[u['id'] for u in batch] and w['actual_messages_hash']==request['actual_messages_hash'] and w['request_fingerprint']==request['request_fingerprint'],'stale_window_request','chunking')
             require(len(json.dumps(request['body'],ensure_ascii=False,allow_nan=False).encode())<=bp['max_prompt_bytes'],'prompt_bytes_limit','chunking')
             batch=[byid.get(i) for i in w['unit_ids']];require(all(x is not None for x in batch),'stale_window_units','chunking');flat.extend(w['unit_ids'])

@@ -1,0 +1,13 @@
+F...................
+======================================================================
+FAIL: test_candidate_choice_partition_and_failures (test_chunk_artifact.ChunkTests.test_candidate_choice_partition_and_failures)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 92, in test_candidate_choice_partition_and_failures
+    self.assertTrue(any(w['selection_reason']=='single_candidate' for w in windows))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.795s
+
+FAILED (failures=1)

@@ -58,10 +58,12 @@ def run(sources, chunk_config, search_config, question, out, *, reranker_profile
                         'embedding':embedding.identity(ep) if ep else None,'reranker':reranker.identity(rp) if rp else None,
                         'generation':generation,'generation_profile':{k:v for k,v in llm['profiles'][llm['roles']['generation']].items() if k!='api_key_env'},
                         'effective_chunking':chunk_artifact.policy.effective(cfg,model),'chunking_destination':chunk_target,
-                        'work_upper_bounds':{'boundary_llm_requests':len(windows),'boundary_embedding_items':len(units) if cfg['method']=='semantic' else 0,
+                        'work_upper_bounds':{'boundary_llm_requests':sum(w.get('selection_reason')!='single_candidate' for w in windows),'boundary_embedding_items':len(units) if cfg['method']=='semantic' else 0,
                                              'index_jobs':int(bool(ep)),'query_jobs':int(bool(ep)),
                                              'rerank_pairs':settings['candidate_k'] if rp else 0,'generation_requests':1},
                         'outputs':{name:name for name in stages}}
+        if cfg.get("partition_mode")=="candidate_choice":
+            report["plan"]["partition_windows"]=[{k:w[k] for k in ("window_id","candidates","selection_reason")} for w in windows]
         if execute:
             require(not generation['configuration_required'] and (not chunk_target or not chunk_target['configuration_required'])
                     and (not ep or embedding.configured(ep)) and (not rp or reranker.configured(rp)),
