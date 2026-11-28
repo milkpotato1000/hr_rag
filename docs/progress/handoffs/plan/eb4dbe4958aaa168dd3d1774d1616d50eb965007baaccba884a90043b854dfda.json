@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S27 저장 E5 벡터에서 의미 청킹 임계값 비교",
   "next_action": "정확 채택 후 세 임계값에서 경계 원인과 근거 순위를 설치 CLI로 대조",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T09:35:46.657572+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T09:36:00.881945+00:00",
+      "evidence": "dev 채팅에 S27 정확 SHA와 세 임계값 재현 범위를 직접 전달했다."
     }
   ]
 }
