@@ -1,0 +1,2805 @@
+{
+  "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+  "deadline": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청",
+  "full": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+  "page": 1,
+  "interval": [
+    684,
+    734
+  ],
+  "candidate_fingerprint": "46c09d4ac4b4bc5150c0a018e91bb37e6fd4158061a2674260fc730e5d5d67f3",
+  "chunk_count": 121,
+  "embedding": {
+    "e5": {
+      "index": "4266b031c9360a16079f2fea7c8f5ebc12ecca06afcaa7174a3a58fcd942b52b",
+      "bm25": {
+        "deadline": 1,
+        "full": 2,
+        "ranks": [
+          {
+            "rank": 1,
+            "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+            "interval": [
+              320,
+              720
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": true,
+            "full": false
+          },
+          {
+            "rank": 2,
+            "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "interval": [
+              640,
+              1040
+            ],
+            "pages": [
+              1,
+              2
+            ],
+            "deadline": true,
+            "full": true
+          },
+          {
+            "rank": 3,
+            "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+            "interval": [
+              5440,
+              5840
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 4,
+            "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+            "interval": [
+              5760,
+              6160
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 5,
+            "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+            "interval": [
+              3520,
+              3920
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 6,
+            "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+            "interval": [
+              24960,
+              25360
+            ],
+            "pages": [
+              15,
+              16
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 7,
+            "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+            "interval": [
+              960,
+              1360
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 8,
+            "id": "c-61a1fb1a7d16ff9b97c05d7db6953eb83e793f706f93d3af50ac6548ab81b396",
+            "interval": [
+              1280,
+              1680
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 9,
+            "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+            "interval": [
+              19200,
+              19600
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 10,
+            "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+            "interval": [
+              8320,
+              8720
+            ],
+            "pages": [
+              6
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 11,
+            "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+            "interval": [
+              0,
+              400
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 12,
+            "id": "c-dee587727fda738eedfa366bb08097c98ff290a0b91a712161ea50d4a41fec8e",
+            "interval": [
+              18880,
+              19280
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 13,
+            "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+            "interval": [
+              24640,
+              25040
+            ],
+            "pages": [
+              15
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 14,
+            "id": "c-45cc2b54a5128ce932e51958a2f3ed189c649caa62f344ed12258d0669eff9b9",
+            "interval": [
+              19840,
+              20240
+            ],
+            "pages": [
+              12,
+              13
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 15,
+            "id": "c-75a476397866b2220b8b75ef9780e9a165f9f25d72140a53c69767995017e20f",
+            "interval": [
+              23040,
+              23440
+            ],
+            "pages": [
+              14
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 16,
+            "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+            "interval": [
+              11520,
+              11920
+            ],
+            "pages": [
+              7,
+              8
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 17,
+            "id": "c-5d0aeed2b67fdfb4065be1c65f6f41698897e6dd5fe6e6d094f8bbd19da94468",
+            "interval": [
+              23680,
+              24080
+            ],
+            "pages": [
+              14,
+              15
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 18,
+            "id": "c-906394f5e170ec684c4589c65fa7b538a76eee9b6eaeab53dc8820ea4648d1e5",
+            "interval": [
+              6080,
+              6480
+            ],
+            "pages": [
+              4,
+              5
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 19,
+            "id": "c-d34bab40e2c9d9c36e8abc24a2edd24b9f978de867203e8973f17ab92af4f4da",
+            "interval": [
+              10240,
+              10640
+            ],
+            "pages": [
+              7
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 20,
+            "id": "c-048bee10adf501026ca70692e604fe108311a6598a0bd56ab9cc24530e863da3",
+            "interval": [
+              6400,
+              6800
+            ],
+            "pages": [
+              5
+            ],
+            "deadline": false,
+            "full": false
+          }
+        ]
+      },
+      "dense": {
+        "deadline": 1,
+        "full": 2,
+        "ranks": [
+          {
+            "rank": 1,
+            "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+            "interval": [
+              320,
+              720
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": true,
+            "full": false
+          },
+          {
+            "rank": 2,
+            "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "interval": [
+              640,
+              1040
+            ],
+            "pages": [
+              1,
+              2
+            ],
+            "deadline": true,
+            "full": true
+          },
+          {
+            "rank": 3,
+            "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+            "interval": [
+              11520,
+              11920
+            ],
+            "pages": [
+              7,
+              8
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 4,
+            "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+            "interval": [
+              0,
+              400
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 5,
+            "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+            "interval": [
+              24960,
+              25360
+            ],
+            "pages": [
+              15,
+              16
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 6,
+            "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+            "interval": [
+              3520,
+              3920
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 7,
+            "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+            "interval": [
+              960,
+              1360
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 8,
+            "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+            "interval": [
+              24640,
+              25040
+            ],
+            "pages": [
+              15
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 9,
+            "id": "c-7e69f29f58f2ccdb0e0ff67cc1c37e9e5a3d9240b0bb80f479835a73c41012e2",
+            "interval": [
+              27840,
+              28240
+            ],
+            "pages": [
+              17
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 10,
+            "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+            "interval": [
+              19200,
+              19600
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 11,
+            "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+            "interval": [
+              8320,
+              8720
+            ],
+            "pages": [
+              6
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 12,
+            "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+            "interval": [
+              5760,
+              6160
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 13,
+            "id": "c-1c00c454cd720616295703d52a93f5961079805ecd3d6c7f1dad7a18d4dcda55",
+            "interval": [
+              27520,
+              27920
+            ],
+            "pages": [
+              17
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 14,
+            "id": "c-44c8db3e3418bcb804e2b4d08cff173f54834ade38987f99e6be7df3a42a563f",
+            "interval": [
+              30080,
+              30480
+            ],
+            "pages": [
+              18
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 15,
+            "id": "c-cfdec59fe501c6eaef818f0ba212fcf44eb6c5898cdc37b2df5584b4473f5f24",
+            "interval": [
+              9920,
+              10320
+            ],
+            "pages": [
+              7
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 16,
+            "id": "c-8781fab59057375df9739dcef669a3b94cdb254d25e0c46442004aa35403bf82",
+            "interval": [
+              7040,
+              7440
+            ],
+            "pages": [
+              5
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 17,
+            "id": "c-75a476397866b2220b8b75ef9780e9a165f9f25d72140a53c69767995017e20f",
+            "interval": [
+              23040,
+              23440
+            ],
+            "pages": [
+              14
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 18,
+            "id": "c-80f8ed1c85676ee68a177888b445029319b0caabc81b65174a378c2d79ef9946",
+            "interval": [
+              29440,
+              29840
+            ],
+            "pages": [
+              18
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 19,
+            "id": "c-65e18cc1dd534ffe3c99c6cdbab6465a41bbaafd473e7f8a51b9c3809163e74e",
+            "interval": [
+              33920,
+              34320
+            ],
+            "pages": [
+              20,
+              21
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 20,
+            "id": "c-a8b20c82076641e0514bdff74e0b7d2d7f9611e5dda29eefdfa774b73add0971",
+            "interval": [
+              26560,
+              26960
+            ],
+            "pages": [
+              16
+            ],
+            "deadline": false,
+            "full": false
+          }
+        ]
+      },
+      "hybrid": {
+        "deadline": 1,
+        "full": 2,
+        "ranks": [
+          {
+            "rank": 1,
+            "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+            "interval": [
+              320,
+              720
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": true,
+            "full": false
+          },
+          {
+            "rank": 2,
+            "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "interval": [
+              640,
+              1040
+            ],
+            "pages": [
+              1,
+              2
+            ],
+            "deadline": true,
+            "full": true
+          },
+          {
+            "rank": 3,
+            "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+            "interval": [
+              3520,
+              3920
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 4,
+            "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+            "interval": [
+              24960,
+              25360
+            ],
+            "pages": [
+              15,
+              16
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 5,
+            "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+            "interval": [
+              960,
+              1360
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 6,
+            "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+            "interval": [
+              0,
+              400
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 7,
+            "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+            "interval": [
+              5760,
+              6160
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 8,
+            "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+            "interval": [
+              11520,
+              11920
+            ],
+            "pages": [
+              7,
+              8
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 9,
+            "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+            "interval": [
+              19200,
+              19600
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 10,
+            "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+            "interval": [
+              24640,
+              25040
+            ],
+            "pages": [
+              15
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 11,
+            "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+            "interval": [
+              8320,
+              8720
+            ],
+            "pages": [
+              6
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 12,
+            "id": "c-75a476397866b2220b8b75ef9780e9a165f9f25d72140a53c69767995017e20f",
+            "interval": [
+              23040,
+              23440
+            ],
+            "pages": [
+              14
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 13,
+            "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+            "interval": [
+              5440,
+              5840
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 14,
+            "id": "c-61a1fb1a7d16ff9b97c05d7db6953eb83e793f706f93d3af50ac6548ab81b396",
+            "interval": [
+              1280,
+              1680
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 15,
+            "id": "c-7e69f29f58f2ccdb0e0ff67cc1c37e9e5a3d9240b0bb80f479835a73c41012e2",
+            "interval": [
+              27840,
+              28240
+            ],
+            "pages": [
+              17
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 16,
+            "id": "c-dee587727fda738eedfa366bb08097c98ff290a0b91a712161ea50d4a41fec8e",
+            "interval": [
+              18880,
+              19280
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 17,
+            "id": "c-1c00c454cd720616295703d52a93f5961079805ecd3d6c7f1dad7a18d4dcda55",
+            "interval": [
+              27520,
+              27920
+            ],
+            "pages": [
+              17
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 18,
+            "id": "c-44c8db3e3418bcb804e2b4d08cff173f54834ade38987f99e6be7df3a42a563f",
+            "interval": [
+              30080,
+              30480
+            ],
+            "pages": [
+              18
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 19,
+            "id": "c-45cc2b54a5128ce932e51958a2f3ed189c649caa62f344ed12258d0669eff9b9",
+            "interval": [
+              19840,
+              20240
+            ],
+            "pages": [
+              12,
+              13
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 20,
+            "id": "c-cfdec59fe501c6eaef818f0ba212fcf44eb6c5898cdc37b2df5584b4473f5f24",
+            "interval": [
+              9920,
+              10320
+            ],
+            "pages": [
+              7
+            ],
+            "deadline": false,
+            "full": false
+          }
+        ],
+        "delivered": [
+          {
+            "rank": 1,
+            "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+            "interval": [
+              320,
+              720
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": true,
+            "full": false
+          },
+          {
+            "rank": 2,
+            "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "interval": [
+              640,
+              1040
+            ],
+            "pages": [
+              1,
+              2
+            ],
+            "deadline": true,
+            "full": true
+          },
+          {
+            "rank": 3,
+            "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+            "interval": [
+              3520,
+              3920
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 4,
+            "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+            "interval": [
+              24960,
+              25360
+            ],
+            "pages": [
+              15,
+              16
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 5,
+            "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+            "interval": [
+              960,
+              1360
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          }
+        ],
+        "chars": 2000
+      }
+    },
+    "bge": {
+      "index": "65eb00ac1958ce1468201d755ca1ccc9193d45817ab3c70fd8826a7a3ebe5e25",
+      "bm25": {
+        "deadline": 1,
+        "full": 2,
+        "ranks": [
+          {
+            "rank": 1,
+            "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+            "interval": [
+              320,
+              720
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": true,
+            "full": false
+          },
+          {
+            "rank": 2,
+            "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "interval": [
+              640,
+              1040
+            ],
+            "pages": [
+              1,
+              2
+            ],
+            "deadline": true,
+            "full": true
+          },
+          {
+            "rank": 3,
+            "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+            "interval": [
+              5440,
+              5840
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 4,
+            "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+            "interval": [
+              5760,
+              6160
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 5,
+            "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+            "interval": [
+              3520,
+              3920
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 6,
+            "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+            "interval": [
+              24960,
+              25360
+            ],
+            "pages": [
+              15,
+              16
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 7,
+            "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+            "interval": [
+              960,
+              1360
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 8,
+            "id": "c-61a1fb1a7d16ff9b97c05d7db6953eb83e793f706f93d3af50ac6548ab81b396",
+            "interval": [
+              1280,
+              1680
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 9,
+            "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+            "interval": [
+              19200,
+              19600
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 10,
+            "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+            "interval": [
+              8320,
+              8720
+            ],
+            "pages": [
+              6
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 11,
+            "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+            "interval": [
+              0,
+              400
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 12,
+            "id": "c-dee587727fda738eedfa366bb08097c98ff290a0b91a712161ea50d4a41fec8e",
+            "interval": [
+              18880,
+              19280
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 13,
+            "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+            "interval": [
+              24640,
+              25040
+            ],
+            "pages": [
+              15
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 14,
+            "id": "c-45cc2b54a5128ce932e51958a2f3ed189c649caa62f344ed12258d0669eff9b9",
+            "interval": [
+              19840,
+              20240
+            ],
+            "pages": [
+              12,
+              13
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 15,
+            "id": "c-75a476397866b2220b8b75ef9780e9a165f9f25d72140a53c69767995017e20f",
+            "interval": [
+              23040,
+              23440
+            ],
+            "pages": [
+              14
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 16,
+            "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+            "interval": [
+              11520,
+              11920
+            ],
+            "pages": [
+              7,
+              8
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 17,
+            "id": "c-5d0aeed2b67fdfb4065be1c65f6f41698897e6dd5fe6e6d094f8bbd19da94468",
+            "interval": [
+              23680,
+              24080
+            ],
+            "pages": [
+              14,
+              15
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 18,
+            "id": "c-906394f5e170ec684c4589c65fa7b538a76eee9b6eaeab53dc8820ea4648d1e5",
+            "interval": [
+              6080,
+              6480
+            ],
+            "pages": [
+              4,
+              5
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 19,
+            "id": "c-d34bab40e2c9d9c36e8abc24a2edd24b9f978de867203e8973f17ab92af4f4da",
+            "interval": [
+              10240,
+              10640
+            ],
+            "pages": [
+              7
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 20,
+            "id": "c-048bee10adf501026ca70692e604fe108311a6598a0bd56ab9cc24530e863da3",
+            "interval": [
+              6400,
+              6800
+            ],
+            "pages": [
+              5
+            ],
+            "deadline": false,
+            "full": false
+          }
+        ]
+      },
+      "dense": {
+        "deadline": 1,
+        "full": 1,
+        "ranks": [
+          {
+            "rank": 1,
+            "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "interval": [
+              640,
+              1040
+            ],
+            "pages": [
+              1,
+              2
+            ],
+            "deadline": true,
+            "full": true
+          },
+          {
+            "rank": 2,
+            "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+            "interval": [
+              320,
+              720
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": true,
+            "full": false
+          },
+          {
+            "rank": 3,
+            "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+            "interval": [
+              0,
+              400
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 4,
+            "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+            "interval": [
+              960,
+              1360
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 5,
+            "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+            "interval": [
+              5760,
+              6160
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 6,
+            "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+            "interval": [
+              24640,
+              25040
+            ],
+            "pages": [
+              15
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 7,
+            "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+            "interval": [
+              11520,
+              11920
+            ],
+            "pages": [
+              7,
+              8
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 8,
+            "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+            "interval": [
+              3520,
+              3920
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 9,
+            "id": "c-448dcef59da3a6f0b041ceecaa3946630e10197b76229e62572f268daa67c884",
+            "interval": [
+              25280,
+              25680
+            ],
+            "pages": [
+              16
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 10,
+            "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+            "interval": [
+              19200,
+              19600
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 11,
+            "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+            "interval": [
+              24960,
+              25360
+            ],
+            "pages": [
+              15,
+              16
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 12,
+            "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+            "interval": [
+              8320,
+              8720
+            ],
+            "pages": [
+              6
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 13,
+            "id": "c-5045b5f17ae6370bf684f799695123ef213090940bcb7f953a53f5f1be9f0580",
+            "interval": [
+              30400,
+              30800
+            ],
+            "pages": [
+              18,
+              19
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 14,
+            "id": "c-95123240dc796107231182fdd0650be7ac7aa2e5d741d41ec8687f47fd17e535",
+            "interval": [
+              30720,
+              31120
+            ],
+            "pages": [
+              19
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 15,
+            "id": "c-1208d700a007e68613bde646bd223598f53f3111ff15c2250fb15e601c5d2a0c",
+            "interval": [
+              2880,
+              3280
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 16,
+            "id": "c-048bee10adf501026ca70692e604fe108311a6598a0bd56ab9cc24530e863da3",
+            "interval": [
+              6400,
+              6800
+            ],
+            "pages": [
+              5
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 17,
+            "id": "c-1c00c454cd720616295703d52a93f5961079805ecd3d6c7f1dad7a18d4dcda55",
+            "interval": [
+              27520,
+              27920
+            ],
+            "pages": [
+              17
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 18,
+            "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+            "interval": [
+              5440,
+              5840
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 19,
+            "id": "c-7e69f29f58f2ccdb0e0ff67cc1c37e9e5a3d9240b0bb80f479835a73c41012e2",
+            "interval": [
+              27840,
+              28240
+            ],
+            "pages": [
+              17
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 20,
+            "id": "c-2af9575d7e80b307a8cd504b6da41168a37ef1b272f1958114127abeb03abdb7",
+            "interval": [
+              4160,
+              4560
+            ],
+            "pages": [
+              3,
+              4
+            ],
+            "deadline": false,
+            "full": false
+          }
+        ]
+      },
+      "hybrid": {
+        "deadline": 1,
+        "full": 2,
+        "ranks": [
+          {
+            "rank": 1,
+            "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+            "interval": [
+              320,
+              720
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": true,
+            "full": false
+          },
+          {
+            "rank": 2,
+            "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "interval": [
+              640,
+              1040
+            ],
+            "pages": [
+              1,
+              2
+            ],
+            "deadline": true,
+            "full": true
+          },
+          {
+            "rank": 3,
+            "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+            "interval": [
+              5760,
+              6160
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 4,
+            "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+            "interval": [
+              960,
+              1360
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 5,
+            "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+            "interval": [
+              3520,
+              3920
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 6,
+            "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+            "interval": [
+              0,
+              400
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 7,
+            "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+            "interval": [
+              24960,
+              25360
+            ],
+            "pages": [
+              15,
+              16
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 8,
+            "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+            "interval": [
+              24640,
+              25040
+            ],
+            "pages": [
+              15
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 9,
+            "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+            "interval": [
+              19200,
+              19600
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 10,
+            "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+            "interval": [
+              5440,
+              5840
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 11,
+            "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+            "interval": [
+              8320,
+              8720
+            ],
+            "pages": [
+              6
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 12,
+            "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+            "interval": [
+              11520,
+              11920
+            ],
+            "pages": [
+              7,
+              8
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 13,
+            "id": "c-048bee10adf501026ca70692e604fe108311a6598a0bd56ab9cc24530e863da3",
+            "interval": [
+              6400,
+              6800
+            ],
+            "pages": [
+              5
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 14,
+            "id": "c-61a1fb1a7d16ff9b97c05d7db6953eb83e793f706f93d3af50ac6548ab81b396",
+            "interval": [
+              1280,
+              1680
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 15,
+            "id": "c-448dcef59da3a6f0b041ceecaa3946630e10197b76229e62572f268daa67c884",
+            "interval": [
+              25280,
+              25680
+            ],
+            "pages": [
+              16
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 16,
+            "id": "c-dee587727fda738eedfa366bb08097c98ff290a0b91a712161ea50d4a41fec8e",
+            "interval": [
+              18880,
+              19280
+            ],
+            "pages": [
+              12
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 17,
+            "id": "c-5045b5f17ae6370bf684f799695123ef213090940bcb7f953a53f5f1be9f0580",
+            "interval": [
+              30400,
+              30800
+            ],
+            "pages": [
+              18,
+              19
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 18,
+            "id": "c-45cc2b54a5128ce932e51958a2f3ed189c649caa62f344ed12258d0669eff9b9",
+            "interval": [
+              19840,
+              20240
+            ],
+            "pages": [
+              12,
+              13
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 19,
+            "id": "c-95123240dc796107231182fdd0650be7ac7aa2e5d741d41ec8687f47fd17e535",
+            "interval": [
+              30720,
+              31120
+            ],
+            "pages": [
+              19
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 20,
+            "id": "c-1208d700a007e68613bde646bd223598f53f3111ff15c2250fb15e601c5d2a0c",
+            "interval": [
+              2880,
+              3280
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          }
+        ],
+        "delivered": [
+          {
+            "rank": 1,
+            "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+            "interval": [
+              320,
+              720
+            ],
+            "pages": [
+              1
+            ],
+            "deadline": true,
+            "full": false
+          },
+          {
+            "rank": 2,
+            "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "interval": [
+              640,
+              1040
+            ],
+            "pages": [
+              1,
+              2
+            ],
+            "deadline": true,
+            "full": true
+          },
+          {
+            "rank": 3,
+            "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+            "interval": [
+              5760,
+              6160
+            ],
+            "pages": [
+              4
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 4,
+            "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+            "interval": [
+              960,
+              1360
+            ],
+            "pages": [
+              2
+            ],
+            "deadline": false,
+            "full": false
+          },
+          {
+            "rank": 5,
+            "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+            "interval": [
+              3520,
+              3920
+            ],
+            "pages": [
+              3
+            ],
+            "deadline": false,
+            "full": false
+          }
+        ],
+        "chars": 2000
+      }
+    }
+  },
+  "rerank": {
+    "off": {
+      "deadline": 1,
+      "full": 2,
+      "ranks": [
+        {
+          "rank": 1,
+          "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+          "interval": [
+            320,
+            720
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": true,
+          "full": false
+        },
+        {
+          "rank": 2,
+          "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+          "interval": [
+            640,
+            1040
+          ],
+          "pages": [
+            1,
+            2
+          ],
+          "deadline": true,
+          "full": true
+        },
+        {
+          "rank": 3,
+          "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+          "interval": [
+            3520,
+            3920
+          ],
+          "pages": [
+            3
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 4,
+          "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+          "interval": [
+            24960,
+            25360
+          ],
+          "pages": [
+            15,
+            16
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 5,
+          "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+          "interval": [
+            960,
+            1360
+          ],
+          "pages": [
+            2
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 6,
+          "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+          "interval": [
+            0,
+            400
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 7,
+          "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+          "interval": [
+            5760,
+            6160
+          ],
+          "pages": [
+            4
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 8,
+          "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+          "interval": [
+            11520,
+            11920
+          ],
+          "pages": [
+            7,
+            8
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 9,
+          "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+          "interval": [
+            19200,
+            19600
+          ],
+          "pages": [
+            12
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 10,
+          "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+          "interval": [
+            24640,
+            25040
+          ],
+          "pages": [
+            15
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 11,
+          "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+          "interval": [
+            8320,
+            8720
+          ],
+          "pages": [
+            6
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 12,
+          "id": "c-75a476397866b2220b8b75ef9780e9a165f9f25d72140a53c69767995017e20f",
+          "interval": [
+            23040,
+            23440
+          ],
+          "pages": [
+            14
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 13,
+          "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+          "interval": [
+            5440,
+            5840
+          ],
+          "pages": [
+            4
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 14,
+          "id": "c-61a1fb1a7d16ff9b97c05d7db6953eb83e793f706f93d3af50ac6548ab81b396",
+          "interval": [
+            1280,
+            1680
+          ],
+          "pages": [
+            2
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 15,
+          "id": "c-7e69f29f58f2ccdb0e0ff67cc1c37e9e5a3d9240b0bb80f479835a73c41012e2",
+          "interval": [
+            27840,
+            28240
+          ],
+          "pages": [
+            17
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 16,
+          "id": "c-dee587727fda738eedfa366bb08097c98ff290a0b91a712161ea50d4a41fec8e",
+          "interval": [
+            18880,
+            19280
+          ],
+          "pages": [
+            12
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 17,
+          "id": "c-1c00c454cd720616295703d52a93f5961079805ecd3d6c7f1dad7a18d4dcda55",
+          "interval": [
+            27520,
+            27920
+          ],
+          "pages": [
+            17
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 18,
+          "id": "c-44c8db3e3418bcb804e2b4d08cff173f54834ade38987f99e6be7df3a42a563f",
+          "interval": [
+            30080,
+            30480
+          ],
+          "pages": [
+            18
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 19,
+          "id": "c-45cc2b54a5128ce932e51958a2f3ed189c649caa62f344ed12258d0669eff9b9",
+          "interval": [
+            19840,
+            20240
+          ],
+          "pages": [
+            12,
+            13
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 20,
+          "id": "c-cfdec59fe501c6eaef818f0ba212fcf44eb6c5898cdc37b2df5584b4473f5f24",
+          "interval": [
+            9920,
+            10320
+          ],
+          "pages": [
+            7
+          ],
+          "deadline": false,
+          "full": false
+        }
+      ],
+      "delivered": [
+        {
+          "rank": 1,
+          "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+          "interval": [
+            320,
+            720
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": true,
+          "full": false
+        },
+        {
+          "rank": 2,
+          "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+          "interval": [
+            640,
+            1040
+          ],
+          "pages": [
+            1,
+            2
+          ],
+          "deadline": true,
+          "full": true
+        },
+        {
+          "rank": 3,
+          "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+          "interval": [
+            3520,
+            3920
+          ],
+          "pages": [
+            3
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 4,
+          "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+          "interval": [
+            24960,
+            25360
+          ],
+          "pages": [
+            15,
+            16
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 5,
+          "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+          "interval": [
+            960,
+            1360
+          ],
+          "pages": [
+            2
+          ],
+          "deadline": false,
+          "full": false
+        }
+      ],
+      "chars": 2000
+    },
+    "mmini": {
+      "deadline": 1,
+      "full": 1,
+      "ranks": [
+        {
+          "rank": 1,
+          "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+          "interval": [
+            640,
+            1040
+          ],
+          "pages": [
+            1,
+            2
+          ],
+          "deadline": true,
+          "full": true
+        },
+        {
+          "rank": 2,
+          "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+          "interval": [
+            320,
+            720
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": true,
+          "full": false
+        },
+        {
+          "rank": 3,
+          "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+          "interval": [
+            960,
+            1360
+          ],
+          "pages": [
+            2
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 4,
+          "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+          "interval": [
+            5760,
+            6160
+          ],
+          "pages": [
+            4
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 5,
+          "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+          "interval": [
+            8320,
+            8720
+          ],
+          "pages": [
+            6
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 6,
+          "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+          "interval": [
+            0,
+            400
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 7,
+          "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+          "interval": [
+            5440,
+            5840
+          ],
+          "pages": [
+            4
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 8,
+          "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+          "interval": [
+            11520,
+            11920
+          ],
+          "pages": [
+            7,
+            8
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 9,
+          "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+          "interval": [
+            24960,
+            25360
+          ],
+          "pages": [
+            15,
+            16
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 10,
+          "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+          "interval": [
+            3520,
+            3920
+          ],
+          "pages": [
+            3
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 11,
+          "id": "c-75a476397866b2220b8b75ef9780e9a165f9f25d72140a53c69767995017e20f",
+          "interval": [
+            23040,
+            23440
+          ],
+          "pages": [
+            14
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 12,
+          "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+          "interval": [
+            24640,
+            25040
+          ],
+          "pages": [
+            15
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 13,
+          "id": "c-cfdec59fe501c6eaef818f0ba212fcf44eb6c5898cdc37b2df5584b4473f5f24",
+          "interval": [
+            9920,
+            10320
+          ],
+          "pages": [
+            7
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 14,
+          "id": "c-61a1fb1a7d16ff9b97c05d7db6953eb83e793f706f93d3af50ac6548ab81b396",
+          "interval": [
+            1280,
+            1680
+          ],
+          "pages": [
+            2
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 15,
+          "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+          "interval": [
+            19200,
+            19600
+          ],
+          "pages": [
+            12
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 16,
+          "id": "c-1c00c454cd720616295703d52a93f5961079805ecd3d6c7f1dad7a18d4dcda55",
+          "interval": [
+            27520,
+            27920
+          ],
+          "pages": [
+            17
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 17,
+          "id": "c-7e69f29f58f2ccdb0e0ff67cc1c37e9e5a3d9240b0bb80f479835a73c41012e2",
+          "interval": [
+            27840,
+            28240
+          ],
+          "pages": [
+            17
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 18,
+          "id": "c-44c8db3e3418bcb804e2b4d08cff173f54834ade38987f99e6be7df3a42a563f",
+          "interval": [
+            30080,
+            30480
+          ],
+          "pages": [
+            18
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 19,
+          "id": "c-45cc2b54a5128ce932e51958a2f3ed189c649caa62f344ed12258d0669eff9b9",
+          "interval": [
+            19840,
+            20240
+          ],
+          "pages": [
+            12,
+            13
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 20,
+          "id": "c-dee587727fda738eedfa366bb08097c98ff290a0b91a712161ea50d4a41fec8e",
+          "interval": [
+            18880,
+            19280
+          ],
+          "pages": [
+            12
+          ],
+          "deadline": false,
+          "full": false
+        }
+      ],
+      "delivered": [
+        {
+          "rank": 1,
+          "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+          "interval": [
+            640,
+            1040
+          ],
+          "pages": [
+            1,
+            2
+          ],
+          "deadline": true,
+          "full": true
+        },
+        {
+          "rank": 2,
+          "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+          "interval": [
+            320,
+            720
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": true,
+          "full": false
+        },
+        {
+          "rank": 3,
+          "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+          "interval": [
+            960,
+            1360
+          ],
+          "pages": [
+            2
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 4,
+          "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+          "interval": [
+            5760,
+            6160
+          ],
+          "pages": [
+            4
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 5,
+          "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+          "interval": [
+            8320,
+            8720
+          ],
+          "pages": [
+            6
+          ],
+          "deadline": false,
+          "full": false
+        }
+      ],
+      "chars": 2000
+    },
+    "bge-reranker": {
+      "deadline": 1,
+      "full": 1,
+      "ranks": [
+        {
+          "rank": 1,
+          "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+          "interval": [
+            640,
+            1040
+          ],
+          "pages": [
+            1,
+            2
+          ],
+          "deadline": true,
+          "full": true
+        },
+        {
+          "rank": 2,
+          "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+          "interval": [
+            320,
+            720
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": true,
+          "full": false
+        },
+        {
+          "rank": 3,
+          "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+          "interval": [
+            0,
+            400
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 4,
+          "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+          "interval": [
+            8320,
+            8720
+          ],
+          "pages": [
+            6
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 5,
+          "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+          "interval": [
+            5760,
+            6160
+          ],
+          "pages": [
+            4
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 6,
+          "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+          "interval": [
+            5440,
+            5840
+          ],
+          "pages": [
+            4
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 7,
+          "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+          "interval": [
+            960,
+            1360
+          ],
+          "pages": [
+            2
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 8,
+          "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+          "interval": [
+            11520,
+            11920
+          ],
+          "pages": [
+            7,
+            8
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 9,
+          "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+          "interval": [
+            3520,
+            3920
+          ],
+          "pages": [
+            3
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 10,
+          "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+          "interval": [
+            24960,
+            25360
+          ],
+          "pages": [
+            15,
+            16
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 11,
+          "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+          "interval": [
+            24640,
+            25040
+          ],
+          "pages": [
+            15
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 12,
+          "id": "c-61a1fb1a7d16ff9b97c05d7db6953eb83e793f706f93d3af50ac6548ab81b396",
+          "interval": [
+            1280,
+            1680
+          ],
+          "pages": [
+            2
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 13,
+          "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+          "interval": [
+            19200,
+            19600
+          ],
+          "pages": [
+            12
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 14,
+          "id": "c-75a476397866b2220b8b75ef9780e9a165f9f25d72140a53c69767995017e20f",
+          "interval": [
+            23040,
+            23440
+          ],
+          "pages": [
+            14
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 15,
+          "id": "c-dee587727fda738eedfa366bb08097c98ff290a0b91a712161ea50d4a41fec8e",
+          "interval": [
+            18880,
+            19280
+          ],
+          "pages": [
+            12
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 16,
+          "id": "c-7e69f29f58f2ccdb0e0ff67cc1c37e9e5a3d9240b0bb80f479835a73c41012e2",
+          "interval": [
+            27840,
+            28240
+          ],
+          "pages": [
+            17
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 17,
+          "id": "c-cfdec59fe501c6eaef818f0ba212fcf44eb6c5898cdc37b2df5584b4473f5f24",
+          "interval": [
+            9920,
+            10320
+          ],
+          "pages": [
+            7
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 18,
+          "id": "c-44c8db3e3418bcb804e2b4d08cff173f54834ade38987f99e6be7df3a42a563f",
+          "interval": [
+            30080,
+            30480
+          ],
+          "pages": [
+            18
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 19,
+          "id": "c-1c00c454cd720616295703d52a93f5961079805ecd3d6c7f1dad7a18d4dcda55",
+          "interval": [
+            27520,
+            27920
+          ],
+          "pages": [
+            17
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 20,
+          "id": "c-45cc2b54a5128ce932e51958a2f3ed189c649caa62f344ed12258d0669eff9b9",
+          "interval": [
+            19840,
+            20240
+          ],
+          "pages": [
+            12,
+            13
+          ],
+          "deadline": false,
+          "full": false
+        }
+      ],
+      "delivered": [
+        {
+          "rank": 1,
+          "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+          "interval": [
+            640,
+            1040
+          ],
+          "pages": [
+            1,
+            2
+          ],
+          "deadline": true,
+          "full": true
+        },
+        {
+          "rank": 2,
+          "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+          "interval": [
+            320,
+            720
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": true,
+          "full": false
+        },
+        {
+          "rank": 3,
+          "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+          "interval": [
+            0,
+            400
+          ],
+          "pages": [
+            1
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 4,
+          "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+          "interval": [
+            8320,
+            8720
+          ],
+          "pages": [
+            6
+          ],
+          "deadline": false,
+          "full": false
+        },
+        {
+          "rank": 5,
+          "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+          "interval": [
+            5760,
+            6160
+          ],
+          "pages": [
+            4
+          ],
+          "deadline": false,
+          "full": false
+        }
+      ],
+      "chars": 2000
+    }
+  }
+}

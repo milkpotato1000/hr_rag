@@ -305,3 +305,40 @@ done
 ```
 
 각 search/result.json의 candidates 순위, contexts의 전달 원문과 페이지, excluded의 예산 제외 사유를 대조하세요. 청크 크기와 전달 예산은 문자 수이고, 모델 입력 창은 토큰 수입니다. [네 구성의 검색 결과와 BD-03 원문 비교](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s22/README.md)
+
+## 임베딩 두 개와 리랭커 세 조건을 따로 비교하기
+
+질문은 “생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?”입니다. PDF 1쪽 BD-03에서 ‘사용 3영업일 전까지 휴가 시스템에서 신청’이 들어간 첫 순위와 ‘팀장의 승인을 받아야 한다’까지 포함하는 첫 순위를 따로 읽으세요. 생일휴가 조항의 두 청크는 앞쪽 구절을 공유합니다.
+
+설치 안내의 검색 SDK를 준비하고, 아래 환경변수에 model-prepare가 출력한 각 profile.json의 절대경로를 지정하세요. E5_PROFILE은 multilingual-e5-small, BGE_PROFILE은 bge-m3, MINI_RERANK_PROFILE은 mmarco-mMiniLMv2-L12-H384-v1, BGE_RERANK_PROFILE은 bge-reranker-v2-m3입니다. 다음 명령은 준비된 모델로 CPU 추론을 수행합니다. 새 실습 폴더에서 시작하세요.
+
+```sh
+question='생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?'
+rag-lab snapshot --sources handbook-sources.json --out pair-pdf
+for model in e5 bge; do
+  case "$model" in
+    e5) profile="$E5_PROFILE" ;;
+    bge) profile="$BGE_PROFILE" ;;
+  esac
+  dir="pair-$model"
+  rag-lab pipeline-setup --llm-config llm-local.json --chunk-config chunk-fixed.json --method hybrid \
+    --embedding-config "$profile" --top-k 5 --candidate-k 20 --context-budget-chars 4000 \
+    --question "$question" --out "$dir" || break
+  rag-lab build --snapshot pair-pdf --config "$dir/search.json" --out "$dir/index" --execute-retrieval || break
+  rag-lab ask --run "$dir/index" --config "$dir/search.json" --question "$question" \
+    --out "$dir/search" --execute-retrieval || break
+done
+```
+
+각 search/result.json에서 retrieval_trace.dense와 retrieval_trace.bm25를 읽고, candidates의 결합 순위와 contexts의 실제 전달 원문을 확인하세요. 리랭커 비교에서는 E5의 결합 후보를 한 번 고정해 세 조건에 같은 입력을 전달합니다.
+
+```sh
+rag-lab candidates --build pair-e5/index --result pair-e5/search --question-id first --n 20 --out pair-candidates
+rag-lab rerank --candidates pair-candidates --method none --top-k 5 --context-budget-chars 4000 --out pair-off
+rag-lab rerank --candidates pair-candidates --method cross-encoder --profile "$MINI_RERANK_PROFILE" \
+  --execute-reranking --top-k 5 --context-budget-chars 4000 --out pair-mini
+rag-lab rerank --candidates pair-candidates --method cross-encoder --profile "$BGE_RERANK_PROFILE" \
+  --execute-reranking --top-k 5 --context-budget-chars 4000 --out pair-bge-rerank
+```
+
+세 result.json에서 candidate_fingerprint가 같은지 확인한 뒤 selection.ranking과 selection.contexts를 대조하세요. 모델별 점수의 척도가 달라서 근거 순위와 실제 전달 여부를 비교합니다. [같은 질문의 실측 표와 원문](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s24/README.md)
