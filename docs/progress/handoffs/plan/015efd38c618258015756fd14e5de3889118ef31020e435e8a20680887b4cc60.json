@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S18 동일 후보 ID 구조화 출력 실험",
   "next_action": "정확 채택 후 format만 바뀌는지 검증하여 신규 1회 관측",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T08:49:45.436965+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T08:50:05.665258+00:00",
+      "evidence": "기존 dev 채팅에 지정 SHA와 단일 변경 실험 범위를 전달했다."
     }
   ]
 }
