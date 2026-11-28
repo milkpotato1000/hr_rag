@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S19 금액 미명시 질문의 로컬 답변",
   "next_action": "정확 채택 후 gt09 설치본 실제 답변 및 근거 대조",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T08:58:46.161111+00:00",
       "evidence": "기존 dev 채팅에 지정 SHA 및 gt09 실행 범위 직접 전달 성공"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T08:59:13.318890+00:00",
+      "evidence": "dev 채팅에서 S19 전달 청크 사전 대조 범위를 확인했고 5eef099에서 지정 계획 77699ec를 채택했다."
     }
   ]
 }
