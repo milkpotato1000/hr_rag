@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "379e131e17955512ca1a6016e9fb811b96a922b8",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "P032 S2e READY: explicit local thinking support, final-only response handling, one bounded gt01 probe after S2d truncation",
+  "next_action": "Exactly adopt 379e131e17955512ca1a6016e9fb811b96a922b8; implement opt-in compatibility and model-free tests/new install; freeze and run at most one gt01 under new12min ledger; preserve parent failure and holds",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T06:38:31.229639+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
