@@ -57,7 +57,13 @@ def main(argv=None):
         server.add_argument('--reranker-config',action='append',default=[]);server.add_argument('--allow-reranking-execution',action='store_true')
         server.add_argument('--qrels',action='append',default=[]);server.add_argument('--facts',action='append',default=[])
         server.add_argument('--chunk-config',action='append',default=[]);server.add_argument('--allow-chunking-execution',action='store_true')
+        view=subs.add_parser('compare-answers',help='Compare saved answer-from-rerank results without inference')
+        view.add_argument('--result',nargs=2,action='append',required=True,metavar=('LABEL','DIRECTORY'))
         args=p.parse_args(argv)
+        if args.command=='compare-answers':
+            from .reranking import compare_answers
+            print(json.dumps(compare_answers(args.result),ensure_ascii=False,indent=2))
+            return 0
         if args.command.startswith('model-') or args.command=='llm-configure':
             from . import model_catalog,model_preparation,llm_setup
             if args.command=='model-catalog':r=model_catalog.catalog()

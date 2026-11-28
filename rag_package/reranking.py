@@ -134,3 +134,40 @@ def answer(run_dir,llm_config,out,*,execute=False,transport=None,key_resolver=No
     except (RagError,OSError,UnicodeError) as e:
         err=e if isinstance(e,RagError) else RagError('output_write_failed','publish');err.dispatch_attempted=result['dispatch_attempted'];raise err from None
     return result
+
+
+def compare_answers(entries):
+    """Read sealed outputs only. Provider-specific request formatting may differ."""
+    require(2 <= len(entries) <= 20, 'comparison_size', 'comparison')
+    names = set()
+    paths = set()
+    rows = []
+    signatures = []
+    for name, directory in entries:
+        require(isinstance(name, str) and 0 < len(name.strip()) <= 128 and name not in names,
+                'invalid_comparison_label', 'comparison')
+        names.add(name)
+        path = Path(directory).resolve()
+        require(path not in paths, 'duplicate_result', 'comparison')
+        paths.add(path)
+        manifest = verify(path, 'rerank-answer')
+        require('result.json' in manifest['identity']['files'], 'missing_result', 'comparison')
+        result = read_json(path/'result.json')
+        fields = ('question', 'source_fingerprint', 'parent_rerank_fingerprint', 'contexts', 'messages')
+        signatures.append({k: fingerprint(result[k]) if result.get(k) is not None else None for k in fields})
+        preview = result.get('preview') or {}
+        body = preview.get('body') or {}
+        response = result.get('provider_result') or {}
+        rows.append({'name':name, 'status':result.get('status'), 'question':result.get('question'),
+                     'execution_kind':result.get('execution_kind'), 'provider':preview.get('provider'),
+                     'model':body.get('model'), 'request_fields':sorted(body),
+                     'request_fingerprint':preview.get('request_fingerprint'),
+                     'actual_messages_hash':result.get('actual_messages_hash'),
+                     'answer':result.get('answer'), 'error':result.get('error'),
+                     'usage':response.get('usage'), 'elapsed_ms':response.get('elapsed_ms'),
+                     'cost':response.get('cost'), 'cost_status':response.get('cost_status'),
+                     'generation_requests':result.get('generation_requests')})
+    differences = [k for k in signatures[0] if None in [s[k] for s in signatures]
+                   or any(s[k] != signatures[0][k] for s in signatures)]
+    return {'same_input':not differences, 'different_or_missing':differences, 'rows':rows,
+            'comparison_model_calls':0}

@@ -95,3 +95,17 @@ BGE-M3를 쓰려면 E5_PROFILE을 해당 준비 프로필로 바꾸고 설정 �
 UI에서는 실습 작업공간에 준비된 프로필을 등록하고 serve의 --embedding-config, --reranker-config 및 --allow-retrieval-execution, --allow-reranking-execution 옵션을 지정합니다. ‘검색과 전달 문맥’에서 질문·검색 방식·임베딩 모델을 선택하고, ‘고정 후보 리랭킹’에서 같은 검색의 후보를 고정한 뒤 ‘리랭커 계산 허용’과 ‘none과 선택 모델 비교’를 사용하세요.
 
 Codex나 Claude Code에 요청할 예시: “같은 PDF와 질문으로 위 명령을 실행해 줘. 검색 방식별로 BD-03 신청 기한을 온전히 담은 첫 청크의 순위·페이지와 최종 전달 여부를 표로 보여줘. 답변 생성은 실행하지 마.”
+
+## 같은 근거에서 생성 모델만 바꾸기
+
+위에서 만든 .rag-runs/on을 두 설정에 공통으로 사용하세요. handbook-model.json은 준비한 로컬 프로필이고 handbook-api.json은 API 프로필입니다. 먼저 둘 다 미리보기로 저장합니다.
+
+```sh
+rag-lab answer-from-rerank --run .rag-runs/on --llm-config handbook-model.json --out .rag-runs/local-preview
+rag-lab answer-from-rerank --run .rag-runs/on --llm-config handbook-api.json --out .rag-runs/api-preview
+rag-lab compare-answers --result local .rag-runs/local-preview --result api .rag-runs/api-preview
+```
+
+원하는 프로필 하나를 명시 실행하려면 해당 answer-from-rerank 명령에 --execute를 추가하고 새 출력 디렉터리를 지정하세요. 유료 API를 실제 실행하려면 모델명과 키 환경변수를 먼저 설정하세요. 다른 로컬 모델도 별도 프로필로 등록할 수 있습니다. compare-answers에서 해당 디렉터리를 선택하면 저장된 답변·인용 페이지·관측 토큰·지연을 다시 읽습니다. preview는 생성 전 상태이며 미측정 값은 null입니다.
+
+UI에서는 동일한 재정렬 결과를 열고 모델을 선택해 ‘선택 문맥으로 답변 미리보기’ 또는 ‘선택 문맥으로 실제 답변 생성’을 사용하세요. ‘생성 모델 비교’에서 두 저장 기록을 선택해 질문과 입력 일치 여부부터 확인하세요.

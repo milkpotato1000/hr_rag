@@ -1,0 +1,58 @@
+{
+  "same_input": true,
+  "different_or_missing": [],
+  "rows": [
+    {
+      "name": "local",
+      "status": "preview",
+      "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+      "execution_kind": "preview",
+      "provider": "ollama",
+      "model": "qwen3:4b",
+      "request_fields": [
+        "format",
+        "keep_alive",
+        "messages",
+        "model",
+        "options",
+        "stream",
+        "think"
+      ],
+      "request_fingerprint": "bc68cd2630f19179480c1aa0ff72246019824723ee4070c9c4a12bbf71088f55",
+      "actual_messages_hash": "f65de81cda8f2bdaee9f013b4828b31271110a7b70ed1909bdb8f0dcb6d8e2f1",
+      "answer": null,
+      "error": null,
+      "usage": null,
+      "elapsed_ms": null,
+      "cost": null,
+      "cost_status": null,
+      "generation_requests": 0
+    },
+    {
+      "name": "api",
+      "status": "preview",
+      "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+      "execution_kind": "preview",
+      "provider": "openai_chat",
+      "model": "EXAMPLE_API_MODEL",
+      "request_fields": [
+        "max_completion_tokens",
+        "messages",
+        "model",
+        "response_format",
+        "stream",
+        "temperature"
+      ],
+      "request_fingerprint": "c9c95f5deb31e16577bf012b8b9393afb2c9801b47a5034f811eb8be1f282fb9",
+      "actual_messages_hash": "f65de81cda8f2bdaee9f013b4828b31271110a7b70ed1909bdb8f0dcb6d8e2f1",
+      "answer": null,
+      "error": null,
+      "usage": null,
+      "elapsed_ms": null,
+      "cost": null,
+      "cost_status": null,
+      "generation_requests": 0
+    }
+  ],
+  "comparison_model_calls": 0
+}

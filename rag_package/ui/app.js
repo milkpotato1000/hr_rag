@@ -51,7 +51,7 @@ function retrievalChanged(){const e=state.embeddings?.find(e=>e.id===$('embeddin
 for(const id of ['retrieval','embedding-select','candidate-k','rrf-k','execute-retrieval'])$(id).addEventListener('change',retrievalChanged);
 
 function refreshReranking(b){
- for(const [id,rows] of [['candidate-select',(b.rerank_artifacts||[]).filter(a=>a.kind==='candidates').map(a=>({id:a.id,label:'고정 후보 '+a.id.slice(0,8)}))],['reranker-select',state.rerankers.map(r=>({id:r.id,label:r.model_id+(r.configuration_required?' (설정 필요)':'')+preparationLabel(r)}))],['rerank-qrels',b.labels?.qrels||[]],['rerank-facts',b.labels?.facts||[]]]){
+ for(const [id,rows] of [['generation-results',(b.rerank_artifacts||[]).filter(a=>a.kind==='rerank-answer').map(a=>({id:a.id,label:a.id}))],['candidate-select',(b.rerank_artifacts||[]).filter(a=>a.kind==='candidates').map(a=>({id:a.id,label:'고정 후보 '+a.id.slice(0,8)}))],['reranker-select',state.rerankers.map(r=>({id:r.id,label:r.model_id+(r.configuration_required?' (설정 필요)':'')+preparationLabel(r)}))],['rerank-qrels',b.labels?.qrels||[]],['rerank-facts',b.labels?.facts||[]]]){
   const box=$(id),previous=[...box.selectedOptions].map(o=>o.value);clear(box);
   if(!box.multiple){const o=el('option','미등록 / 선택 안 함 · N/A');o.value='';box.append(o);}
   for(const row of rows){const o=el('option',row.label);o.value=row.id;o.selected=previous.includes(row.id);box.append(o);}
@@ -117,3 +117,16 @@ $('boundary-build').onclick=()=>safe(()=>submit('chunk_build',{chunk_id:frozenId
 function compareBoundaries(execute){return submit('chunk_compare',{chunk_ids:frozenIds(),retrieval:retrievalSettings(),llm_config_id:$('model-select').value,questions:$('boundary-questions').value.split('\n').map(x=>x.trim()).filter(Boolean).map((question,n)=>({id:'q'+(n+1),question})),execute,...embeddingSettings(),facts_id:$('boundary-facts').value||null});}
 $('boundary-compare').onclick=()=>safe(()=>compareBoundaries(false));
 $('boundary-compare-execute').onclick=()=>safe(()=>compareBoundaries(true));
+
+$('compare-answers').addEventListener('click',()=>safe(async()=>{
+ const ids=Array.from($('generation-results').selectedOptions,o=>o.value);
+ const report=await api('/api/compare-answers',{method:'POST',body:{ids}});
+ const target=$('generation-readout');clear(target);
+ target.append(el('p',report.same_input?'질문·원문·부모 결과·전달 문맥·업무 지시 일치':'입력이 다르거나 확인 불가 · '+report.different_or_missing.join(', ')));
+ for(const row of report.rows){
+  const card=el('article',undefined,'card');
+  card.append(el('h3',row.model||row.name),el('p',row.question),el('p',row.provider+' · '+row.status+' · '+(row.execution_kind??'기록 없음')),el('p',row.answer?.answer??(row.error?.code||'생성된 답변 없음')));
+  for(const cite of row.answer?.citations||[])card.append(el('blockquote',cite.quote),el('p',cite.pages.map(p=>p.page).join(', ')+'쪽'));
+  card.append(el('p','지연 '+(row.elapsed_ms??'미측정')+' ms · 비용 '+(row.cost??'미측정')),raw(row.usage,'관측 토큰'),raw(row.request_fields,'요청 형식'));target.append(card);
+ }
+}));

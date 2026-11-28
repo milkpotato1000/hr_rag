@@ -118,6 +118,15 @@ class Handler(BaseHTTPRequestHandler):
                     except UnicodeError:raise RagError('invalid_filename','upload') from None
                     self.reply(201,r.upload(fmt,name,self.body(20*1024*1024,'application/octet-stream')));return
                 data=decode(self.body(16*1024,'application/json'))
+                if path=='/api/compare-answers':
+                    from .reranking import compare_answers
+                    require(isinstance(data,dict) and set(data)=={'ids'} and isinstance(data['ids'],list) and 2<=len(data['ids'])<=20,'comparison_size','http')
+                    entries=[]
+                    for key in data['ids']:
+                        location,entry,_=r.artifact(key)
+                        require(entry['kind']=='rerank-answer','wrong_artifact_kind','input')
+                        entries.append((key,location))
+                    self.reply(200,compare_answers(entries));return
                 if path=='/api/jobs':job,new=ui.jobs.submit(data);self.reply(202 if new else 200,job);return
                 if path=='/api/model-configs':self.reply(201,r.clone_model(data));return
                 raise RagError('unknown_route','http')
