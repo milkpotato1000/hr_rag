@@ -24,6 +24,28 @@ def messages_for(question,contexts,docs):
     return [{'role':'system','content':SYSTEM},{'role':'user','content':json.dumps(data,ensure_ascii=False,separators=(',',':'))}]
 
 
+def answer_schema(contexts):
+    """Constrain local generation to the identifiers actually present in the prompt."""
+    if not contexts:
+        return None
+    citation = {
+        'type': 'object',
+        'properties': {'chunk_id': {'type': 'string', 'enum': [c['chunk_id'] for c in contexts]}},
+        'required': ['chunk_id'],
+        'additionalProperties': False,
+    }
+    return {
+        'type': 'object',
+        'properties': {
+            'status': {'type': 'string', 'enum': ['answered', 'abstained']},
+            'answer': {'type': 'string'},
+            'citations': {'type': 'array', 'items': citation},
+        },
+        'required': ['status', 'answer', 'citations'],
+        'additionalProperties': False,
+    }
+
+
 def business_answer(value,contexts):
     try:
         fields(value,{'status','answer','citations'},set(),'answer')
@@ -51,7 +73,9 @@ def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver
     bm,docs,chunks=load_build(run,c);loaded=time.monotonic()
     trace={};ep=embedding.read_profile(c['embedding_config']) if c.get('embedding_config') else None
     candidates,contexts,excluded=select(chunks,question,c['retrieval'],run=run,embedding_profile=ep,execute_retrieval=execute_retrieval,embedding_backend=embedding_backend,trace=trace);searched=time.monotonic()
-    messages=messages_for(question,contexts,docs);preview=llm.preview(lc,'generation',messages)
+    messages=messages_for(question,contexts,docs)
+    schema = answer_schema(contexts)
+    preview = llm.preview(lc, 'generation', messages, response_schema=schema)
     result={'schema_version':1,'status':'preview','execution_kind':'test_fixture' if transport is not None or embedding_backend is not None else ('live' if execute else 'preview'),
             'source_fingerprint':bm['identity']['source_fingerprint'],'chunk_fingerprint':bm['identity']['chunk_fingerprint'],
             'index_fingerprint':bm['identity']['index_fingerprint'],'config_hash':fingerprint(effective(c,lc)),
@@ -84,7 +108,7 @@ def ask(run,config_path,question,out,*,execute=False,transport=None,key_resolver
             if not contexts:
                 result.update(status='abstained',answer={'status':'abstained','answer':'제공할 검색 근거가 없어 답변을 보류합니다.','citations':[]},citation_validation='no_context_no_dispatch')
             elif execute:
-                response=llm.invoke(lc,'generation',messages,transport=transport,key_resolver=key_resolver)
+                response=llm.invoke(lc,'generation',messages,transport=transport,key_resolver=key_resolver,response_schema=schema)
                 # Retain metadata, never retain raw/nonvalidated model content in final artifacts.
                 result['provider_result']={k:v for k,v in response.items() if k not in ('content','parsed_json')}
                 result['dispatch_attempted']=response['dispatch_attempted'];result['generation_requests']=int(response['dispatch_attempted']);result['usage']=response['usage'];result['latency_ms']['provider']=response['elapsed_ms']

@@ -108,10 +108,12 @@ def load(root):
 
 
 def answer(run_dir,llm_config,out,*,execute=False,transport=None,key_resolver=None):
-    from .rag import messages_for,business_answer,PROMPT_VERSION
+    from .rag import answer_schema, messages_for,business_answer,PROMPT_VERSION
     new_output(out);r,c,docs,_=load(run_dir);require(r['status']=='complete','rerank_not_complete','generation')
     lc=llm.validate_config(read_json(llm_config));require(lc['profiles'][lc['roles']['generation']]['response_mode']=='json_object','json_object_required','generation')
-    contexts=r['selection']['contexts'];messages=messages_for(c['question'],contexts,docs);preview=llm.preview(lc,'generation',messages)
+    contexts=r['selection']['contexts'];messages=messages_for(c['question'],contexts,docs)
+    schema = answer_schema(contexts)
+    preview = llm.preview(lc, 'generation', messages, response_schema=schema)
     result={'schema_version':1,'status':'preview','parent_rerank_fingerprint':verify(run_dir,'rerank')['fingerprint'],'candidate_fingerprint':c['candidate_fingerprint'],
             'candidate_execution_kind':c['execution_kind'],'scorer_execution_kind':r['work']['execution_kind'],'question':c['question'],'source_fingerprint':c['source_fingerprint'],'contexts':contexts,'messages':messages,'messages_hash':fingerprint(messages),
             'actual_messages_hash':preview['actual_messages_hash'],'prompt_version':PROMPT_VERSION,'preview':preview,'answer':None,'provider_result':None,
@@ -121,7 +123,7 @@ def answer(run_dir,llm_config,out,*,execute=False,transport=None,key_resolver=No
             candidates.copy_artifact(run_dir,tmp/'rerank','rerank')
             if not contexts:result.update(status='abstained',answer={'status':'abstained','answer':'제공할 근거가 없어 답변을 보류합니다.','citations':[]})
             elif execute:
-                response=llm.invoke(lc,'generation',messages,transport=transport,key_resolver=key_resolver)
+                response=llm.invoke(lc,'generation',messages,transport=transport,key_resolver=key_resolver,response_schema=schema)
                 result.update(provider_result={k:v for k,v in response.items() if k not in ('content','parsed_json')},dispatch_attempted=response['dispatch_attempted'],generation_requests=int(response['dispatch_attempted']))
                 if response['status']!='complete':result.update(status='failed',failed_stage='provider',error={'code':'provider_'+response['status']})
                 else:

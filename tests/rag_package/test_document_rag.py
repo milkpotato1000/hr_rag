@@ -133,6 +133,15 @@ class DocumentTests(unittest.TestCase):
                     r=ask(self.d/'build',cp,'생일 휴가',self.d/'answer',execute=True,transport=send,key_resolver=lambda _:KEY)
                     self.assertEqual(r['status'],'answered');self.assertEqual(r['execution_kind'],'test_fixture');self.assertTrue(r['dispatch_attempted'])
                     self.assertEqual(sum(m=='POST' for m,_,_ in calls),1)
+                    sent=next(body for method,_,body in calls if method=='POST')
+                    self.assertEqual(sent,r['preview']['body'])
+                    if provider=='ollama':
+                        schema=sent['format']
+                        self.assertEqual(schema['required'],['status','answer','citations'])
+                        self.assertFalse(schema['additionalProperties'])
+                        citation=schema['properties']['citations']['items']
+                        self.assertFalse(citation['additionalProperties'])
+                        self.assertEqual(citation['properties']['chunk_id']['enum'],[c['chunk_id'] for c in r['contexts']])
                     _,docs=load_snapshot(self.d/'build/snapshot')
                     self.assertEqual({c['document_id'] for c in r['answer']['citations']},{'one','two'})
                     for c in r['answer']['citations']:

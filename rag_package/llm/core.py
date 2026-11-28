@@ -15,7 +15,7 @@ def hash_json(value):
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',',':'), allow_nan=False).encode('utf-8')).hexdigest()
 
 
-def preview(config, role, messages):
+def preview(config, role, messages, *, response_schema=None):
     validate_config(config)
     validate_messages(messages)
     if role not in ('generation','evaluation','chunking'): raise ValidationError('role')
@@ -34,7 +34,8 @@ def preview(config, role, messages):
         body.update(think=p.get('think', False), keep_alive=0, options={'num_predict':p['max_output_tokens']})
         for k in ('temperature','num_ctx','seed'):
             if p.get(k) is not None: body['options'][k] = p[k]
-        if p['response_mode'] == 'json_object': body['format'] = 'json'
+        if p['response_mode'] == 'json_object':
+            body['format'] = copy.deepcopy(response_schema) if response_schema is not None and role == 'generation' else 'json'
     else:
         if p.get('temperature') is not None: body['temperature'] = p['temperature']
         if provider == 'openai_chat':
@@ -174,8 +175,8 @@ def configuration_required(profile):
     return profile['identity'].get('validation_status')=='example_requires_configuration' or profile['model'].startswith('EXAMPLE_')
 
 
-def invoke(config, role, messages, *, transport=None, key_resolver=None):
-    request=preview(config,role,messages)
+def invoke(config, role, messages, *, transport=None, key_resolver=None, response_schema=None):
+    request=preview(config,role,messages,response_schema=response_schema)
     p=config['profiles'][config['roles'][role]]
     result=result_base(p,role,request)
     if configuration_required(p):

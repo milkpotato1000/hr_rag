@@ -103,14 +103,18 @@ class RerankTests(unittest.TestCase):
   from test_llm import config,envelope,DIGEST,KEY
   reranking.run(self.ws/'candidates','none',self.ws/'none',top_k=2)
   for provider in ('ollama','openai_chat','anthropic_messages'):
-   cfg=config(provider,'json_object');write_json(self.ws/'provider.json',cfg);calls=[]
+   cfg=config(provider,'json_object');write_json(self.ws/'provider.json',cfg);calls=[];bodies=[]
    def send(method,url,headers,body,timeout):
     calls.append(method)
     if method=='GET':return {'models':[{'name':'fixture-model','digest':DIGEST}]}
+    bodies.append(body)
     data=json.loads(body['messages'][-1]['content']);v={'status':'answered','answer':'가상 답변','citations':[{'chunk_id':data['contexts'][0]['chunk_id']}]}
     return envelope(provider,json.dumps(v))
    a=reranking.answer(self.ws/'none',self.ws/'provider.json',self.ws/provider,execute=True,transport=send,key_resolver=lambda _:KEY)
    self.assertEqual(a['status'],'answered',a);self.assertEqual(a['generation_requests'],1);self.assertEqual(calls.count('POST'),1)
+   self.assertEqual(bodies,[a['preview']['body']])
+   if provider=='ollama':
+    schema=bodies[0]['format'];self.assertEqual(schema['properties']['citations']['items']['properties']['chunk_id']['enum'],[c['chunk_id'] for c in a['contexts']])
   cfg=config('openai_chat','json_object');write_json(self.ws/'provider.json',cfg)
   def invalid(*args):return envelope('openai_chat',json.dumps({'status':'answered','answer':'bad','citations':[{'chunk_id':'unknown'}]}))
   a=reranking.answer(self.ws/'none',self.ws/'provider.json',self.ws/'invalid',execute=True,transport=invalid,key_resolver=lambda _:KEY);self.assertEqual(a['error']['code'],'invalid_citation')
