@@ -19,6 +19,9 @@ def config(value):
     require(isinstance(method,str) and method in ('fixed','recursive','structure','semantic','llm'),'unsupported_chunking','chunking')
     common={'schema_version','method','size_chars','overlap_chars'}
     extra={'unit_max_chars','embedding_config','distance_threshold','minimum_chars'} if method=='semantic' else {'unit_max_chars','llm_config',*LLM_DEFAULTS} if method=='llm' else set()
+    if method=='llm' and 'id_representation' in c:
+        extra.add('id_representation')
+        require(c['id_representation'] in ('persistent','window_number'),'invalid_id_representation','chunking')
     if method in ('semantic','llm'):
         if method=='llm':c=dict(LLM_DEFAULTS,**c)
         size=c.get('size_chars');overlap=c.get('overlap_chars')
@@ -53,7 +56,7 @@ def read_config(path):
 def effective(c,model):
     cfg={k:v for k,v in c.items() if k not in ('embedding_config','llm_config')}
     if c['method']=='semantic':cfg['model']=embedding.identity(model)
-    elif c['method']=='llm':cfg['model']={'role':'chunking','profile':model['profiles'][model['roles']['chunking']],'prompt_version':PROMPT_VERSION}
+    elif c['method']=='llm':cfg['model']={'role':'chunking','profile':model['profiles'][model['roles']['chunking']],'prompt_version':prompt_version(c)}
     return cfg
 
 
@@ -106,9 +109,28 @@ def semantic(us,vectors,maximum,minimum,threshold):
     return base,decisions
 
 
-def messages(us,maximum):
+def prompt_version(config):
+    return 'source-window-numbers-v1' if config.get('id_representation')=='window_number' else PROMPT_VERSION
+
+
+def display_ids(units,representation):
+    if representation=='window_number':
+        return [str(n) for n in range(1,len(units)+1)]
+    require(representation=='persistent','invalid_id_representation','chunking')
+    return [u['id'] for u in units]
+
+
+def resolve_response(value,units,representation):
+    strict(value,{'end_unit_ids'},'invalid_boundaries')
+    selected=value['end_unit_ids']
+    mapping=dict(zip(display_ids(units,representation),[u['id'] for u in units]))
+    require(isinstance(selected,list) and all(isinstance(i,str) and i in mapping for i in selected),'invalid_boundaries','chunking')
+    return {'end_unit_ids':[mapping[i] for i in selected]}
+
+
+def messages(us,maximum,representation='persistent'):
     import json
-    data={'maximum_source_chars':maximum,'units':[{'id':u['id'],'text':u['text'],'start':u['start'],'end':u['end']} for u in us]}
+    data={'maximum_source_chars':maximum,'units':[{'id':label,'text':u['text'],'start':u['start'],'end':u['end']} for label,u in zip(display_ids(us,representation),us)]}
     return [{'role':'system','content':SYSTEM},{'role':'user','content':json.dumps(data,ensure_ascii=False,separators=(',',':'))}]
 
 
@@ -153,7 +175,7 @@ def validate_effective(value):
         p.update(schema_version=1,local_path='EXAMPLE_REPLAY',batch_size=1,timeout_seconds=1,max_chunks=5000)
         require(embedding.identity(embedding.profile(p))==model,'invalid_saved_model','chunking')
     elif method=='llm':
-        require(isinstance(model,dict) and set(model)=={'role','profile','prompt_version'} and model['role']=='chunking' and model['prompt_version']==PROMPT_VERSION,'invalid_saved_model','chunking')
+        require(isinstance(model,dict) and set(model)=={'role','profile','prompt_version'} and model['role']=='chunking' and model['prompt_version']==prompt_version(c),'invalid_saved_model','chunking')
         lc=saved_llm(model);llm.validate_config(lc)
         require(model['profile']['response_mode']=='json_object','json_object_required','chunking')
     else:require(model is None,'unexpected_saved_model','chunking')

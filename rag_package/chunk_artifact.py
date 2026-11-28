@@ -40,7 +40,7 @@ def preflight(snapshot_dir,config_path):
     if method=='llm':
         batches=policy.windows(us,c['window_max_chars'],c['window_max_units']);require(len(batches)<=c['max_windows'],'window_limit','chunking')
         for n,batch in enumerate(batches):
-            messages=policy.messages(batch,c['size_chars']-c['overlap_chars']);preview=llm.preview(model,'chunking',messages)
+            messages=policy.messages(batch,c['size_chars']-c['overlap_chars'],c.get('id_representation','persistent'));preview=llm.preview(model,'chunking',messages)
             size=len(json.dumps(preview['body'],ensure_ascii=False,allow_nan=False).encode())
             require(size<=c['max_prompt_bytes'],'prompt_bytes_limit','chunking')
             records.append({'window_id':f'w{n:03d}','unit_ids':[u['id'] for u in batch],'messages':messages,'request':preview,'request_bytes':size,'token_count':None,'status':'pending','response':None,'selected_end_ids':None,'dispatch_attempted':False,'outcome_unknown':False})
@@ -128,9 +128,10 @@ def build(snapshot_dir,config_path,out,*,execute=False,embedding_backend=None,tr
                 if not record['dispatch_attempted']:record['outcome_unknown']=False
                 require(response['request_fingerprint']==record['request']['request_fingerprint'],'request_identity_changed','chunking')
                 require(response['status']=='complete','chunking_provider_'+response['status'],'chunking')
-                selected=policy.parse(response['parsed_json'],batch,c['size_chars']-c['overlap_chars']);base.extend(selected)
-                record.update(status='complete',selected_end_ids=response['parsed_json']['end_unit_ids']);work['successful_windows']+=1;persist()
-            details={'prompt_version':policy.PROMPT_VERSION,'windows':[{'window_id':r['window_id'],'unit_ids':r['unit_ids'],'selected_end_ids':r['selected_end_ids'],'actual_messages_hash':r['request']['actual_messages_hash'],'request_fingerprint':r['request']['request_fingerprint']} for r in records]}
+                resolved=policy.resolve_response(response['parsed_json'],batch,c.get('id_representation','persistent'))
+                selected=policy.parse(resolved,batch,c['size_chars']-c['overlap_chars']);base.extend(selected)
+                record.update(status='complete',selected_end_ids=resolved['end_unit_ids']);work['successful_windows']+=1;persist()
+            details={'prompt_version':policy.prompt_version(c),'windows':[{'window_id':r['window_id'],'unit_ids':r['unit_ids'],'selected_end_ids':r['selected_end_ids'],'actual_messages_hash':r['request']['actual_messages_hash'],'request_fingerprint':r['request']['request_fingerprint']} for r in records]}
         work['elapsed_ms']=(time.monotonic()-started)*1000
         def prepared(r):
             diagnostic.update(status='publication_prepared',artifact_fingerprint=r['chunk_fingerprint']);persist()
@@ -173,12 +174,12 @@ def load(root):
         vectors=unpack(raw,len(us),r['details']['dimension']);expected,distances=policy.semantic(us,vectors,bp['size_chars']-bp['overlap_chars'],bp['minimum_chars'],bp['distance_threshold'])
         require(base==expected and r['details']['distances']==distances,'stale_semantic_boundaries','chunking')
     elif method=='llm':
-        require(r['details']['prompt_version']==policy.PROMPT_VERSION,'stale_prompt_version','chunking')
+        require(r['details']['prompt_version']==policy.prompt_version(bp),'stale_prompt_version','chunking')
         byid={u['id']:u for u in us};expected=[];flat=[]
         batches=policy.windows(us,bp['window_max_chars'],bp['window_max_units'])
         require(len(batches)==len(r['details']['windows'])<=bp['max_windows'],'stale_windows','chunking')
         for n,(batch,w) in enumerate(zip(batches,r['details']['windows'])):
-            request=llm.preview(policy.saved_llm(bp['model']),'chunking',policy.messages(batch,bp['size_chars']-bp['overlap_chars']))
+            request=llm.preview(policy.saved_llm(bp['model']),'chunking',policy.messages(batch,bp['size_chars']-bp['overlap_chars'],bp.get('id_representation','persistent')))
             require(w['window_id']==f'w{n:03d}' and w['unit_ids']==[u['id'] for u in batch] and w['actual_messages_hash']==request['actual_messages_hash'] and w['request_fingerprint']==request['request_fingerprint'],'stale_window_request','chunking')
             require(len(json.dumps(request['body'],ensure_ascii=False,allow_nan=False).encode())<=bp['max_prompt_bytes'],'prompt_bytes_limit','chunking')
             batch=[byid.get(i) for i in w['unit_ids']];require(all(x is not None for x in batch),'stale_window_units','chunking');flat.extend(w['unit_ids'])

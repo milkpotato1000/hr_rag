@@ -57,6 +57,24 @@ class ChunkTests(unittest.TestCase):
   with patch.object(embedding,'encode',side_effect=AssertionError('model')):
    a.replay(self.ws/'sem');a.derive(self.ws/'sem',self.cfg('semantic',distance_threshold=1.5),self.ws/'derived');a.replay(self.ws/'derived')
   r=a.build(self.ws/'snapshot',cp,self.ws/'fail',execute=True);self.assertEqual(r['status'],'failed');self.assertEqual(r['work']['boundary_model_jobs'],0);self.assertEqual(r['work']['unit_observation']['workers_started'],0);self.assertFalse((self.ws/'fail').exists())
+ def test_compact_ids_reset_and_replay(self):
+  self.lc();target=self.ws/'numbered';cfg=self.cfg('llm',id_representation='window_number')
+  result=a.build(self.ws/'snapshot',cfg,target,execute=True,transport=self.send('openai_chat'),key_resolver=lambda _:KEY)
+  self.assertEqual(result['status'],'ready',result)
+  data=a.load(target)[0];windows=data['details']['windows']
+  self.assertGreater(len(windows),1)
+  self.assertNotEqual(windows[0]['unit_ids'][0],windows[1]['unit_ids'][0])
+  for body,w in zip(self.calls,windows):
+   units=json.loads(body['messages'][-1]['content'])['units']
+   self.assertEqual([u['id'] for u in units],[str(i+1) for i in range(len(units))])
+   self.assertEqual(w['selected_end_ids'],w['unit_ids'])
+  with patch.object(llm,'invoke',side_effect=AssertionError('model')):a.replay(target)
+  self.calls.clear()
+  def wrong(*args):
+   self.calls.append(1)
+   return envelope('openai_chat',json.dumps({'end_unit_ids':['01']}))
+  failed=a.build(self.ws/'snapshot',cfg,self.ws/'bad',execute=True,transport=wrong,key_resolver=lambda _:KEY)
+  self.assertEqual(failed['status'],'failed');self.assertEqual(self.calls,[1])
  def test_three_llm_providers_and_tamper(self):
   for provider in ('ollama','openai_chat','anthropic_messages'):
    self.lc(provider);out=self.ws/provider;r=a.build(self.ws/'snapshot',self.cfg('llm'),out,execute=True,transport=self.send(provider),key_resolver=lambda _:KEY);self.assertEqual(r['status'],'ready',r)
