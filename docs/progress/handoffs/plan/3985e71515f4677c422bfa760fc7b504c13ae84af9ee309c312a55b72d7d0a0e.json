@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "114945e1da51de9c9d99e4690b752531feaec059",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "S14 로컬 또는 API 모델 설정",
+  "next_action": "정확 채택 후 두 모드의 설치본 설정과 미리보기 구현",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T08:25:32.018248+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
