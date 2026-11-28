@@ -41,7 +41,7 @@ def prepare_document(stage, document, title, synthetic):
 
 
 def setup(llm_config, chunk_config, method, out, *, embedding_config=None,
-          reranker_config=None, top_k=5, candidate_k=20, budget=4000, document=None, title=None, synthetic=False, question=None):
+          reranker_config=None, top_k=5, candidate_k=20, budget=4000, size_chars=None, overlap_chars=None, document=None, title=None, synthetic=False, question=None):
     workspace = Path.cwd()
     out = contained(workspace, out)
     require(method in ('bm25', 'dense', 'hybrid'), 'unsupported_retrieval', 'setup')
@@ -78,6 +78,12 @@ def setup(llm_config, chunk_config, method, out, *, embedding_config=None,
             model_reference='model.json'
             write_json(stage/model_reference,llm)
         chunk, boundary = chunk_policy.read_config(chunk_config)
+        if size_chars is not None or overlap_chars is not None:
+            if size_chars is not None:
+                chunk['size_chars'] = size_chars
+            if overlap_chars is not None:
+                chunk['overlap_chars'] = overlap_chars
+            chunk = chunk_policy.config(chunk)
         if chunk['method']=='semantic':
             embedding.check_files(boundary)
             write_json(stage/'boundary.json', boundary)

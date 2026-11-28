@@ -276,3 +276,32 @@ rag-lab chunk --snapshot '내 문서 실습-preview/snapshot' --config chunk-cho
 `choice-preview/preview.json`의 requests에서 각 후보의 pieces를 읽으세요. 각 조각에는 원문과 시작·끝 위치가 들어 있습니다. 앞에서 채운 안과 뒤에서 채운 안이 같으면 모델 호출을 건너뜁니다. 실제 모델 프로필을 준비한 뒤 새 출력 폴더로 같은 명령에 `--execute-chunking`을 추가하면 선택 ID와 청크가 저장됩니다. 통합 실습에서도 `pipeline --chunk-config chunk-choice.json`으로 같은 설정을 선택할 수 있습니다.
 
 같은 후보와 메시지에서 출력 형식만 제한하려면 위 설정에 `"candidate_format":"ollama_enum"`을 추가하세요. 로컬 Ollama 요청의 `format.properties.candidate_id.enum`에 현재 창의 후보 번호가 들어갑니다. 설치본 미리보기의 `requests[0].request.body.format`에서 확인할 수 있습니다. 수신한 번호와 원문 피복은 실행 후에도 검사합니다. [교육휴가 PDF 단일 요청 실측](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s18/README.md)
+
+## 같은 PDF에서 크기·겹침·전달 예산 비교하기
+
+Codex 또는 Claude Code에 다음과 같이 요청할 수 있습니다.
+
+> 같은 생일 특별휴가 신청 기한 질문과 BM25를 유지해 줘. 고정 400자·겹침 80자 기준에서 크기만 240자, 겹침만 0자, 전달 예산만 400자로 바꾼 세 결과를 비교해 줘. 각각 PDF 1쪽 BD-03이 검색 몇 위이고 신청 행위와 기한이 함께 전달되는지 원문을 보여 줘. 생성 호출은 하지 마.
+
+실습 폴더에서 아래 명령을 실행하세요. 미지정 값은 기존 청킹 설정에서 읽고, 결과는 각각 새 폴더에 저장합니다.
+
+```sh
+for variant in baseline size overlap budget; do
+  case "$variant" in
+    baseline) set -- ;;
+    size) set -- --size-chars 240 ;;
+    overlap) set -- --overlap-chars 0 ;;
+    budget) set -- --context-budget-chars 400 ;;
+  esac
+  rag-lab pipeline-setup --llm-config llm-local.json --chunk-config chunk-fixed.json --method bm25 \
+    --question "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?" "$@" --out "$variant"
+done
+rag-lab snapshot --sources handbook-sources.json --out size-lab-pdf
+for variant in baseline size overlap budget; do
+  rag-lab build --snapshot size-lab-pdf --config "$variant/search.json" --out "$variant/index"
+  rag-lab ask --run "$variant/index" --config "$variant/search.json" \
+    --question "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?" --out "$variant/search"
+done
+```
+
+각 search/result.json의 candidates 순위, contexts의 전달 원문과 페이지, excluded의 예산 제외 사유를 대조하세요. 청크 크기와 전달 예산은 문자 수이고, 모델 입력 창은 토큰 수입니다. [네 구성의 검색 결과와 BD-03 원문 비교](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s22/README.md)

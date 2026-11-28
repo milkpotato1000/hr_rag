@@ -1,0 +1,14 @@
+{
+  "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+  "retrieval": "bm25",
+  "candidate_k": 20,
+  "top_k": 5,
+  "reranker": null,
+  "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+  "variants": {
+    "baseline": {},
+    "size": {"--size-chars": 240},
+    "overlap": {"--overlap-chars": 0},
+    "budget": {"--context-budget-chars": 400}
+  }
+}

@@ -58,6 +58,8 @@ def main(argv=None):
         preset.add_argument('--method',choices=['bm25','dense','hybrid'],required=True)
         preset.add_argument('--embedding-config')
         preset.add_argument('--reranker-config')
+        preset.add_argument('--size-chars',type=int,help='Override the source chunk size in characters')
+        preset.add_argument('--overlap-chars',type=int,help='Override the source overlap in characters')
         preset.add_argument('--top-k',type=int,default=5)
         preset.add_argument('--candidate-k',type=int,default=20)
         preset.add_argument('--context-budget-chars',type=int,default=4000)
@@ -97,7 +99,7 @@ def main(argv=None):
             from .pipeline_setup import setup
             result=setup(args.llm_config,args.chunk_config,args.method,args.out,embedding_config=args.embedding_config,
                          reranker_config=args.reranker_config,top_k=args.top_k,candidate_k=args.candidate_k,
-                         budget=args.context_budget_chars,document=args.document,title=args.title,
+                         budget=args.context_budget_chars,size_chars=args.size_chars,overlap_chars=args.overlap_chars,document=args.document,title=args.title,
                          synthetic=args.synthetic,question=args.question)
             print(json.dumps(result,ensure_ascii=False,indent=2))
             return 0
