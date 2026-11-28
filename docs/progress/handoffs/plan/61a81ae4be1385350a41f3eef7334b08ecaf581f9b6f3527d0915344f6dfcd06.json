@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "8f2879a4c35f0f78bb77151a02248894d7482202",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "Handbook heading paths and long section splitting",
+  "next_action": "Adopt S7, implement optional heading profile, verify on installed CLI and UI",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T07:49:38.769676+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
