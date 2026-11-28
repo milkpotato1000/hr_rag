@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "876067dc2f383fdc806d9e6f70031360e05c2c4d",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "P032 S2d READY: user selected existing local Qwen4B generation on current handbook; Drive explicitly deferred",
+  "next_action": "Integrate and exactly adopt 876067dc2f383fdc806d9e6f70031360e05c2c4d; verify dedicated control and frozen inputs; inspect local identity/resources; run smoke2 then conditional remaining8; preserve evaluator/Drive/LLM-chunking holds; report and push dev",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T04:39:35.401971+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
