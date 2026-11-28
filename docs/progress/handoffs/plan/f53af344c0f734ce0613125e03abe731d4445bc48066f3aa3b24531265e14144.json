@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S25 첫 설치 작업 폴더에서 실제 답변과 인용 확인",
   "next_action": "정확 채택 후 첫 검색과 준비된 로컬 모델의 첫 답변 연결 및 검증",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T09:25:40.140440+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T09:25:54.571659+00:00",
+      "evidence": "기존 dev 채팅에 첫 설치 후 로컬 답변 검증 범위와 정확한 SHA 전달 성공."
     }
   ]
 }
