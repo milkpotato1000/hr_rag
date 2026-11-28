@@ -6,6 +6,7 @@ from control import *
 class FakeProcess:
     def __init__(self,polls):self.polls=iter(polls);self.value=None;self.terminated=False;self.waited=False
     def poll(self):
+        if self.terminated:return self.value
         try:self.value=next(self.polls)
         except StopIteration:pass
         return self.value

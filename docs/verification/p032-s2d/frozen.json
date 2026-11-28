@@ -687,7 +687,7 @@
   "scripts": {
     "worker.py": "dc51a1a6a637b58e9d93c4dec2e4facb7c4b5b2b6a2329f9908549086b25a8e6",
     "control.py": "a5a325460ec5c5eccb394ee1cd4095fcc39659f39eeca5c0f136ff808f866625",
-    "test_runtime.py": "d6565eb4f967bf2edbaa350d43f81bd4a7caa1b0ffc99fb1fd66229728be6c45",
+    "test_runtime.py": "4a9846d7da52915fc058d3b605673a69d5630c3638d094434ac0ee428df8d083",
     "test_control.py": "7d713fd3fc96867d25380a149e6ff2fb1ffa9648f716d21143c6a2223aa54258",
     "runtime.py": "8ab2e4a0392dcee59f09b865b6a049b047a25717b3efc5372aa9f630f8668a80",
     "run_one.py": "7c48eefec304fc9c93db6d436f39ad0be23aea1bc6ff93b2700999949863fb65",
@@ -947,5 +947,11 @@
     "gt08",
     "gt09",
     "gt10"
-  ]
+  ],
+  "independent_tests": {
+    "count": 18,
+    "path": "tests003.log",
+    "sha256": "a81566adc14fff31ca2d1dbd190a34a26b413c84bd9d49c56ec33ab1ad42a64c",
+    "prior_failure": "tests002 fake process poll returned stale None after termination; fixture corrected, no live calls"
+  }
 }
