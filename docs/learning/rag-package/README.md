@@ -1,6 +1,6 @@
 # 공개 모델로 배우는 RAG
 
-[내 PDF에서 첫 질문하기](../../../rag_package/resources/sample/HANDBOOK.md)에서 독립 폴더에 규정집을 연결하고 BM25 검색부터 로컬 답변·인용 확인까지 진행합니다. [23쪽 규정집의 실제 답변·인용 결과](../../verification/p032-s3/report.html)에서 설치본의 단일 질문 결과를 볼 수 있습니다.
+[내 PDF에서 첫 질문하기](../../../rag_package/resources/sample/HANDBOOK.md)에서 독립 폴더에 규정집을 연결하고 BM25 검색부터 로컬 답변·인용 확인까지 진행합니다. [23쪽 규정집의 실제 답변·인용 결과](../../verification/p032-s3/report.html)에서 설치본의 단일 질문 결과를 볼 수 있습니다. 이어서 [같은 PDF의 BM25·Dense·Hybrid와 리랭커 전후 순위](../../verification/p032-s4/README.md)를 비교하세요.
 
 구현과 검증은 Codex 또는 Claude Code에 맡기고, 학습자는 **왜 이 근거가 검색됐는지, 전달 문맥과 답변에서 무엇이 빠졌는지**를 해석합니다. 먼저 모델 호출 없는 샘플 실습을 하고, 저장된 실제 검색 결과를 비교하세요.
 

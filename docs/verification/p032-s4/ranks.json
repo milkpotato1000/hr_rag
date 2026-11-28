@@ -1,0 +1,695 @@
+{
+  "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+  "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+  "chunk_count": 121,
+  "chunk_fingerprint": "205b07826f8678c2b5c1dbff7b35ec5fe566a8414a958e531d28d22770540a9d",
+  "candidate_fingerprint": "46c09d4ac4b4bc5150c0a018e91bb37e6fd4158061a2674260fc730e5d5d67f3",
+  "deadline": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청",
+  "full_clause": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+  "results": {
+    "preview": [
+      {
+        "rank": 1,
+        "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+        "pages": [
+          1
+        ],
+        "deadline": true,
+        "full_clause": false,
+        "selected": true,
+        "score": 14.042684108313946,
+        "original_rank": null
+      },
+      {
+        "rank": 2,
+        "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+        "pages": [
+          1,
+          2
+        ],
+        "deadline": true,
+        "full_clause": true,
+        "selected": true,
+        "score": 11.14781120765903,
+        "original_rank": null
+      },
+      {
+        "rank": 3,
+        "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+        "pages": [
+          4
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 5.011797133640645,
+        "original_rank": null
+      },
+      {
+        "rank": 4,
+        "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+        "pages": [
+          4
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 4.739440080832523,
+        "original_rank": null
+      },
+      {
+        "rank": 5,
+        "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+        "pages": [
+          3
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 4.233424307222741,
+        "original_rank": null
+      }
+    ],
+    "dense": [
+      {
+        "rank": 1,
+        "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+        "pages": [
+          1
+        ],
+        "deadline": true,
+        "full_clause": false,
+        "selected": true,
+        "score": 0.8850251215585689,
+        "original_rank": null
+      },
+      {
+        "rank": 2,
+        "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+        "pages": [
+          1,
+          2
+        ],
+        "deadline": true,
+        "full_clause": true,
+        "selected": true,
+        "score": 0.8833037802516783,
+        "original_rank": null
+      },
+      {
+        "rank": 3,
+        "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+        "pages": [
+          7,
+          8
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 0.8714484436951024,
+        "original_rank": null
+      },
+      {
+        "rank": 4,
+        "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+        "pages": [
+          1
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 0.8663326519082963,
+        "original_rank": null
+      },
+      {
+        "rank": 5,
+        "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+        "pages": [
+          15,
+          16
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 0.864777322903994,
+        "original_rank": null
+      }
+    ],
+    "hybrid": [
+      {
+        "rank": 1,
+        "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+        "pages": [
+          1
+        ],
+        "deadline": true,
+        "full_clause": false,
+        "selected": true,
+        "score": 0.03278688524590164,
+        "original_rank": null
+      },
+      {
+        "rank": 2,
+        "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+        "pages": [
+          1,
+          2
+        ],
+        "deadline": true,
+        "full_clause": true,
+        "selected": true,
+        "score": 0.03225806451612903,
+        "original_rank": null
+      },
+      {
+        "rank": 3,
+        "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+        "pages": [
+          3
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 0.030536130536130537,
+        "original_rank": null
+      },
+      {
+        "rank": 4,
+        "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+        "pages": [
+          15,
+          16
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 0.030536130536130537,
+        "original_rank": null
+      },
+      {
+        "rank": 5,
+        "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+        "pages": [
+          2
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 0.029850746268656716,
+        "original_rank": null
+      }
+    ],
+    "off": [
+      {
+        "rank": 1,
+        "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+        "pages": [
+          1
+        ],
+        "deadline": true,
+        "full_clause": false,
+        "selected": true,
+        "score": null,
+        "original_rank": 1
+      },
+      {
+        "rank": 2,
+        "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+        "pages": [
+          1,
+          2
+        ],
+        "deadline": true,
+        "full_clause": true,
+        "selected": true,
+        "score": null,
+        "original_rank": 2
+      },
+      {
+        "rank": 3,
+        "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+        "pages": [
+          3
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": null,
+        "original_rank": 3
+      },
+      {
+        "rank": 4,
+        "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+        "pages": [
+          15,
+          16
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": null,
+        "original_rank": 4
+      },
+      {
+        "rank": 5,
+        "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+        "pages": [
+          2
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": null,
+        "original_rank": 5
+      },
+      {
+        "rank": 6,
+        "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+        "pages": [
+          1
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 6
+      },
+      {
+        "rank": 7,
+        "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+        "pages": [
+          4
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 7
+      },
+      {
+        "rank": 8,
+        "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+        "pages": [
+          7,
+          8
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 8
+      },
+      {
+        "rank": 9,
+        "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+        "pages": [
+          12
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 9
+      },
+      {
+        "rank": 10,
+        "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+        "pages": [
+          15
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 10
+      },
+      {
+        "rank": 11,
+        "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+        "pages": [
+          6
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 11
+      },
+      {
+        "rank": 12,
+        "id": "c-75a476397866b2220b8b75ef9780e9a165f9f25d72140a53c69767995017e20f",
+        "pages": [
+          14
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 12
+      },
+      {
+        "rank": 13,
+        "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+        "pages": [
+          4
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 13
+      },
+      {
+        "rank": 14,
+        "id": "c-61a1fb1a7d16ff9b97c05d7db6953eb83e793f706f93d3af50ac6548ab81b396",
+        "pages": [
+          2
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 14
+      },
+      {
+        "rank": 15,
+        "id": "c-7e69f29f58f2ccdb0e0ff67cc1c37e9e5a3d9240b0bb80f479835a73c41012e2",
+        "pages": [
+          17
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 15
+      },
+      {
+        "rank": 16,
+        "id": "c-dee587727fda738eedfa366bb08097c98ff290a0b91a712161ea50d4a41fec8e",
+        "pages": [
+          12
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 16
+      },
+      {
+        "rank": 17,
+        "id": "c-1c00c454cd720616295703d52a93f5961079805ecd3d6c7f1dad7a18d4dcda55",
+        "pages": [
+          17
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 17
+      },
+      {
+        "rank": 18,
+        "id": "c-44c8db3e3418bcb804e2b4d08cff173f54834ade38987f99e6be7df3a42a563f",
+        "pages": [
+          18
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 18
+      },
+      {
+        "rank": 19,
+        "id": "c-45cc2b54a5128ce932e51958a2f3ed189c649caa62f344ed12258d0669eff9b9",
+        "pages": [
+          12,
+          13
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 19
+      },
+      {
+        "rank": 20,
+        "id": "c-cfdec59fe501c6eaef818f0ba212fcf44eb6c5898cdc37b2df5584b4473f5f24",
+        "pages": [
+          7
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": null,
+        "original_rank": 20
+      }
+    ],
+    "on": [
+      {
+        "rank": 1,
+        "id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+        "pages": [
+          1,
+          2
+        ],
+        "deadline": true,
+        "full_clause": true,
+        "selected": true,
+        "score": 5.158248424530029,
+        "original_rank": 2
+      },
+      {
+        "rank": 2,
+        "id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+        "pages": [
+          1
+        ],
+        "deadline": true,
+        "full_clause": false,
+        "selected": true,
+        "score": 2.689690351486206,
+        "original_rank": 1
+      },
+      {
+        "rank": 3,
+        "id": "c-10a2676c8bcf3859adf5aa248a910c3e76fef209e24d32612d7c048a9585624b",
+        "pages": [
+          2
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": 0.3737194538116455,
+        "original_rank": 5
+      },
+      {
+        "rank": 4,
+        "id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+        "pages": [
+          4
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": -0.6831004619598389,
+        "original_rank": 7
+      },
+      {
+        "rank": 5,
+        "id": "c-4d57b595a20181918914aece7f859ec4d90e1ddfb9049b6f86c49ea5ad446bdf",
+        "pages": [
+          6
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": true,
+        "score": -0.848304808139801,
+        "original_rank": 11
+      },
+      {
+        "rank": 6,
+        "id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+        "pages": [
+          1
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -0.8642659187316895,
+        "original_rank": 6
+      },
+      {
+        "rank": 7,
+        "id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+        "pages": [
+          4
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -1.2161039113998413,
+        "original_rank": 13
+      },
+      {
+        "rank": 8,
+        "id": "c-b23978e2a22b730354a30fdaa2e52506bd1753ed37e76d7a73f4d666ffc4d3c9",
+        "pages": [
+          7,
+          8
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -2.8135249614715576,
+        "original_rank": 8
+      },
+      {
+        "rank": 9,
+        "id": "c-875ea958909686aa479d216b3c43117ce56c6b10f81ca91db6b1c8e702c308b5",
+        "pages": [
+          15,
+          16
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -3.047927141189575,
+        "original_rank": 4
+      },
+      {
+        "rank": 10,
+        "id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+        "pages": [
+          3
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -3.5703659057617188,
+        "original_rank": 3
+      },
+      {
+        "rank": 11,
+        "id": "c-75a476397866b2220b8b75ef9780e9a165f9f25d72140a53c69767995017e20f",
+        "pages": [
+          14
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -4.147538661956787,
+        "original_rank": 12
+      },
+      {
+        "rank": 12,
+        "id": "c-a8610b91b9fad114ad7194edb8ab9cedc96fa0c47ea81e7844b93f86561a0d91",
+        "pages": [
+          15
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -4.199238300323486,
+        "original_rank": 10
+      },
+      {
+        "rank": 13,
+        "id": "c-cfdec59fe501c6eaef818f0ba212fcf44eb6c5898cdc37b2df5584b4473f5f24",
+        "pages": [
+          7
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -4.471268177032471,
+        "original_rank": 20
+      },
+      {
+        "rank": 14,
+        "id": "c-61a1fb1a7d16ff9b97c05d7db6953eb83e793f706f93d3af50ac6548ab81b396",
+        "pages": [
+          2
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -4.596114635467529,
+        "original_rank": 14
+      },
+      {
+        "rank": 15,
+        "id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+        "pages": [
+          12
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -5.860407829284668,
+        "original_rank": 9
+      },
+      {
+        "rank": 16,
+        "id": "c-1c00c454cd720616295703d52a93f5961079805ecd3d6c7f1dad7a18d4dcda55",
+        "pages": [
+          17
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -5.950185298919678,
+        "original_rank": 17
+      },
+      {
+        "rank": 17,
+        "id": "c-7e69f29f58f2ccdb0e0ff67cc1c37e9e5a3d9240b0bb80f479835a73c41012e2",
+        "pages": [
+          17
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -6.076058387756348,
+        "original_rank": 15
+      },
+      {
+        "rank": 18,
+        "id": "c-44c8db3e3418bcb804e2b4d08cff173f54834ade38987f99e6be7df3a42a563f",
+        "pages": [
+          18
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -6.091790676116943,
+        "original_rank": 18
+      },
+      {
+        "rank": 19,
+        "id": "c-45cc2b54a5128ce932e51958a2f3ed189c649caa62f344ed12258d0669eff9b9",
+        "pages": [
+          12,
+          13
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -6.339696407318115,
+        "original_rank": 19
+      },
+      {
+        "rank": 20,
+        "id": "c-dee587727fda738eedfa366bb08097c98ff290a0b91a712161ea50d4a41fec8e",
+        "pages": [
+          12
+        ],
+        "deadline": false,
+        "full_clause": false,
+        "selected": false,
+        "score": -6.714029788970947,
+        "original_rank": 16
+      }
+    ]
+  }
+}
