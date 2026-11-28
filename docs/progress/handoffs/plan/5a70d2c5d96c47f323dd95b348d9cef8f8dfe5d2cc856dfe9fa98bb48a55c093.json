@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "0488e0c6855e07e4b7d6d95a7d1ecab6acce83ae",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "Installed same-PDF chunking comparison",
+  "next_action": "Adopt S6, compare three chunk methods on fixed retrieval inputs and verify installed guide and UI",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T07:45:52.763147+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T07:46:13.757050+00:00",
+      "evidence": "Direct host delivery to verified HR RAG dev chat succeeded, exact S6 contract and model-free comparison."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T07:46:48.884966+00:00",
+      "evidence": "Dev commit ee53280 adopted exact S6 READY 0488e0c6855e07e4b7d6d95a7d1ecab6acce83ae after S5 completion. New comparison results pending."
+    }
+  ]
+}
