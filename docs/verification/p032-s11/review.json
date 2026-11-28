@@ -1,0 +1,35 @@
+{
+  "job": "b2e50490df664ca094a75305e2d5df4b",
+  "question": "생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?",
+  "status": "answered",
+  "answer": "팀장",
+  "elapsed_ms": 72018.78,
+  "citations": [
+    {
+      "chunk_id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+      "pages": [
+        {
+          "page": 1,
+          "canonical_start": 640,
+          "canonical_end": 959,
+          "page_start": 640,
+          "page_end": 959
+        },
+        {
+          "page": 2,
+          "canonical_start": 961,
+          "canonical_end": 1040,
+          "page_start": 0,
+          "page_end": 79
+        }
+      ],
+      "source_match": true,
+      "contains_rule": true
+    }
+  ],
+  "bd03_context_ranks": [
+    1
+  ],
+  "generation_requests": 1,
+  "source_quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다."
+}
