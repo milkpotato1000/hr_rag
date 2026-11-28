@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S13 동일 질문 로컬 실답변 비교",
   "next_action": "정확 채택 후 S11 기준 확인 및 재귀 청킹 1회 검증",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T08:20:29.915270+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T08:20:49.085089+00:00",
+      "evidence": "기존 dev 채팅 직접 전달 성공"
     }
   ]
 }
