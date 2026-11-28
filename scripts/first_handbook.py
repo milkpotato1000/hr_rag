@@ -42,6 +42,12 @@ def main():
     log = dest/"commands.log"
     env = os.environ.copy()
     env.pop("PYTHONPATH", None)
+    if wheelhouse:
+        # Use only the explicitly selected offline collection.
+        for name in list(env):
+            if name.startswith("PIP_"):
+                del env[name]
+        env["PIP_CONFIG_FILE"] = os.devnull
     env["PIP_REQUIRE_VIRTUALENV"] = "1"
     env["PIP_DISABLE_PIP_VERSION_CHECK"] = "1"
     def run(*cmd, cwd=dest):
