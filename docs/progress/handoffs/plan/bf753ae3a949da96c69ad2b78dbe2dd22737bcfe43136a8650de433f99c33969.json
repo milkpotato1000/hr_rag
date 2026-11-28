@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S16 선택 문서·질문으로 설치 실습",
   "next_action": "정확 채택 후 문서 준비와 CLI·학습 화면 전달 검증",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T08:35:51.462466+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T08:36:08.075658+00:00",
+      "evidence": "기존 dev 채팅에 지정 SHA와 범위 직접 전달 성공"
     }
   ]
 }
