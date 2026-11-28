@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "R20261128-8004e533",
+  "request_sha256": "63a5ee533e66ca9e20685d507a00bd69406d5d66f5f490f664f1265a40d130f4",
+  "disposition": "covered",
+  "cards": [
+    "P032"
+  ],
+  "reason": "S2f에서 S2e의 원시 출력 없는 진단 한계를 기록하고, 스키마 지정과 전달 문맥 고정 후 gt01을 실제 검증했다. 형식 통과 뒤 수습 제외 누락으로 확대 중단한 기록을 유지한다. 이번 접수 정리는 추가 모델 호출을 승인하지 않는다.",
+  "review_reference": "docs/planning/specs/P032-s2f-generation-schema.md"
+}
