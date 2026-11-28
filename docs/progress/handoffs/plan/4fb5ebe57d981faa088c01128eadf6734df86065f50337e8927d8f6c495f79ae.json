@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S26 선택 PDF·질문에서 실제 답변과 인용 확인",
   "next_action": "정확 채택 후 설치본 통합 경로로 기존 4B 답변과 PDF 출처를 검증",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T09:30:47.464969+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T09:31:02.226720+00:00",
+      "evidence": "기존 dev 채팅에 선택 PDF 실답변 검증 범위와 정확한 SHA를 직접 전달했다."
     }
   ]
 }
