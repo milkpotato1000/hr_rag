@@ -1,10 +1,10 @@
 {
-  "base": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-g6mgude2",
-  "python": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-g6mgude2/env/bin/python",
-  "wheel": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-g6mgude2/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl",
-  "sdist": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-g6mgude2/dist/milkpotato_rag_lab-0.1.0.dev1.tar.gz",
-  "wheel_sha256": "da00c2c45a9cb9813c72b20d81714238dfe2a769bd7b57478d7b447c2f9bca84",
-  "sdist_sha256": "178f7d16305d402c18c33ff975142bab9bd3a5b9d9d485dffd4d7e63af5aee9a",
+  "base": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-ar73i4f8",
+  "python": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-ar73i4f8/env/bin/python",
+  "wheel": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-ar73i4f8/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl",
+  "sdist": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-ar73i4f8/dist/milkpotato_rag_lab-0.1.0.dev1.tar.gz",
+  "wheel_sha256": "2bd17c85f30900b455aeb766e40f91bb53769bebbada0b9e833af8efaae91809",
+  "sdist_sha256": "292a7b6311c48332668e2ee6ed031cae91835332c1e08e135bf6e4c6d5b37a5e",
   "wheel_payload_hashes": {
     "rag_package/__init__.py": "21157f0065395ab7107ee1ec69faa7cc93b9001e5cffa490f365c77ffb3f6e9c",
     "rag_package/__main__.py": "979552a59be7d6329dee81960d45871e353aa6a3f159f941dd474a08f5e91b72",
@@ -54,7 +54,7 @@
     "rag_package/provenance.json": "969a9d0ff256c34dc82d2f1539df1ae255657055ad165ce9cf823cfd09508617",
     "rag_package/requirements-pdf.lock": "c3f793c919ec790734762729cc0d68915b451d4da24c3d78edfd3fe1ac2b067f",
     "rag_package/requirements-drive.lock": "9c442737d9207dbff60a642be53ddef5a1114c1ec0e9ffdc509c0ceeeebb3f2c",
-    "rag_package/resources/manifest.json": "855ebaa734b1bd65277973d7d0d35141ac06590892b8faec1356eea22a9d955f",
+    "rag_package/resources/manifest.json": "f31d05619eb95208e646529ce587724b37bbe5148211f7ffcfe2a8ca2e544438",
     "rag_package/resources/sample/sources.json": "f73bf97f59fd4106ec4f433f675d4524467864903fdd064905366732159acb56",
     "rag_package/resources/sample/questions.json": "c57b49f6ebf673a9380673fe0e01676856a219ec30af397ba6cf0175989921a5",
     "rag_package/resources/sample/documents/birthday.md": "20f4ce694e69da093e28a3d273e60de2747b27cc82c7ec3fe7d18c062da59f71",
@@ -89,13 +89,13 @@
     "rag_package/resources/sample/llm-spec-api.json": "2b82d45b7cff17a8cbdf4826867a093b959f165043ff559499ccd94a1dee733e",
     "rag_package/resources/sample/llm-spec-local.json": "7e9bf56d613d3a301158e9f51682df9d79e7ad71fe0a905a8877a2e96d1c8e44",
     "rag_package/resources/sample/llm-spec-mixed.json": "7475a2ab0ff9baad9b7ef4b45451e8f94c1c4729d27ae5f50bd5439794a24bac",
-    "rag_package/resources/sample/HANDBOOK.md": "df9191448edbcf503b806647a8fe6d0b9d579e7ea4390bcb01bca5dda6f70779",
+    "rag_package/resources/sample/HANDBOOK.md": "908f39af0be96c0ce1c298c14db93e0c4dfe944a4f4de563f8537e6b093412c4",
     "rag_package/resources/sample/handbook-sources.json": "4d05aa95984edf6c26da13cf64d0e8817975456710e4120ca49e3c8e69c007cd",
     "rag_package/resources/sample/handbook-local.json": "6d8a5812890a9bae5dc03f5ca5474e9f82b2be140550676b4a55fd52ef5b5665",
     "rag_package/resources/sample/handbook-qwen-spec.json": "bd5b208ce21ed89a02428ac4889ea21332e3b35b90591b2476c65a9fc5bfc988"
   },
   "installed": {
-    "package": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-g6mgude2/env/lib/python3.12/site-packages/rag_package/__init__.py",
+    "package": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s3-installed-ar73i4f8/env/lib/python3.12/site-packages/rag_package/__init__.py",
     "distributions": [
       [
         "milkpotato-rag-lab",

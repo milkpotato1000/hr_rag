@@ -28,7 +28,7 @@ question='생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?
 rag-lab snapshot --sources handbook-sources.json --out .rag-runs/pdf
 rag-lab build --snapshot .rag-runs/pdf --config fixed.json --out .rag-runs/bm25
 rag-lab ask --run .rag-runs/bm25 --config fixed.json --question "$question" --out .rag-runs/preview
-python -c 'import json; r=json.load(open(".rag-runs/preview/result.json")); print(r["status"]); [print(c["rank"], [p["page"] for p in c["pages"]], c["text"]) for c in r["contexts"]]'
+python -c 'import json; r=json.load(open(".rag-runs/preview/result.json")); print(r["status"]); [print(n, [p["page"] for p in c["pages"]], c["text"]) for n,c in enumerate(r["contexts"], 1)]'
 ```
 
 snapshot이 ready인지 확인하세요. needs_review이면 PDF 텍스트 추출 상태부터 살펴보세요. fixed.json은 400자, 오버랩 80자, BM25 상위 5개, 문맥 예산 4,000자로 설정돼 있습니다. 출력한 문맥에서 신청 기한이 나오는 조항과 실제 PDF 페이지를 찾으세요.
