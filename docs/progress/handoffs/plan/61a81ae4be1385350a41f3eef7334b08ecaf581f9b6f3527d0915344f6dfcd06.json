@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Handbook heading paths and long section splitting",
   "next_action": "Adopt S7, implement optional heading profile, verify on installed CLI and UI",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T07:49:58.658464+00:00",
       "evidence": "Direct host delivery to verified HR RAG dev succeeded for exact S7 optional handbook hierarchy scope."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T07:50:30.719285+00:00",
+      "evidence": "Verified dev commit 3c3a9d6 adopted exact S7 READY 8f2879a4c35f0f78bb77151a02248894d7482202. Heading-path implementation and verification pending."
     }
   ]
 }
