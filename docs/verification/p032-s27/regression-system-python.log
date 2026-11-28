@@ -1,0 +1,215 @@
+EEEEEEEEEEEEEEEEEEEEE
+======================================================================
+ERROR: test_candidate_choice_partition_and_failures (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_compact_ids_reset_and_replay (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_compare_facts_replay_and_mapping_tamper (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_deadline_consumed_by_journal_prevents_post (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_derive_size_model_source_and_vector_errors (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_fixture_provenance_through_derived_candidates (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_independent_boundaries_overlap_fact (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_journal_failure_before_and_after_publication (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_llm_deadline_transport_timeout_and_hidden_thinking (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_ollama_partition_enum (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_preflight_all_windows_and_limits (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_prepublication_failure_and_identity_mutations (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_restarted_ui_job_never_dispatches (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_rule_chunk_cap_before_large_materialization (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_rules_v3_candidate_replay (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_sdk_preflight_no_worker_and_owned_timeout (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_semantic_derive_and_preflight_counts (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_three_llm_providers_and_tamper (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_ui_registered_chunking_and_role_clone (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_unit_unicode_whitespace_and_llm_bad_output (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+======================================================================
+ERROR: test_windows_second_failure_unknown_no_resume (test_chunk_artifact.ChunkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 15, in setUp
+    snapshot(self.ws/'sources.json',self.ws/'snapshot');self.sm,self.docs=load_snapshot(self.ws/'snapshot');self.calls=[]
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/documents.py", line 66, in snapshot
+    (tmp/page['raw_path']).write_text(raw_text,encoding='utf-8',newline='')
+TypeError: write_text() got an unexpected keyword argument 'newline'
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.186s
+
+FAILED (errors=21)

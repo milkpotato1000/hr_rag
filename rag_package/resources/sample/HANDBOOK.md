@@ -372,3 +372,13 @@ rag-lab rerank --candidates pair-candidates --method cross-encoder --profile "$B
 ```
 
 세 result.json에서 candidate_fingerprint가 같은지 확인한 뒤 selection.ranking과 selection.contexts를 대조하세요. 모델별 점수의 척도가 달라서 근거 순위와 실제 전달 여부를 비교합니다. [같은 질문의 실측 표와 원문](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s24/README.md)
+
+## 저장된 E5 벡터로 의미 청킹 임계값 비교하기
+
+dev 소스 체크아웃의 루트에서 설치 환경을 활성화한 뒤 실행하세요. 저장 단위 벡터를 재사용해 0.35·0.15·0.05에서 길이와 거리로 생긴 경계 수, 첫 변경 위치, 같은 신청 기한 문장의 BM25 전달 순위를 확인합니다.
+
+```sh
+python3 docs/verification/p032-s27/experiment.py --out ./threshold-practice
+```
+
+[임계값별 실측 표와 경계 앞뒤 원문](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s27/README.md)

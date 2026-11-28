@@ -1,0 +1,157 @@
+{
+  "parent": "3374ded7767aa7c40da083c397150b8a49e9b306404817e88327050501359a2f",
+  "source_characters": 38582,
+  "units": 567,
+  "distances": 566,
+  "original_files_preserved": 55,
+  "embedding": 0,
+  "generation": 0,
+  "rows": [
+    {
+      "threshold": 0.35,
+      "chunks": 250,
+      "reasons": {
+        "maximum": 249,
+        "document_end": 1
+      },
+      "first_change": null,
+      "evidence": {
+        "deadline": {
+          "candidate": [
+            1,
+            2
+          ],
+          "delivered": [
+            1,
+            2
+          ]
+        },
+        "approval": {
+          "candidate": [
+            1,
+            2
+          ],
+          "delivered": [
+            1,
+            2
+          ]
+        },
+        "both": {
+          "candidate": [
+            1,
+            2
+          ],
+          "delivered": [
+            1,
+            2
+          ]
+        }
+      },
+      "fingerprint": "adaabf80e7893e65849cbedcc6ad87b1071065bad18994325c9e2255657d2aa1"
+    },
+    {
+      "threshold": 0.15,
+      "chunks": 252,
+      "reasons": {
+        "maximum": 240,
+        "semantic": 11,
+        "document_end": 1
+      },
+      "first_change": {
+        "offset": 2706,
+        "before": "다만 시스템에 접속할 수 없거\n나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가 신청자가 알\n린 시점, 사용 희망일, 장애 상황을 임시 기록으로 남기고 이를 접수 확인용으로 안내한",
+        "after": "다. ",
+        "distance": 0.17090258947083126,
+        "accumulated": 120,
+        "including_next": 123,
+        "reason": "semantic",
+        "overlap": [
+          2642,
+          2706
+        ]
+      },
+      "evidence": {
+        "deadline": {
+          "candidate": [
+            1,
+            2
+          ],
+          "delivered": [
+            1,
+            2
+          ]
+        },
+        "approval": {
+          "candidate": [
+            1,
+            2
+          ],
+          "delivered": [
+            1,
+            2
+          ]
+        },
+        "both": {
+          "candidate": [
+            1,
+            2
+          ],
+          "delivered": [
+            1,
+            2
+          ]
+        }
+      },
+      "fingerprint": "a497fa01e440d445abc958ed70bc1672e6b08c4f2e3b920f3fad03c59bd5d528"
+    },
+    {
+      "threshold": 0.05,
+      "chunks": 265,
+      "reasons": {
+        "semantic": 44,
+        "maximum": 220,
+        "document_end": 1
+      },
+      "first_change": {
+        "offset": 122,
+        "before": "문서 식별자: hr-v4-handbook | 버전: 4 | 시행일: 정보 없음\n통합 목차\n제1장 생일 특별휴가와 포인트의 구분\n",
+        "after": "제2장 연차의 사용과 기록 관리\n",
+        "distance": 0.14097324120327526,
+        "accumulated": 122,
+        "including_next": 140,
+        "reason": "semantic",
+        "overlap": [
+          58,
+          122
+        ]
+      },
+      "evidence": {
+        "deadline": {
+          "candidate": [
+            1
+          ],
+          "delivered": [
+            1
+          ]
+        },
+        "approval": {
+          "candidate": [
+            1
+          ],
+          "delivered": [
+            1
+          ]
+        },
+        "both": {
+          "candidate": [
+            1
+          ],
+          "delivered": [
+            1
+          ]
+        }
+      },
+      "fingerprint": "d876c23938975eaedffd4b81f4410c463522a7f53cb86e18fcd01f184ba5b2a8"
+    }
+  ]
+}
