@@ -116,6 +116,17 @@ rag-lab serve --workspace . --sources handbook-sources.json --chunk-config chunk
 
 미리보기의 generation에서 model과 destination을 확인하세요. 학습 화면의 ‘문서에서 답변까지’에서도 동일 프로필을 선택하고 전송 주소를 확인할 수 있습니다. 준비한 로컬 모델로 실제 생성할 때는 pipeline에 --execute를 붙이고 별도 새 --out을 지정합니다. 화면에서 실제 생성을 허용할 때는 serve에 --allow-model-execution을 지정합니다.
 
+**API 답변을 저장하고 다시 읽기**
+
+모델명은 사용 계정에서 호출할 수 있는 ID를 지정하세요. 미리보기의 목적지와 전송할 문서를 확인하고 실제 호출을 원할 때만 선택한 환경변수에 키를 준비하세요. 다음 예시는 앞에서 만든 my-api 설정과 같은 질문을 사용합니다.
+
+```sh
+rag-lab pipeline --sources handbook-sources.json --chunk-config chunk-fixed.json --search-config my-api/search.json --question "$question" --execute --out api-answer
+rag-lab pipeline-replay --run api-answer
+```
+
+저장된 answer/result.json의 answer.citations에서 인용 원문과 페이지를, provider_result.usage에서 공급자가 보고한 토큰 수를 확인하세요. 다른 프로필의 저장 결과도 있으면 `rag-lab pipeline-compare --runs api-answer 다른결과폴더`로 대조합니다. 재열기와 비교는 추가 요청 없이 동작합니다. [두 API 형식의 로컬 HTTPS 검증 결과](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s29/README.md)
+
 **Codex 또는 Claude Code에 줄 요청**
 
 > 설치된 HANDBOOK.md와 기본 규정집으로 실습해 줘. 내가 선택한 provider와 모델명으로 generation-setup을 실행하고, 출력된 profile과 search 설정으로 같은 질문의 pipeline 미리보기와 학습 화면을 연결해 줘. 선택 모델과 전송 주소를 보여주고 실제 생성 전까지 진행해 줘.

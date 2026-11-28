@@ -1,0 +1,242 @@
+{
+  "kind": "local_https_fixture",
+  "question": "생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?",
+  "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+  "providers": {
+    "openai_chat": {
+      "success": {
+        "posts": 1,
+        "replay_posts": 0,
+        "status": "answered",
+        "error": null,
+        "dispatch_attempted": true,
+        "answer": {
+          "status": "answered",
+          "answer": "팀장",
+          "citations": [
+            {
+              "chunk_id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+              "document_id": "handbook",
+              "quote": "도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n제2절 신청 정보의 처리 [BD-S2]\nBD-04 접수부터 결과 통지까지\n휴가 시스템에서 접수한 생일 특별휴가 신청에는 신청자를 식별하는 정보",
+              "start": 640,
+              "end": 1040,
+              "pages": [
+                {
+                  "page": 1,
+                  "canonical_start": 640,
+                  "canonical_end": 959,
+                  "page_start": 640,
+                  "page_end": 959
+                },
+                {
+                  "page": 2,
+                  "canonical_start": 961,
+                  "canonical_end": 1040,
+                  "page_start": 0,
+                  "page_end": 79
+                }
+              ],
+              "heading_path": [
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+              ],
+              "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+            }
+          ]
+        },
+        "usage": {
+          "input_tokens": 111,
+          "output_tokens": 12,
+          "provider_duration_ms": null
+        },
+        "quote_page": 1
+      },
+      "missing": {
+        "posts": 0,
+        "replay_posts": 0,
+        "status": "failed",
+        "error": {
+          "code": "missing_api_key",
+          "phase": "preflight"
+        },
+        "dispatch_attempted": false
+      },
+      "denied": {
+        "posts": 1,
+        "replay_posts": 0,
+        "status": "failed",
+        "error": {
+          "code": "http_401",
+          "phase": "dispatch"
+        },
+        "dispatch_attempted": true
+      }
+    },
+    "anthropic_messages": {
+      "success": {
+        "posts": 1,
+        "replay_posts": 0,
+        "status": "answered",
+        "error": null,
+        "dispatch_attempted": true,
+        "answer": {
+          "status": "answered",
+          "answer": "팀장",
+          "citations": [
+            {
+              "chunk_id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+              "document_id": "handbook",
+              "quote": "도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n제2절 신청 정보의 처리 [BD-S2]\nBD-04 접수부터 결과 통지까지\n휴가 시스템에서 접수한 생일 특별휴가 신청에는 신청자를 식별하는 정보",
+              "start": 640,
+              "end": 1040,
+              "pages": [
+                {
+                  "page": 1,
+                  "canonical_start": 640,
+                  "canonical_end": 959,
+                  "page_start": 640,
+                  "page_end": 959
+                },
+                {
+                  "page": 2,
+                  "canonical_start": 961,
+                  "canonical_end": 1040,
+                  "page_start": 0,
+                  "page_end": 79
+                }
+              ],
+              "heading_path": [
+                "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+              ],
+              "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+            }
+          ]
+        },
+        "usage": {
+          "input_tokens": 108,
+          "output_tokens": 13,
+          "provider_duration_ms": null
+        },
+        "quote_page": 1
+      },
+      "missing": {
+        "posts": 0,
+        "replay_posts": 0,
+        "status": "failed",
+        "error": {
+          "code": "missing_api_key",
+          "phase": "preflight"
+        },
+        "dispatch_attempted": false
+      },
+      "denied": {
+        "posts": 1,
+        "replay_posts": 0,
+        "status": "failed",
+        "error": {
+          "code": "http_401",
+          "phase": "dispatch"
+        },
+        "dispatch_attempted": true
+      }
+    }
+  },
+  "wire_observations": [
+    {
+      "provider": "openai_chat",
+      "status": 200,
+      "request_model": "fixture-openai_chat",
+      "route": "/v1/chat/completions",
+      "roles_verified": true,
+      "authorization_scheme_verified": true,
+      "contexts": [
+        "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+        "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+        "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+        "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+        "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394"
+      ]
+    },
+    {
+      "provider": "openai_chat",
+      "status": 401,
+      "request_model": "fixture-openai_chat",
+      "route": "/v1/chat/completions",
+      "roles_verified": true,
+      "authorization_scheme_verified": true,
+      "contexts": [
+        "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+        "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+        "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+        "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+        "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394"
+      ]
+    },
+    {
+      "provider": "anthropic_messages",
+      "status": 200,
+      "request_model": "fixture-anthropic_messages",
+      "route": "/v1/messages",
+      "roles_verified": true,
+      "authorization_scheme_verified": true,
+      "contexts": [
+        "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+        "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+        "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+        "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+        "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394"
+      ]
+    },
+    {
+      "provider": "anthropic_messages",
+      "status": 401,
+      "request_model": "fixture-anthropic_messages",
+      "route": "/v1/messages",
+      "roles_verified": true,
+      "authorization_scheme_verified": true,
+      "contexts": [
+        "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+        "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+        "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+        "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+        "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394"
+      ]
+    }
+  ],
+  "comparisons": {
+    "api_pair": {
+      "changed": [
+        "generation.identity",
+        "generation.model",
+        "generation.provider"
+      ],
+      "same_contexts": true,
+      "answers": [
+        "팀장",
+        "팀장"
+      ]
+    },
+    "saved_local": {
+      "changed": [
+        "generation.base_url",
+        "generation.configuration_required",
+        "generation.destination",
+        "generation.identity",
+        "generation.max_output_tokens",
+        "generation.mode",
+        "generation.model",
+        "generation.provider",
+        "generation.response_mode",
+        "generation.temperature",
+        "generation.timeout_seconds"
+      ],
+      "same_contexts": true,
+      "answers": [
+        "팀장",
+        "팀장"
+      ]
+    }
+  },
+  "paid_requests": 0,
+  "historical_local_model_requests": 0,
+  "temporary_key_removed": true
+}
