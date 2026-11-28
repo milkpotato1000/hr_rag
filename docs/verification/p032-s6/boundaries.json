@@ -1,0 +1,194 @@
+{
+  "methods": [
+    {
+      "method": "fixed",
+      "chunks": 121,
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "detection": [
+        {
+          "document_id": "handbook",
+          "headings_detected": 12,
+          "fallback": null
+        }
+      ],
+      "boundaries": [
+        {
+          "chunk_id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+          "start": 320,
+          "end": 720,
+          "source_excerpt": "의도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 320,
+              "canonical_end": 720,
+              "page_start": 320,
+              "page_end": 720
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+          ],
+          "bm25_rank": 1,
+          "selected": true,
+          "deadline": true,
+          "whole": false
+        },
+        {
+          "chunk_id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+          "start": 640,
+          "end": 1040,
+          "source_excerpt": "도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 640,
+              "canonical_end": 959,
+              "page_start": 640,
+              "page_end": 959
+            },
+            {
+              "page": 2,
+              "canonical_start": 961,
+              "canonical_end": 1040,
+              "page_start": 0,
+              "page_end": 79
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+          ],
+          "bm25_rank": 2,
+          "selected": true,
+          "deadline": true,
+          "whole": true
+        }
+      ],
+      "headings": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+        "제2장 연차의 사용과 기록 관리 [AN]",
+        "제3장 재택근무의 신청과 운영 [RM]",
+        "제4장 복지 지원 내역의 확인 [WF]",
+        "제5장 교육휴가의 신청과 변경 [ED]",
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ]
+    },
+    {
+      "method": "recursive",
+      "chunks": 147,
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "detection": [
+        {
+          "document_id": "handbook",
+          "headings_detected": 12,
+          "fallback": null
+        }
+      ],
+      "boundaries": [
+        {
+          "chunk_id": "c-456e8f53cb46ddd8f9c23feb2f3115a45db7cdce9dc85d1fbfe6bac091b76933",
+          "start": 513,
+          "end": 851,
+          "source_excerpt": "의도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 513,
+              "canonical_end": 851,
+              "page_start": 513,
+              "page_end": 851
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+          ],
+          "bm25_rank": 1,
+          "selected": true,
+          "deadline": true,
+          "whole": true
+        }
+      ],
+      "headings": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+        "제2장 연차의 사용과 기록 관리 [AN]",
+        "제3장 재택근무의 신청과 운영 [RM]",
+        "제4장 복지 지원 내역의 확인 [WF]",
+        "제5장 교육휴가의 신청과 변경 [ED]",
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ]
+    },
+    {
+      "method": "structure",
+      "chunks": 155,
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "detection": [
+        {
+          "document_id": "handbook",
+          "headings_detected": 12,
+          "fallback": null
+        }
+      ],
+      "boundaries": [
+        {
+          "chunk_id": "c-729133750f2aae0973d2afa2eab038cf82778ecc7900306d0e2dd85ed240ea71",
+          "start": 433,
+          "end": 810,
+          "source_excerpt": "의도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 433,
+              "canonical_end": 810,
+              "page_start": 433,
+              "page_end": 810
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+          ],
+          "bm25_rank": 1,
+          "selected": true,
+          "deadline": true,
+          "whole": true
+        },
+        {
+          "chunk_id": "c-c1fa4363b3769b77fec9eee69838bcfcf32ff537dc68b82b9c4a7bf0218814bd",
+          "start": 730,
+          "end": 961,
+          "source_excerpt": " 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 730,
+              "canonical_end": 959,
+              "page_start": 730,
+              "page_end": 959
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+          ],
+          "bm25_rank": null,
+          "selected": false,
+          "deadline": false,
+          "whole": false
+        }
+      ],
+      "headings": [
+        "제1장 생일 특별휴가와 포인트의 구분",
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+        "제2장 연차의 사용과 기록 관리",
+        "제2장 연차의 사용과 기록 관리 [AN]",
+        "제3장 재택근무의 신청과 운영",
+        "제3장 재택근무의 신청과 운영 [RM]",
+        "제4장 복지 지원 내역의 확인",
+        "제4장 복지 지원 내역의 확인 [WF]",
+        "제5장 교육휴가의 신청과 변경",
+        "제5장 교육휴가의 신청과 변경 [ED]",
+        "제6장 출장의 승인과 일정 관리",
+        "제6장 출장의 승인과 일정 관리 [TR]"
+      ]
+    }
+  ],
+  "recursive_structure_same_spans": false
+}

@@ -109,3 +109,41 @@ rag-lab compare-answers --result local .rag-runs/local-preview --result api .rag
 원하는 프로필 하나를 명시 실행하려면 해당 answer-from-rerank 명령에 --execute를 추가하고 새 출력 디렉터리를 지정하세요. 유료 API를 실제 실행하려면 모델명과 키 환경변수를 먼저 설정하세요. 다른 로컬 모델도 별도 프로필로 등록할 수 있습니다. compare-answers에서 해당 디렉터리를 선택하면 저장된 답변·인용 페이지·관측 토큰·지연을 다시 읽습니다. preview는 생성 전 상태이며 미측정 값은 null입니다.
 
 UI에서는 동일한 재정렬 결과를 열고 모델을 선택해 ‘선택 문맥으로 답변 미리보기’ 또는 ‘선택 문맥으로 실제 답변 생성’을 사용하세요. ‘생성 모델 비교’에서 두 저장 기록을 선택해 질문과 입력 일치 여부부터 확인하세요.
+
+## PDF 청킹 비교 · 같은 질문의 근거가 어디서 끊길까?
+
+앞에서 만든 `.rag-runs/pdf` snapshot을 사용합니다. 이번에는 규칙만 바꿉니다. 고정 크기·재귀·구조 방식 모두 400자, 겹침 80자입니다. 세 설정에 공통으로 BM25 후보 20개, 최종 5개, 전달 예산 4,000자를 사용합니다.
+
+```sh
+for method in fixed recursive structure; do
+  rag-lab chunk --snapshot .rag-runs/pdf --config "chunk-$method.json" --out ".rag-runs/handbook-chunk-$method" || exit 1
+done
+python - <<'PY'
+import json
+from pathlib import Path
+template = json.loads(Path('rag-frozen.json').read_text())
+for method in ('fixed', 'recursive', 'structure'):
+    template['chunk_artifact'] = '.rag-runs/handbook-chunk-' + method
+    Path('search-' + method + '.json').write_text(json.dumps(template))
+q = [{'id': 'deadline', 'question': '생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?'}]
+Path('deadline.json').write_text(json.dumps(q, ensure_ascii=False))
+PY
+rag-lab compare --snapshot .rag-runs/pdf --configs search-fixed.json search-recursive.json search-structure.json --questions deadline.json --out .rag-runs/handbook-chunk-compare
+rag-lab chunk-report --run .rag-runs/handbook-chunk-compare --out .rag-runs/handbook-chunk-report
+```
+
+저장된 `.rag-runs/handbook-chunk-report/report.html`에서 세 결과를 읽으세요. 개별 전달 청크는 비교 폴더의 `config-1/answers/deadline/result.json`부터 config-3까지의 contexts에 순서대로 있습니다. PDF 1쪽에서 BD-03을 찾고, 각 청크가 신청 기한만 담았는지 팀장 승인까지 한 문장으로 담았는지 확인하세요. 문자 범위는 정규화 원문의 시작 포함·끝 제외입니다.
+
+UI로 따라가려면 아래 명령으로 새 로컬 실습 서버를 여세요.
+
+```sh
+rag-lab serve --workspace . --sources handbook-sources.json --llm-config llm-local.json --chunk-config chunk-fixed.json --chunk-config chunk-recursive.json --chunk-config chunk-structure.json
+```
+
+1. ‘문서 준비’에서 규정집을 선택해 snapshot을 만드세요.
+2. ‘청킹’의 ‘저장 경계 실험’에서 설정을 하나씩 선택하고 ‘현재 snapshot으로 경계 만들기 / 미리보기’를 누르세요. 청크의 ‘원문 보기’에서 PDF 페이지와 경계를 대조하세요.
+3. 저장 청크 세 개를 복수 선택하고 청킹 비교 질문에 위 질문을 넣으세요. ‘검색과 전달 문맥’의 BM25·후보 20·최종 5·예산 4,000을 확인한 뒤 ‘저장 청크 비교 · 답변 미리보기’를 누르세요. 결과 행에서 전달된 근거와 원문을 여세요.
+
+의미 기반 설정과 LLM 설정은 각각 chunk-semantic.json과 chunk-llm.json입니다. 같은 chunk 명령에 별도 출력 경로를 주면 모델 실행 전 미리보기를 확인할 수 있습니다. 앞선 실험에서 E5 의미 경계는 실제 생성됐고, 로컬 Qwen 4B의 LLM 경계는 첫 구간에서 출력 상한에 도달했습니다.
+
+Codex 또는 Claude Code에 요청할 예시: “같은 PDF·질문·BM25에서 세 규칙의 청크를 비교해 줘. 신청 기한과 팀장 승인을 함께 담은 첫 청크의 순위와 PDF 페이지를 알려 주고, 구조 방식이 실제 제목을 인식했는지도 확인해 줘. 답변 모델은 호출하지 마.”

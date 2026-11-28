@@ -1,0 +1,1097 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>청킹 비교</title><style>body{font-family:system-ui;max-width:1000px;margin:auto;padding:20px;overflow-wrap:anywhere}table{width:100%;border-collapse:collapse}td,th{border:1px solid #ccc;padding:8px}pre{white-space:pre-wrap}</style><h1>저장된 청크 비교</h1><p>경계 모델 재실행 0. 원문 span 회수는 답변 정답 판정과 별개입니다. 실행 출처: preview</p><table><tr><th>설정</th><th>질문</th><th>상태</th><th>문맥 fact 회수</th></tr><tr><td>config-1</td><td>deadline</td><td>preview</td><td>N/A</td></tr><tr><td>config-2</td><td>deadline</td><td>preview</td><td>N/A</td></tr><tr><td>config-3</td><td>deadline</td><td>preview</td><td>N/A</td></tr></table><details><summary>집계·실행 기록</summary><pre>{
+  &quot;schema_version&quot;: 1,
+  &quot;execution_kind&quot;: &quot;preview&quot;,
+  &quot;source_fingerprint&quot;: &quot;0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2&quot;,
+  &quot;questions_hash&quot;: &quot;2790a46fd280ad9643e1615ec59e27e2a6f08849525542d29408791d51b69d6d&quot;,
+  &quot;questions&quot;: [
+    {
+      &quot;id&quot;: &quot;deadline&quot;,
+      &quot;question&quot;: &quot;생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?&quot;
+    }
+  ],
+  &quot;configs&quot;: [
+    {
+      &quot;id&quot;: &quot;config-1&quot;,
+      &quot;hash&quot;: &quot;e87f7aa96a86f63ddaa074caa8e0a4ae9b945736ed4fbdb715ca283e5938c98e&quot;,
+      &quot;settings&quot;: {
+        &quot;schema_version&quot;: 3,
+        &quot;retrieval&quot;: {
+          &quot;method&quot;: &quot;bm25&quot;,
+          &quot;top_k&quot;: 5,
+          &quot;candidate_k&quot;: 20,
+          &quot;rrf_k&quot;: 60,
+          &quot;context_budget_chars&quot;: 4000
+        },
+        &quot;llm&quot;: {
+          &quot;schema_version&quot;: 1,
+          &quot;profiles&quot;: {
+            &quot;answer&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            },
+            &quot;judge&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            }
+          },
+          &quot;roles&quot;: {
+            &quot;generation&quot;: &quot;answer&quot;,
+            &quot;evaluation&quot;: &quot;judge&quot;
+          }
+        },
+        &quot;chunk_artifact&quot;: {
+          &quot;fingerprint&quot;: &quot;2bb2db9c2bb3d7bc5acda62fb57659617a55b890be41e71bf104a139fa33be8b&quot;,
+          &quot;config&quot;: {
+            &quot;schema_version&quot;: 1,
+            &quot;method&quot;: &quot;fixed&quot;,
+            &quot;size_chars&quot;: 400,
+            &quot;overlap_chars&quot;: 80
+          }
+        },
+        &quot;embedding&quot;: null
+      },
+      &quot;changed_axes_vs_first&quot;: []
+    },
+    {
+      &quot;id&quot;: &quot;config-2&quot;,
+      &quot;hash&quot;: &quot;588e8e0eb10d333bcaee63c8b048e08fb944a8b5820d006554aa6107f27b8107&quot;,
+      &quot;settings&quot;: {
+        &quot;schema_version&quot;: 3,
+        &quot;retrieval&quot;: {
+          &quot;method&quot;: &quot;bm25&quot;,
+          &quot;top_k&quot;: 5,
+          &quot;candidate_k&quot;: 20,
+          &quot;rrf_k&quot;: 60,
+          &quot;context_budget_chars&quot;: 4000
+        },
+        &quot;llm&quot;: {
+          &quot;schema_version&quot;: 1,
+          &quot;profiles&quot;: {
+            &quot;answer&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            },
+            &quot;judge&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            }
+          },
+          &quot;roles&quot;: {
+            &quot;generation&quot;: &quot;answer&quot;,
+            &quot;evaluation&quot;: &quot;judge&quot;
+          }
+        },
+        &quot;chunk_artifact&quot;: {
+          &quot;fingerprint&quot;: &quot;afbf453f7f3629199112b5e1f6eeb7107de71a7f952631b336d444766ae2f32e&quot;,
+          &quot;config&quot;: {
+            &quot;schema_version&quot;: 1,
+            &quot;method&quot;: &quot;recursive&quot;,
+            &quot;size_chars&quot;: 400,
+            &quot;overlap_chars&quot;: 80
+          }
+        },
+        &quot;embedding&quot;: null
+      },
+      &quot;changed_axes_vs_first&quot;: [
+        &quot;chunk_artifact&quot;
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;config-3&quot;,
+      &quot;hash&quot;: &quot;f0610e5f46644421fce9a2704312cb5057acb0243d55bfd9e4a18e350711782f&quot;,
+      &quot;settings&quot;: {
+        &quot;schema_version&quot;: 3,
+        &quot;retrieval&quot;: {
+          &quot;method&quot;: &quot;bm25&quot;,
+          &quot;top_k&quot;: 5,
+          &quot;candidate_k&quot;: 20,
+          &quot;rrf_k&quot;: 60,
+          &quot;context_budget_chars&quot;: 4000
+        },
+        &quot;llm&quot;: {
+          &quot;schema_version&quot;: 1,
+          &quot;profiles&quot;: {
+            &quot;answer&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            },
+            &quot;judge&quot;: {
+              &quot;mode&quot;: &quot;local&quot;,
+              &quot;provider&quot;: &quot;ollama&quot;,
+              &quot;model&quot;: &quot;EXAMPLE_OLLAMA_MODEL&quot;,
+              &quot;base_url&quot;: &quot;http://127.0.0.1:11434&quot;,
+              &quot;max_output_tokens&quot;: 1024,
+              &quot;timeout_seconds&quot;: 120,
+              &quot;response_mode&quot;: &quot;json_object&quot;,
+              &quot;temperature&quot;: 0,
+              &quot;num_ctx&quot;: 8192,
+              &quot;seed&quot;: 42,
+              &quot;identity&quot;: {
+                &quot;expected_digest&quot;: &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;,
+                &quot;hf_id&quot;: &quot;Qwen/Qwen3-8B&quot;,
+                &quot;source_revision&quot;: null,
+                &quot;conversion&quot;: &quot;User must record their actual runtime conversion&quot;,
+                &quot;validation_status&quot;: &quot;example_requires_configuration&quot;
+              }
+            }
+          },
+          &quot;roles&quot;: {
+            &quot;generation&quot;: &quot;answer&quot;,
+            &quot;evaluation&quot;: &quot;judge&quot;
+          }
+        },
+        &quot;chunk_artifact&quot;: {
+          &quot;fingerprint&quot;: &quot;6ccb93ace68fa1a8c041775211506bbc96548460f84fa3dcb85293938eeee6f3&quot;,
+          &quot;config&quot;: {
+            &quot;schema_version&quot;: 1,
+            &quot;method&quot;: &quot;structure&quot;,
+            &quot;size_chars&quot;: 400,
+            &quot;overlap_chars&quot;: 80
+          }
+        },
+        &quot;embedding&quot;: null
+      },
+      &quot;changed_axes_vs_first&quot;: [
+        &quot;chunk_artifact&quot;
+      ]
+    }
+  ],
+  &quot;generation_request_upper_bound&quot;: 3,
+  &quot;retry_count&quot;: 0,
+  &quot;builds&quot;: [
+    {
+      &quot;config_id&quot;: &quot;config-1&quot;,
+      &quot;status&quot;: &quot;ready&quot;,
+      &quot;chunk_fingerprint&quot;: &quot;2bb2db9c2bb3d7bc5acda62fb57659617a55b890be41e71bf104a139fa33be8b&quot;,
+      &quot;index_fingerprint&quot;: &quot;eaa2fdfb9d9fae57d305bdf08afbd28bbd6a0ef6bb294de6b8da95efaa7c765c&quot;,
+      &quot;build_ms&quot;: 135.503
+    },
+    {
+      &quot;config_id&quot;: &quot;config-2&quot;,
+      &quot;status&quot;: &quot;ready&quot;,
+      &quot;chunk_fingerprint&quot;: &quot;afbf453f7f3629199112b5e1f6eeb7107de71a7f952631b336d444766ae2f32e&quot;,
+      &quot;index_fingerprint&quot;: &quot;458dbd0073efe3f96e85c4fe7d7b827b4f8c370aaf4be7b13f1add6e26318013&quot;,
+      &quot;build_ms&quot;: 145.716
+    },
+    {
+      &quot;config_id&quot;: &quot;config-3&quot;,
+      &quot;status&quot;: &quot;ready&quot;,
+      &quot;chunk_fingerprint&quot;: &quot;6ccb93ace68fa1a8c041775211506bbc96548460f84fa3dcb85293938eeee6f3&quot;,
+      &quot;index_fingerprint&quot;: &quot;a769a09596f075b9b7fad17219c804aeb8a6941a2bbfa8e6f95af2ecf643342e&quot;,
+      &quot;build_ms&quot;: 196.838
+    }
+  ],
+  &quot;rows&quot;: [
+    {
+      &quot;config_id&quot;: &quot;config-1&quot;,
+      &quot;question_id&quot;: &quot;deadline&quot;,
+      &quot;status&quot;: &quot;preview&quot;,
+      &quot;failed_stage&quot;: null,
+      &quot;error&quot;: null,
+      &quot;dispatch_attempted&quot;: false,
+      &quot;execution_kind&quot;: &quot;preview&quot;,
+      &quot;source_fingerprint&quot;: &quot;0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2&quot;,
+      &quot;result_path&quot;: &quot;config-1/answers/deadline/result.json&quot;,
+      &quot;metrics&quot;: {
+        &quot;faithfulness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+        },
+        &quot;correctness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;recall_at_k&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;mrr&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;ndcg&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        }
+      },
+      &quot;usage&quot;: null,
+      &quot;cost&quot;: null,
+      &quot;latency_ms&quot;: {
+        &quot;load_build&quot;: 124.95245898026042,
+        &quot;retrieval&quot;: 3.4002500178758055,
+        &quot;provider&quot;: null,
+        &quot;total&quot;: 218.76950000296347
+      }
+    },
+    {
+      &quot;config_id&quot;: &quot;config-2&quot;,
+      &quot;question_id&quot;: &quot;deadline&quot;,
+      &quot;status&quot;: &quot;preview&quot;,
+      &quot;failed_stage&quot;: null,
+      &quot;error&quot;: null,
+      &quot;dispatch_attempted&quot;: false,
+      &quot;execution_kind&quot;: &quot;preview&quot;,
+      &quot;source_fingerprint&quot;: &quot;0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2&quot;,
+      &quot;result_path&quot;: &quot;config-2/answers/deadline/result.json&quot;,
+      &quot;metrics&quot;: {
+        &quot;faithfulness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+        },
+        &quot;correctness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;recall_at_k&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;mrr&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;ndcg&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        }
+      },
+      &quot;usage&quot;: null,
+      &quot;cost&quot;: null,
+      &quot;latency_ms&quot;: {
+        &quot;load_build&quot;: 137.968583003385,
+        &quot;retrieval&quot;: 3.5641249851323664,
+        &quot;provider&quot;: null,
+        &quot;total&quot;: 240.9385830105748
+      }
+    },
+    {
+      &quot;config_id&quot;: &quot;config-3&quot;,
+      &quot;question_id&quot;: &quot;deadline&quot;,
+      &quot;status&quot;: &quot;preview&quot;,
+      &quot;failed_stage&quot;: null,
+      &quot;error&quot;: null,
+      &quot;dispatch_attempted&quot;: false,
+      &quot;execution_kind&quot;: &quot;preview&quot;,
+      &quot;source_fingerprint&quot;: &quot;0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2&quot;,
+      &quot;result_path&quot;: &quot;config-3/answers/deadline/result.json&quot;,
+      &quot;metrics&quot;: {
+        &quot;faithfulness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+        },
+        &quot;correctness&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;recall_at_k&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;mrr&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        },
+        &quot;ndcg&quot;: {
+          &quot;value&quot;: null,
+          &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+        }
+      },
+      &quot;usage&quot;: null,
+      &quot;cost&quot;: null,
+      &quot;latency_ms&quot;: {
+        &quot;load_build&quot;: 215.61854099854827,
+        &quot;retrieval&quot;: 3.427499992540106,
+        &quot;provider&quot;: null,
+        &quot;total&quot;: 398.17379097803496
+      }
+    }
+  ],
+  &quot;status_counts&quot;: {
+    &quot;preview&quot;: 3
+  },
+  &quot;embedding_work&quot;: {
+    &quot;jobs&quot;: 0,
+    &quot;documents&quot;: 0,
+    &quot;queries&quot;: 0
+  },
+  &quot;generation_requests&quot;: 0,
+  &quot;cost&quot;: null,
+  &quot;cost_status&quot;: &quot;unmeasured&quot;,
+  &quot;metrics&quot;: {
+    &quot;faithfulness&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;evaluator_not_connected&quot;
+    },
+    &quot;correctness&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+    },
+    &quot;recall_at_k&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+    },
+    &quot;mrr&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+    },
+    &quot;ndcg&quot;: {
+      &quot;value&quot;: null,
+      &quot;reason&quot;: &quot;ground_truth_not_configured&quot;
+    }
+  },
+  &quot;source_parse_ms&quot;: 312.819,
+  &quot;total_ms&quot;: 1781.2098749855068,
+  &quot;comparison_axis&quot;: &quot;frozen_chunk_artifact&quot;,
+  &quot;boundary_inference_calls&quot;: 0,
+  &quot;fact_aggregates&quot;: {
+    &quot;config-1&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: null,
+        &quot;micro&quot;: null,
+        &quot;all_required_rate&quot;: null,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 0,
+        &quot;valid&quot;: 0,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 1
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: null,
+        &quot;micro&quot;: null,
+        &quot;all_required_rate&quot;: null,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 0,
+        &quot;valid&quot;: 0,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 1
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: null,
+        &quot;micro&quot;: null,
+        &quot;all_required_rate&quot;: null,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 0,
+        &quot;valid&quot;: 0,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 1
+      }
+    },
+    &quot;config-2&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: null,
+        &quot;micro&quot;: null,
+        &quot;all_required_rate&quot;: null,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 0,
+        &quot;valid&quot;: 0,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 1
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: null,
+        &quot;micro&quot;: null,
+        &quot;all_required_rate&quot;: null,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 0,
+        &quot;valid&quot;: 0,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 1
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: null,
+        &quot;micro&quot;: null,
+        &quot;all_required_rate&quot;: null,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 0,
+        &quot;valid&quot;: 0,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 1
+      }
+    },
+    &quot;config-3&quot;: {
+      &quot;candidate&quot;: {
+        &quot;macro&quot;: null,
+        &quot;micro&quot;: null,
+        &quot;all_required_rate&quot;: null,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 0,
+        &quot;valid&quot;: 0,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 1
+      },
+      &quot;top_k&quot;: {
+        &quot;macro&quot;: null,
+        &quot;micro&quot;: null,
+        &quot;all_required_rate&quot;: null,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 0,
+        &quot;valid&quot;: 0,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 1
+      },
+      &quot;contexts&quot;: {
+        &quot;macro&quot;: null,
+        &quot;micro&quot;: null,
+        &quot;all_required_rate&quot;: null,
+        &quot;fulfilled&quot;: 0,
+        &quot;total_facts&quot;: 0,
+        &quot;valid&quot;: 0,
+        &quot;questions&quot;: 1,
+        &quot;failed&quot;: 0,
+        &quot;no_required_facts&quot;: 0,
+        &quot;excluded&quot;: 1
+      }
+    }
+  },
+  &quot;chunk_artifacts&quot;: [
+    {
+      &quot;chunk_fingerprint&quot;: &quot;2bb2db9c2bb3d7bc5acda62fb57659617a55b890be41e71bf104a139fa33be8b&quot;,
+      &quot;config&quot;: {
+        &quot;schema_version&quot;: 1,
+        &quot;method&quot;: &quot;fixed&quot;,
+        &quot;size_chars&quot;: 400,
+        &quot;overlap_chars&quot;: 80
+      },
+      &quot;statistics&quot;: {
+        &quot;chunk_count&quot;: 121,
+        &quot;unit_count&quot;: 563,
+        &quot;lengths&quot;: [
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          182
+        ],
+        &quot;min&quot;: 182,
+        &quot;max&quot;: 400,
+        &quot;mean&quot;: 398.198347107438,
+        &quot;emitted_chars&quot;: 48182,
+        &quot;unique_chars&quot;: 38582,
+        &quot;duplicate_chars&quot;: 9600,
+        &quot;forced_units&quot;: 0,
+        &quot;token_count&quot;: null,
+        &quot;token_status&quot;: &quot;unmeasured; character/byte limits do not guarantee model context window&quot;
+      },
+      &quot;work&quot;: {
+        &quot;execution_kind&quot;: &quot;offline&quot;,
+        &quot;boundary_model_jobs&quot;: 0,
+        &quot;boundary_attempts&quot;: 0,
+        &quot;unit_observation&quot;: {},
+        &quot;requested_windows&quot;: 0,
+        &quot;dispatches&quot;: 0,
+        &quot;successful_windows&quot;: 0,
+        &quot;failed_windows&quot;: 0,
+        &quot;unknown_windows&quot;: 0,
+        &quot;retry_count&quot;: 0,
+        &quot;cost&quot;: null,
+        &quot;cost_status&quot;: &quot;unmeasured&quot;,
+        &quot;unit_embedding&quot;: null,
+        &quot;usage&quot;: {
+          &quot;input_tokens&quot;: null,
+          &quot;output_tokens&quot;: null
+        },
+        &quot;elapsed_ms&quot;: 0.35895800101570785
+      },
+      &quot;source_fingerprint&quot;: &quot;0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2&quot;
+    },
+    {
+      &quot;chunk_fingerprint&quot;: &quot;afbf453f7f3629199112b5e1f6eeb7107de71a7f952631b336d444766ae2f32e&quot;,
+      &quot;config&quot;: {
+        &quot;schema_version&quot;: 1,
+        &quot;method&quot;: &quot;recursive&quot;,
+        &quot;size_chars&quot;: 400,
+        &quot;overlap_chars&quot;: 80
+      },
+      &quot;statistics&quot;: {
+        &quot;chunk_count&quot;: 147,
+        &quot;unit_count&quot;: 563,
+        &quot;lengths&quot;: [
+          315,
+          358,
+          338,
+          190,
+          386,
+          322,
+          310,
+          357,
+          355,
+          375,
+          342,
+          357,
+          383,
+          393,
+          363,
+          336,
+          195,
+          393,
+          323,
+          348,
+          373,
+          387,
+          332,
+          232,
+          363,
+          388,
+          381,
+          397,
+          332,
+          347,
+          249,
+          382,
+          325,
+          345,
+          394,
+          339,
+          333,
+          155,
+          369,
+          336,
+          396,
+          362,
+          346,
+          330,
+          338,
+          367,
+          352,
+          315,
+          305,
+          298,
+          199,
+          371,
+          371,
+          358,
+          387,
+          394,
+          398,
+          146,
+          331,
+          317,
+          351,
+          266,
+          391,
+          334,
+          379,
+          387,
+          374,
+          400,
+          386,
+          339,
+          324,
+          210,
+          375,
+          393,
+          362,
+          343,
+          242,
+          337,
+          380,
+          341,
+          360,
+          398,
+          377,
+          247,
+          384,
+          384,
+          352,
+          352,
+          394,
+          384,
+          161,
+          396,
+          362,
+          370,
+          339,
+          373,
+          383,
+          320,
+          398,
+          377,
+          333,
+          399,
+          264,
+          300,
+          349,
+          364,
+          398,
+          383,
+          353,
+          261,
+          324,
+          361,
+          396,
+          379,
+          384,
+          335,
+          175,
+          371,
+          356,
+          378,
+          289,
+          395,
+          216,
+          337,
+          382,
+          386,
+          373,
+          395,
+          372,
+          287,
+          369,
+          353,
+          294,
+          353,
+          374,
+          303,
+          238,
+          315,
+          369,
+          372,
+          340,
+          383,
+          385,
+          367,
+          323,
+          376,
+          249
+        ],
+        &quot;min&quot;: 146,
+        &quot;max&quot;: 400,
+        &quot;mean&quot;: 341.9183673469388,
+        &quot;emitted_chars&quot;: 50262,
+        &quot;unique_chars&quot;: 38582,
+        &quot;duplicate_chars&quot;: 11680,
+        &quot;forced_units&quot;: 0,
+        &quot;token_count&quot;: null,
+        &quot;token_status&quot;: &quot;unmeasured; character/byte limits do not guarantee model context window&quot;
+      },
+      &quot;work&quot;: {
+        &quot;execution_kind&quot;: &quot;offline&quot;,
+        &quot;boundary_model_jobs&quot;: 0,
+        &quot;boundary_attempts&quot;: 0,
+        &quot;unit_observation&quot;: {},
+        &quot;requested_windows&quot;: 0,
+        &quot;dispatches&quot;: 0,
+        &quot;successful_windows&quot;: 0,
+        &quot;failed_windows&quot;: 0,
+        &quot;unknown_windows&quot;: 0,
+        &quot;retry_count&quot;: 0,
+        &quot;cost&quot;: null,
+        &quot;cost_status&quot;: &quot;unmeasured&quot;,
+        &quot;unit_embedding&quot;: null,
+        &quot;usage&quot;: {
+          &quot;input_tokens&quot;: null,
+          &quot;output_tokens&quot;: null
+        },
+        &quot;elapsed_ms&quot;: 0.4205830045975745
+      },
+      &quot;source_fingerprint&quot;: &quot;0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2&quot;
+    },
+    {
+      &quot;chunk_fingerprint&quot;: &quot;6ccb93ace68fa1a8c041775211506bbc96548460f84fa3dcb85293938eeee6f3&quot;,
+      &quot;config&quot;: {
+        &quot;schema_version&quot;: 1,
+        &quot;method&quot;: &quot;structure&quot;,
+        &quot;size_chars&quot;: 400,
+        &quot;overlap_chars&quot;: 80
+      },
+      &quot;statistics&quot;: {
+        &quot;chunk_count&quot;: 155,
+        &quot;unit_count&quot;: 563,
+        &quot;lengths&quot;: [
+          101,
+          21,
+          18,
+          17,
+          17,
+          17,
+          18,
+          304,
+          377,
+          231,
+          386,
+          322,
+          310,
+          357,
+          355,
+          375,
+          342,
+          357,
+          383,
+          393,
+          130,
+          320,
+          364,
+          393,
+          323,
+          348,
+          373,
+          387,
+          332,
+          232,
+          363,
+          388,
+          381,
+          397,
+          332,
+          347,
+          249,
+          382,
+          325,
+          345,
+          394,
+          339,
+          333,
+          155,
+          369,
+          336,
+          396,
+          362,
+          346,
+          330,
+          338,
+          193,
+          307,
+          357,
+          347,
+          353,
+          199,
+          371,
+          371,
+          358,
+          387,
+          394,
+          398,
+          146,
+          331,
+          317,
+          351,
+          266,
+          391,
+          334,
+          379,
+          387,
+          374,
+          400,
+          386,
+          339,
+          324,
+          210,
+          375,
+          163,
+          305,
+          341,
+          379,
+          152,
+          337,
+          380,
+          341,
+          360,
+          398,
+          377,
+          247,
+          384,
+          384,
+          352,
+          352,
+          394,
+          384,
+          161,
+          396,
+          362,
+          370,
+          194,
+          317,
+          201,
+          383,
+          320,
+          398,
+          377,
+          333,
+          399,
+          264,
+          300,
+          349,
+          364,
+          398,
+          383,
+          353,
+          261,
+          324,
+          361,
+          396,
+          379,
+          384,
+          335,
+          175,
+          291,
+          356,
+          378,
+          289,
+          395,
+          216,
+          337,
+          382,
+          386,
+          373,
+          395,
+          372,
+          287,
+          369,
+          353,
+          294,
+          353,
+          374,
+          303,
+          238,
+          315,
+          369,
+          372,
+          340,
+          383,
+          385,
+          367,
+          323,
+          376,
+          249
+        ],
+        &quot;min&quot;: 17,
+        &quot;max&quot;: 400,
+        &quot;mean&quot;: 322.2064516129032,
+        &quot;emitted_chars&quot;: 49942,
+        &quot;unique_chars&quot;: 38582,
+        &quot;duplicate_chars&quot;: 11360,
+        &quot;forced_units&quot;: 0,
+        &quot;token_count&quot;: null,
+        &quot;token_status&quot;: &quot;unmeasured; character/byte limits do not guarantee model context window&quot;
+      },
+      &quot;work&quot;: {
+        &quot;execution_kind&quot;: &quot;offline&quot;,
+        &quot;boundary_model_jobs&quot;: 0,
+        &quot;boundary_attempts&quot;: 0,
+        &quot;unit_observation&quot;: {},
+        &quot;requested_windows&quot;: 0,
+        &quot;dispatches&quot;: 0,
+        &quot;successful_windows&quot;: 0,
+        &quot;failed_windows&quot;: 0,
+        &quot;unknown_windows&quot;: 0,
+        &quot;retry_count&quot;: 0,
+        &quot;cost&quot;: null,
+        &quot;cost_status&quot;: &quot;unmeasured&quot;,
+        &quot;unit_embedding&quot;: null,
+        &quot;usage&quot;: {
+          &quot;input_tokens&quot;: null,
+          &quot;output_tokens&quot;: null
+        },
+        &quot;elapsed_ms&quot;: 0.4309169889893383
+      },
+      &quot;source_fingerprint&quot;: &quot;0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2&quot;
+    }
+  ]
+}</pre></details>

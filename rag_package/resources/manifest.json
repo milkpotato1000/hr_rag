@@ -212,12 +212,12 @@
     },
     {
       "path": "HANDBOOK.md",
-      "sha256": "5e49d3d15f4258338470ae08cfe69cc76cb4238fa366da349b0c363c45a3db33",
+      "sha256": "93fd6e2320c904eacc87647c2b6e30c7ab32fa79e40f56973dd559cfaf740e6e",
       "source": {
         "contract": "P032 S3",
         "kind": "handbook_practice"
       },
-      "changes": "Installed PDF, retrieval and generation comparison practice"
+      "changes": "Installed PDF practice including S6 chunk boundary comparison"
     },
     {
       "path": "handbook-sources.json",
