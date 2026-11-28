@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Validate first local LLM chunk window",
   "next_action": "Adopt exact S2i, verify first-window inputs and controls, then invoke local chunking once",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T07:11:25.011312+00:00",
       "evidence": "Verified existing HR RAG dev chat direct delivery succeeded for exact S2i plan and single-call scope."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T07:11:54.802890+00:00",
+      "evidence": "Verified exact S2i adoption 686913549ac00e1eed5d7aa364e4381c8b3ee54e in dev commit 314e45c. First-window results pending."
     }
   ]
 }
