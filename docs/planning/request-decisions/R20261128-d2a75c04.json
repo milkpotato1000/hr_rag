@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "R20261128-d2a75c04",
+  "request_sha256": "ebc767737a85cdf706c339d2d839233b8fb377c5a33a21e629118065a2b06d32",
+  "disposition": "linked",
+  "cards": [
+    "P032"
+  ],
+  "reason": "Verified first truncation and Thinking-only model mismatch with fixed-false adapter; bounded S2e explicit local thinking/final-content handling plus one new gt01 probe, preserving parent failure and all holds",
+  "review_reference": "docs/planning/reviews/P032-s2e-readiness-20261128.md"
+}
