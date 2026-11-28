@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Installed retrieval and optional reranker comparison",
   "next_action": "Finish S3 then adopt S4 and verify identical PDF chunk and candidate inputs",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T07:33:48.519518+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T07:34:07.416890+00:00",
+      "evidence": "Verified existing HR RAG dev chat direct delivery succeeded, S3 closure before S4 adoption."
     }
   ]
 }
