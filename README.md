@@ -34,7 +34,7 @@ cd "../rag-lab-first/practice"
 ../env/bin/rag-lab first-answer --execute
 ```
 
-터미널과 `first-answer/answer/result.json`에서 답변, 인용한 PDF 쪽, 조항 원문을 확인하세요. `first-answer` 폴더가 이미 있으면 저장된 결과를 읽으세요. 모델이 준비되지 않은 경우에는 출력의 action을 확인하세요.
+터미널과 `first-answer/answer/result.json`에서 답변, 인용한 PDF 쪽, 조항 원문을 확인하세요. `first-answer` 폴더가 이미 있으면 저장된 결과를 읽으세요. 모델이 준비되지 않은 경우에는 출력의 action을 확인하세요. [설치본의 첫 답변과 PDF 인용 대조](docs/verification/p032-s25/README.md)
 
 **Codex와 Claude Code에 줄 요청**
 
