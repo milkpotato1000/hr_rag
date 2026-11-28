@@ -75,26 +75,34 @@ rag-lab llm-configure --spec llm-spec-api.json --out handbook-api.json
 
 ## 신청 기한의 근거는 몇 위에 들어올까?
 
-위 BM25 미리보기와 같은 PDF snapshot 및 질문을 사용합니다. E5 임베딩과 mMiniLM 리랭커의 준비된 profile.json, 설치본의 requirements-retrieval.lock과 일치하는 SDK가 필요합니다. 두 환경변수에는 본인의 준비된 프로필 **절대경로**를 지정하세요. 아래 명령은 handbook-practice 안에서 실행합니다.
+앞에서 generation-setup으로 만든 my-local/model.json을 사용합니다. API를 선택했다면 my-api/model.json을 지정하세요. 환경변수에는 model-prepare 또는 model-import가 만든 profile.json의 경로를 지정합니다. 공백이 있는 경로도 인용부호로 감싸면 됩니다.
 
 ```sh
-export E5_PROFILE=/absolute/path/to/e5/prepared/profile.json
-export RERANK_PROFILE=/absolute/path/to/mmini/prepared/profile.json
-python - <<'PY'
-import json, os
-from pathlib import Path
-template = json.loads(Path('rag-hybrid.json').read_text())
-template['chunking'] = json.loads(Path('fixed.json').read_text())['chunking']
-template['embedding_config'] = str(Path(os.environ['E5_PROFILE']).resolve(strict=True))
-for method in ('dense', 'hybrid'):
-    template['retrieval']['method'] = method
-    Path(f'handbook-{method}.json').write_text(json.dumps(template, indent=2))
-PY
+export E5_PROFILE='/path/to/e5/prepared/profile.json'
+export BGE_PROFILE='/path/to/bge/prepared/profile.json'
+export RERANK_PROFILE='/path/to/mmini/prepared/profile.json'
+preset() {
+  rag-lab pipeline-setup --llm-config my-local/model.json --chunk-config chunk-fixed.json --top-k 5 --candidate-k 20 --context-budget-chars 4000 "$@"
+}
+preset --method bm25 --out bm25-off
+preset --method dense --embedding-config "$E5_PROFILE" --out dense-e5
+preset --method hybrid --embedding-config "$E5_PROFILE" --out hybrid-e5
+preset --method hybrid --embedding-config "$BGE_PROFILE" --out hybrid-bge
+preset --method hybrid --embedding-config "$E5_PROFILE" --reranker-config "$RERANK_PROFILE" --out hybrid-e5-on
+```
+
+각 결과의 commands.pipeline_preview와 commands.serve를 실습 폴더에서 실행하세요. 첫 명령은 같은 승인권자 질문의 실행 계획을 보여줍니다. 두 번째 명령은 ‘문서에서 답변까지’의 기본 선택과 후보 수·K·예산을 해당 구성으로 맞춥니다. 프로필만 일반 serve에 등록한 경우에는 화면에서 직접 선택하세요. 구성 생성은 모델 파일의 해시와 역할을 확인하고 가중치는 기존 위치에 둡니다.
+
+**임베딩만 비교**하려면 hybrid-e5와 hybrid-bge에서 같은 질문의 BD-03 첫 전달 순위와 문장 포함 여부를 대조하세요. **리랭커만 비교**하려면 hybrid-e5와 hybrid-e5-on의 후보 목록이 같은지 먼저 확인하고 최종 문맥 순위를 비교하세요. 미리보기에는 순위 실측이 없으므로 실제 관찰에는 저장한 실행의 pipeline-compare를 사용합니다.
+
+다음은 신청 기한의 순위를 실제로 계산할 때 사용하는 단계별 명령입니다. 설치본 requirements-retrieval.lock의 SDK가 필요합니다.
+
+```sh
 question='생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?'
-rag-lab retrieval-preview --config handbook-dense.json
-rag-lab build --snapshot .rag-runs/pdf --config handbook-dense.json --out .rag-runs/e5 --execute-retrieval
+rag-lab retrieval-preview --config dense-e5/search.json
+rag-lab build --snapshot .rag-runs/pdf --config dense-e5/search.json --out .rag-runs/e5 --execute-retrieval
 for method in dense hybrid; do
-  rag-lab ask --run .rag-runs/e5 --config "handbook-${method}.json" --question "$question" --out ".rag-runs/${method}" --execute-retrieval
+  rag-lab ask --run .rag-runs/e5 --config "${method}-e5/search.json" --question "$question" --out ".rag-runs/${method}" --execute-retrieval
 done
 rag-lab candidates --build .rag-runs/e5 --result .rag-runs/hybrid --question-id first --n 20 --out .rag-runs/candidates
 rag-lab rerank --candidates .rag-runs/candidates --method none --top-k 5 --context-budget-chars 4000 --out .rag-runs/off
@@ -189,20 +197,13 @@ UI의 serve 명령에 `--chunk-config chunk-handbook.json`을 추가하세요. �
 
 ## 선택한 구성으로 PDF부터 답변까지 실행하기
 
-앞서 만든 handbook-sources.json과 handbook-model.json을 사용합니다. 준비한 임베딩·리랭커 profile.json의 절대경로를 E5_PROFILE과 RERANK_PROFILE에 지정하세요. 검색 템플릿에서 검색 방식·후보 수·최종 K·문맥 예산·생성 프로필을 선택하고, 청킹은 --chunk-config에서 선택합니다.
+아래에서는 규정집 계층 청킹과 E5 Hybrid, mMiniLM을 선택합니다.
 
 ```sh
-python - <<'PY'
-import json, os
-from pathlib import Path
-cfg = json.loads(Path('rag-hybrid.json').read_text())
-cfg['embedding_config'] = str(Path(os.environ['E5_PROFILE']).resolve(strict=True))
-cfg['llm_config'] = 'handbook-model.json'
-Path('pipeline-search.json').write_text(json.dumps(cfg, indent=2))
-PY
+rag-lab pipeline-setup --llm-config my-local/model.json --chunk-config chunk-handbook.json --method hybrid --embedding-config "$E5_PROFILE" --reranker-config "$RERANK_PROFILE" --out handbook-selected
 question='생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?'
 selected_pipeline() {
-  rag-lab pipeline --sources handbook-sources.json --chunk-config chunk-handbook.json --search-config pipeline-search.json --reranker-profile "$RERANK_PROFILE" --question "$question" "$@"
+  rag-lab pipeline --sources handbook-sources.json --chunk-config handbook-selected/chunk.json --search-config handbook-selected/search.json --reranker-profile handbook-selected/reranker.json --question "$question" "$@"
 }
 selected_pipeline --out .rag-runs/pipeline-plan
 ```
@@ -214,19 +215,13 @@ selected_pipeline --out .rag-runs/pipeline-live --execute
 rag-lab pipeline-replay --run .rag-runs/pipeline-live
 ```
 
-BM25로 간단히 시작하려면 fixed.json의 llm_config를 준비한 생성 프로필로 바꾼 사본을 --search-config에 주고 --reranker-profile을 생략하세요. 유료 API는 llm_config를 해당 프로필로 바꾸면 됩니다. 명시 실행하면 질문과 최종 문맥이 미리보기에 표시된 주소로 전송됩니다. 답변의 citations에서 chunk_id·heading_path·pages·start·end·quote를 보고 chunks와 rerank의 최종 문맥을 대조하세요. 실패한 실행은 pipeline.json의 failed_stage와 해당 단계 파일에서 확인하고 보존하세요.
+BM25는 --method bm25로, API는 --llm-config my-api/model.json으로 새 구성을 만들 수 있습니다. 명시 실행하면 질문과 최종 문맥이 미리보기에 표시된 주소로 전송됩니다. 답변의 citations에서 chunk_id·heading_path·pages·start·end·quote를 보고 chunks와 rerank의 최종 문맥을 대조하세요. 실패한 실행은 pipeline.json의 failed_stage와 해당 단계 파일에서 확인하고 보존하세요.
 
 Codex 또는 Claude Code에 줄 요청 예시: “내 규정집 PDF를 handbook-v1으로 나누고 E5 Hybrid와 mMiniLM, 준비한 로컬 Qwen으로 신청 기한을 찾아줘. 실행 전 미리보기에서 모델과 전송 주소를 확인하고, 최종 답변의 인용을 PDF 원문과 대조해 줘.”
 
 ## 브라우저에서 같은 통합 파이프라인 쓰기
 
-준비한 프로필 JSON을 실습 폴더 안에 두세요. 임베딩·리랭커 프로필을 복사할 때 local_path는 기존 모델 디렉터리의 절대경로로 유지합니다. 아래 명령은 앞에서 저장한 통합 실행 결과를 등록하고, 새 질문을 미리보기로 살펴볼 수 있게 합니다.
-
-```sh
-rag-lab serve --workspace . --sources handbook-sources.json --llm-config handbook-model.json --chunk-config chunk-fixed.json --chunk-config chunk-handbook.json --embedding-config embedding-e5.json --reranker-config reranker-bge.json --pipeline-run .rag-runs/pipeline-live
-```
-
-임베딩과 리랭커 옵션에는 사용할 실제 프로필 파일명을 지정하세요. API 설정도 선택하려면 --llm-config를 한 번 더 지정하세요. 처음 실습해 저장 결과가 없다면 --pipeline-run 옵션을 생략하세요.
+pipeline-setup이 출력한 serve 명령으로 시작하세요. 이전 통합 실행을 다시 열려면 그 명령 끝에 --pipeline-run .rag-runs/pipeline-live를 추가합니다. 여러 프로필을 선택지로 등록하는 기존 serve 방식도 사용할 수 있습니다.
 
 ‘문서에서 답변까지’에서 원문, 질문, 청킹, 검색, 임베딩, 재정렬 모델과 생성 프로필을 선택합니다. ‘선택 구성 미리보기’로 예정 작업과 전송 주소를 확인하세요. 실제 실행을 원하면 서버에 --allow-model-execution을 추가합니다. Dense·Hybrid에는 --allow-retrieval-execution, 리랭커에는 --allow-reranking-execution, 의미·LLM 청킹에는 --allow-chunking-execution도 필요합니다. 다시 미리보기한 뒤 ‘이 구성으로 실제 실행’을 눌러야 모델이 동작합니다.
 

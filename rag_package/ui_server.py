@@ -29,7 +29,7 @@ class UI:
     def __init__(self,registry,jobs):self.registry=registry;self.jobs=jobs;self.token=secrets.token_urlsafe(32)
     def bootstrap(self):
         r=self.registry
-        return {'session_token':self.token,'inputs':r.input_summary(),'configs':[r.config_summary(k) for k in r.data['configs']],
+        return {'session_token':self.token,'pipeline_defaults':getattr(self,'pipeline_defaults',None),'inputs':r.input_summary(),'configs':[r.config_summary(k) for k in r.data['configs']],
             'drive_configs':[{'id':k,'auth_mode':v['config']['auth']['mode']} for k,v in r.drives.items()],
             'allow_model_execution':self.jobs.allow_model,'allow_drive_download':self.jobs.allow_drive,'execution_kind':'test_fixture' if self.jobs.fixture else 'preview_default',
             'embedding_configs':[{'id':k,'model_id':v['config']['model_id'],'license':'MIT','preparation':preparation_summary(v['config']),'configuration_required':not __import__('rag_package.embedding',fromlist=['configured']).configured(v['config']),'quality':'Korean pretrained quality unverified'} for k,v in r.embeddings.items()],'allow_retrieval_execution':self.jobs.allow_retrieval,
@@ -175,7 +175,7 @@ class Handler(BaseHTTPRequestHandler):
             try:self.reply(500,error={'code':'internal_error','stage':'http'})
             except OSError:pass
 
-def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,reranker_configs=(),allow_reranking=False,qrels=(),facts=(),chunk_configs=(),allow_chunking=False,pipeline_runs=(),**test_injection):
+def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,reranker_configs=(),allow_reranking=False,qrels=(),facts=(),chunk_configs=(),allow_chunking=False,pipeline_runs=(),pipeline_search=None,**test_injection):
     r=Registry(workspace,llm_configs,sources,drive_configs,embedding_configs,reranker_configs,qrels,facts,chunk_configs)
     from .pipeline import replay
     for path in pipeline_runs:
@@ -185,10 +185,27 @@ def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,
         existing=next((k for k,v in r.data['artifacts'].items() if v['kind']=='pipeline' and v['path']==r.relative(directory)),None)
         if existing:r.artifact(existing)
         else:r.add_artifact(directory,'pipeline',label=result['question'],status=result['status'])
-    jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,allow_reranking=allow_reranking,allow_chunking=allow_chunking,**test_injection);return Server(port,UI(r,jobs))
+    jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,allow_reranking=allow_reranking,allow_chunking=allow_chunking,**test_injection)
+    ui=UI(r,jobs)
+    if pipeline_search:
+        from .retrieval import config
+        from .pipeline_setup import HANDBOOK_QUESTION
+        path=contained(r.workspace,pipeline_search)
+        cfg,_=config(path)
+        require(cfg['schema_version']==2 and len(chunk_configs)==len(llm_configs)==1 and len(reranker_configs)<=1,
+                'invalid_pipeline_defaults','server')
+        require(contained(r.workspace,llm_configs[0])==contained(r.workspace,path.parent/cfg['llm_config']),
+                'pipeline_model_mismatch','server')
+        require(len(embedding_configs)==int(bool(cfg['embedding_config'])) and (not embedding_configs or
+                contained(r.workspace,embedding_configs[0])==contained(r.workspace,cfg['embedding_config'])),
+                'pipeline_embedding_mismatch','server')
+        ui.pipeline_defaults=dict(question=HANDBOOK_QUESTION,retrieval=cfg['retrieval'],llm_id=r.register_llm(llm_configs[0]),
+                                  chunk_id=next(iter(r.chunk_configs)),embedding_id=next(iter(r.embeddings),''),
+                                  reranker_id=next(iter(r.rerankers),''))
+    return Server(port,ui)
 
 def serve(args):
-    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution,reranker_configs=args.reranker_config,allow_reranking=args.allow_reranking_execution,qrels=args.qrels,facts=args.facts,chunk_configs=args.chunk_config,allow_chunking=args.allow_chunking_execution,pipeline_runs=args.pipeline_run)
+    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution,reranker_configs=args.reranker_config,allow_reranking=args.allow_reranking_execution,qrels=args.qrels,facts=args.facts,chunk_configs=args.chunk_config,allow_chunking=args.allow_chunking_execution,pipeline_runs=args.pipeline_run,pipeline_search=args.pipeline_search)
     print(json.dumps({'status':'serving','url':server.origin,'execution_kind':'preview_default','model_execution_allowed':args.allow_model_execution,'drive_download_allowed':args.allow_drive_download}),flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass

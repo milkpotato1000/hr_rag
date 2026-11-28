@@ -1,0 +1,198 @@
+{
+  "cases": {
+    "bm25 off": {
+      "selection": {},
+      "retrieval": {
+        "method": "bm25",
+        "top_k": 3,
+        "candidate_k": 12,
+        "rrf_k": 60,
+        "context_budget_chars": 1700
+      },
+      "generation": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "destination": "http://127.0.0.1:11434",
+        "configuration_required": true
+      },
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "chunk": {
+        "schema_version": 1,
+        "method": "structure",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "heading_profile": "handbook-v1"
+      },
+      "ui_cli_plans_equal": true
+    },
+    "dense e5": {
+      "selection": {
+        "embedding": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3"
+        }
+      },
+      "retrieval": {
+        "method": "dense",
+        "top_k": 3,
+        "candidate_k": 12,
+        "rrf_k": 60,
+        "context_budget_chars": 1700
+      },
+      "generation": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "destination": "http://127.0.0.1:11434",
+        "configuration_required": true
+      },
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "chunk": {
+        "schema_version": 1,
+        "method": "structure",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "heading_profile": "handbook-v1"
+      },
+      "ui_cli_plans_equal": true
+    },
+    "hybrid e5": {
+      "selection": {
+        "embedding": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3"
+        }
+      },
+      "retrieval": {
+        "method": "hybrid",
+        "top_k": 3,
+        "candidate_k": 12,
+        "rrf_k": 60,
+        "context_budget_chars": 1700
+      },
+      "generation": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "destination": "http://127.0.0.1:11434",
+        "configuration_required": true
+      },
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "chunk": {
+        "schema_version": 1,
+        "method": "structure",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "heading_profile": "handbook-v1"
+      },
+      "ui_cli_plans_equal": true
+    },
+    "hybrid bge": {
+      "selection": {
+        "embedding": {
+          "model_id": "BAAI/bge-m3",
+          "revision": "5617a9f61b028005a4858fdac845db406aefb181"
+        }
+      },
+      "retrieval": {
+        "method": "hybrid",
+        "top_k": 3,
+        "candidate_k": 12,
+        "rrf_k": 60,
+        "context_budget_chars": 1700
+      },
+      "generation": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "destination": "http://127.0.0.1:11434",
+        "configuration_required": true
+      },
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "chunk": {
+        "schema_version": 1,
+        "method": "structure",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "heading_profile": "handbook-v1"
+      },
+      "ui_cli_plans_equal": true
+    },
+    "mmini on": {
+      "selection": {
+        "embedding": {
+          "model_id": "BAAI/bge-m3",
+          "revision": "5617a9f61b028005a4858fdac845db406aefb181"
+        },
+        "reranker": {
+          "model_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+          "revision": "1427fd652930e4ba29e8149678df786c240d8825"
+        }
+      },
+      "retrieval": {
+        "method": "hybrid",
+        "top_k": 3,
+        "candidate_k": 12,
+        "rrf_k": 60,
+        "context_budget_chars": 1700
+      },
+      "generation": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "destination": "http://127.0.0.1:11434",
+        "configuration_required": true
+      },
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "chunk": {
+        "schema_version": 1,
+        "method": "structure",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "heading_profile": "handbook-v1"
+      },
+      "ui_cli_plans_equal": true
+    },
+    "bge on": {
+      "selection": {
+        "embedding": {
+          "model_id": "BAAI/bge-m3",
+          "revision": "5617a9f61b028005a4858fdac845db406aefb181"
+        },
+        "reranker": {
+          "model_id": "BAAI/bge-reranker-v2-m3",
+          "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e"
+        }
+      },
+      "retrieval": {
+        "method": "hybrid",
+        "top_k": 3,
+        "candidate_k": 12,
+        "rrf_k": 60,
+        "context_budget_chars": 1700
+      },
+      "generation": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "destination": "http://127.0.0.1:11434",
+        "configuration_required": true
+      },
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "chunk": {
+        "schema_version": 1,
+        "method": "structure",
+        "size_chars": 400,
+        "overlap_chars": 80,
+        "heading_profile": "handbook-v1"
+      },
+      "ui_cli_plans_equal": true
+    }
+  },
+  "protected_inputs_sha256": [
+    "1d18e9f7d1eca9b3caf87fe464ea53fadb417d0c240063969d0443ba4ed15c7d",
+    "26114a9247b7378d869e4cdfc4e966bc3a390664a1c8931a9b84c9f46da164b5",
+    "4429aa725352e50d2b9e64a369b99ba757035b4bae9f558d661bfddc86e22082",
+    "bede0d358210a35eb36ee12c4f6c70cf06bc0be54e6c4a0c080f98e72c78a731",
+    "cb45ee0cf3f42b7bbdba3f327d40251c3342133f23f6f5158b050515c8aed20c",
+    "cbebd149b69eea1eb01b98114b9dadcaf66e904213582933d66d3247c148d628",
+    "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369"
+  ],
+  "models": "Existing S1 prepared files; no fixture weights",
+  "inference_calls": 0
+}

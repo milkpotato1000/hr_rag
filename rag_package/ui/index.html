@@ -7,7 +7,7 @@
 <div class="grid3"><label>원문 문서<select id="pipe-source"></select></label><label>청킹 설정<select id="pipe-chunk"></select></label><label>생성 프로필<select id="pipe-model"></select></label></div>
 <div class="grid3"><label>검색 방법<select id="pipe-search"><option value="bm25">BM25</option><option value="dense">Dense</option><option value="hybrid">Hybrid RRF</option></select></label><label>검색 임베딩<select id="pipe-embedding"></select></label><label>재정렬 모델<select id="pipe-scorer"></select></label></div>
 <label for="pipe-question">규정집에 물어볼 질문</label><textarea id="pipe-question" maxlength="2000">생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?</textarea>
-<p>검색 후보 20개 · 최종 5개 · 문맥 예산 4,000자</p><div class="actions"><button id="pipe-preview">선택 구성 미리보기</button><button id="pipe-execute" disabled>이 구성으로 실제 실행</button></div><p id="pipe-note"></p>
+<p id="pipe-limits">검색 후보 20개 · 최종 5개 · 문맥 예산 4,000자</p><div class="actions"><button id="pipe-preview">선택 구성 미리보기</button><button id="pipe-execute" disabled>이 구성으로 실제 실행</button></div><p id="pipe-note"></p>
 <label for="pipe-saved">저장된 통합 결과</label><select id="pipe-saved"></select><button id="pipe-open">저장 결과 열기</button><div id="pipe-result" aria-live="polite"></div>
 <h3>두 통합 실행 비교</h3><div class="grid2"><label>왼쪽 실행<select id="pipe-left"></select></label><label>오른쪽 실행<select id="pipe-right"></select></label></div>
 <button id="pipe-compare">저장 실행 비교</button><div id="pipe-comparison" aria-live="polite"></div></section>

@@ -48,6 +48,15 @@ def main(argv=None):
         setup.add_argument('--endpoint')
         setup.add_argument('--key-env')
         setup.add_argument('--inspect-local',action='store_true')
+        preset=subs.add_parser('pipeline-setup',help='Select prepared retrieval and reranking profiles')
+        for name in ('llm-config','chunk-config','out'):
+            preset.add_argument('--'+name,required=True)
+        preset.add_argument('--method',choices=['bm25','dense','hybrid'],required=True)
+        preset.add_argument('--embedding-config')
+        preset.add_argument('--reranker-config')
+        preset.add_argument('--top-k',type=int,default=5)
+        preset.add_argument('--candidate-k',type=int,default=20)
+        preset.add_argument('--context-budget-chars',type=int,default=4000)
         inventory=subs.add_parser('local-models',help='List installed Ollama aliases via loopback metadata')
         inventory.add_argument('--endpoint',default='http://127.0.0.1:11434')
         server=subs.add_parser('serve');server.add_argument('--workspace',required=True);server.add_argument('--sources');server.add_argument('--llm-config',required=True,action='append');server.add_argument('--drive-config',action='append',default=[]);server.add_argument('--port',type=int,default=8765);server.add_argument('--allow-model-execution',action='store_true');server.add_argument('--allow-drive-download',action='store_true')
@@ -65,6 +74,7 @@ def main(argv=None):
             else:sub.add_argument('--run',required=True)
         server.add_argument('--reranker-config',action='append',default=[]);server.add_argument('--allow-reranking-execution',action='store_true')
         server.add_argument('--qrels',action='append',default=[]);server.add_argument('--facts',action='append',default=[])
+        server.add_argument('--pipeline-search')
         server.add_argument('--pipeline-run',action='append',default=[])
         server.add_argument('--chunk-config',action='append',default=[]);server.add_argument('--allow-chunking-execution',action='store_true')
         view=subs.add_parser('compare-answers',help='Compare saved answer-from-rerank results without inference')
@@ -78,6 +88,13 @@ def main(argv=None):
         pair=subs.add_parser('pipeline-compare',help='Compare two verified saved pipeline runs')
         pair.add_argument('--runs',nargs=2,required=True,metavar=('LEFT','RIGHT'))
         args=p.parse_args(argv)
+        if args.command=='pipeline-setup':
+            from .pipeline_setup import setup
+            result=setup(args.llm_config,args.chunk_config,args.method,args.out,embedding_config=args.embedding_config,
+                         reranker_config=args.reranker_config,top_k=args.top_k,candidate_k=args.candidate_k,
+                         budget=args.context_budget_chars)
+            print(json.dumps(result,ensure_ascii=False,indent=2))
+            return 0
         if args.command in ('generation-setup','local-models'):
             from . import llm_setup
             if args.command=='local-models':

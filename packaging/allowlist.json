@@ -47,7 +47,8 @@
     "rag_package/model_process.py",
     "rag_package/model_worker.py",
     "rag_package/llm_setup.py",
-    "rag_package/owned_worker.py"
+    "rag_package/owned_worker.py",
+    "rag_package/pipeline_setup.py"
   ],
   "resources": [
     "rag_package/provenance.json",

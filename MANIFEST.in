@@ -93,3 +93,4 @@ include rag_package/resources/sample/handbook-sources.json
 include rag_package/resources/sample/handbook-local.json
 include rag_package/resources/sample/handbook-qwen-spec.json
 include rag_package/resources/sample/documents/handbook.pdf
+include rag_package/pipeline_setup.py

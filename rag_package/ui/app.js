@@ -147,6 +147,21 @@ function refreshPipeline(b){
  pipeOptions('pipe-chunk',b.chunk_configs.map(c=>[c.id,(c.heading_profile||c.method)+' · '+c.size_chars+'/'+c.overlap_chars]));
  pipeOptions('pipe-embedding',b.embedding_configs.map(c=>[c.id,c.model_id]));
  pipeOptions('pipe-scorer',b.reranker_configs.map(c=>[c.id,c.model_id]),'끔 · 원래 순위');
+ if(!state.pipeInitialized){
+  const defaults=b.pipeline_defaults;
+  state.pipeLimits=defaults?.retrieval||{candidate_k:20,rrf_k:60,top_k:5,context_budget_chars:4000};
+  if(defaults){
+   $('pipe-model').value=defaults.llm_id;
+   $('pipe-chunk').value=defaults.chunk_id;
+   $('pipe-question').value=defaults.question;
+   $('pipe-search').value=defaults.retrieval.method;
+   $('pipe-embedding').value=defaults.embedding_id;
+   $('pipe-scorer').value=defaults.reranker_id;
+  }
+  const limits=state.pipeLimits;
+  $('pipe-limits').textContent='검색 후보 '+limits.candidate_k+'개 · 최종 '+limits.top_k+'개 · 문맥 예산 '+limits.context_budget_chars.toLocaleString('ko-KR')+'자';
+  state.pipeInitialized=true;
+ }
  const saved=b.pipelines.map(p=>[p.id,p.status+' · '+p.label+' · '+p.id.slice(0,8)]);
  for(const id of ['pipe-saved','pipe-left','pipe-right'])pipeOptions(id,saved);
  if(saved.length>1 && $('pipe-left').value===$('pipe-right').value)$('pipe-right').selectedIndex=1;
@@ -155,7 +170,7 @@ function refreshPipeline(b){
 function pipeInput(){
  const method=$('pipe-search').value;
  return {input_ids:[$('pipe-source').value],llm_config_id:$('pipe-model').value,chunk_config_id:$('pipe-chunk').value,
-  question:$('pipe-question').value.trim(),retrieval:{method,candidate_k:20,rrf_k:60,top_k:5,context_budget_chars:4000},
+  question:$('pipe-question').value.trim(),retrieval:{...state.pipeLimits,method},
   embedding_config_id:method==='bm25'?null:$('pipe-embedding').value,reranker_config_id:$('pipe-scorer').value||null};
 }
 function pipelineFlags(){

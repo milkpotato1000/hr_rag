@@ -1,0 +1,88 @@
+"""Assemble an offline pipeline selection using installed model profiles."""
+from pathlib import Path
+import shlex
+import os
+
+from . import chunk_policy, embedding, reranker, retrieval
+from .llm.config import validate_config
+from .llm.core import configuration_required
+from .storage import read_json, require, staging, write_json
+from .ui_registry import contained
+
+
+HANDBOOK_QUESTION = '생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?'
+
+
+def checked_model(path, role):
+    module = embedding if role == 'embedding' else reranker
+    profile = module.read_profile(path)
+    module.check_files(profile)
+    return profile
+
+
+def setup(llm_config, chunk_config, method, out, *, embedding_config=None,
+          reranker_config=None, top_k=5, candidate_k=20, budget=4000):
+    workspace = Path.cwd()
+    out = contained(workspace, out)
+    require(method in ('bm25', 'dense', 'hybrid'), 'unsupported_retrieval', 'setup')
+    require(method == 'bm25' or embedding_config, 'embedding_config_required', 'setup')
+    require(method != 'bm25' or not embedding_config, 'unexpected_embedding_config', 'setup')
+    require(1 <= top_k <= candidate_k <= 100, 'invalid_candidate_depth', 'setup')
+    require(1 <= budget <= 64000, 'invalid_context_budget', 'setup')
+    sources = 'handbook-sources.json'
+    require((workspace/sources).is_file(), 'handbook_sources_missing', 'setup')
+    controls = dict(method=method, top_k=top_k, candidate_k=candidate_k, rrf_k=60, context_budget_chars=budget)
+    selection = {}
+    with staging(out) as stage:
+        llm = validate_config(read_json(llm_config))
+        generation = llm['profiles'][llm['roles']['generation']]
+        require(generation['response_mode']=='json_object', 'json_object_required', 'setup')
+        # Reuse the installed generation profile across presets so changing
+        # retrieval does not consume another UI model registration.
+        model_path=Path(llm_config).absolute()
+        if model_path.is_relative_to(workspace):
+            model_path=contained(workspace,model_path)
+            model_reference=os.path.relpath(model_path,out)
+        else:
+            model_path=out/'model.json'
+            model_reference='model.json'
+            write_json(stage/model_reference,llm)
+        chunk, boundary = chunk_policy.read_config(chunk_config)
+        if chunk['method']=='semantic':
+            embedding.check_files(boundary)
+            write_json(stage/'boundary.json', boundary)
+            chunk['embedding_config']='boundary.json'
+        if chunk['method']=='llm':
+            write_json(stage/'boundary.json', boundary)
+            chunk['llm_config']='boundary.json'
+        write_json(stage/'chunk.json', chunk)
+        for role, path in (('embedding', embedding_config), ('reranker', reranker_config)):
+            if path:
+                p = checked_model(path, role)
+                write_json(stage/(role+'.json'), p)
+                selection[role] = {'model_id':p['model_id'], 'revision':p['revision']}
+        # The pipeline builds its actual chunks from --chunk-config, including
+        # model-based boundaries. The search template still needs rule settings.
+        template = {k:chunk[k] for k in ('method','size_chars','overlap_chars')}
+        if template['method'] in ('llm','semantic'):
+            template['method']='fixed'
+        if 'heading_profile' in chunk:
+            template['heading_profile']=chunk['heading_profile']
+        write_json(stage/'search.json',dict(schema_version=2, chunking=template, retrieval=controls,
+                   llm_config=model_reference, embedding_config='embedding.json' if embedding_config else None))
+        retrieval.config(stage/'search.json')
+    folder=out.relative_to(workspace)
+    preview=['rag-lab','pipeline','--sources',sources,'--chunk-config',str(folder/'chunk.json'),
+             '--search-config',str(folder/'search.json'),'--question',HANDBOOK_QUESTION,
+             '--out',str(folder.with_name(folder.name+'-preview'))]
+    serve=['rag-lab','serve','--workspace','.','--sources',sources,'--llm-config',str(model_path.relative_to(workspace)),
+           '--chunk-config',str(folder/'chunk.json'),'--pipeline-search',str(folder/'search.json')]
+    if embedding_config:
+        serve+=['--embedding-config',str(folder/'embedding.json')]
+    if reranker_config:
+        preview+=['--reranker-profile',str(folder/'reranker.json')]
+        serve+=['--reranker-config',str(folder/'reranker.json')]
+    return {'status':'preview_ready','retrieval':controls,'models':selection,
+            'generation_configuration_required':configuration_required(generation),
+            'commands':{'pipeline_preview':shlex.join(preview),'serve':shlex.join(serve)},
+            'inference_calls':0,'network_requests':0,'secrets_read':0}
