@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "97f0de709cc8085ab15e79b0261d718bc827c0f4",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "Installed retrieval and optional reranker comparison",
+  "next_action": "Finish S3 then adopt S4 and verify identical PDF chunk and candidate inputs",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T07:33:48.519518+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
