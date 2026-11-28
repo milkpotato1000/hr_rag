@@ -1,0 +1,21 @@
+{
+  "status": "prepared",
+  "claimed": false,
+  "started_at": null,
+  "deadline": null,
+  "metadata": [],
+  "requests": [],
+  "gates": [],
+  "active": null,
+  "server_start_attempts": 0,
+  "limits": {
+    "generation": 10,
+    "wall_seconds": 2700,
+    "http_seconds": 180,
+    "watchdog_seconds": 210,
+    "metadata": 200,
+    "metadata_timeout": 5,
+    "rss_bytes": 8589934592
+  },
+  "automatic_retries": 0
+}

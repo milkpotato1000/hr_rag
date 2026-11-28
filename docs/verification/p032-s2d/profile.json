@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "profiles": {
+    "local4b": {
+      "mode": "local",
+      "provider": "ollama",
+      "model": "qwen3:4b",
+      "base_url": "http://127.0.0.1:11434",
+      "max_output_tokens": 1024,
+      "timeout_seconds": 180,
+      "response_mode": "json_object",
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "identity": {
+        "expected_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "hf_id": "Qwen/Qwen3-4B-Thinking-2507",
+        "conversion": "historical_ollama_import",
+        "source_revision": null,
+        "quantization": "Q4_K_M",
+        "validation_status": "user_configured_unverified"
+      }
+    }
+  },
+  "roles": {
+    "generation": "local4b",
+    "evaluation": "local4b",
+    "chunking": "local4b"
+  }
+}

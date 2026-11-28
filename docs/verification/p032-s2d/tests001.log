@@ -1,0 +1,18 @@
+test_atomic_halt_and_duplicate_ownership (__main__.Controls) ... ok
+test_caps (__main__.Controls) ... ok
+test_deadline_not_reset (__main__.Controls) ... ok
+test_duplicate_claim (__main__.Controls) ... ok
+test_failed_cleanup (__main__.Controls) ... ok
+test_failed_smoke (__main__.Controls) ... ok
+test_identity (__main__.Controls) ... ok
+test_monitor_and_watchdog (__main__.Controls) ... ok
+test_order_and_parallel (__main__.Controls) ... ok
+test_prompt (__main__.Controls) ... ok
+test_resource_and_freshness (__main__.Controls) ... ok
+test_smoke_gate (__main__.Controls) ... ok
+test_unknown_timeout_blocks (__main__.Controls) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.004s
+
+OK
