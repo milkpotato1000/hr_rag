@@ -148,3 +148,47 @@ def setup_generation(provider,model,out,*,endpoint=None,key_env=None,inspect_loc
         'serve':shlex.join(['rag-lab','serve','--workspace','.','--sources','handbook-sources.json',
                            '--chunk-config','chunk-fixed.json','--llm-config',str(out/'model.json')])})
     return result
+
+
+def first_handbook_answer():
+    """Answer the completed first search with its saved index and handbook model."""
+    from . import rag, retrieval
+    from .storage import digest, verify
+    workspace = Path.cwd()
+    out = new_output(workspace/'first-answer')
+    run = workspace.parent/'first-run.json'
+    require(run.is_file(), 'first_handbook_practice_required', 'first_answer')
+    first = read_json(run)
+    require(first.get('search')=='complete', 'first_search_incomplete', 'first_answer')
+    verify(workspace/'evidence','answer')
+    evidence = read_json(workspace/'evidence/result.json')
+    question = first['question']
+    require(evidence['status']=='preview' and evidence['question']==question and evidence['contexts'],
+            'first_evidence_mismatch','first_answer')
+    snapshot = verify(workspace/'snapshot','snapshot')
+    settings = sample('fixed.json')
+    index = workspace/'bm25'
+    manifest, _, _ = retrieval.load_build(index, settings)
+    require(manifest['identity']['index_fingerprint']==evidence['index_fingerprint'] and
+            snapshot['fingerprint']==manifest['identity']['source_fingerprint']==evidence['source_fingerprint'],
+            'first_index_mismatch','first_answer')
+    require(first['pdf_sha256']==digest((workspace/'documents/handbook.pdf').read_bytes())==
+            digest((workspace/'snapshot/handbook/original.pdf').read_bytes()), 'first_pdf_mismatch','first_answer')
+    with tempfile.TemporaryDirectory() as tmp:
+        profile = Path(tmp)/'model.json'
+        try:
+            _configure(sample('handbook-qwen-spec.json'),profile,True)
+        except RagError as error:
+            return {'status':'model_not_ready','error':error.code,'generation_requests':0,
+                    'action':'로컬 Ollama가 실행 중인지, ollama list에 실습 프로필과 일치하는 qwen3:4b가 있는지 확인하세요.'}
+        settings['llm_config']=str(profile)
+        config = Path(tmp)/'search.json'
+        write_json(config,settings)
+        # Claim the fixed destination before dispatch; concurrent or repeated runs cannot spend a second call.
+        try:
+            out.mkdir()
+        except FileExistsError:
+            raise RagError('output_exists','first_answer') from None
+        result=rag.ask(index,config,question,out/'answer',execute=True)
+    return {'status':result['status'],'question':question,'answer':result['answer'],'error':result['error'],
+            'generation_requests':result['generation_requests'],'result':str(out/'answer/result.json')}

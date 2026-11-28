@@ -48,6 +48,8 @@ def main(argv=None):
         setup.add_argument('--endpoint')
         setup.add_argument('--key-env')
         setup.add_argument('--inspect-local',action='store_true')
+        first_answer=subs.add_parser('first-answer',help='Answer the saved first handbook search with the prepared local Qwen')
+        first_answer.add_argument('--execute',action='store_true',required=True)
         preset=subs.add_parser('pipeline-setup',help='Select prepared retrieval and reranking profiles')
         for name in ('llm-config','chunk-config','out'):
             preset.add_argument('--'+name,required=True)
@@ -95,6 +97,11 @@ def main(argv=None):
         pair=subs.add_parser('pipeline-compare',help='Compare two verified saved pipeline runs')
         pair.add_argument('--runs',nargs=2,required=True,metavar=('LEFT','RIGHT'))
         args=p.parse_args(argv)
+        if args.command=='first-answer':
+            from .llm_setup import first_handbook_answer
+            result=first_handbook_answer()
+            print(json.dumps(result,ensure_ascii=False,indent=2))
+            return 0 if result['status'] in ('answered','abstained') else 1
         if args.command=='pipeline-setup':
             from .pipeline_setup import setup
             result=setup(args.llm_config,args.chunk_config,args.method,args.out,embedding_config=args.embedding_config,

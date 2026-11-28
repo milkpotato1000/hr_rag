@@ -4,6 +4,8 @@
 
 현재 dev wheel과 같은 가상환경을 활성화하세요. 새 실습 폴더가 필요하면 `rag-lab init --out handbook-practice` 후 `cd handbook-practice`를 실행합니다. 이미 init으로 만든 폴더라면 그 안에서 바로 시작하세요. 기본 예제는 설치물에 포함된 합성 규정집 `documents/handbook.pdf`입니다.
 
+first_handbook.py로 첫 검색을 마친 이 practice 폴더에서 준비된 로컬 Qwen으로 같은 질문에 답하려면 `../env/bin/rag-lab first-answer --execute`를 실행하세요. 기존 PDF와 BM25 인덱스를 확인하고 터미널에 인용 원문과 쪽수를 표시합니다. 저장 위치는 first-answer/answer/result.json입니다.
+
 Codex나 Claude Code에는 다음과 같이 요청하세요.
 
 > 설치된 HANDBOOK.md를 따라 기본 규정집에서 “생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?”를 검색해 줘. BM25가 전달한 청크에서 조항과 페이지를 찾아 보여 줘. 준비된 로컬 Qwen 4B로 한 번 답하고, 인용한 원문에서 신청 기한과 승인 조건을 대조해 줘.

@@ -25,7 +25,22 @@ python3 scripts/first_handbook.py --out "../rag-lab-first"
 
 새 폴더의 `first-run.json`에 소스 SHA, 설치한 wheel의 해시, 검색 근거가 기록됩니다. `practice/evidence/result.json`에서 전달 청크 전문을 읽을 수 있습니다. 중간 실패 시 `failed_stage`와 `commands.log`의 마지막 명령을 확인하고 원인을 수정한 뒤 새 이름으로 다시 시작하세요. 기존 수동 설치 절차도 사용할 수 있습니다. [수동 설치](docs/learning/rag-package/install-current.md)
 
-같은 설치에서 모델과 검색 방식을 선택하려면 다음처럼 실습 폴더로 이동하세요.
+### 준비된 로컬 Qwen으로 첫 답변 받기
+
+첫 검색을 완료했고 로컬 Ollama에 실습 모델 qwen3:4b가 준비돼 있다면, 소스 폴더에서 다음 명령을 실행하세요. 첫 실습 출력 이름을 바꿨다면 그 폴더 이름을 사용하세요.
+
+```sh
+cd "../rag-lab-first/practice"
+../env/bin/rag-lab first-answer --execute
+```
+
+터미널과 `first-answer/answer/result.json`에서 답변, 인용한 PDF 쪽, 조항 원문을 확인하세요. `first-answer` 폴더가 이미 있으면 저장된 결과를 읽으세요. 모델이 준비되지 않은 경우에는 출력의 action을 확인하세요.
+
+**Codex와 Claude Code에 줄 요청**
+
+> 첫 검색을 마친 practice 폴더에서 준비된 로컬 Qwen으로 같은 질문에 한 번 답해 줘. 기존 BM25 인덱스를 재사용하고 인용한 PDF 쪽과 신청 기한 원문을 대조해 줘. 이전 답이 저장돼 있으면 그 결과를 읽어 줘.
+
+다른 모델이나 검색 방식을 선택하려면 소스 폴더에서 다음 절차를 시작하세요.
 
 ```sh
 cd "../rag-lab-first/practice"
