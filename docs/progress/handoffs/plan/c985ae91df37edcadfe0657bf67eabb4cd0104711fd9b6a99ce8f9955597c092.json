@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Installed PDF to local answer walkthrough",
   "next_action": "Close S2j, adopt S3, verify printed steps and single actual local ask",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T07:26:42.444607+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T07:26:59.675906+00:00",
+      "evidence": "Direct host delivery to verified existing HR RAG dev succeeded. Close S2j before exact S3 adoption."
     }
   ]
 }
