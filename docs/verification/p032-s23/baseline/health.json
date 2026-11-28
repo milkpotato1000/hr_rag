@@ -1,0 +1,23 @@
+{
+  "at": 1795857487.527031,
+  "pressure": 1,
+  "rss_bytes": 72318976,
+  "processes": [
+    {
+      "pid": 53736,
+      "rss_bytes": 36519936,
+      "name": "python"
+    },
+    {
+      "pid": 53741,
+      "rss_bytes": 34078720,
+      "name": "ollama"
+    },
+    {
+      "pid": 54111,
+      "rss_bytes": 1720320,
+      "name": "ps"
+    }
+  ],
+  "disk_free": 274481213440
+}
