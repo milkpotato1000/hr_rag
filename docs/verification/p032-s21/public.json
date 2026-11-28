@@ -1,0 +1,44 @@
+{
+  "python": "3.13.15",
+  "remote": "https://github.com/milkpotato1000/hr_rag.git",
+  "index": "https://pypi.org/simple",
+  "initial_cache_entries": 0,
+  "source_sha": "36557ec9964ce7c61eaf8311111ab64848e04b25",
+  "verified_checkout_blobs": 98,
+  "downloaded_wheels": [
+    "build-1.6.1-py3-none-any.whl",
+    "packaging-26.4-py3-none-any.whl",
+    "pypdf-6.21.2-py3-none-any.whl",
+    "pyproject_hooks-1.3.3-py3-none-any.whl",
+    "setuptools-84.2.1-py3-none-any.whl"
+  ],
+  "locked_versions": {
+    "build": "1.6.1",
+    "packaging": "26.4",
+    "pyproject-hooks": "1.3.3",
+    "setuptools": "84.2.1",
+    "pypdf": "6.21.2"
+  },
+  "status": "complete",
+  "stages": {
+    "download": "complete",
+    "build": "complete",
+    "wheel_install": "complete",
+    "pdf_reader": "complete",
+    "init": "complete",
+    "search": "complete"
+  },
+  "wheel_sha256": "2461bd4a613b297d921693c13aaabeedf72d6e50514bae10a9c1c0cb36b3dbea",
+  "pdf_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+  "matches": [
+    {
+      "rank": 2,
+      "page": 1,
+      "clause": "BD-03",
+      "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다."
+    }
+  ],
+  "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+  "contexts_identical_to_s20": 5,
+  "generation_calls": 0
+}
