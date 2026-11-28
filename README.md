@@ -1,5 +1,41 @@
 # HR 규정집으로 배우는 RAG
 
+## Codex 또는 Claude Code로 첫 검색하기
+
+공개 dev 소스를 내려받고 그 폴더를 사용하는 코딩 도구에서 여세요.
+
+```sh
+git clone --branch dev https://github.com/milkpotato1000/hr_rag.git rag-lab-source
+cd rag-lab-source
+```
+
+**Codex에 줄 요청**
+
+> 현재 dev 소스 폴더에서 Python 3.11 이상을 찾아 scripts/first_handbook.py를 실행해 줘. --out은 옆의 새 폴더 "../rag-lab-first"로 하고 이미 있으면 새 이름을 써 줘. first-run.json에서 설치와 검색 상태를 확인하고, 생일 특별휴가 신청 기한을 찾은 전달 청크의 순위·PDF 쪽·조항·원문을 보여 줘. 모델 호출은 하지 마.
+
+**Claude Code에 줄 요청**
+
+> 현재 dev 소스 폴더에서 Python 3.11 이상을 찾아 scripts/first_handbook.py를 실행해 줘. --out은 옆의 새 폴더 "../rag-lab-first"로 하고 이미 있으면 새 이름을 써 줘. first-run.json에서 설치와 검색 상태를 확인하고, 생일 특별휴가 신청 기한을 찾은 전달 청크의 순위·PDF 쪽·조항·원문을 보여 줘. 모델 호출은 하지 마.
+
+두 도구가 실행할 명령은 같습니다. macOS/Linux에서 아래 python3은 3.11 이상이어야 합니다. 고정된 빌드 도구와 PDF 리더는 새 가상환경에 설치됩니다. 오프라인 wheel이 준비된 경우 `--wheelhouse "/경로/wheels"`를 추가하세요.
+
+```sh
+python3 scripts/first_handbook.py --out "../rag-lab-first"
+```
+
+새 폴더의 `first-run.json`에 소스 SHA, 설치한 wheel의 해시, 검색 근거가 기록됩니다. `practice/evidence/result.json`에서 전달 청크 전문을 읽을 수 있습니다. 중간 실패 시 `failed_stage`와 `commands.log`의 마지막 명령을 확인하고 원인을 수정한 뒤 새 이름으로 다시 시작하세요. 기존 수동 설치 절차도 사용할 수 있습니다. [수동 설치](docs/learning/rag-package/install-current.md)
+
+같은 설치에서 모델과 검색 방식을 선택하려면 다음처럼 실습 폴더로 이동하세요.
+
+```sh
+cd "../rag-lab-first/practice"
+. ../env/bin/activate
+rag-lab generation-setup --provider ollama --model qwen3:4b --out my-local
+rag-lab pipeline-setup --llm-config my-local/model.json --chunk-config chunk-fixed.json --method bm25 --out my-search
+```
+
+준비된 로컬 모델의 실답변, 선택 API 설정, 청킹·Hybrid·리랭커 설정과 내 PDF 선택은 실습 폴더의 HANDBOOK.md에 이어집니다. [모델 설정](docs/verification/p032-s14/README.md) · [검색과 리랭커 선택](docs/verification/p032-s15/README.md) · [내 문서와 질문](docs/verification/p032-s16/README.md)
+
 [현재 dev 설치 안내](docs/learning/rag-package/install-current.md)를 따라 wheel을 설치하고 새 실습 폴더를 만드세요. 폴더 안의 [HANDBOOK.md](rag_package/resources/sample/HANDBOOK.md)에서 기본 예제 PDF로 **“생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?”**를 검색합니다. PDF 1쪽 BD-03과 전달 청크를 직접 대조한 뒤 로컬 Qwen 4B로 답변과 인용을 확인할 수 있습니다.
 
 [학습 목차](docs/learning/rag-package/README.md) · [설치본 첫 검색 검증](docs/verification/p032-s10/README.md) · [로컬 모델의 실제 답변](docs/verification/p032-s8/README.md) · [학습 UI 재생](docs/verification/p032-s9/README.md)
