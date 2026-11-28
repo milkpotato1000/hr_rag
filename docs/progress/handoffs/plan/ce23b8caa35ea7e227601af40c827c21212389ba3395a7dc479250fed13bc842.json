@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S23 동일 질문과 두 전달 예산의 실제 Qwen 답변",
   "next_action": "정확 채택 후 기존 4B로 각 조건 1회 생성하고 원문과 대조",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T09:14:58.575674+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T09:15:12.754773+00:00",
+      "evidence": "기존 dev 채팅으로 S23 SHA·범위·검증을 직접 전달했다."
     }
   ]
 }
