@@ -1,0 +1,41 @@
+{
+  "question": "생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?",
+  "question_hash": "cbbe9e461e2929579cf8a45fd7341317f0307e7b467143c20b9b2cc97ba722ad",
+  "pdf_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+  "parent_manifest_sha256": "66dba3eced4fafbb80c3c38d4190942b460f36e6845ea1cf98f6979a038cdbd8",
+  "parent_report_sha256": "12a034140fa3881e084ef25a82483c2e4a94750965ede475324ab165666c689f",
+  "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+  "retrieval": {
+    "method": "bm25",
+    "candidate_k": 20,
+    "rrf_k": 60,
+    "top_k": 5,
+    "context_budget_chars": 4000
+  },
+  "fixed": {
+    "schema_version": 1,
+    "method": "fixed",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "recursive": {
+    "schema_version": 1,
+    "method": "recursive",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "normalized_request_hash": "9478b4e0dec35b05a9b9c73d20f3b21e8881ab4a35c5b5cb9f46eb9c20238aeb",
+  "options": {
+    "num_predict": 4096,
+    "temperature": 0.6,
+    "num_ctx": 8192,
+    "seed": 42
+  },
+  "system_prompt_sha256": "8a2159c81979591aac268fc60574b7850d307b838bd2bfb9e3389449d0b3b6ae",
+  "parent_body_sha256": "ee2c774c990c59363473cf6ed850a7eb58ab29d7a69a41749649ac24f66b76df",
+  "expected_recursive_body_sha256": "a95a4280ef03912f884114c0a6cb235e06cc41f583191152108a04380402dec7",
+  "package_version": "0.1.0.dev1",
+  "wheel_sha256": "928ac7bd8d39dfefd18599f1214c8b0c6962b1e3b9a36ec8c7801ab1fdfa7261",
+  "baseline_wheel_sha256": "feb35413688c2dffe2576bb435663d8d0a00282796d61a0bdd47ff2943325488"
+}

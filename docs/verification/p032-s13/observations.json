@@ -1,0 +1,249 @@
+{
+  "question": "생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?",
+  "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+  "observations": [
+    {
+      "status": "answered",
+      "answer": "팀장",
+      "bd03_ranks": [
+        1
+      ],
+      "contexts": 5,
+      "citations": [
+        {
+          "chunk_id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+          "source_matches": true,
+          "contains_rule": true,
+          "pages": [
+            1,
+            2
+          ],
+          "start": 640,
+          "end": 1040
+        }
+      ],
+      "identity": {
+        "status": "verified",
+        "before": true,
+        "after": true
+      },
+      "elapsed_ms": 72018.78,
+      "usage": {
+        "input_tokens": 2392,
+        "output_tokens": 1011,
+        "provider_duration_ms": 71986.5865
+      }
+    },
+    {
+      "status": "answered",
+      "answer": "팀장",
+      "bd03_ranks": [
+        1
+      ],
+      "contexts": 5,
+      "citations": [
+        {
+          "chunk_id": "c-456e8f53cb46ddd8f9c23feb2f3115a45db7cdce9dc85d1fbfe6bac091b76933",
+          "source_matches": true,
+          "contains_rule": true,
+          "pages": [
+            1
+          ],
+          "start": 513,
+          "end": 851
+        }
+      ],
+      "identity": {
+        "status": "verified",
+        "before": true,
+        "after": true
+      },
+      "elapsed_ms": 72430.299,
+      "usage": {
+        "input_tokens": 2094,
+        "output_tokens": 1073,
+        "provider_duration_ms": 72400.348958
+      }
+    }
+  ],
+  "comparison_model_calls": 0,
+  "interpretation": "incomplete_settings",
+  "ledger": {
+    "status": "complete",
+    "claimed": true,
+    "started_at": 1795854134.505152,
+    "deadline": 1795854854.505153,
+    "metadata": [
+      {
+        "endpoint": "/api/version",
+        "actor": "supervisor",
+        "at": 1795854102.105309,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/tags",
+        "actor": "supervisor",
+        "at": 1795854102.177957,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/show",
+        "actor": "supervisor",
+        "at": 1795854102.1855931,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854102.21509,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854133.163693,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/tags",
+        "actor": "adapter",
+        "at": 1795854134.494734,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854138.4417138,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854143.699289,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854148.939511,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854154.176859,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854159.429693,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854164.6803358,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854169.927386,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854175.180594,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854180.4253519,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854185.670609,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854190.919137,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854196.173227,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854201.420832,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854206.6681101,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/tags",
+        "actor": "adapter",
+        "at": 1795854206.914716,
+        "status": "received"
+      },
+      {
+        "endpoint": "/api/ps",
+        "actor": "supervisor",
+        "at": 1795854207.676426,
+        "status": "received"
+      }
+    ],
+    "requests": [
+      {
+        "question_id": "first",
+        "reserved_at": 1795854134.505153,
+        "dispatch_attempted": true,
+        "response_received": true,
+        "server_completion": "response_and_unloaded_observed",
+        "status": "complete",
+        "body_hash": "a95a4280ef03912f884114c0a6cb235e06cc41f583191152108a04380402dec7",
+        "finished_at": 1795854238.817357
+      }
+    ],
+    "gates": [],
+    "active": null,
+    "server_start_attempts": 1,
+    "limits": {
+      "generation": 1,
+      "wall_seconds": 720,
+      "http_seconds": 480,
+      "watchdog_seconds": 510,
+      "metadata": 160,
+      "metadata_timeout": 5,
+      "rss_bytes": 8589934592
+    },
+    "automatic_retries": 0
+  },
+  "peak_observed_rss_bytes": 4061298688,
+  "observed_pressure_levels": [
+    1
+  ],
+  "server_closed": {
+    "owned": true,
+    "pid": 9043,
+    "listener_closed": true
+  },
+  "cleanup": {
+    "unloaded_observed": true,
+    "client_reaped": true
+  }
+}
