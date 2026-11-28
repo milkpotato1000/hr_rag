@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "11e24fc4f102a7f55c2cdb3e973f9479863ca1e2",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "S29 선택 API 모드의 로컬 HTTPS 통합 시험",
+  "next_action": "정확 채택 후 설치 CLI에서 두 provider 요청 및 결과 저장·비교 재생 검증",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T09:47:57.072239+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
