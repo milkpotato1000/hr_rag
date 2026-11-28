@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "P032 S2g verify eligibility and exception coverage",
   "next_action": "Adopt S2g after closing S2f, test fixed-context general prompt change, review gt01 then gated gt02 and remaining questions",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T06:55:06.074590+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T06:55:25.195162+00:00",
+      "evidence": "Direct host delivery succeeded to verified existing HR RAG dev chat; sent exact S2g READY and gates."
     }
   ]
 }
