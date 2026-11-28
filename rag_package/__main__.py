@@ -66,7 +66,13 @@ def main(argv=None):
         pipe.add_argument('--reranker-profile')
         pipe.add_argument('--execute',action='store_true')
         saved=subs.add_parser('pipeline-replay');saved.add_argument('--run',required=True)
+        pair=subs.add_parser('pipeline-compare',help='Compare two verified saved pipeline runs')
+        pair.add_argument('--runs',nargs=2,required=True,metavar=('LEFT','RIGHT'))
         args=p.parse_args(argv)
+        if args.command=='pipeline-compare':
+            from .pipeline import compare
+            print(json.dumps(compare(*args.runs),ensure_ascii=False,indent=2))
+            return 0
         if args.command in ('pipeline','pipeline-replay'):
             from . import pipeline
             result=(pipeline.replay(args.run) if args.command=='pipeline-replay' else

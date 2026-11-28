@@ -48,3 +48,31 @@ class SelectedPipelineTests(unittest.TestCase):
         self.assertEqual(pipeline.replay(self.ws/'partial'),failed)
         write_json(self.ws/'search.json',{})
         self.assertEqual(self.run_case('invalid')['status'],'failed')
+
+    def test_comparison_of_failed_and_unexecuted_runs(self):
+        with patch('rag_package.llm.invoke',side_effect=AssertionError('unexpected inference')):
+            self.run_case('preview',execute=False)
+            with patch.object(pipeline.retrieval,'build',side_effect=RagError('fixture_failure','build')):
+                self.run_case('failed')
+            comparison=pipeline.compare(self.ws/'failed',self.ws/'preview')
+            self.assertEqual(comparison['interpretation'],'different_execution')
+            failed,preview=comparison['runs']
+            self.assertEqual((failed['failed_stage'],failed['stages']['chunks']),('index','complete'))
+            self.assertEqual(preview['stages']['answer'],'pending')
+            self.assertIsNone(failed['answer'])
+            self.assertEqual(failed['contexts'],[])
+            with self.assertRaisesRegex(RagError,'duplicate_pipeline'):
+                pipeline.compare(self.ws/'failed',self.ws/'failed')
+
+    def test_multiple_settings_and_changed_source(self):
+        self.run_case('first',execute=False)
+        cfg=read_json(self.ws/'chunk-fixed.json')
+        cfg.update(size_chars=300,overlap_chars=40)
+        write_json(self.ws/'chunk-fixed.json',cfg)
+        self.run_case('second',execute=False)
+        report=pipeline.compare(self.ws/'first',self.ws/'second')
+        self.assertEqual(report['interpretation'],'multiple_settings')
+        self.assertEqual(report['changed'],['chunk.overlap_chars','chunk.size_chars'])
+        (self.ws/'documents/annual.txt').write_text('수정된 합성 예문')
+        self.run_case('third',execute=False)
+        self.assertFalse(pipeline.compare(self.ws/'second',self.ws/'third')['same_source'])

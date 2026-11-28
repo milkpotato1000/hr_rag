@@ -147,7 +147,10 @@ function refreshPipeline(b){
  pipeOptions('pipe-chunk',b.chunk_configs.map(c=>[c.id,(c.heading_profile||c.method)+' · '+c.size_chars+'/'+c.overlap_chars]));
  pipeOptions('pipe-embedding',b.embedding_configs.map(c=>[c.id,c.model_id]));
  pipeOptions('pipe-scorer',b.reranker_configs.map(c=>[c.id,c.model_id]),'끔 · 원래 순위');
- pipeOptions('pipe-saved',b.pipelines.map(p=>[p.id,p.status+' · '+p.label+' · '+p.id.slice(0,8)]));
+ const saved=b.pipelines.map(p=>[p.id,p.status+' · '+p.label+' · '+p.id.slice(0,8)]);
+ for(const id of ['pipe-saved','pipe-left','pipe-right'])pipeOptions(id,saved);
+ if(saved.length>1 && $('pipe-left').value===$('pipe-right').value)$('pipe-right').selectedIndex=1;
+ $('pipe-compare').disabled=saved.length<2;
 }
 function pipeInput(){
  const method=$('pipe-search').value;
@@ -186,3 +189,58 @@ for(const id of ['pipe-source','pipe-model','pipe-chunk','pipe-search','pipe-emb
 $('pipe-preview').onclick=()=>safe(async()=>{const v=pipeInput();const job=await submit('pipeline',{...v,execute:false});if(job.status==='completed')state.pipePreview=JSON.stringify(v);pipelineFlags();});
 $('pipe-execute').onclick=()=>safe(()=>submit('pipeline',{...pipeInput(),execute:true}));
 $('pipe-open').onclick=()=>safe(()=>showArtifact($('pipe-saved').value));
+
+function displaySetting(value){
+ if(value===undefined)return '기록 없음';
+ if(value===null)return '끔';
+ if(typeof value==='object')return value.model_id||JSON.stringify(value);
+ return String(value);
+}
+function showPipelineComparison(data){
+ const box=$('pipe-comparison');clear(box);
+ const reasons={different_inputs:'원문 또는 질문이 다릅니다. 한 설정의 효과를 판단할 수 없습니다.',
+  incomplete_settings:'이전 실행 또는 미완료 단계의 설정 기록이 제한적입니다.',
+  different_execution:'실행 방식이나 결과 출처가 달라 직접 비교에 제한이 있습니다.',
+  single_setting:'같은 원문과 질문에서 설정 하나를 변경했습니다.',
+  multiple_settings:'여러 설정이 달라 각 변경의 영향을 분리할 수 없습니다.',
+  same_settings:'기록된 설정이 모두 같습니다.'};
+ const [a,b]=data.runs;
+ box.append(el('h3',reasons[data.interpretation]),el('p','원문 '+(data.same_source===null?'미확인':data.same_source?'동일':'다름')+' · 질문 '+(data.same_question?'동일':'다름')+' · 비교 모델 호출 0회'));
+ const table=el('table'),header=el('tr');
+ for(const label of ['설정','왼쪽','오른쪽'])header.append(el('th',label));
+ table.append(header);
+ for(const key of new Set([...Object.keys(a.settings),...Object.keys(b.settings)])){
+  const row=el('tr');row.append(el('th',key+(data.changed.includes(key)?' · 변경':'')));
+  for(const run of data.runs){
+   const v=run.settings[key],cell=el('td',displaySetting(v));
+   if(v && typeof v==='object' && v.model_id)cell.append(raw(v,'모델 세부 설정'));
+   row.append(cell);
+  }
+  table.append(row);
+ }
+ const settingsBox=el('details');
+ settingsBox.append(el('summary','전체 설정 · 공통점과 변경점'),table);
+ box.append(el('p','변경 항목 · '+(data.changed.join(', ')||'없음')),settingsBox);
+ const columns=el('div',undefined,'grid2');
+ for(const [idx,r] of data.runs.entries()){
+  const c=el('article',undefined,'card');
+  c.append(el('h4',(idx===0?'왼쪽':'오른쪽')+' · '+r.question),el('p',r.status+' · '+(r.execution_kind==='test_fixture'?'합성 시험 어댑터':r.execution_kind)));
+  c.append(el('p',r.answer?.answer||'저장된 답변 없음'));
+  if(r.error)c.append(el('p',r.failed_stage+' · '+r.error));
+  c.append(raw(r.stages,'단계별 상태'),el('h4','실제 인용'));
+  for(const cite of r.answer?.citations||[])c.append(el('p',cite.document_id+' · '+cite.pages.map(p=>p.page).join(', ')+'쪽'),el('blockquote',cite.quote));
+  c.append(el('h4',r.dispatch_attempted?'전달 문맥':'선택 문맥 · 전송 전'));
+  if(!r.contexts.length)c.append(el('p','저장된 문맥 없음'));
+  for(const [i,ctx] of r.contexts.entries()){
+   const d=el('details');d.append(el('summary',(i+1)+'위 · '+ctx.document_id+' · '+ctx.pages.map(p=>p.page).join(', ')+'쪽 · ['+ctx.start+', '+ctx.end+')'),el('p',ctx.chunk_id),el('blockquote',ctx.text));c.append(d);
+  }
+  columns.append(c);
+ }
+ box.append(columns);
+}
+$('pipe-compare').onclick=()=>safe(async()=>{
+ clear($('pipe-comparison'));
+ const ids=[$('pipe-left').value,$('pipe-right').value];
+ if(ids[0]===ids[1])throw new Error('서로 다른 실행 두 개를 선택하세요.');
+ showPipelineComparison(await api('/api/pipeline-comparison',{method:'POST',body:{ids}}));
+});

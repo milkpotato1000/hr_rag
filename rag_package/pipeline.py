@@ -56,7 +56,8 @@ def run(sources, chunk_config, search_config, question, out, *, reranker_profile
         chunk_target=target(model,'chunking') if cfg['method']=='llm' else None
         report['plan']={'source_fingerprint':sm['fingerprint'],'chunking':cfg,'retrieval':settings,
                         'embedding':embedding.identity(ep) if ep else None,'reranker':reranker.identity(rp) if rp else None,
-                        'generation':generation,'chunking_destination':chunk_target,
+                        'generation':generation,'generation_profile':{k:v for k,v in llm['profiles'][llm['roles']['generation']].items() if k!='api_key_env'},
+                        'effective_chunking':chunk_artifact.policy.effective(cfg,model),'chunking_destination':chunk_target,
                         'work_upper_bounds':{'boundary_llm_requests':len(windows),'boundary_embedding_items':len(units) if cfg['method']=='semantic' else 0,
                                              'index_jobs':int(bool(ep)),'query_jobs':int(bool(ep)),
                                              'rerank_pairs':settings['candidate_k'] if rp else 0,'generation_requests':1},
@@ -98,3 +99,60 @@ def replay(root):
     manifest=verify(root,'pipeline')
     require('pipeline.json' in manifest['identity']['files'],'missing_pipeline_result','pipeline')
     return read_json(Path(root)/'pipeline.json')
+
+
+def comparison_side(path):
+    root = Path(path)
+    report = replay(root)
+    plan = report.get('plan', {})
+    snapshot = None
+    if report['stages']['snapshot'] == 'complete':
+        snapshot = verify(root/'snapshot', 'snapshot')
+        if plan:
+            require(snapshot['fingerprint'] == plan['source_fingerprint'], 'stale_snapshot', 'pipeline')
+    settings = {}
+    if plan:
+        chunk = plan.get('effective_chunking', plan['chunking'])
+        settings.update({'chunk.'+k:v for k,v in chunk.items() if k != 'schema_version'})
+        settings.update({'search.'+k:v for k,v in plan['retrieval'].items()
+                         if k != 'rrf_k' or plan['retrieval']['method'] == 'hybrid'})
+        settings.update(embedding=plan.get('embedding'), reranker=plan.get('reranker'))
+        profile = plan.get('generation_profile', plan['generation'])
+        settings.update({'generation.'+k:v for k,v in profile.items()})
+    # Read only paths covered by the saved pipeline manifest. A stray file from
+    # an interrupted or later run cannot supply missing context.
+    files = read_json(root/'manifest.json')['identity']['files']
+    answer = read_json(root/'answer/result.json') if 'answer/result.json' in files else {}
+    if answer:
+        require(answer['question'] == report['question'], 'question_mismatch', 'pipeline')
+    selection = {}
+    if report['stages']['rerank'] == 'complete':
+        selection = read_json(root/'rerank/result.json')['selection']
+    return {'source':snapshot['fingerprint'] if snapshot else None, 'question':report['question'],
+            'settings':settings, 'complete_settings':bool(plan.get('generation_profile') and plan.get('effective_chunking')),
+            'status':report['status'], 'execution_kind':report.get('execution_kind','historical_'+report['mode']),
+            'mode':report['mode'], 'stages':report['stages'], 'error':report.get('error'),
+            'failed_stage':report.get('failed_stage'), 'contexts':answer.get('contexts',selection.get('contexts',[])),
+            'dispatch_attempted':answer.get('dispatch_attempted',False), 'answer':answer.get('answer')}
+
+
+def compare(left, right):
+    require(Path(left).resolve() != Path(right).resolve(), 'duplicate_pipeline', 'pipeline')
+    a, b = comparison_side(left), comparison_side(right)
+    keys = sorted(a['settings'].keys() | b['settings'].keys())
+    changed = [key for key in keys if key not in a['settings'] or key not in b['settings']
+               or a['settings'][key] != b['settings'][key]]
+    same_source = a['source'] == b['source'] if a['source'] and b['source'] else None
+    same_question = a['question'] == b['question']
+    if same_source is False or not same_question:
+        interpretation = 'different_inputs'
+    elif same_source is None or not (a['complete_settings'] and b['complete_settings']):
+        interpretation = 'incomplete_settings'
+    elif a['mode'] != b['mode'] or a['execution_kind'] != b['execution_kind']:
+        interpretation = 'different_execution'
+    elif len(changed) == 1:
+        interpretation = 'single_setting'
+    else:
+        interpretation = 'multiple_settings' if changed else 'same_settings'
+    return {'same_source':same_source,'same_question':same_question,'changed':changed,
+            'interpretation':interpretation,'runs':[a,b],'comparison_model_calls':0}

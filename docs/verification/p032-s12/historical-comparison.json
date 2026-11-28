@@ -1,0 +1,481 @@
+{
+  "same_source": true,
+  "same_question": false,
+  "changed": [
+    "chunk.heading_profile",
+    "chunk.method",
+    "embedding",
+    "reranker",
+    "search.method",
+    "search.rrf_k"
+  ],
+  "interpretation": "different_inputs",
+  "runs": [
+    {
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+      "settings": {
+        "chunk.method": "structure",
+        "chunk.size_chars": 400,
+        "chunk.overlap_chars": 80,
+        "chunk.heading_profile": "handbook-v1",
+        "search.method": "hybrid",
+        "search.top_k": 5,
+        "search.candidate_k": 20,
+        "search.rrf_k": 60,
+        "search.context_budget_chars": 4000,
+        "embedding": {
+          "model_id": "intfloat/multilingual-e5-small",
+          "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+          "file_manifest": {
+            "1_Pooling/config.json": "987f7a67a38fa564c849bb5d277c52ab9088a84368fc0be31a354125aebb12a0",
+            "config.json": "69137736cab8b8903a07fe8afaafdda25aac55415a12a55d1bffa9f581abf959",
+            "model.safetensors": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+            "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+            "sentence_bert_config.json": "948201d8329907aae938fa62f9ceeed53f5694dacc2b87b9f3b78b37ee986529",
+            "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+            "source-provenance.json": "c1d904ab80f7b18cea4eb22cac642bc2db23bb26e597b7f0f59cf5ad2f857dbd",
+            "special_tokens_map.json": "d05497f1da52c5e09554c0cd874037a083e1dc1b9cfd48034d1c717f1afc07a7",
+            "tokenizer.json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+            "tokenizer_config.json": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+          },
+          "device": "cpu",
+          "dtype": "float32",
+          "max_input_tokens": 512,
+          "catalog": {
+            "dimension": 384,
+            "query_prefix": "query: ",
+            "document_prefix": "passage: ",
+            "pooling": "mean",
+            "limit": 512,
+            "license": "MIT",
+            "url": "https://huggingface.co/intfloat/multilingual-e5-small"
+          },
+          "normalization": "l2",
+          "algorithm": "exact-cosine-v1"
+        },
+        "reranker": {
+          "model_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+          "revision": "1427fd652930e4ba29e8149678df786c240d8825",
+          "file_manifest": {
+            "config.json": "cc2cfe51aa3fd759d21d21acf5dfd6994aa67a3c9210636d22e143699d336c77",
+            "model.safetensors": "5daeca2481a76b5976a2bdc32f0a78532b6716da4f8cd3ff59460ef8d2f359b4",
+            "sentencepiece.bpe.model": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+            "source-provenance.json": "779d26c8d6a6810f30f9affc57f133fd66c7cfc41bc317277c55552375f7e2a3",
+            "special_tokens_map.json": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+            "tokenizer.json": "62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626",
+            "tokenizer_config.json": "e7fbfbfa6347b4e414c1cee50d142e2c2f9a895dad68b068ae83a8b564c3837e"
+          },
+          "device": "cpu",
+          "dtype": "float32",
+          "max_pair_tokens": 512,
+          "pair_policy": {
+            "scorer": "raw-single-logit-v1",
+            "activation": "identity",
+            "softmax": false,
+            "prompt": "",
+            "truncation": false,
+            "special_tokens": true,
+            "korean_quality": "unverified"
+          }
+        },
+        "generation.provider": "ollama",
+        "generation.model": "qwen3:4b",
+        "generation.destination": "http://127.0.0.1:11434",
+        "generation.configuration_required": false
+      },
+      "complete_settings": false,
+      "status": "answered",
+      "execution_kind": "historical_execute",
+      "mode": "execute",
+      "stages": {
+        "snapshot": "complete",
+        "chunks": "complete",
+        "index": "complete",
+        "search": "complete",
+        "candidates": "complete",
+        "rerank": "complete",
+        "answer": "complete"
+      },
+      "error": null,
+      "failed_stage": null,
+      "contexts": [
+        {
+          "chunk_id": "c-074f96f923aaa206f7c27c4b791e5f1c8b0ff78d789961d4d943c790ad5f94e9",
+          "document_id": "handbook",
+          "start": 668,
+          "end": 961,
+          "text": "BD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 668,
+              "canonical_end": 959,
+              "page_start": 668,
+              "page_end": 959
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+            "제1절 적용 기준 [BD-S1]",
+            "BD-03 신청 기한과 승인"
+          ],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 2,
+          "retrieval_score": 0.032266458495966696,
+          "text_hash": "50e72316d29909631a9ab9b6ba9d6949c883183b2dfaa67b5823bc8b3c004d0b",
+          "rank": 1,
+          "rank_delta": 1,
+          "reranker_score": 5.538107872009277
+        },
+        {
+          "chunk_id": "c-3a51b97129756079a6dc9c0ace26a0509aa3770d167873f6dbb0b7c2df17aa07",
+          "document_id": "handbook",
+          "start": 464,
+          "end": 668,
+          "text": "BD-02 사용 범위와 다른 제도\n생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다. 생일 특별휴가는 분할할 수 없다.\n신청서에는 사용하려는 날짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의\n로 연차로 바꾸지 않고 선택 오류인지 신청 의도인지 확인하여 해당 요청의 정정 이력을 남긴다.\n",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 464,
+              "canonical_end": 668,
+              "page_start": 464,
+              "page_end": 668
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+            "제1절 적용 기준 [BD-S1]",
+            "BD-02 사용 범위와 다른 제도"
+          ],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 1,
+          "retrieval_score": 0.03252247488101534,
+          "text_hash": "3c7f8b407e99f18cf4d17ebe5d527c1413fe8675bf5a8e20d8744eb833b72fb5",
+          "rank": 2,
+          "rank_delta": -1,
+          "reranker_score": 1.709261178970337
+        },
+        {
+          "chunk_id": "c-39232c6744540e7b539df6950be121aabf096ba5352b8dbe952201141ddbaf39",
+          "document_id": "handbook",
+          "start": 5734,
+          "end": 5996,
+          "text": "AN-04 통상 신청과 확인 정보\n연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다. 긴급 사유가 있으면 당일 팀장에게 알린 \n후 신청할 수 있다.\n연차 신청을 접수하면 사용 예정일, 하루 또는 반차 구분, 원래 제출 기록을 식별할 수 있는 정보를 \n연결한다. 신청자가 작성한 자유 서술의 개인 사유를 사용 일수 계산 항목과 혼합하지 않는다. 시\n스템에 기재된 기간과 신청자가 설명한 기간이 다르면 달력상 시작일과 종료일, 실제 사용하려는 \n날짜를 먼저 확인한다. ",
+          "pages": [
+            {
+              "page": 4,
+              "canonical_start": 5734,
+              "canonical_end": 5996,
+              "page_start": 1339,
+              "page_end": 1601
+            }
+          ],
+          "heading_path": [
+            "제2장 연차의 사용과 기록 관리 [AN]",
+            "제2절 신청과 사용 기록 [AN-S2]",
+            "AN-04 통상 신청과 확인 정보"
+          ],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 12,
+          "retrieval_score": 0.015873015873015872,
+          "text_hash": "49a7bdb00594773510ce60b0e0861675892de9a9bab957b2ce01a0ccb59b1eb7",
+          "rank": 3,
+          "rank_delta": 9,
+          "reranker_score": 0.40980255603790283
+        },
+        {
+          "chunk_id": "c-96ce0c9bbf65b78334df971a2d319d7efa11af149509b3320f88afe146ab4877",
+          "document_id": "handbook",
+          "start": 983,
+          "end": 1267,
+          "text": "BD-04 접수부터 결과 통지까지\n휴가 시스템에서 접수한 생일 특별휴가 신청에는 신청자를 식별하는 정보, 사용 예정일, 신청을 구\n분하는 기록 번호를 연결한다. 이미 입력되어 있는 생일이나 입사 정보를 신청자에게 다시 증명하\n도록 요구하지 않고, 신청 화면과 인사 기록 사이에 차이가 있는 항목만 확인 대상으로 표시한다. \n신청자가 설명을 덧붙인 경우에는 설명의 내용과 원래 시스템 값을 구별해 보관한다. 내용이 비어 \n있는 칸이 있더라도 어떤 정보가 필요한지 확인하기 전에 자격이 없다고 표시하지 않는다. ",
+          "pages": [
+            {
+              "page": 2,
+              "canonical_start": 983,
+              "canonical_end": 1267,
+              "page_start": 22,
+              "page_end": 306
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+            "제2절 신청 정보의 처리 [BD-S2]",
+            "BD-04 접수부터 결과 통지까지"
+          ],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 4,
+          "retrieval_score": 0.030117753623188408,
+          "text_hash": "91bc9fec261fe574f9bc0c18b0d13c0af8340612ce451bc37ed06bd5e29ecadf",
+          "rank": 4,
+          "rank_delta": 0,
+          "reranker_score": 0.24399805068969727
+        },
+        {
+          "chunk_id": "c-b7b85b21d344392c6b096e44c493d3d7ea44b2f45e4946ecca475f8dc2a94860",
+          "document_id": "handbook",
+          "start": 253,
+          "end": 464,
+          "text": "BD-01 적용 대상과 부여 일수\n입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상\n에서 제외한다.\n담당자는 신청 내역에 표시된 재직 기간과 수습 구분을 각각 확인한다. 두 정보의 표시가 서로 맞\n지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운\n 제외 사유로 처리하지 않는다.\n",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 253,
+              "canonical_end": 464,
+              "page_start": 253,
+              "page_end": 464
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+            "제1절 적용 기준 [BD-S1]",
+            "BD-01 적용 대상과 부여 일수"
+          ],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 11,
+          "retrieval_score": 0.027777777777777776,
+          "text_hash": "d9950d0437e77559695a5e90f3736659ee9205abf974f7ae023e53c999171df3",
+          "rank": 5,
+          "rank_delta": 6,
+          "reranker_score": -0.0927080363035202
+        }
+      ],
+      "dispatch_attempted": true,
+      "answer": {
+        "status": "answered",
+        "answer": "3영업일 전",
+        "citations": [
+          {
+            "chunk_id": "c-074f96f923aaa206f7c27c4b791e5f1c8b0ff78d789961d4d943c790ad5f94e9",
+            "document_id": "handbook",
+            "quote": "BD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n",
+            "start": 668,
+            "end": 961,
+            "pages": [
+              {
+                "page": 1,
+                "canonical_start": 668,
+                "canonical_end": 959,
+                "page_start": 668,
+                "page_end": 959
+              }
+            ],
+            "heading_path": [
+              "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+              "제1절 적용 기준 [BD-S1]",
+              "BD-03 신청 기한과 승인"
+            ],
+            "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+          }
+        ]
+      }
+    },
+    {
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "question": "생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?",
+      "settings": {
+        "chunk.method": "fixed",
+        "chunk.size_chars": 400,
+        "chunk.overlap_chars": 80,
+        "search.method": "bm25",
+        "search.candidate_k": 20,
+        "search.top_k": 5,
+        "search.context_budget_chars": 4000,
+        "embedding": null,
+        "reranker": null,
+        "generation.provider": "ollama",
+        "generation.model": "qwen3:4b",
+        "generation.destination": "http://127.0.0.1:11434",
+        "generation.configuration_required": false
+      },
+      "complete_settings": false,
+      "status": "answered",
+      "execution_kind": "live",
+      "mode": "execute",
+      "stages": {
+        "snapshot": "complete",
+        "chunks": "complete",
+        "index": "complete",
+        "search": "complete",
+        "candidates": "complete",
+        "rerank": "complete",
+        "answer": "complete"
+      },
+      "error": null,
+      "failed_stage": null,
+      "contexts": [
+        {
+          "chunk_id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+          "document_id": "handbook",
+          "start": 640,
+          "end": 1040,
+          "text": "도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n제2절 신청 정보의 처리 [BD-S2]\nBD-04 접수부터 결과 통지까지\n휴가 시스템에서 접수한 생일 특별휴가 신청에는 신청자를 식별하는 정보",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 640,
+              "canonical_end": 959,
+              "page_start": 640,
+              "page_end": 959
+            },
+            {
+              "page": 2,
+              "canonical_start": 961,
+              "canonical_end": 1040,
+              "page_start": 0,
+              "page_end": 79
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+          ],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 1,
+          "retrieval_score": 9.767698061098173,
+          "text_hash": "9127cd24043a850a0602891bd900b78c2c24815517de6daa972f04b4b7d32b9b",
+          "rank": 1,
+          "rank_delta": 0,
+          "reranker_score": null
+        },
+        {
+          "chunk_id": "c-b029aa99d41783cc351726b4295ef6fd95522693d3a47d17554e6afe9d2696b5",
+          "document_id": "handbook",
+          "start": 19200,
+          "end": 19600,
+          "text": " 출근 여부를 판단하지 않고, 날짜나 근무 형태가 불명확한 항목은 별도로 확\n인한다.\nWF-02 생일 축하 포인트\n재직자에게 생일 축하 포인트 3만 점을 지급한다. 이 포인트는 휴가 신청 자격이나 승인 여부와 별\n개다.\n생일 포인트의 지급 내역을 휴가 승인 기록으로 사용하지 않는다. 휴가 승인 여부에 관한 문의는 B\nD-03@v4의 신청·승인 기록과 구분하여 확인하며, 포인트 확인 화면에 휴가 승인 상태를 함께 확\n정해 표시하지 않는다.\nWF-03 문의 접수와 대상 내역의 식별\n복지 내역 문의를 받으면 담당자는 식대와 생일 축하 포인트 중 어느 항목에 관한 문의인지 먼저 구\n분한다. 문의자가 금액과 점수를 혼용하여 설명한 경우에는 지급 단위를 확인한 뒤 원래 내역과 대\n조한다. 문의 내용에는 확인하려는 날짜",
+          "pages": [
+            {
+              "page": 12,
+              "canonical_start": 19200,
+              "canonical_end": 19600,
+              "page_start": 560,
+              "page_end": 960
+            }
+          ],
+          "heading_path": [
+            "제4장 복지 지원 내역의 확인 [WF]"
+          ],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 2,
+          "retrieval_score": 3.4582922855666207,
+          "text_hash": "5ed68cd328e6067a79b8731b3322f17ab50add435fa472f347edf63184230629",
+          "rank": 2,
+          "rank_delta": 0,
+          "reranker_score": null
+        },
+        {
+          "chunk_id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+          "document_id": "handbook",
+          "start": 320,
+          "end": 720,
+          "text": " 직원은 대상\n에서 제외한다.\n담당자는 신청 내역에 표시된 재직 기간과 수습 구분을 각각 확인한다. 두 정보의 표시가 서로 맞\n지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운\n 제외 사유로 처리하지 않는다.\nBD-02 사용 범위와 다른 제도\n생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다. 생일 특별휴가는 분할할 수 없다.\n신청서에는 사용하려는 날짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의\n로 연차로 바꾸지 않고 선택 오류인지 신청 의도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 320,
+              "canonical_end": 720,
+              "page_start": 320,
+              "page_end": 720
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+          ],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 3,
+          "retrieval_score": 3.2372005845415526,
+          "text_hash": "9929c9b64b55392aecd59d775047a37d7069ef496d63d719168bbdf4f6b9d1a9",
+          "rank": 3,
+          "rank_delta": 0,
+          "reranker_score": null
+        },
+        {
+          "chunk_id": "c-d1ea75771c8872da1c6204ebe668e95074a5eebe17d1b859bffad970b066b676",
+          "document_id": "handbook",
+          "start": 0,
+          "end": 400,
+          "text": "가상 HR 운영 규정집\n가상 HR 규정입니다. 실제 회사의 정책이나 법적 기준이 아닙니다.\n문서 식별자: hr-v4-handbook | 버전: 4 | 시행일: 정보 없음\n통합 목차\n제1장 생일 특별휴가와 포인트의 구분\n제2장 연차의 사용과 기록 관리\n제3장 재택근무의 신청과 운영\n제4장 복지 지원 내역의 확인\n제5장 교육휴가의 신청과 변경\n제6장 출장의 승인과 일정 관리\n제1장 생일 특별휴가와 포인트의 구분 [BD]\n제1절 적용 기준 [BD-S1]\nBD-01 적용 대상과 부여 일수\n입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상\n에서 제외한다.\n담당자는 신청 내역에 표시된 재직 기간과 수습 구분을 각각 확인한다. 두 정보의 표시가 서로 맞\n지 않으면 차이가",
+          "pages": [
+            {
+              "page": 1,
+              "canonical_start": 0,
+              "canonical_end": 400,
+              "page_start": 0,
+              "page_end": 400
+            }
+          ],
+          "heading_path": [],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 4,
+          "retrieval_score": 3.223841287437836,
+          "text_hash": "7381ebfe3537242ae0e7cbf6a54b77e2ee304bf1174d4f0b361221c2656ae5ac",
+          "rank": 4,
+          "rank_delta": 0,
+          "reranker_score": null
+        },
+        {
+          "chunk_id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+          "document_id": "handbook",
+          "start": 3520,
+          "end": 3920,
+          "text": "사실과 실제 \n기록 정리가 끝났다는 사실을 분리해 안내하고, 담당자의 확인이 끝나지 않은 값을 개인별 잔여 일\n수로 단정하지 않는다.\nBD-07 생일 축하 포인트의 관계\n생일 축하 포인트 지급 내역은 생일 특별휴가의 신청 번호와 별개로 식별한다. 포인트를 받았다는 \n문의가 휴가 승인 확인으로 접수되면 문의 목적을 먼저 구분하고, 휴가에 관한 내용은 BD-03@v4\n의 승인 기록에서 확인한다. 지급 내역 화면을 휴가 승인서 대신 첨부하거나 두 상태를 같은 항목\n으로 합치지 않는다.\n제2장 연차의 사용과 기록 관리 [AN]\n제1절 발생과 사용 단위 [AN-S1]\nAN-01 발생 기준\n1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 \n기준으로 별도 산정한다.\n연",
+          "pages": [
+            {
+              "page": 3,
+              "canonical_start": 3520,
+              "canonical_end": 3920,
+              "page_start": 672,
+              "page_end": 1072
+            }
+          ],
+          "heading_path": [
+            "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+          ],
+          "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+          "original_rank": 5,
+          "retrieval_score": 3.217202902158574,
+          "text_hash": "48df83b94d91babcb46670a82a87051d32e492b89697b9ada68f11f11df9ce37",
+          "rank": 5,
+          "rank_delta": 0,
+          "reranker_score": null
+        }
+      ],
+      "dispatch_attempted": true,
+      "answer": {
+        "status": "answered",
+        "answer": "팀장",
+        "citations": [
+          {
+            "chunk_id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "document_id": "handbook",
+            "quote": "도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n제2절 신청 정보의 처리 [BD-S2]\nBD-04 접수부터 결과 통지까지\n휴가 시스템에서 접수한 생일 특별휴가 신청에는 신청자를 식별하는 정보",
+            "start": 640,
+            "end": 1040,
+            "pages": [
+              {
+                "page": 1,
+                "canonical_start": 640,
+                "canonical_end": 959,
+                "page_start": 640,
+                "page_end": 959
+              },
+              {
+                "page": 2,
+                "canonical_start": 961,
+                "canonical_end": 1040,
+                "page_start": 0,
+                "page_end": 79
+              }
+            ],
+            "heading_path": [
+              "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+            ],
+            "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+          }
+        ]
+      }
+    }
+  ],
+  "comparison_model_calls": 0
+}
