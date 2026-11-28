@@ -39,12 +39,16 @@ class UI:
             'rerank_artifacts':[{'id':k,'kind':v['kind']} for k,v in r.data['artifacts'].items() if v['kind'] in ('candidates','rerank','rerank-comparison','rerank-answer')],
             'chunk_configs':[{'id':k,'method':v['config']['method'],'heading_profile':v['config'].get('heading_profile'),'size_chars':v['config']['size_chars'],'overlap_chars':v['config']['overlap_chars']} for k,v in r.chunk_configs.items()],
             'allow_chunking_execution':self.jobs.allow_chunking,
+            'pipelines':[{'id':k,'label':v.get('label',k),'status':v.get('status')} for k,v in r.data['artifacts'].items() if v['kind']=='pipeline'],
             'chunk_artifacts':[r.chunk_summary(k) for k,v in r.data['artifacts'].items() if v['kind'] in ('chunks','chunk-preview')],
             'capabilities':{'chunking':['fixed','recursive','structure','semantic','llm'],'retrieval':['bm25','dense','hybrid'],'unsupported':['Qwen instruction 리랭커','평가기']},
             'limits':{'inputs':20,'configs':8,'upload_bytes':20*1024*1024,'concurrent_jobs':1,'comparison_requests':80},'jobs':self.jobs.summaries()}
     def artifact(self,key):
         p,e,m=self.registry.artifact(key);kind=e['kind'];out={'id':key,'kind':kind,'manifest':m,'snapshot_id':e.get('snapshot_id',key)}
-        if kind=='snapshot':out['documents']=[{k:v for k,v in d.items() if k!='text'} for d in load_snapshot(p,ready=False)[1]]
+        if kind=='pipeline':
+            from .pipeline import replay
+            out['result']=replay(p)
+        elif kind=='snapshot':out['documents']=[{k:v for k,v in d.items() if k!='text'} for d in load_snapshot(p,ready=False)[1]]
         elif kind in ('chunks','chunk-preview'):
             if kind=='chunks':
                 from .chunk_artifact import load
@@ -161,11 +165,20 @@ class Handler(BaseHTTPRequestHandler):
             try:self.reply(500,error={'code':'internal_error','stage':'http'})
             except OSError:pass
 
-def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,reranker_configs=(),allow_reranking=False,qrels=(),facts=(),chunk_configs=(),allow_chunking=False,**test_injection):
-    r=Registry(workspace,llm_configs,sources,drive_configs,embedding_configs,reranker_configs,qrels,facts,chunk_configs);jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,allow_reranking=allow_reranking,allow_chunking=allow_chunking,**test_injection);return Server(port,UI(r,jobs))
+def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,reranker_configs=(),allow_reranking=False,qrels=(),facts=(),chunk_configs=(),allow_chunking=False,pipeline_runs=(),**test_injection):
+    r=Registry(workspace,llm_configs,sources,drive_configs,embedding_configs,reranker_configs,qrels,facts,chunk_configs)
+    from .pipeline import replay
+    for path in pipeline_runs:
+        directory=contained(r.workspace,path)
+        require(not any(p.is_symlink() for p in directory.rglob('*')),'symlink_denied','registry')
+        result=replay(directory)
+        existing=next((k for k,v in r.data['artifacts'].items() if v['kind']=='pipeline' and v['path']==r.relative(directory)),None)
+        if existing:r.artifact(existing)
+        else:r.add_artifact(directory,'pipeline',label=result['question'],status=result['status'])
+    jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,allow_reranking=allow_reranking,allow_chunking=allow_chunking,**test_injection);return Server(port,UI(r,jobs))
 
 def serve(args):
-    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution,reranker_configs=args.reranker_config,allow_reranking=args.allow_reranking_execution,qrels=args.qrels,facts=args.facts,chunk_configs=args.chunk_config,allow_chunking=args.allow_chunking_execution)
+    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution,reranker_configs=args.reranker_config,allow_reranking=args.allow_reranking_execution,qrels=args.qrels,facts=args.facts,chunk_configs=args.chunk_config,allow_chunking=args.allow_chunking_execution,pipeline_runs=args.pipeline_run)
     print(json.dumps({'status':'serving','url':server.origin,'execution_kind':'preview_default','model_execution_allowed':args.allow_model_execution,'drive_download_allowed':args.allow_drive_download}),flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass

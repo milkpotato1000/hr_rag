@@ -57,6 +57,9 @@ class Jobs:
         p=self.registry.embedding(v.get('embedding_config_id'));require(embedding.configured(p),'embedding_configuration_required','input');return p
     def prepare(self,v):
         kind=v['kind'];r=self.registry;plan={};summary=copy.deepcopy(v)
+        if kind=='pipeline':
+            from .ui_pipeline import prepare
+            return prepare(self,v),summary
         if kind in ('chunk','chunk_derive','chunk_build','chunk_compare'):
             from .ui_chunking import prepare
             return prepare(self,v),summary
@@ -107,6 +110,14 @@ class Jobs:
             key=uid();r={'id':key,'request_id':rid,'payload_hash':h,'input_fingerprint':fingerprint(plan),'kind':v['kind'],'status':'queued','stage':'accepted','request':summary,'artifact_ids':[],'error':None,'dispatch_attempted':False,'execution_kind':'test_fixture' if self.fixture else 'live' if v.get('execute') or v['kind']=='drive_pull' else 'preview'}
             self.persist(r);self.records[rid]=r;self.active=key
             self.thread=threading.Thread(target=self.run,args=(r,v,plan),daemon=True);self.thread.start();return copy.deepcopy(r),True
+    def _sources(self,work,inputs):
+        docs=[];src=work/'input';src.mkdir()
+        for d in inputs:
+            path=contained(self.registry.workspace,d['path']);raw=bounded(path,20*1024*1024);require(digest(raw)==d['sha256'],'stale_source','snapshot')
+            target=src/(d['document_id']+'.'+d['format']);target.write_bytes(raw)
+            docs.append({k:d[k] for k in ('document_id','title','format','synthetic')}|{'path':str(target)})
+        write_json(src/'sources.json',{'schema_version':1,'documents':docs})
+        return src/'sources.json'
     def _config(self,work,plan,name='settings'):
         p=work/name;p.mkdir();write_json(p/'llm.json',plan['llm']);c={'schema_version':1,'chunking':plan['chunking'],'retrieval':plan['retrieval'],'llm_config':'llm.json'}
         if 'candidate_k' in plan['retrieval']:
@@ -121,7 +132,12 @@ class Jobs:
             r.update(status='running',stage=kind,dispatch_attempted='unknown' if v.get('execute') or kind=='drive_pull' else False);self.persist(r);work.mkdir()
             if 'source' in plan:
                 m=verify(plan['source'],'build' if kind=='ask' else 'snapshot');require(m['fingerprint']==plan['source_fingerprint'],'stale_artifact','jobs')
-            if kind in ('chunk','chunk_derive','chunk_build','chunk_compare'):
+            if kind=='pipeline':
+                from .ui_pipeline import execute
+                ids,state,result=execute(self,v,plan,work)
+                r['dispatch_attempted']=bool(result['generation_requests']) if 'generation_requests' in result else ('unknown' if v['execute'] else False)
+                if state=='failed':r['error']={'code':result['error'],'stage':result['failed_stage']}
+            elif kind in ('chunk','chunk_derive','chunk_build','chunk_compare'):
                 from .ui_chunking import execute
                 ids,state,result=execute(self,v,plan,work);r['dispatch_attempted']=result.get('dispatch_attempted',False);r['error']=result.get('error')
             elif kind in ('candidates','rerank','rerank_compare','rerank_answer'):
@@ -129,12 +145,7 @@ class Jobs:
                 ids,state,result=execute(self,v,plan,work)
                 r['dispatch_attempted']=result.get('dispatch_attempted',False);r['error']=result.get('error')
             elif kind=='snapshot':
-                docs=[];src=work/'input';src.mkdir()
-                for d in plan['inputs']:
-                    path=contained(registry.workspace,d['path']);raw=bounded(path,20*1024*1024);require(digest(raw)==d['sha256'],'stale_source','snapshot')
-                    target=src/(d['document_id']+'.'+d['format']);target.write_bytes(raw)
-                    docs.append({k:d[k] for k in ('document_id','title','format','synthetic')}|{'path':str(target)})
-                write_json(src/'sources.json',{'schema_version':1,'documents':docs});m=snapshot(src/'sources.json',work/'result');ids=[registry.add_artifact(work/'result','snapshot')];state='completed' if m['identity']['status']=='ready' else 'needs_review';r['dispatch_attempted']=False
+                m=snapshot(self._sources(work,plan['inputs']),work/'result');ids=[registry.add_artifact(work/'result','snapshot')];state='completed' if m['identity']['status']=='ready' else 'needs_review';r['dispatch_attempted']=False
             elif kind=='drive_preview':
                 r['result']=preview_memory(plan['drive']);state='completed';r['dispatch_attempted']=False
             elif kind=='drive_pull':

@@ -201,3 +201,17 @@ rag-lab pipeline-replay --run .rag-runs/pipeline-live
 BM25로 간단히 시작하려면 fixed.json의 llm_config를 준비한 생성 프로필로 바꾼 사본을 --search-config에 주고 --reranker-profile을 생략하세요. 유료 API는 llm_config를 해당 프로필로 바꾸면 됩니다. 명시 실행하면 질문과 최종 문맥이 미리보기에 표시된 주소로 전송됩니다. 답변의 citations에서 chunk_id·heading_path·pages·start·end·quote를 보고 chunks와 rerank의 최종 문맥을 대조하세요. 실패한 실행은 pipeline.json의 failed_stage와 해당 단계 파일에서 확인하고 보존하세요.
 
 Codex 또는 Claude Code에 줄 요청 예시: “내 규정집 PDF를 handbook-v1으로 나누고 E5 Hybrid와 mMiniLM, 준비한 로컬 Qwen으로 신청 기한을 찾아줘. 실행 전 미리보기에서 모델과 전송 주소를 확인하고, 최종 답변의 인용을 PDF 원문과 대조해 줘.”
+
+## 브라우저에서 같은 통합 파이프라인 쓰기
+
+준비한 프로필 JSON을 실습 폴더 안에 두세요. 임베딩·리랭커 프로필을 복사할 때 local_path는 기존 모델 디렉터리의 절대경로로 유지합니다. 아래 명령은 앞에서 저장한 통합 실행 결과를 등록하고, 새 질문을 미리보기로 살펴볼 수 있게 합니다.
+
+```sh
+rag-lab serve --workspace . --sources handbook-sources.json --llm-config handbook-model.json --chunk-config chunk-fixed.json --chunk-config chunk-handbook.json --embedding-config embedding-e5.json --reranker-config reranker-bge.json --pipeline-run .rag-runs/pipeline-live
+```
+
+임베딩과 리랭커 옵션에는 사용할 실제 프로필 파일명을 지정하세요. API 설정도 선택하려면 --llm-config를 한 번 더 지정하세요. 처음 실습해 저장 결과가 없다면 --pipeline-run 옵션을 생략하세요.
+
+‘문서에서 답변까지’에서 원문, 질문, 청킹, 검색, 임베딩, 재정렬 모델과 생성 프로필을 선택합니다. ‘선택 구성 미리보기’로 예정 작업과 전송 주소를 확인하세요. 실제 실행을 원하면 서버에 --allow-model-execution을 추가합니다. Dense·Hybrid에는 --allow-retrieval-execution, 리랭커에는 --allow-reranking-execution, 의미·LLM 청킹에는 --allow-chunking-execution도 필요합니다. 다시 미리보기한 뒤 ‘이 구성으로 실제 실행’을 눌러야 모델이 동작합니다.
+
+‘저장된 통합 결과 → 저장 결과 열기’에서 답변 아래 인용을 펼치면 제목 경로·페이지·문자 범위·원문을 읽을 수 있습니다. 이전 결과를 여는 동작은 모델을 호출하지 않습니다. 세부 검색이나 청킹 비교는 왼쪽 실습 메뉴에서 진행하세요.

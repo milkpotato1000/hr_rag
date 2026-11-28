@@ -56,6 +56,7 @@ def main(argv=None):
             else:sub.add_argument('--run',required=True)
         server.add_argument('--reranker-config',action='append',default=[]);server.add_argument('--allow-reranking-execution',action='store_true')
         server.add_argument('--qrels',action='append',default=[]);server.add_argument('--facts',action='append',default=[])
+        server.add_argument('--pipeline-run',action='append',default=[])
         server.add_argument('--chunk-config',action='append',default=[]);server.add_argument('--allow-chunking-execution',action='store_true')
         view=subs.add_parser('compare-answers',help='Compare saved answer-from-rerank results without inference')
         view.add_argument('--result',nargs=2,action='append',required=True,metavar=('LABEL','DIRECTORY'))

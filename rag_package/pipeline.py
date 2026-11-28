@@ -13,7 +13,8 @@ def target(config, role):
             'configuration_required':configuration_required(profile)}
 
 
-def run(sources, chunk_config, search_config, question, out, *, reranker_profile=None, execute=False):
+def run(sources, chunk_config, search_config, question, out, *, reranker_profile=None, execute=False,
+        transport=None, key_resolver=None, embedding_backend=None, reranker_backend=None):
     require(isinstance(question,str) and 0 < len(question.strip()) <= 2000,'invalid_question','pipeline')
     root = Path(out).absolute()
     try:
@@ -22,6 +23,7 @@ def run(sources, chunk_config, search_config, question, out, *, reranker_profile
         raise RagError('output_exists','pipeline') from None
     stages = ('snapshot','chunks','index','search','candidates','rerank','answer')
     report = {'status':'running','question':question,'mode':'execute' if execute else 'preview',
+              'execution_kind':'test_fixture' if any(x is not None for x in (transport,key_resolver,embedding_backend,reranker_backend)) else ('live' if execute else 'preview'),
               'stages':{stage:'pending' for stage in stages},'answer':None}
     def checkpoint():
         atomic_json(root/'pipeline.json',report)
@@ -67,15 +69,15 @@ def run(sources, chunk_config, search_config, question, out, *, reranker_profile
             config_path=root/'retrieval.json'
             write_json(config_path,dict(schema_version=3,chunk_artifact='chunks',llm_config=str(lpath),
                                         retrieval=settings,embedding_config=config.get('embedding_config')))
-            step('chunks',lambda:chunk_artifact.build(root/'snapshot',chunk_config,root/'chunks',execute=True),lambda r:r['status']=='ready')
-            step('index',lambda:retrieval.build(root/'snapshot',config_path,root/'index',execute_retrieval=True),lambda r:True)
-            step('search',lambda:rag.ask(root/'index',config_path,question,root/'search',execute_retrieval=True),
+            step('chunks',lambda:chunk_artifact.build(root/'snapshot',chunk_config,root/'chunks',execute=True,embedding_backend=embedding_backend,transport=transport,key_resolver=key_resolver),lambda r:r['status']=='ready')
+            step('index',lambda:retrieval.build(root/'snapshot',config_path,root/'index',execute_retrieval=True,embedding_backend=embedding_backend),lambda r:True)
+            step('search',lambda:rag.ask(root/'index',config_path,question,root/'search',execute_retrieval=True,embedding_backend=embedding_backend),
                  lambda r:r['status'] in ('preview','abstained'))
             step('candidates',lambda:candidates.freeze(root/'index',root/'search','question',settings['candidate_k'],root/'candidates'),lambda r:True)
             step('rerank',lambda:reranking.run(root/'candidates','cross-encoder' if rp else 'none',root/'rerank',
                  profile=reranker_profile,top_k=settings['top_k'],context_budget_chars=settings['context_budget_chars'],
-                 execute=True),lambda r:r['status']=='complete')
-            answer=step('answer',lambda:reranking.answer(root/'rerank',lpath,root/'answer',execute=True),
+                 execute=True,backend=reranker_backend),lambda r:r['status']=='complete')
+            answer=step('answer',lambda:reranking.answer(root/'rerank',lpath,root/'answer',execute=True,transport=transport,key_resolver=key_resolver),
                         lambda r:r['status'] in ('answered','abstained'))
             report.update(status=answer['status'],answer=answer['answer'],generation_requests=answer['generation_requests'])
         else:
@@ -93,5 +95,6 @@ def run(sources, chunk_config, search_config, question, out, *, reranker_profile
 
 
 def replay(root):
-    verify(root,'pipeline')
+    manifest=verify(root,'pipeline')
+    require('pipeline.json' in manifest['identity']['files'],'missing_pipeline_result','pipeline')
     return read_json(Path(root)/'pipeline.json')

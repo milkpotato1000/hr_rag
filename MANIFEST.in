@@ -39,6 +39,7 @@ include rag_package/chunk_policy.py
 include rag_package/chunk_artifact.py
 include rag_package/chunk_compare.py
 include rag_package/ui_chunking.py
+include rag_package/ui_pipeline.py
 include rag_package/model_catalog.py
 include rag_package/model_preparation.py
 include rag_package/model_process.py

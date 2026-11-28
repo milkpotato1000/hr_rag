@@ -1,0 +1,48 @@
+{
+  "actual_model_calls": 0,
+  "fixture_posts": 2,
+  "cli_ui_hybrid_plan_equal": true,
+  "s8_copy_byte_identical": true,
+  "browser_jobs": [
+    {
+      "status": "preview",
+      "kind": "test_fixture",
+      "retrieval": "bm25",
+      "job": "completed",
+      "requests": 0,
+      "error": null
+    },
+    {
+      "status": "failed",
+      "kind": "test_fixture",
+      "retrieval": "bm25",
+      "job": "failed",
+      "requests": null,
+      "error": "provider_invalid_response"
+    },
+    {
+      "status": "answered",
+      "kind": "test_fixture",
+      "retrieval": "bm25",
+      "job": "completed",
+      "requests": 1,
+      "error": null
+    },
+    {
+      "status": "preview",
+      "kind": "test_fixture",
+      "retrieval": "bm25",
+      "job": "completed",
+      "requests": 0,
+      "error": null
+    },
+    {
+      "status": "preview",
+      "kind": "test_fixture",
+      "retrieval": "hybrid",
+      "job": "completed",
+      "requests": 0,
+      "error": null
+    }
+  ]
+}
