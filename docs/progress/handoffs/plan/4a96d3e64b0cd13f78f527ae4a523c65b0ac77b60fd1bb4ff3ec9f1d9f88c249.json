@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S24 설치 모델 두 쌍의 규정집 근거 순위 비교",
   "next_action": "정확 채택 후 Hybrid 임베딩과 고정 후보 리랭커를 각각 실측",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T09:21:17.757410+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T09:21:33.485843+00:00",
+      "evidence": "기존 dev 채팅에 S24 SHA와 비교 범위를 직접 전달했다."
     }
   ]
 }
