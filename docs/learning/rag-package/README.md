@@ -16,7 +16,7 @@
 
 1. [현재 설치 안내](install-current.md)에서 새 환경에 wheel을 설치하고 `rag-lab init`으로 독립 실습 폴더를 만듭니다. 이 폴더에 생성된 `START_HERE.md`가 실행 순서입니다. `hr_rag_dev`나 plan/dev 하네스 설치는 필요하지 않습니다.
 2. 그 폴더에서 `doctor` → `snapshot` → 규칙 청킹·BM25 `build/ask/compare` preview를 실행합니다. 샘플 모델의 `needs_configuration`은 예상 상태입니다. preview는 답변을 생성하지 않습니다.
-3. 아래 local/API spec으로 LLM 설정을 생성합니다. 임베딩·리랭커는 [공개 모델 준비](model-preparation.md) 경로를 사용합니다. 설정 생성, 파일 준비, 실제 추론, 품질 검증은 서로 다른 단계입니다.
+3. generation-setup으로 사용할 로컬 또는 API 모델을 지정합니다. 임베딩·리랭커는 [공개 모델 준비](model-preparation.md) 경로를 사용합니다. 설정 생성, 파일 준비, 실제 추론, 품질 검증은 서로 다른 단계입니다.
 4. [일반 문서 CLI](document-rag.md) → [다섯 청킹 방식](model-chunking.md) → [Hybrid 검색](hybrid.md) → [선택 리랭커](reranking.md) 순서로 연결을 익힙니다. [학습 UI](ui.md)에서도 같은 코어와 저장 결과를 볼 수 있습니다.
 5. [S1 검색·리랭킹](live-retrieval-s1.md)과 [S2b 청킹 비교](chunk-comparison-live.md)를 읽고, [실험 질문과 기록 양식](experiments.md)으로 한 조건씩 비교합니다. 실제 모델을 다시 실행할 필요 없이 결과를 해석할 수 있습니다.
 
@@ -24,16 +24,14 @@
 
 ## 로컬 공개 LLM과 선택 유료 API
 
-init 폴더의 spec을 복사·편집하고 아래 중 원하는 경로를 사용합니다. 샘플의 `EXAMPLE_*` 값은 실제 모델이 아닙니다. API spec에는 키 값 대신 환경 변수 이름만 넣습니다.
+실습 폴더에서 모델명을 지정하면 프로필과 BM25 검색 설정을 함께 만듭니다. 아래 API 예제의 YOUR_MODEL_ID는 본인 계정의 모델명으로 바꾸세요.
 
 ```sh
-rag-lab llm-configure --spec llm-spec-local.json --out my-llm-preview.json
-rag-lab doctor --llm-config my-llm-preview.json
-rag-lab llm-configure --spec llm-spec-api.json --out my-api-preview.json
-rag-lab doctor --llm-config my-api-preview.json
+rag-lab generation-setup --provider ollama --model qwen3:4b --out my-local
+rag-lab generation-setup --provider openai_chat --model YOUR_MODEL_ID --key-env OPENAI_API_KEY --out my-api
 ```
 
-이 명령들은 네트워크·키 읽기·추론 없이 설정을 만듭니다. local 출력은 identity 미확인으로 실제 실행을 차단합니다. 이미 준비된 로컬 서버를 명시적으로 조회하는 `--inspect-local` 절차는 생성된 START_HERE에 있습니다. API 설정 생성도 API 이용권이나 서비스 연결을 검증하지 않습니다. **Codex/Claude Code 구독은 RAG의 API 이용권과 별개**입니다.
+원하는 설정의 출력에서 `commands.pipeline_preview`와 `commands.serve`를 따라가세요. 기본 로컬 설정은 네트워크 없이 만들 수 있고, 설치된 모델을 확인해 생성용으로 구성할 때는 새 출력 경로와 --inspect-local을 사용합니다. 기존 사용자 spec과 혼합 역할 설정에는 llm-configure를 사용하세요. [설치 실습과 두 코딩 도구용 요청](../../../rag_package/resources/sample/HANDBOOK.md) · [독립 설치 검증 결과](../../verification/p032-s14/README.md)
 
 ```text
 문서 snapshot → 청킹 → BM25 / 공개 임베딩 Dense·Hybrid
@@ -87,5 +85,5 @@ Claude Code에 요청:
 
 - [모델과 지원 상태](models-and-support.md), [Drive 단일 문서 연결](drive.md): 구현 지원과 실제 검증 범위를 구분합니다.
 - [기존 Naive RAG](<../../../1. Naive RAG/LEARNING_GUIDE.md>)와 [LangChain 비교](<../../../1. Naive RAG/variants/langchain/README.md>), [기존 장문 PDF 청킹 단계](<../../../2. Document Chunking/LEARNING.md>): 각 corpus·버전의 역사적 실습입니다. 새 패키지 snapshot과 자동으로 같은 입력이 되지 않습니다.
-- P024의 [local 설계 JSON](examples/local.json) / [API 설계 JSON](examples/api.json)은 `example_only`인 역사 참고이며 실행 CLI 설정이 아닙니다. 현재 실행에는 init의 spec→llm-configure를 사용합니다.
+- P024의 [local 설계 JSON](examples/local.json) / [API 설계 JSON](examples/api.json)은 `example_only`인 역사 참고이며 실행 CLI 설정이 아닙니다. 현재 설치 실습은 generation-setup에서 시작합니다.
 - [P013 보류 기록](../../verification/p013/recovery-20261127/README.md): 평가 실험은 재개하지 않았습니다. [로드맵](../../planning/rag-package-roadmap.md)의 미완료 단계와 브라우저 파일 선택창 검증도 남아 있습니다.

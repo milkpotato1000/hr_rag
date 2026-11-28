@@ -41,6 +41,15 @@ def main(argv=None):
             else:sub.add_argument('--source',required=True)
         mc=subs.add_parser('model-check');mc.add_argument('--profile',required=True)
         lc=subs.add_parser('llm-configure');lc.add_argument('--spec',required=True);lc.add_argument('--out',required=True);lc.add_argument('--inspect-local',action='store_true')
+        setup=subs.add_parser('generation-setup',help='Create a handbook generation profile and BM25 config')
+        setup.add_argument('--provider',choices=['ollama','openai_chat','anthropic_messages'],required=True)
+        setup.add_argument('--model',required=True)
+        setup.add_argument('--out',required=True)
+        setup.add_argument('--endpoint')
+        setup.add_argument('--key-env')
+        setup.add_argument('--inspect-local',action='store_true')
+        inventory=subs.add_parser('local-models',help='List installed Ollama aliases via loopback metadata')
+        inventory.add_argument('--endpoint',default='http://127.0.0.1:11434')
         server=subs.add_parser('serve');server.add_argument('--workspace',required=True);server.add_argument('--sources');server.add_argument('--llm-config',required=True,action='append');server.add_argument('--drive-config',action='append',default=[]);server.add_argument('--port',type=int,default=8765);server.add_argument('--allow-model-execution',action='store_true');server.add_argument('--allow-drive-download',action='store_true')
         server.add_argument('--embedding-config',action='append',default=[]);server.add_argument('--allow-retrieval-execution',action='store_true')
         for name in ('candidates','rerank','answer-from-rerank','rerank-compare','rerank-report'):
@@ -69,6 +78,15 @@ def main(argv=None):
         pair=subs.add_parser('pipeline-compare',help='Compare two verified saved pipeline runs')
         pair.add_argument('--runs',nargs=2,required=True,metavar=('LEFT','RIGHT'))
         args=p.parse_args(argv)
+        if args.command in ('generation-setup','local-models'):
+            from . import llm_setup
+            if args.command=='local-models':
+                result=llm_setup.local_models(args.endpoint)
+            else:
+                result=llm_setup.setup_generation(args.provider,args.model,args.out,endpoint=args.endpoint,
+                                                  key_env=args.key_env,inspect_local=args.inspect_local)
+            print(json.dumps(result,ensure_ascii=False,indent=2))
+            return 0
         if args.command=='pipeline-compare':
             from .pipeline import compare
             print(json.dumps(compare(*args.runs),ensure_ascii=False,indent=2))

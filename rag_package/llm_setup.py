@@ -1,17 +1,24 @@
 """Offline LLM config creation, optional read-only Ollama identity inspection."""
 import os
 from pathlib import Path
+from importlib.resources import files
+import json
+import shlex
 import re
 import tempfile
 import time
-from .llm.config import fields, validate_config, read_json, string, number, ValidationError
+from .llm.config import fields, validate_config, read_json, string, url, ValidationError
 from .llm.transport import http_transport, TransportError
-from .storage import RagError, require, exclusive_rename, new_output
+from .storage import RagError, require, exclusive_rename, new_output, staging, write_json
 from .ui_registry import atomic_json
 
 
 def configure(spec_path,out,inspect_local=False,*,transport=None):
-    spec=read_json(spec_path);fields(spec,{'schema_version','profiles','roles'},set(),'spec')
+    return _configure(read_json(spec_path),out,inspect_local,transport=transport)
+
+
+def _configure(spec,out,inspect_local,*,transport=None,choose_local=False):
+    fields(spec,{'schema_version','profiles','roles'},set(),'spec')
     if type(spec['schema_version']) is not int or spec['schema_version']!=1:raise ValidationError('schema_version')
     profiles=spec['profiles']
     if not isinstance(profiles,dict) or not 1<=len(profiles)<=4:raise ValidationError('profiles')
@@ -49,10 +56,28 @@ def configure(spec_path,out,inspect_local=False,*,transport=None):
                     require(isinstance(show,dict) and isinstance(show.get('model_info'),dict),'invalid_local_identity','llm_configure')
                     info=show['model_info'];selected={k:info[k] for k in ('general.architecture','general.parameter_count','general.file_type') if k in info and isinstance(info[k],(str,int)) and not isinstance(info[k],bool)}
                     cache[key]={'digest':matches[0]['digest'],'model_info':selected}
+                    quant=show.get('details',{}).get('quantization_level') if isinstance(show.get('details'),dict) else None
+                    if isinstance(quant,str) and quant.strip():cache[key]['quantization']=quant
                 except (TransportError,RagError) as e:
                     err=RagError(e.code,'llm_configure');err.requests=calls;err.request_stages=['local_identity_inspection'];raise err from None
             p['identity']['expected_digest']=cache[key]['digest'];p['identity']['validation_status']='user_configured_unverified'
-            observations.append({'profile':name,'server_identity':'observed','origin':'user_asserted','model_info':cache[key]['model_info'],'quality':'unverified'})
+            observed=cache[key]
+            origin='user_asserted'
+            example=handbook_profile()
+            is_example=all(p['identity'].get(k)==v for k,v in example['origin'].items())
+            if choose_local and observed['digest']==HANDBOOK_DIGEST:
+                p['identity'].update(example['origin'])
+                p.update({k:example[k] for k in ('think','temperature','seed','max_output_tokens','num_ctx','timeout_seconds')})
+                origin='historical_digest_match'
+            elif choose_local:
+                origin='unknown'
+                p['identity']['quantization']=observed.get('quantization','unknown')
+            elif is_example:
+                require(observed['digest']==HANDBOOK_DIGEST,'handbook_digest_mismatch','llm_configure')
+                origin='historical_digest_match'
+            observations.append({'profile':name,'server_identity':'observed','digest':observed['digest'],
+                                 'origin':origin,'quantization_observed':observed.get('quantization'),
+                                 'model_info':observed['model_info'],'quality':'unverified'})
     validate_config(cfg)
     fd,tmp=tempfile.mkstemp(prefix='.'+out.name+'-',dir=out.parent);os.close(fd)
     try:atomic_json(Path(tmp),cfg);exclusive_rename(tmp,out)
@@ -61,3 +86,65 @@ def configure(spec_path,out,inspect_local=False,*,transport=None):
     from .llm.core import configuration_required
     return {'status':'needs_configuration' if any(configuration_required(p) for p in cfg['profiles'].values()) else 'configured_unverified',
             'schema_version':2,'roles':cfg['roles'],'inspection':observations,'http_requests':calls,'retry_count':0,'secrets_read':0,'generation_requests':0,'evaluation_requests':0,'chunking_requests':0,'quality':'unverified'}
+
+
+HANDBOOK_DIGEST='359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7'
+LOCAL_ENDPOINT='http://127.0.0.1:11434'
+
+
+def sample(name):
+    return json.loads(files('rag_package').joinpath('resources','sample',name).read_text(encoding='utf-8'))
+
+
+def handbook_profile():
+    return sample('handbook-qwen-spec.json')['profiles']['local']
+
+
+def local_models(endpoint=LOCAL_ENDPOINT, *, transport=None):
+    base=url(endpoint,'local')
+    try:
+        tags=(transport or http_transport)('GET',base+'/api/tags',{},None,5)
+    except TransportError as exc:
+        err=RagError(exc.code,'local_models');err.requests=1
+        raise err from None
+    require(isinstance(tags,dict) and isinstance(tags.get('models'),list),'invalid_local_identity','llm_configure')
+    models=[]
+    for entry in tags['models']:
+        require(isinstance(entry,dict),'invalid_local_identity','llm_configure')
+        models.append({'model':string(entry.get('name') or entry.get('model'),'model'),'digest':entry.get('digest')})
+    return {'models':models,'http_requests':1,'generation_requests':0}
+
+
+def setup_generation(provider,model,out,*,endpoint=None,key_env=None,inspect_local=False,transport=None):
+    """Publish a profile and a matching BM25 search config as a single directory."""
+    local=provider=='ollama'
+    require(provider in ('ollama','openai_chat','anthropic_messages'),'unsupported_provider','llm_configure')
+    require(not (local and key_env is not None) and not (not local and inspect_local),
+            'incompatible_provider_option','llm_configure')
+    if local:
+        spec=sample('llm-spec-local.json')
+        profile=spec['profiles']['local']
+        profile['origin']=dict(hf_id='unknown',source_revision=None,conversion='unknown',quantization='unknown')
+        profile['base_url']=LOCAL_ENDPOINT if endpoint is None else endpoint
+    else:
+        spec=sample('llm-spec-api.json')
+        profile=spec['profiles']['api']
+        profile['provider']=provider
+        default_endpoint='https://api.openai.com/v1' if provider=='openai_chat' else 'https://api.anthropic.com/v1'
+        profile['base_url']=default_endpoint if endpoint is None else endpoint
+        profile['api_key_env']=key_env if key_env is not None else ('OPENAI_API_KEY' if provider=='openai_chat' else 'ANTHROPIC_API_KEY')
+    profile['model']=model
+    out=Path(out)
+    with staging(out) as stage:
+        result=_configure(spec,stage/'model.json',inspect_local,transport=transport,choose_local=local)
+        search=sample('fixed.json')
+        search['llm_config']='model.json'
+        write_json(stage/'search.json',search)
+    result.update(provider=provider,model=model,endpoint=profile['base_url'],profile=str(out/'model.json'),
+                  search_config=str(out/'search.json'),commands={
+        'pipeline_preview':shlex.join(['rag-lab','pipeline','--sources','handbook-sources.json','--chunk-config','chunk-fixed.json',
+                                     '--search-config',str(out/'search.json'),'--question','생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?',
+                                     '--out',str(out.parent/(out.name+'-preview'))]),
+        'serve':shlex.join(['rag-lab','serve','--workspace','.','--sources','handbook-sources.json',
+                           '--chunk-config','chunk-fixed.json','--llm-config',str(out/'model.json')])})
+    return result

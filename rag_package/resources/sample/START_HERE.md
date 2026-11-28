@@ -21,27 +21,9 @@ rag-lab compare --snapshot .rag-runs/snapshot-01 --configs fixed.json recursive.
 
 원문→청크→검색 후보→전달 예정 문맥을 산출물에서 대조하세요. 청킹 방식/크기/중첩을 한 번에 하나씩 바꾸고 새 경로를 쓰세요. 답변 생성과 품질 점수는 아직 미측정입니다. Dense/Hybrid RRF·CrossEncoder 리랭커·의미/LLM 청킹도 지원합니다. 아래 등록 설정과 명시 실행 권한이 필요합니다. 공개 E5/BGE 검색·두 리랭커와 E5 의미 청킹은 별도 고정 가상 규정집에서 실제 비교했습니다. 일반 품질 보장은 아니며 범용 답변 생성·LLM 청킹·API·개인 Drive 실연결은 미검증입니다. 이 샘플 preview는 그 실제 실험을 재실행하지 않습니다.
 
-## 본인 모델 설정: spec에서 자동 생성
+## 답변 모델 선택
 
-먼저 llm-spec-local.json의 실제 local alias·HF 원본 정보를 입력하세요. API는 llm-spec-api.json의 provider/model과 키 환경 변수 이름을, 혼합은 llm-spec-mixed.json의 역할 매핑을 입력합니다. generation/evaluation/chunking이 모두 profile 이름을 가리켜야 합니다. 다음 기본 출력은 네트워크·키 읽기 0입니다.
-
-```sh
-rag-lab llm-configure --spec llm-spec-local.json --out my-llm-preview.json
-rag-lab doctor --llm-config my-llm-preview.json
-rag-lab llm-configure --spec llm-spec-api.json --out my-api-preview.json
-rag-lab doctor --llm-config my-api-preview.json
-```
-
-local 기본 출력은 identity 미확인이므로 실행을 차단합니다. 로컬 서버와 alias가 이미 준비되었고 읽기 조회를 원할 때 새 경로에 다음을 실행합니다.
-
-```sh
-rag-lab llm-configure --spec llm-spec-local.json --out my-llm.json --inspect-local
-rag-lab doctor --llm-config my-llm.json
-```
-
-tags/show만 읽어 digest를 자동 입력하며 모델 실행·다운로드·서버 시작은 하지 않습니다. HF 원본·양자화는 사용자 입력이며 서버가 검증한 값으로 표시하지 않습니다. API는 --inspect-local 없이 설정을 생성하며 키 값은 파일/CLI/Git에 넣지 않습니다. API 이용권과 실제 추론·품질은 미검증입니다. 코딩 도구 구독은 LLM API 이용권과 별개입니다. API 출력 my-api-preview.json 또는 준비된 local 출력 my-llm.json 중 원하는 것을 사용합니다. 생성한 my-llm.json을 RAG/청킹 설정의 llm_config와 serve --llm-config로 연결하세요.
-
-기존 llm-local.json/llm-api.json 직접 편집은 고급 호환 경로입니다. 일반 실습은 spec→llm-configure→doctor를 사용하므로 digest와 validation_status를 수작업으로 채울 필요가 없습니다. 실제 답변은 전송 문서·provider·호출 상한을 정한 뒤 ask --execute를 명시해야 합니다. evaluation 역할을 설정해도 평가기는 실행하지 않습니다.
+기본 규정집에서 [로컬 또는 API 모델 선택하기](HANDBOOK.md#답변-모델을-고르고-규정집으로-미리보기)를 따라가세요. `rag-lab generation-setup`에서 provider와 모델명을 지정하면 프로필과 BM25 검색 설정이 함께 생성됩니다. 출력된 두 명령으로 동일 규정집의 통합 미리보기와 학습 화면을 엽니다. 직접 작성한 spec이나 역할별 혼합 설정에는 `rag-lab llm-configure --spec 파일 --out 새프로필.json`을 사용하세요.
 
 ## 공개 embedding/reranker 파일 준비
 

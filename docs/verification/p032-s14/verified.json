@@ -1,0 +1,51 @@
+{
+  "mode_previews": [
+    {
+      "provider": "ollama",
+      "model": "qwen3:4b",
+      "destination": "http://127.0.0.1:50515",
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "question": "생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?",
+      "generation_requests": 0,
+      "ui_profile_registered": true,
+      "secrets_read": 0
+    },
+    {
+      "provider": "openai_chat",
+      "model": "lab-api-model",
+      "destination": "https://api.openai.com/v1",
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "question": "생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?",
+      "generation_requests": 0,
+      "ui_profile_registered": true,
+      "secrets_read": 0
+    },
+    {
+      "provider": "anthropic_messages",
+      "model": "lab-claude-model",
+      "destination": "https://api.anthropic.com/v1",
+      "source": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+      "question": "생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?",
+      "generation_requests": 0,
+      "ui_profile_registered": true,
+      "secrets_read": 0
+    }
+  ],
+  "local_metadata_fixture": [
+    "/api/tags",
+    "/api/tags",
+    "/api/show",
+    "/api/tags",
+    "/api/show"
+  ],
+  "alternate_digest": {
+    "hf_id": "unknown",
+    "source_revision": null,
+    "conversion": "unknown",
+    "quantization": "Q8_0",
+    "expected_digest": "4444444444444444444444444444444444444444444444444444444444444444",
+    "validation_status": "user_configured_unverified"
+  },
+  "real_model_requests": 0,
+  "paid_requests": 0
+}

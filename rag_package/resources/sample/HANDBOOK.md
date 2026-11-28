@@ -30,29 +30,48 @@ python -c 'import json; r=json.load(open(".rag-runs/preview/result.json")); prin
 
 snapshot이 ready인지 확인하세요. needs_review이면 PDF 텍스트 추출 상태부터 살펴보세요. fixed.json은 400자, 오버랩 80자, BM25 상위 5개, 문맥 예산 4,000자로 설정돼 있습니다. 출력한 문맥에서 신청 기한이 나오는 조항과 실제 PDF 페이지를 찾으세요.
 
-## 로컬 모델로 한 번 답하기
+## 답변 모델을 고르고 규정집으로 미리보기
 
-`handbook-qwen-spec.json`에는 로컬 모델 별칭·주소·출처와 Thinking 설정이 있습니다. 이 실습의 별칭은 기존 Ollama에 등록된 `qwen3:4b`이며 Qwen3-4B-Thinking-2507의 Q4_K_M 변환본을 전제로 합니다. 다른 모델을 쓴다면 실제 별칭과 출처를 먼저 수정하세요. 실행 중인 로컬 Ollama의 모델 정보를 조회해 프로필을 만든 뒤 같은 검색 결과에 질문합니다.
+PDF 실습 폴더에서 아래 두 경로 중 하나를 선택하세요. 출력 폴더 이름은 매번 새 이름을 쓰세요. 설정 명령의 결과에 실제 파일을 가리키는 `commands.pipeline_preview`와 `commands.serve` 명령도 표시됩니다.
+
+**로컬 Ollama**가 이미 실행 중이면 설치된 정확한 별칭을 확인하고 원하는 모델을 지정하세요.
+
+```sh
+rag-lab local-models
+rag-lab generation-setup --provider ollama --model qwen3:4b --inspect-local --out my-local
+```
+
+목록 조회는 tags, 설정의 명시적 조회는 tags와 show만 사용합니다. 실험과 digest가 같을 때만 그 실험의 HF 출처 및 Thinking 설정을 적용합니다. 다른 digest의 HF 출처는 unknown이며, 양자화는 서버가 보고한 경우에만 기록합니다. 별칭만 알고 있으면 --inspect-local 없이도 오프라인 미리보기를 준비할 수 있습니다. 실제 생성 전에는 서버를 확인해 새 출력 폴더에 구성하세요.
+
+**선택 API**는 사용 계정의 모델명과 API 키를 담을 환경변수 이름을 지정합니다. 아래 모델명은 본인 모델명으로 바꾸세요. endpoint는 provider의 기본 URL을 쓰거나 --endpoint로 지정합니다.
+
+```sh
+rag-lab generation-setup --provider openai_chat --model YOUR_MODEL_ID --endpoint https://api.openai.com/v1 --key-env OPENAI_API_KEY --out my-api
+```
+
+Anthropic은 --provider anthropic_messages를 선택하세요. 기본 endpoint는 https://api.anthropic.com/v1 이고 키 환경변수 기본 이름은 ANTHROPIC_API_KEY입니다. 설정 및 미리보기는 키를 조회하지 않습니다.
+
+**같은 규정집으로 연결**합니다. 선택한 폴더를 mode에 지정하세요.
+
+```sh
+mode=my-local  # API 설정을 선택했다면 my-api
+question='생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?'
+rag-lab pipeline --sources handbook-sources.json --chunk-config chunk-fixed.json --search-config "$mode/search.json" --question "$question" --out "$mode-preview"
+rag-lab serve --workspace . --sources handbook-sources.json --chunk-config chunk-fixed.json --llm-config "$mode/model.json"
+```
+
+미리보기의 generation에서 model과 destination을 확인하세요. 학습 화면의 ‘문서에서 답변까지’에서도 동일 프로필을 선택하고 전송 주소를 확인할 수 있습니다. 준비한 로컬 모델로 실제 생성할 때는 pipeline에 --execute를 붙이고 별도 새 --out을 지정합니다. 화면에서 실제 생성을 허용할 때는 serve에 --allow-model-execution을 지정합니다.
+
+**Codex 또는 Claude Code에 줄 요청**
+
+> 설치된 HANDBOOK.md와 기본 규정집으로 실습해 줘. 내가 선택한 provider와 모델명으로 generation-setup을 실행하고, 출력된 profile과 search 설정으로 같은 질문의 pipeline 미리보기와 학습 화면을 연결해 줘. 선택 모델과 전송 주소를 보여주고 실제 생성 전까지 진행해 줘.
+
+**기존 실습 재현**에는 아래처럼 실측 Qwen digest 전용 spec으로 handbook-model.json을 생성할 수 있습니다. 이어지는 고급 실습에서 이 파일 이름을 사용합니다. 사용자 작성 spec에는 기존 llm-configure를 그대로 사용하세요.
 
 ```sh
 rag-lab llm-configure --spec handbook-qwen-spec.json --out handbook-model.json --inspect-local
-rag-lab doctor --llm-config handbook-model.json
-rag-lab ask --run .rag-runs/bm25 --config handbook-local.json --question "$question" --out .rag-runs/answer --execute
-python -c 'import json; r=json.load(open(".rag-runs/answer/result.json")); print(r["status"], r.get("error")); a=r.get("answer") or {}; print(a.get("answer")); [print([p["page"] for p in c["pages"]], c["quote"]) for c in a.get("citations",[])]'
-```
-
-handbook-local.json은 fixed.json과 같은 검색 설정에서 `llm_config`만 handbook-model.json으로 바꿉니다. PDF의 BD-03과 답변을 나란히 읽으세요. “사용 3영업일 전까지”가 **신청**을 수식하는지, 팀장 승인 완료에도 별도 시한을 부여했는지 확인합니다. 실패했다면 result.json의 status·failed_stage·error와 provider_result를 확인하세요.
-
-## 유료 API 설정만 확인하기
-
-```sh
 rag-lab llm-configure --spec llm-spec-api.json --out handbook-api.json
-rag-lab doctor --llm-config handbook-api.json
 ```
-
-샘플 모델명은 미설정 표시이며 doctor가 종료 코드 3을 반환할 수 있습니다. 이 두 명령은 키를 읽거나 문서를 전송하지 않습니다. 실제 제공자를 선택할 때는 spec의 모델명과 키 환경변수 이름을 설정하고 RAG 설정의 `llm_config`를 생성한 API 프로필로 연결합니다. PDF snapshot과 BM25 build는 공유할 수 있습니다.
-
-CLI 실행 기록은 위 result.json에서 읽습니다. 같은 문서로 UI에서 별도 실습하려면 `rag-lab serve --workspace . --sources handbook-sources.json --llm-config handbook-model.json`을 실행하고 터미널의 주소에서 문서·검색 미리보기를 선택하세요. UI는 자체 작업 기록을 사용합니다.
 
 ## 신청 기한의 근거는 몇 위에 들어올까?
 
