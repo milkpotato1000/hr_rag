@@ -40,7 +40,9 @@ def preflight(snapshot_dir,config_path):
     if method=='llm':
         batches=policy.windows(us,c['window_max_chars'],c['window_max_units']);require(len(batches)<=c['max_windows'],'window_limit','chunking')
         for n,batch in enumerate(batches):
-            messages,choice=policy.window_input(batch,c);preview=llm.preview(model,'chunking',messages)
+            messages,choice=policy.window_input(batch,c)
+            schema=policy.choice_schema(c,cfg['model']['profile'],choice)
+            preview=llm.preview(model,'chunking',messages,response_schema=schema)
             size=len(json.dumps(preview['body'],ensure_ascii=False,allow_nan=False).encode())
             require(size<=c['max_prompt_bytes'],'prompt_bytes_limit','chunking')
             records.append({**choice,'window_id':f'w{n:03d}','unit_ids':[u['id'] for u in batch],'messages':messages,'request':preview,'request_bytes':size,'token_count':None,'status':'pending','response':None,'selected_end_ids':None,'dispatch_attempted':False,'outcome_unknown':False})
@@ -129,7 +131,8 @@ def build(snapshot_dir,config_path,out,*,execute=False,embedding_backend=None,tr
                     if method=='POST':record['outcome_unknown']=False
                     if time.monotonic()>deadline:raise TransportError('timeout',outcome_unknown=False)
                     return result
-                response=llm.invoke(model,'chunking',record['messages'],transport=bounded_send,key_resolver=key_resolver)
+                schema=policy.choice_schema(c,cfg['model']['profile'],record)
+                response=llm.invoke(model,'chunking',record['messages'],transport=bounded_send,key_resolver=key_resolver,response_schema=schema)
                 # P025 rejects hidden thinking. Keep normalized diagnostic content, never use it as chunk text.
                 record['response']=response
                 if not record['dispatch_attempted']:record['outcome_unknown']=False
@@ -194,7 +197,8 @@ def load(root):
                 require(all(w.get(key)==value for key,value in choice.items()),'stale_partition_candidates','chunking')
                 chosen=policy.chosen_ends({'candidate_id':w.get('selected_candidate_id')},choice['candidates'])
                 require(chosen['end_unit_ids']==w['selected_end_ids'],'stale_partition_selection','chunking')
-            request=llm.preview(policy.saved_llm(bp['model']),'chunking',messages)
+            schema=policy.choice_schema(bp,bp['model']['profile'],choice)
+            request=llm.preview(policy.saved_llm(bp['model']),'chunking',messages,response_schema=schema)
             require(w['window_id']==f'w{n:03d}' and w['unit_ids']==[u['id'] for u in batch] and w['actual_messages_hash']==request['actual_messages_hash'] and w['request_fingerprint']==request['request_fingerprint'],'stale_window_request','chunking')
             require(len(json.dumps(request['body'],ensure_ascii=False,allow_nan=False).encode())<=bp['max_prompt_bytes'],'prompt_bytes_limit','chunking')
             batch=[byid.get(i) for i in w['unit_ids']];require(all(x is not None for x in batch),'stale_window_units','chunking');flat.extend(w['unit_ids'])

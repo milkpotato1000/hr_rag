@@ -35,7 +35,7 @@ def preview(config, role, messages, *, response_schema=None):
         for k in ('temperature','num_ctx','seed'):
             if p.get(k) is not None: body['options'][k] = p[k]
         if p['response_mode'] == 'json_object':
-            body['format'] = copy.deepcopy(response_schema) if response_schema is not None and role == 'generation' else 'json'
+            body['format'] = copy.deepcopy(response_schema) if response_schema is not None and role in ('generation','chunking') else 'json'
     else:
         if p.get('temperature') is not None: body['temperature'] = p['temperature']
         if provider == 'openai_chat':

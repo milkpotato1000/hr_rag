@@ -1,0 +1,23 @@
+.........E...........
+======================================================================
+ERROR: test_ollama_partition_enum (test_chunk_artifact.ChunkTests.test_ollama_partition_enum)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_chunk_artifact.py", line 160, in test_ollama_partition_enum
+    self.assertEqual(a.build(self.ws/'snapshot',single,self.ws/'single',execute=True)['work']['dispatches'],0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/chunk_artifact.py", line 76, in build
+    new_output(out);sm,docs,c,model,cfg,us,records=preflight(snapshot_dir,config_path)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/chunk_artifact.py", line 41, in preflight
+    batches=policy.windows(us,c['window_max_chars'],c['window_max_units']);require(len(batches)<=c['max_windows'],'window_limit','chunking')
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/storage.py", line 20, in require
+    if not condition:raise RagError(code,stage)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: window_limit: chunking
+
+----------------------------------------------------------------------
+Ran 21 tests in 3.804s
+
+FAILED (errors=1)

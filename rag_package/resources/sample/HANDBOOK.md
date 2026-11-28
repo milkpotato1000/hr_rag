@@ -274,3 +274,5 @@ rag-lab chunk --snapshot '내 문서 실습-preview/snapshot' --config chunk-cho
 ```
 
 `choice-preview/preview.json`의 requests에서 각 후보의 pieces를 읽으세요. 각 조각에는 원문과 시작·끝 위치가 들어 있습니다. 앞에서 채운 안과 뒤에서 채운 안이 같으면 모델 호출을 건너뜁니다. 실제 모델 프로필을 준비한 뒤 새 출력 폴더로 같은 명령에 `--execute-chunking`을 추가하면 선택 ID와 청크가 저장됩니다. 통합 실습에서도 `pipeline --chunk-config chunk-choice.json`으로 같은 설정을 선택할 수 있습니다.
+
+같은 후보와 메시지에서 출력 형식만 제한하려면 위 설정에 `"candidate_format":"ollama_enum"`을 추가하세요. 로컬 Ollama 요청의 `format.properties.candidate_id.enum`에 현재 창의 후보 번호가 들어갑니다. 설치본 미리보기의 `requests[0].request.body.format`에서 확인할 수 있습니다. 수신한 번호와 원문 피복은 실행 후에도 검사합니다. [교육휴가 PDF 단일 요청 실측](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s18/README.md)

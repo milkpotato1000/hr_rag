@@ -121,6 +121,47 @@ class ChunkTests(unittest.TestCase):
   saved['details']['windows'][0]['candidates'][0]['pieces'][0]['text']='changed'
   write_json(target/'chunk.json',saved);self.reseal(target)
   with self.assertRaisesRegex(RagError,'stale_partition_candidates'):a.load(target)
+ def test_ollama_partition_enum(self):
+  from rag_package import pipeline
+  self.lc('ollama')
+  args=dict(size_chars=100,overlap_chars=20,unit_max_chars=19,window_max_chars=140,partition_mode='candidate_choice',candidate_format='ollama_enum')
+  cfg=self.cfg('llm',**args)
+  windows=a.preflight(self.ws/'snapshot',cfg)[-1]
+  active=[w for w in windows if w['selection_reason']=='model_choice']
+  expected=[w['request']['body'] for w in active]
+  self.assertTrue(active)
+  for w in windows:
+   self.assertEqual(w['request']['body']['format'],{'type':'object','required':['candidate_id'],'additionalProperties':False,
+       'properties':{'candidate_id':{'type':'string','enum':[c['id'] for c in w['candidates']]}}})
+  def transport(value,finish='stop'):
+   def send(method,url,headers,body,timeout):
+    if method=='GET':return {'models':[{'name':'fixture-model','digest':DIGEST}]}
+    self.calls.append(body)
+    return envelope('ollama',json.dumps(value),finish)
+   return send
+  send=transport({'candidate_id':'2'})
+  result=a.build(self.ws/'snapshot',cfg,self.ws/'solo',execute=True,transport=send)
+  self.assertEqual(result['status'],'ready',result)
+  self.assertEqual(self.calls,expected)
+  self.calls.clear()
+  search=read_json(self.ws/'fixed.json');search['llm_config']='lc.json';write_json(self.ws/'search.json',search)
+  run=pipeline.run(self.ws/'sources.json',cfg,self.ws/'search.json','unmatchedwordxyz',self.ws/'pipeline',execute=True,transport=send)
+  self.assertEqual(run['status'],'abstained',run)
+  self.assertEqual(self.calls,expected)
+  for out in [self.ws/'solo',self.ws/'pipeline/chunks']:
+   saved=a.load(out)[0]['details']['windows']
+   self.assertEqual([w['request_fingerprint'] for w in saved],[w['request']['request_fingerprint'] for w in windows])
+  for n,(value,finish) in enumerate([({'candidate_id':'3'},'stop'),({'candidate_id':'1','extra':1},'stop'),({'candidate_id':'1'},'length')]):
+   self.calls.clear()
+   self.assertEqual(a.build(self.ws/'snapshot',cfg,self.ws/str(n),execute=True,transport=transport(value,finish))['status'],'failed')
+   self.assertEqual(len(self.calls),1)
+  single=self.cfg('llm',**dict(args,window_max_units=1,unit_max_chars=60))
+  with patch.object(llm,'invoke',side_effect=AssertionError('model')):
+   self.assertEqual(a.build(self.ws/'snapshot',single,self.ws/'single',execute=True)['work']['dispatches'],0)
+  for provider in ['openai_chat','anthropic_messages']:
+   self.lc(provider)
+   with self.assertRaisesRegex(RagError,'unsupported_candidate_provider'):a.preflight(self.ws/'snapshot',cfg)
+  with self.assertRaisesRegex(RagError,'unsupported_candidate_format'):p.config(dict(read_json(cfg),partition_mode='direct'))
  def test_three_llm_providers_and_tamper(self):
   for provider in ('ollama','openai_chat','anthropic_messages'):
    self.lc(provider);out=self.ws/provider;r=a.build(self.ws/'snapshot',self.cfg('llm'),out,execute=True,transport=self.send(provider),key_resolver=lambda _:KEY);self.assertEqual(r['status'],'ready',r)

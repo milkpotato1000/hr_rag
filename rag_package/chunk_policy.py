@@ -22,6 +22,10 @@ def config(value):
     if 'heading_profile' in c:
         validate_heading_profile(c)
         extra.add('heading_profile')
+    if method=='llm' and 'candidate_format' in c:
+        extra.add('candidate_format')
+        require(c.get('partition_mode')=='candidate_choice' and c['candidate_format']=='ollama_enum',
+                'unsupported_candidate_format','chunking')
     if method=='llm' and 'partition_mode' in c:
         extra.add('partition_mode')
         require(c['partition_mode']=='candidate_choice' and 'id_representation' not in c,
@@ -183,6 +187,15 @@ def window_input(batch, config):
     return [{'role':'system','content':prompt},
             {'role':'user','content':json.dumps(options,ensure_ascii=False,separators=(',',':'))}], {
                 'candidates':candidates, 'selection_reason':'single_candidate' if len(options)==1 else 'model_choice'}
+
+
+def choice_schema(config, profile, window):
+    if 'candidate_format' not in config:
+        return None
+    require(profile['provider']=='ollama', 'unsupported_candidate_provider', 'chunking')
+    return {'type':'object', 'properties':{'candidate_id':{'type':'string',
+            'enum':[candidate['id'] for candidate in window['candidates']]}},
+            'required':['candidate_id'], 'additionalProperties':False}
 
 
 def chosen_ends(value, candidates):
