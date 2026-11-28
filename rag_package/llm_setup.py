@@ -20,7 +20,7 @@ def configure(spec_path,out,inspect_local=False,*,transport=None):
     for name,p in profiles.items():
         if not isinstance(p,dict):raise ValidationError('profile')
         local=p.get('provider')=='ollama'
-        fields(p,required|({'origin'} if local else {'api_key_env','revision_pinned','revision'}),{'temperature','num_ctx','seed'} if local else {'temperature'},'profile')
+        fields(p,required|({'origin'} if local else {'api_key_env','revision_pinned','revision'}),{'temperature','num_ctx','seed','think'} if local else {'temperature'},'profile')
         q={k:v for k,v in p.items() if k not in ('origin','revision_pinned','revision')}
         q['mode']='local' if local else 'api'
         if local:

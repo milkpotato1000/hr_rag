@@ -154,14 +154,14 @@ class PreparationTests(unittest.TestCase):
             write_json(self.root/'invalid.json',v)
             with self.assertRaises(ValidationError):llm_setup.configure(self.root/'invalid.json',self.root/'invalid-out.json')
     def test_local_inspection_deduplicated_identity_only(self):
-        v=spec();v['profiles']['second']=copy.deepcopy(v['profiles']['chosen']);v['roles']['chunking']='second';write_json(self.root/'spec.json',v);calls=[]
+        v=spec();v['profiles']['chosen']['think']=True;v['profiles']['second']=copy.deepcopy(v['profiles']['chosen']);v['roles']['chunking']='second';write_json(self.root/'spec.json',v);calls=[]
         def send(method,url,headers,body,timeout):
             calls.append((method,url,body,timeout))
             if url.endswith('/api/tags'):return {'models':[{'name':'example-model','digest':'1'*64}]}
             return {'model_info':{'general.architecture':'test','general.parameter_count':42},'license':'DO NOT DUMP','template':'DO NOT DUMP'}
         r=llm_setup.configure(self.root/'spec.json',self.root/'out.json',True,transport=send)
         self.assertEqual(len(calls),2);self.assertEqual([x[0] for x in calls],['GET','POST']);self.assertEqual(r['generation_requests'],0)
-        self.assertNotIn('DO NOT DUMP',json.dumps(r));self.assertTrue(all(x['origin']=='user_asserted' for x in r['inspection']))
+        self.assertTrue(read_json(self.root/'out.json')['profiles']['chosen']['think']);self.assertNotIn('DO NOT DUMP',json.dumps(r));self.assertTrue(all(x['origin']=='user_asserted' for x in r['inspection']))
         self.assertEqual(read_json(self.root/'out.json')['profiles']['chosen']['identity']['expected_digest'],'1'*64)
     def test_owned_worker_timeout_rss_pressure_and_exit_accounting(self):
         from rag_package.model_process import run_worker

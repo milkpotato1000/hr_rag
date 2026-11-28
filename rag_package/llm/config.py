@@ -101,8 +101,10 @@ def validate_config(config):
     for name, p in profiles.items():
         string(name, 'profile_name')
         fields(p, {'mode','provider','model','base_url','max_output_tokens','timeout_seconds','response_mode','identity'},
-               {'api_key_env','temperature','num_ctx','seed'}, 'profile')
+               {'api_key_env','temperature','num_ctx','seed','think'}, 'profile')
         provider = p['provider']
+        if 'think' in p and (provider != 'ollama' or type(p['think']) is not bool):
+            raise ValidationError('profile.think')
         if provider not in ('ollama','openai_chat','anthropic_messages') or p['mode'] != ('local' if provider == 'ollama' else 'api'):
             raise ValidationError('profile.provider_or_mode')
         string(p['model'], 'profile.model')

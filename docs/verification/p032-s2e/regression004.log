@@ -1,0 +1,17 @@
+......................................................................................................../Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:404: ResourceWarning: unclosed file <_io.FileIO name=6 mode='rb' closefd=True>
+  parsed = [sys.intern(str(x)) for x in rel.split(sep) if x and x != '.']
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:404: ResourceWarning: unclosed file <_io.FileIO name=8 mode='rb' closefd=True>
+  parsed = [sys.intern(str(x)) for x in rel.split(sep) if x and x != '.']
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:404: ResourceWarning: unclosed file <_io.FileIO name=7 mode='rb' closefd=True>
+  parsed = [sys.intern(str(x)) for x in rel.split(sep) if x and x != '.']
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:404: ResourceWarning: unclosed file <_io.FileIO name=10 mode='rb' closefd=True>
+  parsed = [sys.intern(str(x)) for x in rel.split(sep) if x and x != '.']
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+................................
+----------------------------------------------------------------------
+Ran 136 tests in 20.592s
+
+OK

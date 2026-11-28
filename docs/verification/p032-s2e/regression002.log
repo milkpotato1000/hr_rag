@@ -1,0 +1,91 @@
+........................FEE............E....E.E........................................................./Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py:260: ResourceWarning: unclosed file <_io.FileIO name=6 mode='rb' closefd=True>
+  def _make_iterencode(markers, _default, _encoder, _indent, _floatstr,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py:260: ResourceWarning: unclosed file <_io.FileIO name=8 mode='rb' closefd=True>
+  def _make_iterencode(markers, _default, _encoder, _indent, _floatstr,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py:260: ResourceWarning: unclosed file <_io.FileIO name=7 mode='rb' closefd=True>
+  def _make_iterencode(markers, _default, _encoder, _indent, _floatstr,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py:260: ResourceWarning: unclosed file <_io.FileIO name=10 mode='rb' closefd=True>
+  def _make_iterencode(markers, _default, _encoder, _indent, _floatstr,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.............................E..
+======================================================================
+ERROR: test_pdf_failures_and_optional_dependency (test_document_rag.DocumentTests.test_pdf_failures_and_optional_dependency)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_document_rag.py", line 241, in test_pdf_failures_and_optional_dependency
+    cases=[('blank',self.pdf('blank',('',)).read_bytes(),'empty_or_scanned_page_ocr_not_supported'),
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_document_rag.py", line 205, in pdf
+    from pypdf import PdfWriter
+ModuleNotFoundError: No module named 'pypdf'
+
+======================================================================
+ERROR: test_pdf_physical_pages_and_cross_page_citations (test_document_rag.DocumentTests.test_pdf_physical_pages_and_cross_page_citations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_document_rag.py", line 219, in test_pdf_physical_pages_and_cross_page_citations
+    pdf=self.pdf();source=self.sources([('pdf','pdf',pdf.read_bytes()),('other','txt','leave probation exclusion')])
+        ^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_document_rag.py", line 205, in pdf
+    from pypdf import PdfWriter
+ModuleNotFoundError: No module named 'pypdf'
+
+======================================================================
+ERROR: test_installed_sdk_refresh_with_fake_http (test_drive.DriveTests.test_installed_sdk_refresh_with_fake_http)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_drive.py", line 214, in test_installed_sdk_refresh_with_fake_http
+    _,Credentials,_,requests=auth.sdk()
+                             ^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/drive_auth.py", line 73, in sdk
+    except ImportError:raise RagError('oauth_sdk_missing','auth') from None
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: oauth_sdk_missing: auth
+
+======================================================================
+ERROR: test_real_sdk_import_pkce_signatures_and_restricted_session (test_drive.DriveTests.test_real_sdk_import_pkce_signatures_and_restricted_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_drive.py", line 193, in test_real_sdk_import_pkce_signatures_and_restricted_session
+    Flow,Credentials,Request,requests=auth.sdk()
+                                      ^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/drive_auth.py", line 73, in sdk
+    except ImportError:raise RagError('oauth_sdk_missing','auth') from None
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: oauth_sdk_missing: auth
+
+======================================================================
+ERROR: test_supported_pdf_markdown_export_and_scan (test_drive.DriveTests.test_supported_pdf_markdown_export_and_scan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_drive.py", line 111, in test_supported_pdf_markdown_export_and_scan
+    from pypdf import PdfWriter
+ModuleNotFoundError: No module named 'pypdf'
+
+======================================================================
+ERROR: test_needs_review_invalid_citation_and_completed_job_write_failure (test_ui.UITests.test_needs_review_invalid_citation_and_completed_job_write_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_ui.py", line 139, in test_needs_review_invalid_citation_and_completed_job_write_failure
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+======================================================================
+FAIL: test_existing_synthetic_handbook_pdf (test_document_rag.DocumentTests.test_existing_synthetic_handbook_pdf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_document_rag.py", line 233, in test_existing_synthetic_handbook_pdf
+    m=snapshot(self.d/'sources.json',self.d/'snapshot');self.assertEqual(m['identity']['status'],'ready')
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'needs_review' != 'ready'
+- needs_review
++ ready
+
+
+----------------------------------------------------------------------
+Ran 136 tests in 17.585s
+
+FAILED (failures=1, errors=6)

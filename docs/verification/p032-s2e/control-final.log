@@ -1,0 +1,13 @@
+test_lock (test_limits.Limits) ... ok
+test_parent_tamper (test_limits.Limits) ... ok
+test_single_and_closed (test_limits.Limits) ... ok
+test_failed_resource_before_metadata (test_runtime.RuntimeTests) ... ok
+test_metadata_cap_blocks_transport (test_runtime.RuntimeTests) ... ok
+test_metadata_transport_timeout_is_five (test_runtime.RuntimeTests) ... ok
+test_warning_observed_not_fake_cancellation (test_runtime.RuntimeTests) ... ok
+test_watchdog_and_owned_reap (test_runtime.RuntimeTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.006s
+
+OK

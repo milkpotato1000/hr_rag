@@ -1,0 +1,43 @@
+.......................................E....E.........../Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py:467: DeprecationWarning: Implicit None on return values is deprecated and will raise KeyErrors.
+  return self.metadata['Version']
+................................................/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py:414: ResourceWarning: unclosed file <_io.FileIO name=6 mode='rb' closefd=True>
+  def _iterencode(o, _current_indent_level):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py:414: ResourceWarning: unclosed file <_io.FileIO name=8 mode='rb' closefd=True>
+  def _iterencode(o, _current_indent_level):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py:414: ResourceWarning: unclosed file <_io.FileIO name=7 mode='rb' closefd=True>
+  def _iterencode(o, _current_indent_level):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py:414: ResourceWarning: unclosed file <_io.FileIO name=10 mode='rb' closefd=True>
+  def _iterencode(o, _current_indent_level):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+................................
+======================================================================
+ERROR: test_installed_sdk_refresh_with_fake_http (test_drive.DriveTests.test_installed_sdk_refresh_with_fake_http)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_drive.py", line 214, in test_installed_sdk_refresh_with_fake_http
+    _,Credentials,_,requests=auth.sdk()
+                             ^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/drive_auth.py", line 73, in sdk
+    except ImportError:raise RagError('oauth_sdk_missing','auth') from None
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: oauth_sdk_missing: auth
+
+======================================================================
+ERROR: test_real_sdk_import_pkce_signatures_and_restricted_session (test_drive.DriveTests.test_real_sdk_import_pkce_signatures_and_restricted_session)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_drive.py", line 193, in test_real_sdk_import_pkce_signatures_and_restricted_session
+    Flow,Credentials,Request,requests=auth.sdk()
+                                      ^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/rag_package/drive_auth.py", line 73, in sdk
+    except ImportError:raise RagError('oauth_sdk_missing','auth') from None
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rag_package.storage.RagError: oauth_sdk_missing: auth
+
+----------------------------------------------------------------------
+Ran 136 tests in 21.082s
+
+FAILED (errors=2)

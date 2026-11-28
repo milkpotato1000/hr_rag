@@ -31,7 +31,7 @@ def preview(config, role, messages):
     body = {'model':p['model'], 'messages':copy.deepcopy(actual), 'stream':False}
     if provider == 'ollama':
         endpoint = '/api/chat'
-        body.update(think=False, keep_alive=0, options={'num_predict':p['max_output_tokens']})
+        body.update(think=p.get('think', False), keep_alive=0, options={'num_predict':p['max_output_tokens']})
         for k in ('temperature','num_ctx','seed'):
             if p.get(k) is not None: body['options'][k] = p[k]
         if p['response_mode'] == 'json_object': body['format'] = 'json'
@@ -94,7 +94,12 @@ def normalize(p, raw, result):
         if raw.get('done') is not True or not isinstance(m,dict) or m.get('role') != 'assistant': return invalid()
         content, finish = m.get('content'), raw.get('done_reason')
         tools = bool(m.get('tool_calls'))
-        unexpected_thinking = bool(m.get('thinking'))
+        if 'thinking' in m:
+            separated = m.pop('thinking')
+            if not isinstance(separated, str):
+                return invalid()
+            unexpected_thinking = bool(separated) and not p.get('think', False)
+            del separated
         result['usage'].update(input_tokens=count(raw.get('prompt_eval_count')),output_tokens=count(raw.get('eval_count')))
         duration=count(raw.get('total_duration'))
         if duration is not None: result['usage']['provider_duration_ms'] = duration / 1_000_000
@@ -196,10 +201,13 @@ def invoke(config, role, messages, *, transport=None, key_resolver=None):
         result['dispatch_attempted']=True
         raw=send('POST',request['url'],headers,request['body'],p['timeout_seconds'])
         phase='postflight'
+        normalized = {**result, 'usage': dict(result['usage'])}
+        normalize(p,raw,normalized)
+        del raw
         if p['provider']=='ollama':
             verify_digest(p,send)
             result['identity_verification'].update(status='verified',after=True)
-        normalize(p,raw,result)
+        result.update(normalized)
     except TransportError as e:
         allowed_codes = {'response_too_large','invalid_response_json','redirect_denied','http_401','http_403','http_429','http_5xx','http_error','timeout','connection_error','invalid_model_inventory','model_identity_mismatch','missing_api_key','invalid_api_key'}
         safe_code = e.code if e.code in allowed_codes else 'transport_error'
