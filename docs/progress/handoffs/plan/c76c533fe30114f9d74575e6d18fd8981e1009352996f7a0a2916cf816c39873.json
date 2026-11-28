@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S11 설치 화면 로컬 실답변",
   "next_action": "계약 정확 채택 후 승인권자 질문 실측",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T08:10:46.164682+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T08:11:05.704339+00:00",
+      "evidence": "기존 dev 채팅 직접 전송 성공"
     }
   ]
 }
