@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "P032 S2g verify eligibility and exception coverage",
   "next_action": "Adopt S2g after closing S2f, test fixed-context general prompt change, review gt01 then gated gt02 and remaining questions",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T06:55:25.195162+00:00",
       "evidence": "Direct host delivery succeeded to verified existing HR RAG dev chat; sent exact S2g READY and gates."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T06:55:48.725148+00:00",
+      "evidence": "Verified dev adoption commit 84cdb34 selects exact S2g READY e8ee871bae26400d11b158eceafb12739321c415. New model answer pending."
     }
   ]
 }
