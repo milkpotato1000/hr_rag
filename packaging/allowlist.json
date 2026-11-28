@@ -92,7 +92,8 @@
     "rag_package/resources/sample/HANDBOOK.md",
     "rag_package/resources/sample/handbook-sources.json",
     "rag_package/resources/sample/handbook-local.json",
-    "rag_package/resources/sample/handbook-qwen-spec.json"
+    "rag_package/resources/sample/handbook-qwen-spec.json",
+    "rag_package/resources/sample/documents/handbook.pdf"
   ],
   "sdist_extra": [
     "pyproject.toml",

@@ -119,7 +119,7 @@
     },
     {
       "path": "START_HERE.md",
-      "sha256": "6aac8626000a68b8e401844c91d635996a41212a973f6f35810089dbca6ead1d",
+      "sha256": "779c092772dce5e1a53701639e80f0d28de744b364f03c6041f649d28533d1fb",
       "source": null,
       "changes": "P031 latest installation and preparation guidance; P032 S2c current learner entry, symmetric local/API spec and bounded evidence/doctor guidance"
     },
@@ -212,7 +212,7 @@
     },
     {
       "path": "HANDBOOK.md",
-      "sha256": "4a5812b836a1b8cd6f76066b52710c4fe6b8a60cc620b416471af48f8eaf7804",
+      "sha256": "0f5b235762dd4d13bde2a5cb92a9b88dfc3d08c9a312c83951ea9ca320b997c4",
       "source": {
         "contract": "P032 S3",
         "kind": "handbook_practice"
@@ -254,6 +254,16 @@
         "kind": "handbook_practice"
       },
       "changes": "Opt-in tagged hierarchy"
+    },
+    {
+      "path": "documents/handbook.pdf",
+      "sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+      "source": {
+        "path": "2. Document Chunking/data/source-v4/output/pdf/hr-handbook.pdf",
+        "commit": "ea601a40b2e6f552f161f38e8afe2f63b1605cb8",
+        "sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369"
+      },
+      "changes": "Original synthetic handbook PDF"
     }
   ]
 }

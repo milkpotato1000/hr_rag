@@ -1,8 +1,12 @@
-# hr_rag
+# HR 규정집으로 배우는 RAG
 
-새 학습 경로는 [공개 모델 기본·선택 LLM API 안내](docs/learning/rag-package/README.md)에서 시작합니다. 현재 지원 범위와 비실행 설정 예시를 구분하며, P013 모델 실험은 보류 상태입니다. [일반 문서 RAG CLI](docs/learning/rag-package/document-rag.md)는 PDF/TXT/MD·규칙 청킹·BM25와 [LLM provider](docs/learning/rag-package/providers.md)를 연결했습니다. 오프라인 E2E만 검증했고 실모델/API와 기존 UI 통합은 미검증입니다. [Drive connector](docs/learning/rag-package/drive.md)는 단일 문서 수집 코드를 제공하며 가짜 인증/HTTP만 검증했습니다. 실제 계정 연결은 미검증입니다. [wheel 설치·독립 실습](docs/learning/rag-package/install.md)은 P028에서 새 venv로 검증했습니다. [일반 문서 통합 화면](docs/learning/rag-package/ui.md)은 설치 패키지의 실제 코어와 연결했습니다. 가상 backend로 화면을 검증했으며 파일 선택창 정책 차단으로 브라우저 업로드 검증은 남아 있습니다. 아래 단계별 실행 안내는 기존 기능의 재현용입니다.
+[현재 dev 설치 안내](docs/learning/rag-package/install-current.md)를 따라 wheel을 설치하고 새 실습 폴더를 만드세요. 폴더 안의 [HANDBOOK.md](rag_package/resources/sample/HANDBOOK.md)에서 기본 예제 PDF로 **“생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?”**를 검색합니다. PDF 1쪽 BD-03과 전달 청크를 직접 대조한 뒤 로컬 Qwen 4B로 답변과 인용을 확인할 수 있습니다.
 
-현재 학습 시작점은 **http://127.0.0.1:8001/** (LangChain)이다. `1. Naive RAG/variants/langchain/`에서 `.venv/bin/python scripts/serve_compare.py --port 8001`을 실행한다. **실험 → 구현 비교**는 http://127.0.0.1:8001/experiments/implementation 이다. 기존8000과 아래 기존 명령은 Direct 기준선 재현용이다. P012 다음은 별도 설치형 plan-dev 하네스 제작이며 Hybrid는 이후 준비·채택한다.
+[학습 목차](docs/learning/rag-package/README.md) · [설치본 첫 검색 검증](docs/verification/p032-s10/README.md) · [로컬 모델의 실제 답변](docs/verification/p032-s8/README.md) · [학습 UI 재생](docs/verification/p032-s9/README.md)
+
+## 이전 단계 재현
+
+LangChain 비교 서버는 `1. Naive RAG/variants/langchain/`에서 `.venv/bin/python scripts/serve_compare.py --port 8001`을 실행한다. **실험 → 구현 비교**는 http://127.0.0.1:8001/experiments/implementation 이다.
 
 
 HR 규정 문서에 근거해 질문에 답하고, 근거가 부족하면 담당자에게 연결하는 RAG 에이전트 프로젝트입니다.

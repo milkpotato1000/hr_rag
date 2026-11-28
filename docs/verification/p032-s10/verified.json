@@ -1,0 +1,125 @@
+{
+  "commands": [
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/.venv/bin/python",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5/dist",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5/build-source"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p028-build/.venv/bin/python",
+        "-m",
+        "venv",
+        "env"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5",
+      "exit": 0
+    },
+    {
+      "args": [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5",
+      "exit": 0
+    },
+    {
+      "args": [
+        "python",
+        "-c",
+        "import sysconfig; print(sysconfig.get_path('purelib'))"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5",
+      "exit": 0
+    },
+    {
+      "args": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5",
+      "exit": 0
+    },
+    {
+      "args": [
+        "python",
+        "-c",
+        "import pypdf; assert pypdf.__version__=='6.21.2'"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5",
+      "exit": 0
+    },
+    {
+      "args": [
+        "rag-lab",
+        "init",
+        "--out",
+        "handbook-practice"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5",
+      "exit": 0
+    },
+    {
+      "args": [
+        "rag-lab",
+        "doctor"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5/handbook-practice",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/bin/sh",
+        "-ec",
+        "question='생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?'\nrag-lab snapshot --sources handbook-sources.json --out .rag-runs/pdf\nrag-lab build --snapshot .rag-runs/pdf --config fixed.json --out .rag-runs/bm25\nrag-lab ask --run .rag-runs/bm25 --config fixed.json --question \"$question\" --out .rag-runs/preview\npython -c 'import json; r=json.load(open(\".rag-runs/preview/result.json\")); print(r[\"status\"]); [print(n, [p[\"page\"] for p in c[\"pages\"]], c[\"text\"]) for n,c in enumerate(r[\"contexts\"], 1)]'"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5/handbook-practice",
+      "exit": 0
+    },
+    {
+      "args": [
+        "rag-lab",
+        "snapshot",
+        "--sources",
+        "sources.json",
+        "--out",
+        ".rag-runs/original-example"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5/handbook-practice",
+      "exit": 0
+    },
+    {
+      "args": [
+        "rag-lab",
+        "init",
+        "--out",
+        "existing"
+      ],
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s10-i_bbf9e5",
+      "exit": 2
+    }
+  ],
+  "wheel_sha256": "feb35413688c2dffe2576bb435663d8d0a00282796d61a0bdd47ff2943325488",
+  "pdf_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+  "contexts": 5,
+  "rank": 2,
+  "page": 1,
+  "clause": "BD-03",
+  "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.",
+  "existing_pdf_before_and_after_sha256": "71dceeebd44ab08bc07dc82859411760a797a9d96a12d91632364ad4af18554c",
+  "generation_calls": 0
+}

@@ -1,25 +1,22 @@
-# 내 PDF에서 신청 기한 찾기
+# 규정집 PDF에서 생일휴가 신청 기한 찾기
 
-설치된 `rag-lab`과 같은 가상환경의 Python을 사용하세요. 이 실습은 텍스트를 추출할 수 있는 가상 규정집 PDF 한 개를 읽습니다. 아래 경로만 본인 파일 위치로 바꾸세요. PDF 자체는 설치물에 포함되지 않습니다.
+## 설치와 예제 준비
 
-Codex 또는 Claude Code에는 이렇게 요청할 수 있습니다.
+현재 dev wheel과 같은 가상환경을 활성화하세요. 새 실습 폴더가 필요하면 `rag-lab init --out handbook-practice` 후 `cd handbook-practice`를 실행합니다. 이미 init으로 만든 폴더라면 그 안에서 바로 시작하세요. 기본 예제는 설치물에 포함된 합성 규정집 `documents/handbook.pdf`입니다.
 
-> 이 폴더의 HANDBOOK.md를 따라 내 가상 규정집 PDF로 BM25 검색을 준비해 줘. 질문은 “생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?”야. 먼저 전달할 청크와 페이지를 보여 주고, 설정한 로컬 모델로 한 번 답한 다음 인용문에서 기한이 어떤 행위에 걸리는지 확인해 줘.
+Codex나 Claude Code에는 다음과 같이 요청하세요.
 
-## 새 폴더와 PDF 준비
+> 설치된 HANDBOOK.md를 따라 기본 규정집에서 “생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?”를 검색해 줘. BM25가 전달한 청크에서 조항과 페이지를 찾아 보여 줘. 준비된 로컬 Qwen 4B로 한 번 답하고, 인용한 원문에서 신청 기한과 승인 조건을 대조해 줘.
 
-`rag-lab`을 설치한 가상환경을 활성화한 뒤 시작합니다. PDF 의존성이 없다면 같은 환경에 설치물의 `requirements-pdf.lock`을 사용하세요.
+같은 가상환경에 PDF 리더를 준비하고 doctor에서 pypdf 6.21.2를 확인하세요.
 
 ```sh
 pdf_lock=$(python -c 'from importlib.resources import files; print(files("rag_package")/"requirements-pdf.lock")')
 python -m pip install --require-hashes -r "$pdf_lock"
-rag-lab init --out handbook-practice
-cd handbook-practice
 rag-lab doctor
-cp "/경로/내 규정집.pdf" documents/handbook.pdf
 ```
 
-`doctor`의 PDF 항목에서 설치 버전 6.21.2를 확인합니다. `handbook-sources.json`에는 PDF의 상대경로와 문서 제목이 들어 있습니다. 다른 실제 문서를 넣을 때는 제목과 `synthetic` 표시를 문서에 맞게 수정하세요.
+**내 PDF로 실습할 때**는 별도 새 폴더를 init하고, 내 파일을 그 폴더의 documents 아래 고유한 이름으로 복사하세요. 그 폴더의 handbook-sources.json에서 path와 title을 내 파일에 맞추고 실제 문서라면 synthetic을 false로 설정하세요. 원본 PDF는 그대로 두고 이후 명령은 새 폴더에서 실행합니다.
 
 ## 모델 호출 없이 검색 확인
 

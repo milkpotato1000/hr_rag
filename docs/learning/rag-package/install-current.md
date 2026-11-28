@@ -24,6 +24,12 @@ cd rag-lab-practice
 
 doctor의 exit 3/`needs_configuration`은 미설정 샘플 모델의 예상 상태입니다. 생성된 `START_HERE.md`를 읽으세요. 이후 예시의 `rag-lab`을 그대로 쓰려면 새 환경의 bin을 PATH에 추가하거나 위 `"$rag_lab_cli"` 절대경로 변수를 사용합니다. 설치 소스 폴더와 실습 폴더는 독립이며 하네스를 설치할 필요가 없습니다.
 
+**첫 PDF 질문**은 방금 만든 rag-lab-practice에서 시작하세요. 아래 명령으로 설치한 환경을 활성화한 뒤, 이 폴더의 [HANDBOOK.md](../../../rag_package/resources/sample/HANDBOOK.md)에서 PDF 리더 설치와 첫 검색 명령을 실행하세요. 예제 규정집은 init이 함께 준비합니다.
+
+```sh
+. ../rag-lab-env/bin/activate
+```
+
 wheel은 source 없는 작업 폴더에서도 동작합니다. core-only에서 catalog·고정 계획·LLM 설정·BM25 preview를 시작할 수 있습니다. 공개 모델 파일 준비/변환/추론에는 package의 `requirements-retrieval.lock`이 지정한 SDK가 필요합니다. PDF·Drive는 별도 lock입니다. 필요한 단계에 도달했을 때만 선택 의존성을 설치합니다. source 없는 실습 폴더에서도 다음처럼 설치된 package의 lock을 찾을 수 있습니다.
 
 ```sh

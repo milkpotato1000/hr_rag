@@ -1,6 +1,6 @@
 # 문서 RAG 실습 시작
 
-내 규정집 PDF로 시작하려면 [PDF에서 첫 질문하기](HANDBOOK.md)를 따라가세요.
+기본 예제 규정집이나 내 PDF로 시작하려면 [PDF에서 첫 질문하기](HANDBOOK.md)를 따라가세요.
 
 이 폴더는 합성 문서 실습용입니다. 실제 회사 규정이 아닙니다. 기본은 모델·API·키·Drive를 사용하지 않는 preview입니다. Python 3.10+, macOS/Linux storage primitive가 필요합니다. 같은 Mac의 새 venv만 검증했고 Linux/두 코딩 도구 UI는 미검증입니다.
 
