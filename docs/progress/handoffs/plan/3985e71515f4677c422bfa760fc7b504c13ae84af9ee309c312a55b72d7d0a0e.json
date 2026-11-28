@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S14 로컬 또는 API 모델 설정",
   "next_action": "정확 채택 후 두 모드의 설치본 설정과 미리보기 구현",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T08:25:32.018248+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T08:25:50.591946+00:00",
+      "evidence": "기존 dev 채팅 직접 전달 성공"
     }
   ]
 }
