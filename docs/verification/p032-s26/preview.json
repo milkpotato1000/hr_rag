@@ -1,0 +1,87 @@
+{
+  "status": "preview",
+  "question": "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?",
+  "mode": "preview",
+  "execution_kind": "preview",
+  "stages": {
+    "snapshot": "complete",
+    "chunks": "pending",
+    "index": "pending",
+    "search": "pending",
+    "candidates": "pending",
+    "rerank": "pending",
+    "answer": "pending"
+  },
+  "answer": null,
+  "active_stage": null,
+  "plan": {
+    "source_fingerprint": "d7fb7ce6de03da4d12fdd7fe24ff0aec69168c8e17aee9350064da9ab31f3958",
+    "chunking": {
+      "schema_version": 1,
+      "method": "fixed",
+      "size_chars": 400,
+      "overlap_chars": 80
+    },
+    "retrieval": {
+      "method": "bm25",
+      "top_k": 5,
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "context_budget_chars": 4000
+    },
+    "embedding": null,
+    "reranker": null,
+    "generation": {
+      "provider": "ollama",
+      "model": "qwen3:4b",
+      "destination": "http://127.0.0.1:11434",
+      "configuration_required": false
+    },
+    "generation_profile": {
+      "provider": "ollama",
+      "base_url": "http://127.0.0.1:11434",
+      "model": "qwen3:4b",
+      "max_output_tokens": 4096,
+      "timeout_seconds": 480,
+      "response_mode": "json_object",
+      "temperature": 0.6,
+      "mode": "local",
+      "identity": {
+        "hf_id": "Qwen/Qwen3-4B-Thinking-2507",
+        "source_revision": null,
+        "conversion": "historical_ollama_import",
+        "quantization": "Q4_K_M",
+        "expected_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "validation_status": "user_configured_unverified"
+      },
+      "think": true,
+      "seed": 42,
+      "num_ctx": 8192
+    },
+    "effective_chunking": {
+      "schema_version": 1,
+      "method": "fixed",
+      "size_chars": 400,
+      "overlap_chars": 80
+    },
+    "chunking_destination": null,
+    "work_upper_bounds": {
+      "boundary_llm_requests": 0,
+      "boundary_embedding_items": 0,
+      "index_jobs": 0,
+      "query_jobs": 0,
+      "rerank_pairs": 0,
+      "generation_requests": 1
+    },
+    "outputs": {
+      "snapshot": "snapshot",
+      "chunks": "chunks",
+      "index": "index",
+      "search": "search",
+      "candidates": "candidates",
+      "rerank": "rerank",
+      "answer": "answer"
+    }
+  },
+  "generation_requests": 0
+}

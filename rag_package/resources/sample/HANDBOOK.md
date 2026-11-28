@@ -44,6 +44,34 @@ rag-lab ask --run "$dir/build" --config "$dir/search.json" --question "교육 �
 
 > 내가 지정한 PDF 경로와 질문으로 실습해 줘. 기존 생성 프로필과 BM25를 쓰고, pipeline-setup으로 문서를 새 폴더에 준비해 줘. 내 질문이 뜨는 학습 화면과 전달할 청크의 페이지·원문을 확인해 줘. 실제 모델 호출 전까지만 진행해 줘.
 
+### 선택 PDF에서 미리보기 → 실제 답변 → 다시 열기
+
+실습 가상환경을 활성화한 practice 폴더에서 시작하세요. 아래의 PDF 경로와 질문을 원하는 값으로 바꾸세요. 예시는 S16에서 사용한 합성 교육 휴가 문서이므로 `--synthetic`을 붙였습니다. 본인 문서에는 해당 옵션을 생략하세요. 새 출력 이름을 사용하세요.
+
+```sh
+rag-lab generation-setup --provider ollama --model qwen3:4b --inspect-local --out my-pdf-model
+rag-lab pipeline-setup --llm-config my-pdf-model/model.json --chunk-config chunk-fixed.json \
+  --method bm25 --document "/경로/교육 휴가 규정.pdf" --title "자격시험 교육 휴가 규정" --synthetic \
+  --question "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?" --out "내 문서 실습"
+```
+
+두 번째 명령이 출력한 `commands.pipeline_preview` 한 줄을 복사해 그대로 실행하세요. 실제 선택된 sources·chunk-config·search-config·질문이 들어 있습니다. 위 이름을 사용했을 때의 미리보기와 선택 실행은 다음과 같습니다.
+
+```sh
+rag-lab pipeline --sources "내 문서 실습/sources.json" --chunk-config "내 문서 실습/chunk.json" \
+  --search-config "내 문서 실습/search.json" --question "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?" --out "내 문서 실습-preview"
+```
+
+미리보기에서 질문과 plan.source_fingerprint, plan.generation_profile을 확인한 다음 같은 명령에서 출력 폴더만 새 이름으로 바꾸고 `--execute`를 추가하세요. 아래 마지막 명령은 이미 저장된 답변과 인용 원문을 읽습니다.
+
+```sh
+rag-lab pipeline --sources "내 문서 실습/sources.json" --chunk-config "내 문서 실습/chunk.json" \
+  --search-config "내 문서 실습/search.json" --question "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?" --out "내 문서 실습-answer" --execute
+rag-lab pipeline-replay --run "내 문서 실습-answer"
+```
+
+[선택한 PDF의 실제 답변·페이지·원문 대조](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s26/README.md)
+
 ## 모델 호출 없이 검색 확인
 
 ```sh

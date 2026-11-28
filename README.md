@@ -49,7 +49,7 @@ rag-lab generation-setup --provider ollama --model qwen3:4b --out my-local
 rag-lab pipeline-setup --llm-config my-local/model.json --chunk-config chunk-fixed.json --method bm25 --out my-search
 ```
 
-준비된 로컬 모델의 실답변, 선택 API 설정, 청킹·Hybrid·리랭커 설정과 내 PDF 선택은 실습 폴더의 HANDBOOK.md에 이어집니다. [모델 설정](docs/verification/p032-s14/README.md) · [검색과 리랭커 선택](docs/verification/p032-s15/README.md) · [내 문서와 질문](docs/verification/p032-s16/README.md)
+준비된 로컬 모델의 실답변, 선택 API 설정, 청킹·Hybrid·리랭커 설정과 내 PDF 선택은 실습 폴더의 HANDBOOK.md에 이어집니다. [모델 설정](docs/verification/p032-s14/README.md) · [검색과 리랭커 선택](docs/verification/p032-s15/README.md) · [내 문서와 질문](docs/verification/p032-s16/README.md) [선택한 PDF에서 실답변 받기](docs/verification/p032-s26/README.md)
 
 [현재 dev 설치 안내](docs/learning/rag-package/install-current.md)를 따라 wheel을 설치하고 새 실습 폴더를 만드세요. 폴더 안의 [HANDBOOK.md](rag_package/resources/sample/HANDBOOK.md)에서 기본 예제 PDF로 **“생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?”**를 검색합니다. PDF 1쪽 BD-03과 전달 청크를 직접 대조한 뒤 로컬 Qwen 4B로 답변과 인용을 확인할 수 있습니다.
 

@@ -1,0 +1,31 @@
+{
+  "status": "preview_ready",
+  "retrieval": {
+    "method": "bm25",
+    "top_k": 5,
+    "candidate_k": 20,
+    "rrf_k": 60,
+    "context_budget_chars": 4000
+  },
+  "models": {},
+  "generation_configuration_required": false,
+  "question": "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?",
+  "sources": "내 문서 실습/sources.json",
+  "selected_document": {
+    "document_id": "local-c69ae1455568c3644a4a7879",
+    "title": "자격시험 교육 휴가 규정",
+    "synthetic": true,
+    "format": "pdf",
+    "path": "original.pdf",
+    "original_name": "training.pdf",
+    "original_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+    "bytes": 34265
+  },
+  "commands": {
+    "pipeline_preview": "rag-lab pipeline --sources '내 문서 실습/sources.json' --chunk-config '내 문서 실습/chunk.json' --search-config '내 문서 실습/search.json' '--question=교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?' --out '내 문서 실습-preview'",
+    "serve": "rag-lab serve --workspace . --sources '내 문서 실습/sources.json' --llm-config my-local/model.json --chunk-config '내 문서 실습/chunk.json' --pipeline-search '내 문서 실습/search.json' '--pipeline-question=교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?'"
+  },
+  "inference_calls": 0,
+  "network_requests": 0,
+  "secrets_read": 0
+}

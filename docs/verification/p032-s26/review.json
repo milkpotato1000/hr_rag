@@ -1,0 +1,43 @@
+{
+  "question": "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?",
+  "technical_status": "answered",
+  "answer": {
+    "status": "answered",
+    "answer": "문서 식별자: HR-V3-TRAINING | 버전: 3",
+    "citations": [
+      {
+        "chunk_id": "c-ed6c63437e50eb34124ae59b3872016a3c8715baf20678345ff8739001460e44",
+        "document_id": "local-c69ae1455568c3644a4a7879",
+        "quote": "교육 휴가 규정\n가상 HR 규정이며 실제 회사 정책이나 법적 기준이 아닙니다.\n문서 식별자: HR-V3-TRAINING | 버전: 3 | 시행일: 정보 없음\n제1조 신청 대상 및 일수\n직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.\n제2조 다른 휴가와의 관계\n생일 특별휴가 및 연차와 별도로 관리한다.\nHR-V3-TRAINING / v3\n1\n",
+        "start": 0,
+        "end": 202,
+        "pages": [
+          {
+            "page": 1,
+            "canonical_start": 0,
+            "canonical_end": 202,
+            "page_start": 0,
+            "page_end": 202
+          }
+        ],
+        "heading_path": [],
+        "source_fingerprint": "d7fb7ce6de03da4d12fdd7fe24ff0aec69168c8e17aee9350064da9ab31f3958"
+      }
+    ]
+  },
+  "expected_identifier": "HR-V3-TRAINING",
+  "expected_version": 3,
+  "source_quote": "문서 식별자: HR-V3-TRAINING | 버전: 3 | 시행일: 정보 없음",
+  "selected_pdf_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+  "source_fingerprint": "d7fb7ce6de03da4d12fdd7fe24ff0aec69168c8e17aee9350064da9ab31f3958",
+  "default_pdf_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+  "context_count": 1,
+  "model_identity": {
+    "status": "verified",
+    "before": true,
+    "after": true
+  },
+  "generation_requests": 1,
+  "additional_replay_calls": 0,
+  "default_answer_preserved": true
+}
