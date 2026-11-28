@@ -4,7 +4,7 @@
 
 [내 PDF에서 첫 질문하기](../../../rag_package/resources/sample/HANDBOOK.md)에서 독립 폴더에 규정집을 연결하고 BM25 검색부터 로컬 답변·인용 확인까지 진행합니다. [23쪽 규정집의 실제 답변·인용 결과](../../verification/p032-s3/report.html)에서 설치본의 단일 질문 결과를 볼 수 있습니다. 이어서 [같은 PDF의 BM25·Dense·Hybrid와 리랭커 전후 순위](../../verification/p032-s4/README.md)를 비교하세요. [같은 근거에서 로컬 답변과 API 미리보기 읽기](../../verification/p032-s5/README.md)에서는 문맥을 고정하고 생성 단계만 비교합니다.
 
-[같은 PDF의 고정·재귀·구조 청킹 비교](../../verification/p032-s6/README.md)에서 신청 기한과 팀장 승인이 어느 경계에서 끊기는지 확인하세요. 이어서 [규정집 장·절·조항 프로필](../../verification/p032-s7/README.md)에서 같은 근거에 붙은 제목 경로를 비교하세요.
+[같은 PDF의 고정·재귀·구조 청킹 비교](../../verification/p032-s6/README.md)에서 신청 기한과 팀장 승인이 어느 경계에서 끊기는지 확인하세요. 이어서 [규정집 장·절·조항 프로필](../../verification/p032-s7/README.md)에서 같은 근거에 붙은 제목 경로를 비교하세요. [크기·겹침·전달 예산을 하나씩 바꾼 실습](../../verification/p032-s22/README.md)에서는 같은 질문의 완전한 근거가 검색되고도 전달에서 빠지는 경우를 확인하세요.
 
 [PDF부터 최종 답변까지 한 번에 실행하기](../../verification/p032-s8/README.md)에서 선택한 구성의 단계별 결과와 PDF 인용 대조를 확인하세요. [학습 UI에서 설정 선택·미리보기·인용 열기](../../verification/p032-s9/README.md)로 같은 실습을 브라우저에서 따라갈 수 있습니다. [설치 화면에서 승인권자 질문에 실제 답변 받기](../../verification/p032-s11/README.md)에서는 질문을 바꾼 뒤 로컬 모델의 답변과 PDF 1쪽을 대조합니다. 같은 설치 구성에서 [규정집에 없는 전기요금 한도를 물은 결과](../../verification/p032-s19/README.md)도 비교하세요.
 
