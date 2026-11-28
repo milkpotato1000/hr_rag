@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Select and run installed pipeline in learning UI",
   "next_action": "Adopt S9, reuse S8 engine and verify selection, execution controls and saved answer replay",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T08:01:11.912237+00:00",
       "evidence": "Direct host delivery to verified HR RAG dev succeeded for exact S9 installed UI scope."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T08:01:43.047693+00:00",
+      "evidence": "Dev commit 646c66c adopted exact S9 READY 55ff17ca041a24b91dec8596394c9536e6331d2e. Integrated UI browser verification still pending."
     }
   ]
 }
