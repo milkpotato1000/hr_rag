@@ -1,0 +1,259 @@
+{
+  "status": "halted",
+  "claimed": true,
+  "started_at": 1795848686.4835498,
+  "deadline": 1795854086.4835498,
+  "metadata": [
+    {
+      "endpoint": "/api/version",
+      "actor": "supervisor",
+      "at": 1795848624.133578,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/tags",
+      "actor": "supervisor",
+      "at": 1795848624.193743,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/show",
+      "actor": "supervisor",
+      "at": 1795848624.20138,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848624.230957,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848655.337554,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848686.366233,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/tags",
+      "actor": "adapter-gt01",
+      "at": 1795848686.4731798,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848691.6283789,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848696.858017,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848702.110692,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848707.34195,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848712.594143,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848717.835807,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848723.079339,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848728.322902,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848733.5742772,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848738.811678,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848744.044585,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848749.2896042,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848754.5438669,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848759.7894452,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848765.0406778,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848770.287415,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848775.53967,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848780.778352,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848786.030078,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848791.28055,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848796.540811,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848801.785344,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848807.022872,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/tags",
+      "actor": "adapter-gt01",
+      "at": 1795848809.194562,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848810.193484,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848815.5382059,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848820.89397,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848826.237511,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848831.593639,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795848836.914688,
+      "status": "received"
+    }
+  ],
+  "requests": [
+    {
+      "question_id": "gt01",
+      "reserved_at": 1795848686.483551,
+      "dispatch_attempted": true,
+      "response_received": true,
+      "server_completion": "response_and_unloaded_observed",
+      "status": "complete",
+      "body_hash": "c956e71d7c6871b9a200810d591c3b2032f611bfd18f7c9752a1f35cc1c8e49b",
+      "finished_at": 1795848841.2055979
+    }
+  ],
+  "gates": [],
+  "active": null,
+  "server_start_attempts": 1,
+  "limits": {
+    "generation": 10,
+    "wall_seconds": 5400,
+    "http_seconds": 480,
+    "watchdog_seconds": 510,
+    "metadata": 1200,
+    "metadata_timeout": 5,
+    "rss_bytes": 8589934592
+  },
+  "automatic_retries": 0,
+  "first_error": {
+    "code": "gt01_required_probation_exclusion_missing",
+    "at": 1795848859.401258
+  }
+}

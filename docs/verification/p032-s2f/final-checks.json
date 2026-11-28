@@ -1,0 +1,63 @@
+{
+  "results": [
+    {
+      "question": "gt01",
+      "status": "answered",
+      "review_passed": false,
+      "error": null
+    },
+    {
+      "question": "gt02",
+      "status": "not_executed"
+    },
+    {
+      "question": "gt03",
+      "status": "not_executed"
+    },
+    {
+      "question": "gt04",
+      "status": "not_executed"
+    },
+    {
+      "question": "gt05",
+      "status": "not_executed"
+    },
+    {
+      "question": "gt06",
+      "status": "not_executed"
+    },
+    {
+      "question": "gt07",
+      "status": "not_executed"
+    },
+    {
+      "question": "gt08",
+      "status": "not_executed"
+    },
+    {
+      "question": "gt09",
+      "status": "not_executed"
+    },
+    {
+      "question": "gt10",
+      "status": "not_executed"
+    }
+  ],
+  "generation_requests": 1,
+  "cumulative_requests": 3,
+  "metadata_requests": 37,
+  "peak_sampled_rss_bytes": 4046356480,
+  "pressure_levels": [
+    1
+  ],
+  "prior_protected_files": 1513,
+  "parent_hashes_verified": true,
+  "server_cleanup": {
+    "owned": true,
+    "pid": 48794,
+    "listener_closed": true
+  },
+  "auto_retries": 0,
+  "package_tests": 136,
+  "control_tests": 18
+}
