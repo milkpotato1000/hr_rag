@@ -1,0 +1,35 @@
+{
+  "freeze_commit": "66708184d260472577d03cee4b134a124e97d579",
+  "s2d_artifacts": 721,
+  "s2d_wheel_sha256": "87744fba87853c84a2a3c9b05b80a727c72d1113812139029210f4d664fba6bd",
+  "protected_files": 1513,
+  "generation_requests": 1,
+  "including_parent": 2,
+  "metadata_requests": 38,
+  "metadata_including_parent": 68,
+  "peak_sampled_rss_bytes": 3925311488,
+  "pressure_levels": [
+    1
+  ],
+  "parent_deadline_unchanged": true,
+  "loaded_model_after_run": [],
+  "closing": {
+    "owned": true,
+    "pid": 44272,
+    "listener_closed": true
+  },
+  "package_tests": 136,
+  "control_tests": 8,
+  "outcome": "failed",
+  "provider_status": "complete",
+  "usage": {
+    "input_tokens": 1778,
+    "output_tokens": 1987,
+    "provider_duration_ms": 125995.911417
+  },
+  "thinking_tokens": null,
+  "final_tokens": null,
+  "gt02_to_gt10": "not_executed",
+  "model_downloads": 0,
+  "generation_retries": 0
+}

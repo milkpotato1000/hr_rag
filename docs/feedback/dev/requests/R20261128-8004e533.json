@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "R20261128-8004e533",
+  "title": "P032 실제 답변 형식 오류 후속 진단",
+  "request": "P032 S2e gt01 stopped at answer_validation/invalid_answer_schema after strict JSON/provider complete and verified identity. Prepare a separate bounded contract for diagnosing the failed schema category without raw content, and validating generation before expanding to remaining questions. Preserve parent evidence and all call limits. No current rerun authority. See docs/verification/p032-s2e/final-checks.json.",
+  "source": "P032 S2e gt01 actual result",
+  "impact": "Plan review before any additional generation",
+  "created_at": "2026-11-28T06:47:20.035795+00:00"
+}
