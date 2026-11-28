@@ -23,6 +23,13 @@ def bounded(path,limit=1024*1024):
     except OSError:raise RagError('unreadable_registered_file','registry') from None
     require(len(data)<=limit,'file_limit','registry');return data
 
+def validate_upload(fmt,data):
+    require(fmt in ('pdf','txt','md'),'unsupported_source','upload');require(0<len(data)<=20*1024*1024,'upload_size_limit','upload')
+    if fmt!='pdf':
+        try:text=data.decode('utf-8')
+        except UnicodeError:raise RagError('invalid_utf8','upload') from None
+        require(bool(text.strip()),'empty_upload','upload')
+
 def decode(data):
     try:return strict_json(data.decode('utf-8'),'ui')
     except (UnicodeError,ValidationError):raise RagError('invalid_json','input') from None
@@ -155,11 +162,7 @@ class Registry:
         self.sources_file={'path':self.relative(p),'sha256':digest(raw)}
     def input_summary(self):return [{'id':k,**{f:v[f] for f in ('title','format','synthetic')}} for k,v in self.inputs.items()]
     def upload(self,fmt,name,data):
-        require(fmt in ('pdf','txt','md'),'unsupported_source','upload');require(0<len(data)<=20*1024*1024,'upload_size_limit','upload')
-        if fmt!='pdf':
-            try:text=data.decode('utf-8')
-            except UnicodeError:raise RagError('invalid_utf8','upload') from None
-            require(bool(text.strip()),'empty_upload','upload')
+        validate_upload(fmt,data)
         require(isinstance(name,str) and len(name)<=200,'invalid_filename','upload')
         name=Path(name.replace('\\','/')).name;name=''.join(c for c in name if ord(c)>=32 and ord(c)!=127).strip() or '업로드 문서'
         with self.lock:

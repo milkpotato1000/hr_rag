@@ -1,0 +1,43 @@
+{
+  "selected": {
+    "status": "preview_ready",
+    "retrieval": {
+      "method": "bm25",
+      "top_k": 5,
+      "candidate_k": 20,
+      "rrf_k": 60,
+      "context_budget_chars": 4000
+    },
+    "models": {},
+    "generation_configuration_required": true,
+    "question": "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?",
+    "sources": "내 문서 실습/sources.json",
+    "selected_document": {
+      "document_id": "local-c69ae1455568c3644a4a7879",
+      "title": "자격시험 교육 휴가 규정",
+      "synthetic": true,
+      "format": "pdf",
+      "path": "original.pdf",
+      "original_name": "교육 휴가's 규정.pdf",
+      "original_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+      "bytes": 34265
+    },
+    "commands": {
+      "pipeline_preview": "rag-lab pipeline --sources '내 문서 실습/sources.json' --chunk-config '내 문서 실습/chunk.json' --search-config '내 문서 실습/search.json' '--question=교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?' --out '내 문서 실습-preview'",
+      "serve": "rag-lab serve --workspace . --sources '내 문서 실습/sources.json' --llm-config my-model/model.json --chunk-config '내 문서 실습/chunk.json' --pipeline-search '내 문서 실습/search.json' '--pipeline-question=교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?'"
+    },
+    "inference_calls": 0,
+    "network_requests": 0,
+    "secrets_read": 0
+  },
+  "default_pdf_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+  "default_source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2",
+  "selected_source_fingerprint": "d7fb7ce6de03da4d12fdd7fe24ff0aec69168c8e17aee9350064da9ab31f3958",
+  "question": "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?",
+  "quote": "문서 식별자: HR-V3-TRAINING | 버전: 3 | 시행일: 정보 없음",
+  "page": 1,
+  "rank": 1,
+  "text": "교육 휴가 규정\n가상 HR 규정이며 실제 회사 정책이나 법적 기준이 아닙니다.\n문서 식별자: HR-V3-TRAINING | 버전: 3 | 시행일: 정보 없음\n제1조 신청 대상 및 일수\n직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.\n제2조 다른 휴가와의 관계\n생일 특별휴가 및 연차와 별도로 관리한다.\nHR-V3-TRAINING / v3\n1\n",
+  "primary_inputs_preserved": true,
+  "inference_calls": 0
+}

@@ -175,7 +175,7 @@ class Handler(BaseHTTPRequestHandler):
             try:self.reply(500,error={'code':'internal_error','stage':'http'})
             except OSError:pass
 
-def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,reranker_configs=(),allow_reranking=False,qrels=(),facts=(),chunk_configs=(),allow_chunking=False,pipeline_runs=(),pipeline_search=None,**test_injection):
+def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,allow_model=False,allow_drive=False,embedding_configs=(),allow_retrieval=False,reranker_configs=(),allow_reranking=False,qrels=(),facts=(),chunk_configs=(),allow_chunking=False,pipeline_runs=(),pipeline_search=None,pipeline_question=None,**test_injection):
     r=Registry(workspace,llm_configs,sources,drive_configs,embedding_configs,reranker_configs,qrels,facts,chunk_configs)
     from .pipeline import replay
     for path in pipeline_runs:
@@ -187,6 +187,10 @@ def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,
         else:r.add_artifact(directory,'pipeline',label=result['question'],status=result['status'])
     jobs=Jobs(r,allow_model,allow_drive,allow_retrieval=allow_retrieval,allow_reranking=allow_reranking,allow_chunking=allow_chunking,**test_injection)
     ui=UI(r,jobs)
+    if pipeline_question is not None:
+        from .ui_jobs import question
+        require(pipeline_search is not None,'pipeline_search_required','server')
+        question(pipeline_question)
     if pipeline_search:
         from .retrieval import config
         from .pipeline_setup import HANDBOOK_QUESTION
@@ -199,13 +203,13 @@ def create_server(workspace,llm_configs,sources=None,drive_configs=(),port=8765,
         require(len(embedding_configs)==int(bool(cfg['embedding_config'])) and (not embedding_configs or
                 contained(r.workspace,embedding_configs[0])==contained(r.workspace,cfg['embedding_config'])),
                 'pipeline_embedding_mismatch','server')
-        ui.pipeline_defaults=dict(question=HANDBOOK_QUESTION,retrieval=cfg['retrieval'],llm_id=r.register_llm(llm_configs[0]),
+        ui.pipeline_defaults=dict(question=pipeline_question or HANDBOOK_QUESTION,retrieval=cfg['retrieval'],llm_id=r.register_llm(llm_configs[0]),
                                   chunk_id=next(iter(r.chunk_configs)),embedding_id=next(iter(r.embeddings),''),
                                   reranker_id=next(iter(r.rerankers),''))
     return Server(port,ui)
 
 def serve(args):
-    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution,reranker_configs=args.reranker_config,allow_reranking=args.allow_reranking_execution,qrels=args.qrels,facts=args.facts,chunk_configs=args.chunk_config,allow_chunking=args.allow_chunking_execution,pipeline_runs=args.pipeline_run,pipeline_search=args.pipeline_search)
+    server=create_server(args.workspace,args.llm_config,args.sources,args.drive_config,args.port,args.allow_model_execution,args.allow_drive_download,embedding_configs=args.embedding_config,allow_retrieval=args.allow_retrieval_execution,reranker_configs=args.reranker_config,allow_reranking=args.allow_reranking_execution,qrels=args.qrels,facts=args.facts,chunk_configs=args.chunk_config,allow_chunking=args.allow_chunking_execution,pipeline_runs=args.pipeline_run,pipeline_search=args.pipeline_search,pipeline_question=args.pipeline_question)
     print(json.dumps({'status':'serving','url':server.origin,'execution_kind':'preview_default','model_execution_allowed':args.allow_model_execution,'drive_download_allowed':args.allow_drive_download}),flush=True)
     try:server.serve_forever()
     except KeyboardInterrupt:pass

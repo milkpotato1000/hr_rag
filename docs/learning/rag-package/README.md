@@ -1,5 +1,7 @@
 # 공개 모델로 배우는 RAG
 
+[내 파일과 질문으로 시작하기](../../../rag_package/resources/sample/HANDBOOK.md#내-문서와-질문으로-시작하기)에서 PDF·TXT·Markdown을 지정할 수 있습니다. [교육 휴가 PDF 실습](../../verification/p032-s16/README.md)에서는 BM25 첫 청크를 실제 1쪽과 대조했습니다.
+
 [내 PDF에서 첫 질문하기](../../../rag_package/resources/sample/HANDBOOK.md)에서 독립 폴더에 규정집을 연결하고 BM25 검색부터 로컬 답변·인용 확인까지 진행합니다. [23쪽 규정집의 실제 답변·인용 결과](../../verification/p032-s3/report.html)에서 설치본의 단일 질문 결과를 볼 수 있습니다. 이어서 [같은 PDF의 BM25·Dense·Hybrid와 리랭커 전후 순위](../../verification/p032-s4/README.md)를 비교하세요. [같은 근거에서 로컬 답변과 API 미리보기 읽기](../../verification/p032-s5/README.md)에서는 문맥을 고정하고 생성 단계만 비교합니다.
 
 [같은 PDF의 고정·재귀·구조 청킹 비교](../../verification/p032-s6/README.md)에서 신청 기한과 팀장 승인이 어느 경계에서 끊기는지 확인하세요. 이어서 [규정집 장·절·조항 프로필](../../verification/p032-s7/README.md)에서 같은 근거에 붙은 제목 경로를 비교하세요.

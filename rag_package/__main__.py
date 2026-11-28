@@ -51,6 +51,10 @@ def main(argv=None):
         preset=subs.add_parser('pipeline-setup',help='Select prepared retrieval and reranking profiles')
         for name in ('llm-config','chunk-config','out'):
             preset.add_argument('--'+name,required=True)
+        preset.add_argument('--document',help='Prepare a separate copy of this PDF, TXT or Markdown file')
+        preset.add_argument('--title')
+        preset.add_argument('--synthetic',action='store_true')
+        preset.add_argument('--question')
         preset.add_argument('--method',choices=['bm25','dense','hybrid'],required=True)
         preset.add_argument('--embedding-config')
         preset.add_argument('--reranker-config')
@@ -75,6 +79,7 @@ def main(argv=None):
         server.add_argument('--reranker-config',action='append',default=[]);server.add_argument('--allow-reranking-execution',action='store_true')
         server.add_argument('--qrels',action='append',default=[]);server.add_argument('--facts',action='append',default=[])
         server.add_argument('--pipeline-search')
+        server.add_argument('--pipeline-question')
         server.add_argument('--pipeline-run',action='append',default=[])
         server.add_argument('--chunk-config',action='append',default=[]);server.add_argument('--allow-chunking-execution',action='store_true')
         view=subs.add_parser('compare-answers',help='Compare saved answer-from-rerank results without inference')
@@ -92,7 +97,8 @@ def main(argv=None):
             from .pipeline_setup import setup
             result=setup(args.llm_config,args.chunk_config,args.method,args.out,embedding_config=args.embedding_config,
                          reranker_config=args.reranker_config,top_k=args.top_k,candidate_k=args.candidate_k,
-                         budget=args.context_budget_chars)
+                         budget=args.context_budget_chars,document=args.document,title=args.title,
+                         synthetic=args.synthetic,question=args.question)
             print(json.dumps(result,ensure_ascii=False,indent=2))
             return 0
         if args.command in ('generation-setup','local-models'):

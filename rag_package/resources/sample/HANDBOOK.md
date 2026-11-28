@@ -16,7 +16,31 @@ python -m pip install --require-hashes -r "$pdf_lock"
 rag-lab doctor
 ```
 
-**내 PDF로 실습할 때**는 별도 새 폴더를 init하고, 내 파일을 그 폴더의 documents 아래 고유한 이름으로 복사하세요. 그 폴더의 handbook-sources.json에서 path와 title을 내 파일에 맞추고 실제 문서라면 synthetic을 false로 설정하세요. 원본 PDF는 그대로 두고 이후 명령은 새 폴더에서 실행합니다.
+## 내 문서와 질문으로 시작하기
+
+PDF·UTF-8 TXT·Markdown 파일의 경로와 질문을 직접 지정할 수 있습니다. 실습 폴더에서 generation-setup으로 모델 프로필을 만든 뒤 다음처럼 실행하세요. 아래 경로·제목·질문을 내 문서에 맞게 바꾸세요.
+
+```sh
+rag-lab generation-setup --provider ollama --model qwen3:4b --out my-document-model
+rag-lab pipeline-setup --llm-config my-document-model/model.json --chunk-config chunk-fixed.json --method bm25 \
+  --document "/경로/내 교육 휴가 규정.pdf" --title "교육 휴가 규정" \
+  --question "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?" --out ".rag-runs/내 문서"
+```
+
+명시한 파일의 사본, 출처 파일명·SHA-256, 표시 제목을 새 출력 폴더에 저장합니다. 제목을 생략하면 파일명을 표시하고, 기본 분류는 사용자 문서입니다. 가상 자료일 때만 --synthetic을 추가하세요. 출력의 commands.pipeline_preview와 commands.serve를 실행하면 내 문서와 질문이 선택됩니다. 화면에서 질문을 바꾸고 다시 미리보기할 수 있습니다. 실제 생성 전에 BM25가 전달할 본문과 페이지를 읽으려면 같은 설정으로 아래 명령을 사용하세요.
+
+```sh
+dir=".rag-runs/내 문서"
+rag-lab snapshot --sources "$dir/sources.json" --out "$dir/snapshot"
+rag-lab build --snapshot "$dir/snapshot" --config "$dir/search.json" --out "$dir/build"
+rag-lab ask --run "$dir/build" --config "$dir/search.json" --question "교육 휴가 규정의 문서 식별자와 버전은 무엇인가요?" --out "$dir/evidence"
+```
+
+저장된 evidence/result.json의 contexts에서 페이지와 원문을 확인하세요. Hybrid를 선택할 때는 같은 pipeline-setup에 --method hybrid와 준비된 --embedding-config를 지정하고, 필요하면 --reranker-config도 추가합니다.
+
+**Codex 또는 Claude Code에 줄 요청**
+
+> 내가 지정한 PDF 경로와 질문으로 실습해 줘. 기존 생성 프로필과 BM25를 쓰고, pipeline-setup으로 문서를 새 폴더에 준비해 줘. 내 질문이 뜨는 학습 화면과 전달할 청크의 페이지·원문을 확인해 줘. 실제 모델 호출 전까지만 진행해 줘.
 
 ## 모델 호출 없이 검색 확인
 
