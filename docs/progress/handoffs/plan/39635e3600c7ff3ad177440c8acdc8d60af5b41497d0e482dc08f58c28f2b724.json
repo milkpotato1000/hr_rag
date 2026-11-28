@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Compare model answers on frozen retrieved context",
   "next_action": "Adopt S5, implement installed CLI and experiment UI, verify fixtures and one real local generation",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T07:39:01.007560+00:00",
       "evidence": "Direct delivery to verified HR RAG dev succeeded with S5 READY, shared context and one local generation scope."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T07:39:28.336849+00:00",
+      "evidence": "Verified dev commit 61ef7df adopted exact READY 47588f16692b457dce038492a1a22adf859292be. Implementation and live result still pending."
     }
   ]
 }
