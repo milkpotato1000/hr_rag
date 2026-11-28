@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Compare short window-local IDs",
   "next_action": "Close S2i then adopt S2j, verify old and new paths, run first window once",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T07:18:52.509910+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T07:19:13.470197+00:00",
+      "evidence": "Direct delivery succeeded to verified HR RAG dev; S2i close before exact S2j adoption."
     }
   ]
 }
