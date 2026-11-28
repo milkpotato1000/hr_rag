@@ -1,0 +1,28 @@
+{
+  "codex": {
+    "--version": "codex-cli 0.160.1",
+    "--help": {
+      "first_lines": [
+        "Codex CLI",
+        "",
+        "If no subcommand is specified, options will be forwarded to the interactive CLI.",
+        "",
+        "Usage: codex [OPTIONS] [PROMPT]"
+      ],
+      "sha256": "4a7f0188d4d6e6d812c5cfbcf82468336b899acd5e437de7450421a403c0071e"
+    }
+  },
+  "claude": {
+    "--version": "2.1.332 (Claude Code)",
+    "--help": {
+      "first_lines": [
+        "Usage: claude [options] [command] [prompt]",
+        "",
+        "Claude Code - starts an interactive session by default, use -p/--print for",
+        "non-interactive output",
+        ""
+      ],
+      "sha256": "b296ad20ed563e8c57033bd8570724d63a508dd5a7c1de126e95edcbc73461f3"
+    }
+  }
+}

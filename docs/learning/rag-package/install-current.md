@@ -1,5 +1,7 @@
 # 최신 패키지 설치와 모델 준비
 
+Codex나 Claude Code에 첫 설치와 검색을 함께 맡길 때는 [공통 요청과 첫 검색 명령](../../../README.md#codex-또는-claude-code로-첫-검색하기)을 사용하세요. 아래는 같은 작업을 단계별로 직접 실행하는 경로입니다.
+
 [학습 시작점](README.md)에서 이어지는 현재 dev 설치 경로입니다. 규칙·의미·LLM 청킹, BM25/Dense/Hybrid, 선택 리랭커와 모델 준비 CLI를 제공합니다. [S2c 설치 기록](../../verification/p032-s2c/README.md)에 새 문서 배포물 hash와 core-only 검증을 기록했습니다. [P028](install.md)·[P031](../../verification/p031/README.md) 설치 기록은 당시 기준선입니다. 실제 [S1](live-retrieval-s1.md)·[S2b](chunk-comparison-live.md) 실험의 이전 wheel은 보존하며 새 문서 wheel로 재실험했다고 표시하지 않습니다. main 승격·PyPI 게시가 아닙니다.
 
 Python 3.10 이상, macOS/Linux 파일 저장 기능을 사용합니다. 아래는 비어 있는 작업 위치에서 실행하는 설치 예시입니다. 이미 같은 이름의 폴더가 있으면 다른 새 이름을 사용하세요. clone의 SHA를 기록하고 재현할 때는 검증 기록의 소스 SHA를 사용합니다. 빌드 도구 설치는 네트워크를 사용하지만 모델은 다운로드하지 않습니다.

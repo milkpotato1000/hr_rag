@@ -1,0 +1,386 @@
+{
+  "first": {
+    "source_sha": "867e933b458454b8e2ed9d881c3f9466a5ec594f",
+    "python": "3.13.15",
+    "install": "complete",
+    "search": "complete",
+    "wheel": "milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl",
+    "wheel_sha256": "85dfd388b51a9b9dc94914a2e5e5aca9c406ad41a04676ec13e474dbd5f56bcb",
+    "installed_package": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-first/env/lib/python3.13/site-packages/rag_package",
+    "pdf_sha256": "1a199799cc3807fdaa6e0390784d58697d38a83d4708b2967ddead72dc4f9369",
+    "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+    "evidence": "practice/evidence/result.json",
+    "contexts": 5,
+    "matches": [
+      {
+        "rank": 2,
+        "page": 1,
+        "clause": "BD-03",
+        "quote": "생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다."
+      }
+    ],
+    "generation_calls": 0
+  },
+  "manual_contexts_match": true,
+  "contexts": [
+    {
+      "chunk_id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+      "document_id": "handbook",
+      "start": 320,
+      "end": 720,
+      "text": " 직원은 대상\n에서 제외한다.\n담당자는 신청 내역에 표시된 재직 기간과 수습 구분을 각각 확인한다. 두 정보의 표시가 서로 맞\n지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운\n 제외 사유로 처리하지 않는다.\nBD-02 사용 범위와 다른 제도\n생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다. 생일 특별휴가는 분할할 수 없다.\n신청서에는 사용하려는 날짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의\n로 연차로 바꾸지 않고 선택 오류인지 신청 의도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀",
+      "pages": [
+        {
+          "page": 1,
+          "canonical_start": 320,
+          "canonical_end": 720,
+          "page_start": 320,
+          "page_end": 720
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+    },
+    {
+      "chunk_id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+      "document_id": "handbook",
+      "start": 640,
+      "end": 1040,
+      "text": "도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n제2절 신청 정보의 처리 [BD-S2]\nBD-04 접수부터 결과 통지까지\n휴가 시스템에서 접수한 생일 특별휴가 신청에는 신청자를 식별하는 정보",
+      "pages": [
+        {
+          "page": 1,
+          "canonical_start": 640,
+          "canonical_end": 959,
+          "page_start": 640,
+          "page_end": 959
+        },
+        {
+          "page": 2,
+          "canonical_start": 961,
+          "canonical_end": 1040,
+          "page_start": 0,
+          "page_end": 79
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+    },
+    {
+      "chunk_id": "c-f5d78f156a3d2299d08531f8ff8862c32f25f378e4c41a6ba931deecad320266",
+      "document_id": "handbook",
+      "start": 5440,
+      "end": 5840,
+      "text": "께 질문된 경우에는 발생·사용 수치 확인과 별도 항목으\n로 남기고, 확인 중인 계산 값을 그러한 처리의 근거로 사용하지 않는다.\nAN-03 반차의 사용 단위\n연차는 오전 또는 오후 반차로 나누어 사용할 수 있다. 반차 1회는 연차 0.5일로 차감한다.\n반차 신청 내역에는 오전과 오후 중 선택한 구분을 기록한다. 하루 사용과 반차 사용이 같은 날 함\n께 표시되면 담당자는 실제 신청 의도를 확인하여 중복 여부를 정리하며, 선택 오류를 다른 휴가 제\n도의 분할 허용으로 해석하지 않는다.\n제2절 신청과 사용 기록 [AN-S2]\nAN-04 통상 신청과 확인 정보\n연차는 사용 2영업일 전까지 휴가 시스템에서 신청한다. 긴급 사유가 있으면 당일 팀장에게 알린 \n후 신청할 수 있다.\n연차 신청을 접수하면 사용 예정일, 하",
+      "pages": [
+        {
+          "page": 4,
+          "canonical_start": 5440,
+          "canonical_end": 5840,
+          "page_start": 1045,
+          "page_end": 1445
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+    },
+    {
+      "chunk_id": "c-a2f48b462d05bbefe07a65033664371a9d4356a9082233da48e0a2f1e42877f4",
+      "document_id": "handbook",
+      "start": 5760,
+      "end": 6160,
+      "text": "2영업일 전까지 휴가 시스템에서 신청한다. 긴급 사유가 있으면 당일 팀장에게 알린 \n후 신청할 수 있다.\n연차 신청을 접수하면 사용 예정일, 하루 또는 반차 구분, 원래 제출 기록을 식별할 수 있는 정보를 \n연결한다. 신청자가 작성한 자유 서술의 개인 사유를 사용 일수 계산 항목과 혼합하지 않는다. 시\n스템에 기재된 기간과 신청자가 설명한 기간이 다르면 달력상 시작일과 종료일, 실제 사용하려는 \n날짜를 먼저 확인한다. 표시된 기간 전체를 임의로 근무일로 가정하여 차감 일수를 계산하지 않으\n며, 이 규정집에 없는 개인 근무표를 추정해 입력하지 않는다. 작성 도중 남은 임시 저장본은 최종 \n제출본과 구분하고, 임시 저장 화면을 확인했다는 안내가 제출 완료로 오인되지 않도록 기록 상태\n를 함께 적는다. 신청자가 ",
+      "pages": [
+        {
+          "page": 4,
+          "canonical_start": 5760,
+          "canonical_end": 6160,
+          "page_start": 1365,
+          "page_end": 1765
+        }
+      ],
+      "heading_path": [
+        "제2장 연차의 사용과 기록 관리 [AN]"
+      ],
+      "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+    },
+    {
+      "chunk_id": "c-2de994dee1d4409476821c2c9b1fd164dc1e7566a5b07a28f5338a1c2cdeb394",
+      "document_id": "handbook",
+      "start": 3520,
+      "end": 3920,
+      "text": "사실과 실제 \n기록 정리가 끝났다는 사실을 분리해 안내하고, 담당자의 확인이 끝나지 않은 값을 개인별 잔여 일\n수로 단정하지 않는다.\nBD-07 생일 축하 포인트의 관계\n생일 축하 포인트 지급 내역은 생일 특별휴가의 신청 번호와 별개로 식별한다. 포인트를 받았다는 \n문의가 휴가 승인 확인으로 접수되면 문의 목적을 먼저 구분하고, 휴가에 관한 내용은 BD-03@v4\n의 승인 기록에서 확인한다. 지급 내역 화면을 휴가 승인서 대신 첨부하거나 두 상태를 같은 항목\n으로 합치지 않는다.\n제2장 연차의 사용과 기록 관리 [AN]\n제1절 발생과 사용 단위 [AN-S1]\nAN-01 발생 기준\n1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 \n기준으로 별도 산정한다.\n연",
+      "pages": [
+        {
+          "page": 3,
+          "canonical_start": 3520,
+          "canonical_end": 3920,
+          "page_start": 672,
+          "page_end": 1072
+        }
+      ],
+      "heading_path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+      ],
+      "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+    }
+  ],
+  "existing_result_preserved": true,
+  "failure": {
+    "source_sha": "867e933b458454b8e2ed9d881c3f9466a5ec594f",
+    "python": "3.13.15",
+    "install": "pending",
+    "search": "pending",
+    "failed_stage": "build_dependencies",
+    "error": "Command '(PosixPath('/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/failed install/build-env/bin/python'), '-m', 'pip', 'install', '--no-index', '--find-links', '/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/empty wheels', '--require-hashes', '-r', PosixPath('/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/failed install/requirements-build.lock'))' returned non-zero exit status 1."
+  },
+  "recovered_with_new_out": true,
+  "commands": [
+    {
+      "cmd": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source"
+    },
+    {
+      "cmd": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source"
+    },
+    {
+      "cmd": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "scripts/first_handbook.py",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-first"
+      ],
+      "exit": 2,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source"
+    },
+    {
+      "cmd": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "scripts/first_handbook.py",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/failed install",
+        "--wheelhouse",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/empty wheels"
+      ],
+      "exit": 1,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source"
+    },
+    {
+      "cmd": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "scripts/first_handbook.py",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/recovered practice",
+        "--wheelhouse",
+        "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/.rag-runs/p032-s20/wheels"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-first/env/bin/rag-lab",
+        "generation-setup",
+        "--provider",
+        "ollama",
+        "--model",
+        "qwen3:4b",
+        "--out",
+        "my-local"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-first/practice"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-first/env/bin/rag-lab",
+        "pipeline-setup",
+        "--llm-config",
+        "my-local/model.json",
+        "--chunk-config",
+        "chunk-fixed.json",
+        "--method",
+        "bm25",
+        "--out",
+        "my-search"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-first/practice"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-first/env/bin/rag-lab",
+        "pipeline",
+        "--sources",
+        "handbook-sources.json",
+        "--chunk-config",
+        "my-search/chunk.json",
+        "--search-config",
+        "my-search/search.json",
+        "--question=생일 특별휴가를 신청하면 누구의 승인을 받아야 하나요?",
+        "--out",
+        "my-search-preview"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-first/practice"
+    },
+    {
+      "cmd": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "venv",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source/.rag-runs/build-env"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source/.rag-runs/build-env/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--require-hashes",
+        "-r",
+        "packaging/requirements-build.lock"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source/.rag-runs/build-env/bin/python",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        ".rag-runs/dist"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source"
+    },
+    {
+      "cmd": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "venv",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-source/.rag-runs/dist/milkpotato_rag_lab-0.1.0.dev1-py3-none-any.whl"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env/bin/rag-lab",
+        "init",
+        "--out",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-practice"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env/bin/rag-lab",
+        "doctor",
+        "--config",
+        "fixed.json"
+      ],
+      "exit": 3,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-practice"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env/bin/python",
+        "-c",
+        "from importlib.resources import files; print(files(\"rag_package\")/\"requirements-pdf.lock\")"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-practice"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--require-hashes",
+        "-r",
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env/lib/python3.13/site-packages/rag_package/requirements-pdf.lock"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-practice"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env/bin/rag-lab",
+        "snapshot",
+        "--sources",
+        "handbook-sources.json",
+        "--out",
+        ".rag-runs/pdf"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-practice"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env/bin/rag-lab",
+        "build",
+        "--snapshot",
+        ".rag-runs/pdf",
+        "--config",
+        "fixed.json",
+        "--out",
+        ".rag-runs/bm25"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-practice"
+    },
+    {
+      "cmd": [
+        "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-env/bin/rag-lab",
+        "ask",
+        "--run",
+        ".rag-runs/bm25",
+        "--config",
+        "fixed.json",
+        "--question",
+        "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+        "--out",
+        ".rag-runs/preview"
+      ],
+      "exit": 0,
+      "cwd": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/s20 verified practice gtzgwzo5/rag-lab-practice"
+    }
+  ]
+}
