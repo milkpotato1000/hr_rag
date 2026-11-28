@@ -1,5 +1,13 @@
 # P032 패키지 전체 목표의 남은 검증
 
+## S20 공개 소스와 첫 실습 검증
+
+공개 GitHub API를 인증 없이 조회해 dev 브랜치가 `36557ec9964ce7c61eaf8311111ab64848e04b25`를 가리키는 것을 확인했다. 같은 커밋의 recursive tree가 잘리지 않았음을 확인하고, modules·resources·sdist_extra와 설치 스크립트·빌드 lock·allowlist·README의 합집합을 로컬 git ls-tree 결과와 대조했다. 99개 경로의 Git blob SHA가 모두 일치했으며 이 파일들의 합계는 869,347바이트다. 이 검사는 소스 공개 상태를 확인한다. 실제 설치 검증은 별도로 이 Mac에서 로컬 복제본과 해시 고정 wheel로 수행했다. [공개 소스](https://github.com/milkpotato1000/hr_rag/tree/36557ec9964ce7c61eaf8311111ab64848e04b25) · [설치·복구 검증](https://github.com/milkpotato1000/hr_rag/blob/36557ec9964ce7c61eaf8311111ab64848e04b25/docs/verification/p032-s20/README.md)
+
+- S19에서 gt09에 전달된 다섯 청크 중 첫 번째에 식대 1만 원이 있었다. Qwen 4B는 전기요금 월 지원 한도 정보가 없다고 답하고 빈 인용으로 보류했다. 이 한 질문의 관찰이며 자동 평가기 점수는 계산하지 않았다. [실제 답변](https://github.com/milkpotato1000/hr_rag/blob/36557ec9964ce7c61eaf8311111ab64848e04b25/docs/verification/p032-s19/review.json)
+- S20의 공통 명령과 수동 설치 경로는 BD-03의 기한 문장을 PDF 1쪽·검색 2위에서 동일하게 찾았다. 제품별 확인은 CLI 버전·도움말까지다. 실제 제품 세션에서 공개 합성 예제로 첫 설치를 검증하는 경우 각 도구에 별도 새 폴더를 주고 동일 소스 SHA·질문·설치 및 검색 상태·원문을 대조해야 한다. 코딩 도구의 서비스 사용과 RAG의 로컬 추론 횟수는 분리해 기록한다.
+- Drive 실계정 연결·자동 평가기는 보류 중이다. 이전 표에서 gt09와 설치 진입점의 후속 상태는 이 절을 우선한다.
+
 ## S18 종료 후 전체 요구 대조
 
 검토 기준은 공개 dev 커밋 `2aeee85`이다. 아래 행은 해당 버전의 설치본·실행 기록을 가리킨다. 뒤의 초기 감사와 당시 대기 상태는 이력으로 보존한다.
