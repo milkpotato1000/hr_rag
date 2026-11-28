@@ -1,8 +1,8 @@
 {
-  "status": "prepared",
-  "claimed": false,
-  "started_at": null,
-  "deadline": null,
+  "status": "halted",
+  "claimed": true,
+  "started_at": 1795841151.394598,
+  "deadline": 1795843851.394598,
   "metadata": [
     {
       "endpoint": "/api/version",
@@ -27,11 +27,177 @@
       "actor": "supervisor",
       "at": 1795841073.5399208,
       "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841120.889122,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841151.1968782,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/tags",
+      "actor": "adapter-gt01",
+      "at": 1795841151.376439,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841156.436246,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841161.629065,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841166.826103,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841172.022804,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841177.23647,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841182.539927,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841187.76939,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841192.969898,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841198.466315,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841203.783152,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841209.0741582,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841214.381883,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841219.706611,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841225.029954,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841230.490282,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841235.936766,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/tags",
+      "actor": "adapter-gt01",
+      "at": 1795841238.829501,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841239.127577,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841244.369206,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841249.6259031,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841254.881956,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841260.075169,
+      "status": "received"
+    },
+    {
+      "endpoint": "/api/ps",
+      "actor": "supervisor",
+      "at": 1795841265.259658,
+      "status": "received"
     }
   ],
-  "requests": [],
+  "requests": [
+    {
+      "question_id": "gt01",
+      "reserved_at": 1795841151.394599,
+      "dispatch_attempted": true,
+      "response_received": true,
+      "server_completion": "unknown",
+      "status": "dispatch_intent",
+      "body_hash": "b2770f5b610ee0522085001528efdf64331c3a27425f28aba306ae5dfc29dc2d"
+    }
+  ],
   "gates": [],
-  "active": null,
+  "active": "gt01",
   "server_start_attempts": 1,
   "limits": {
     "generation": 10,
@@ -42,5 +208,9 @@
     "metadata_timeout": 5,
     "rss_bytes": 8589934592
   },
-  "automatic_retries": 0
+  "automatic_retries": 0,
+  "first_error": {
+    "code": "Stop:incomplete_or_failed",
+    "at": 1795841269.406595
+  }
 }

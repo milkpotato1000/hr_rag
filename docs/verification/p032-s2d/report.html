@@ -1,0 +1,463 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>로컬 4B 실제 답변 검증</title><style>
+:root{color-scheme:light;font:16px/1.7 system-ui,sans-serif;color:#172938;background:#edf1f4}body{margin:0}main{max-width:1000px;margin:auto;padding:32px 20px}header,article{background:white;border:1px solid #cdd8df;border-radius:12px;padding:24px;margin:0 0 24px}h1{font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.3}h2{font-size:1.35rem}h3{border-top:1px solid #dde4e9;padding-top:14px}nav{display:flex;flex-wrap:wrap;gap:10px}a{color:#075985}details{border:1px solid #ccd7df;border-radius:7px;padding:10px 14px;margin:10px 0}summary{cursor:pointer;font-weight:600}summary:focus-visible,a:focus-visible{outline:3px solid #0e7490;outline-offset:3px}blockquote{white-space:pre-wrap;border-left:3px solid #0e7490;padding:8px 15px;margin:15px 0;background:#f3f7f9}.notice{padding:14px;background:#fff4df}.answer{padding:18px;background:#edf8f4}.meta,.eyebrow{color:#516776;font-size:.88rem}p,pre,blockquote,summary{overflow-wrap:anywhere;word-break:normal}pre{white-space:pre-wrap;font-size:.82rem}*{box-sizing:border-box}@media(max-width:500px){main{padding:14px 10px}header,article{padding:16px}}
+</style><main><header><p class="eyebrow">P032 S2d · 가상 규정집 · 실제 로컬 실행</p><h1>근거는 준비됐을 때,<br>4B가 답변까지 완성하는가?</h1><p>상태: <strong>halted</strong> · 생성 시도 1/10 · 검색/임베딩/리랭커 재실행 0회.</p><p class="notice"><strong>첫 문항에서 중단:</strong> 1,024 출력 토큰 상한에 도달해 잘린 응답. 유효 답변 0개 · 나머지 9문항 미실행 · 재시도 0회. 모델 해제와 정상 메모리 복귀를 확인했습니다.</p><p>Qwen3-4B-Thinking-2507 / Q4_K_M · 기존 설치 CLI · think=false · 출력 상한 1,024토큰. gt01·gt02 smoke 통과 후에만 나머지 질문으로 확대합니다.</p><p>이 보고서는 dev Codex가 원문과 대조한 실행 관찰입니다. 자동 평가기·사람의 새 승인·일반 품질 보장을 뜻하지 않습니다. Drive·LLM 청킹·API·평가기 실험은 보류입니다.</p><nav><a href="#gt01">gt01</a><a href="#gt02">gt02</a><a href="#gt03">gt03</a><a href="#gt04">gt04</a><a href="#gt05">gt05</a><a href="#gt06">gt06</a><a href="#gt07">gt07</a><a href="#gt08">gt08</a><a href="#gt09">gt09</a><a href="#gt10">gt10</a></nav></header><article id="gt01"><p class="eyebrow">gt01 · failed</p><h2>생일 특별휴가는 누가 며칠 받을 수 있고, 언제까지 신청해서 언제 사용해야 하나요?</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 6/6. 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details open><summary>청크 1 · 1쪽</summary><blockquote>가 서로 맞
+지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운
+ 제외 사유로 처리하지 않는다.
+BD-02 사용 범위와 다른 제도
+생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급
+하지 않는다. 생일 특별휴가는 분할할 수 없다.
+신청서에는 사용하려는 날짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의
+로 연차로 바꾸지 않고 선택 오류인지 신청 의</blockquote><p class="meta">c-b626c9bf7e1cd5a6b44eb8995a433358399b15e746a473e7693343e1cca361be · 원문 위치 384–640</p></details><details open><summary>청크 2 · 1쪽</summary><blockquote>짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의
+로 연차로 바꾸지 않고 선택 오류인지 신청 의도인지 확인하여 해당 요청의 정정 이력을 남긴다.
+BD-03 신청 기한과 승인
+생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.
+접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아
+직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 </blockquote><p class="meta">c-ca05d758b63bde892a3d06952559d9cd3177f07a0ed27929206ddfa6d22ed4b9 · 원문 위치 576–832</p></details><details open><summary>청크 3 · 1쪽</summary><blockquote>6장 출장의 승인과 일정 관리
+제1장 생일 특별휴가와 포인트의 구분 [BD]
+제1절 적용 기준 [BD-S1]
+BD-01 적용 대상과 부여 일수
+입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상
+에서 제외한다.
+담당자는 신청 내역에 표시된 재직 기간과 수습 구분을 각각 확인한다. 두 정보의 표시가 서로 맞
+지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운
+ 제</blockquote><p class="meta">c-751f0f8cf20aeab15d745b730bd1c10071881e6a7e3ee737e03742686af8ffc3 · 원문 위치 192–448</p></details><details open><summary>청크 4 · 15쪽</summary><blockquote> 교육 휴가를 신청할 수 있다.
+신청 정보에는 어떤 자격시험 응시를 위한 요청인지 식별할 수 있는 설명을 연결한다. 이미 전달된
+ 설명으로 대상을 확인할 수 있으면 같은 내용을 반복 제출하도록 요구하지 않고, 시험 이름이 비슷
+해 구별이 필요한 부분만 확인한다.
+ED-02 다른 휴가와의 관리 구분
+생일 특별휴가 및 연차와 별도로 관리한다.
+교육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 
+관한 문의가 함께 들</blockquote><p class="meta">c-1e5a740e8d25d762406dad31e5f305c04f34de00e809343ccba68df23866fb1a · 원문 위치 24768–25024</p></details><details open><summary>청크 5 · 7, 8쪽</summary><blockquote>되었다고 보거나, 복구 뒤 표시되는 내역
+을 모두 새로운 신청으로 간주하지 않는다. 확인되지 않은 부분은 자료 불일치로 표시하여 AN-02
+@v4의 대조 과정으로 연결한다.
+신청자가 다른 종류의 휴가와 비교해 문의한 경우에는 해당 제도의 규칙과 연차 규칙을 구별해 답
+할 수 있도록 문의 항목을 나눈다. 생일 특별휴가의 날짜 범위와 분할 여부는 BD-02@v4에서 확
+HR-V4-HANDBOOK / v4
+7
+
+
+인하며, 연차 이월이나 반차 규칙을 그대로 옮겨</blockquote><p class="meta">c-1dd1c345bcc08893fb046f4a14d7d12ab0a66051e418f0166cc7e4b37a713768 · 원문 위치 11520–11776</p></details><h3>실제 답변과 인용</h3><p class="notice">제품이 유효한 답변을 게시하지 못했습니다. 출력 상한에 도달해 잘린 응답을 그대로 실패로 기록했습니다. 미완성 본문을 답변으로 복원하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>필수 근거 6/6은 전달됐지만 출력 상한 1,024토큰에서 응답이 잘렸습니다. 제품이 유효 답변을 게시하지 않아 답변 내용·인용의 의미적 정확성은 평가할 수 없습니다.</p><p>• 입력 1,778토큰, 출력 1,024토큰, provider 약 87.42초. 호출 전후 모델 digest 일치.</p><p>• finish_reason=length, provider status=truncated, 제품 오류 provider_truncated. JSON·업무 schema 및 인용 검토 전에 차단됐습니다.</p><p>• 완성된 JSON 여부나 반복·장황함·thinking 소비 여부는 저장 결과만으로 단정하지 않습니다. raw 미완성 본문은 복원·가공하지 않았습니다.</p><p>• 검색 누락으로 설명할 사례가 아닙니다. 전달 문맥은 재직 3개월·연간 1일·수습 제외·생일 달·근무일·3영업일 전 신청의 필수 근거를 모두 포함합니다.</p><p>• strict parser/출력 상한/prompt를 변경하지 않았고 gt02~gt10 및 재시도는 실행하지 않았습니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt01&quot;,
+  &quot;body_bytes&quot;: 5907,
+  &quot;actual_messages_hash&quot;: &quot;8d05d22f2d46e1228c5522fccc0a9a0dc719b6eedb715f8dd93d3a25022383eb&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: {
+    &quot;schema_version&quot;: 1,
+    &quot;status&quot;: &quot;truncated&quot;,
+    &quot;provider&quot;: &quot;ollama&quot;,
+    &quot;requested_model&quot;: &quot;qwen3:4b&quot;,
+    &quot;response_model&quot;: &quot;qwen3:4b&quot;,
+    &quot;role&quot;: &quot;generation&quot;,
+    &quot;identity_verification&quot;: {
+      &quot;status&quot;: &quot;verified&quot;,
+      &quot;before&quot;: true,
+      &quot;after&quot;: true
+    },
+    &quot;finish_reason&quot;: &quot;length&quot;,
+    &quot;usage&quot;: {
+      &quot;input_tokens&quot;: 1778,
+      &quot;output_tokens&quot;: 1024,
+      &quot;provider_duration_ms&quot;: 87417.436583
+    },
+    &quot;cost&quot;: null,
+    &quot;cost_status&quot;: &quot;unmeasured&quot;,
+    &quot;elapsed_ms&quot;: 87473.344,
+    &quot;request_fingerprint&quot;: &quot;2ceba7cadc7b2abe107616cce73e3286f4ddd76e4b4e223df5068924aa27954f&quot;,
+    &quot;actual_messages_hash&quot;: &quot;8d05d22f2d46e1228c5522fccc0a9a0dc719b6eedb715f8dd93d3a25022383eb&quot;,
+    &quot;error&quot;: null,
+    &quot;dispatch_attempted&quot;: true,
+    &quot;outcome_unknown&quot;: false
+  },
+  &quot;error&quot;: {
+    &quot;code&quot;: &quot;provider_truncated&quot;
+  },
+  &quot;dispatch_attempted&quot;: true
+}</pre></details></article><article id="gt02"><p class="eyebrow">gt02 · not_executed</p><h2>미사용 연차는 최대 며칠 이월하며 언제까지 써야 하나요? 생일 특별휴가도 해당하나요?</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 3/3. 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details ><summary>청크 1 · 6쪽</summary><blockquote>7 미사용 연차의 이월 기준
+해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 연차의 사용 
+기한은 다음 해 3월 31일이다. 생일 특별휴가에는 이 규정을 적용하지 않는다.
+이월 기록에는 원래 연도와 사용 기한을 구별하여 표시한다. 다른 휴가 종류의 잔여 표시를 이월할
+ 연차에 포함하지 않고, 종류가 불분명한 내역은 합산하기 전에 확인 대상으로 남긴다.
+AN-08 연도를 넘긴 내역의 대조
+전년도에서 넘어온 연차와 해당 </blockquote><p class="meta">c-628277f8a505587077ba522aae35338600d6d0dbb06d2260996121ab7d562892 · 원문 위치 8448–8704</p></details><details ><summary>청크 2 · 6쪽</summary><blockquote>. 당일 접수가 가능하다는 안내를 모든 연차 
+신청의 일반 기한으로 바꾸지 않으며, 긴급성이 확인되지 않은 문의에는 통상 기한과 확인 중인 사
+항을 나누어 설명한다. 같은 직원의 다른 날짜 신청까지 긴급 신청으로 일괄 변경하거나, 긴급 신청
+을 했다는 이유로 차감 단위를 다르게 적용하지 않는다.
+제3절 이월과 변경 이력 [AN-S3]
+AN-07 미사용 연차의 이월 기준
+해당 연도에 사용하지 않은 연차 중 최대 5일분을 다음 해로 이월할 수 있다. 이월한 </blockquote><p class="meta">c-da37ad6c347dde013f6113a626db6676c5fa1a8ed0d1e0aa7dec626dcb6b4876 · 원문 위치 8256–8512</p></details><details ><summary>청크 3 · 3쪽</summary><blockquote>별개로 식별한다. 포인트를 받았다는 
+문의가 휴가 승인 확인으로 접수되면 문의 목적을 먼저 구분하고, 휴가에 관한 내용은 BD-03@v4
+의 승인 기록에서 확인한다. 지급 내역 화면을 휴가 승인서 대신 첨부하거나 두 상태를 같은 항목
+으로 합치지 않는다.
+제2장 연차의 사용과 기록 관리 [AN]
+제1절 발생과 사용 단위 [AN-S1]
+AN-01 발생 기준
+1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 </blockquote><p class="meta">c-d5671c27291574f3d37620c914bebf7d2320bfbecc8e71442888169d89461f47 · 원문 위치 3648–3904</p></details><details ><summary>청크 4 · 4쪽</summary><blockquote>관한 것이었다면 그 결과를 그대로 적용하지 않고 대상 기간을 구분한다.
+ 관련 자료에 없는 보상이나 소멸 여부가 함께 질문된 경우에는 발생·사용 수치 확인과 별도 항목으
+로 남기고, 확인 중인 계산 값을 그러한 처리의 근거로 사용하지 않는다.
+AN-03 반차의 사용 단위
+연차는 오전 또는 오후 반차로 나누어 사용할 수 있다. 반차 1회는 연차 0.5일로 차감한다.
+반차 신청 내역에는 오전과 오후 중 선택한 구분을 기록한다. 하루 사용과 반차 사용이 같은 </blockquote><p class="meta">c-dea26fce56239075b82a50426978c79d808ad980907abda9162f68cee0c01d4e · 원문 위치 5376–5632</p></details><details ><summary>청크 5 · 1쪽</summary><blockquote>가 서로 맞
+지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운
+ 제외 사유로 처리하지 않는다.
+BD-02 사용 범위와 다른 제도
+생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급
+하지 않는다. 생일 특별휴가는 분할할 수 없다.
+신청서에는 사용하려는 날짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의
+로 연차로 바꾸지 않고 선택 오류인지 신청 의</blockquote><p class="meta">c-b626c9bf7e1cd5a6b44eb8995a433358399b15e746a473e7693343e1cca361be · 원문 위치 384–640</p></details><h3>실제 답변과 인용</h3><p class="notice">미실행. 앞선 smoke 검증이 통과하지 않아 요청을 확대하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>실제 유효 답변이 없어 내용 검토를 수행하지 않았습니다. 근거 회수와 답변 품질은 별도입니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt02&quot;,
+  &quot;body_bytes&quot;: 5794,
+  &quot;actual_messages_hash&quot;: &quot;330b8bf7936e689aacb5e65eedae27ace94fc9a7c41c585c97bf76b65d29d8d1&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: null,
+  &quot;error&quot;: null,
+  &quot;dispatch_attempted&quot;: false
+}</pre></details></article><article id="gt03"><p class="eyebrow">gt03 · not_executed</p><h2>재택근무 신청 자격·주당 횟수·승인 기한과 기기 사용 조건을 알려주세요.</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 3/8. 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details ><summary>청크 1 · 10쪽</summary><blockquote>는지를 확인한 뒤 정정 범위를 정한다. 정보 확인을 위해 문의한 내용은 재택 신청의 해당 항목
+과 연결하되, 기기의 비밀번호나 내부 문서 내용을 신청 설명에 적게 하지 않는다. RM-03@v4의 
+회사 지급 기기 사용 조건은 정보 정정 과정에서도 유지하며, 지급 여부를 확인하지 못한 기기를 임
+의로 확인 완료 상태로 바꾸지 않는다. 문의자가 기기 정보의 정정만 요청한 경우에는 이를 새로운
+ 재택 날짜 신청이나 기존 승인 취소로 처리하지 않는다.
+기기 정보</blockquote><p class="meta">c-a1246adb35925d19582e623b11c2aad0cd4a58557eae37e0beb5354ce7f5cd6b · 원문 위치 15360–15616</p></details><details ><summary>청크 2 · 8쪽</summary><blockquote> 승인된 근무일로 등록하지 
+않는다.
+RM-03 기기와 내부 문서 접근
+재택근무 시 회사 지급 기기와 회사 VPN을 사용한다. 공용 컴퓨터로 내부 문서에 접근할 수 없다.
+기기 정보의 확인은 회사 지급 기기와 신청자의 현재 사용 기기가 연결되어 있는지를 대조하는 과
+정으로 기록한다. 연결 정보가 잘못 표시되었다는 문의를 받으면 오류가 있는 항목과 실제 확인 결
+과를 구별해 남기고, 단순한 정보 정정 문의를 개인 기기 사용 허용 요청으로 처리하지 않는다.
+</blockquote><p class="meta">c-75f678b75e5f15dfe8dc27a37a45b7a368426e19088baae0083823c549c0d724 · 원문 위치 12288–12544</p></details><details ><summary>청크 3 · 8쪽</summary><blockquote>목과 실제 확인 결
+과를 구별해 남기고, 단순한 정보 정정 문의를 개인 기기 사용 허용 요청으로 처리하지 않는다.
+제2절 접수와 장소 정보 [RM-S2]
+RM-04 근무 신청의 검토와 통지
+재택근무 신청을 접수하면 담당자는 신청자, 대상 주, 희망 날짜와 원래 제출본을 서로 연결한다. 
+대상 주와 날짜가 맞지 않거나 날짜가 여러 주에 걸쳐 있으면 표시된 기간을 임의로 하나의 주로 묶
+지 않고 신청 의도를 확인한다. 이미 접수된 다른 신청과 날짜가 겹치면 </blockquote><p class="meta">c-e8548b00edf6438232f5f3ad336035093e2ed780c0d0a06b9827f0c4140a8ebf · 원문 위치 12480–12736</p></details><details ><summary>청크 4 · 11쪽</summary><blockquote> 항목을 함께 넘긴
+다. 접수된 신청을 단순히 새 담당자 이름으로 다시 등록하지 않고 원래 요청의 식별 관계를 유지
+한다. 신청자가 이미 답한 기기·주소 관련 질문은 확인된 기록을 인계하여 반복 문의를 줄이고, 실
+제로 확인하지 않은 값은 이전 담당자가 확인했다고 추정해 완료 표시를 붙이지 않는다. 새 담당자
+가 설명을 보완할 때에는 추가 확인한 부분과 기존 확인 사항을 구별해 남긴다.
+RM-10 근무 기록에 관한 이견 확인
+재택근무 신청 상태와 실제 근</blockquote><p class="meta">c-6604152b22e562e496f0b79c96be1d6cba3faa40edf1544717f1b75522aad9a6 · 원문 위치 18048–18304</p></details><details ><summary>청크 5 · 10, 11쪽</summary><blockquote> 안내하거나, 접속이 되었다는 사실만으로 예정된 재택 날짜가 승인되었다고 알리지 않
+는다.
+HR-V4-HANDBOOK / v4
+10
+
+
+RM-08 승인 날짜의 변경과 신청 철회
+재택 날짜 변경 요청을 받으면 원래 승인 또는 검토 대상 날짜와 변경하려는 날짜를 연결한다. 같
+은 주 안의 날짜 변경인지 대상 주 자체가 달라진 것인지 먼저 구분하고, RM-02@v4의 주간 횟수
+와 승인 기한을 각각 확인할 수 있도록 기록한다. 이미 다른 재택 신청이 있는 주로</blockquote><p class="meta">c-b86321e5c03c0105af513a19df2f595d53fba65fe359bf4e227a794a4292579b · 원문 위치 16704–16960</p></details><h3>실제 답변과 인용</h3><p class="notice">미실행. 앞선 smoke 검증이 통과하지 않아 요청을 확대하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>실제 유효 답변이 없어 내용 검토를 수행하지 않았습니다. 근거 회수와 답변 품질은 별도입니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt03&quot;,
+  &quot;body_bytes&quot;: 5873,
+  &quot;actual_messages_hash&quot;: &quot;8e73eae368023036a49cc728328f1e6e0f1d50622be6db7bb6fee0434084f438&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: null,
+  &quot;error&quot;: null,
+  &quot;dispatch_attempted&quot;: false
+}</pre></details></article><article id="gt04"><p class="eyebrow">gt04 · not_executed</p><h2>재택근무일에도 식대를 받을 수 있나요? 생일 포인트는 휴가 승인과 연결되나요?</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 2/2. 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details ><summary>청크 1 · 12쪽</summary><blockquote>구분해 확인한다.
+제4장 복지 지원 내역의 확인 [WF]
+제1절 지급 기준과 문의 구분 [WF-S1]
+WF-01 식대 지원 기준
+사무실 출근일에는 식대 1만 원을 지원한다. 재택근무일과 휴가일에는 이 식대를 지원하지 
+않는다.
+식대 내역에 대한 문의는 해당 날짜의 근무 형태와 지급 표시를 연결해 확인한다. 지급 화면의 항
+목 이름만으로 사무실 출근 여부를 판단하지 않고, 날짜나 근무 형태가 불명확한 항목은 별도로 확
+인한다.
+WF-02 생일 축하 포인트
+</blockquote><p class="meta">c-7e9de44d963dcb22db239536c2e9e32660d60a5785964b707f322eb8877f75a1 · 원문 위치 19008–19264</p></details><details ><summary>청크 2 · 12쪽</summary><blockquote> 출근 여부를 판단하지 않고, 날짜나 근무 형태가 불명확한 항목은 별도로 확
+인한다.
+WF-02 생일 축하 포인트
+재직자에게 생일 축하 포인트 3만 점을 지급한다. 이 포인트는 휴가 신청 자격이나 승인 여부와 별
+개다.
+생일 포인트의 지급 내역을 휴가 승인 기록으로 사용하지 않는다. 휴가 승인 여부에 관한 문의는 B
+D-03@v4의 신청·승인 기록과 구분하여 확인하며, 포인트 확인 화면에 휴가 승인 상태를 함께 확
+정해 표시하지 않는다.
+WF-03 문의 </blockquote><p class="meta">c-f2a22751830900a0b28fc9ba501f9d8067f3fd4fbb1783a63971031ad153ad41 · 원문 위치 19200–19456</p></details><details ><summary>청크 3 · 1쪽</summary><blockquote>6장 출장의 승인과 일정 관리
+제1장 생일 특별휴가와 포인트의 구분 [BD]
+제1절 적용 기준 [BD-S1]
+BD-01 적용 대상과 부여 일수
+입사 후 3개월이 지난 재직자는 매년 생일 특별휴가 1일을 신청할 수 있다. 수습 중인 직원은 대상
+에서 제외한다.
+담당자는 신청 내역에 표시된 재직 기간과 수습 구분을 각각 확인한다. 두 정보의 표시가 서로 맞
+지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운
+ 제</blockquote><p class="meta">c-751f0f8cf20aeab15d745b730bd1c10071881e6a7e3ee737e03742686af8ffc3 · 원문 위치 192–448</p></details><details ><summary>청크 4 · 1쪽</summary><blockquote>가상 HR 운영 규정집
+가상 HR 규정입니다. 실제 회사의 정책이나 법적 기준이 아닙니다.
+문서 식별자: hr-v4-handbook | 버전: 4 | 시행일: 정보 없음
+통합 목차
+제1장 생일 특별휴가와 포인트의 구분
+제2장 연차의 사용과 기록 관리
+제3장 재택근무의 신청과 운영
+제4장 복지 지원 내역의 확인
+제5장 교육휴가의 신청과 변경
+제6장 출장의 승인과 일정 관리
+제1장 생일 특별휴가와 포인트의 구분 [BD]
+제1절 적용 기준 [BD-S1]
+BD-</blockquote><p class="meta">c-da66b56ea8570af0b9dedb4394c9ad64e06a34376c7a159cac3c433db7468eaa · 원문 위치 0–256</p></details><details ><summary>청크 5 · 12쪽</summary><blockquote> 기록과 구분하여 확인하며, 포인트 확인 화면에 휴가 승인 상태를 함께 확
+정해 표시하지 않는다.
+WF-03 문의 접수와 대상 내역의 식별
+복지 내역 문의를 받으면 담당자는 식대와 생일 축하 포인트 중 어느 항목에 관한 문의인지 먼저 구
+분한다. 문의자가 금액과 점수를 혼용하여 설명한 경우에는 지급 단위를 확인한 뒤 원래 내역과 대
+조한다. 문의 내용에는 확인하려는 날짜나 내역의 제목, 화면에 표시된 값, 문의자가 차이가 있다고
+ 설명한 부분을 연결한다.</blockquote><p class="meta">c-3160a9fdcd70ae3e8b5402825d56c934ab889217154daed7f54d896a2383f477 · 원문 위치 19392–19648</p></details><h3>실제 답변과 인용</h3><p class="notice">미실행. 앞선 smoke 검증이 통과하지 않아 요청을 확대하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>실제 유효 답변이 없어 내용 검토를 수행하지 않았습니다. 근거 회수와 답변 품질은 별도입니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt04&quot;,
+  &quot;body_bytes&quot;: 5660,
+  &quot;actual_messages_hash&quot;: &quot;7b147823e3982c388efa5c5a53711cdcf4a66ee148284bce6fa642d298b52f2a&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: null,
+  &quot;error&quot;: null,
+  &quot;dispatch_attempted&quot;: false
+}</pre></details></article><article id="gt05"><p class="eyebrow">gt05 · not_executed</p><h2>교육휴가의 대상과 연간 일수는 무엇이며 연차·생일휴가와 별도로 관리하나요?</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 4/4. 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details ><summary>청크 1 · 15쪽</summary><blockquote>의 문의 번호로 접수되었더라도 확인 결과가 항목별로 나뉘는
+ 이유가 여기에 있다. 이 사례는 서로 다른 지급 내역을 대조할 때 필요한 구분을 설명하며 새 지원 
+항목이나 환산 비율을 제시하지 않는다.
+제5장 교육휴가의 신청과 변경 [ED]
+제1절 대상과 신청 정보 [ED-S1]
+ED-01 신청 대상과 일수
+직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.
+신청 정보에는 어떤 자격시험 응시를 위한 요청인지 식별할 수 있는 설명을 연결한다.</blockquote><p class="meta">c-2fcf0f5cdf6b47b4607765498e23906fe4f13d1bace89f8c0dfceb957c361c6c · 원문 위치 24576–24832</p></details><details ><summary>청크 2 · 15, 16쪽</summary><blockquote>육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 
+관한 문의가 함께 들어오면 해당 휴가 종류를 구분하고, 연차 사용 단위는 AN-03@v4에서 확인하
+되 그 규칙을 교육휴가의 분할 기준으로 적용하지 않는다.
+HR-V4-HANDBOOK / v4
+15
+
+
+ED-03 시험 일정과 사용 희망일의 표시
+교육휴가 신청에는 시험을 식별할 수 있는 정보와 사용 희망일, 해당 신청을 구분하는 기록을 연결
+한다. 시험의 이름과 </blockquote><p class="meta">c-bd0f8810de4c1408992ce5931e04c83825598419c417d0de991da9c49bc979a5 · 원문 위치 24960–25216</p></details><details ><summary>청크 3 · 15쪽</summary><blockquote> 교육 휴가를 신청할 수 있다.
+신청 정보에는 어떤 자격시험 응시를 위한 요청인지 식별할 수 있는 설명을 연결한다. 이미 전달된
+ 설명으로 대상을 확인할 수 있으면 같은 내용을 반복 제출하도록 요구하지 않고, 시험 이름이 비슷
+해 구별이 필요한 부분만 확인한다.
+ED-02 다른 휴가와의 관리 구분
+생일 특별휴가 및 연차와 별도로 관리한다.
+교육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 
+관한 문의가 함께 들</blockquote><p class="meta">c-1e5a740e8d25d762406dad31e5f305c04f34de00e809343ccba68df23866fb1a · 원문 위치 24768–25024</p></details><details ><summary>청크 4 · 18쪽</summary><blockquote>가 있는 경우에도 어떤 사실을 확인하려는 것인지 특정하고, 교육휴가의 이용 기록이 
+시험 성적 평가 자료로 잘못 분류되지 않도록 한다. 신청자가 결과 자료의 연결 대상을 정정하면 
+기존 연결 관계와 정정 사유를 기록하되 원래 휴가의 종류를 바꾸지 않는다.
+ED-09 복합 문의의 답변과 담당 업무 인계
+교육휴가 신청과 시험 비용, 근무 일정, 다른 휴가 사용을 함께 묻는 문의에서는 먼저 이 장에서 확
+인할 수 있는 항목을 구분한다. 교육휴가에 관한 기록은 </blockquote><p class="meta">c-516afa0199f5aced787481998b499b694986973d79702b5f06a48a7cd2df38f0 · 원문 위치 29952–30208</p></details><details ><summary>청크 5 · 1쪽</summary><blockquote>가상 HR 운영 규정집
+가상 HR 규정입니다. 실제 회사의 정책이나 법적 기준이 아닙니다.
+문서 식별자: hr-v4-handbook | 버전: 4 | 시행일: 정보 없음
+통합 목차
+제1장 생일 특별휴가와 포인트의 구분
+제2장 연차의 사용과 기록 관리
+제3장 재택근무의 신청과 운영
+제4장 복지 지원 내역의 확인
+제5장 교육휴가의 신청과 변경
+제6장 출장의 승인과 일정 관리
+제1장 생일 특별휴가와 포인트의 구분 [BD]
+제1절 적용 기준 [BD-S1]
+BD-</blockquote><p class="meta">c-da66b56ea8570af0b9dedb4394c9ad64e06a34376c7a159cac3c433db7468eaa · 원문 위치 0–256</p></details><h3>실제 답변과 인용</h3><p class="notice">미실행. 앞선 smoke 검증이 통과하지 않아 요청을 확대하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>실제 유효 답변이 없어 내용 검토를 수행하지 않았습니다. 근거 회수와 답변 품질은 별도입니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt05&quot;,
+  &quot;body_bytes&quot;: 5786,
+  &quot;actual_messages_hash&quot;: &quot;737760d0737c1e125fe6dcc81c2c8d5fd3e32194a085b2e02624291fa47f7bdb&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: null,
+  &quot;error&quot;: null,
+  &quot;dispatch_attempted&quot;: false
+}</pre></details></article><article id="gt06"><p class="eyebrow">gt06 · not_executed</p><h2>출장 시스템 오류 시 임시 접수하면 팀장 승인 기한을 생략할 수 있나요? 휴가도 자동 승인되나요?</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 3/3. 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details ><summary>청크 1 · 19쪽</summary><blockquote>항 [TR-S1]
+TR-01 승인 기한과 승인 주체
+출장은 출발 5영업일 전에 팀장의 승인을 받는다.
+신청 기록에는 출발 예정일과 해당 요청을 식별할 수 있는 정보를 연결한다. 제출 시점과 승인 시
+점을 서로 다른 기록으로 관리하며, 접수 확인 안내가 승인 안내를 대신하지 않도록 표시한다. 일정
+ 설명과 선택 날짜가 다르면 신청자가 요청한 날짜를 확인한다.
+TR-02 다른 제도의 승인과 구분
+출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.
+출장 </blockquote><p class="meta">c-a28d7ba559481aa82850c5396bf33433b9c303c754a146092dca0b2499cbe584 · 원문 위치 30720–30976</p></details><details ><summary>청크 2 · 21쪽</summary><blockquote>이 필요한 사유를 임시 기록한다. 임시 기록은 신청 내용을 보존하기 위
+한 것이며 TR-01@v4의 승인 기한이나 팀장 승인 조건을 없애는 예외로 안내하지 않는다. 신청자
+가 오류 화면이나 메시지를 자발적으로 전달하면 해당 설명을 연결하되, 화면 자료가 없다는 이유
+로 새로운 증빙 의무를 만들지 않는다. 복구 후에는 시스템에 이미 생성된 요청이 있는지 먼저 조
+회하고, 같은 요청이 확인되면 임시 기록을 연결하여 중복 신청을 만들지 않는다. 시스템에 기록이</blockquote><p class="meta">c-b9ef10a408276c7fcfdce086b68ed274d6aa851e0c21e2eac33ed26c980cdd90 · 원문 위치 35136–35392</p></details><details ><summary>청크 3 · 19쪽</summary><blockquote>짜를 확인한다.
+TR-02 다른 제도의 승인과 구분
+출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.
+출장 일정에 다른 근무 형태나 휴가에 관한 문의가 포함되면 해당 종류를 구분한다. 재택근무는 R
+M-02@v4의 기준을 확인하고, 출장 승인 기록의 제목이나 날짜만으로 별도의 재택근무 승인 상태
+를 입력하지 않는다.
+TR-03 목적과 일정 정보의 작성
+출장 신청의 설명에는 업무 목적, 방문할 장소, 출발과 복귀의 예정 일정이 서로 대응하도록 
+적는</blockquote><p class="meta">c-d4b98a5c3daa9e087ebf09eeba13edcf6f6534df0ddbe9c6db298f5d212940a8 · 원문 위치 30912–31168</p></details><details ><summary>청크 4 · 2, 3쪽</summary><blockquote>기고 이를 접수 확인용으로 안내한다. 임시 기
+록은 새로운 휴가 자격이나 승인 면제가 아니며, 원래 신청 시점과 이후 복구 입력 시점을 구별하기
+ 위한 자료로 사용한다. 시스템이 복구되면 기존 기록이 실제로 생성되어 있는지를 먼저 찾아보고, 
+HR-V4-HANDBOOK / v4
+2
+
+
+존재하지 않는 경우에만 임시 기록과 연결하여 입력한다. 임시 기록의 작성만을 이유로 신청 기한
+이 연장되었다고 안내하거나 팀장 승인 없이 사용이 확정되었다고 통지하지 않는다</blockquote><p class="meta">c-f284d666c846670dcd65b89ab193a74622cf0d2ce92f31f196a0cd6bbf5362f6 · 원문 위치 2688–2944</p></details><details ><summary>청크 5 · 21쪽</summary><blockquote>아 있음을 알린다.
+제3절 예외 접수와 출장 이후의 기록 [TR-S3]
+TR-07 신청 시스템 장애 시의 임시 기록
+신청 시스템이 열리지 않거나 제출 직후 오류가 발생하여 접수 여부를 알 수 없는 경우에는 TR-04
+@v4의 통상 기록을 바로 확인하기 어려울 수 있다. 이때 담당자는 전달받은 출장 목적, 출발 예정
+일, 전달 시점과 접수 확인이 필요한 사유를 임시 기록한다. 임시 기록은 신청 내용을 보존하기 위
+한 것이며 TR-01@v4의 승인 기한이나 </blockquote><p class="meta">c-2b8eb8158e573e4e1c531c251042232cc3b1affaf56662e1867f220f90b255df · 원문 위치 34944–35200</p></details><h3>실제 답변과 인용</h3><p class="notice">미실행. 앞선 smoke 검증이 통과하지 않아 요청을 확대하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>실제 유효 답변이 없어 내용 검토를 수행하지 않았습니다. 근거 회수와 답변 품질은 별도입니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt06&quot;,
+  &quot;body_bytes&quot;: 5900,
+  &quot;actual_messages_hash&quot;: &quot;9adee9549639dc895e6f97a16714c8bb3064312ca94c1fce51e7b7f914f92042&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: null,
+  &quot;error&quot;: null,
+  &quot;dispatch_attempted&quot;: false
+}</pre></details></article><article id="gt07"><p class="eyebrow">gt07 · not_executed</p><h2>생일휴가 접수 확인이 안 되는 시스템 장애 때 무엇을 기록하며 승인 면제가 되나요?</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 4/4. 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details ><summary>청크 1 · 2쪽</summary><blockquote> 하지 
+않고 기존 기록을 이어서 확인할 수 있게 한다.
+BD-05 시스템 장애와 중복 접수
+통상적인 접수는 BD-04@v4의 시스템 기록을 기준으로 정리한다. 다만 시스템에 접속할 수 없거
+나 제출 후 접수 화면이 표시되지 않아 기록 존재를 확인할 수 없는 경우에는 담당자가 신청자가 알
+린 시점, 사용 희망일, 장애 상황을 임시 기록으로 남기고 이를 접수 확인용으로 안내한다. 임시 기
+록은 새로운 휴가 자격이나 승인 면제가 아니며, 원래 신청 시점과 이</blockquote><p class="meta">c-98383d8afa41e1c5d96bd7f607dee384566e5d1ba7ef52d5df00415deeccb83f · 원문 위치 2496–2752</p></details><details ><summary>청크 2 · 17, 18쪽</summary><blockquote>구 후 연결
+신청 화면을 사용할 수 없거나 제출 후 접수 여부가 표시되지 않는 경우에는 ED-04@v4의 통상 
+HR-V4-HANDBOOK / v4
+17
+
+
+접수 기록을 즉시 확인하기 어려울 수 있다. 이때 담당자는 신청자가 전달한 희망일, 시험을 식별하
+는 설명, 전달 시점을 임시 기록하고 시스템 확인이 필요한 항목을 구분한다. 장애가 있었다는 설명
+을 확인되지 않은 승인 사실로 바꾸지 않으며, 임시 기록의 목적이 신청 내용의 유실을 막기 위한 
+것임을</blockquote><p class="meta">c-fbea364167054752013cd74104023bb90f9a31f53f6036c37e5fe52d7dd27902 · 원문 위치 28800–29056</p></details><details ><summary>청크 3 · 18쪽</summary><blockquote>다는 설명
+을 확인되지 않은 승인 사실로 바꾸지 않으며, 임시 기록의 목적이 신청 내용의 유실을 막기 위한 
+것임을 안내한다. 화면이 복구되면 기존 접수 기록이 생성되었는지 먼저 조회하고, 같은 내용이 이
+미 있으면 임시 기록을 그 요청에 연결한다. 별도의 접수 기록이 없는 경우에는 전달받은 내용을 
+확인하여 시스템 반영 기록과 연결하고, 실제 전달 시점과 복구 후 입력 시점을 각각 남긴다. 장애 
+기간에 신청자가 내용을 수정한 경우에는 가장 최근의 의사</blockquote><p class="meta">c-e6d21dd5c3bbc5eb9aa1a7318e2453426a4650e4c639eb86a2d55bba9a34fcd9 · 원문 위치 28992–29248</p></details><details ><summary>청크 4 · 21쪽</summary><blockquote>아 있음을 알린다.
+제3절 예외 접수와 출장 이후의 기록 [TR-S3]
+TR-07 신청 시스템 장애 시의 임시 기록
+신청 시스템이 열리지 않거나 제출 직후 오류가 발생하여 접수 여부를 알 수 없는 경우에는 TR-04
+@v4의 통상 기록을 바로 확인하기 어려울 수 있다. 이때 담당자는 전달받은 출장 목적, 출발 예정
+일, 전달 시점과 접수 확인이 필요한 사유를 임시 기록한다. 임시 기록은 신청 내용을 보존하기 위
+한 것이며 TR-01@v4의 승인 기한이나 </blockquote><p class="meta">c-2b8eb8158e573e4e1c531c251042232cc3b1affaf56662e1867f220f90b255df · 원문 위치 34944–35200</p></details><details ><summary>청크 5 · 10쪽</summary><blockquote>신청에도 나타나면 관련 기록을 찾아 연결하되, 각
+ 신청의 승인 내용을 한꺼번에 변경하지 않는다. 사용 가능한 회사 기기가 확인되었다는 사실만으
+로 VPN 사용 여부도 확인된 것으로 기록하지 않고 두 항목을 분리한다. 기기 확인이 끝났다는 안
+내에 근무 장소나 날짜까지 승인되었다는 의미를 덧붙이지 않는다.
+제3절 변경과 장애의 기록 [RM-S3]
+RM-07 VPN 연결 확인과 장애 접수
+VPN 사용에 문제가 있다는 연락을 받으면 담당자는 연결이 되지 않는</blockquote><p class="meta">c-9a005f633b531328f505edda5f06a4852d9c6b0dd2e1bc8c5fdfe65ef721afe8 · 원문 위치 15744–16000</p></details><h3>실제 답변과 인용</h3><p class="notice">미실행. 앞선 smoke 검증이 통과하지 않아 요청을 확대하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>실제 유효 답변이 없어 내용 검토를 수행하지 않았습니다. 근거 회수와 답변 품질은 별도입니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt07&quot;,
+  &quot;body_bytes&quot;: 5860,
+  &quot;actual_messages_hash&quot;: &quot;402cfa9a8857d53944c66de3922ee9d733d976054461619a83372b99428d80f4&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: null,
+  &quot;error&quot;: null,
+  &quot;dispatch_attempted&quot;: false
+}</pre></details></article><article id="gt08"><p class="eyebrow">gt08 · not_executed</p><h2>연차 일부 날짜와 교육휴가 응시 계획 취소를 함께 요청하면 어떤 범위를 구분해 기록해야 하나요?</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 2/8. 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details ><summary>청크 1 · 17쪽</summary><blockquote>할 수 있다. 이 사례는 ED-03@v4의 정보 구분을 설명하는 것으로, 시험 일정 변경 시 추가 휴가를
+ 부여하거나 기존 사용량을 자동 복구한다는 별도 규칙을 뜻하지 않는다.
+ED-06 응시 계획 취소와 요청 상태의 정리
+응시 계획을 취소했다는 연락을 받으면 담당자는 취소하려는 교육휴가 요청을 먼저 식별한다. 시
+험 접수만 취소한 것인지 휴가 신청도 취소하려는 것인지 구분하고, 신청자가 아직 결정하지 못한 
+문의를 확정된 취소로 기록하지 않는다. 확인된</blockquote><p class="meta">c-2fa23fe9725818f6af1cc57f41cb02eff7a61f224815976f47f7e125c8c0cbf0 · 원문 위치 28032–28288</p></details><details ><summary>청크 2 · 15, 16쪽</summary><blockquote>육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 
+관한 문의가 함께 들어오면 해당 휴가 종류를 구분하고, 연차 사용 단위는 AN-03@v4에서 확인하
+되 그 규칙을 교육휴가의 분할 기준으로 적용하지 않는다.
+HR-V4-HANDBOOK / v4
+15
+
+
+ED-03 시험 일정과 사용 희망일의 표시
+교육휴가 신청에는 시험을 식별할 수 있는 정보와 사용 희망일, 해당 신청을 구분하는 기록을 연결
+한다. 시험의 이름과 </blockquote><p class="meta">c-bd0f8810de4c1408992ce5931e04c83825598419c417d0de991da9c49bc979a5 · 원문 위치 24960–25216</p></details><details ><summary>청크 3 · 15쪽</summary><blockquote> 교육 휴가를 신청할 수 있다.
+신청 정보에는 어떤 자격시험 응시를 위한 요청인지 식별할 수 있는 설명을 연결한다. 이미 전달된
+ 설명으로 대상을 확인할 수 있으면 같은 내용을 반복 제출하도록 요구하지 않고, 시험 이름이 비슷
+해 구별이 필요한 부분만 확인한다.
+ED-02 다른 휴가와의 관리 구분
+생일 특별휴가 및 연차와 별도로 관리한다.
+교육휴가 내역을 연차 차감 기록이나 생일 특별휴가 기록으로 자동 전환하지 않는다. 다른 제도에 
+관한 문의가 함께 들</blockquote><p class="meta">c-1e5a740e8d25d762406dad31e5f305c04f34de00e809343ccba68df23866fb1a · 원문 위치 24768–25024</p></details><details ><summary>청크 4 · 18쪽</summary><blockquote>가 있는 경우에도 어떤 사실을 확인하려는 것인지 특정하고, 교육휴가의 이용 기록이 
+시험 성적 평가 자료로 잘못 분류되지 않도록 한다. 신청자가 결과 자료의 연결 대상을 정정하면 
+기존 연결 관계와 정정 사유를 기록하되 원래 휴가의 종류를 바꾸지 않는다.
+ED-09 복합 문의의 답변과 담당 업무 인계
+교육휴가 신청과 시험 비용, 근무 일정, 다른 휴가 사용을 함께 묻는 문의에서는 먼저 이 장에서 확
+인할 수 있는 항목을 구분한다. 교육휴가에 관한 기록은 </blockquote><p class="meta">c-516afa0199f5aced787481998b499b694986973d79702b5f06a48a7cd2df38f0 · 원문 위치 29952–30208</p></details><details ><summary>청크 5 · 18쪽</summary><blockquote>다른 휴가 사용을 함께 묻는 문의에서는 먼저 이 장에서 확
+인할 수 있는 항목을 구분한다. 교육휴가에 관한 기록은 ED-01@v4과 ED-02@v4의 기준에 연결
+하고, 규정집에 답이 없는 비용 지원이나 별도의 시험 제도는 확인되지 않은 사항으로 남긴다. 담당
+자가 알고 있는 다른 사례만으로 이번 문의의 지원 여부를 확정하지 않는다. 여러 항목 중 일부 확
+인이 끝나면 완료된 항목을 안내하면서 남은 항목의 상태를 함께 적고, 전체 문의가 종결된 것으로 
+</blockquote><p class="meta">c-3bcf9f92bc73b6ede560ba8b70f294a468d9a07d67c423411e078e40e6deeb04 · 원문 위치 30144–30400</p></details><h3>실제 답변과 인용</h3><p class="notice">미실행. 앞선 smoke 검증이 통과하지 않아 요청을 확대하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>실제 유효 답변이 없어 내용 검토를 수행하지 않았습니다. 근거 회수와 답변 품질은 별도입니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt08&quot;,
+  &quot;body_bytes&quot;: 5915,
+  &quot;actual_messages_hash&quot;: &quot;29328df7daec8bc82934d56b4c14d0230b6cf5e7b80bf27710ba0503576b5cdc&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: null,
+  &quot;error&quot;: null,
+  &quot;dispatch_attempted&quot;: false
+}</pre></details></article><article id="gt09"><p class="eyebrow">gt09 · not_executed</p><h2>재택근무 전기요금의 월 지원 한도는 얼마인가요?</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 N/A (필수 fact 0개). 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details ><summary>청크 1 · 12쪽</summary><blockquote>구분해 확인한다.
+제4장 복지 지원 내역의 확인 [WF]
+제1절 지급 기준과 문의 구분 [WF-S1]
+WF-01 식대 지원 기준
+사무실 출근일에는 식대 1만 원을 지원한다. 재택근무일과 휴가일에는 이 식대를 지원하지 
+않는다.
+식대 내역에 대한 문의는 해당 날짜의 근무 형태와 지급 표시를 연결해 확인한다. 지급 화면의 항
+목 이름만으로 사무실 출근 여부를 판단하지 않고, 날짜나 근무 형태가 불명확한 항목은 별도로 확
+인한다.
+WF-02 생일 축하 포인트
+</blockquote><p class="meta">c-7e9de44d963dcb22db239536c2e9e32660d60a5785964b707f322eb8877f75a1 · 원문 위치 19008–19264</p></details><details ><summary>청크 2 · 8쪽</summary><blockquote>육 재수강 의무로 
+바꾸지 않는다.
+RM-02 횟수와 승인 기한
+재택근무는 매주 최대 2일이며 전주 금요일까지 팀장 승인을 받는다. 재택근무는 휴가가 아닌 근
+무일로 집계한다.
+신청 내역에는 대상 주와 희망 날짜를 구분해 표시한다. 여러 날짜가 함께 제시되면 최종적으로 어
+떤 날짜를 신청한 것인지 확인하며, 일정 문의에 적힌 모든 후보 날짜를 승인된 근무일로 등록하지 
+않는다.
+RM-03 기기와 내부 문서 접근
+재택근무 시 회사 지급 기기와 회사 VPN을</blockquote><p class="meta">c-085c48a2e947d9d8f6d9c625f721c9131708edc1d1188151e44d7c7ac139213d · 원문 위치 12096–12352</p></details><details ><summary>청크 3 · 19쪽</summary><blockquote>짜를 확인한다.
+TR-02 다른 제도의 승인과 구분
+출장 승인으로 휴가나 재택근무가 자동 승인되지는 않는다.
+출장 일정에 다른 근무 형태나 휴가에 관한 문의가 포함되면 해당 종류를 구분한다. 재택근무는 R
+M-02@v4의 기준을 확인하고, 출장 승인 기록의 제목이나 날짜만으로 별도의 재택근무 승인 상태
+를 입력하지 않는다.
+TR-03 목적과 일정 정보의 작성
+출장 신청의 설명에는 업무 목적, 방문할 장소, 출발과 복귀의 예정 일정이 서로 대응하도록 
+적는</blockquote><p class="meta">c-d4b98a5c3daa9e087ebf09eeba13edcf6f6534df0ddbe9c6db298f5d212940a8 · 원문 위치 30912–31168</p></details><details ><summary>청크 4 · 13, 14쪽</summary><blockquote>는 
+화면만 골라 근거로 사용하지 않는다. 사무실 출근, 재택근무, 휴가의 구분이 바뀐 이유를 확인할 
+수 있으면 그 정정 근거를 남기고, 아직 확인할 수 없으면 어느 자료가 미확인인지 표시한다. 재택 
+HR-V4-HANDBOOK / v4
+13
+
+
+신청이 승인되었다는 사실과 실제 근무 기록의 반영은 서로 구분하여 살피며, 신청 내역만으로 근
+무 사실을 임의 추정하지 않는다. 날짜가 잘못 연결된 경우에는 대상 날짜를 바로잡고 다른 날짜의
+ 정상 내역이 영향</blockquote><p class="meta">c-851ae4c8ad2d1884122770e1617a7ac3b8e831a3a8268f3abb0593fbbd8e498e · 원문 위치 21696–21952</p></details><details ><summary>청크 5 · 13쪽</summary><blockquote>지 않는다.
+WF-05 근무 형태 기록이 다른 경우
+식대 문의의 통상 대조 자료는 WF-01@v4의 날짜별 근무 형태와 지급 표시다. 다만 신청 화면과 
+집계 화면에서 같은 날짜의 근무 형태가 서로 다르면 어느 값이 먼저 등록되었고 어떤 정정이 진행 
+중인지 확인한 뒤 지급 내역과 연결한다. 담당자는 서로 다른 화면 중 지급액이 기대와 일치하는 
+화면만 골라 근거로 사용하지 않는다. 사무실 출근, 재택근무, 휴가의 구분이 바뀐 이유를 확인할 
+수 있으면 </blockquote><p class="meta">c-45644448c8f1869328c85a3a5eda40575c166973e15a0e7bf472c303a170963c · 원문 위치 21504–21760</p></details><h3>실제 답변과 인용</h3><p class="notice">미실행. 앞선 smoke 검증이 통과하지 않아 요청을 확대하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>실제 유효 답변이 없어 내용 검토를 수행하지 않았습니다. 근거 회수와 답변 품질은 별도입니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt09&quot;,
+  &quot;body_bytes&quot;: 5824,
+  &quot;actual_messages_hash&quot;: &quot;14fea47c3c94731300454737505faa7536a05c63ff9d26143666b828af3ae7e0&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: null,
+  &quot;error&quot;: null,
+  &quot;dispatch_attempted&quot;: false
+}</pre></details></article><article id="gt10"><p class="eyebrow">gt10 · not_executed</p><h2>개인 차량으로 출장할 때 킬로미터당 유류비 지급액은 얼마인가요?</h2><p>동결 문맥: 5청크 · 1,280자 · 필수 근거 N/A (필수 fact 0개). 검색은 재실행하지 않았습니다.</p><h3>전달 문맥과 원문</h3><details ><summary>청크 1 · 5쪽</summary><blockquote>자가 확인할 수 있게 제시한다.
+AN-05 검토 내용의 연결과 처리 통지
+담당자는 접수된 연차 신청을 해당 직원의 사용 기록과 연결할 때 기록 번호, 사용 날짜, 사용 단위
+를 차례로 대조한다. 같은 직원이 같은 날 다른 종류의 휴가를 문의한 경우에도 문의 기록을 곧바
+로 사용 기록으로 옮기지 않는다. 이미 반영된 신청과 새 요청이 겹치면 중복 제출인지 날짜 변경
+인지 구분하기 위해 신청자에게 현재 의사를 확인한다. 확인 과정에서는 어떤 기록을 비교하고 </blockquote><p class="meta">c-e9ef2836370d7327d17c786540fabc87f7024de83345c11d55ee89a62f0dd305 · 원문 위치 6336–6592</p></details><details ><summary>청크 2 · 8쪽</summary><blockquote> 승인된 근무일로 등록하지 
+않는다.
+RM-03 기기와 내부 문서 접근
+재택근무 시 회사 지급 기기와 회사 VPN을 사용한다. 공용 컴퓨터로 내부 문서에 접근할 수 없다.
+기기 정보의 확인은 회사 지급 기기와 신청자의 현재 사용 기기가 연결되어 있는지를 대조하는 과
+정으로 기록한다. 연결 정보가 잘못 표시되었다는 문의를 받으면 오류가 있는 항목과 실제 확인 결
+과를 구별해 남기고, 단순한 정보 정정 문의를 개인 기기 사용 허용 요청으로 처리하지 않는다.
+</blockquote><p class="meta">c-75f678b75e5f15dfe8dc27a37a45b7a368426e19088baae0083823c549c0d724 · 원문 위치 12288–12544</p></details><details ><summary>청크 3 · 19쪽</summary><blockquote>
+다. 신청 내용의 확인에 직접 필요하지 않은 개인 일정은 업무 목적과 섞어 기록하지 않도록 안내
+한다. 같은 방문 목적을 가진 과거 출장 기록을 참고하더라도 이번 방문지와 날짜를 새로 대조하고
+ 과거 승인을 현재 신청의 승인으로 복사하지 않는다. 작성 중인 내용에 대한 문의와 실제 신청 제
+출은 구분하여 남기며, 문의가 접수되었다는 사실을 신청 완료로 안내하지 않는다. TR-01@v4의 
+승인 기한을 확인할 때에는 실제로 제출된 요청의 출발 예정일과 제</blockquote><p class="meta">c-950785f5c17bd7e1e7a99f14f2cb5f830a7a49fb7c107e3fd69c4326e98157e5 · 원문 위치 31488–31744</p></details><details ><summary>청크 4 · 4쪽</summary><blockquote>2영업일 전까지 휴가 시스템에서 신청한다. 긴급 사유가 있으면 당일 팀장에게 알린 
+후 신청할 수 있다.
+연차 신청을 접수하면 사용 예정일, 하루 또는 반차 구분, 원래 제출 기록을 식별할 수 있는 정보를 
+연결한다. 신청자가 작성한 자유 서술의 개인 사유를 사용 일수 계산 항목과 혼합하지 않는다. 시
+스템에 기재된 기간과 신청자가 설명한 기간이 다르면 달력상 시작일과 종료일, 실제 사용하려는 
+날짜를 먼저 확인한다. 표시된 기간 전체를 임의로 근무일로 </blockquote><p class="meta">c-75329f255c4926886d15ce44d13ded9b1ee49d6d0c0446924a205eaf5412de67 · 원문 위치 5760–6016</p></details><details ><summary>청크 5 · 3쪽</summary><blockquote>별개로 식별한다. 포인트를 받았다는 
+문의가 휴가 승인 확인으로 접수되면 문의 목적을 먼저 구분하고, 휴가에 관한 내용은 BD-03@v4
+의 승인 기록에서 확인한다. 지급 내역 화면을 휴가 승인서 대신 첨부하거나 두 상태를 같은 항목
+으로 합치지 않는다.
+제2장 연차의 사용과 기록 관리 [AN]
+제1절 발생과 사용 단위 [AN-S1]
+AN-01 발생 기준
+1년 미만 재직자는 한 달 개근 시 연차 1일이 발생한다. 1년 이상 재직자의 연차는 매년 15일을 </blockquote><p class="meta">c-d5671c27291574f3d37620c914bebf7d2320bfbecc8e71442888169d89461f47 · 원문 위치 3648–3904</p></details><h3>실제 답변과 인용</h3><p class="notice">미실행. 앞선 smoke 검증이 통과하지 않아 요청을 확대하지 않았습니다.</p><h3>Codex 원문 대조</h3><p>실제 유효 답변이 없어 내용 검토를 수행하지 않았습니다. 근거 회수와 답변 품질은 별도입니다.</p><details><summary>실행 로그·설정·실패 상세</summary><pre>{
+  &quot;question_id&quot;: &quot;gt10&quot;,
+  &quot;body_bytes&quot;: 5790,
+  &quot;actual_messages_hash&quot;: &quot;c0287722e9ea99e3f3f8207fb5696f2541cc32c8469657523a62be365cc626de&quot;,
+  &quot;exact_input_tokens_before_dispatch&quot;: &quot;unmeasured&quot;,
+  &quot;provider&quot;: null,
+  &quot;error&quot;: null,
+  &quot;dispatch_attempted&quot;: false
+}</pre></details></article></main></html>

@@ -1,0 +1,46 @@
+{
+  "status": "HALTED",
+  "cause": "provider_truncated",
+  "first_question": "gt01",
+  "generation_attempts": 1,
+  "http_responses_received": 1,
+  "valid_answers": 0,
+  "not_executed": [
+    "gt02",
+    "gt03",
+    "gt04",
+    "gt05",
+    "gt06",
+    "gt07",
+    "gt08",
+    "gt09",
+    "gt10"
+  ],
+  "metadata_count": 30,
+  "metadata_by_endpoint": {
+    "/api/version": 1,
+    "/api/tags": 3,
+    "/api/show": 1,
+    "/api/ps": 25
+  },
+  "started_at": 1795841151.394598,
+  "deadline": 1795843851.394598,
+  "input_tokens": 1778,
+  "output_tokens": 1024,
+  "provider_elapsed_ms": 87473.344,
+  "sampled_peak_rss_bytes": 3950428160,
+  "sampled_pressure_levels": [
+    1
+  ],
+  "max_sampling_gap_seconds": 17.172740936279297,
+  "measurement_note": "Combined Ollama server/runner and supervisor/client RSS samples; not system unified memory or instantaneous GPU peak. Sample gap includes separate preparation/commit interval.",
+  "response_received": true,
+  "valid_provider_completion": false,
+  "unloaded_observed": true,
+  "normal_restored": true,
+  "ledger_retained_conservative_server_completion": "unknown; separate observed cleanup resolves model residency only, never implies force cancellation",
+  "owned_server_closed": true,
+  "retry": 0,
+  "new_search_embedding_reranker_requests": 0,
+  "P013_grant_consumed": false
+}

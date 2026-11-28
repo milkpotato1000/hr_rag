@@ -39,7 +39,7 @@ rag-lab doctor --llm-config my-api-preview.json
 
 API 선택은 LLM 역할만 바꾸며 임베딩·리랭커는 공개 모델을 유지합니다. LLM 청킹은 별도 `chunking` 역할입니다. `evaluation` 역할을 지정해도 평가기가 실행되지는 않으며 현재 평가 실험은 보류입니다. 기본 실습의 필수 단계가 아닙니다.
 
-실제 답변을 생성하려면 모델 identity·provider 설정과 문서 전송 범위·호출 상한을 확인하고, 생성한 설정을 RAG config의 `llm_config`로 연결한 뒤 `ask --execute`를 명시합니다. UI에서는 서버의 `--allow-model-execution`과 화면의 실행 선택이 필요합니다. 검색·리랭킹·청킹의 실행 옵션은 각각 별도입니다. 기본 preview에 이 옵션들을 자동으로 추가하지 않습니다. [provider 안내](providers.md)와 [실행 CLI](document-rag.md)를 따르세요. 실제 범용 답변 생성·유료 API·LLM 청킹·개인 Drive 연결은 아직 실서비스 검증 전입니다.
+실제 답변을 생성하려면 모델 identity·provider 설정과 문서 전송 범위·호출 상한을 확인하고, 생성한 설정을 RAG config의 `llm_config`로 연결한 뒤 `ask --execute`를 명시합니다. UI에서는 서버의 `--allow-model-execution`과 화면의 실행 선택이 필요합니다. 검색·리랭킹·청킹의 실행 옵션은 각각 별도입니다. 기본 preview에 이 옵션들을 자동으로 추가하지 않습니다. [provider 안내](providers.md)와 [실행 CLI](document-rag.md)를 따르세요. [로컬 4B 첫 실제 생성](local-generation-s2d.md)은 출력 상한에서 중단되어 유효 답변을 얻지 못했습니다. 유료 API·LLM 청킹·개인 Drive 연결은 아직 실서비스 검증 전입니다.
 
 ## 저장 결과로 배우기
 
@@ -48,6 +48,7 @@ API 선택은 LLM 역할만 바꾸며 임베딩·리랭커는 공개 모델을 �
 | [S1 검색·리랭킹](live-retrieval-s1.md) | 검색 5설정 × 10질문 = 50행, none 포함 리랭킹 3방식 × 10질문 = 30행 | 고정 가상 규정집·CPU의 실제 E5/BGE 검색 및 두 리랭커. mMiniLM 최초 실패도 보존 |
 | [S2a 경계 준비](chunk-boundaries-s2a.md) | 규칙 청크와 의미/LLM unit·window preview | 모델 0회. 경계 포함 관찰이며 검색 품질 점수가 아님 |
 | [S2b 청킹 비교](chunk-comparison-live.md) | 고정·재귀·구조·E5 의미 4방식 × 10질문 = 40검색 | 같은 원문·E5 Hybrid. 전달 문맥 필수 fact는 각각 27/29/29/29개(분모 38). 답변 생성 0회 |
+| [S2d 로컬 생성](local-generation-s2d.md) | 저장 문맥으로 Qwen4B 실제 생성1회 | 첫 문항 출력 상한 도달로 중단. 유효 답변0·나머지9문항 미실행 |
 | [S2b 최초 중단](chunk-comparison-s2b.md) | 환경 오류, 미실행·미확정과 복구 조건 | 실패를 삭제하거나 0점 품질 결과로 바꾸지 않음 |
 
 S2b의 의미 방식은 후보 20개에서 38/38 fact를 찾았지만 최종 문맥에는 29/38을 전달했습니다. 경계 249개는 모두 최대 길이 조건으로 결정됐으므로 “의미 경계가 우수하다”고 결론내릴 수 없습니다. fact가 있는 질문은 8개, 없는 2개는 N/A입니다. 새 청크 qrels가 없어 Recall/MRR/nDCG도 N/A입니다. 작은 학습 세트 관찰을 일반 한국어 품질이나 다른 환경의 성능으로 확대하지 않습니다.

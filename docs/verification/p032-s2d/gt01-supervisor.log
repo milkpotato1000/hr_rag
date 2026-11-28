@@ -1,0 +1,12 @@
+HALTED incomplete_or_failed
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2d/run_one.py", line 44, in <module>
+    with transact(LEDGER) as c:c.finish(qid,technical,unloaded,restored)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2d/control.py", line 40, in finish
+    self.check();need(self.s['active']==qid,'active_identity');need(technical and unloaded and normal,'incomplete_or_failed');self.s['requests'][-1].update(status='complete',server_completion='response_and_unloaded_observed',finished_at=self.clock());self.s['active']=None
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/docs/verification/p032-s2d/control.py", line 9, in need
+    if not ok:raise Stop(code)
+              ^^^^^^^^^^^^^^^^
+control.Stop: incomplete_or_failed

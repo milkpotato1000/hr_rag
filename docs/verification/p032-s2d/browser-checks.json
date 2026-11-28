@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "surface": "owned read-only loopback HTML http://127.0.0.1:8893/report.html",
+  "desktop": {
+    "width": 1280,
+    "scrollWidth": 1280,
+    "screenshot": "report-desktop.jpg"
+  },
+  "narrow": {
+    "width": 390,
+    "scrollWidth": 390,
+    "screenshot": "report-narrow.jpg"
+  },
+  "question_count": 10,
+  "gt01_evidence_open_count": 5,
+  "execution_details_initially_closed": true,
+  "Enter_expands": true,
+  "Space_collapses": true,
+  "Tab_moves_to_next_summary": true,
+  "temporary_viewport_reset": true,
+  "filepicker_attempts": 0,
+  "model_execution_in_browser": false,
+  "owned_report_server_closed": true,
+  "P029_C4": "unchanged BLOCKED",
+  "observed_favicon_404": "browser decorative request only; report loaded normally"
+}

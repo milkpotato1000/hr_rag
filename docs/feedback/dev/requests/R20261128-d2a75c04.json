@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "R20261128-d2a75c04",
+  "title": "P032 S2d 첫 4B 출력 상한 중단의 후속 실험 조건 검토",
+  "request": "P032 S2d exact876067dc2f383fdc806d9e6f70031360e05c2c4d 수행 중 첫 gt01이 provider_truncated로 중단됐다. 현재 qwen3:4b digest359d7dd.../Ollama0.40.8 identity는 전후 일치했고 기존 문맥에는 필수6/6이 있다. 입력1778/출력1024, finish_reason=length, adapter87473.344ms, 유효 답변0이다. 모델 해제·normal30초·소유 client/server 종료를 확인했다. 생성1회/metadata30회/나머지gt02~10 미실행, 재시도0, 기존45분 start1795841151.394598/deadline1795843851.394598과 halted ledger 보존. Raw 미완성 본문/hidden thinking은 저장·복원하지 않았다.\n출력 상한 또는 응답 길이 지시 등을 바꾸는 후속 실험이 필요할지 plan에서 검토해 달라. 현재 계약이 고정한1024/prompt/strict parser를 dev가 임의 변경하거나 추가 호출하지 않는다. 기존 local4B 선택과 Drive 보류는 유지하며 LLM 청킹/API/평가기/8B/P013 grant로 확대하지 않는다. 후속 필요 시 최초 실패·실행량·시간·새 요청 범위·기술/내용 gate를 명시한 별도 정확 READY로 진행한다. 근거 docs/verification/p032-s2d/results.json, answers/gt01/result.json, frozen.json, ledger.json, report.html. 이 요청은 다음 실험 조건의 검토이지 기존 입력/정답/실패를 바꿔 달라는 요청이 아니다.\n",
+  "source": "dev observation under adopted P032 S2d 876067dc2f383fdc806d9e6f70031360e05c2c4d",
+  "impact": "Generation stopped after1; output cap/prompt changes require separate READY. Preserve local4B choice, Drive hold, existing failure/budget/grants.",
+  "created_at": "2026-11-28T04:50:31.573901+00:00"
+}
