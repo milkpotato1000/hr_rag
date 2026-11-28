@@ -1,0 +1,27 @@
+{
+  "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+  "product_status": "answered",
+  "error": null,
+  "provider_status": "complete",
+  "finish_reason": "stop",
+  "usage": {
+    "input_tokens": 2384,
+    "output_tokens": 920,
+    "provider_duration_ms": 65868.080542
+  },
+  "elapsed_seconds": 65.900256,
+  "api_calls": 0,
+  "api_key_reads": 0,
+  "local_generation_calls": 1,
+  "retries": 0,
+  "contexts": 5,
+  "pdf_pages": 23,
+  "verified_citations": 2,
+  "peak_sampled_rss_bytes": 4057137152,
+  "server_cleanup": {
+    "owned": true,
+    "pid": 71392,
+    "listener_closed": true
+  },
+  "prior_artifacts_verified": true
+}

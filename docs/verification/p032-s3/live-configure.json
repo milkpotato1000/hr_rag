@@ -1,0 +1,13 @@
+{
+  "args": [
+    "llm-configure",
+    "--spec",
+    "handbook-qwen-spec.json",
+    "--out",
+    "handbook-model.json",
+    "--inspect-local"
+  ],
+  "code": 0,
+  "stdout": "{\"status\": \"configured_unverified\", \"schema_version\": 2, \"roles\": {\"generation\": \"local\", \"evaluation\": \"local\", \"chunking\": \"local\"}, \"inspection\": [{\"profile\": \"local\", \"server_identity\": \"observed\", \"origin\": \"user_asserted\", \"model_info\": {\"general.architecture\": \"qwen3\", \"general.parameter_count\": 4022468096, \"general.file_type\": 15}, \"quality\": \"unverified\"}], \"http_requests\": 2, \"retry_count\": 0, \"secrets_read\": 0, \"generation_requests\": 0, \"evaluation_requests\": 0, \"chunking_requests\": 0, \"quality\": \"unverified\"}\n",
+  "stderr": ""
+}
