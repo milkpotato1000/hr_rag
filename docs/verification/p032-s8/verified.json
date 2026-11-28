@@ -1,0 +1,94 @@
+{
+  "stages": {
+    "snapshot": "complete",
+    "chunks": "complete",
+    "index": "complete",
+    "search": "complete",
+    "candidates": "complete",
+    "rerank": "complete",
+    "answer": "complete"
+  },
+  "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+  "answer": "3영업일 전",
+  "citations": [
+    {
+      "id": "c-074f96f923aaa206f7c27c4b791e5f1c8b0ff78d789961d4d943c790ad5f94e9",
+      "rank": 1,
+      "path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+        "제1절 적용 기준 [BD-S1]",
+        "BD-03 신청 기한과 승인"
+      ],
+      "pages": [
+        1
+      ],
+      "start": 668,
+      "end": 961,
+      "quote": "BD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n"
+    }
+  ],
+  "generation_requests": 1,
+  "usage": {
+    "input_tokens": 1934,
+    "output_tokens": 965,
+    "provider_duration_ms": 65796.727917
+  },
+  "elapsed_ms": 66089.661,
+  "index_work": 1,
+  "rerank_pairs": 20,
+  "query_jobs": 1,
+  "chunk_count": 177,
+  "final_contexts": [
+    {
+      "id": "c-074f96f923aaa206f7c27c4b791e5f1c8b0ff78d789961d4d943c790ad5f94e9",
+      "path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+        "제1절 적용 기준 [BD-S1]",
+        "BD-03 신청 기한과 승인"
+      ],
+      "before": 2,
+      "after": 1
+    },
+    {
+      "id": "c-3a51b97129756079a6dc9c0ace26a0509aa3770d167873f6dbb0b7c2df17aa07",
+      "path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+        "제1절 적용 기준 [BD-S1]",
+        "BD-02 사용 범위와 다른 제도"
+      ],
+      "before": 1,
+      "after": 2
+    },
+    {
+      "id": "c-39232c6744540e7b539df6950be121aabf096ba5352b8dbe952201141ddbaf39",
+      "path": [
+        "제2장 연차의 사용과 기록 관리 [AN]",
+        "제2절 신청과 사용 기록 [AN-S2]",
+        "AN-04 통상 신청과 확인 정보"
+      ],
+      "before": 12,
+      "after": 3
+    },
+    {
+      "id": "c-96ce0c9bbf65b78334df971a2d319d7efa11af149509b3320f88afe146ab4877",
+      "path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+        "제2절 신청 정보의 처리 [BD-S2]",
+        "BD-04 접수부터 결과 통지까지"
+      ],
+      "before": 4,
+      "after": 4
+    },
+    {
+      "id": "c-b7b85b21d344392c6b096e44c493d3d7ea44b2f45e4946ecca475f8dc2a94860",
+      "path": [
+        "제1장 생일 특별휴가와 포인트의 구분 [BD]",
+        "제1절 적용 기준 [BD-S1]",
+        "BD-01 적용 대상과 부여 일수"
+      ],
+      "before": 11,
+      "after": 5
+    }
+  ],
+  "replay_model_requests": 0
+}
