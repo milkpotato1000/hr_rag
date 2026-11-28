@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Installed retrieval and optional reranker comparison",
   "next_action": "Finish S3 then adopt S4 and verify identical PDF chunk and candidate inputs",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T07:34:07.416890+00:00",
       "evidence": "Verified existing HR RAG dev chat direct delivery succeeded, S3 closure before S4 adoption."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T07:34:36.623119+00:00",
+      "evidence": "Verified dev adoption dd2f87a selects exact READY 97f0de709cc8085ab15e79b0261d718bc827c0f4 after S3 completion eadaf91."
     }
   ]
 }
