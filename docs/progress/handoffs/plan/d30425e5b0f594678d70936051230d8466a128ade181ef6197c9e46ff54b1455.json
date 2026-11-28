@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "c9d4eddb18ccf3a19c0ef3282ac0e670a48abaa2",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "S12 저장된 두 RAG 실행 비교",
+  "next_action": "정확 채택 후 설치 CLI·학습 화면 비교 구현",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T08:16:05.481583+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T08:16:22.538980+00:00",
+      "evidence": "확인된 기존 dev 채팅 직접 전송 성공"
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T08:16:49.335642+00:00",
+      "evidence": "기존 dev 채팅이 S12 비교 범위와 호출 없는 실행을 확인했고 8c5757d에서 c9d4edd를 채택했다."
+    }
+  ]
+}
