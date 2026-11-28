@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S12 저장된 두 RAG 실행 비교",
   "next_action": "정확 채택 후 설치 CLI·학습 화면 비교 구현",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T08:16:05.481583+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T08:16:22.538980+00:00",
+      "evidence": "확인된 기존 dev 채팅 직접 전송 성공"
     }
   ]
 }
