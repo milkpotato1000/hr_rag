@@ -2,9 +2,18 @@
 
 2026-11-27 사용자 최종 목표와 2026-11-28 순서 결정에 따른 확장 로드맵이다. 최신 구현 순서는 P010 Hybrid → P020 리랭커이며 P013/P014 평가기 실험은 보류한다. 기존 HR Naive/청킹 단계는 재사용 가능한 기준선으로 보존한다. 기존 project-brief/naive-rag-roadmap의 역사적 진행 표시보다 이 문서의 새 패키지 범위와 최신 dev 증거를 우선한다. P번호별 세부 실행은 정확 채택한 계약을 따른다.
 
-## 2026-11-28 최신 실행 선택
+## 설치본에서 확인한 범위 · P032 S26 기준
 
-Hybrid·리랭커와 실제 검색 비교, S2c 설치 학습 안내 완료 후 사용자가 기존 로컬 Qwen4B로 현재 규정집의 실제 답변부터 검증하도록 요청했다. 다음은 [P032 S2d](specs/P032-s2d-local-generation-contract.md)의 저장 문맥→생성 smoke2→조건부10문항→원문 대조다. Drive 실연결은 사용자 명시 보류이며 미완료 항목으로 유지한다. LLM 청킹·생성 profile 비교는 후속 별도 범위, P013/P014 자동 평가기 실험은 계속 보류한다.
+기존 로컬 Qwen 4B로 규정집의 실제 답변을 먼저 검증하라는 결정에 따라 첫 설치·검색·생성과 사용자 선택 PDF의 출처 확인까지 진행했다. 아래 링크는 당시 dev 커밋의 검증 기록이다.
+
+| 학습자가 할 일 | 확인한 범위와 남은 조건 |
+| --- | --- |
+| Codex 또는 Claude Code에서 시작 | macOS에서 두 CLI의 버전·도움말과 공통 설치 명령을 확인했다. 공개 dev 소스를 익명으로 복제하고 빈 캐시에서 첫 검색에 성공했다. 두 제품에서 로그인해 같은 요청을 대화로 수행하는 경로는 미검증이다. [공통 명령](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s20/README.md) · [공개 설치](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s21/README.md) |
+| 문서와 질문 선택 | 기본 규정집과 별도 로컬 PDF에서 실제 답변·쪽수·인용 원문을 확인했다. Google Drive 실계정 연결은 사용자 결정으로 보류 중이다. [규정집](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s25/README.md) · [선택 PDF](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s26/README.md) |
+| 생성 모델 선택·비교 | 기존 Qwen 4B는 실제 생성, 선택 API 프로필은 동일 근거의 미리보기까지 검증했다. 두 생성 모델의 실제 답변 비교는 미측정이다. [모델 비교 기록](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s5/README.md) |
+| 청킹 선택·비교 | 고정·재귀·구조·의미 청킹의 저장 결과를 비교했다. 의미 방식에서 관측된 내부 경계 249개는 모두 최대 길이로 결정됐다. LLM 방식은 Qwen 출력이 잘려 유효한 후보를 얻지 못했다. [네 방식 비교](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s2b-recovery001/README.md) · [LLM 청킹 한계](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s18/README.md) |
+| 검색·리랭커 선택 | BM25, E5/BGE Dense·Hybrid, 같은 후보에서 리랭커 끔·mMiniLM·BGE를 실측했다. [순위와 전달 근거](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s24/README.md) |
+| 답변 검토·재실행 | 실제 답변과 PDF 인용, 문맥 예산별 전달량을 대조했다. 저장 결과는 추가 생성 없이 재생했다. P013/P014 자동 평가기 실험은 보류 중이다. [문맥 예산 비교](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s23/README.md) · [저장 결과 재생](https://github.com/milkpotato1000/hr_rag/blob/46e581f0dcad50e39644cec5a996dcde5161b6a3/docs/verification/p032-s26/README.md) |
 
 ## 사용자가 완성할 흐름
 
