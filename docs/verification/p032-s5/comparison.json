@@ -1,0 +1,114 @@
+{
+  "same_input": true,
+  "different_or_missing": [],
+  "rows": [
+    {
+      "name": "Qwen 4B",
+      "status": "answered",
+      "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+      "execution_kind": "live",
+      "provider": "ollama",
+      "model": "qwen3:4b",
+      "request_fields": [
+        "format",
+        "keep_alive",
+        "messages",
+        "model",
+        "options",
+        "stream",
+        "think"
+      ],
+      "request_fingerprint": "bc68cd2630f19179480c1aa0ff72246019824723ee4070c9c4a12bbf71088f55",
+      "actual_messages_hash": "f65de81cda8f2bdaee9f013b4828b31271110a7b70ed1909bdb8f0dcb6d8e2f1",
+      "answer": {
+        "status": "answered",
+        "answer": "사용 3영업일 전까지",
+        "citations": [
+          {
+            "chunk_id": "c-39da7e35896087ed22283d154a503032172ab3adea7fbbc27983d3bc3a5e76c0",
+            "document_id": "handbook",
+            "quote": "도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀장의 승인을 받아야 한다.\n접수 확인과 승인 통지를 별도 상태로 표시한다. 신청 내용을 확인했다는 안내에는 승인 여부가 아\n직 확인되지 않았는지를 함께 적는다. 담당자는 팀장의 판단을 대신하는 문구로 접수 메시지를 작\n성하지 않는다. 신청한 날짜와 승인 내역의 날짜가 다르면 어느 요청에 대한 통지인지 연결 관계부\n터 확인하고, 같은 이름의 다른 휴가 기록을 승인 근거로 붙이지 않는다.\nHR-V4-HANDBOOK / v4\n1\n\n\n제2절 신청 정보의 처리 [BD-S2]\nBD-04 접수부터 결과 통지까지\n휴가 시스템에서 접수한 생일 특별휴가 신청에는 신청자를 식별하는 정보",
+            "start": 640,
+            "end": 1040,
+            "pages": [
+              {
+                "page": 1,
+                "canonical_start": 640,
+                "canonical_end": 959,
+                "page_start": 640,
+                "page_end": 959
+              },
+              {
+                "page": 2,
+                "canonical_start": 961,
+                "canonical_end": 1040,
+                "page_start": 0,
+                "page_end": 79
+              }
+            ],
+            "heading_path": [
+              "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+            ],
+            "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+          },
+          {
+            "chunk_id": "c-0c3f96bdfab9c92f3245eb0fb9d54702aee582e4f7eefde235c44b7a5a190987",
+            "document_id": "handbook",
+            "quote": " 직원은 대상\n에서 제외한다.\n담당자는 신청 내역에 표시된 재직 기간과 수습 구분을 각각 확인한다. 두 정보의 표시가 서로 맞\n지 않으면 차이가 난 항목을 남기고 인사 기록의 정정을 확인하며, 단순한 화면 표시 오류를 새로운\n 제외 사유로 처리하지 않는다.\nBD-02 사용 범위와 다른 제도\n생일 특별휴가는 생일이 속한 달의 근무일에 사용한다. 해당 월을 넘겨 이월하거나 현금으로 지급\n하지 않는다. 생일 특별휴가는 분할할 수 없다.\n신청서에는 사용하려는 날짜를 생일과 구별해 기록한다. 오전 또는 오후만 선택된 경우에는 임의\n로 연차로 바꾸지 않고 선택 오류인지 신청 의도인지 확인하여 해당 요청의 정정 이력을 남긴다.\nBD-03 신청 기한과 승인\n생일 특별휴가는 사용 3영업일 전까지 휴가 시스템에서 신청하고 팀",
+            "start": 320,
+            "end": 720,
+            "pages": [
+              {
+                "page": 1,
+                "canonical_start": 320,
+                "canonical_end": 720,
+                "page_start": 320,
+                "page_end": 720
+              }
+            ],
+            "heading_path": [
+              "제1장 생일 특별휴가와 포인트의 구분 [BD]"
+            ],
+            "source_fingerprint": "0db7bc2fa77ea4903eb7f58939c32ce8c6001fb50e8120b25ed5345d1218c4f2"
+          }
+        ]
+      },
+      "error": null,
+      "usage": {
+        "input_tokens": 2335,
+        "output_tokens": 2078,
+        "provider_duration_ms": 134778.385583
+      },
+      "elapsed_ms": 134817.181,
+      "cost": null,
+      "cost_status": "unmeasured",
+      "generation_requests": 1
+    },
+    {
+      "name": "API preview",
+      "status": "preview",
+      "question": "생일 특별휴가는 사용 며칠 전까지 신청해야 하나요?",
+      "execution_kind": "preview",
+      "provider": "openai_chat",
+      "model": "EXAMPLE_API_MODEL",
+      "request_fields": [
+        "max_completion_tokens",
+        "messages",
+        "model",
+        "response_format",
+        "stream",
+        "temperature"
+      ],
+      "request_fingerprint": "c9c95f5deb31e16577bf012b8b9393afb2c9801b47a5034f811eb8be1f282fb9",
+      "actual_messages_hash": "f65de81cda8f2bdaee9f013b4828b31271110a7b70ed1909bdb8f0dcb6d8e2f1",
+      "answer": null,
+      "error": null,
+      "usage": null,
+      "elapsed_ms": null,
+      "cost": null,
+      "cost_status": null,
+      "generation_requests": 0
+    }
+  ],
+  "comparison_model_calls": 0
+}

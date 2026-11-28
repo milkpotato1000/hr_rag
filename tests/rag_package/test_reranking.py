@@ -219,3 +219,34 @@ class RerankTests(unittest.TestCase):
   with patch.object(reranker,'check_files'),patch.object(reranker,'versions',side_effect=RagError('reranker_sdk_mismatch','reranking')):
    r=reranking.run(self.ws/'candidates','cross-encoder',self.ws/'sdk-fail',profile=self.p,execute=True)
   self.assertEqual(r['work']['workers'],0);self.assertEqual(r['work']['queries'],0);self.assertEqual(r['work']['pairs'],0);self.assertEqual(r['error']['code'],'reranker_sdk_mismatch')
+
+class SavedGenerationComparisonTests(unittest.TestCase):
+ def test_saved_rows_and_input_identity(self):
+  with tempfile.TemporaryDirectory() as directory:
+   root=Path(directory)
+   def saved(name,status,**changes):
+    path=root/name
+    path.mkdir()
+    row=dict(question='질문',source_fingerprint='source',parent_rerank_fingerprint='parent',
+             contexts=[{'chunk_id':'one'},{'chunk_id':'two'}],messages=[{'role':'system','content':'근거 확인'}],
+             status=status,execution_kind='test_fixture',answer=None)
+    row.update(changes)
+    write_json(path/'result.json',row)
+    seal(path,{'schema_version':1,'kind':'rerank-answer'})
+    return name,path
+   a=saved('local','answered',answer={'answer':'예시 하나','citations':[]})
+   b=saved('api','answered',answer={'answer':'예시 둘','citations':[]})
+   fail=saved('failure','failed',error={'code':'provider_timeout'})
+   pre=saved('preview','preview')
+   abstain=saved('abstention','abstained')
+   with patch.object(reranking.llm,'invoke',side_effect=AssertionError('unexpected inference')):
+    report=reranking.compare_answers([a,b,fail,pre,abstain])
+   self.assertTrue(report['same_input'])
+   self.assertEqual([row['status'] for row in report['rows']],['answered','answered','failed','preview','abstained'])
+   self.assertEqual([r['answer']['answer'] for r in report['rows'][:2]],['예시 하나','예시 둘'])
+   self.assertIsNone(report['rows'][3]['usage'])
+   for field,value in [('question','다른 질문'),('parent_rerank_fingerprint','new'),('source_fingerprint',None),('contexts',[{'chunk_id':'two'},{'chunk_id':'one'}]),('messages',[])]:
+    changed=saved(field,'preview',**{field:value})
+    self.assertEqual(reranking.compare_answers([a,changed])['different_or_missing'],[field])
+   with self.assertRaisesRegex(RagError,'duplicate_result'):
+    reranking.compare_answers([a,('again',a[1])])
