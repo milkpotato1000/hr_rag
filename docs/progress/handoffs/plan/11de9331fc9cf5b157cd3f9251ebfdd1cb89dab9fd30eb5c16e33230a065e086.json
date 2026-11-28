@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "219bb030709705e9131bdd9205fa1cebf6d66030",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "Compare short window-local IDs",
+  "next_action": "Close S2i then adopt S2j, verify old and new paths, run first window once",
+  "status": "ACKNOWLEDGED",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T07:18:52.509910+00:00",
+      "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T07:19:13.470197+00:00",
+      "evidence": "Direct delivery succeeded to verified HR RAG dev; S2i close before exact S2j adoption."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T07:20:38.380624+00:00",
+      "evidence": "Observed dev receipt and committed exact adoption 9b70bf3 selecting READY 219bb030709705e9131bdd9205fa1cebf6d66030."
+    }
+  ]
+}
