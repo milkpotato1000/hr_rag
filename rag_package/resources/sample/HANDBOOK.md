@@ -382,3 +382,17 @@ python3 docs/verification/p032-s27/experiment.py --out ./threshold-practice
 ```
 
 [임계값별 실측 표와 경계 앞뒤 원문](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s27/README.md)
+
+## 한 벌의 원문에서 LLM이 분할안 선택하기
+
+chunking 역할이 등록된 로컬 Ollama 프로필을 llm-chunking.json으로 준비하고 아래 설정을 choice.json으로 저장하세요. 각 창에서 원문 단위 번호는 1부터 시작합니다. 후보의 end_unit_numbers가 [2, 5]이면 단위 1~2와 3~5를 묶습니다.
+
+```json
+{"schema_version":1,"method":"llm","partition_mode":"candidate_choice","candidate_input":"single_source","candidate_format":"ollama_enum","size_chars":150,"overlap_chars":0,"unit_max_chars":150,"llm_config":"llm-chunking.json"}
+```
+
+```sh
+rag-lab chunk --snapshot snapshot --config choice.json --out choice-preview
+```
+
+미리보기에서 원문과 경계 번호를 확인하세요. 서로 다른 분할안이 하나뿐이면 제품이 직접 선택합니다. [기존 입력과 새 입력의 실험 결과](https://github.com/milkpotato1000/hr_rag/blob/dev/docs/verification/p032-s28/README.md)

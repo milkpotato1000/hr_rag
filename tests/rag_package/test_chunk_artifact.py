@@ -122,15 +122,31 @@ class ChunkTests(unittest.TestCase):
   write_json(target/'chunk.json',saved);self.reseal(target)
   with self.assertRaisesRegex(RagError,'stale_partition_candidates'):a.load(target)
  def test_ollama_partition_enum(self):
+  self.check_partition_enum({})
+
+ def test_single_source_enum(self):
+  self.check_partition_enum({'candidate_input':'single_source'})
+
+ def check_partition_enum(self, options):
   from rag_package import pipeline
   self.lc('ollama')
-  args=dict(size_chars=100,overlap_chars=20,unit_max_chars=19,window_max_chars=140,partition_mode='candidate_choice',candidate_format='ollama_enum')
+  args=dict(size_chars=100,overlap_chars=20,unit_max_chars=19,window_max_chars=140,partition_mode='candidate_choice',candidate_format='ollama_enum',**options)
   cfg=self.cfg('llm',**args)
   windows=a.preflight(self.ws/'snapshot',cfg)[-1]
   active=[w for w in windows if w['selection_reason']=='model_choice']
   expected=[w['request']['body'] for w in active]
   self.assertTrue(active)
   for w in windows:
+   if options:
+    data=json.loads(w['messages'][1]['content'])
+    units=data['units']
+    self.assertEqual([u['number'] for u in units],list(range(1,len(units)+1)))
+    for compact,original in zip(data['candidates'],w['candidates'],strict=True):
+     ends=compact['end_unit_numbers']
+     self.assertEqual(compact['id'],original['id'])
+     self.assertEqual(ends[-1],len(units))
+     pieces=[''.join(u['text'] for u in units[left:right]) for left,right in zip([0]+ends[:-1],ends)]
+     self.assertEqual(pieces,[p['text'] for p in original['pieces']])
    self.assertEqual(w['request']['body']['format'],{'type':'object','required':['candidate_id'],'additionalProperties':False,
        'properties':{'candidate_id':{'type':'string','enum':[c['id'] for c in w['candidates']]}}})
   def transport(value,finish='stop'):
@@ -161,7 +177,7 @@ class ChunkTests(unittest.TestCase):
   for provider in ['openai_chat','anthropic_messages']:
    self.lc(provider)
    with self.assertRaisesRegex(RagError,'unsupported_candidate_provider'):a.preflight(self.ws/'snapshot',cfg)
-  with self.assertRaisesRegex(RagError,'unsupported_candidate_format'):p.config(dict(read_json(cfg),partition_mode='direct'))
+  with self.assertRaisesRegex(RagError,'unsupported_candidate_input' if options else 'unsupported_candidate_format'):p.config(dict(read_json(cfg),partition_mode='direct'))
  def test_three_llm_providers_and_tamper(self):
   for provider in ('ollama','openai_chat','anthropic_messages'):
    self.lc(provider);out=self.ws/provider;r=a.build(self.ws/'snapshot',self.cfg('llm'),out,execute=True,transport=self.send(provider),key_resolver=lambda _:KEY);self.assertEqual(r['status'],'ready',r)

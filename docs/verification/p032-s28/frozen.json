@@ -1,0 +1,112 @@
+{
+  "pdf_sha256": "c69ae1455568c3644a4a7879c47ac0ef89e05323da8d5aae450f5f2b1733553b",
+  "source_text": "교육 휴가 규정\n가상 HR 규정이며 실제 회사 정책이나 법적 기준이 아닙니다.\n문서 식별자: HR-V3-TRAINING | 버전: 3 | 시행일: 정보 없음\n제1조 신청 대상 및 일수\n직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.\n제2조 다른 휴가와의 관계\n생일 특별휴가 및 연차와 별도로 관리한다.\nHR-V3-TRAINING / v3\n1\n",
+  "source_hash": "d7fb7ce6de03da4d12fdd7fe24ff0aec69168c8e17aee9350064da9ab31f3958",
+  "old_input_bytes": 1015,
+  "new_input_bytes": 655,
+  "input": {
+    "units": [
+      {
+        "number": 1,
+        "text": "교육 휴가 규정\n가상 HR 규정이며 실제 회사 정책이나 법적 기준이 아닙니다.\n"
+      },
+      {
+        "number": 2,
+        "text": "문서 식별자: HR-V3-TRAINING | 버전: 3 | 시행일: 정보 없음\n제1조 신청 대상 및 일수\n"
+      },
+      {
+        "number": 3,
+        "text": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.\n"
+      },
+      {
+        "number": 4,
+        "text": "제2조 다른 휴가와의 관계\n"
+      },
+      {
+        "number": 5,
+        "text": "생일 특별휴가 및 연차와 별도로 관리한다.\n"
+      },
+      {
+        "number": 6,
+        "text": "HR-V3-TRAINING / v3\n1\n"
+      }
+    ],
+    "candidates": [
+      {
+        "id": "1",
+        "end_unit_numbers": [
+          3,
+          6
+        ]
+      },
+      {
+        "id": "2",
+        "end_unit_numbers": [
+          2,
+          6
+        ]
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "id": "1",
+      "pieces": [
+        {
+          "start": 0,
+          "end": 141,
+          "text": "교육 휴가 규정\n가상 HR 규정이며 실제 회사 정책이나 법적 기준이 아닙니다.\n문서 식별자: HR-V3-TRAINING | 버전: 3 | 시행일: 정보 없음\n제1조 신청 대상 및 일수\n직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.\n"
+        },
+        {
+          "start": 141,
+          "end": 202,
+          "text": "제2조 다른 휴가와의 관계\n생일 특별휴가 및 연차와 별도로 관리한다.\nHR-V3-TRAINING / v3\n1\n"
+        }
+      ],
+      "end_unit_ids": [
+        "u-67507cf36a01466ac553a9f68fc439af88f5d8afd3ef64af67a05aafa7ca6b2d",
+        "u-5e2d42689ded1e4f20934e4047e95d0ddba99b2c0a112abbac1bdf0c31563246"
+      ]
+    },
+    {
+      "id": "2",
+      "pieces": [
+        {
+          "start": 0,
+          "end": 103,
+          "text": "교육 휴가 규정\n가상 HR 규정이며 실제 회사 정책이나 법적 기준이 아닙니다.\n문서 식별자: HR-V3-TRAINING | 버전: 3 | 시행일: 정보 없음\n제1조 신청 대상 및 일수\n"
+        },
+        {
+          "start": 103,
+          "end": 202,
+          "text": "직무 관련 자격시험 응시자는 연 1일 교육 휴가를 신청할 수 있다.\n제2조 다른 휴가와의 관계\n생일 특별휴가 및 연차와 별도로 관리한다.\nHR-V3-TRAINING / v3\n1\n"
+        }
+      ],
+      "end_unit_ids": [
+        "u-8e9d3490b57ea260196a5381c2e1770b1288f2c70275c6c4d59f5a208e9f883a",
+        "u-5e2d42689ded1e4f20934e4047e95d0ddba99b2c0a112abbac1bdf0c31563246"
+      ]
+    }
+  ],
+  "parent_body_hash": "79099ddca843f7df243b09dcc6e922a8b0494a019bdc6c87c9bf8f7be69305f8",
+  "format": {
+    "type": "object",
+    "properties": {
+      "candidate_id": {
+        "type": "string",
+        "enum": [
+          "1",
+          "2"
+        ]
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "candidate_id"
+    ]
+  },
+  "messages_hash": "4c4b44e46fa3f878155b8da78ef52ff8ce854f8d19034ce3f52b0d1e9413c349",
+  "request_fingerprint": "ddb6c10691a5f5edaeef4796ac92ad74229daf81cd34968e8e2af39b39aa3b60",
+  "body_hash": "102a16bf4c0f21e958963fb93aaa866e7749e69481349b5a3123ee1ad4f2b4a7",
+  "wheel_sha256": "fedee59d58a7100432e989a436dede7c05d04109c2bba93f903755ee8111a771"
+}
