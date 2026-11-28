@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S20 Codex·Claude Code 공통 첫 설치 실습",
   "next_action": "정확 채택 후 소스에서 PDF 근거까지 설치 경로 검증",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T09:02:50.470170+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T09:03:09.474053+00:00",
+      "evidence": "기존 dev 채팅에 지정 SHA와 설치 실습 검증 범위 직접 전달 성공"
     }
   ]
 }
