@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "chunking": {
+    "method": "fixed",
+    "size_chars": 400,
+    "overlap_chars": 80
+  },
+  "retrieval": {
+    "method": "bm25",
+    "top_k": 5,
+    "candidate_k": 20,
+    "rrf_k": 60,
+    "context_budget_chars": 400
+  },
+  "llm_config": "../../p032-s8/profile.json",
+  "embedding_config": null
+}
