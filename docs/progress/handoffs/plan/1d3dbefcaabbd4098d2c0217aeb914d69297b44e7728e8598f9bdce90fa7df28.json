@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "WORK_READY",
+  "target_role": "dev",
+  "source_role": "plan",
+  "commit": "658baaee675e31bc40bc4fdd5d48c967180a9b3f",
+  "document": "docs/planning/handoffs/P032.md",
+  "summary": "S21 공개 소스의 깨끗한 설치 검증",
+  "next_action": "정확 채택 후 익명 HTTPS와 공개 의존성으로 첫 검색 재현",
+  "status": "PENDING",
+  "history": [
+    {
+      "status": "PENDING",
+      "at": "2026-11-28T09:08:49.457732+00:00",
+      "evidence": "Created locally; not sent"
+    }
+  ]
+}
