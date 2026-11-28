@@ -1,0 +1,19 @@
+{
+  "status": "failed",
+  "dispatches": 1,
+  "provider_status": "truncated",
+  "identity": {
+    "status": "verified",
+    "before": true,
+    "after": true
+  },
+  "usage": {
+    "input_tokens": 435,
+    "output_tokens": 4096,
+    "provider_duration_ms": 230052.939625
+  },
+  "provider_error": null,
+  "selected": null,
+  "chunks": null,
+  "retrieval": null
+}

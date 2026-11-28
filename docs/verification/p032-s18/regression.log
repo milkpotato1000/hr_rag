@@ -1,0 +1,54 @@
+test_generation_setup.py
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.011s
+
+OK
+test_installable.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.016s
+
+OK
+test_selected_pipeline.py
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.609s
+
+OK
+test_llm.py
+................EE
+======================================================================
+ERROR: test_http_invoke_cli_and_no_proxy (test_llm.HTTPTests.test_http_invoke_cli_and_no_proxy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_llm.py", line 292, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_real_transport_errors (test_llm.HTTPTests.test_real_transport_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/milkpotato/workspace/playground/codex-usecase/hr_rag/hr_rag_dev/tests/rag_package/test_llm.py", line 292, in setUp
+    self.server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 140, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Users/milkpotato/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.062s
+
+FAILED (errors=2)
