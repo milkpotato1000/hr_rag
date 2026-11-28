@@ -7,12 +7,17 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "Select and run installed pipeline in learning UI",
   "next_action": "Adopt S9, reuse S8 engine and verify selection, execution controls and saved answer replay",
-  "status": "PENDING",
+  "status": "SENT",
   "history": [
     {
       "status": "PENDING",
       "at": "2026-11-28T08:00:50.090342+00:00",
       "evidence": "Created locally; not sent"
+    },
+    {
+      "status": "SENT",
+      "at": "2026-11-28T08:01:11.912237+00:00",
+      "evidence": "Direct host delivery to verified HR RAG dev succeeded for exact S9 installed UI scope."
     }
   ]
 }
