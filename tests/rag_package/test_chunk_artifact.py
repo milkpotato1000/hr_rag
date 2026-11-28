@@ -97,6 +97,16 @@ class ChunkTests(unittest.TestCase):
     self.assertTrue(all(len(i['text'])==i['end']-i['start']<=80 for i in parts))
     self.assertEqual([i['end'] for i in parts[:-1]],[i['start'] for i in parts[1:]])
   with patch.object(llm,'invoke',side_effect=AssertionError('model')):a.replay(target)
+  from rag_package import pipeline
+  search=read_json(self.ws/'fixed.json')
+  search['llm_config']='lc.json'
+  write_json(self.ws/'search.json',search)
+  integrated=pipeline.run(self.ws/'sources.json',cfg,self.ws/'search.json','unmatchedwordxyz',self.ws/'pipeline',
+      execute=True,transport=lambda *args:envelope('openai_chat','{"candidate_id":"1"}'),key_resolver=lambda _:KEY)
+  self.assertEqual(integrated['status'],'abstained',integrated)
+  saved_pipeline=a.load(self.ws/'pipeline/chunks')[0]
+  self.assertEqual(saved_pipeline['details']['windows'],windows)
+  self.assertEqual(saved_pipeline['base'],saved['base'])
   for name,choice,finish in [('bad-choice','invalid','stop'),('truncated','1','length')]:
    self.calls.clear()
    self.assertEqual(run(name,choice,finish)['status'],'failed')

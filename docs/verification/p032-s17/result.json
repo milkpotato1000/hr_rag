@@ -1,0 +1,29 @@
+{
+  "status": "failed",
+  "error": {
+    "code": "chunking_provider_truncated"
+  },
+  "invocation_path": "/private/var/folders/vf/5r80qzss57n0fz_k0ckt_x7c0000gn/T/p032-s17-installed-64wz7qab/selected.invocation-9ef10a997c814e05b0a54124c4616028",
+  "work": {
+    "execution_kind": "live",
+    "boundary_model_jobs": 1,
+    "boundary_attempts": 0,
+    "unit_observation": {},
+    "requested_windows": 1,
+    "dispatches": 1,
+    "successful_windows": 0,
+    "failed_windows": 1,
+    "unknown_windows": 0,
+    "retry_count": 0,
+    "cost": null,
+    "cost_status": "unmeasured",
+    "unit_embedding": null,
+    "usage": {
+      "input_tokens": 435,
+      "output_tokens": 4096
+    },
+    "elapsed_ms": 232263.87579197763
+  },
+  "dispatch_attempted": true,
+  "outcome_unknown": false
+}
