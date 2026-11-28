@@ -7,7 +7,7 @@
   "document": "docs/planning/handoffs/P032.md",
   "summary": "S28 중복 없는 원문과 후보 경계로 LLM 청킹 검증",
   "next_action": "정확 채택 후 두 분할안의 복원을 검증하고 기존 4B로 한 번 선택",
-  "status": "SENT",
+  "status": "ACKNOWLEDGED",
   "history": [
     {
       "status": "PENDING",
@@ -18,6 +18,11 @@
       "status": "SENT",
       "at": "2026-11-28T09:40:26.094236+00:00",
       "evidence": "dev 채팅에 S28 정확 SHA와 분할 선택 검증 범위를 직접 전달했다."
+    },
+    {
+      "status": "ACKNOWLEDGED",
+      "at": "2026-11-28T09:40:55.996159+00:00",
+      "evidence": "dev가 입력 복원과 4B 실행 범위를 확인했고 494e20e에서 지정된 97fdc4f를 채택했다."
     }
   ]
 }
